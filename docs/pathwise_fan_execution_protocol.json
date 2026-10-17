@@ -1,0 +1,53 @@
+{
+  "version": "frozen-strict172-pathwise-calendar-fan-execution-v1",
+  "date_beijing": "2026-10-17",
+  "status": "Separate prospective development pilot, specified before inspecting the mean-fan market outputs. Motivated by the fixed synthetic conditioning counterexample and pointwise-support induction, not by selecting an OOF winner.",
+  "references": {
+    "mathematics": "docs/fan_rollout_mathematical_review.json",
+    "mean_fan_protocol": "docs/fan_rollout_execution_protocol.json",
+    "fixed_baseline": "docs/review_pending_execution_protocol.json"
+  },
+  "data_and_freeze": "Only guarded original scenarios1--120. Preserve all strict172 frozen products, local/global mapping, effective assignments, six contexts, H/L, exact0.25% cost and annual observations. No fitting, risk-price grid, new gamma, delay, trigger, target change, reassignment or OOF policy selection. Record and compare exact input/source/output hashes before/after. Review remains null.",
+  "policy": {
+    "name": "pathwise_hold_rollout",
+    "forecast": "Exactly the fixed training calendar fan from the mean-fan protocol: all120 full-context or96 outer-training complete joint paths; at year t retain each same path's suffix t..original H. No test continuation is an input to a gate.",
+    "baseline_B": "Restore the frozen target before its own first annual-endpoint breach, then hold actual asset quantities through original H without human response. Current action alternatives both continue with that same B, complete current actual history and exact future fees.",
+    "hold_gate": "At each active decision after mandatory inception, hold only if for EVERY training continuation j, computed total_log_growth_hold(j)>=computed total_log_growth_restore(j), AND everbreach_hold(j)<=everbreach_restore(j). Otherwise restore. The computed growth comparison allowance is exactly0; binary risk comparisons have no probability margin. Individual simulated breach retains the original MDD-L>1e-12 convention.",
+    "initial_and_pending": "Mandatory common initial restoration. After the actual policy's own first crossing, hold through original H. No reset, re-entry, adviser outcome or fee refund.",
+    "meaning": "A finite-support, baseline-preserving sufficient condition for saving a restoration. It adds an explicit normative priority of protecting baseline behavior on every forecast support path. It is not free of design choices, an optimal chance-constrained controller, a probability certificate or a final resolution of Q2's expected-benefit requirement."
+  },
+  "model_property_to_test": {
+    "training_support": "For every context, replay BOTH B and the new rule on every one of that context's same training fan paths at each served client's own H. Check every path's log terminal growth is no lower and full-history everbreach is no higher, with floating-point replay discrepancies disclosed separately. This is the finite-support induction property, not additional market validation.",
+    "numerical_audit_guard": "A declared1e-10 total-log comparison guard may be used only to detect numerical replay discrepancies when testing the ideal property; it is not an action threshold or proved error bound. Gate itself uses0. Report actual minimum growth difference and any strict negative computed values, not just pass/fail.",
+    "training_denominator": "Full120 plus five overlapping96 training contexts yield600 path identities PER client when contexts are counted, not600 independent scenarios. Never pool those overlapping training replays into an independent risk estimate.",
+    "held_out": "Replay the original five24-path outer tests once; pool exactly120 per client, preserve A/D Review rows. Held-out paths generally are not fan members, so neither theorem nor static CP/nested-screen certification is inherited. Report actual growth, MDD, breach, cost, trade and gate outcomes regardless of direction."
+  },
+  "outputs": {
+    "primary": "Full120 descriptive and pooled OOF120 per client, pathwise rule versus the frozen annual-then-pending B. Original rows include null Review. Save actual state/action/fee/Q/gate records and per-path metrics. Optional contextual mean-fan comparisons are labeled as separate candidates, never used to choose the rule.",
+    "training": "Context-labeled training support invariant CSV, including target/H/L, scenario, B/new terminal log growth, breach flags, differences and pass flags; summary minimum growth difference, count negative differences, event-order violations and numerical audit guard. Preserve each context denominator.",
+    "gate": "Save both mean log/count scores for context, plus minimum hold-minus-restore pathwise log advantage, number of growth-violating support paths, number of risk-violating support paths, their union count and local delete-one recommendation flip count. Initial/pending Q remains null. This local influence diagnostic never changes the policy.",
+    "summary": "Same median/P10 CAGR, median/P90/CVaR90 annual real MDD, excess, fees, transfers and actual trade fraction conventions as the mean-fan protocol, computed from pooled individual paths rather than averaged fold quantiles. No censored recovery date is fabricated."
+  },
+  "independent_Q_subset": "For each served client/context use the smallest evaluation scenario ID and returnyears2,floor(H/2)+1,H (deduplicate). Only active recorded Q states are audited; absent/pending cases are recorded as skips without replacement. Independently recompute both complete fan arrays, pathwise violations, chosen action and local deletion count, using scalar bisection fees.",
+  "required_synthetic_checks": [
+    "The mean-fan counterexample is preserved: the mean rule may worsen complete-path growth and risk; the pathwise rule refuses that harmful hold and reproduces B.",
+    "Independent scalar fan accounting confirms current/future exact fees, original CPI/peak/MDD/b, correct calendar suffix and own forecast pending transition.",
+    "Across several fixed synthetic joint fans and H1..4, replay every same-fan path and check the pointwise terminal-growth/breach inequalities, including fees and inflation.",
+    "Changing future actual evaluation returns cannot change an earlier action under the same state and fixed training fan; an OOF sequence is explicitly outside the theorem's guarantee.",
+    "Zero computed growth allowance, integer risk flags, mandatory initial allocation, post-breach hold, no re-entry and no pseudo recovery date all remain explicit."
+  ],
+  "interpretation_limit": "Report conservatism and actual held-out outcomes. Do not select a final winner, re-fit the menu, claim actual-market safety, call all training replays independent, hide a failed property, or use this experiment to excuse the earlier final-set exposure.",
+  "frozen_input_sha256": {
+    "docs/positive_asset_specification_protocol.json": "ff23c3fcdad54d83a2896a11459db1cec3e4f48fe6352d994139e4c9ff79475c",
+    "results/model_review/positive_asset_specification_v1/manifest.json": "da65841decff7d50ec7baa8fe80c4e6593112ea0c7d083affe2a0dd68f2f306e",
+    "results/model_review/positive_asset_specification_v1/nested_context_refits.json": "d13450e05051c02d2bf54a4edfc77ef01d880cee0c78238cc3d7204a6ab27aa1",
+    "results/model_review/positive_asset_specification_v1/candidate_mapping.json": "c6221636a667536cbf1e4dbaa132c4cca1b00efb692dc180f5fc189655a744d5",
+    "results/model_review/positive_asset_specification_v1/nested_full_paths.csv": "bb72ae6b72ea72da01f800fd0f9ae0139046c8684e67374cc0966fb849d52516",
+    "results/model_review/positive_asset_specification_v1/nested_outer_oof_paths.csv": "4a4a9dba68e824b3dc13161391433be25ec9eb5fc873e4bdc6548eb23ab67c8f",
+    "docs/fan_rollout_mathematical_review.json": "499754a2265573b9753568acbff06618cc969d79e9c0a5dee81d9247d9a3d046",
+    "docs/fan_rollout_execution_protocol.json": "dece4b446f8bd20ee5590ffc1188b13ddd57f19631a21e7b362ad800df030cd3",
+    "docs/review_pending_execution_protocol.json": "8e85cff91a0f0459b0b67d5e76d3f87c3988b89992251fcbf067393f6776a559",
+    "research/experimental_execution/fan_rollout.py": "d195d721c895700925e9b24c91640c59737fe4eb542272376d2de78ce62fe1ba",
+    "research/experimental_execution/review_pending.py": "9038d420c9ea48df068c58a6abee3f993ac414f85dd0290cb56e3d703aae3894"
+  }
+}
