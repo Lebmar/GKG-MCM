@@ -1,0 +1,21 @@
+{
+  "macros": {
+    "BaseGrowth": "3.38",
+    "PolicyGrowth": "3.66",
+    "BaseLoss": "39.52",
+    "PolicyLoss": "43.44",
+    "PolicyTrade": "35.5",
+    "PolicyLaterTrade": "33.28",
+    "PolicyReview": "48.3",
+    "FeeReduction": "46.2",
+    "GrowthDifference": "0.282",
+    "GrowthDifferenceLow": "0.026",
+    "GrowthDifferenceHigh": "0.758",
+    "LossDifference": "3.92",
+    "LossDifferenceLow": "-2.18",
+    "LossDifferenceHigh": "10.95"
+  },
+  "customer_explanation": "Your portfolio's purchasing-power loss has reached our review threshold. We have paused automatic trading and requested an adviser review. Your current investments remain exposed to market changes; this pause does not guarantee recovery or prevent further losses.",
+  "customer_explanation_words": 37,
+  "frozen_manifest_sha256": "351e9921ab3b58996c96d3d1e48ad158cdd8df8b4bdded21d74b1427caaf8d31"
+}

@@ -7,6 +7,21 @@ This repository records a reproducible investigation of purchasing-power risk,
 customer suitability, selective rebalancing and bounded target updates. It does
 not assume that a more complicated policy improves investment outcomes.
 
+## First complete review draft
+
+The 9-page report and 2.76 MB supplementary ZIP are in `output/`. They have not
+been submitted to CMT. There are 31 passing unit/policy tests, 901 passing
+independent numerical/provenance checks, and an exact 13-comparison reproduction
+of the unchanged protocol in a temporary directory.
+
+The frozen policy retains a fixed Balanced target. Its 30-year median real
+growth is 3.66% versus 3.38% for equal weights, while P90 maximum real drawdown
+is higher: 43.44% versus 39.52%. Dynamic target updates are not enabled because
+the predeclared incremental utility criterion was not met. Customer C's
+borderline loss-exceedance screen does not retain pointwise calibration on the
+final scenarios. This is a qualified result and a reason for human confirmation,
+not a claim of universal dominance or guaranteed suitability.
+
 ## Reproduce
 
 Use Python 3.12 or later:
@@ -16,6 +31,15 @@ python -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
 PYTHONPATH=src python -m unittest discover -s tests -v
+python scripts/reproduce.py
+```
+
+The reproduction command runs the unchanged study in a disposable directory and
+compares numerical outputs against committed archives. It does not overwrite
+the original evidence or change a choice after seeing final results. The three
+individual study stages are also available for a fresh, archive-free copy:
+
+```sh
 python scripts/run_study.py develop
 python scripts/run_study.py freeze
 python scripts/run_study.py final
@@ -54,6 +78,22 @@ returns until the model is frozen.
 - `results/final/`: held-out evaluation and sensitivity diagnostics.
 - `docs/references.md`: verified primary citations and their claim boundaries.
 - `report/`: English report source, figures and compiled review PDF.
+- `output/pdf/SafeInvest_Team87_Report.pdf`: 9-page English review draft.
+- `output/submission/Team87_Lebmar_Code.zip`: source and supplementary evidence.
+
+To regenerate figures and the report (requires a local TeX installation):
+
+```sh
+python scripts/make_figures.py
+python scripts/build_report.py
+cd report/latex
+pdflatex -interaction=nonstopmode -halt-on-error main.tex
+cd ../..
+python scripts/package_submission.py
+```
+
+`scripts/verify_results.py` independently replays archived actions and checks
+the numerical tables and hashes; it does not call the policy simulator.
 
 ## Data and AI use
 

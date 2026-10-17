@@ -1,0 +1,23 @@
+{
+  "input_sha256": {
+    "results/frozen/grid.csv": "d56309bd335caece2ee625eef4b55b3cb8ba56983ff95ce3a347ae0285adf650",
+    "results/frozen/portfolios.json": "6684d3cddc4a7b4258416ed262f7b2b79b0ee39584bec531acef5ae373cb1394",
+    "results/final/evaluation_manifest.json": "8ea371092c44843761ac4c4740ba4bb0677c8dee8589c9706db518d4ec92912d",
+    "results/final/paths.npz": "9dfb681f6152d9590a6b2804060f23e9fe32588d47e5a4e9a082bedac134c3ec",
+    "results/final/summary.csv": "ec1bed7cd9e4ec1c82f5428f75ff6759edef39ceded723251d0b92899d9881d1",
+    "results/final/cost_sensitivity.csv": "a67605de87fba7c65833e20e04864fa717b5458dbfdc9360f3394bb26ddbbb11"
+  },
+  "selected": "S2_review",
+  "severe_scenario": 155,
+  "metric_reconciliation": "all six saved summaries match archived path calculations",
+  "output_width_inches": 6.3,
+  "minimum_font_points": 12,
+  "png_dpi": 300,
+  "model_reexecuted": false,
+  "figures": [
+    "01_portfolio_grid.png",
+    "02_final_distributions.png",
+    "03_severe_scenario.png",
+    "04_cost_sensitivity.png"
+  ]
+}

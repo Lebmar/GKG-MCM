@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "report_pages": 9,
+  "page_size": "A4",
+  "declared_main_font_pt": 11,
+  "figure_font_pt_before_scale": 12,
+  "figures_rendered_at_nearly_original_width": true,
+  "customer_explanation_words": 37,
+  "latex_overfull_boxes": false,
+  "primary_layout_visually_reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "review_note": "All-page layout contact sheets plus full-size checks of changed pages; mathematical scripts naturally use smaller glyphs.",
+  "pdf_sha256": "5c21bb03e600e2062c4229cdaca28854cfce1cef79b5c9fc380f821f505e0106"
+}

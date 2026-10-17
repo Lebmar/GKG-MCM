@@ -1,0 +1,15 @@
+{
+  "report": {
+    "path": "output/pdf/SafeInvest_Team87_Report.pdf",
+    "bytes": 601289,
+    "sha256": "5c21bb03e600e2062c4229cdaca28854cfce1cef79b5c9fc380f821f505e0106"
+  },
+  "supplementary": {
+    "path": "output/submission/Team87_Lebmar_Code.zip",
+    "bytes": 2759334,
+    "sha256": "13cf449dd0d9b4c97e620322a2e3436e8aef9dd2a9d66a775c5218348ac99d12",
+    "files": 69
+  },
+  "submitted_to_CMT": false,
+  "human_author_review_required": true
+}

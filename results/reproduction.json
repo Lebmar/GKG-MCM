@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-10-17T08:54:41.115235+00:00",
+  "comparisons": [
+    "development/summary.csv",
+    "final/summary.csv",
+    "final/cost_sensitivity.csv",
+    "final/horizon15.csv",
+    "final/onboarding_diagnostics.csv",
+    "frozen/onboarding.csv",
+    "development/paths.npz",
+    "final/paths.npz",
+    "frozen.selected",
+    "frozen.portfolios",
+    "frozen.assignments",
+    "frozen.fingerprints",
+    "frozen.forecast_sha256"
+  ],
+  "original_archives_modified": false,
+  "parameters_or_selection_rule_changed": false,
+  "scope": "Exact same-protocol reproduction in disposable directory; no new tuning or policy choice."
+}

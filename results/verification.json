@@ -1,0 +1,5667 @@
+{
+  "audit_utc": "2026-10-17T08:50:43.385574+00:00",
+  "auditor_script_sha256": "b0001aa4681245fc90270a11fa7797e17a97f4bfd15d7cef9356e2162c7ca46a",
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5"
+  },
+  "audited_artifact_sha256": {
+    "results/frozen/manifest.json": "351e9921ab3b58996c96d3d1e48ad158cdd8df8b4bdded21d74b1427caaf8d31",
+    "results/frozen/portfolios.json": "6684d3cddc4a7b4258416ed262f7b2b79b0ee39584bec531acef5ae373cb1394",
+    "results/frozen/forecast_bank.npy": "413183f09283d849bf55b64dc9da83716395fda0218ef8412214a2d6563e4e19",
+    "results/frozen/onboarding.csv": "7c70f4fe14a930b96530fcec99d4ae388ac20f7a860439aaa34b71ac02e87270",
+    "results/development/architecture_decision.json": "ea4481a56fa3a4dbb9786754eb14cc3f229cb4f3a4fb34ec9f27570d1f40c23f",
+    "results/development/paths.npz": "ffdaa3a4fb4a894a44362485bb8145b03e230b7437a3ca2206b5e3abfc86d9e6",
+    "results/development/summary.csv": "8ef0a67ecd6e3bab03b91a342bd26be9f718d6b074a519eca877f106c5cba5b6",
+    "results/final/evaluation_manifest.json": "8ea371092c44843761ac4c4740ba4bb0677c8dee8589c9706db518d4ec92912d",
+    "results/final/paths.npz": "9dfb681f6152d9590a6b2804060f23e9fe32588d47e5a4e9a082bedac134c3ec",
+    "results/final/summary.csv": "ec1bed7cd9e4ec1c82f5428f75ff6759edef39ceded723251d0b92899d9881d1",
+    "results/final/paired_comparisons.json": "1131b5f313ab0fd49838d0b7f3d217a5935014f24ec0e7771cae808d14acb022",
+    "results/final/onboarding_diagnostics.csv": "4c1c377f2ff1510f740670d07ed1a683cd38f45582f020612c71a3bd0765230e",
+    "results/final/cost_sensitivity.csv": "a67605de87fba7c65833e20e04864fa717b5458dbfdc9360f3394bb26ddbbb11",
+    "results/final/horizon15.csv": "5f109b51fd374e0722c6bf57c6e7b8dcc0b5cbf0bdc798963e5d08cb44dad81c"
+  },
+  "status": "PASS",
+  "checks_total": 901,
+  "checks_passed": 901,
+  "frozen_policy": "S2_review",
+  "frozen_assignments": {
+    "A": "Human review",
+    "B": "Conservative",
+    "C": "Balanced",
+    "D": "Human review",
+    "E": "Conservative"
+  },
+  "final_diagnostic_assigned_portfolio_screen_failures": [
+    "C"
+  ],
+  "scope": "Independent cached-output arithmetic, archived-action replay against original final market rows, and provenance audit; no policy decisions, fitting, or parameter selection are rerun.",
+  "limitations": [
+    "Final wealth and transfer arithmetic are checked against original market returns, but the forecast scores, admissibility rules, and action-selection logic are not independently re-executed.",
+    "Non-base-cost sensitivity runs and separately recomputed 15-year policy paths are not cached; their aggregate calculations cannot be independently reconstructed here.",
+    "Onboarding assignments are reconstructed from frozen diagnostic rows; client-specific wealth paths are not archived, so their risk metrics are not independently recomputed.",
+    "Correct arithmetic and frozen hashes do not establish market stationarity, future performance, tail-risk coverage, or suitability guarantees.",
+    "The frozen prior-exposure disclosure remains applicable: pooled descriptive statistics over all scenarios were seen before formal model development."
+  ],
+  "checks": [
+    {
+      "name": "provenance.frozen_manifest_sha256",
+      "passed": true,
+      "actual": "351e9921ab3b58996c96d3d1e48ad158cdd8df8b4bdded21d74b1427caaf8d31",
+      "expected": "351e9921ab3b58996c96d3d1e48ad158cdd8df8b4bdded21d74b1427caaf8d31"
+    },
+    {
+      "name": "provenance.final_and_frozen_fingerprints",
+      "passed": true,
+      "actual": {
+        "src/safeinvest/__init__.py": "dcef1e2e1f0f7cd5426988f0f27408eebb9ded3fb32c961f8f23e2edfb6e4ad2",
+        "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a",
+        "src/safeinvest/data.py": "70e511fd05c6e23fd6b8a72f1dc165426fc77a5eb4dbd8a3c13b839bb305a75f",
+        "src/safeinvest/policies.py": "faf44e1631110f249c0cbfaacca8b7e55a13ee830f7628577871197f005d4405",
+        "src/safeinvest/portfolios.py": "a045560366642efd63e13372766a1b64eee8f30ae2853db1c97611aa3777b6af",
+        "scripts/run_study.py": "bb18a3188b5444d86d4dfa212b5ca30203fa9c49b91d29d27eae27904fb89d49",
+        "docs/protocol.json": "3b3bde03e34c6a073ad25bf2e467a5b5f3a64cade3572d9aed493c68ce076632",
+        "data/SafeInvest_Synthetic_Data.csv": "def0177704bf6cb98cec6da325b34208750d988f6ad97ec4a706a0d39e6f82c0"
+      },
+      "expected": {
+        "src/safeinvest/__init__.py": "dcef1e2e1f0f7cd5426988f0f27408eebb9ded3fb32c961f8f23e2edfb6e4ad2",
+        "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a",
+        "src/safeinvest/data.py": "70e511fd05c6e23fd6b8a72f1dc165426fc77a5eb4dbd8a3c13b839bb305a75f",
+        "src/safeinvest/policies.py": "faf44e1631110f249c0cbfaacca8b7e55a13ee830f7628577871197f005d4405",
+        "src/safeinvest/portfolios.py": "a045560366642efd63e13372766a1b64eee8f30ae2853db1c97611aa3777b6af",
+        "scripts/run_study.py": "bb18a3188b5444d86d4dfa212b5ca30203fa9c49b91d29d27eae27904fb89d49",
+        "docs/protocol.json": "3b3bde03e34c6a073ad25bf2e467a5b5f3a64cade3572d9aed493c68ce076632",
+        "data/SafeInvest_Synthetic_Data.csv": "def0177704bf6cb98cec6da325b34208750d988f6ad97ec4a706a0d39e6f82c0"
+      }
+    },
+    {
+      "name": "provenance.sha256.src/safeinvest/__init__.py",
+      "passed": true,
+      "actual": "dcef1e2e1f0f7cd5426988f0f27408eebb9ded3fb32c961f8f23e2edfb6e4ad2",
+      "expected": "dcef1e2e1f0f7cd5426988f0f27408eebb9ded3fb32c961f8f23e2edfb6e4ad2"
+    },
+    {
+      "name": "provenance.sha256.src/safeinvest/core.py",
+      "passed": true,
+      "actual": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a",
+      "expected": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a"
+    },
+    {
+      "name": "provenance.sha256.src/safeinvest/data.py",
+      "passed": true,
+      "actual": "70e511fd05c6e23fd6b8a72f1dc165426fc77a5eb4dbd8a3c13b839bb305a75f",
+      "expected": "70e511fd05c6e23fd6b8a72f1dc165426fc77a5eb4dbd8a3c13b839bb305a75f"
+    },
+    {
+      "name": "provenance.sha256.src/safeinvest/policies.py",
+      "passed": true,
+      "actual": "faf44e1631110f249c0cbfaacca8b7e55a13ee830f7628577871197f005d4405",
+      "expected": "faf44e1631110f249c0cbfaacca8b7e55a13ee830f7628577871197f005d4405"
+    },
+    {
+      "name": "provenance.sha256.src/safeinvest/portfolios.py",
+      "passed": true,
+      "actual": "a045560366642efd63e13372766a1b64eee8f30ae2853db1c97611aa3777b6af",
+      "expected": "a045560366642efd63e13372766a1b64eee8f30ae2853db1c97611aa3777b6af"
+    },
+    {
+      "name": "provenance.sha256.scripts/run_study.py",
+      "passed": true,
+      "actual": "bb18a3188b5444d86d4dfa212b5ca30203fa9c49b91d29d27eae27904fb89d49",
+      "expected": "bb18a3188b5444d86d4dfa212b5ca30203fa9c49b91d29d27eae27904fb89d49"
+    },
+    {
+      "name": "provenance.sha256.docs/protocol.json",
+      "passed": true,
+      "actual": "3b3bde03e34c6a073ad25bf2e467a5b5f3a64cade3572d9aed493c68ce076632",
+      "expected": "3b3bde03e34c6a073ad25bf2e467a5b5f3a64cade3572d9aed493c68ce076632"
+    },
+    {
+      "name": "provenance.sha256.data/SafeInvest_Synthetic_Data.csv",
+      "passed": true,
+      "actual": "def0177704bf6cb98cec6da325b34208750d988f6ad97ec4a706a0d39e6f82c0",
+      "expected": "def0177704bf6cb98cec6da325b34208750d988f6ad97ec4a706a0d39e6f82c0"
+    },
+    {
+      "name": "provenance.source_file_set",
+      "passed": true,
+      "actual": [
+        "src/safeinvest/__init__.py",
+        "src/safeinvest/core.py",
+        "src/safeinvest/data.py",
+        "src/safeinvest/policies.py",
+        "src/safeinvest/portfolios.py"
+      ],
+      "expected": [
+        "src/safeinvest/__init__.py",
+        "src/safeinvest/core.py",
+        "src/safeinvest/data.py",
+        "src/safeinvest/policies.py",
+        "src/safeinvest/portfolios.py"
+      ]
+    },
+    {
+      "name": "provenance.forecast_sha256",
+      "passed": true,
+      "actual": "413183f09283d849bf55b64dc9da83716395fda0218ef8412214a2d6563e4e19",
+      "expected": "413183f09283d849bf55b64dc9da83716395fda0218ef8412214a2d6563e4e19"
+    },
+    {
+      "name": "provenance.portfolio_artifact",
+      "passed": true,
+      "actual": {
+        "Conservative": [
+          0.15,
+          0.05,
+          0.8
+        ],
+        "Balanced": [
+          0.45,
+          0.1,
+          0.45
+        ],
+        "Growth": [
+          0.9,
+          0.05,
+          0.05
+        ]
+      },
+      "expected": {
+        "Conservative": [
+          0.15,
+          0.05,
+          0.8
+        ],
+        "Balanced": [
+          0.45,
+          0.1,
+          0.45
+        ],
+        "Growth": [
+          0.9,
+          0.05,
+          0.05
+        ]
+      }
+    },
+    {
+      "name": "provenance.architecture_decision",
+      "passed": true,
+      "actual": {
+        "selected": "S2_review",
+        "paired_dynamic_minus_gate": {
+          "mean_utility": {
+            "estimate": 0.04399317479603081,
+            "low95": -0.006341572171081667,
+            "high95": 0.09624948351484477
+          },
+          "median_cagr": {
+            "estimate": -0.001333990545417052,
+            "low95": -0.004956251124177857,
+            "high95": 0.0021552387099877945
+          },
+          "p10_cagr": {
+            "estimate": -0.002072447229989628,
+            "low95": -0.002696597696925984,
+            "high95": 0.0011590842888904648
+          },
+          "p90_mdd": {
+            "estimate": -0.039760231247731814,
+            "low95": -0.05817971174004144,
+            "high95": 0.00621375147288028
+          }
+        },
+        "parameters_tuned_on_validation": false,
+        "protocol_sha256": "3b3bde03e34c6a073ad25bf2e467a5b5f3a64cade3572d9aed493c68ce076632",
+        "fingerprints": {
+          "src/safeinvest/__init__.py": "dcef1e2e1f0f7cd5426988f0f27408eebb9ded3fb32c961f8f23e2edfb6e4ad2",
+          "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a",
+          "src/safeinvest/data.py": "70e511fd05c6e23fd6b8a72f1dc165426fc77a5eb4dbd8a3c13b839bb305a75f",
+          "src/safeinvest/policies.py": "faf44e1631110f249c0cbfaacca8b7e55a13ee830f7628577871197f005d4405",
+          "src/safeinvest/portfolios.py": "a045560366642efd63e13372766a1b64eee8f30ae2853db1c97611aa3777b6af",
+          "scripts/run_study.py": "bb18a3188b5444d86d4dfa212b5ca30203fa9c49b91d29d27eae27904fb89d49",
+          "docs/protocol.json": "3b3bde03e34c6a073ad25bf2e467a5b5f3a64cade3572d9aed493c68ce076632",
+          "data/SafeInvest_Synthetic_Data.csv": "def0177704bf6cb98cec6da325b34208750d988f6ad97ec4a706a0d39e6f82c0"
+        }
+      },
+      "expected": {
+        "selected": "S2_review",
+        "paired_dynamic_minus_gate": {
+          "mean_utility": {
+            "estimate": 0.04399317479603081,
+            "low95": -0.006341572171081667,
+            "high95": 0.09624948351484477
+          },
+          "median_cagr": {
+            "estimate": -0.001333990545417052,
+            "low95": -0.004956251124177857,
+            "high95": 0.0021552387099877945
+          },
+          "p10_cagr": {
+            "estimate": -0.002072447229989628,
+            "low95": -0.002696597696925984,
+            "high95": 0.0011590842888904648
+          },
+          "p90_mdd": {
+            "estimate": -0.039760231247731814,
+            "low95": -0.05817971174004144,
+            "high95": 0.00621375147288028
+          }
+        },
+        "parameters_tuned_on_validation": false,
+        "protocol_sha256": "3b3bde03e34c6a073ad25bf2e467a5b5f3a64cade3572d9aed493c68ce076632",
+        "fingerprints": {
+          "src/safeinvest/__init__.py": "dcef1e2e1f0f7cd5426988f0f27408eebb9ded3fb32c961f8f23e2edfb6e4ad2",
+          "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a",
+          "src/safeinvest/data.py": "70e511fd05c6e23fd6b8a72f1dc165426fc77a5eb4dbd8a3c13b839bb305a75f",
+          "src/safeinvest/policies.py": "faf44e1631110f249c0cbfaacca8b7e55a13ee830f7628577871197f005d4405",
+          "src/safeinvest/portfolios.py": "a045560366642efd63e13372766a1b64eee8f30ae2853db1c97611aa3777b6af",
+          "scripts/run_study.py": "bb18a3188b5444d86d4dfa212b5ca30203fa9c49b91d29d27eae27904fb89d49",
+          "docs/protocol.json": "3b3bde03e34c6a073ad25bf2e467a5b5f3a64cade3572d9aed493c68ce076632",
+          "data/SafeInvest_Synthetic_Data.csv": "def0177704bf6cb98cec6da325b34208750d988f6ad97ec4a706a0d39e6f82c0"
+        }
+      }
+    },
+    {
+      "name": "protocol.utility_risk_aversion",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "selection.final_matches_frozen",
+      "passed": true,
+      "actual": "S2_review",
+      "expected": "S2_review"
+    },
+    {
+      "name": "selection.frozen_matches_validation",
+      "passed": true,
+      "actual": "S2_review",
+      "expected": "S2_review"
+    },
+    {
+      "name": "selection.change_flag",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "provenance.freeze_precedes_final",
+      "passed": true
+    },
+    {
+      "name": "final.scenario_ids",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.inflation_finite_positive_gross",
+      "passed": true
+    },
+    {
+      "name": "final.original_market_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30,
+        3
+      ],
+      "expected": [
+        60,
+        30,
+        3
+      ]
+    },
+    {
+      "name": "final.cached_inflation_matches_original",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.summary_strategy_set",
+      "passed": true,
+      "actual": [
+        "S0_equal",
+        "S1_annual",
+        "S2_gate",
+        "S2_review",
+        "S3_dynamic",
+        "S3_review"
+      ],
+      "expected": [
+        "S0_equal",
+        "S1_annual",
+        "S2_gate",
+        "S2_review",
+        "S3_dynamic",
+        "S3_review"
+      ]
+    },
+    {
+      "name": "final.S0_equal.wealth_shape",
+      "passed": true,
+      "actual": [
+        60,
+        31
+      ],
+      "expected": [
+        60,
+        31
+      ]
+    },
+    {
+      "name": "final.S0_equal.weights_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30,
+        3
+      ],
+      "expected": [
+        60,
+        30,
+        3
+      ]
+    },
+    {
+      "name": "final.S0_equal.targets_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30,
+        3
+      ],
+      "expected": [
+        60,
+        30,
+        3
+      ]
+    },
+    {
+      "name": "final.S0_equal.costs_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30
+      ],
+      "expected": [
+        60,
+        30
+      ]
+    },
+    {
+      "name": "final.S0_equal.costs_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S0_equal.moved_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30
+      ],
+      "expected": [
+        60,
+        30
+      ]
+    },
+    {
+      "name": "final.S0_equal.moved_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S0_equal.trades_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30
+      ],
+      "expected": [
+        60,
+        30
+      ]
+    },
+    {
+      "name": "final.S0_equal.trades_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S0_equal.pending_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30
+      ],
+      "expected": [
+        60,
+        30
+      ]
+    },
+    {
+      "name": "final.S0_equal.pending_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S0_equal.benefit_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30
+      ],
+      "expected": [
+        60,
+        30
+      ]
+    },
+    {
+      "name": "final.S0_equal.benefit_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S0_equal.initial_wealth",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S0_equal.wealth_positive_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S0_equal.amounts_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "final.S0_equal.fees_funded",
+      "passed": true
+    },
+    {
+      "name": "final.S0_equal.moved_within_investable_wealth",
+      "passed": true
+    },
+    {
+      "name": "final.S0_equal.fee_equation",
+      "passed": true,
+      "max_abs_error": 4.163336342344337e-16
+    },
+    {
+      "name": "final.S0_equal.weights_nonnegative_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S0_equal.weights_sum_one",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S0_equal.targets_nonnegative_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S0_equal.targets_sum_one",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S0_equal.trade_flags",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S0_equal.no_fees_without_trade",
+      "passed": true
+    },
+    {
+      "name": "final.S0_equal.pending_persistent",
+      "passed": true
+    },
+    {
+      "name": "final.S0_equal.no_trades_while_pending",
+      "passed": true
+    },
+    {
+      "name": "final.S0_equal.no_fees_while_pending",
+      "passed": true
+    },
+    {
+      "name": "final.S0_equal.reconstructed_holdings_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "final.S0_equal.original_market_wealth_recursion",
+      "passed": true,
+      "max_abs_error": 4.547473508864641e-13
+    },
+    {
+      "name": "final.S0_equal.pretrade_wealth",
+      "passed": true,
+      "max_abs_error": 3.410605131648481e-13
+    },
+    {
+      "name": "final.S0_equal.self_financing_posttrade_wealth",
+      "passed": true,
+      "max_abs_error": 2.2737367544323206e-13
+    },
+    {
+      "name": "final.S0_equal.actual_transfer_amounts",
+      "passed": true,
+      "max_abs_error": 2.2737367544323206e-13
+    },
+    {
+      "name": "final.S0_equal.fees_on_reconstructed_transfers",
+      "passed": true,
+      "max_abs_error": 7.216449660063518e-16
+    },
+    {
+      "name": "final.S0_equal.sale_funds_transfers_and_fees",
+      "passed": true,
+      "max_abs_error": 3.3217872896784684e-13
+    },
+    {
+      "name": "final.S0_equal.no_trade_preserves_asset_amounts",
+      "passed": true,
+      "max_abs_error": null
+    },
+    {
+      "name": "final.S0_equal.pending_preserves_asset_amounts",
+      "passed": true,
+      "max_abs_error": null
+    },
+    {
+      "name": "final.S0_equal.trades_achieve_cached_target",
+      "passed": true,
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "name": "final.S0_equal.real_wealth_deflation",
+      "passed": true,
+      "max_abs_error": 9.094947017729282e-13
+    },
+    {
+      "name": "final.S0_equal.real_metrics_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S0_equal.drawdown_bounds",
+      "passed": true
+    },
+    {
+      "name": "final.S0_equal.summary.cost_rate",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S0_equal.summary.n",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S0_equal.summary.horizon",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S0_equal.summary.cagr_median",
+      "passed": true,
+      "max_abs_error": 9.71445146547012e-17
+    },
+    {
+      "name": "final.S0_equal.summary.cagr_p10",
+      "passed": true,
+      "max_abs_error": 3.642919299551295e-17
+    },
+    {
+      "name": "final.S0_equal.summary.mdd_median",
+      "passed": true,
+      "max_abs_error": 1.6653345369377348e-16
+    },
+    {
+      "name": "final.S0_equal.summary.mdd_p90",
+      "passed": true,
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "name": "final.S0_equal.summary.volatility_median",
+      "passed": true,
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "name": "final.S0_equal.summary.terminal_real_median",
+      "passed": true,
+      "max_abs_error": 5.684341886080802e-14
+    },
+    {
+      "name": "final.S0_equal.summary.mean_utility",
+      "passed": true,
+      "max_abs_error": 1.0408340855860843e-16
+    },
+    {
+      "name": "final.S0_equal.summary.trade_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S0_equal.summary.subsequent_trade_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S0_equal.summary.cost_mean",
+      "passed": true,
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "name": "final.S0_equal.summary.review_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S1_annual.wealth_shape",
+      "passed": true,
+      "actual": [
+        60,
+        31
+      ],
+      "expected": [
+        60,
+        31
+      ]
+    },
+    {
+      "name": "final.S1_annual.weights_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30,
+        3
+      ],
+      "expected": [
+        60,
+        30,
+        3
+      ]
+    },
+    {
+      "name": "final.S1_annual.targets_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30,
+        3
+      ],
+      "expected": [
+        60,
+        30,
+        3
+      ]
+    },
+    {
+      "name": "final.S1_annual.costs_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30
+      ],
+      "expected": [
+        60,
+        30
+      ]
+    },
+    {
+      "name": "final.S1_annual.costs_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S1_annual.moved_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30
+      ],
+      "expected": [
+        60,
+        30
+      ]
+    },
+    {
+      "name": "final.S1_annual.moved_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S1_annual.trades_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30
+      ],
+      "expected": [
+        60,
+        30
+      ]
+    },
+    {
+      "name": "final.S1_annual.trades_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S1_annual.pending_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30
+      ],
+      "expected": [
+        60,
+        30
+      ]
+    },
+    {
+      "name": "final.S1_annual.pending_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S1_annual.benefit_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30
+      ],
+      "expected": [
+        60,
+        30
+      ]
+    },
+    {
+      "name": "final.S1_annual.benefit_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S1_annual.initial_wealth",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S1_annual.wealth_positive_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S1_annual.amounts_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "final.S1_annual.fees_funded",
+      "passed": true
+    },
+    {
+      "name": "final.S1_annual.moved_within_investable_wealth",
+      "passed": true
+    },
+    {
+      "name": "final.S1_annual.fee_equation",
+      "passed": true,
+      "max_abs_error": 4.0245584642661925e-16
+    },
+    {
+      "name": "final.S1_annual.weights_nonnegative_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S1_annual.weights_sum_one",
+      "passed": true,
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "name": "final.S1_annual.targets_nonnegative_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S1_annual.targets_sum_one",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S1_annual.trade_flags",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S1_annual.no_fees_without_trade",
+      "passed": true
+    },
+    {
+      "name": "final.S1_annual.pending_persistent",
+      "passed": true
+    },
+    {
+      "name": "final.S1_annual.no_trades_while_pending",
+      "passed": true
+    },
+    {
+      "name": "final.S1_annual.no_fees_while_pending",
+      "passed": true
+    },
+    {
+      "name": "final.S1_annual.reconstructed_holdings_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "final.S1_annual.original_market_wealth_recursion",
+      "passed": true,
+      "max_abs_error": 4.547473508864641e-13
+    },
+    {
+      "name": "final.S1_annual.pretrade_wealth",
+      "passed": true,
+      "max_abs_error": 4.547473508864641e-13
+    },
+    {
+      "name": "final.S1_annual.self_financing_posttrade_wealth",
+      "passed": true,
+      "max_abs_error": 2.2737367544323206e-13
+    },
+    {
+      "name": "final.S1_annual.actual_transfer_amounts",
+      "passed": true,
+      "max_abs_error": 2.2737367544323206e-13
+    },
+    {
+      "name": "final.S1_annual.fees_on_reconstructed_transfers",
+      "passed": true,
+      "max_abs_error": 4.822531263215524e-16
+    },
+    {
+      "name": "final.S1_annual.sale_funds_transfers_and_fees",
+      "passed": true,
+      "max_abs_error": 4.689582056016661e-13
+    },
+    {
+      "name": "final.S1_annual.no_trade_preserves_asset_amounts",
+      "passed": true,
+      "max_abs_error": null
+    },
+    {
+      "name": "final.S1_annual.pending_preserves_asset_amounts",
+      "passed": true,
+      "max_abs_error": null
+    },
+    {
+      "name": "final.S1_annual.trades_achieve_cached_target",
+      "passed": true,
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "name": "final.S1_annual.real_wealth_deflation",
+      "passed": true,
+      "max_abs_error": 1.1368683772161603e-12
+    },
+    {
+      "name": "final.S1_annual.real_metrics_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S1_annual.drawdown_bounds",
+      "passed": true
+    },
+    {
+      "name": "final.S1_annual.summary.cost_rate",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S1_annual.summary.n",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S1_annual.summary.horizon",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S1_annual.summary.cagr_median",
+      "passed": true,
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "name": "final.S1_annual.summary.cagr_p10",
+      "passed": true,
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "name": "final.S1_annual.summary.mdd_median",
+      "passed": true,
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "name": "final.S1_annual.summary.mdd_p90",
+      "passed": true,
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "name": "final.S1_annual.summary.volatility_median",
+      "passed": true,
+      "max_abs_error": 2.7755575615628914e-17
+    },
+    {
+      "name": "final.S1_annual.summary.terminal_real_median",
+      "passed": true,
+      "max_abs_error": 1.1368683772161603e-13
+    },
+    {
+      "name": "final.S1_annual.summary.mean_utility",
+      "passed": true,
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "name": "final.S1_annual.summary.trade_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S1_annual.summary.subsequent_trade_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S1_annual.summary.cost_mean",
+      "passed": true,
+      "max_abs_error": 2.220446049250313e-16
+    },
+    {
+      "name": "final.S1_annual.summary.review_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S2_gate.wealth_shape",
+      "passed": true,
+      "actual": [
+        60,
+        31
+      ],
+      "expected": [
+        60,
+        31
+      ]
+    },
+    {
+      "name": "final.S2_gate.weights_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30,
+        3
+      ],
+      "expected": [
+        60,
+        30,
+        3
+      ]
+    },
+    {
+      "name": "final.S2_gate.targets_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30,
+        3
+      ],
+      "expected": [
+        60,
+        30,
+        3
+      ]
+    },
+    {
+      "name": "final.S2_gate.costs_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30
+      ],
+      "expected": [
+        60,
+        30
+      ]
+    },
+    {
+      "name": "final.S2_gate.costs_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S2_gate.moved_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30
+      ],
+      "expected": [
+        60,
+        30
+      ]
+    },
+    {
+      "name": "final.S2_gate.moved_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S2_gate.trades_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30
+      ],
+      "expected": [
+        60,
+        30
+      ]
+    },
+    {
+      "name": "final.S2_gate.trades_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S2_gate.pending_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30
+      ],
+      "expected": [
+        60,
+        30
+      ]
+    },
+    {
+      "name": "final.S2_gate.pending_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S2_gate.benefit_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30
+      ],
+      "expected": [
+        60,
+        30
+      ]
+    },
+    {
+      "name": "final.S2_gate.benefit_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S2_gate.initial_wealth",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S2_gate.wealth_positive_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S2_gate.amounts_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "final.S2_gate.fees_funded",
+      "passed": true
+    },
+    {
+      "name": "final.S2_gate.moved_within_investable_wealth",
+      "passed": true
+    },
+    {
+      "name": "final.S2_gate.fee_equation",
+      "passed": true,
+      "max_abs_error": 4.996003610813204e-16
+    },
+    {
+      "name": "final.S2_gate.weights_nonnegative_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S2_gate.weights_sum_one",
+      "passed": true,
+      "max_abs_error": 2.220446049250313e-16
+    },
+    {
+      "name": "final.S2_gate.targets_nonnegative_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S2_gate.targets_sum_one",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S2_gate.trade_flags",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S2_gate.no_fees_without_trade",
+      "passed": true
+    },
+    {
+      "name": "final.S2_gate.pending_persistent",
+      "passed": true
+    },
+    {
+      "name": "final.S2_gate.no_trades_while_pending",
+      "passed": true
+    },
+    {
+      "name": "final.S2_gate.no_fees_while_pending",
+      "passed": true
+    },
+    {
+      "name": "final.S2_gate.reconstructed_holdings_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "final.S2_gate.original_market_wealth_recursion",
+      "passed": true,
+      "max_abs_error": 4.547473508864641e-13
+    },
+    {
+      "name": "final.S2_gate.pretrade_wealth",
+      "passed": true,
+      "max_abs_error": 4.547473508864641e-13
+    },
+    {
+      "name": "final.S2_gate.self_financing_posttrade_wealth",
+      "passed": true,
+      "max_abs_error": 4.547473508864641e-13
+    },
+    {
+      "name": "final.S2_gate.actual_transfer_amounts",
+      "passed": true,
+      "max_abs_error": 3.410605131648481e-13
+    },
+    {
+      "name": "final.S2_gate.fees_on_reconstructed_transfers",
+      "passed": true,
+      "max_abs_error": 8.526512829121202e-16
+    },
+    {
+      "name": "final.S2_gate.sale_funds_transfers_and_fees",
+      "passed": true,
+      "max_abs_error": 5.968558980384842e-13
+    },
+    {
+      "name": "final.S2_gate.no_trade_preserves_asset_amounts",
+      "passed": true,
+      "max_abs_error": 3.410605131648481e-13
+    },
+    {
+      "name": "final.S2_gate.pending_preserves_asset_amounts",
+      "passed": true,
+      "max_abs_error": null
+    },
+    {
+      "name": "final.S2_gate.trades_achieve_cached_target",
+      "passed": true,
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "name": "final.S2_gate.real_wealth_deflation",
+      "passed": true,
+      "max_abs_error": 1.3642420526593924e-12
+    },
+    {
+      "name": "final.S2_gate.real_metrics_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S2_gate.drawdown_bounds",
+      "passed": true
+    },
+    {
+      "name": "final.S2_gate.summary.cost_rate",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S2_gate.summary.n",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S2_gate.summary.horizon",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S2_gate.summary.cagr_median",
+      "passed": true,
+      "max_abs_error": 4.163336342344337e-17
+    },
+    {
+      "name": "final.S2_gate.summary.cagr_p10",
+      "passed": true,
+      "max_abs_error": 1.249000902703301e-16
+    },
+    {
+      "name": "final.S2_gate.summary.mdd_median",
+      "passed": true,
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "name": "final.S2_gate.summary.mdd_p90",
+      "passed": true,
+      "max_abs_error": 1.6653345369377348e-16
+    },
+    {
+      "name": "final.S2_gate.summary.volatility_median",
+      "passed": true,
+      "max_abs_error": 4.163336342344337e-17
+    },
+    {
+      "name": "final.S2_gate.summary.terminal_real_median",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S2_gate.summary.mean_utility",
+      "passed": true,
+      "max_abs_error": 1.3183898417423734e-16
+    },
+    {
+      "name": "final.S2_gate.summary.trade_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S2_gate.summary.subsequent_trade_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S2_gate.summary.cost_mean",
+      "passed": true,
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "name": "final.S2_gate.summary.review_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S3_dynamic.wealth_shape",
+      "passed": true,
+      "actual": [
+        60,
+        31
+      ],
+      "expected": [
+        60,
+        31
+      ]
+    },
+    {
+      "name": "final.S3_dynamic.weights_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30,
+        3
+      ],
+      "expected": [
+        60,
+        30,
+        3
+      ]
+    },
+    {
+      "name": "final.S3_dynamic.targets_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30,
+        3
+      ],
+      "expected": [
+        60,
+        30,
+        3
+      ]
+    },
+    {
+      "name": "final.S3_dynamic.costs_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30
+      ],
+      "expected": [
+        60,
+        30
+      ]
+    },
+    {
+      "name": "final.S3_dynamic.costs_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S3_dynamic.moved_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30
+      ],
+      "expected": [
+        60,
+        30
+      ]
+    },
+    {
+      "name": "final.S3_dynamic.moved_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S3_dynamic.trades_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30
+      ],
+      "expected": [
+        60,
+        30
+      ]
+    },
+    {
+      "name": "final.S3_dynamic.trades_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S3_dynamic.pending_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30
+      ],
+      "expected": [
+        60,
+        30
+      ]
+    },
+    {
+      "name": "final.S3_dynamic.pending_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S3_dynamic.benefit_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30
+      ],
+      "expected": [
+        60,
+        30
+      ]
+    },
+    {
+      "name": "final.S3_dynamic.benefit_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S3_dynamic.initial_wealth",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S3_dynamic.wealth_positive_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S3_dynamic.amounts_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "final.S3_dynamic.fees_funded",
+      "passed": true
+    },
+    {
+      "name": "final.S3_dynamic.moved_within_investable_wealth",
+      "passed": true
+    },
+    {
+      "name": "final.S3_dynamic.fee_equation",
+      "passed": true,
+      "max_abs_error": 3.3306690738754696e-16
+    },
+    {
+      "name": "final.S3_dynamic.weights_nonnegative_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S3_dynamic.weights_sum_one",
+      "passed": true,
+      "max_abs_error": 2.220446049250313e-16
+    },
+    {
+      "name": "final.S3_dynamic.targets_nonnegative_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S3_dynamic.targets_sum_one",
+      "passed": true,
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "name": "final.S3_dynamic.trade_flags",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S3_dynamic.no_fees_without_trade",
+      "passed": true
+    },
+    {
+      "name": "final.S3_dynamic.pending_persistent",
+      "passed": true
+    },
+    {
+      "name": "final.S3_dynamic.no_trades_while_pending",
+      "passed": true
+    },
+    {
+      "name": "final.S3_dynamic.no_fees_while_pending",
+      "passed": true
+    },
+    {
+      "name": "final.S3_dynamic.reconstructed_holdings_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "final.S3_dynamic.original_market_wealth_recursion",
+      "passed": true,
+      "max_abs_error": 4.547473508864641e-13
+    },
+    {
+      "name": "final.S3_dynamic.pretrade_wealth",
+      "passed": true,
+      "max_abs_error": 4.547473508864641e-13
+    },
+    {
+      "name": "final.S3_dynamic.self_financing_posttrade_wealth",
+      "passed": true,
+      "max_abs_error": 2.2737367544323206e-13
+    },
+    {
+      "name": "final.S3_dynamic.actual_transfer_amounts",
+      "passed": true,
+      "max_abs_error": 2.5579538487363607e-13
+    },
+    {
+      "name": "final.S3_dynamic.fees_on_reconstructed_transfers",
+      "passed": true,
+      "max_abs_error": 5.273559366969494e-16
+    },
+    {
+      "name": "final.S3_dynamic.sale_funds_transfers_and_fees",
+      "passed": true,
+      "max_abs_error": 3.268496584496461e-13
+    },
+    {
+      "name": "final.S3_dynamic.no_trade_preserves_asset_amounts",
+      "passed": true,
+      "max_abs_error": 1.7053025658242404e-13
+    },
+    {
+      "name": "final.S3_dynamic.pending_preserves_asset_amounts",
+      "passed": true,
+      "max_abs_error": null
+    },
+    {
+      "name": "final.S3_dynamic.trades_achieve_cached_target",
+      "passed": true,
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "name": "final.S3_dynamic.real_wealth_deflation",
+      "passed": true,
+      "max_abs_error": 1.1368683772161603e-12
+    },
+    {
+      "name": "final.S3_dynamic.real_metrics_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S3_dynamic.drawdown_bounds",
+      "passed": true
+    },
+    {
+      "name": "final.S3_dynamic.summary.cost_rate",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S3_dynamic.summary.n",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S3_dynamic.summary.horizon",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S3_dynamic.summary.cagr_median",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S3_dynamic.summary.cagr_p10",
+      "passed": true,
+      "max_abs_error": 2.42861286636753e-17
+    },
+    {
+      "name": "final.S3_dynamic.summary.mdd_median",
+      "passed": true,
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "name": "final.S3_dynamic.summary.mdd_p90",
+      "passed": true,
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "name": "final.S3_dynamic.summary.volatility_median",
+      "passed": true,
+      "max_abs_error": 2.7755575615628914e-17
+    },
+    {
+      "name": "final.S3_dynamic.summary.terminal_real_median",
+      "passed": true,
+      "max_abs_error": 1.1368683772161603e-13
+    },
+    {
+      "name": "final.S3_dynamic.summary.mean_utility",
+      "passed": true,
+      "max_abs_error": 8.326672684688674e-17
+    },
+    {
+      "name": "final.S3_dynamic.summary.trade_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S3_dynamic.summary.subsequent_trade_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S3_dynamic.summary.cost_mean",
+      "passed": true,
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "name": "final.S3_dynamic.summary.review_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S2_review.wealth_shape",
+      "passed": true,
+      "actual": [
+        60,
+        31
+      ],
+      "expected": [
+        60,
+        31
+      ]
+    },
+    {
+      "name": "final.S2_review.weights_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30,
+        3
+      ],
+      "expected": [
+        60,
+        30,
+        3
+      ]
+    },
+    {
+      "name": "final.S2_review.targets_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30,
+        3
+      ],
+      "expected": [
+        60,
+        30,
+        3
+      ]
+    },
+    {
+      "name": "final.S2_review.costs_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30
+      ],
+      "expected": [
+        60,
+        30
+      ]
+    },
+    {
+      "name": "final.S2_review.costs_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S2_review.moved_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30
+      ],
+      "expected": [
+        60,
+        30
+      ]
+    },
+    {
+      "name": "final.S2_review.moved_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S2_review.trades_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30
+      ],
+      "expected": [
+        60,
+        30
+      ]
+    },
+    {
+      "name": "final.S2_review.trades_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S2_review.pending_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30
+      ],
+      "expected": [
+        60,
+        30
+      ]
+    },
+    {
+      "name": "final.S2_review.pending_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S2_review.benefit_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30
+      ],
+      "expected": [
+        60,
+        30
+      ]
+    },
+    {
+      "name": "final.S2_review.benefit_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S2_review.initial_wealth",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S2_review.wealth_positive_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S2_review.amounts_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "final.S2_review.fees_funded",
+      "passed": true
+    },
+    {
+      "name": "final.S2_review.moved_within_investable_wealth",
+      "passed": true
+    },
+    {
+      "name": "final.S2_review.fee_equation",
+      "passed": true,
+      "max_abs_error": 4.996003610813204e-16
+    },
+    {
+      "name": "final.S2_review.weights_nonnegative_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S2_review.weights_sum_one",
+      "passed": true,
+      "max_abs_error": 2.220446049250313e-16
+    },
+    {
+      "name": "final.S2_review.targets_nonnegative_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S2_review.targets_sum_one",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S2_review.trade_flags",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S2_review.no_fees_without_trade",
+      "passed": true
+    },
+    {
+      "name": "final.S2_review.pending_persistent",
+      "passed": true
+    },
+    {
+      "name": "final.S2_review.no_trades_while_pending",
+      "passed": true
+    },
+    {
+      "name": "final.S2_review.no_fees_while_pending",
+      "passed": true
+    },
+    {
+      "name": "final.S2_review.reconstructed_holdings_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "final.S2_review.original_market_wealth_recursion",
+      "passed": true,
+      "max_abs_error": 4.547473508864641e-13
+    },
+    {
+      "name": "final.S2_review.pretrade_wealth",
+      "passed": true,
+      "max_abs_error": 4.547473508864641e-13
+    },
+    {
+      "name": "final.S2_review.self_financing_posttrade_wealth",
+      "passed": true,
+      "max_abs_error": 4.547473508864641e-13
+    },
+    {
+      "name": "final.S2_review.actual_transfer_amounts",
+      "passed": true,
+      "max_abs_error": 3.410605131648481e-13
+    },
+    {
+      "name": "final.S2_review.fees_on_reconstructed_transfers",
+      "passed": true,
+      "max_abs_error": 8.526512829121202e-16
+    },
+    {
+      "name": "final.S2_review.sale_funds_transfers_and_fees",
+      "passed": true,
+      "max_abs_error": 5.968558980384842e-13
+    },
+    {
+      "name": "final.S2_review.no_trade_preserves_asset_amounts",
+      "passed": true,
+      "max_abs_error": 3.410605131648481e-13
+    },
+    {
+      "name": "final.S2_review.pending_preserves_asset_amounts",
+      "passed": true,
+      "max_abs_error": 1.7053025658242404e-13
+    },
+    {
+      "name": "final.S2_review.trades_achieve_cached_target",
+      "passed": true,
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "name": "final.S2_review.real_wealth_deflation",
+      "passed": true,
+      "max_abs_error": 1.3642420526593924e-12
+    },
+    {
+      "name": "final.S2_review.real_metrics_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S2_review.drawdown_bounds",
+      "passed": true
+    },
+    {
+      "name": "final.S2_review.summary.cost_rate",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S2_review.summary.n",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S2_review.summary.horizon",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S2_review.summary.cagr_median",
+      "passed": true,
+      "max_abs_error": 3.469446951953614e-17
+    },
+    {
+      "name": "final.S2_review.summary.cagr_p10",
+      "passed": true,
+      "max_abs_error": 7.28583859910259e-17
+    },
+    {
+      "name": "final.S2_review.summary.mdd_median",
+      "passed": true,
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "name": "final.S2_review.summary.mdd_p90",
+      "passed": true,
+      "max_abs_error": 3.885780586188048e-16
+    },
+    {
+      "name": "final.S2_review.summary.volatility_median",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S2_review.summary.terminal_real_median",
+      "passed": true,
+      "max_abs_error": 1.1368683772161603e-13
+    },
+    {
+      "name": "final.S2_review.summary.mean_utility",
+      "passed": true,
+      "max_abs_error": 1.249000902703301e-16
+    },
+    {
+      "name": "final.S2_review.summary.trade_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S2_review.summary.subsequent_trade_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S2_review.summary.cost_mean",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S2_review.summary.review_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S3_review.wealth_shape",
+      "passed": true,
+      "actual": [
+        60,
+        31
+      ],
+      "expected": [
+        60,
+        31
+      ]
+    },
+    {
+      "name": "final.S3_review.weights_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30,
+        3
+      ],
+      "expected": [
+        60,
+        30,
+        3
+      ]
+    },
+    {
+      "name": "final.S3_review.targets_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30,
+        3
+      ],
+      "expected": [
+        60,
+        30,
+        3
+      ]
+    },
+    {
+      "name": "final.S3_review.costs_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30
+      ],
+      "expected": [
+        60,
+        30
+      ]
+    },
+    {
+      "name": "final.S3_review.costs_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S3_review.moved_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30
+      ],
+      "expected": [
+        60,
+        30
+      ]
+    },
+    {
+      "name": "final.S3_review.moved_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S3_review.trades_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30
+      ],
+      "expected": [
+        60,
+        30
+      ]
+    },
+    {
+      "name": "final.S3_review.trades_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S3_review.pending_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30
+      ],
+      "expected": [
+        60,
+        30
+      ]
+    },
+    {
+      "name": "final.S3_review.pending_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S3_review.benefit_shape",
+      "passed": true,
+      "actual": [
+        60,
+        30
+      ],
+      "expected": [
+        60,
+        30
+      ]
+    },
+    {
+      "name": "final.S3_review.benefit_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S3_review.initial_wealth",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S3_review.wealth_positive_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S3_review.amounts_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "final.S3_review.fees_funded",
+      "passed": true
+    },
+    {
+      "name": "final.S3_review.moved_within_investable_wealth",
+      "passed": true
+    },
+    {
+      "name": "final.S3_review.fee_equation",
+      "passed": true,
+      "max_abs_error": 3.3306690738754696e-16
+    },
+    {
+      "name": "final.S3_review.weights_nonnegative_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S3_review.weights_sum_one",
+      "passed": true,
+      "max_abs_error": 2.220446049250313e-16
+    },
+    {
+      "name": "final.S3_review.targets_nonnegative_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S3_review.targets_sum_one",
+      "passed": true,
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "name": "final.S3_review.trade_flags",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S3_review.no_fees_without_trade",
+      "passed": true
+    },
+    {
+      "name": "final.S3_review.pending_persistent",
+      "passed": true
+    },
+    {
+      "name": "final.S3_review.no_trades_while_pending",
+      "passed": true
+    },
+    {
+      "name": "final.S3_review.no_fees_while_pending",
+      "passed": true
+    },
+    {
+      "name": "final.S3_review.reconstructed_holdings_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "final.S3_review.original_market_wealth_recursion",
+      "passed": true,
+      "max_abs_error": 4.547473508864641e-13
+    },
+    {
+      "name": "final.S3_review.pretrade_wealth",
+      "passed": true,
+      "max_abs_error": 4.547473508864641e-13
+    },
+    {
+      "name": "final.S3_review.self_financing_posttrade_wealth",
+      "passed": true,
+      "max_abs_error": 2.2737367544323206e-13
+    },
+    {
+      "name": "final.S3_review.actual_transfer_amounts",
+      "passed": true,
+      "max_abs_error": 2.5579538487363607e-13
+    },
+    {
+      "name": "final.S3_review.fees_on_reconstructed_transfers",
+      "passed": true,
+      "max_abs_error": 5.273559366969494e-16
+    },
+    {
+      "name": "final.S3_review.sale_funds_transfers_and_fees",
+      "passed": true,
+      "max_abs_error": 3.268496584496461e-13
+    },
+    {
+      "name": "final.S3_review.no_trade_preserves_asset_amounts",
+      "passed": true,
+      "max_abs_error": 1.7053025658242404e-13
+    },
+    {
+      "name": "final.S3_review.pending_preserves_asset_amounts",
+      "passed": true,
+      "max_abs_error": 1.1368683772161603e-13
+    },
+    {
+      "name": "final.S3_review.trades_achieve_cached_target",
+      "passed": true,
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "name": "final.S3_review.real_wealth_deflation",
+      "passed": true,
+      "max_abs_error": 1.1368683772161603e-12
+    },
+    {
+      "name": "final.S3_review.real_metrics_finite",
+      "passed": true
+    },
+    {
+      "name": "final.S3_review.drawdown_bounds",
+      "passed": true
+    },
+    {
+      "name": "final.S3_review.summary.cost_rate",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S3_review.summary.n",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S3_review.summary.horizon",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S3_review.summary.cagr_median",
+      "passed": true,
+      "max_abs_error": 8.326672684688674e-17
+    },
+    {
+      "name": "final.S3_review.summary.cagr_p10",
+      "passed": true,
+      "max_abs_error": 4.163336342344337e-17
+    },
+    {
+      "name": "final.S3_review.summary.mdd_median",
+      "passed": true,
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "name": "final.S3_review.summary.mdd_p90",
+      "passed": true,
+      "max_abs_error": 3.3306690738754696e-16
+    },
+    {
+      "name": "final.S3_review.summary.volatility_median",
+      "passed": true,
+      "max_abs_error": 1.3877787807814457e-17
+    },
+    {
+      "name": "final.S3_review.summary.terminal_real_median",
+      "passed": true,
+      "max_abs_error": 1.1368683772161603e-13
+    },
+    {
+      "name": "final.S3_review.summary.mean_utility",
+      "passed": true,
+      "max_abs_error": 1.5265566588595902e-16
+    },
+    {
+      "name": "final.S3_review.summary.trade_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S3_review.summary.subsequent_trade_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.S3_review.summary.cost_mean",
+      "passed": true,
+      "max_abs_error": 2.220446049250313e-16
+    },
+    {
+      "name": "final.S3_review.summary.review_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.archive_field_set",
+      "passed": true,
+      "actual": [
+        "S0_equal__benefit",
+        "S0_equal__costs",
+        "S0_equal__moved",
+        "S0_equal__pending",
+        "S0_equal__targets",
+        "S0_equal__trades",
+        "S0_equal__wealth",
+        "S0_equal__weights",
+        "S1_annual__benefit",
+        "S1_annual__costs",
+        "S1_annual__moved",
+        "S1_annual__pending",
+        "S1_annual__targets",
+        "S1_annual__trades",
+        "S1_annual__wealth",
+        "S1_annual__weights",
+        "S2_gate__benefit",
+        "S2_gate__costs",
+        "S2_gate__moved",
+        "S2_gate__pending",
+        "S2_gate__targets",
+        "S2_gate__trades",
+        "S2_gate__wealth",
+        "S2_gate__weights",
+        "S2_review__benefit",
+        "S2_review__costs",
+        "S2_review__moved",
+        "S2_review__pending",
+        "S2_review__targets",
+        "S2_review__trades",
+        "S2_review__wealth",
+        "S2_review__weights",
+        "S3_dynamic__benefit",
+        "S3_dynamic__costs",
+        "S3_dynamic__moved",
+        "S3_dynamic__pending",
+        "S3_dynamic__targets",
+        "S3_dynamic__trades",
+        "S3_dynamic__wealth",
+        "S3_dynamic__weights",
+        "S3_review__benefit",
+        "S3_review__costs",
+        "S3_review__moved",
+        "S3_review__pending",
+        "S3_review__targets",
+        "S3_review__trades",
+        "S3_review__wealth",
+        "S3_review__weights",
+        "inflation",
+        "scenario_ids"
+      ],
+      "expected": [
+        "S0_equal__benefit",
+        "S0_equal__costs",
+        "S0_equal__moved",
+        "S0_equal__pending",
+        "S0_equal__targets",
+        "S0_equal__trades",
+        "S0_equal__wealth",
+        "S0_equal__weights",
+        "S1_annual__benefit",
+        "S1_annual__costs",
+        "S1_annual__moved",
+        "S1_annual__pending",
+        "S1_annual__targets",
+        "S1_annual__trades",
+        "S1_annual__wealth",
+        "S1_annual__weights",
+        "S2_gate__benefit",
+        "S2_gate__costs",
+        "S2_gate__moved",
+        "S2_gate__pending",
+        "S2_gate__targets",
+        "S2_gate__trades",
+        "S2_gate__wealth",
+        "S2_gate__weights",
+        "S2_review__benefit",
+        "S2_review__costs",
+        "S2_review__moved",
+        "S2_review__pending",
+        "S2_review__targets",
+        "S2_review__trades",
+        "S2_review__wealth",
+        "S2_review__weights",
+        "S3_dynamic__benefit",
+        "S3_dynamic__costs",
+        "S3_dynamic__moved",
+        "S3_dynamic__pending",
+        "S3_dynamic__targets",
+        "S3_dynamic__trades",
+        "S3_dynamic__wealth",
+        "S3_dynamic__weights",
+        "S3_review__benefit",
+        "S3_review__costs",
+        "S3_review__moved",
+        "S3_review__pending",
+        "S3_review__targets",
+        "S3_review__trades",
+        "S3_review__wealth",
+        "S3_review__weights",
+        "inflation",
+        "scenario_ids"
+      ]
+    },
+    {
+      "name": "final.manifest_scenario_ids",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.severe_scenario_rule",
+      "passed": true,
+      "actual": 155,
+      "expected": 155
+    },
+    {
+      "name": "final.paired_comparison_set",
+      "passed": true,
+      "actual": [
+        "S1_annual",
+        "S2_gate",
+        "S2_gate_minus_S1_annual",
+        "S2_review",
+        "S2_review_minus_S2_gate",
+        "S3_dynamic",
+        "S3_review",
+        "S3_review_minus_S2_review"
+      ],
+      "expected": [
+        "S1_annual",
+        "S2_gate",
+        "S2_gate_minus_S1_annual",
+        "S2_review",
+        "S2_review_minus_S2_gate",
+        "S3_dynamic",
+        "S3_review",
+        "S3_review_minus_S2_review"
+      ]
+    },
+    {
+      "name": "final.paired.S1_annual.metric_set",
+      "passed": true,
+      "actual": [
+        "mean_utility",
+        "median_cagr",
+        "p10_cagr",
+        "p90_mdd"
+      ],
+      "expected": [
+        "mean_utility",
+        "median_cagr",
+        "p10_cagr",
+        "p90_mdd"
+      ]
+    },
+    {
+      "name": "final.paired.S1_annual.mean_utility.estimate",
+      "passed": true,
+      "max_abs_error": 4.5102810375396984e-17
+    },
+    {
+      "name": "final.paired.S1_annual.mean_utility.low95",
+      "passed": true,
+      "max_abs_error": 1.3877787807814457e-17
+    },
+    {
+      "name": "final.paired.S1_annual.mean_utility.high95",
+      "passed": true,
+      "max_abs_error": 3.469446951953614e-17
+    },
+    {
+      "name": "final.paired.S1_annual.median_cagr.estimate",
+      "passed": true,
+      "max_abs_error": 4.163336342344337e-17
+    },
+    {
+      "name": "final.paired.S1_annual.median_cagr.low95",
+      "passed": true,
+      "max_abs_error": 4.336808689942018e-19
+    },
+    {
+      "name": "final.paired.S1_annual.median_cagr.high95",
+      "passed": true,
+      "max_abs_error": 9.020562075079397e-17
+    },
+    {
+      "name": "final.paired.S1_annual.p10_cagr.estimate",
+      "passed": true,
+      "max_abs_error": 9.194034422677078e-17
+    },
+    {
+      "name": "final.paired.S1_annual.p10_cagr.low95",
+      "passed": true,
+      "max_abs_error": 3.469446951953614e-17
+    },
+    {
+      "name": "final.paired.S1_annual.p10_cagr.high95",
+      "passed": true,
+      "max_abs_error": 2.688821387764051e-17
+    },
+    {
+      "name": "final.paired.S1_annual.p90_mdd.estimate",
+      "passed": true,
+      "max_abs_error": 1.6653345369377348e-16
+    },
+    {
+      "name": "final.paired.S1_annual.p90_mdd.low95",
+      "passed": true,
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "name": "final.paired.S1_annual.p90_mdd.high95",
+      "passed": true,
+      "max_abs_error": 1.5265566588595902e-16
+    },
+    {
+      "name": "final.paired.S2_gate.metric_set",
+      "passed": true,
+      "actual": [
+        "mean_utility",
+        "median_cagr",
+        "p10_cagr",
+        "p90_mdd"
+      ],
+      "expected": [
+        "mean_utility",
+        "median_cagr",
+        "p10_cagr",
+        "p90_mdd"
+      ]
+    },
+    {
+      "name": "final.paired.S2_gate.mean_utility.estimate",
+      "passed": true,
+      "max_abs_error": 1.3877787807814457e-17
+    },
+    {
+      "name": "final.paired.S2_gate.mean_utility.low95",
+      "passed": true,
+      "max_abs_error": 4.163336342344337e-17
+    },
+    {
+      "name": "final.paired.S2_gate.mean_utility.high95",
+      "passed": true,
+      "max_abs_error": 6.938893903907228e-17
+    },
+    {
+      "name": "final.paired.S2_gate.median_cagr.estimate",
+      "passed": true,
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "name": "final.paired.S2_gate.median_cagr.low95",
+      "passed": true,
+      "max_abs_error": 2.7755575615628914e-17
+    },
+    {
+      "name": "final.paired.S2_gate.median_cagr.high95",
+      "passed": true,
+      "max_abs_error": 1.3877787807814457e-17
+    },
+    {
+      "name": "final.paired.S2_gate.p10_cagr.estimate",
+      "passed": true,
+      "max_abs_error": 8.847089727481716e-17
+    },
+    {
+      "name": "final.paired.S2_gate.p10_cagr.low95",
+      "passed": true,
+      "max_abs_error": 4.2500725161431774e-17
+    },
+    {
+      "name": "final.paired.S2_gate.p10_cagr.high95",
+      "passed": true,
+      "max_abs_error": 5.204170427930421e-17
+    },
+    {
+      "name": "final.paired.S2_gate.p90_mdd.estimate",
+      "passed": true,
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "name": "final.paired.S2_gate.p90_mdd.low95",
+      "passed": true,
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "name": "final.paired.S2_gate.p90_mdd.high95",
+      "passed": true,
+      "max_abs_error": 2.7755575615628914e-16
+    },
+    {
+      "name": "final.paired.S3_dynamic.metric_set",
+      "passed": true,
+      "actual": [
+        "mean_utility",
+        "median_cagr",
+        "p10_cagr",
+        "p90_mdd"
+      ],
+      "expected": [
+        "mean_utility",
+        "median_cagr",
+        "p10_cagr",
+        "p90_mdd"
+      ]
+    },
+    {
+      "name": "final.paired.S3_dynamic.mean_utility.estimate",
+      "passed": true,
+      "max_abs_error": 1.3877787807814457e-17
+    },
+    {
+      "name": "final.paired.S3_dynamic.mean_utility.low95",
+      "passed": true,
+      "max_abs_error": 2.688821387764051e-17
+    },
+    {
+      "name": "final.paired.S3_dynamic.mean_utility.high95",
+      "passed": true,
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "name": "final.paired.S3_dynamic.median_cagr.estimate",
+      "passed": true,
+      "max_abs_error": 9.71445146547012e-17
+    },
+    {
+      "name": "final.paired.S3_dynamic.median_cagr.low95",
+      "passed": true,
+      "max_abs_error": 3.469446951953614e-17
+    },
+    {
+      "name": "final.paired.S3_dynamic.median_cagr.high95",
+      "passed": true,
+      "max_abs_error": 6.331740687315346e-17
+    },
+    {
+      "name": "final.paired.S3_dynamic.p10_cagr.estimate",
+      "passed": true,
+      "max_abs_error": 6.071532165918825e-17
+    },
+    {
+      "name": "final.paired.S3_dynamic.p10_cagr.low95",
+      "passed": true,
+      "max_abs_error": 1.0581813203458523e-16
+    },
+    {
+      "name": "final.paired.S3_dynamic.p10_cagr.high95",
+      "passed": true,
+      "max_abs_error": 3.469446951953614e-18
+    },
+    {
+      "name": "final.paired.S3_dynamic.p90_mdd.estimate",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.paired.S3_dynamic.p90_mdd.low95",
+      "passed": true,
+      "max_abs_error": 1.5959455978986625e-16
+    },
+    {
+      "name": "final.paired.S3_dynamic.p90_mdd.high95",
+      "passed": true,
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "name": "final.paired.S2_review.metric_set",
+      "passed": true,
+      "actual": [
+        "mean_utility",
+        "median_cagr",
+        "p10_cagr",
+        "p90_mdd"
+      ],
+      "expected": [
+        "mean_utility",
+        "median_cagr",
+        "p10_cagr",
+        "p90_mdd"
+      ]
+    },
+    {
+      "name": "final.paired.S2_review.mean_utility.estimate",
+      "passed": true,
+      "max_abs_error": 4.163336342344337e-17
+    },
+    {
+      "name": "final.paired.S2_review.mean_utility.low95",
+      "passed": true,
+      "max_abs_error": 4.163336342344337e-17
+    },
+    {
+      "name": "final.paired.S2_review.mean_utility.high95",
+      "passed": true,
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "name": "final.paired.S2_review.median_cagr.estimate",
+      "passed": true,
+      "max_abs_error": 6.245004513516506e-17
+    },
+    {
+      "name": "final.paired.S2_review.median_cagr.low95",
+      "passed": true,
+      "max_abs_error": 1.5352302762394743e-16
+    },
+    {
+      "name": "final.paired.S2_review.median_cagr.high95",
+      "passed": true,
+      "max_abs_error": 6.245004513516506e-17
+    },
+    {
+      "name": "final.paired.S2_review.p10_cagr.estimate",
+      "passed": true,
+      "max_abs_error": 3.642919299551295e-17
+    },
+    {
+      "name": "final.paired.S2_review.p10_cagr.low95",
+      "passed": true,
+      "max_abs_error": 8.413408858487514e-17
+    },
+    {
+      "name": "final.paired.S2_review.p10_cagr.high95",
+      "passed": true,
+      "max_abs_error": 2.949029909160572e-17
+    },
+    {
+      "name": "final.paired.S2_review.p90_mdd.estimate",
+      "passed": true,
+      "max_abs_error": 4.440892098500626e-16
+    },
+    {
+      "name": "final.paired.S2_review.p90_mdd.low95",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "final.paired.S2_review.p90_mdd.high95",
+      "passed": true,
+      "max_abs_error": 1.6653345369377348e-16
+    },
+    {
+      "name": "final.paired.S3_review.metric_set",
+      "passed": true,
+      "actual": [
+        "mean_utility",
+        "median_cagr",
+        "p10_cagr",
+        "p90_mdd"
+      ],
+      "expected": [
+        "mean_utility",
+        "median_cagr",
+        "p10_cagr",
+        "p90_mdd"
+      ]
+    },
+    {
+      "name": "final.paired.S3_review.mean_utility.estimate",
+      "passed": true,
+      "max_abs_error": 2.7755575615628914e-17
+    },
+    {
+      "name": "final.paired.S3_review.mean_utility.low95",
+      "passed": true,
+      "max_abs_error": 1.249000902703301e-16
+    },
+    {
+      "name": "final.paired.S3_review.mean_utility.high95",
+      "passed": true,
+      "max_abs_error": 8.326672684688674e-17
+    },
+    {
+      "name": "final.paired.S3_review.median_cagr.estimate",
+      "passed": true,
+      "max_abs_error": 1.3877787807814457e-17
+    },
+    {
+      "name": "final.paired.S3_review.median_cagr.low95",
+      "passed": true,
+      "max_abs_error": 1.1796119636642288e-16
+    },
+    {
+      "name": "final.paired.S3_review.median_cagr.high95",
+      "passed": true,
+      "max_abs_error": 6.938893903907228e-18
+    },
+    {
+      "name": "final.paired.S3_review.p10_cagr.estimate",
+      "passed": true,
+      "max_abs_error": 7.806255641895632e-17
+    },
+    {
+      "name": "final.paired.S3_review.p10_cagr.low95",
+      "passed": true,
+      "max_abs_error": 6.678685382510707e-17
+    },
+    {
+      "name": "final.paired.S3_review.p10_cagr.high95",
+      "passed": true,
+      "max_abs_error": 9.020562075079397e-17
+    },
+    {
+      "name": "final.paired.S3_review.p90_mdd.estimate",
+      "passed": true,
+      "max_abs_error": 2.7755575615628914e-16
+    },
+    {
+      "name": "final.paired.S3_review.p90_mdd.low95",
+      "passed": true,
+      "max_abs_error": 2.7755575615628914e-16
+    },
+    {
+      "name": "final.paired.S3_review.p90_mdd.high95",
+      "passed": true,
+      "max_abs_error": 2.7755575615628914e-16
+    },
+    {
+      "name": "final.paired.S3_review_minus_S2_review.metric_set",
+      "passed": true,
+      "actual": [
+        "mean_utility",
+        "median_cagr",
+        "p10_cagr",
+        "p90_mdd"
+      ],
+      "expected": [
+        "mean_utility",
+        "median_cagr",
+        "p10_cagr",
+        "p90_mdd"
+      ]
+    },
+    {
+      "name": "final.paired.S3_review_minus_S2_review.mean_utility.estimate",
+      "passed": true,
+      "max_abs_error": 5.898059818321144e-17
+    },
+    {
+      "name": "final.paired.S3_review_minus_S2_review.mean_utility.low95",
+      "passed": true,
+      "max_abs_error": 9.367506770274758e-17
+    },
+    {
+      "name": "final.paired.S3_review_minus_S2_review.mean_utility.high95",
+      "passed": true,
+      "max_abs_error": 8.326672684688674e-17
+    },
+    {
+      "name": "final.paired.S3_review_minus_S2_review.median_cagr.estimate",
+      "passed": true,
+      "max_abs_error": 4.85722573273506e-17
+    },
+    {
+      "name": "final.paired.S3_review_minus_S2_review.median_cagr.low95",
+      "passed": true,
+      "max_abs_error": 1.457167719820518e-16
+    },
+    {
+      "name": "final.paired.S3_review_minus_S2_review.median_cagr.high95",
+      "passed": true,
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "name": "final.paired.S3_review_minus_S2_review.p10_cagr.estimate",
+      "passed": true,
+      "max_abs_error": 1.1449174941446927e-16
+    },
+    {
+      "name": "final.paired.S3_review_minus_S2_review.p10_cagr.low95",
+      "passed": true,
+      "max_abs_error": 3.2959746043559335e-17
+    },
+    {
+      "name": "final.paired.S3_review_minus_S2_review.p10_cagr.high95",
+      "passed": true,
+      "max_abs_error": 7.24247051220317e-17
+    },
+    {
+      "name": "final.paired.S3_review_minus_S2_review.p90_mdd.estimate",
+      "passed": true,
+      "max_abs_error": 7.216449660063518e-16
+    },
+    {
+      "name": "final.paired.S3_review_minus_S2_review.p90_mdd.low95",
+      "passed": true,
+      "max_abs_error": 4.440892098500626e-16
+    },
+    {
+      "name": "final.paired.S3_review_minus_S2_review.p90_mdd.high95",
+      "passed": true,
+      "max_abs_error": 1.0825758692267762e-16
+    },
+    {
+      "name": "final.paired.S2_gate_minus_S1_annual.metric_set",
+      "passed": true,
+      "actual": [
+        "mean_utility",
+        "median_cagr",
+        "p10_cagr",
+        "p90_mdd"
+      ],
+      "expected": [
+        "mean_utility",
+        "median_cagr",
+        "p10_cagr",
+        "p90_mdd"
+      ]
+    },
+    {
+      "name": "final.paired.S2_gate_minus_S1_annual.mean_utility.estimate",
+      "passed": true,
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "name": "final.paired.S2_gate_minus_S1_annual.mean_utility.low95",
+      "passed": true,
+      "max_abs_error": 1.214306433183765e-17
+    },
+    {
+      "name": "final.paired.S2_gate_minus_S1_annual.mean_utility.high95",
+      "passed": true,
+      "max_abs_error": 2.7755575615628914e-17
+    },
+    {
+      "name": "final.paired.S2_gate_minus_S1_annual.median_cagr.estimate",
+      "passed": true,
+      "max_abs_error": 1.3877787807814457e-17
+    },
+    {
+      "name": "final.paired.S2_gate_minus_S1_annual.median_cagr.low95",
+      "passed": true,
+      "max_abs_error": 7.632783294297951e-17
+    },
+    {
+      "name": "final.paired.S2_gate_minus_S1_annual.median_cagr.high95",
+      "passed": true,
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "name": "final.paired.S2_gate_minus_S1_annual.p10_cagr.estimate",
+      "passed": true,
+      "max_abs_error": 1.8041124150158794e-16
+    },
+    {
+      "name": "final.paired.S2_gate_minus_S1_annual.p10_cagr.low95",
+      "passed": true,
+      "max_abs_error": 4.163336342344337e-17
+    },
+    {
+      "name": "final.paired.S2_gate_minus_S1_annual.p10_cagr.high95",
+      "passed": true,
+      "max_abs_error": 1.465841337200402e-16
+    },
+    {
+      "name": "final.paired.S2_gate_minus_S1_annual.p90_mdd.estimate",
+      "passed": true,
+      "max_abs_error": 2.7755575615628914e-16
+    },
+    {
+      "name": "final.paired.S2_gate_minus_S1_annual.p90_mdd.low95",
+      "passed": true,
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "name": "final.paired.S2_gate_minus_S1_annual.p90_mdd.high95",
+      "passed": true,
+      "max_abs_error": 3.3306690738754696e-16
+    },
+    {
+      "name": "final.paired.S2_review_minus_S2_gate.metric_set",
+      "passed": true,
+      "actual": [
+        "mean_utility",
+        "median_cagr",
+        "p10_cagr",
+        "p90_mdd"
+      ],
+      "expected": [
+        "mean_utility",
+        "median_cagr",
+        "p10_cagr",
+        "p90_mdd"
+      ]
+    },
+    {
+      "name": "final.paired.S2_review_minus_S2_gate.mean_utility.estimate",
+      "passed": true,
+      "max_abs_error": 3.7025504190379976e-17
+    },
+    {
+      "name": "final.paired.S2_review_minus_S2_gate.mean_utility.low95",
+      "passed": true,
+      "max_abs_error": 5.204170427930421e-17
+    },
+    {
+      "name": "final.paired.S2_review_minus_S2_gate.mean_utility.high95",
+      "passed": true,
+      "max_abs_error": 2.0816681711721685e-17
+    },
+    {
+      "name": "final.paired.S2_review_minus_S2_gate.median_cagr.estimate",
+      "passed": true,
+      "max_abs_error": 6.938893903907228e-18
+    },
+    {
+      "name": "final.paired.S2_review_minus_S2_gate.median_cagr.low95",
+      "passed": true,
+      "max_abs_error": 6.938893903907228e-18
+    },
+    {
+      "name": "final.paired.S2_review_minus_S2_gate.median_cagr.high95",
+      "passed": true,
+      "max_abs_error": 4.163336342344337e-17
+    },
+    {
+      "name": "final.paired.S2_review_minus_S2_gate.p10_cagr.estimate",
+      "passed": true,
+      "max_abs_error": 5.204170427930421e-17
+    },
+    {
+      "name": "final.paired.S2_review_minus_S2_gate.p10_cagr.low95",
+      "passed": true,
+      "max_abs_error": 9.020562075079397e-17
+    },
+    {
+      "name": "final.paired.S2_review_minus_S2_gate.p10_cagr.high95",
+      "passed": true,
+      "max_abs_error": 3.8163916471489756e-17
+    },
+    {
+      "name": "final.paired.S2_review_minus_S2_gate.p90_mdd.estimate",
+      "passed": true,
+      "max_abs_error": 5.551115123125783e-16
+    },
+    {
+      "name": "final.paired.S2_review_minus_S2_gate.p90_mdd.low95",
+      "passed": true,
+      "max_abs_error": 1.6653345369377348e-16
+    },
+    {
+      "name": "final.paired.S2_review_minus_S2_gate.p90_mdd.high95",
+      "passed": true,
+      "max_abs_error": 2.0816681711721685e-16
+    },
+    {
+      "name": "development.scenario_ids",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.inflation_finite_positive_gross",
+      "passed": true
+    },
+    {
+      "name": "development.summary_strategy_set",
+      "passed": true,
+      "actual": [
+        "S0_equal",
+        "S1_annual",
+        "S2_gate",
+        "S2_review",
+        "S3_dynamic",
+        "S3_review"
+      ],
+      "expected": [
+        "S0_equal",
+        "S1_annual",
+        "S2_gate",
+        "S2_review",
+        "S3_dynamic",
+        "S3_review"
+      ]
+    },
+    {
+      "name": "development.S0_equal.wealth_shape",
+      "passed": true,
+      "actual": [
+        40,
+        31
+      ],
+      "expected": [
+        40,
+        31
+      ]
+    },
+    {
+      "name": "development.S0_equal.weights_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30,
+        3
+      ],
+      "expected": [
+        40,
+        30,
+        3
+      ]
+    },
+    {
+      "name": "development.S0_equal.targets_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30,
+        3
+      ],
+      "expected": [
+        40,
+        30,
+        3
+      ]
+    },
+    {
+      "name": "development.S0_equal.costs_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30
+      ],
+      "expected": [
+        40,
+        30
+      ]
+    },
+    {
+      "name": "development.S0_equal.costs_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S0_equal.moved_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30
+      ],
+      "expected": [
+        40,
+        30
+      ]
+    },
+    {
+      "name": "development.S0_equal.moved_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S0_equal.trades_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30
+      ],
+      "expected": [
+        40,
+        30
+      ]
+    },
+    {
+      "name": "development.S0_equal.trades_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S0_equal.pending_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30
+      ],
+      "expected": [
+        40,
+        30
+      ]
+    },
+    {
+      "name": "development.S0_equal.pending_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S0_equal.benefit_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30
+      ],
+      "expected": [
+        40,
+        30
+      ]
+    },
+    {
+      "name": "development.S0_equal.benefit_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S0_equal.initial_wealth",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S0_equal.wealth_positive_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S0_equal.amounts_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "development.S0_equal.fees_funded",
+      "passed": true
+    },
+    {
+      "name": "development.S0_equal.moved_within_investable_wealth",
+      "passed": true
+    },
+    {
+      "name": "development.S0_equal.fee_equation",
+      "passed": true,
+      "max_abs_error": 4.371503159461554e-16
+    },
+    {
+      "name": "development.S0_equal.weights_nonnegative_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S0_equal.weights_sum_one",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S0_equal.targets_nonnegative_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S0_equal.targets_sum_one",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S0_equal.trade_flags",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S0_equal.no_fees_without_trade",
+      "passed": true
+    },
+    {
+      "name": "development.S0_equal.pending_persistent",
+      "passed": true
+    },
+    {
+      "name": "development.S0_equal.no_trades_while_pending",
+      "passed": true
+    },
+    {
+      "name": "development.S0_equal.no_fees_while_pending",
+      "passed": true
+    },
+    {
+      "name": "development.S0_equal.real_wealth_deflation",
+      "passed": true,
+      "max_abs_error": 1.1368683772161603e-12
+    },
+    {
+      "name": "development.S0_equal.real_metrics_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S0_equal.drawdown_bounds",
+      "passed": true
+    },
+    {
+      "name": "development.S0_equal.summary.cost_rate",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S0_equal.summary.n",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S0_equal.summary.horizon",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S0_equal.summary.cagr_median",
+      "passed": true,
+      "max_abs_error": 3.469446951953614e-17
+    },
+    {
+      "name": "development.S0_equal.summary.cagr_p10",
+      "passed": true,
+      "max_abs_error": 5.898059818321144e-17
+    },
+    {
+      "name": "development.S0_equal.summary.mdd_median",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S0_equal.summary.mdd_p90",
+      "passed": true,
+      "max_abs_error": 2.220446049250313e-16
+    },
+    {
+      "name": "development.S0_equal.summary.volatility_median",
+      "passed": true,
+      "max_abs_error": 4.163336342344337e-17
+    },
+    {
+      "name": "development.S0_equal.summary.terminal_real_median",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S0_equal.summary.mean_utility",
+      "passed": true,
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "name": "development.S0_equal.summary.trade_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S0_equal.summary.subsequent_trade_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S0_equal.summary.cost_mean",
+      "passed": true,
+      "max_abs_error": 2.220446049250313e-16
+    },
+    {
+      "name": "development.S0_equal.summary.review_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S1_annual.wealth_shape",
+      "passed": true,
+      "actual": [
+        40,
+        31
+      ],
+      "expected": [
+        40,
+        31
+      ]
+    },
+    {
+      "name": "development.S1_annual.weights_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30,
+        3
+      ],
+      "expected": [
+        40,
+        30,
+        3
+      ]
+    },
+    {
+      "name": "development.S1_annual.targets_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30,
+        3
+      ],
+      "expected": [
+        40,
+        30,
+        3
+      ]
+    },
+    {
+      "name": "development.S1_annual.costs_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30
+      ],
+      "expected": [
+        40,
+        30
+      ]
+    },
+    {
+      "name": "development.S1_annual.costs_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S1_annual.moved_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30
+      ],
+      "expected": [
+        40,
+        30
+      ]
+    },
+    {
+      "name": "development.S1_annual.moved_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S1_annual.trades_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30
+      ],
+      "expected": [
+        40,
+        30
+      ]
+    },
+    {
+      "name": "development.S1_annual.trades_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S1_annual.pending_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30
+      ],
+      "expected": [
+        40,
+        30
+      ]
+    },
+    {
+      "name": "development.S1_annual.pending_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S1_annual.benefit_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30
+      ],
+      "expected": [
+        40,
+        30
+      ]
+    },
+    {
+      "name": "development.S1_annual.benefit_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S1_annual.initial_wealth",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S1_annual.wealth_positive_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S1_annual.amounts_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "development.S1_annual.fees_funded",
+      "passed": true
+    },
+    {
+      "name": "development.S1_annual.moved_within_investable_wealth",
+      "passed": true
+    },
+    {
+      "name": "development.S1_annual.fee_equation",
+      "passed": true,
+      "max_abs_error": 3.677613769070831e-16
+    },
+    {
+      "name": "development.S1_annual.weights_nonnegative_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S1_annual.weights_sum_one",
+      "passed": true,
+      "max_abs_error": 2.220446049250313e-16
+    },
+    {
+      "name": "development.S1_annual.targets_nonnegative_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S1_annual.targets_sum_one",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S1_annual.trade_flags",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S1_annual.no_fees_without_trade",
+      "passed": true
+    },
+    {
+      "name": "development.S1_annual.pending_persistent",
+      "passed": true
+    },
+    {
+      "name": "development.S1_annual.no_trades_while_pending",
+      "passed": true
+    },
+    {
+      "name": "development.S1_annual.no_fees_while_pending",
+      "passed": true
+    },
+    {
+      "name": "development.S1_annual.real_wealth_deflation",
+      "passed": true,
+      "max_abs_error": 2.0463630789890885e-12
+    },
+    {
+      "name": "development.S1_annual.real_metrics_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S1_annual.drawdown_bounds",
+      "passed": true
+    },
+    {
+      "name": "development.S1_annual.summary.cost_rate",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S1_annual.summary.n",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S1_annual.summary.horizon",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S1_annual.summary.cagr_median",
+      "passed": true,
+      "max_abs_error": 2.7755575615628914e-17
+    },
+    {
+      "name": "development.S1_annual.summary.cagr_p10",
+      "passed": true,
+      "max_abs_error": 3.9898639947466563e-17
+    },
+    {
+      "name": "development.S1_annual.summary.mdd_median",
+      "passed": true,
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "name": "development.S1_annual.summary.mdd_p90",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S1_annual.summary.volatility_median",
+      "passed": true,
+      "max_abs_error": 1.3877787807814457e-17
+    },
+    {
+      "name": "development.S1_annual.summary.terminal_real_median",
+      "passed": true,
+      "max_abs_error": 5.684341886080802e-14
+    },
+    {
+      "name": "development.S1_annual.summary.mean_utility",
+      "passed": true,
+      "max_abs_error": 3.3393426912553537e-17
+    },
+    {
+      "name": "development.S1_annual.summary.trade_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S1_annual.summary.subsequent_trade_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S1_annual.summary.cost_mean",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S1_annual.summary.review_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S2_gate.wealth_shape",
+      "passed": true,
+      "actual": [
+        40,
+        31
+      ],
+      "expected": [
+        40,
+        31
+      ]
+    },
+    {
+      "name": "development.S2_gate.weights_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30,
+        3
+      ],
+      "expected": [
+        40,
+        30,
+        3
+      ]
+    },
+    {
+      "name": "development.S2_gate.targets_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30,
+        3
+      ],
+      "expected": [
+        40,
+        30,
+        3
+      ]
+    },
+    {
+      "name": "development.S2_gate.costs_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30
+      ],
+      "expected": [
+        40,
+        30
+      ]
+    },
+    {
+      "name": "development.S2_gate.costs_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S2_gate.moved_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30
+      ],
+      "expected": [
+        40,
+        30
+      ]
+    },
+    {
+      "name": "development.S2_gate.moved_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S2_gate.trades_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30
+      ],
+      "expected": [
+        40,
+        30
+      ]
+    },
+    {
+      "name": "development.S2_gate.trades_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S2_gate.pending_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30
+      ],
+      "expected": [
+        40,
+        30
+      ]
+    },
+    {
+      "name": "development.S2_gate.pending_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S2_gate.benefit_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30
+      ],
+      "expected": [
+        40,
+        30
+      ]
+    },
+    {
+      "name": "development.S2_gate.benefit_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S2_gate.initial_wealth",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S2_gate.wealth_positive_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S2_gate.amounts_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "development.S2_gate.fees_funded",
+      "passed": true
+    },
+    {
+      "name": "development.S2_gate.moved_within_investable_wealth",
+      "passed": true
+    },
+    {
+      "name": "development.S2_gate.fee_equation",
+      "passed": true,
+      "max_abs_error": 3.3306690738754696e-16
+    },
+    {
+      "name": "development.S2_gate.weights_nonnegative_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S2_gate.weights_sum_one",
+      "passed": true,
+      "max_abs_error": 2.220446049250313e-16
+    },
+    {
+      "name": "development.S2_gate.targets_nonnegative_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S2_gate.targets_sum_one",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S2_gate.trade_flags",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S2_gate.no_fees_without_trade",
+      "passed": true
+    },
+    {
+      "name": "development.S2_gate.pending_persistent",
+      "passed": true
+    },
+    {
+      "name": "development.S2_gate.no_trades_while_pending",
+      "passed": true
+    },
+    {
+      "name": "development.S2_gate.no_fees_while_pending",
+      "passed": true
+    },
+    {
+      "name": "development.S2_gate.real_wealth_deflation",
+      "passed": true,
+      "max_abs_error": 2.0463630789890885e-12
+    },
+    {
+      "name": "development.S2_gate.real_metrics_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S2_gate.drawdown_bounds",
+      "passed": true
+    },
+    {
+      "name": "development.S2_gate.summary.cost_rate",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S2_gate.summary.n",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S2_gate.summary.horizon",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S2_gate.summary.cagr_median",
+      "passed": true,
+      "max_abs_error": 2.0816681711721685e-17
+    },
+    {
+      "name": "development.S2_gate.summary.cagr_p10",
+      "passed": true,
+      "max_abs_error": 1.214306433183765e-17
+    },
+    {
+      "name": "development.S2_gate.summary.mdd_median",
+      "passed": true,
+      "max_abs_error": 1.6653345369377348e-16
+    },
+    {
+      "name": "development.S2_gate.summary.mdd_p90",
+      "passed": true,
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "name": "development.S2_gate.summary.volatility_median",
+      "passed": true,
+      "max_abs_error": 1.3877787807814457e-17
+    },
+    {
+      "name": "development.S2_gate.summary.terminal_real_median",
+      "passed": true,
+      "max_abs_error": 1.1368683772161603e-13
+    },
+    {
+      "name": "development.S2_gate.summary.mean_utility",
+      "passed": true,
+      "max_abs_error": 6.591949208711867e-17
+    },
+    {
+      "name": "development.S2_gate.summary.trade_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S2_gate.summary.subsequent_trade_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S2_gate.summary.cost_mean",
+      "passed": true,
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "name": "development.S2_gate.summary.review_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S3_dynamic.wealth_shape",
+      "passed": true,
+      "actual": [
+        40,
+        31
+      ],
+      "expected": [
+        40,
+        31
+      ]
+    },
+    {
+      "name": "development.S3_dynamic.weights_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30,
+        3
+      ],
+      "expected": [
+        40,
+        30,
+        3
+      ]
+    },
+    {
+      "name": "development.S3_dynamic.targets_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30,
+        3
+      ],
+      "expected": [
+        40,
+        30,
+        3
+      ]
+    },
+    {
+      "name": "development.S3_dynamic.costs_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30
+      ],
+      "expected": [
+        40,
+        30
+      ]
+    },
+    {
+      "name": "development.S3_dynamic.costs_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S3_dynamic.moved_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30
+      ],
+      "expected": [
+        40,
+        30
+      ]
+    },
+    {
+      "name": "development.S3_dynamic.moved_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S3_dynamic.trades_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30
+      ],
+      "expected": [
+        40,
+        30
+      ]
+    },
+    {
+      "name": "development.S3_dynamic.trades_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S3_dynamic.pending_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30
+      ],
+      "expected": [
+        40,
+        30
+      ]
+    },
+    {
+      "name": "development.S3_dynamic.pending_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S3_dynamic.benefit_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30
+      ],
+      "expected": [
+        40,
+        30
+      ]
+    },
+    {
+      "name": "development.S3_dynamic.benefit_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S3_dynamic.initial_wealth",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S3_dynamic.wealth_positive_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S3_dynamic.amounts_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "development.S3_dynamic.fees_funded",
+      "passed": true
+    },
+    {
+      "name": "development.S3_dynamic.moved_within_investable_wealth",
+      "passed": true
+    },
+    {
+      "name": "development.S3_dynamic.fee_equation",
+      "passed": true,
+      "max_abs_error": 2.7755575615628914e-16
+    },
+    {
+      "name": "development.S3_dynamic.weights_nonnegative_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S3_dynamic.weights_sum_one",
+      "passed": true,
+      "max_abs_error": 2.220446049250313e-16
+    },
+    {
+      "name": "development.S3_dynamic.targets_nonnegative_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S3_dynamic.targets_sum_one",
+      "passed": true,
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "name": "development.S3_dynamic.trade_flags",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S3_dynamic.no_fees_without_trade",
+      "passed": true
+    },
+    {
+      "name": "development.S3_dynamic.pending_persistent",
+      "passed": true
+    },
+    {
+      "name": "development.S3_dynamic.no_trades_while_pending",
+      "passed": true
+    },
+    {
+      "name": "development.S3_dynamic.no_fees_while_pending",
+      "passed": true
+    },
+    {
+      "name": "development.S3_dynamic.real_wealth_deflation",
+      "passed": true,
+      "max_abs_error": 1.5916157281026244e-12
+    },
+    {
+      "name": "development.S3_dynamic.real_metrics_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S3_dynamic.drawdown_bounds",
+      "passed": true
+    },
+    {
+      "name": "development.S3_dynamic.summary.cost_rate",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S3_dynamic.summary.n",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S3_dynamic.summary.horizon",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S3_dynamic.summary.cagr_median",
+      "passed": true,
+      "max_abs_error": 2.7755575615628914e-17
+    },
+    {
+      "name": "development.S3_dynamic.summary.cagr_p10",
+      "passed": true,
+      "max_abs_error": 3.469446951953614e-17
+    },
+    {
+      "name": "development.S3_dynamic.summary.mdd_median",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S3_dynamic.summary.mdd_p90",
+      "passed": true,
+      "max_abs_error": 2.220446049250313e-16
+    },
+    {
+      "name": "development.S3_dynamic.summary.volatility_median",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S3_dynamic.summary.terminal_real_median",
+      "passed": true,
+      "max_abs_error": 5.684341886080802e-14
+    },
+    {
+      "name": "development.S3_dynamic.summary.mean_utility",
+      "passed": true,
+      "max_abs_error": 2.0816681711721685e-17
+    },
+    {
+      "name": "development.S3_dynamic.summary.trade_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S3_dynamic.summary.subsequent_trade_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S3_dynamic.summary.cost_mean",
+      "passed": true,
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "name": "development.S3_dynamic.summary.review_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S2_review.wealth_shape",
+      "passed": true,
+      "actual": [
+        40,
+        31
+      ],
+      "expected": [
+        40,
+        31
+      ]
+    },
+    {
+      "name": "development.S2_review.weights_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30,
+        3
+      ],
+      "expected": [
+        40,
+        30,
+        3
+      ]
+    },
+    {
+      "name": "development.S2_review.targets_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30,
+        3
+      ],
+      "expected": [
+        40,
+        30,
+        3
+      ]
+    },
+    {
+      "name": "development.S2_review.costs_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30
+      ],
+      "expected": [
+        40,
+        30
+      ]
+    },
+    {
+      "name": "development.S2_review.costs_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S2_review.moved_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30
+      ],
+      "expected": [
+        40,
+        30
+      ]
+    },
+    {
+      "name": "development.S2_review.moved_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S2_review.trades_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30
+      ],
+      "expected": [
+        40,
+        30
+      ]
+    },
+    {
+      "name": "development.S2_review.trades_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S2_review.pending_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30
+      ],
+      "expected": [
+        40,
+        30
+      ]
+    },
+    {
+      "name": "development.S2_review.pending_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S2_review.benefit_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30
+      ],
+      "expected": [
+        40,
+        30
+      ]
+    },
+    {
+      "name": "development.S2_review.benefit_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S2_review.initial_wealth",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S2_review.wealth_positive_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S2_review.amounts_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "development.S2_review.fees_funded",
+      "passed": true
+    },
+    {
+      "name": "development.S2_review.moved_within_investable_wealth",
+      "passed": true
+    },
+    {
+      "name": "development.S2_review.fee_equation",
+      "passed": true,
+      "max_abs_error": 3.3306690738754696e-16
+    },
+    {
+      "name": "development.S2_review.weights_nonnegative_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S2_review.weights_sum_one",
+      "passed": true,
+      "max_abs_error": 2.220446049250313e-16
+    },
+    {
+      "name": "development.S2_review.targets_nonnegative_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S2_review.targets_sum_one",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S2_review.trade_flags",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S2_review.no_fees_without_trade",
+      "passed": true
+    },
+    {
+      "name": "development.S2_review.pending_persistent",
+      "passed": true
+    },
+    {
+      "name": "development.S2_review.no_trades_while_pending",
+      "passed": true
+    },
+    {
+      "name": "development.S2_review.no_fees_while_pending",
+      "passed": true
+    },
+    {
+      "name": "development.S2_review.real_wealth_deflation",
+      "passed": true,
+      "max_abs_error": 2.0463630789890885e-12
+    },
+    {
+      "name": "development.S2_review.real_metrics_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S2_review.drawdown_bounds",
+      "passed": true
+    },
+    {
+      "name": "development.S2_review.summary.cost_rate",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S2_review.summary.n",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S2_review.summary.horizon",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S2_review.summary.cagr_median",
+      "passed": true,
+      "max_abs_error": 8.326672684688674e-17
+    },
+    {
+      "name": "development.S2_review.summary.cagr_p10",
+      "passed": true,
+      "max_abs_error": 6.938893903907228e-17
+    },
+    {
+      "name": "development.S2_review.summary.mdd_median",
+      "passed": true,
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "name": "development.S2_review.summary.mdd_p90",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S2_review.summary.volatility_median",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S2_review.summary.terminal_real_median",
+      "passed": true,
+      "max_abs_error": 1.1368683772161603e-13
+    },
+    {
+      "name": "development.S2_review.summary.mean_utility",
+      "passed": true,
+      "max_abs_error": 7.762887554996212e-17
+    },
+    {
+      "name": "development.S2_review.summary.trade_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S2_review.summary.subsequent_trade_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S2_review.summary.cost_mean",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S2_review.summary.review_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S3_review.wealth_shape",
+      "passed": true,
+      "actual": [
+        40,
+        31
+      ],
+      "expected": [
+        40,
+        31
+      ]
+    },
+    {
+      "name": "development.S3_review.weights_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30,
+        3
+      ],
+      "expected": [
+        40,
+        30,
+        3
+      ]
+    },
+    {
+      "name": "development.S3_review.targets_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30,
+        3
+      ],
+      "expected": [
+        40,
+        30,
+        3
+      ]
+    },
+    {
+      "name": "development.S3_review.costs_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30
+      ],
+      "expected": [
+        40,
+        30
+      ]
+    },
+    {
+      "name": "development.S3_review.costs_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S3_review.moved_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30
+      ],
+      "expected": [
+        40,
+        30
+      ]
+    },
+    {
+      "name": "development.S3_review.moved_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S3_review.trades_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30
+      ],
+      "expected": [
+        40,
+        30
+      ]
+    },
+    {
+      "name": "development.S3_review.trades_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S3_review.pending_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30
+      ],
+      "expected": [
+        40,
+        30
+      ]
+    },
+    {
+      "name": "development.S3_review.pending_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S3_review.benefit_shape",
+      "passed": true,
+      "actual": [
+        40,
+        30
+      ],
+      "expected": [
+        40,
+        30
+      ]
+    },
+    {
+      "name": "development.S3_review.benefit_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S3_review.initial_wealth",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S3_review.wealth_positive_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S3_review.amounts_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "development.S3_review.fees_funded",
+      "passed": true
+    },
+    {
+      "name": "development.S3_review.moved_within_investable_wealth",
+      "passed": true
+    },
+    {
+      "name": "development.S3_review.fee_equation",
+      "passed": true,
+      "max_abs_error": 2.7755575615628914e-16
+    },
+    {
+      "name": "development.S3_review.weights_nonnegative_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S3_review.weights_sum_one",
+      "passed": true,
+      "max_abs_error": 2.220446049250313e-16
+    },
+    {
+      "name": "development.S3_review.targets_nonnegative_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S3_review.targets_sum_one",
+      "passed": true,
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "name": "development.S3_review.trade_flags",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S3_review.no_fees_without_trade",
+      "passed": true
+    },
+    {
+      "name": "development.S3_review.pending_persistent",
+      "passed": true
+    },
+    {
+      "name": "development.S3_review.no_trades_while_pending",
+      "passed": true
+    },
+    {
+      "name": "development.S3_review.no_fees_while_pending",
+      "passed": true
+    },
+    {
+      "name": "development.S3_review.real_wealth_deflation",
+      "passed": true,
+      "max_abs_error": 1.5916157281026244e-12
+    },
+    {
+      "name": "development.S3_review.real_metrics_finite",
+      "passed": true
+    },
+    {
+      "name": "development.S3_review.drawdown_bounds",
+      "passed": true
+    },
+    {
+      "name": "development.S3_review.summary.cost_rate",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S3_review.summary.n",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S3_review.summary.horizon",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S3_review.summary.cagr_median",
+      "passed": true,
+      "max_abs_error": 4.163336342344337e-17
+    },
+    {
+      "name": "development.S3_review.summary.cagr_p10",
+      "passed": true,
+      "max_abs_error": 4.5102810375396984e-17
+    },
+    {
+      "name": "development.S3_review.summary.mdd_median",
+      "passed": true,
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "name": "development.S3_review.summary.mdd_p90",
+      "passed": true,
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "name": "development.S3_review.summary.volatility_median",
+      "passed": true,
+      "max_abs_error": 1.3877787807814457e-17
+    },
+    {
+      "name": "development.S3_review.summary.terminal_real_median",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S3_review.summary.mean_utility",
+      "passed": true,
+      "max_abs_error": 6.938893903907228e-17
+    },
+    {
+      "name": "development.S3_review.summary.trade_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S3_review.summary.subsequent_trade_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S3_review.summary.cost_mean",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.S3_review.summary.review_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "development.archive_field_set",
+      "passed": true,
+      "actual": [
+        "S0_equal__benefit",
+        "S0_equal__costs",
+        "S0_equal__moved",
+        "S0_equal__pending",
+        "S0_equal__targets",
+        "S0_equal__trades",
+        "S0_equal__wealth",
+        "S0_equal__weights",
+        "S1_annual__benefit",
+        "S1_annual__costs",
+        "S1_annual__moved",
+        "S1_annual__pending",
+        "S1_annual__targets",
+        "S1_annual__trades",
+        "S1_annual__wealth",
+        "S1_annual__weights",
+        "S2_gate__benefit",
+        "S2_gate__costs",
+        "S2_gate__moved",
+        "S2_gate__pending",
+        "S2_gate__targets",
+        "S2_gate__trades",
+        "S2_gate__wealth",
+        "S2_gate__weights",
+        "S2_review__benefit",
+        "S2_review__costs",
+        "S2_review__moved",
+        "S2_review__pending",
+        "S2_review__targets",
+        "S2_review__trades",
+        "S2_review__wealth",
+        "S2_review__weights",
+        "S3_dynamic__benefit",
+        "S3_dynamic__costs",
+        "S3_dynamic__moved",
+        "S3_dynamic__pending",
+        "S3_dynamic__targets",
+        "S3_dynamic__trades",
+        "S3_dynamic__wealth",
+        "S3_dynamic__weights",
+        "S3_review__benefit",
+        "S3_review__costs",
+        "S3_review__moved",
+        "S3_review__pending",
+        "S3_review__targets",
+        "S3_review__trades",
+        "S3_review__wealth",
+        "S3_review__weights",
+        "inflation",
+        "scenario_ids"
+      ],
+      "expected": [
+        "S0_equal__benefit",
+        "S0_equal__costs",
+        "S0_equal__moved",
+        "S0_equal__pending",
+        "S0_equal__targets",
+        "S0_equal__trades",
+        "S0_equal__wealth",
+        "S0_equal__weights",
+        "S1_annual__benefit",
+        "S1_annual__costs",
+        "S1_annual__moved",
+        "S1_annual__pending",
+        "S1_annual__targets",
+        "S1_annual__trades",
+        "S1_annual__wealth",
+        "S1_annual__weights",
+        "S2_gate__benefit",
+        "S2_gate__costs",
+        "S2_gate__moved",
+        "S2_gate__pending",
+        "S2_gate__targets",
+        "S2_gate__trades",
+        "S2_gate__wealth",
+        "S2_gate__weights",
+        "S2_review__benefit",
+        "S2_review__costs",
+        "S2_review__moved",
+        "S2_review__pending",
+        "S2_review__targets",
+        "S2_review__trades",
+        "S2_review__wealth",
+        "S2_review__weights",
+        "S3_dynamic__benefit",
+        "S3_dynamic__costs",
+        "S3_dynamic__moved",
+        "S3_dynamic__pending",
+        "S3_dynamic__targets",
+        "S3_dynamic__trades",
+        "S3_dynamic__wealth",
+        "S3_dynamic__weights",
+        "S3_review__benefit",
+        "S3_review__costs",
+        "S3_review__moved",
+        "S3_review__pending",
+        "S3_review__targets",
+        "S3_review__trades",
+        "S3_review__wealth",
+        "S3_review__weights",
+        "inflation",
+        "scenario_ids"
+      ]
+    },
+    {
+      "name": "development.frozen_validation_comparison.metric_set",
+      "passed": true,
+      "actual": [
+        "mean_utility",
+        "median_cagr",
+        "p10_cagr",
+        "p90_mdd"
+      ],
+      "expected": [
+        "mean_utility",
+        "median_cagr",
+        "p10_cagr",
+        "p90_mdd"
+      ]
+    },
+    {
+      "name": "development.frozen_validation_comparison.mean_utility.estimate",
+      "passed": true,
+      "max_abs_error": 8.326672684688674e-17
+    },
+    {
+      "name": "development.frozen_validation_comparison.mean_utility.low95",
+      "passed": true,
+      "max_abs_error": 1.1882855810441129e-16
+    },
+    {
+      "name": "development.frozen_validation_comparison.mean_utility.high95",
+      "passed": true,
+      "max_abs_error": 1.3877787807814457e-17
+    },
+    {
+      "name": "development.frozen_validation_comparison.median_cagr.estimate",
+      "passed": true,
+      "max_abs_error": 1.249000902703301e-16
+    },
+    {
+      "name": "development.frozen_validation_comparison.median_cagr.low95",
+      "passed": true,
+      "max_abs_error": 1.942890293094024e-16
+    },
+    {
+      "name": "development.frozen_validation_comparison.median_cagr.high95",
+      "passed": true,
+      "max_abs_error": 1.3877787807814457e-17
+    },
+    {
+      "name": "development.frozen_validation_comparison.p10_cagr.estimate",
+      "passed": true,
+      "max_abs_error": 2.42861286636753e-17
+    },
+    {
+      "name": "development.frozen_validation_comparison.p10_cagr.low95",
+      "passed": true,
+      "max_abs_error": 1.3877787807814457e-17
+    },
+    {
+      "name": "development.frozen_validation_comparison.p10_cagr.high95",
+      "passed": true,
+      "max_abs_error": 1.5959455978986625e-16
+    },
+    {
+      "name": "development.frozen_validation_comparison.p90_mdd.estimate",
+      "passed": true,
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "name": "development.frozen_validation_comparison.p90_mdd.low95",
+      "passed": true,
+      "max_abs_error": 1.6653345369377348e-16
+    },
+    {
+      "name": "development.frozen_validation_comparison.p90_mdd.high95",
+      "passed": true,
+      "max_abs_error": 5.551115123125783e-16
+    },
+    {
+      "name": "onboarding.frozen_row_count",
+      "passed": true,
+      "actual": 15,
+      "expected": 15
+    },
+    {
+      "name": "onboarding.frozen.A.Conservative.horizon",
+      "passed": true,
+      "actual": 5,
+      "expected": 5
+    },
+    {
+      "name": "onboarding.frozen.A.Conservative.tolerance",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.A.Conservative.development_n",
+      "passed": true,
+      "actual": 120,
+      "expected": 120
+    },
+    {
+      "name": "onboarding.frozen.A.Conservative.weights",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.A.Conservative.breach_probability",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.A.Conservative.liquidity",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "onboarding.frozen.A.Conservative.eligibility",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "onboarding.frozen.A.Balanced.horizon",
+      "passed": true,
+      "actual": 5,
+      "expected": 5
+    },
+    {
+      "name": "onboarding.frozen.A.Balanced.tolerance",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.A.Balanced.development_n",
+      "passed": true,
+      "actual": 120,
+      "expected": 120
+    },
+    {
+      "name": "onboarding.frozen.A.Balanced.weights",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.A.Balanced.breach_probability",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.A.Balanced.liquidity",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "onboarding.frozen.A.Balanced.eligibility",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "onboarding.frozen.A.Growth.horizon",
+      "passed": true,
+      "actual": 5,
+      "expected": 5
+    },
+    {
+      "name": "onboarding.frozen.A.Growth.tolerance",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.A.Growth.development_n",
+      "passed": true,
+      "actual": 120,
+      "expected": 120
+    },
+    {
+      "name": "onboarding.frozen.A.Growth.weights",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.A.Growth.breach_probability",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.A.Growth.liquidity",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "onboarding.frozen.A.Growth.eligibility",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "onboarding.frozen.B.Conservative.horizon",
+      "passed": true,
+      "actual": 15,
+      "expected": 15
+    },
+    {
+      "name": "onboarding.frozen.B.Conservative.tolerance",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.B.Conservative.development_n",
+      "passed": true,
+      "actual": 120,
+      "expected": 120
+    },
+    {
+      "name": "onboarding.frozen.B.Conservative.weights",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.B.Conservative.breach_probability",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.B.Conservative.liquidity",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "onboarding.frozen.B.Conservative.eligibility",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "onboarding.frozen.B.Balanced.horizon",
+      "passed": true,
+      "actual": 15,
+      "expected": 15
+    },
+    {
+      "name": "onboarding.frozen.B.Balanced.tolerance",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.B.Balanced.development_n",
+      "passed": true,
+      "actual": 120,
+      "expected": 120
+    },
+    {
+      "name": "onboarding.frozen.B.Balanced.weights",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.B.Balanced.breach_probability",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.B.Balanced.liquidity",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "onboarding.frozen.B.Balanced.eligibility",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "onboarding.frozen.B.Growth.horizon",
+      "passed": true,
+      "actual": 15,
+      "expected": 15
+    },
+    {
+      "name": "onboarding.frozen.B.Growth.tolerance",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.B.Growth.development_n",
+      "passed": true,
+      "actual": 120,
+      "expected": 120
+    },
+    {
+      "name": "onboarding.frozen.B.Growth.weights",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.B.Growth.breach_probability",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.B.Growth.liquidity",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "onboarding.frozen.B.Growth.eligibility",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "onboarding.frozen.C.Conservative.horizon",
+      "passed": true,
+      "actual": 30,
+      "expected": 30
+    },
+    {
+      "name": "onboarding.frozen.C.Conservative.tolerance",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.C.Conservative.development_n",
+      "passed": true,
+      "actual": 120,
+      "expected": 120
+    },
+    {
+      "name": "onboarding.frozen.C.Conservative.weights",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.C.Conservative.breach_probability",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.C.Conservative.liquidity",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "onboarding.frozen.C.Conservative.eligibility",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "onboarding.frozen.C.Balanced.horizon",
+      "passed": true,
+      "actual": 30,
+      "expected": 30
+    },
+    {
+      "name": "onboarding.frozen.C.Balanced.tolerance",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.C.Balanced.development_n",
+      "passed": true,
+      "actual": 120,
+      "expected": 120
+    },
+    {
+      "name": "onboarding.frozen.C.Balanced.weights",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.C.Balanced.breach_probability",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.C.Balanced.liquidity",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "onboarding.frozen.C.Balanced.eligibility",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "onboarding.frozen.C.Growth.horizon",
+      "passed": true,
+      "actual": 30,
+      "expected": 30
+    },
+    {
+      "name": "onboarding.frozen.C.Growth.tolerance",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.C.Growth.development_n",
+      "passed": true,
+      "actual": 120,
+      "expected": 120
+    },
+    {
+      "name": "onboarding.frozen.C.Growth.weights",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.C.Growth.breach_probability",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.C.Growth.liquidity",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "onboarding.frozen.C.Growth.eligibility",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "onboarding.frozen.D.Conservative.horizon",
+      "passed": true,
+      "actual": 25,
+      "expected": 25
+    },
+    {
+      "name": "onboarding.frozen.D.Conservative.tolerance",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.D.Conservative.development_n",
+      "passed": true,
+      "actual": 120,
+      "expected": 120
+    },
+    {
+      "name": "onboarding.frozen.D.Conservative.weights",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.D.Conservative.breach_probability",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.D.Conservative.liquidity",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "onboarding.frozen.D.Conservative.eligibility",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "onboarding.frozen.D.Balanced.horizon",
+      "passed": true,
+      "actual": 25,
+      "expected": 25
+    },
+    {
+      "name": "onboarding.frozen.D.Balanced.tolerance",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.D.Balanced.development_n",
+      "passed": true,
+      "actual": 120,
+      "expected": 120
+    },
+    {
+      "name": "onboarding.frozen.D.Balanced.weights",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.D.Balanced.breach_probability",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.D.Balanced.liquidity",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "onboarding.frozen.D.Balanced.eligibility",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "onboarding.frozen.D.Growth.horizon",
+      "passed": true,
+      "actual": 25,
+      "expected": 25
+    },
+    {
+      "name": "onboarding.frozen.D.Growth.tolerance",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.D.Growth.development_n",
+      "passed": true,
+      "actual": 120,
+      "expected": 120
+    },
+    {
+      "name": "onboarding.frozen.D.Growth.weights",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.D.Growth.breach_probability",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.D.Growth.liquidity",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "onboarding.frozen.D.Growth.eligibility",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "onboarding.frozen.E.Conservative.horizon",
+      "passed": true,
+      "actual": 6,
+      "expected": 6
+    },
+    {
+      "name": "onboarding.frozen.E.Conservative.tolerance",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.E.Conservative.development_n",
+      "passed": true,
+      "actual": 120,
+      "expected": 120
+    },
+    {
+      "name": "onboarding.frozen.E.Conservative.weights",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.E.Conservative.breach_probability",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.E.Conservative.liquidity",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "onboarding.frozen.E.Conservative.eligibility",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "onboarding.frozen.E.Balanced.horizon",
+      "passed": true,
+      "actual": 6,
+      "expected": 6
+    },
+    {
+      "name": "onboarding.frozen.E.Balanced.tolerance",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.E.Balanced.development_n",
+      "passed": true,
+      "actual": 120,
+      "expected": 120
+    },
+    {
+      "name": "onboarding.frozen.E.Balanced.weights",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.E.Balanced.breach_probability",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.E.Balanced.liquidity",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "onboarding.frozen.E.Balanced.eligibility",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "onboarding.frozen.E.Growth.horizon",
+      "passed": true,
+      "actual": 6,
+      "expected": 6
+    },
+    {
+      "name": "onboarding.frozen.E.Growth.tolerance",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.E.Growth.development_n",
+      "passed": true,
+      "actual": 120,
+      "expected": 120
+    },
+    {
+      "name": "onboarding.frozen.E.Growth.weights",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.E.Growth.breach_probability",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "onboarding.frozen.E.Growth.liquidity",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "onboarding.frozen.E.Growth.eligibility",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "onboarding.assignments_from_frozen_evidence",
+      "passed": true,
+      "actual": {
+        "A": "Human review",
+        "B": "Conservative",
+        "C": "Balanced",
+        "D": "Human review",
+        "E": "Conservative"
+      },
+      "expected": {
+        "A": "Human review",
+        "B": "Conservative",
+        "C": "Balanced",
+        "D": "Human review",
+        "E": "Conservative"
+      }
+    },
+    {
+      "name": "onboarding.final_diagnostic_row_count",
+      "passed": true,
+      "actual": 15,
+      "expected": 15
+    },
+    {
+      "name": "onboarding.final.A.Conservative.assignment_unchanged",
+      "passed": true,
+      "actual": "Human review",
+      "expected": "Human review"
+    },
+    {
+      "name": "onboarding.final.A.Balanced.assignment_unchanged",
+      "passed": true,
+      "actual": "Human review",
+      "expected": "Human review"
+    },
+    {
+      "name": "onboarding.final.A.Growth.assignment_unchanged",
+      "passed": true,
+      "actual": "Human review",
+      "expected": "Human review"
+    },
+    {
+      "name": "onboarding.final.B.Conservative.assignment_unchanged",
+      "passed": true,
+      "actual": "Conservative",
+      "expected": "Conservative"
+    },
+    {
+      "name": "onboarding.final.B.Balanced.assignment_unchanged",
+      "passed": true,
+      "actual": "Conservative",
+      "expected": "Conservative"
+    },
+    {
+      "name": "onboarding.final.B.Growth.assignment_unchanged",
+      "passed": true,
+      "actual": "Conservative",
+      "expected": "Conservative"
+    },
+    {
+      "name": "onboarding.final.C.Conservative.assignment_unchanged",
+      "passed": true,
+      "actual": "Balanced",
+      "expected": "Balanced"
+    },
+    {
+      "name": "onboarding.final.C.Balanced.assignment_unchanged",
+      "passed": true,
+      "actual": "Balanced",
+      "expected": "Balanced"
+    },
+    {
+      "name": "onboarding.final.C.Growth.assignment_unchanged",
+      "passed": true,
+      "actual": "Balanced",
+      "expected": "Balanced"
+    },
+    {
+      "name": "onboarding.final.D.Conservative.assignment_unchanged",
+      "passed": true,
+      "actual": "Human review",
+      "expected": "Human review"
+    },
+    {
+      "name": "onboarding.final.D.Balanced.assignment_unchanged",
+      "passed": true,
+      "actual": "Human review",
+      "expected": "Human review"
+    },
+    {
+      "name": "onboarding.final.D.Growth.assignment_unchanged",
+      "passed": true,
+      "actual": "Human review",
+      "expected": "Human review"
+    },
+    {
+      "name": "onboarding.final.E.Conservative.assignment_unchanged",
+      "passed": true,
+      "actual": "Conservative",
+      "expected": "Conservative"
+    },
+    {
+      "name": "onboarding.final.E.Balanced.assignment_unchanged",
+      "passed": true,
+      "actual": "Conservative",
+      "expected": "Conservative"
+    },
+    {
+      "name": "onboarding.final.E.Growth.assignment_unchanged",
+      "passed": true,
+      "actual": "Conservative",
+      "expected": "Conservative"
+    },
+    {
+      "name": "sensitivity.base_row_count",
+      "passed": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "name": "sensitivity.base.S0_equal.cost_rate",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "sensitivity.base.S0_equal.n",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "sensitivity.base.S0_equal.horizon",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "sensitivity.base.S0_equal.cagr_median",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "sensitivity.base.S0_equal.cagr_p10",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "sensitivity.base.S0_equal.mdd_median",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "sensitivity.base.S0_equal.mdd_p90",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "sensitivity.base.S0_equal.volatility_median",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "sensitivity.base.S0_equal.terminal_real_median",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "sensitivity.base.S0_equal.mean_utility",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "sensitivity.base.S0_equal.trade_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "sensitivity.base.S0_equal.subsequent_trade_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "sensitivity.base.S0_equal.cost_mean",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "sensitivity.base.S0_equal.review_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "sensitivity.base.S2_review.cost_rate",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "sensitivity.base.S2_review.n",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "sensitivity.base.S2_review.horizon",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "sensitivity.base.S2_review.cagr_median",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "sensitivity.base.S2_review.cagr_p10",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "sensitivity.base.S2_review.mdd_median",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "sensitivity.base.S2_review.mdd_p90",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "sensitivity.base.S2_review.volatility_median",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "sensitivity.base.S2_review.terminal_real_median",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "sensitivity.base.S2_review.mean_utility",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "sensitivity.base.S2_review.trade_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "sensitivity.base.S2_review.subsequent_trade_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "sensitivity.base.S2_review.cost_mean",
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "sensitivity.base.S2_review.review_fraction",
+      "passed": true,
+      "max_abs_error": 0.0
+    }
+  ],
+  "failures": []
+}
