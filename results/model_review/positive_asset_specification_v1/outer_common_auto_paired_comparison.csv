@@ -1,0 +1,11 @@
+procedure,client,total_paths,strict_auto_n,relaxed_auto_n,common_auto_n,strict_common_breaches,relaxed_common_breaches,common_mean_log_growth_delta_strict_minus_relaxed
+fixed_gamma10,A,120,0,0,0,,,
+fixed_gamma10,B,120,120,120,120,12.0,12.0,-0.00036560530217664316
+fixed_gamma10,C,120,120,120,120,14.0,13.0,-0.00022870330982701294
+fixed_gamma10,D,120,0,0,0,,,
+fixed_gamma10,E,120,120,120,120,11.0,11.0,2.6843490538025484e-17
+nested_effective,A,120,0,0,0,,,
+nested_effective,B,120,120,120,120,9.0,10.0,-0.000679032594205533
+nested_effective,C,120,120,120,120,9.0,9.0,4.727889448575643e-17
+nested_effective,D,120,0,0,0,,,
+nested_effective,E,120,120,120,120,9.0,9.0,-0.00037536553926100804

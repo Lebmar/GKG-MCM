@@ -1,0 +1,62 @@
+{
+  "completed_utc": "2026-10-17T11:46:54.625561+00:00",
+  "status": "passed",
+  "scope": "Saved-file fingerprints, completed test log and executed research notebook; no model fit or market return parsing",
+  "hash_comparisons_and_consistency_checks": 653,
+  "distinct_hashed_files": 205,
+  "saved_snapshots_checked": 26,
+  "snapshots_sha256": {
+    "research/figures/development_structure/manifest.json": "8dcf529e5dac971e6b8c9de97e29f8dcefb494adacbd250d8af19675122dd05b",
+    "research/figures/execution/manifest.json": "6a8f8f62d392de03953a56c87f7168baacd3aec2461679ba042a26085d01944a",
+    "research/figures/nested_calibration/manifest.json": "48a98517ecefe507b3e311720c14a6b777c46119b242fcbdf111a403baff1176",
+    "research/figures/risk_menu/manifest.json": "d4e23a460b377e2ec49c826f01db8f92e611b92cccf8226c3d4729d22890031e",
+    "results/model_review/fee_checkpoint_v1/manifest.json": "f0b2a6ebce95a97f3261851b075f9576727c12d8a222cf406df82c085318baa8",
+    "results/model_review/finite_horizon_execution_v1/manifest.json": "a8c6264155fd6a9773505e43c3116a5cddd92d25caa420ed9f366393a28e4530",
+    "results/model_review/fixed_execution_ablation_v1/manifest.json": "1531280102843358192b6d501d4cca73c6bc5f3750c398cc5c71829809bb6c08",
+    "results/model_review/nested_static_calibration_v1/independent_audit.json": "8a5434ce49682aaa7f80a0fd273e0d0031e3576b12203cba2d214410d54a27a6",
+    "results/model_review/nested_static_calibration_v1/manifest.json": "f8e232c1f229f8a273739673743a8d351abb7ba5de28955e3f79ebd0f72e4390",
+    "results/model_review/policy_independent_drawdown_bound_v1/independent_audit.json": "b21dade31540e7d0c4868c936aa0753bce919ad5d40ee4d8c2165c58f47ddc16",
+    "results/model_review/policy_independent_drawdown_bound_v1/manifest.json": "34a77f0b754592bc503d03a67eca529e44a2160ed1c6bd8a3b820aabbb4073d9",
+    "results/model_review/positive_asset_specification_v1/independent_audit.json": "aeff2d9a3fa492e9253f20c2504a67619b71748f8e02fbc0e81abc748b5018f9",
+    "results/model_review/positive_asset_specification_v1/manifest.json": "da65841decff7d50ec7baa8fe80c4e6593112ea0c7d083affe2a0dd68f2f306e",
+    "results/model_review/q2_oof_benchmark_v1/manifest.json": "4f9e2e4dfdcebee588954ba17738c8dcc413f4c066a22d9cceba404e57d43051",
+    "results/model_review/q2_severe_episode_v1/manifest.json": "a17dd7b0abae092128dd5ef520aa3b2262810ff79b0cbbd8840c426f15116000",
+    "results/model_review/risk_menu_v1/analysis/comparator/manifest.json": "6822eae6ef91e0da7dbe131b3f8c17703c753fb4cdf3bf3ca778717e2906511e",
+    "results/model_review/risk_menu_v1/analysis/costs/manifest.json": "07d115ade3ec0f93737f3faedba43ac8bb6f2367f673277b12dfc23dea1481ea",
+    "results/model_review/risk_menu_v1/analysis/flags/manifest.json": "ba9b8e727c5ccec118d5b29514184d446e059f8f9464605d07f84b05511556e5",
+    "results/model_review/risk_menu_v1/analysis/resolution/manifest.json": "0dfeaaa9d28e4471d34c41f775d1125c81ee83e10992cd8aa032a4fb8eb5ec24",
+    "results/model_review/risk_menu_v1/bootstrap/alpha_10__risk_only/oob/manifest.json": "4678c4d96d4b7580403e8feba79fad786c6c1502f77805803c826a0d231d0a97",
+    "results/model_review/risk_menu_v1/fit_manifest.json": "fe4531f50e5236f657ac6acb5829eb28d3cf0425ed58bacf6dda4a6a03ad3b63",
+    "results/model_review/risk_menu_v1/independent_audit.json": "34b61ea12f508006fea1b2d09eadc7ce7a8ec701c24148ce035a8ed204acd535",
+    "results/model_review/risk_menu_v1/validation_manifest.json": "b8aae4ecfeba1f2cd2f33012219beb61d56e004c097ee49c2bf74663656f0d4f",
+    "results/model_review/risk_tree_reference_v1/independent_audit.json": "5c7c34daae09e875848cd84a864775a95b840bad3cf66cebf252649584ebe666",
+    "results/model_review/simultaneous_static_risk_v1/all_manifest.json": "eda7b2efa762f818edd92e03ecdbf9ed93a35dd3e33020e6ffff7db22064cc06",
+    "results/model_review/temporal_order_v1/manifest.json": "b60345b971e4ef0c38c5c9c1446276991dbee3ac6b51a581ba85f88a79f01b19"
+  },
+  "unit_tests": {
+    "passed": 222,
+    "seconds": 2.274,
+    "command": "PYTHONPATH=src:research .venv/bin/python -m unittest discover -s tests -q",
+    "log_sha256": "ca5a76157ab244d8796767e3d607f249373210054c9604c6de2728e339eb9408",
+    "result": "OK"
+  },
+  "notebook": {
+    "path": "notebooks/risk_menu_development.ipynb",
+    "executed_code_cells": 21,
+    "sha256": "5457f354406db3a98e6ccb1dc6910d8574e6bb16717fc886380072ff78706d31",
+    "reading_copy_sha256": "7ee90f9d5aef4adde092881ef0b725388c18e4cf06829c55498bc2254fa734e3"
+  },
+  "legacy": {
+    "baseline_revision": "7bca10b",
+    "unchanged_paths": [
+      "src",
+      "report",
+      "output"
+    ]
+  },
+  "limitations": [
+    "Numerical and provenance checks do not certify risk or forecast validity",
+    "Independent algorithms were separately implemented with AI assistance, not external human peer review",
+    "Development data were reused and earlier final-set results were already inspected"
+  ]
+}

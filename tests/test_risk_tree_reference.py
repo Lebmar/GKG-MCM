@@ -60,6 +60,34 @@ def independent_h2_pairs(gross, inflation, probabilities, target, cost, loss):
 
 
 class StateAccountingTests(unittest.TestCase):
+    def test_initial_peak_acceptance_is_consistent_at_tiny_and_large_wealth_scales(self):
+        for scale in (1e-200, 1.0, 1e200):
+            for relative_overshoot in (0.0, .5e-12):
+                with self.subTest(scale=scale, relative_overshoot=relative_overshoot):
+                    initial = RiskState((0., 0., 3 * scale * (1 + relative_overshoot)),
+                                        cpi=3., real_peak=scale)
+                    result = solve_risk_tree([[1.02, 1.02, 1.02]], [0], [1], [0, 0, 1],
+                                             horizon=1, loss_tolerance=.2, alpha=.1,
+                                             on_breach="hold_only", initial_state=initial)
+                    self.assertEqual(result.model.initial_state.real_peak, result.model.initial_state.real_wealth)
+                    self.assertFalse(result.model.initial_state.breached)
+                    self.assertEqual(result.selected.q, 0)
+                    self.assertAlmostEqual(result.selected.g, np.log1p(.02), places=11)
+
+    def test_material_peak_inconsistency_is_rejected_in_all_wealth_units(self):
+        for scale in (1e-200, 1.0, 1e200):
+            with self.subTest(scale=scale), self.assertRaises(ValueError):
+                # Actual real wealth is twice the claimed prior running peak.
+                solve_risk_tree([[1, 1, 1]], [0], [1], [0, 0, 1], horizon=0,
+                                 loss_tolerance=.2, alpha=.1, on_breach="hold_only",
+                                 initial_state=RiskState((0., 0., 3 * scale), cpi=3., real_peak=.5 * scale))
+        with self.assertRaises(ValueError):
+            # The old absolute1e-12 guard incorrectly accepted this1000-fold
+            # discrepancy because both wealth amounts were smaller than1.
+            solve_risk_tree([[1, 1, 1]], [0], [1], [0, 0, 1], horizon=0,
+                             loss_tolerance=.2, alpha=.1, on_breach="hold_only",
+                             initial_state=RiskState((0., 0., 1e-13), real_peak=1e-16))
+
     def test_breach_is_absorbing_after_full_recovery_and_zero_horizon(self):
         state = RiskState((100., 0., 0.))
         bad, gain, fee = step_state(state, "hold", [.5, 1, 1], 0, [1, 0, 0], cost_rate=.0025, loss_tolerance=.2)

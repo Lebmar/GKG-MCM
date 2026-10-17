@@ -1,12 +1,12 @@
 {
-  "completed_utc": "2026-10-17T11:29:18.716259+00:00",
+  "completed_utc": "2026-10-17T11:39:32.767043+00:00",
   "sources": {
-    "scripts/diagnose_q2_severe_episode.py": "059776623f0cfe61c86d77e5c671743699c398a4463a1cad4065d20b7bb8c315",
+    "scripts/diagnose_q2_severe_episode.py": "401d1260d0ed11361b5fbe55eb2be94619ea5f6d8a991861bb4fcbc327513282",
     "docs/q2_severe_episode_protocol.json": "2b94b5beff80f5dd868c1a6ac0c37191c576fd8049aa970127d0d075cd4d79d3",
     "research/safeinvest_research/metrics.py": "7ec8e4821ce284351a3d8ed7071c687fdf7d6e4cfd225f72cad1d09d623eb008"
   },
   "sources_at_end": {
-    "scripts/diagnose_q2_severe_episode.py": "059776623f0cfe61c86d77e5c671743699c398a4463a1cad4065d20b7bb8c315",
+    "scripts/diagnose_q2_severe_episode.py": "401d1260d0ed11361b5fbe55eb2be94619ea5f6d8a991861bb4fcbc327513282",
     "docs/q2_severe_episode_protocol.json": "2b94b5beff80f5dd868c1a6ac0c37191c576fd8049aa970127d0d075cd4d79d3",
     "research/safeinvest_research/metrics.py": "7ec8e4821ce284351a3d8ed7071c687fdf7d6e4cfd225f72cad1d09d623eb008"
   },

@@ -1,0 +1,1206 @@
+[
+  {
+    "candidate_local_index": 0,
+    "candidate_original232_index": 22,
+    "w_equity": 0.05,
+    "w_bond": 0.05,
+    "w_bill": 0.9
+  },
+  {
+    "candidate_local_index": 1,
+    "candidate_original232_index": 23,
+    "w_equity": 0.05,
+    "w_bond": 0.1,
+    "w_bill": 0.85
+  },
+  {
+    "candidate_local_index": 2,
+    "candidate_original232_index": 24,
+    "w_equity": 0.05,
+    "w_bond": 0.15,
+    "w_bill": 0.8
+  },
+  {
+    "candidate_local_index": 3,
+    "candidate_original232_index": 25,
+    "w_equity": 0.05,
+    "w_bond": 0.2,
+    "w_bill": 0.75
+  },
+  {
+    "candidate_local_index": 4,
+    "candidate_original232_index": 26,
+    "w_equity": 0.05,
+    "w_bond": 0.25,
+    "w_bill": 0.7
+  },
+  {
+    "candidate_local_index": 5,
+    "candidate_original232_index": 27,
+    "w_equity": 0.05,
+    "w_bond": 0.3,
+    "w_bill": 0.65
+  },
+  {
+    "candidate_local_index": 6,
+    "candidate_original232_index": 28,
+    "w_equity": 0.05,
+    "w_bond": 0.35,
+    "w_bill": 0.6
+  },
+  {
+    "candidate_local_index": 7,
+    "candidate_original232_index": 29,
+    "w_equity": 0.05,
+    "w_bond": 0.4,
+    "w_bill": 0.55
+  },
+  {
+    "candidate_local_index": 8,
+    "candidate_original232_index": 30,
+    "w_equity": 0.05,
+    "w_bond": 0.45,
+    "w_bill": 0.5
+  },
+  {
+    "candidate_local_index": 9,
+    "candidate_original232_index": 31,
+    "w_equity": 0.05,
+    "w_bond": 0.5,
+    "w_bill": 0.45
+  },
+  {
+    "candidate_local_index": 10,
+    "candidate_original232_index": 32,
+    "w_equity": 0.05,
+    "w_bond": 0.55,
+    "w_bill": 0.4
+  },
+  {
+    "candidate_local_index": 11,
+    "candidate_original232_index": 33,
+    "w_equity": 0.05,
+    "w_bond": 0.6,
+    "w_bill": 0.35
+  },
+  {
+    "candidate_local_index": 12,
+    "candidate_original232_index": 34,
+    "w_equity": 0.05,
+    "w_bond": 0.65,
+    "w_bill": 0.3
+  },
+  {
+    "candidate_local_index": 13,
+    "candidate_original232_index": 35,
+    "w_equity": 0.05,
+    "w_bond": 0.7,
+    "w_bill": 0.25
+  },
+  {
+    "candidate_local_index": 14,
+    "candidate_original232_index": 36,
+    "w_equity": 0.05,
+    "w_bond": 0.75,
+    "w_bill": 0.2
+  },
+  {
+    "candidate_local_index": 15,
+    "candidate_original232_index": 37,
+    "w_equity": 0.05,
+    "w_bond": 0.8,
+    "w_bill": 0.15
+  },
+  {
+    "candidate_local_index": 16,
+    "candidate_original232_index": 38,
+    "w_equity": 0.05,
+    "w_bond": 0.85,
+    "w_bill": 0.1
+  },
+  {
+    "candidate_local_index": 17,
+    "candidate_original232_index": 39,
+    "w_equity": 0.05,
+    "w_bond": 0.9,
+    "w_bill": 0.05
+  },
+  {
+    "candidate_local_index": 18,
+    "candidate_original232_index": 42,
+    "w_equity": 0.1,
+    "w_bond": 0.05,
+    "w_bill": 0.85
+  },
+  {
+    "candidate_local_index": 19,
+    "candidate_original232_index": 43,
+    "w_equity": 0.1,
+    "w_bond": 0.1,
+    "w_bill": 0.8
+  },
+  {
+    "candidate_local_index": 20,
+    "candidate_original232_index": 44,
+    "w_equity": 0.1,
+    "w_bond": 0.15,
+    "w_bill": 0.75
+  },
+  {
+    "candidate_local_index": 21,
+    "candidate_original232_index": 45,
+    "w_equity": 0.1,
+    "w_bond": 0.2,
+    "w_bill": 0.7
+  },
+  {
+    "candidate_local_index": 22,
+    "candidate_original232_index": 46,
+    "w_equity": 0.1,
+    "w_bond": 0.25,
+    "w_bill": 0.65
+  },
+  {
+    "candidate_local_index": 23,
+    "candidate_original232_index": 47,
+    "w_equity": 0.1,
+    "w_bond": 0.3,
+    "w_bill": 0.6
+  },
+  {
+    "candidate_local_index": 24,
+    "candidate_original232_index": 48,
+    "w_equity": 0.1,
+    "w_bond": 0.35,
+    "w_bill": 0.55
+  },
+  {
+    "candidate_local_index": 25,
+    "candidate_original232_index": 49,
+    "w_equity": 0.1,
+    "w_bond": 0.4,
+    "w_bill": 0.5
+  },
+  {
+    "candidate_local_index": 26,
+    "candidate_original232_index": 50,
+    "w_equity": 0.1,
+    "w_bond": 0.45,
+    "w_bill": 0.45
+  },
+  {
+    "candidate_local_index": 27,
+    "candidate_original232_index": 51,
+    "w_equity": 0.1,
+    "w_bond": 0.5,
+    "w_bill": 0.4
+  },
+  {
+    "candidate_local_index": 28,
+    "candidate_original232_index": 52,
+    "w_equity": 0.1,
+    "w_bond": 0.55,
+    "w_bill": 0.35
+  },
+  {
+    "candidate_local_index": 29,
+    "candidate_original232_index": 53,
+    "w_equity": 0.1,
+    "w_bond": 0.6,
+    "w_bill": 0.3
+  },
+  {
+    "candidate_local_index": 30,
+    "candidate_original232_index": 54,
+    "w_equity": 0.1,
+    "w_bond": 0.65,
+    "w_bill": 0.25
+  },
+  {
+    "candidate_local_index": 31,
+    "candidate_original232_index": 55,
+    "w_equity": 0.1,
+    "w_bond": 0.7,
+    "w_bill": 0.2
+  },
+  {
+    "candidate_local_index": 32,
+    "candidate_original232_index": 56,
+    "w_equity": 0.1,
+    "w_bond": 0.75,
+    "w_bill": 0.15
+  },
+  {
+    "candidate_local_index": 33,
+    "candidate_original232_index": 57,
+    "w_equity": 0.1,
+    "w_bond": 0.8,
+    "w_bill": 0.1
+  },
+  {
+    "candidate_local_index": 34,
+    "candidate_original232_index": 58,
+    "w_equity": 0.1,
+    "w_bond": 0.85,
+    "w_bill": 0.05
+  },
+  {
+    "candidate_local_index": 35,
+    "candidate_original232_index": 61,
+    "w_equity": 0.15,
+    "w_bond": 0.05,
+    "w_bill": 0.8
+  },
+  {
+    "candidate_local_index": 36,
+    "candidate_original232_index": 62,
+    "w_equity": 0.15,
+    "w_bond": 0.1,
+    "w_bill": 0.75
+  },
+  {
+    "candidate_local_index": 37,
+    "candidate_original232_index": 63,
+    "w_equity": 0.15,
+    "w_bond": 0.15,
+    "w_bill": 0.7
+  },
+  {
+    "candidate_local_index": 38,
+    "candidate_original232_index": 64,
+    "w_equity": 0.15,
+    "w_bond": 0.2,
+    "w_bill": 0.65
+  },
+  {
+    "candidate_local_index": 39,
+    "candidate_original232_index": 65,
+    "w_equity": 0.15,
+    "w_bond": 0.25,
+    "w_bill": 0.6
+  },
+  {
+    "candidate_local_index": 40,
+    "candidate_original232_index": 66,
+    "w_equity": 0.15,
+    "w_bond": 0.3,
+    "w_bill": 0.55
+  },
+  {
+    "candidate_local_index": 41,
+    "candidate_original232_index": 67,
+    "w_equity": 0.15,
+    "w_bond": 0.35,
+    "w_bill": 0.5
+  },
+  {
+    "candidate_local_index": 42,
+    "candidate_original232_index": 68,
+    "w_equity": 0.15,
+    "w_bond": 0.4,
+    "w_bill": 0.45
+  },
+  {
+    "candidate_local_index": 43,
+    "candidate_original232_index": 69,
+    "w_equity": 0.15,
+    "w_bond": 0.45,
+    "w_bill": 0.4
+  },
+  {
+    "candidate_local_index": 44,
+    "candidate_original232_index": 70,
+    "w_equity": 0.15,
+    "w_bond": 0.5,
+    "w_bill": 0.35
+  },
+  {
+    "candidate_local_index": 45,
+    "candidate_original232_index": 71,
+    "w_equity": 0.15,
+    "w_bond": 0.55,
+    "w_bill": 0.3
+  },
+  {
+    "candidate_local_index": 46,
+    "candidate_original232_index": 72,
+    "w_equity": 0.15,
+    "w_bond": 0.6,
+    "w_bill": 0.25
+  },
+  {
+    "candidate_local_index": 47,
+    "candidate_original232_index": 73,
+    "w_equity": 0.15,
+    "w_bond": 0.65,
+    "w_bill": 0.2
+  },
+  {
+    "candidate_local_index": 48,
+    "candidate_original232_index": 74,
+    "w_equity": 0.15,
+    "w_bond": 0.7,
+    "w_bill": 0.15
+  },
+  {
+    "candidate_local_index": 49,
+    "candidate_original232_index": 75,
+    "w_equity": 0.15,
+    "w_bond": 0.75,
+    "w_bill": 0.1
+  },
+  {
+    "candidate_local_index": 50,
+    "candidate_original232_index": 76,
+    "w_equity": 0.15,
+    "w_bond": 0.8,
+    "w_bill": 0.05
+  },
+  {
+    "candidate_local_index": 51,
+    "candidate_original232_index": 79,
+    "w_equity": 0.2,
+    "w_bond": 0.05,
+    "w_bill": 0.75
+  },
+  {
+    "candidate_local_index": 52,
+    "candidate_original232_index": 80,
+    "w_equity": 0.2,
+    "w_bond": 0.1,
+    "w_bill": 0.7
+  },
+  {
+    "candidate_local_index": 53,
+    "candidate_original232_index": 81,
+    "w_equity": 0.2,
+    "w_bond": 0.15,
+    "w_bill": 0.65
+  },
+  {
+    "candidate_local_index": 54,
+    "candidate_original232_index": 82,
+    "w_equity": 0.2,
+    "w_bond": 0.2,
+    "w_bill": 0.6
+  },
+  {
+    "candidate_local_index": 55,
+    "candidate_original232_index": 83,
+    "w_equity": 0.2,
+    "w_bond": 0.25,
+    "w_bill": 0.55
+  },
+  {
+    "candidate_local_index": 56,
+    "candidate_original232_index": 84,
+    "w_equity": 0.2,
+    "w_bond": 0.3,
+    "w_bill": 0.5
+  },
+  {
+    "candidate_local_index": 57,
+    "candidate_original232_index": 85,
+    "w_equity": 0.2,
+    "w_bond": 0.35,
+    "w_bill": 0.45
+  },
+  {
+    "candidate_local_index": 58,
+    "candidate_original232_index": 86,
+    "w_equity": 0.2,
+    "w_bond": 0.4,
+    "w_bill": 0.4
+  },
+  {
+    "candidate_local_index": 59,
+    "candidate_original232_index": 87,
+    "w_equity": 0.2,
+    "w_bond": 0.45,
+    "w_bill": 0.35
+  },
+  {
+    "candidate_local_index": 60,
+    "candidate_original232_index": 88,
+    "w_equity": 0.2,
+    "w_bond": 0.5,
+    "w_bill": 0.3
+  },
+  {
+    "candidate_local_index": 61,
+    "candidate_original232_index": 89,
+    "w_equity": 0.2,
+    "w_bond": 0.55,
+    "w_bill": 0.25
+  },
+  {
+    "candidate_local_index": 62,
+    "candidate_original232_index": 90,
+    "w_equity": 0.2,
+    "w_bond": 0.6,
+    "w_bill": 0.2
+  },
+  {
+    "candidate_local_index": 63,
+    "candidate_original232_index": 91,
+    "w_equity": 0.2,
+    "w_bond": 0.65,
+    "w_bill": 0.15
+  },
+  {
+    "candidate_local_index": 64,
+    "candidate_original232_index": 92,
+    "w_equity": 0.2,
+    "w_bond": 0.7,
+    "w_bill": 0.1
+  },
+  {
+    "candidate_local_index": 65,
+    "candidate_original232_index": 93,
+    "w_equity": 0.2,
+    "w_bond": 0.75,
+    "w_bill": 0.05
+  },
+  {
+    "candidate_local_index": 66,
+    "candidate_original232_index": 96,
+    "w_equity": 0.25,
+    "w_bond": 0.05,
+    "w_bill": 0.7
+  },
+  {
+    "candidate_local_index": 67,
+    "candidate_original232_index": 97,
+    "w_equity": 0.25,
+    "w_bond": 0.1,
+    "w_bill": 0.65
+  },
+  {
+    "candidate_local_index": 68,
+    "candidate_original232_index": 98,
+    "w_equity": 0.25,
+    "w_bond": 0.15,
+    "w_bill": 0.6
+  },
+  {
+    "candidate_local_index": 69,
+    "candidate_original232_index": 99,
+    "w_equity": 0.25,
+    "w_bond": 0.2,
+    "w_bill": 0.55
+  },
+  {
+    "candidate_local_index": 70,
+    "candidate_original232_index": 100,
+    "w_equity": 0.25,
+    "w_bond": 0.25,
+    "w_bill": 0.5
+  },
+  {
+    "candidate_local_index": 71,
+    "candidate_original232_index": 101,
+    "w_equity": 0.25,
+    "w_bond": 0.3,
+    "w_bill": 0.45
+  },
+  {
+    "candidate_local_index": 72,
+    "candidate_original232_index": 102,
+    "w_equity": 0.25,
+    "w_bond": 0.35,
+    "w_bill": 0.4
+  },
+  {
+    "candidate_local_index": 73,
+    "candidate_original232_index": 103,
+    "w_equity": 0.25,
+    "w_bond": 0.4,
+    "w_bill": 0.35
+  },
+  {
+    "candidate_local_index": 74,
+    "candidate_original232_index": 104,
+    "w_equity": 0.25,
+    "w_bond": 0.45,
+    "w_bill": 0.3
+  },
+  {
+    "candidate_local_index": 75,
+    "candidate_original232_index": 105,
+    "w_equity": 0.25,
+    "w_bond": 0.5,
+    "w_bill": 0.25
+  },
+  {
+    "candidate_local_index": 76,
+    "candidate_original232_index": 106,
+    "w_equity": 0.25,
+    "w_bond": 0.55,
+    "w_bill": 0.2
+  },
+  {
+    "candidate_local_index": 77,
+    "candidate_original232_index": 107,
+    "w_equity": 0.25,
+    "w_bond": 0.6,
+    "w_bill": 0.15
+  },
+  {
+    "candidate_local_index": 78,
+    "candidate_original232_index": 108,
+    "w_equity": 0.25,
+    "w_bond": 0.65,
+    "w_bill": 0.1
+  },
+  {
+    "candidate_local_index": 79,
+    "candidate_original232_index": 109,
+    "w_equity": 0.25,
+    "w_bond": 0.7,
+    "w_bill": 0.05
+  },
+  {
+    "candidate_local_index": 80,
+    "candidate_original232_index": 112,
+    "w_equity": 0.3,
+    "w_bond": 0.05,
+    "w_bill": 0.65
+  },
+  {
+    "candidate_local_index": 81,
+    "candidate_original232_index": 113,
+    "w_equity": 0.3,
+    "w_bond": 0.1,
+    "w_bill": 0.6
+  },
+  {
+    "candidate_local_index": 82,
+    "candidate_original232_index": 114,
+    "w_equity": 0.3,
+    "w_bond": 0.15,
+    "w_bill": 0.55
+  },
+  {
+    "candidate_local_index": 83,
+    "candidate_original232_index": 115,
+    "w_equity": 0.3,
+    "w_bond": 0.2,
+    "w_bill": 0.5
+  },
+  {
+    "candidate_local_index": 84,
+    "candidate_original232_index": 116,
+    "w_equity": 0.3,
+    "w_bond": 0.25,
+    "w_bill": 0.45
+  },
+  {
+    "candidate_local_index": 85,
+    "candidate_original232_index": 117,
+    "w_equity": 0.3,
+    "w_bond": 0.3,
+    "w_bill": 0.4
+  },
+  {
+    "candidate_local_index": 86,
+    "candidate_original232_index": 118,
+    "w_equity": 0.3,
+    "w_bond": 0.35,
+    "w_bill": 0.35
+  },
+  {
+    "candidate_local_index": 87,
+    "candidate_original232_index": 119,
+    "w_equity": 0.3,
+    "w_bond": 0.4,
+    "w_bill": 0.3
+  },
+  {
+    "candidate_local_index": 88,
+    "candidate_original232_index": 120,
+    "w_equity": 0.3,
+    "w_bond": 0.45,
+    "w_bill": 0.25
+  },
+  {
+    "candidate_local_index": 89,
+    "candidate_original232_index": 121,
+    "w_equity": 0.3,
+    "w_bond": 0.5,
+    "w_bill": 0.2
+  },
+  {
+    "candidate_local_index": 90,
+    "candidate_original232_index": 122,
+    "w_equity": 0.3,
+    "w_bond": 0.55,
+    "w_bill": 0.15
+  },
+  {
+    "candidate_local_index": 91,
+    "candidate_original232_index": 123,
+    "w_equity": 0.3,
+    "w_bond": 0.6,
+    "w_bill": 0.1
+  },
+  {
+    "candidate_local_index": 92,
+    "candidate_original232_index": 124,
+    "w_equity": 0.3,
+    "w_bond": 0.65,
+    "w_bill": 0.05
+  },
+  {
+    "candidate_local_index": 93,
+    "candidate_original232_index": 126,
+    "w_equity": 0.3333333333333333,
+    "w_bond": 0.3333333333333333,
+    "w_bill": 0.3333333333333333
+  },
+  {
+    "candidate_local_index": 94,
+    "candidate_original232_index": 128,
+    "w_equity": 0.35,
+    "w_bond": 0.05,
+    "w_bill": 0.6
+  },
+  {
+    "candidate_local_index": 95,
+    "candidate_original232_index": 129,
+    "w_equity": 0.35,
+    "w_bond": 0.1,
+    "w_bill": 0.55
+  },
+  {
+    "candidate_local_index": 96,
+    "candidate_original232_index": 130,
+    "w_equity": 0.35,
+    "w_bond": 0.15,
+    "w_bill": 0.5
+  },
+  {
+    "candidate_local_index": 97,
+    "candidate_original232_index": 131,
+    "w_equity": 0.35,
+    "w_bond": 0.2,
+    "w_bill": 0.45
+  },
+  {
+    "candidate_local_index": 98,
+    "candidate_original232_index": 132,
+    "w_equity": 0.35,
+    "w_bond": 0.25,
+    "w_bill": 0.4
+  },
+  {
+    "candidate_local_index": 99,
+    "candidate_original232_index": 133,
+    "w_equity": 0.35,
+    "w_bond": 0.3,
+    "w_bill": 0.35
+  },
+  {
+    "candidate_local_index": 100,
+    "candidate_original232_index": 134,
+    "w_equity": 0.35,
+    "w_bond": 0.35,
+    "w_bill": 0.3
+  },
+  {
+    "candidate_local_index": 101,
+    "candidate_original232_index": 135,
+    "w_equity": 0.35,
+    "w_bond": 0.4,
+    "w_bill": 0.25
+  },
+  {
+    "candidate_local_index": 102,
+    "candidate_original232_index": 136,
+    "w_equity": 0.35,
+    "w_bond": 0.45,
+    "w_bill": 0.2
+  },
+  {
+    "candidate_local_index": 103,
+    "candidate_original232_index": 137,
+    "w_equity": 0.35,
+    "w_bond": 0.5,
+    "w_bill": 0.15
+  },
+  {
+    "candidate_local_index": 104,
+    "candidate_original232_index": 138,
+    "w_equity": 0.35,
+    "w_bond": 0.55,
+    "w_bill": 0.1
+  },
+  {
+    "candidate_local_index": 105,
+    "candidate_original232_index": 139,
+    "w_equity": 0.35,
+    "w_bond": 0.6,
+    "w_bill": 0.05
+  },
+  {
+    "candidate_local_index": 106,
+    "candidate_original232_index": 142,
+    "w_equity": 0.4,
+    "w_bond": 0.05,
+    "w_bill": 0.55
+  },
+  {
+    "candidate_local_index": 107,
+    "candidate_original232_index": 143,
+    "w_equity": 0.4,
+    "w_bond": 0.1,
+    "w_bill": 0.5
+  },
+  {
+    "candidate_local_index": 108,
+    "candidate_original232_index": 144,
+    "w_equity": 0.4,
+    "w_bond": 0.15,
+    "w_bill": 0.45
+  },
+  {
+    "candidate_local_index": 109,
+    "candidate_original232_index": 145,
+    "w_equity": 0.4,
+    "w_bond": 0.2,
+    "w_bill": 0.4
+  },
+  {
+    "candidate_local_index": 110,
+    "candidate_original232_index": 146,
+    "w_equity": 0.4,
+    "w_bond": 0.25,
+    "w_bill": 0.35
+  },
+  {
+    "candidate_local_index": 111,
+    "candidate_original232_index": 147,
+    "w_equity": 0.4,
+    "w_bond": 0.3,
+    "w_bill": 0.3
+  },
+  {
+    "candidate_local_index": 112,
+    "candidate_original232_index": 148,
+    "w_equity": 0.4,
+    "w_bond": 0.35,
+    "w_bill": 0.25
+  },
+  {
+    "candidate_local_index": 113,
+    "candidate_original232_index": 149,
+    "w_equity": 0.4,
+    "w_bond": 0.4,
+    "w_bill": 0.2
+  },
+  {
+    "candidate_local_index": 114,
+    "candidate_original232_index": 150,
+    "w_equity": 0.4,
+    "w_bond": 0.45,
+    "w_bill": 0.15
+  },
+  {
+    "candidate_local_index": 115,
+    "candidate_original232_index": 151,
+    "w_equity": 0.4,
+    "w_bond": 0.5,
+    "w_bill": 0.1
+  },
+  {
+    "candidate_local_index": 116,
+    "candidate_original232_index": 152,
+    "w_equity": 0.4,
+    "w_bond": 0.55,
+    "w_bill": 0.05
+  },
+  {
+    "candidate_local_index": 117,
+    "candidate_original232_index": 155,
+    "w_equity": 0.45,
+    "w_bond": 0.05,
+    "w_bill": 0.5
+  },
+  {
+    "candidate_local_index": 118,
+    "candidate_original232_index": 156,
+    "w_equity": 0.45,
+    "w_bond": 0.1,
+    "w_bill": 0.45
+  },
+  {
+    "candidate_local_index": 119,
+    "candidate_original232_index": 157,
+    "w_equity": 0.45,
+    "w_bond": 0.15,
+    "w_bill": 0.4
+  },
+  {
+    "candidate_local_index": 120,
+    "candidate_original232_index": 158,
+    "w_equity": 0.45,
+    "w_bond": 0.2,
+    "w_bill": 0.35
+  },
+  {
+    "candidate_local_index": 121,
+    "candidate_original232_index": 159,
+    "w_equity": 0.45,
+    "w_bond": 0.25,
+    "w_bill": 0.3
+  },
+  {
+    "candidate_local_index": 122,
+    "candidate_original232_index": 160,
+    "w_equity": 0.45,
+    "w_bond": 0.3,
+    "w_bill": 0.25
+  },
+  {
+    "candidate_local_index": 123,
+    "candidate_original232_index": 161,
+    "w_equity": 0.45,
+    "w_bond": 0.35,
+    "w_bill": 0.2
+  },
+  {
+    "candidate_local_index": 124,
+    "candidate_original232_index": 162,
+    "w_equity": 0.45,
+    "w_bond": 0.4,
+    "w_bill": 0.15
+  },
+  {
+    "candidate_local_index": 125,
+    "candidate_original232_index": 163,
+    "w_equity": 0.45,
+    "w_bond": 0.45,
+    "w_bill": 0.1
+  },
+  {
+    "candidate_local_index": 126,
+    "candidate_original232_index": 164,
+    "w_equity": 0.45,
+    "w_bond": 0.5,
+    "w_bill": 0.05
+  },
+  {
+    "candidate_local_index": 127,
+    "candidate_original232_index": 167,
+    "w_equity": 0.5,
+    "w_bond": 0.05,
+    "w_bill": 0.45
+  },
+  {
+    "candidate_local_index": 128,
+    "candidate_original232_index": 168,
+    "w_equity": 0.5,
+    "w_bond": 0.1,
+    "w_bill": 0.4
+  },
+  {
+    "candidate_local_index": 129,
+    "candidate_original232_index": 169,
+    "w_equity": 0.5,
+    "w_bond": 0.15,
+    "w_bill": 0.35
+  },
+  {
+    "candidate_local_index": 130,
+    "candidate_original232_index": 170,
+    "w_equity": 0.5,
+    "w_bond": 0.2,
+    "w_bill": 0.3
+  },
+  {
+    "candidate_local_index": 131,
+    "candidate_original232_index": 171,
+    "w_equity": 0.5,
+    "w_bond": 0.25,
+    "w_bill": 0.25
+  },
+  {
+    "candidate_local_index": 132,
+    "candidate_original232_index": 172,
+    "w_equity": 0.5,
+    "w_bond": 0.3,
+    "w_bill": 0.2
+  },
+  {
+    "candidate_local_index": 133,
+    "candidate_original232_index": 173,
+    "w_equity": 0.5,
+    "w_bond": 0.35,
+    "w_bill": 0.15
+  },
+  {
+    "candidate_local_index": 134,
+    "candidate_original232_index": 174,
+    "w_equity": 0.5,
+    "w_bond": 0.4,
+    "w_bill": 0.1
+  },
+  {
+    "candidate_local_index": 135,
+    "candidate_original232_index": 175,
+    "w_equity": 0.5,
+    "w_bond": 0.45,
+    "w_bill": 0.05
+  },
+  {
+    "candidate_local_index": 136,
+    "candidate_original232_index": 178,
+    "w_equity": 0.55,
+    "w_bond": 0.05,
+    "w_bill": 0.4
+  },
+  {
+    "candidate_local_index": 137,
+    "candidate_original232_index": 179,
+    "w_equity": 0.55,
+    "w_bond": 0.1,
+    "w_bill": 0.35
+  },
+  {
+    "candidate_local_index": 138,
+    "candidate_original232_index": 180,
+    "w_equity": 0.55,
+    "w_bond": 0.15,
+    "w_bill": 0.3
+  },
+  {
+    "candidate_local_index": 139,
+    "candidate_original232_index": 181,
+    "w_equity": 0.55,
+    "w_bond": 0.2,
+    "w_bill": 0.25
+  },
+  {
+    "candidate_local_index": 140,
+    "candidate_original232_index": 182,
+    "w_equity": 0.55,
+    "w_bond": 0.25,
+    "w_bill": 0.2
+  },
+  {
+    "candidate_local_index": 141,
+    "candidate_original232_index": 183,
+    "w_equity": 0.55,
+    "w_bond": 0.3,
+    "w_bill": 0.15
+  },
+  {
+    "candidate_local_index": 142,
+    "candidate_original232_index": 184,
+    "w_equity": 0.55,
+    "w_bond": 0.35,
+    "w_bill": 0.1
+  },
+  {
+    "candidate_local_index": 143,
+    "candidate_original232_index": 185,
+    "w_equity": 0.55,
+    "w_bond": 0.4,
+    "w_bill": 0.05
+  },
+  {
+    "candidate_local_index": 144,
+    "candidate_original232_index": 188,
+    "w_equity": 0.6,
+    "w_bond": 0.05,
+    "w_bill": 0.35
+  },
+  {
+    "candidate_local_index": 145,
+    "candidate_original232_index": 189,
+    "w_equity": 0.6,
+    "w_bond": 0.1,
+    "w_bill": 0.3
+  },
+  {
+    "candidate_local_index": 146,
+    "candidate_original232_index": 190,
+    "w_equity": 0.6,
+    "w_bond": 0.15,
+    "w_bill": 0.25
+  },
+  {
+    "candidate_local_index": 147,
+    "candidate_original232_index": 191,
+    "w_equity": 0.6,
+    "w_bond": 0.2,
+    "w_bill": 0.2
+  },
+  {
+    "candidate_local_index": 148,
+    "candidate_original232_index": 192,
+    "w_equity": 0.6,
+    "w_bond": 0.25,
+    "w_bill": 0.15
+  },
+  {
+    "candidate_local_index": 149,
+    "candidate_original232_index": 193,
+    "w_equity": 0.6,
+    "w_bond": 0.3,
+    "w_bill": 0.1
+  },
+  {
+    "candidate_local_index": 150,
+    "candidate_original232_index": 194,
+    "w_equity": 0.6,
+    "w_bond": 0.35,
+    "w_bill": 0.05
+  },
+  {
+    "candidate_local_index": 151,
+    "candidate_original232_index": 197,
+    "w_equity": 0.65,
+    "w_bond": 0.05,
+    "w_bill": 0.3
+  },
+  {
+    "candidate_local_index": 152,
+    "candidate_original232_index": 198,
+    "w_equity": 0.65,
+    "w_bond": 0.1,
+    "w_bill": 0.25
+  },
+  {
+    "candidate_local_index": 153,
+    "candidate_original232_index": 199,
+    "w_equity": 0.65,
+    "w_bond": 0.15,
+    "w_bill": 0.2
+  },
+  {
+    "candidate_local_index": 154,
+    "candidate_original232_index": 200,
+    "w_equity": 0.65,
+    "w_bond": 0.2,
+    "w_bill": 0.15
+  },
+  {
+    "candidate_local_index": 155,
+    "candidate_original232_index": 201,
+    "w_equity": 0.65,
+    "w_bond": 0.25,
+    "w_bill": 0.1
+  },
+  {
+    "candidate_local_index": 156,
+    "candidate_original232_index": 202,
+    "w_equity": 0.65,
+    "w_bond": 0.3,
+    "w_bill": 0.05
+  },
+  {
+    "candidate_local_index": 157,
+    "candidate_original232_index": 205,
+    "w_equity": 0.7,
+    "w_bond": 0.05,
+    "w_bill": 0.25
+  },
+  {
+    "candidate_local_index": 158,
+    "candidate_original232_index": 206,
+    "w_equity": 0.7,
+    "w_bond": 0.1,
+    "w_bill": 0.2
+  },
+  {
+    "candidate_local_index": 159,
+    "candidate_original232_index": 207,
+    "w_equity": 0.7,
+    "w_bond": 0.15,
+    "w_bill": 0.15
+  },
+  {
+    "candidate_local_index": 160,
+    "candidate_original232_index": 208,
+    "w_equity": 0.7,
+    "w_bond": 0.2,
+    "w_bill": 0.1
+  },
+  {
+    "candidate_local_index": 161,
+    "candidate_original232_index": 209,
+    "w_equity": 0.7,
+    "w_bond": 0.25,
+    "w_bill": 0.05
+  },
+  {
+    "candidate_local_index": 162,
+    "candidate_original232_index": 212,
+    "w_equity": 0.75,
+    "w_bond": 0.05,
+    "w_bill": 0.2
+  },
+  {
+    "candidate_local_index": 163,
+    "candidate_original232_index": 213,
+    "w_equity": 0.75,
+    "w_bond": 0.1,
+    "w_bill": 0.15
+  },
+  {
+    "candidate_local_index": 164,
+    "candidate_original232_index": 214,
+    "w_equity": 0.75,
+    "w_bond": 0.15,
+    "w_bill": 0.1
+  },
+  {
+    "candidate_local_index": 165,
+    "candidate_original232_index": 215,
+    "w_equity": 0.75,
+    "w_bond": 0.2,
+    "w_bill": 0.05
+  },
+  {
+    "candidate_local_index": 166,
+    "candidate_original232_index": 218,
+    "w_equity": 0.8,
+    "w_bond": 0.05,
+    "w_bill": 0.15
+  },
+  {
+    "candidate_local_index": 167,
+    "candidate_original232_index": 219,
+    "w_equity": 0.8,
+    "w_bond": 0.1,
+    "w_bill": 0.1
+  },
+  {
+    "candidate_local_index": 168,
+    "candidate_original232_index": 220,
+    "w_equity": 0.8,
+    "w_bond": 0.15,
+    "w_bill": 0.05
+  },
+  {
+    "candidate_local_index": 169,
+    "candidate_original232_index": 223,
+    "w_equity": 0.85,
+    "w_bond": 0.05,
+    "w_bill": 0.1
+  },
+  {
+    "candidate_local_index": 170,
+    "candidate_original232_index": 224,
+    "w_equity": 0.85,
+    "w_bond": 0.1,
+    "w_bill": 0.05
+  },
+  {
+    "candidate_local_index": 171,
+    "candidate_original232_index": 227,
+    "w_equity": 0.9,
+    "w_bond": 0.05,
+    "w_bill": 0.05
+  }
+]

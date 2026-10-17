@@ -43,9 +43,15 @@
   },
   "deterministic_randomized_duality_counterexample": {
     "interpretation": "A one-decision illustrative model, not competition-data estimates or proposed client parameters.",
-    "safe_policy": {"expected_total_log_growth": 0.0, "bad_probability": 0.0},
-    "risky_policy": {"expected_total_log_growth": 0.10, "bad_probability": 0.20},
-    "alpha": 0.10,
+    "safe_policy": {
+      "expected_total_log_growth": 0.0,
+      "bad_probability": 0.0
+    },
+    "risky_policy": {
+      "expected_total_log_growth": 0.1,
+      "bad_probability": 0.2
+    },
+    "alpha": 0.1,
     "deterministic_primal": "Only safe is feasible, so the deterministic optimum is0.",
     "dual": "d(eta)=max(.10*eta,.10-.10*eta), minimized at eta=.5 with value.05. Thus the deterministic problem has a.05 duality gap.",
     "randomized_primal": "Choose risky with probability.5 and safe with probability.5, independently before market outcomes. Then expected log growth=.05 and bad probability=.10, matching the randomized LP and dual optimum.",
@@ -146,12 +152,26 @@
     ],
     "completed_short_reference": {
       "module": "research/experimental_execution/risk_tree_reference.py",
-      "module_sha256": "98c1d3778eca4db06db742819edaa1fe4ad5c65c4e6822104fa21a7064025d19",
+      "module_sha256": "9b96c241c03a9528b92aeba4f447ae08c108760e87343ea18e4a7950c65774f0",
       "tests": "tests/test_risk_tree_reference.py",
-      "synthetic_tests_passed": 18,
+      "synthetic_tests_passed": 20,
       "independent_audit": "results/model_review/risk_tree_reference_v1/independent_audit.json",
-      "independent_audit_sha256": "3a74271a06d065be5a42b39065f9f57b80d742dd771065d0a8b91f053982ca40",
-      "independent_audit_scope": "Five declared synthetic toys with pruning on/off,83 checks, independent bisection fees and complete path/history enumeration; no market input and no general long-horizon error bound."
+      "independent_audit_sha256": "5c7c34daae09e875848cd84a864775a95b840bad3cf66cebf252649584ebe666",
+      "independent_audit_scope": "Five declared synthetic toys with pruning on/off,83 checks, independent bisection fees and complete path/history enumeration; no market input and no general long-horizon error bound.",
+      "tests_sha256": "6bae8593d9fc34225bf9411c1a789f176bde2e8f268e6e132f8581ac97d78936",
+      "input_validation_revision": {
+        "date_beijing": "2026-10-17",
+        "reason": "The earlier max(1,real_peak) absolute tolerance could admit materially inconsistent initial peaks when wealth units were tiny.",
+        "comparison": "Reject if real>peak and (real-peak)>MDD_TOL*max(real,peak); otherwise clamp only the tolerated relative overshoot with peak=max(real,peak). Difference comparison avoids ratio or peak*(1+tolerance) overflow.",
+        "synthetic_scales": [
+          "1e-200",
+          "1",
+          "1e200"
+        ],
+        "added_tests": "Two test methods cover consistent CPI-adjusted states and tolerated relative rounding at every scale, versus twice-peak states and the former1000-fold tinywealth mismatch, which must reject.",
+        "scope": "Input-validation repair only, with no model, outcome-law, risk-budget, policy-class or market-result change.",
+        "fresh_independent_audit": "The independent five-toy/ten-comparison/83-check audit was rerun against this new module SHA; the former audit was not reused."
+      }
     }
   },
   "sources": [

@@ -8,28 +8,28 @@
       "item": "Growth-risk objective and lambda=10/4/1",
       "type": "preference modelling",
       "existing_evidence": "Economic units can be derived; the three numerical preferences have not been identified from questionnaire information.",
-      "next_check": "Foundation formulation reviewed in objective_risk_decision.json with reproducible mathematical audit. Recommended: retire unidentified lambdas, use annualized expected log growth subject to an explicit full-horizon exceedance budget. Empirical frontier/product selection follows discussion.",
+      "next_check": "Foundation formulation reviewed and empirically developed in objective_risk_decision.json and the dedicated static/nested research protocols. Retire unidentified lambdas; annualized expected log growth under explicit full-horizon MDD risk policy is the current research objective, pending final modelling review.",
       "acceptance": "A stated economic trade-off and consistent use of horizon; do not select a preference merely to maximize backtest returns."
     },
     {
       "item": "10% exceedance screen and liquidity floors",
       "type": "service policy",
       "existing_evidence": "Disclosed assumptions with limited alpha sensitivity; not established from withdrawal or customer-preference data.",
-      "next_check": "Mathematical/statistical meaning reviewed in objective_risk_decision.json. 10% remains an openly normative reference case with 5%/20% policy probes; no certification from same-sample binomial limits. Still to design: sample-screen rule, instability/review criterion, liquidity floors and development-only assignment diagnostics.",
+      "next_check": "Completed separate empirical, finite-family evidence, bootstrap/OOB and nested technical-screen diagnostics. Service alpha=.10 remains normative with.05/.20 probes; exact weights are unstable and liquidity requirements remain unelicited. No new risk certificate from pooled folds.",
       "acceptance": "No client-specific exceptions chosen to force desired labels; uncertain boundary cases are explicit."
     },
     {
       "item": "5-year blocks and 256 forecast scenarios",
       "type": "statistical assumption and numerical approximation",
       "existing_evidence": "Joint resampling preserves asset-inflation relationships within blocks. Dependence length and decision convergence have not been validated.",
-      "next_check": "Audit numerical Monte Carlo variation before selecting simulation size. Then examine development-only temporal structure and block lengths.",
+      "next_check": "New fixed-target growth prototypes use exact integration over the training joint annual empirical mixture, replacing Monte Carlo noise in that prototype. IID stationarity remains an additional assumption; fixed joint-year order stresses have been completed, but do not establish or refute IID and do not validate the archived five-year block choice.",
       "acceptance": "Simulation error must be small relative to the action margin; numerical convergence does not certify forecast validity."
     },
     {
       "item": "0.002 action margin, asset floor and target restrictions",
       "type": "algorithm and product design",
       "existing_evidence": "Implemented and tested, with no evidence yet that these particular settings are necessary or stable.",
-      "next_check": "Separate forecast uncertainty from a conservatism preference; compare continuous/grid sensitivity and bounded-update ablations only after base objectives are settled.",
+      "next_check": "New growth gates use positive net estimated gain with1e-12 numeric identity tolerance, no newly calibrated uncertainty margin. A finite-horizon formulation resolves a two-period myopia example, while its actual OOF risk fails original suitability. The old.002 margin stays in V1 archives only; no target-update rule has been accepted.",
       "acceptance": "Decisions should not depend materially on one arbitrary seed or one grid point."
     },
     {
@@ -53,23 +53,37 @@
     "outer_folds": 5,
     "inner_folds": 4,
     "unit": "complete 30-year scenario",
-    "status": "design proposal, not executed or approved as final protocol",
+    "status": "Executed for the separately specified nested static-screen diagnostic; not a final policy or a nested validation of all execution prototypes.",
     "caveat": "Overlapping training folds and reused scenarios do not create new independent data or certify a 10% tail probability."
   },
   "development_progress_2026_10_17": {
-    "status": "Development diagnostics completed for static empirical menus; no final service policy or report revision approved.",
+    "status": "Static-menu, sampling-evidence and fixed-target execution research completed; further risk-aware execution design remains under development. No report revision or final service policy.",
     "objective": "Annualized expected log net real growth; full-horizon MDD exceedance budget, with alpha explicitly normative.",
     "static_study": "232 targets; nine alpha/reserve-policy cases; five whole-scenario folds; 1000 complete bootstrap reselections; fees and local resolution checked.",
     "risk_evidence": "Primary is empirical. Secondary fixed-family CP uses1160 events and requires iid path assumption. It does not certify real markets, all products or learned dynamic policies.",
     "sampling": "BCE automatic coverage repeats under bootstrap but exact targets do not. A becomes empirically eligible in some resamples, but conditional OOB diagnostics expose selection optimism. OOB rows are dependent and not an external risk estimate.",
-    "execution": "Frozen annual target suitability is not inherited by buyhold or a gate. Paired annual/hold ablation has been performed with unchanged assignments and real fees.",
-    "remaining": "Choose service meanings and severity/liquidity handling; study horizon-consistent fixed-target execution; then consider weight updates and executable review/pending rules. Formal report remains last.",
+    "execution": "Annual/hold, one-period and finite-horizon growth gates replayed with frozen fold targets and assignments. Gates pass numerical audits but do not maintain original risk suitability; OOF BCE breaches26/40/14 versus annual12/13/11.",
+    "remaining": "Risk-budget execution with off-support handling; historical severity and liquidity service policy; incremental target-update comparison; executable review/pending inputs. Keep report writing after model review.",
     "new_artifacts": [
       "docs/risk_menu_development_protocol.json",
       "docs/simultaneous_static_risk_protocol.json",
       "docs/bootstrap_oob_diagnostic_protocol.json",
       "docs/fixed_execution_ablation_protocol.json",
-      "notebooks/risk_menu_development.ipynb"
-    ]
+      "notebooks/risk_menu_development.ipynb",
+      "docs/nested_static_calibration_protocol.json",
+      "docs/finite_horizon_execution_prototype_protocol.json",
+      "docs/dynamic_risk_state_design_review.json",
+      "docs/fee_checkpoint_diagnostic_protocol.json",
+      "docs/temporal_order_diagnostic_protocol.json",
+      "docs/q2_severe_episode_protocol.json",
+      "docs/positive_asset_specification_protocol.json",
+      "docs/policy_independent_drawdown_bound_protocol.json",
+      "results/model_review/q2_oof_benchmark_v1/requirements_checklist.json"
+    ],
+    "nested_calibration": "New predeclared reused-development diagnostic keeps service alpha=.10 and chooses technical gamma from0/.025/.05/.075/.10 in four inner folds. Full and five outer contexts select.075; effective OOF BCE10/9/9 of120, versus primary12/13/11; not a probability certificate or proof of optimality.",
+    "risk_control_reference": "H<=3 finite joint-support full-history policy tree with absorbing breach, one root chance budget and optional mathematical root-mixture bound.20 synthetic tests and83 independent checks pass; not a30-year solver. Direct conditional-budget recursion and off-support deployment gap are explicitly documented.",
+    "measurement_stress": "Adding fee-instant observations changes no empirical grid pass decision or primary OOF breach count. Original/reverse/permuted joint-year stresses and one predeclared severe OOF episode are saved; neither creates new independent data.",
+    "product_specification": "The statement says each product uses all three assets. The232 universe permits zero weights and remains a relaxed research comparator. A separate positive172 subset on the same5pp grid completed unchanged nested learning: all six contexts select gamma=.075, strict OOF BCE9/9/9 of120 versus strict fixed-gamma.10 BCE12/14/11. All targets have three positive weights.5% is the grid minimum, not an economically identified floor; no final service freeze.",
+    "unavoidable_loss_bound": "An interval-product lower bound for any annual long-only self-financing rule was proved and independently checked. Zero-fee perfect foresight yields forced BCE0/0/0 and A/D3/6 paths of120; these do not prove global annual-policy infeasibility or existence of a safe causal rule. Static A/D failure remains family-specific."
   }
 }

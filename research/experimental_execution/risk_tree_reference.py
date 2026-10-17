@@ -87,7 +87,12 @@ def _state(value: RiskState, loss_tolerance: float) -> RiskState:
     if cpi == 0 or peak == 0 or not isinstance(value.breached, (bool, np.bool_)):
         raise ValueError("CPI/real peak must be positive and breached must be boolean")
     real = float(holdings.sum() / cpi)
-    if not np.isfinite(real) or real <= 0 or real > peak + MDD_TOL * max(1, peak):
+    if not np.isfinite(real) or real <= 0:
+        raise ValueError("Current real wealth must be positive and no greater than its recorded peak")
+    # Compare in the actual wealth scale: an absolute unit-sized tolerance
+    # would accept large relative inconsistencies for tiny currency units.
+    # Subtraction avoids overflowing a ratio or peak*(1+tolerance).
+    if real > peak and real - peak > MDD_TOL * max(real, peak):
         raise ValueError("Current real wealth must be positive and no greater than its recorded peak")
     peak = max(real, peak)
     breached = bool(value.breached or (1 - real / peak) - loss_tolerance > MDD_TOL)

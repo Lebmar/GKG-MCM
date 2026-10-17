@@ -1,0 +1,415 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "strict-calibration",
+      "title": "严格三资产规格与内层风险余量",
+      "assumptions": [
+        "服务参考α固定10%；训练γ是技术参数。",
+        "三资产至少5%来自既定网格最小正点，未被解释为问卷偏好。"
+      ],
+      "queries": [
+        {
+          "id": "strict-oof",
+          "source": {
+            "label": "同规格完整路径折外对照",
+            "files": [
+              {
+                "label": "results/model_review/positive_asset_specification_v1/outer_strict_vs_relaxed_summary.csv"
+              },
+              {
+                "label": "results/model_review/positive_asset_specification_v1/nested_context_refits.json"
+              },
+              {
+                "label": "docs/positive_asset_specification_protocol.json"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "超限",
+                "definition": "客户完整H内年度最大实际回撤超过L+1e−12。"
+              },
+              {
+                "label": "增长差",
+                "definition": "两程序在相同120条自动分配路径上的平均年化log净实际增长差，乘100为百分点。"
+              }
+            ],
+            "filters": [
+              "strict172",
+              "B/C/E；nested effective 与 fixed_gamma10 raw",
+              "五个外层整路径折；γ只在四个内层折选择"
+            ],
+            "caveats": [
+              "复用的开发数据；训练折相互重叠。",
+              "不是未来风险保证、连续最优或最终服务批准。",
+              "旧版121–180结果已被看过，未称新盲测。"
+            ]
+          },
+          "sourceRoles": [
+            {
+              "kind": "file",
+              "label": "results/model_review/positive_asset_specification_v1/outer_strict_vs_relaxed_summary.csv",
+              "role": "已保存开发研究的输入、方法或结果证据"
+            },
+            {
+              "kind": "file",
+              "label": "results/model_review/positive_asset_specification_v1/nested_context_refits.json",
+              "role": "已保存开发研究的输入、方法或结果证据"
+            },
+            {
+              "kind": "file",
+              "label": "docs/positive_asset_specification_protocol.json",
+              "role": "已保存开发研究的输入、方法或结果证据"
+            }
+          ],
+          "reportingPeriod": "2026-10-17开发研究；原情景1–120",
+          "columns": [
+            "客户",
+            "完整路径数",
+            "固定10%训练筛选超限数",
+            "内层选择超限数",
+            "年化log增长变化_百分点"
+          ],
+          "rows": [
+            {
+              "客户": "B",
+              "完整路径数": 120,
+              "固定10%训练筛选超限数": 12,
+              "内层选择超限数": 9,
+              "年化log增长变化_百分点": -0.19460574575046014
+            },
+            {
+              "客户": "C",
+              "完整路径数": 120,
+              "固定10%训练筛选超限数": 14,
+              "内层选择超限数": 9,
+              "年化log增长变化_百分点": -0.18034019034215976
+            },
+            {
+              "客户": "E",
+              "完整路径数": 120,
+              "固定10%训练筛选超限数": 11,
+              "内层选择超限数": 9,
+              "年化log增长变化_百分点": -0.0542906932155203
+            }
+          ],
+          "methods": [
+            {
+              "language": "python",
+              "code": "a = table[(specification == 'strict172') & (procedure == 'fixed_gamma10') & (view == 'raw')]\nb = table[(specification == 'strict172') & (procedure == 'nested') & (view == 'effective')]\ndelta_pp = 100 * (b.mean_log_growth - a.mean_log_growth)"
+            }
+          ]
+        },
+        {
+          "id": "strict-weights",
+          "source": {
+            "label": "全开发描述性拟合的候选权重",
+            "files": [
+              {
+                "label": "results/model_review/positive_asset_specification_v1/nested_context_refits.json"
+              },
+              {
+                "label": "results/model_review/positive_asset_specification_v1/candidate_mapping.csv"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "权重",
+                "definition": "股票、政府债、票据的长期年度恢复目标；百分数合计100。"
+              }
+            ],
+            "filters": [
+              "full_development raw_fit menu",
+              "172 local索引显式映射回原232索引"
+            ],
+            "caveats": [
+              "全120拟合是描述性训练结果，区别于五个折外训练菜单。",
+              "风险维度候选分配B/C/E；流动性与动态执行仍需后续审定。"
+            ]
+          },
+          "sourceRoles": [
+            {
+              "kind": "file",
+              "label": "results/model_review/positive_asset_specification_v1/nested_context_refits.json",
+              "role": "已保存开发研究的输入、方法或结果证据"
+            },
+            {
+              "kind": "file",
+              "label": "results/model_review/positive_asset_specification_v1/candidate_mapping.csv",
+              "role": "已保存开发研究的输入、方法或结果证据"
+            }
+          ],
+          "reportingPeriod": "2026-10-17开发研究；原情景1–120",
+          "columns": [
+            "产品",
+            "股票_百分数",
+            "政府债_百分数",
+            "票据_百分数"
+          ],
+          "rows": [
+            {
+              "产品": "Conservative",
+              "股票_百分数": 25.0,
+              "政府债_百分数": 30.0,
+              "票据_百分数": 45.0
+            },
+            {
+              "产品": "Balanced",
+              "股票_百分数": 45.0,
+              "政府债_百分数": 5.0,
+              "票据_百分数": 50.0
+            },
+            {
+              "产品": "Growth",
+              "股票_百分数": 70.0,
+              "政府债_百分数": 10.0,
+              "票据_百分数": 20.0
+            }
+          ],
+          "methods": [
+            {
+              "language": "python",
+              "code": "weight_percent = 100 * np.asarray(product['weights'])"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "execution",
+      "title": "增长门槛没有继承原风险适配",
+      "assumptions": [
+        "同一折、同一目标、同一原客户分配；净费用0.25%。"
+      ],
+      "queries": [
+        {
+          "id": "execution-oof",
+          "source": {
+            "label": "原放宽规格目标的执行消融",
+            "files": [
+              {
+                "label": "results/model_review/finite_horizon_execution_v1/client_summary.csv"
+              },
+              {
+                "label": "results/model_review/finite_horizon_execution_v1/manifest.json"
+              },
+              {
+                "label": "docs/finite_horizon_execution_prototype_protocol.json"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "交易比例",
+                "definition": "实际发生转移的审查次数/客户H内全部审查次数，包含初始配置。"
+              }
+            ],
+            "filters": [
+              "scope=oof；mesh=.05或年度基准无mesh",
+              "annual_restore vs finite_horizon_gate"
+            ],
+            "caveats": [
+              "此实验保留原232研究的目标，尚未验证新的严格三资产菜单动态规则。",
+              "增长门槛没有MDD约束；这不是可直接部署的受控策略。"
+            ]
+          },
+          "sourceRoles": [
+            {
+              "kind": "file",
+              "label": "results/model_review/finite_horizon_execution_v1/client_summary.csv",
+              "role": "已保存开发研究的输入、方法或结果证据"
+            },
+            {
+              "kind": "file",
+              "label": "results/model_review/finite_horizon_execution_v1/manifest.json",
+              "role": "已保存开发研究的输入、方法或结果证据"
+            },
+            {
+              "kind": "file",
+              "label": "docs/finite_horizon_execution_prototype_protocol.json",
+              "role": "已保存开发研究的输入、方法或结果证据"
+            }
+          ],
+          "reportingPeriod": "2026-10-17开发研究；原情景1–120",
+          "columns": [
+            "客户",
+            "执行规则",
+            "自动路径数",
+            "超限数",
+            "年化平均log增长_百分数",
+            "实际交易审查比例_百分数"
+          ],
+          "rows": [
+            {
+              "客户": "E",
+              "执行规则": "annual_restore",
+              "自动路径数": 120,
+              "超限数": 11,
+              "年化平均log增长_百分数": 4.64134224308202,
+              "实际交易审查比例_百分数": 100.0
+            },
+            {
+              "客户": "B",
+              "执行规则": "annual_restore",
+              "自动路径数": 120,
+              "超限数": 12,
+              "年化平均log增长_百分数": 3.0879647465076,
+              "实际交易审查比例_百分数": 100.0
+            },
+            {
+              "客户": "C",
+              "执行规则": "annual_restore",
+              "自动路径数": 120,
+              "超限数": 13,
+              "年化平均log增长_百分数": 4.092074361872959,
+              "实际交易审查比例_百分数": 100.0
+            },
+            {
+              "客户": "E",
+              "执行规则": "finite_horizon_gate",
+              "自动路径数": 120,
+              "超限数": 14,
+              "年化平均log增长_百分数": 4.79375043970425,
+              "实际交易审查比例_百分数": 31.527777777777782
+            },
+            {
+              "客户": "B",
+              "执行规则": "finite_horizon_gate",
+              "自动路径数": 120,
+              "超限数": 26,
+              "年化平均log增长_百分数": 3.7724636000415903,
+              "实际交易审查比例_百分数": 15.722222222222221
+            },
+            {
+              "客户": "C",
+              "执行规则": "finite_horizon_gate",
+              "自动路径数": 120,
+              "超限数": 40,
+              "年化平均log增长_百分数": 5.0949171501701205,
+              "实际交易审查比例_百分数": 8.80555555555555
+            }
+          ],
+          "methods": [
+            {
+              "language": "python",
+              "code": "rows = summary[(scope == 'oof') & policy.isin(['annual_restore','finite_horizon_gate'])]\ntrade_percent = 100 * mean_trade_fraction\nbreach_fraction = breach_count / assigned_paths"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lower-bound",
+      "title": "固定目标族失败的范围",
+      "assumptions": [
+        "年度初交易、年内持仓不变；long-only fully invested、无注资或杠杆；费用非负。"
+      ],
+      "queries": [
+        {
+          "id": "unavoidable",
+          "source": {
+            "label": "年度区间乘积下界",
+            "files": [
+              {
+                "label": "results/model_review/policy_independent_drawdown_bound_v1/client_counts.csv"
+              },
+              {
+                "label": "results/model_review/policy_independent_drawdown_bound_v1/independent_audit.json"
+              },
+              {
+                "label": "docs/policy_independent_drawdown_bound_protocol.json"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "理想下界",
+                "definition": "每年预知最好资产、零费用的放宽路径MDD；由所有区间收益比给出任何上述年度策略的MDD下界。"
+              }
+            ],
+            "filters": [
+              "各客户first H；原情景1–120"
+            ],
+            "caveats": [
+              "理想路径不是可实施建议。",
+              "未超限不证明存在安全因果策略。",
+              "所有forced count≤12，不能证明整个年度策略类经验不可行；A/D仅固定目标族失败。"
+            ]
+          },
+          "sourceRoles": [
+            {
+              "kind": "file",
+              "label": "results/model_review/policy_independent_drawdown_bound_v1/client_counts.csv",
+              "role": "已保存开发研究的输入、方法或结果证据"
+            },
+            {
+              "kind": "file",
+              "label": "results/model_review/policy_independent_drawdown_bound_v1/independent_audit.json",
+              "role": "已保存开发研究的输入、方法或结果证据"
+            },
+            {
+              "kind": "file",
+              "label": "docs/policy_independent_drawdown_bound_protocol.json",
+              "role": "已保存开发研究的输入、方法或结果证据"
+            }
+          ],
+          "reportingPeriod": "2026-10-17开发研究；原情景1–120",
+          "columns": [
+            "客户",
+            "期限",
+            "完整路径数",
+            "理想下界仍超限",
+            "232固定目标最少超限",
+            "10%经验额度条数"
+          ],
+          "rows": [
+            {
+              "客户": "A",
+              "期限": 5,
+              "完整路径数": 120,
+              "理想下界仍超限": 3,
+              "232固定目标最少超限": 16,
+              "10%经验额度条数": 12
+            },
+            {
+              "客户": "B",
+              "期限": 15,
+              "完整路径数": 120,
+              "理想下界仍超限": 0,
+              "232固定目标最少超限": 1,
+              "10%经验额度条数": 12
+            },
+            {
+              "客户": "C",
+              "期限": 30,
+              "完整路径数": 120,
+              "理想下界仍超限": 0,
+              "232固定目标最少超限": 0,
+              "10%经验额度条数": 12
+            },
+            {
+              "客户": "D",
+              "期限": 25,
+              "完整路径数": 120,
+              "理想下界仍超限": 6,
+              "232固定目标最少超限": 33,
+              "10%经验额度条数": 12
+            },
+            {
+              "客户": "E",
+              "期限": 6,
+              "完整路径数": 120,
+              "理想下界仍超限": 0,
+              "232固定目标最少超限": 0,
+              "10%经验额度条数": 12
+            }
+          ],
+          "methods": [
+            {
+              "language": "python",
+              "code": "m = np.max((1 + asset_returns) / (1 + inflation[..., None]), axis=-1)\nideal = 100 * np.cumprod(m, axis=-1)\n# prepend wealth100, then compute peak-to-trough MDD; compare to each L"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

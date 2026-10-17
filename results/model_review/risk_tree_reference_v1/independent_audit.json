@@ -1,5 +1,5 @@
 {
-  "completed_utc": "2026-10-17T11:24:53.910909+00:00",
+  "completed_utc": "2026-10-17T11:44:18.021248+00:00",
   "status": "passed",
   "runtime": {
     "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
@@ -350,12 +350,12 @@
   },
   "source_sha256_at_start": {
     "scripts/audit_risk_tree_reference.py": "78b62b387c8bb08720c4301b403424b89917f117c8cb7bb7733589f85278c6cf",
-    "research/experimental_execution/risk_tree_reference.py": "98c1d3778eca4db06db742819edaa1fe4ad5c65c4e6822104fa21a7064025d19",
+    "research/experimental_execution/risk_tree_reference.py": "9b96c241c03a9528b92aeba4f447ae08c108760e87343ea18e4a7950c65774f0",
     "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a"
   },
   "source_sha256_at_end": {
     "scripts/audit_risk_tree_reference.py": "78b62b387c8bb08720c4301b403424b89917f117c8cb7bb7733589f85278c6cf",
-    "research/experimental_execution/risk_tree_reference.py": "98c1d3778eca4db06db742819edaa1fe4ad5c65c4e6822104fa21a7064025d19",
+    "research/experimental_execution/risk_tree_reference.py": "9b96c241c03a9528b92aeba4f447ae08c108760e87343ea18e4a7950c65774f0",
     "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a"
   },
   "market_data_read": false,

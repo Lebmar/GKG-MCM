@@ -241,7 +241,7 @@ def main():
                      "target": target.tolist(), "original_selecting_mdd": float(selected.mdd)}
     write_json(OUT / "episode.json", {"selected": selected_info, "annual_episode": annual_episode,
                                       "policy_metrics": metrics, "summary_reconciliation_abs_errors": checks,
-                                      "selection_bias": "Annual policy's worst original OOF client-C path; no overall policy ranking or typical-path inference", 
+                                      "selection_bias": "Annual policy's worst original OOF client-C path; no overall policy ranking or typical-path inference",
                                       "timing": "All MDD observations are original annual endpoints. Actual transfer/fee year t precedes its return; no extra fee observation or intrayear market path is inserted."})
     pd.DataFrame(rows).to_csv(OUT / "yearly_execution.csv", index=False)
     plot_episode(records, annual_episode, selected_info, target, OUT / "severe_episode")
