@@ -1,6 +1,6 @@
 {
   "version": "risk-menu-development-v1",
-  "status": "predeclared before new market-performance inspection; research only",
+  "status": "Declared before executing the newly specified menu-selection and internal-validation experiments; research only.",
   "date_beijing": "2026-10-17",
   "work_window_beijing": {
     "start": "2026-10-17 18:04",
@@ -224,7 +224,9 @@
     "extension_slots": "Fill any remaining slots from the H=15 growth–CVaR90 Pareto frontier by maximum minimum absolute CVaR90 separation from existing products; if none exist start at minimum CVaR. Ties prefer higher mean log growth then lower candidate index. This is a stated breadth policy, not a preference identified by the five profiles.",
     "reference_horizon": 15,
     "reference_horizon_reason": "Median of the five supplied horizons, not an estimated population horizon.",
-    "labels": "Conservative/Balanced/Growth sorted by H15 CVaR90, with growth then candidate index tie breaks. Check loss/growth ordering at all five horizons and disclose crossings."
+    "labels": "Conservative/Balanced/Growth sorted by H15 CVaR90, with growth then candidate index tie breaks. Check loss/growth ordering at all five horizons and disclose crossings.",
+    "dominance_pruning": "Only remove a target when a lower-index target is componentwise no worse in all feasible profile growth scores, with a strict improvement beyond numerical tolerance, or when exact equivalent scores have a lower index. This preserves canonical menu ties.",
+    "degeneracy": "Do not fill an extension slot using an indistinguishable reference risk level. Retain incomplete/tied-risk flags rather than manufacturing three economically distinct products."
   },
   "statistics": {
     "median": "np.median",
@@ -891,7 +893,18 @@
     "meaning": "Sampling/configuration/assignment stability conditional on empirical scenarios, not a population risk certificate.",
     "main_case": "alpha .10 and risk_only; other policy cases may use 400 replicates with counts recorded.",
     "neighborhood": "L1 target-weight distance<=.10, excluding self, preserving declared constraints; report range and eligibility changes.",
-    "classification": "Separate policy-sensitive (case changes), sample-unstable (fold/bootstrap changes), sample-infeasible (no menu feasible), and sample-supported. Report proportions rather than hiding them behind an unvalidated hard stability cutoff."
+    "classification": "Separate policy-sensitive (case changes), sample-unstable (fold/bootstrap changes), sample-infeasible (no menu feasible), and sample-supported. Report proportions rather than hiding them behind an unvalidated hard stability cutoff.",
+    "flags": {
+      "empirical_pass": "k<=floor(n*alpha), exact count resolution disclosed",
+      "boundary_pass": "k=floor(n*alpha); one additional breach would reverse screening",
+      "boundary_fail": "k=floor(n*alpha)+1; one fewer breach would reverse screening",
+      "policy_sensitive": "Report product/weight changes separately from automatic-versus-review changes across alpha and reserve cases.",
+      "sampling_sensitive": "Training folds disagree on auto/review, or full-development assignment is one-scenario-boundary pass.",
+      "internal_calibration_warning": "Among test paths with fold-frozen automatic assignments, OOF empirical breach proportion exceeds the stated alpha. This is a diagnostic, not a population hypothesis-test conclusion.",
+      "development_consistent_auto": "Full-development sample passes away from one-path boundary, all five training fits assign automatically, and OOF empirical breach rate is <=alpha. No formal risk certification is claimed.",
+      "consistent_referral": "Full-development and all five folds refer the profile.",
+      "parameter_vs_function": "Unstable weights with stable assignment/regret are parameter nonidentification, not automatically functional failure."
+    }
   },
   "predeclared_sensitivity": {
     "grid_step": 0.025,
@@ -902,7 +915,8 @@
       0.005
     ],
     "cost_role": "Hold fitted main menu fixed first; report any reselected-menu comparison separately.",
-    "severity_alternative": "CVaR_(1-alpha)(MDD)<=L as stronger policy case if studied; not an equivalent questionnaire meaning."
+    "severity_alternative": "CVaR_(1-alpha)(MDD)<=L as stronger policy case if studied; not an equivalent questionnaire meaning.",
+    "grid_scope": "Primary resolution comparison refits within the union of L1<=.10 neighborhoods of the main selected coarse targets on a .025 lattice. The full fine grid may be described, but does not replace the primary method by backtest performance."
   },
   "prohibited_interpretations": [
     "new blind-final performance",
@@ -911,5 +925,12 @@
     "forecast resampling creates independent market scenarios",
     "three menu labels alone establish ordering at every horizon",
     "risk-only screen fully settles liquidity suitability"
-  ]
+  ],
+  "development_history": "The 1–120 development data were already used by V1 and are being described in a concurrent asset/liquidity audit. This is prospective specification of a new selection procedure, not preregistration on wholly unseen data.",
+  "fixed_comparator": {
+    "name": "H15 frontier endpoints and middle-risk representative",
+    "construction": "Training-only growth–CVaR90 Pareto frontier; minimum-risk endpoint, maximum-growth endpoint, then distinct frontier point nearest their risk midpoint.",
+    "role": "Predeclared descriptive alternative; do not replace the primary coverage/regret method merely because one result looks better.",
+    "ties": "Higher growth, then lower risk, then candidate index; flag fewer than three distinct risk levels."
+  }
 }
