@@ -1,0 +1,692 @@
+{
+  "full_development__B": {
+    "training_reference_coupling": {
+      "path_target_pairs": 120,
+      "triggered_pairs": 9,
+      "never_triggered_pairs": 111,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    },
+    "training_eta0_old_growth_only_max_errors": {
+      "holdings": 0.0,
+      "posttrade_holdings": 0.0,
+      "real_wealth": 0.0,
+      "nominal_wealth": 0.0,
+      "fees": 0.0,
+      "moved": 0.0,
+      "real_peak": 0.0,
+      "running_mdd": 0.0,
+      "first_crossing": 0.0
+    },
+    "evaluation_annual_saved_errors": {
+      "log_growth": 9.71445146547012e-17,
+      "cagr": 9.71445146547012e-17,
+      "mdd": 9.71445146547012e-17,
+      "volatility": 9.71445146547012e-17,
+      "terminal_real": 2.842170943040401e-14
+    }
+  },
+  "full_development__C": {
+    "training_reference_coupling": {
+      "path_target_pairs": 120,
+      "triggered_pairs": 9,
+      "never_triggered_pairs": 111,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    },
+    "training_eta0_old_growth_only_max_errors": {
+      "holdings": 0.0,
+      "posttrade_holdings": 0.0,
+      "real_wealth": 0.0,
+      "nominal_wealth": 0.0,
+      "fees": 0.0,
+      "moved": 0.0,
+      "real_peak": 0.0,
+      "running_mdd": 0.0,
+      "first_crossing": 0.0
+    },
+    "evaluation_annual_saved_errors": {
+      "log_growth": 9.71445146547012e-17,
+      "cagr": 9.71445146547012e-17,
+      "mdd": 8.326672684688674e-17,
+      "volatility": 9.71445146547012e-17,
+      "terminal_real": 5.684341886080802e-14
+    }
+  },
+  "full_development__E": {
+    "training_reference_coupling": {
+      "path_target_pairs": 120,
+      "triggered_pairs": 9,
+      "never_triggered_pairs": 111,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    },
+    "training_eta0_old_growth_only_max_errors": {
+      "holdings": 0.0,
+      "posttrade_holdings": 0.0,
+      "real_wealth": 0.0,
+      "nominal_wealth": 0.0,
+      "fees": 0.0,
+      "moved": 0.0,
+      "real_peak": 0.0,
+      "running_mdd": 0.0,
+      "first_crossing": 0.0
+    },
+    "evaluation_annual_saved_errors": {
+      "log_growth": 9.71445146547012e-17,
+      "cagr": 9.71445146547012e-17,
+      "mdd": 9.71445146547012e-17,
+      "volatility": 9.71445146547012e-17,
+      "terminal_real": 2.842170943040401e-14
+    }
+  },
+  "outer_fold_1__B": {
+    "training_reference_coupling": {
+      "path_target_pairs": 96,
+      "triggered_pairs": 7,
+      "never_triggered_pairs": 89,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    },
+    "training_eta0_old_growth_only_max_errors": {
+      "holdings": 0.0,
+      "posttrade_holdings": 0.0,
+      "real_wealth": 0.0,
+      "nominal_wealth": 0.0,
+      "fees": 0.0,
+      "moved": 0.0,
+      "real_peak": 0.0,
+      "running_mdd": 0.0,
+      "first_crossing": 0.0
+    },
+    "evaluation_reference_coupling": {
+      "path_target_pairs": 24,
+      "triggered_pairs": 2,
+      "never_triggered_pairs": 22,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    },
+    "evaluation_annual_saved_errors": {
+      "log_growth": 9.020562075079397e-17,
+      "cagr": 9.71445146547012e-17,
+      "mdd": 8.326672684688674e-17,
+      "volatility": 8.326672684688674e-17,
+      "terminal_real": 2.842170943040401e-14
+    }
+  },
+  "outer_fold_1__C": {
+    "training_reference_coupling": {
+      "path_target_pairs": 96,
+      "triggered_pairs": 7,
+      "never_triggered_pairs": 89,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    },
+    "training_eta0_old_growth_only_max_errors": {
+      "holdings": 0.0,
+      "posttrade_holdings": 0.0,
+      "real_wealth": 0.0,
+      "nominal_wealth": 0.0,
+      "fees": 0.0,
+      "moved": 0.0,
+      "real_peak": 0.0,
+      "running_mdd": 0.0,
+      "first_crossing": 0.0
+    },
+    "evaluation_reference_coupling": {
+      "path_target_pairs": 24,
+      "triggered_pairs": 0,
+      "never_triggered_pairs": 24,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    },
+    "evaluation_annual_saved_errors": {
+      "log_growth": 9.627715291671279e-17,
+      "cagr": 9.71445146547012e-17,
+      "mdd": 8.326672684688674e-17,
+      "volatility": 9.71445146547012e-17,
+      "terminal_real": 5.684341886080802e-14
+    }
+  },
+  "outer_fold_1__E": {
+    "training_reference_coupling": {
+      "path_target_pairs": 96,
+      "triggered_pairs": 7,
+      "never_triggered_pairs": 89,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    },
+    "training_eta0_old_growth_only_max_errors": {
+      "holdings": 0.0,
+      "posttrade_holdings": 0.0,
+      "real_wealth": 0.0,
+      "nominal_wealth": 0.0,
+      "fees": 0.0,
+      "moved": 0.0,
+      "real_peak": 0.0,
+      "running_mdd": 0.0,
+      "first_crossing": 0.0
+    },
+    "evaluation_reference_coupling": {
+      "path_target_pairs": 24,
+      "triggered_pairs": 1,
+      "never_triggered_pairs": 23,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    },
+    "evaluation_annual_saved_errors": {
+      "log_growth": 9.974659986866641e-17,
+      "cagr": 9.71445146547012e-17,
+      "mdd": 9.71445146547012e-17,
+      "volatility": 8.326672684688674e-17,
+      "terminal_real": 1.4210854715202004e-14
+    }
+  },
+  "outer_fold_2__B": {
+    "training_reference_coupling": {
+      "path_target_pairs": 96,
+      "triggered_pairs": 6,
+      "never_triggered_pairs": 90,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    },
+    "training_eta0_old_growth_only_max_errors": {
+      "holdings": 0.0,
+      "posttrade_holdings": 0.0,
+      "real_wealth": 0.0,
+      "nominal_wealth": 0.0,
+      "fees": 0.0,
+      "moved": 0.0,
+      "real_peak": 0.0,
+      "running_mdd": 0.0,
+      "first_crossing": 0.0
+    },
+    "evaluation_reference_coupling": {
+      "path_target_pairs": 24,
+      "triggered_pairs": 1,
+      "never_triggered_pairs": 23,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    },
+    "evaluation_annual_saved_errors": {
+      "log_growth": 8.673617379884035e-17,
+      "cagr": 9.194034422677078e-17,
+      "mdd": 8.326672684688674e-17,
+      "volatility": 8.326672684688674e-17,
+      "terminal_real": 2.842170943040401e-14
+    }
+  },
+  "outer_fold_2__C": {
+    "training_reference_coupling": {
+      "path_target_pairs": 96,
+      "triggered_pairs": 6,
+      "never_triggered_pairs": 90,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    },
+    "training_eta0_old_growth_only_max_errors": {
+      "holdings": 0.0,
+      "posttrade_holdings": 0.0,
+      "real_wealth": 0.0,
+      "nominal_wealth": 0.0,
+      "fees": 0.0,
+      "moved": 0.0,
+      "real_peak": 0.0,
+      "running_mdd": 0.0,
+      "first_crossing": 0.0
+    },
+    "evaluation_reference_coupling": {
+      "path_target_pairs": 24,
+      "triggered_pairs": 1,
+      "never_triggered_pairs": 23,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    },
+    "evaluation_annual_saved_errors": {
+      "log_growth": 9.367506770274758e-17,
+      "cagr": 9.71445146547012e-17,
+      "mdd": 6.938893903907228e-17,
+      "volatility": 9.71445146547012e-17,
+      "terminal_real": 2.842170943040401e-14
+    }
+  },
+  "outer_fold_2__E": {
+    "training_reference_coupling": {
+      "path_target_pairs": 96,
+      "triggered_pairs": 7,
+      "never_triggered_pairs": 89,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    },
+    "training_eta0_old_growth_only_max_errors": {
+      "holdings": 0.0,
+      "posttrade_holdings": 0.0,
+      "real_wealth": 0.0,
+      "nominal_wealth": 0.0,
+      "fees": 0.0,
+      "moved": 0.0,
+      "real_peak": 0.0,
+      "running_mdd": 0.0,
+      "first_crossing": 0.0
+    },
+    "evaluation_reference_coupling": {
+      "path_target_pairs": 24,
+      "triggered_pairs": 1,
+      "never_triggered_pairs": 23,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    },
+    "evaluation_annual_saved_errors": {
+      "log_growth": 9.71445146547012e-17,
+      "cagr": 9.324138683375338e-17,
+      "mdd": 9.71445146547012e-17,
+      "volatility": 8.326672684688674e-17,
+      "terminal_real": 1.4210854715202004e-14
+    }
+  },
+  "outer_fold_3__B": {
+    "training_reference_coupling": {
+      "path_target_pairs": 96,
+      "triggered_pairs": 7,
+      "never_triggered_pairs": 89,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    },
+    "training_eta0_old_growth_only_max_errors": {
+      "holdings": 0.0,
+      "posttrade_holdings": 0.0,
+      "real_wealth": 0.0,
+      "nominal_wealth": 0.0,
+      "fees": 0.0,
+      "moved": 0.0,
+      "real_peak": 0.0,
+      "running_mdd": 0.0,
+      "first_crossing": 0.0
+    },
+    "evaluation_reference_coupling": {
+      "path_target_pairs": 24,
+      "triggered_pairs": 2,
+      "never_triggered_pairs": 22,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    },
+    "evaluation_annual_saved_errors": {
+      "log_growth": 9.020562075079397e-17,
+      "cagr": 9.71445146547012e-17,
+      "mdd": 8.326672684688674e-17,
+      "volatility": 9.71445146547012e-17,
+      "terminal_real": 2.842170943040401e-14
+    }
+  },
+  "outer_fold_3__C": {
+    "training_reference_coupling": {
+      "path_target_pairs": 96,
+      "triggered_pairs": 6,
+      "never_triggered_pairs": 90,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    },
+    "training_eta0_old_growth_only_max_errors": {
+      "holdings": 0.0,
+      "posttrade_holdings": 0.0,
+      "real_wealth": 0.0,
+      "nominal_wealth": 0.0,
+      "fees": 0.0,
+      "moved": 0.0,
+      "real_peak": 0.0,
+      "running_mdd": 0.0,
+      "first_crossing": 0.0
+    },
+    "evaluation_reference_coupling": {
+      "path_target_pairs": 24,
+      "triggered_pairs": 4,
+      "never_triggered_pairs": 20,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    },
+    "evaluation_annual_saved_errors": {
+      "log_growth": 9.71445146547012e-17,
+      "cagr": 9.71445146547012e-17,
+      "mdd": 8.326672684688674e-17,
+      "volatility": 8.326672684688674e-17,
+      "terminal_real": 5.684341886080802e-14
+    }
+  },
+  "outer_fold_3__E": {
+    "training_reference_coupling": {
+      "path_target_pairs": 96,
+      "triggered_pairs": 7,
+      "never_triggered_pairs": 89,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    },
+    "training_eta0_old_growth_only_max_errors": {
+      "holdings": 0.0,
+      "posttrade_holdings": 0.0,
+      "real_wealth": 0.0,
+      "nominal_wealth": 0.0,
+      "fees": 0.0,
+      "moved": 0.0,
+      "real_peak": 0.0,
+      "running_mdd": 0.0,
+      "first_crossing": 0.0
+    },
+    "evaluation_reference_coupling": {
+      "path_target_pairs": 24,
+      "triggered_pairs": 1,
+      "never_triggered_pairs": 23,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    },
+    "evaluation_annual_saved_errors": {
+      "log_growth": 9.31871767251291e-17,
+      "cagr": 9.465084965798454e-17,
+      "mdd": 8.326672684688674e-17,
+      "volatility": 8.326672684688674e-17,
+      "terminal_real": 2.842170943040401e-14
+    }
+  },
+  "outer_fold_4__B": {
+    "training_reference_coupling": {
+      "path_target_pairs": 96,
+      "triggered_pairs": 7,
+      "never_triggered_pairs": 89,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    },
+    "training_eta0_old_growth_only_max_errors": {
+      "holdings": 0.0,
+      "posttrade_holdings": 0.0,
+      "real_wealth": 0.0,
+      "nominal_wealth": 0.0,
+      "fees": 0.0,
+      "moved": 0.0,
+      "real_peak": 0.0,
+      "running_mdd": 0.0,
+      "first_crossing": 0.0
+    },
+    "evaluation_reference_coupling": {
+      "path_target_pairs": 24,
+      "triggered_pairs": 2,
+      "never_triggered_pairs": 22,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    },
+    "evaluation_annual_saved_errors": {
+      "log_growth": 9.627715291671279e-17,
+      "cagr": 8.673617379884035e-17,
+      "mdd": 8.326672684688674e-17,
+      "volatility": 8.326672684688674e-17,
+      "terminal_real": 2.842170943040401e-14
+    }
+  },
+  "outer_fold_4__C": {
+    "training_reference_coupling": {
+      "path_target_pairs": 96,
+      "triggered_pairs": 7,
+      "never_triggered_pairs": 89,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    },
+    "training_eta0_old_growth_only_max_errors": {
+      "holdings": 0.0,
+      "posttrade_holdings": 0.0,
+      "real_wealth": 0.0,
+      "nominal_wealth": 0.0,
+      "fees": 0.0,
+      "moved": 0.0,
+      "real_peak": 0.0,
+      "running_mdd": 0.0,
+      "first_crossing": 0.0
+    },
+    "evaluation_reference_coupling": {
+      "path_target_pairs": 24,
+      "triggered_pairs": 3,
+      "never_triggered_pairs": 21,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    },
+    "evaluation_annual_saved_errors": {
+      "log_growth": 9.71445146547012e-17,
+      "cagr": 9.71445146547012e-17,
+      "mdd": 6.938893903907228e-17,
+      "volatility": 8.326672684688674e-17,
+      "terminal_real": 5.684341886080802e-14
+    }
+  },
+  "outer_fold_4__E": {
+    "training_reference_coupling": {
+      "path_target_pairs": 96,
+      "triggered_pairs": 7,
+      "never_triggered_pairs": 89,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    },
+    "training_eta0_old_growth_only_max_errors": {
+      "holdings": 0.0,
+      "posttrade_holdings": 0.0,
+      "real_wealth": 0.0,
+      "nominal_wealth": 0.0,
+      "fees": 0.0,
+      "moved": 0.0,
+      "real_peak": 0.0,
+      "running_mdd": 0.0,
+      "first_crossing": 0.0
+    },
+    "evaluation_reference_coupling": {
+      "path_target_pairs": 24,
+      "triggered_pairs": 1,
+      "never_triggered_pairs": 23,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    },
+    "evaluation_annual_saved_errors": {
+      "log_growth": 9.71445146547012e-17,
+      "cagr": 9.71445146547012e-17,
+      "mdd": 8.326672684688674e-17,
+      "volatility": 8.326672684688674e-17,
+      "terminal_real": 2.842170943040401e-14
+    }
+  },
+  "outer_fold_5__B": {
+    "training_reference_coupling": {
+      "path_target_pairs": 96,
+      "triggered_pairs": 7,
+      "never_triggered_pairs": 89,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    },
+    "training_eta0_old_growth_only_max_errors": {
+      "holdings": 0.0,
+      "posttrade_holdings": 0.0,
+      "real_wealth": 0.0,
+      "nominal_wealth": 0.0,
+      "fees": 0.0,
+      "moved": 0.0,
+      "real_peak": 0.0,
+      "running_mdd": 0.0,
+      "first_crossing": 0.0
+    },
+    "evaluation_reference_coupling": {
+      "path_target_pairs": 24,
+      "triggered_pairs": 2,
+      "never_triggered_pairs": 22,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    },
+    "evaluation_annual_saved_errors": {
+      "log_growth": 9.71445146547012e-17,
+      "cagr": 9.475926987523309e-17,
+      "mdd": 9.71445146547012e-17,
+      "volatility": 9.71445146547012e-17,
+      "terminal_real": 2.842170943040401e-14
+    }
+  },
+  "outer_fold_5__C": {
+    "training_reference_coupling": {
+      "path_target_pairs": 96,
+      "triggered_pairs": 6,
+      "never_triggered_pairs": 90,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    },
+    "training_eta0_old_growth_only_max_errors": {
+      "holdings": 0.0,
+      "posttrade_holdings": 0.0,
+      "real_wealth": 0.0,
+      "nominal_wealth": 0.0,
+      "fees": 0.0,
+      "moved": 0.0,
+      "real_peak": 0.0,
+      "running_mdd": 0.0,
+      "first_crossing": 0.0
+    },
+    "evaluation_reference_coupling": {
+      "path_target_pairs": 24,
+      "triggered_pairs": 1,
+      "never_triggered_pairs": 23,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    },
+    "evaluation_annual_saved_errors": {
+      "log_growth": 9.020562075079397e-17,
+      "cagr": 9.194034422677078e-17,
+      "mdd": 8.326672684688674e-17,
+      "volatility": 9.71445146547012e-17,
+      "terminal_real": 2.842170943040401e-14
+    }
+  },
+  "outer_fold_5__E": {
+    "training_reference_coupling": {
+      "path_target_pairs": 96,
+      "triggered_pairs": 6,
+      "never_triggered_pairs": 90,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    },
+    "training_eta0_old_growth_only_max_errors": {
+      "holdings": 0.0,
+      "posttrade_holdings": 0.0,
+      "real_wealth": 0.0,
+      "nominal_wealth": 0.0,
+      "fees": 0.0,
+      "moved": 0.0,
+      "real_peak": 0.0,
+      "running_mdd": 0.0,
+      "first_crossing": 0.0
+    },
+    "evaluation_reference_coupling": {
+      "path_target_pairs": 24,
+      "triggered_pairs": 5,
+      "never_triggered_pairs": 19,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    },
+    "evaluation_annual_saved_errors": {
+      "log_growth": 9.020562075079397e-17,
+      "cagr": 9.71445146547012e-17,
+      "mdd": 9.71445146547012e-17,
+      "volatility": 8.326672684688674e-17,
+      "terminal_real": 1.4210854715202004e-14
+    }
+  }
+}
