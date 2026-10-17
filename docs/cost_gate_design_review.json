@@ -1,0 +1,148 @@
+{
+  "status": "Design review only; no gate, dynamic target update, menu or execution policy selected",
+  "date_beijing": "2026-10-17",
+  "scope": "Cost-aware annual execution after retiring the unidentified lambda penalty. This document derives candidate one-step comparisons, their assumptions and validation requirements. It does not change V1 or any research strategy and does not rank market strategies.",
+  "evidence_scope": "Algebra, existing accounting source code and three explicitly constructed numerical examples. No development or final market returns were loaded for this review.",
+  "validation_history": "Old V1 final scenarios 121–180 were previously inspected. A later development-only comparison cannot restore their status as a fresh blind final test.",
+  "decision_timing": {
+    "state": "Immediately before the annual trade for year t, x=(x_equity,x_bond,x_bill) contains current nominal holdings after all previous realized returns and trades. V=sum(x)>0, u=x/V, and w is a previously approved post-fee target with nonnegative entries summing to one.",
+    "information": "The current scenario contributes realized information only through t-1. A forecast integration sample comes only from the current training fold. The current scenario's unobserved future rows must never enter the gate.",
+    "alternatives": "hold means keep the actual x without a transfer; trade means execute_target(x,w,c) exactly once. The gate compares these alternatives from the same current wealth, not two separately normalized starting endowments.",
+    "scale": "The proportional fee model is homogeneous: multiplying x by a positive constant leaves rho=C/V and this growth comparison unchanged. Historical real peak and remaining horizon still matter for full-horizon risk.",
+    "initial_and_final_years": "Decide in a later protocol whether initial allocation is mandatory or gated; charge its fee in either case when it occurs. If initial allocation is mandatory, do not describe a gate as applying to every action. The last-year comparison has no later continuation, but still has the inherited full-path risk state. There is no terminal liquidation charge under the contest convention."
+  },
+  "one_step_derivation": {
+    "fee_equation": "C=c*sum_i max((V-C)*w_i-x_i,0); post=(V-C)*w; moved=sum_i max(post_i-x_i,0); rho=C/V. Use the fee returned by execute_target, not c times a different turnover proxy.",
+    "gross_definitions": "For a possible next-year joint asset gross vector g_i=1+r_i>0 and common inflation gross b=1+pi>0, real asset gross is g_i/b. All logs require strictly positive gross portfolio wealth.",
+    "hold_next_real": "R_hold_next=R_current*(u dot g)/b.",
+    "trade_next_real": "R_trade_next=R_current*(1-rho)*(w dot g)/b.",
+    "paired_net_log_gain": "Delta(g;x,w)=log((w dot g)/(u dot g))+log(1-rho).",
+    "equivalent_direct_formula": "Delta(g;x,w)=log((post dot g)/(x dot g)). The direct formula already includes the fee; never add log(1-rho) again.",
+    "inflation_cancellation": "The same next-year inflation gross cancels exactly in this paired log ratio. Using nominal joint gross therefore produces the same one-step growth difference. Inflation remains essential to real wealth, running peaks, MDD, risk feasibility and any multi-period policy evaluation.",
+    "objective_relation": "G_H=E[log(R_H/100)]/H decomposes into expected annual log increments. Replacing only the next increment and assuming an action-independent continuation would change G_H by E[Delta]/H, so division by H does not change the sign. In the implemented fee-aware strategy the continuation is generally action-dependent; this is a local surrogate, not a derivation of an optimal dynamic policy.",
+    "candidate_form_only": "A point-estimate growth gate could trade when mean Delta exceeds a stated margin. An uncertainty-adjusted version could replace mean Delta by a lower-bound heuristic. A zero margin corresponds to estimated economic break-even; any positive margin or confidence convention is an extra policy choice. This review selects none of these variants.",
+    "no_lambda_required": "The transfer cost appears in wealth and hence log utility in its own units. No arbitrary growth-versus-cost lambda is needed. This does not identify client preferences or make a one-step growth test a risk-suitability rule."
+  },
+  "empirical_forecast_integration": {
+    "estimator": "With n training scenarios, T annual joint observations per scenario, define A_s(x,w)=T^(-1)*sum_j log((w dot g_sj)/(u dot g_sj)); Delta_s=A_s+log(1-rho); estimated mean Delta=n^(-1)*sum_s Delta_s.",
+    "weights": "Use equal weight for each original scenario and equal weight for its annual observations. With equal T this equals the pooled annual mean; the inferential unit remains the original scenario. If lengths differ, choose the estimand explicitly rather than silently giving longer paths more weight.",
+    "joint_structure": "Each sampled annual observation retains its three contemporaneous asset returns together. Do not independently permute or draw assets. Annual marginal integration does not retain multi-year order, serial dependence or state-transition dynamics for a path-risk forecast.",
+    "no_monte_carlo_needed": "The finite empirical one-step expectation can be evaluated exactly by summing the training observations. Generating 256 random forecast paths would add avoidable Monte Carlo variation to this particular expectation and would not create additional independent market evidence.",
+    "meaning_of_exact": "Exact means exact under this specified empirical annual forecast distribution, up to numerical arithmetic. It does not mean the future conditional expectation is known exactly.",
+    "forecast_assumption": "Using all training years as an unconditional next-year distribution assumes their mixture represents the relevant next-year opportunity at the current state and horizon. It uses no explicit predictive signal, but still makes a forecasting/stability assumption. Weak measured serial correlation is not proof of conditional stationarity or independence.",
+    "current_weights_are_not_training_holdings": "Apply the same current actual u and proposed w to every training gross vector. Do not substitute the historical training strategy's holdings, charge hypothetical fees separately for each historical year, or replay an unrelated training wealth path when estimating this local comparison.",
+    "online_adaptation": "Adding the current investor's observed past to the forecasting sample, changing weights over time or conditioning on inflation would be separate dynamic design choices. They require a causal specification and separate inner validation; none is implicitly enabled by this derivation."
+  },
+  "uncertainty_and_limits": {
+    "cluster_means": "Use the n scenario means Delta_s to summarize estimation uncertainty. Within-scenario annual observations may be dependent. Do not estimate a standard error as though n*T annual rows were independent.",
+    "pointwise_t_heuristic": "For a fixed externally specified x,w and independent, representative original scenarios, an approximate one-sided lower mean bound is mean(A)-t_(n-1,1-delta)*sd(A_s)/sqrt(n)+log(1-rho). Exact Student-t coverage additionally requires normally distributed independent scene means; with bounded sample size the approximation may be poor.",
+    "cluster_bootstrap_heuristic": "Resample whole original scenarios and recompute the mean A before adding the single deterministic log(1-rho) offset, or bootstrap Delta_s directly without another fee term. This describes sampling variation under the empirical scenario population; it is not an automatic finite-sample or distribution-shift guarantee.",
+    "selection_and_repetition": "A target learned from the same training sample, data-dependent current states, tuned margins and repeated annual comparisons are not covered by a naive fixed-comparison pointwise bound. Holding learned x,w fixed during a bootstrap ignores their estimation uncertainty. Refit them within a resample if studying the learning procedure, while retaining the distinction from an action guarantee.",
+    "proper_label": "At most call a pointwise t or bootstrap lower threshold a conservative action heuristic. Do not state that every adaptive action has 95% probability of improving growth, that the complete strategy is 95% safe, or that it meets the MDD chance constraint.",
+    "delta_vs_alpha": "delta controls a proposed statistical noncoverage convention for an expected-gain comparison. alpha controls a modeled full-horizon MDD exceedance budget. They are different quantities, and neither is identified by the provided questionnaire."
+  },
+  "continuation_and_time_consistency": {
+    "one_step_strengths": "Transparent local benefit-versus-exact-fee accounting; no Monte Carlo integration error for the empirical mean; few forecasting assumptions relative to a full path generator; an auditable reason for each economic trade decision.",
+    "one_step_limitations": "A present trade changes next-year wealth, weights, later transfer costs and future eligibility for trades. Ignoring their continuation value can reject a worthwhile long investment or defer a risk-reducing trade. Repeated annual use is a complete dynamic execution policy, even if w stays fixed.",
+    "restricted_validity": "It is an exact comparison of next-period expected log wealth under the declared forecast. It coincides with the remaining growth objective only for the final period or when later continuation value is genuinely independent of this action. Even then separate full-path risk requirements still apply. Standard frictionless myopic log-growth intuition does not prove optimality with transfer fees, a restricted action set and MDD constraints.",
+    "long_buy_hold_lookahead": "A k-year trade-once versus hold-existing-assets comparison needs a forecast distribution for ordered joint multi-year returns, including its serial structure. With Q_i=product_tau(g_tau,i), the paired terminal log gain is log((w dot Q)/(u dot Q))+log(1-rho). Only the trade branch incurs the current execution fee, once; unchanged holdings incur none. Common cumulative inflation cancels in this paired terminal log ratio, but not in path MDD. This comparison captures fee amortization over a holding interval while committing both branches to no later trades over k years.",
+    "continuation_mismatch": "If the deployed rule will gate again next year, a k-year buy-and-hold forecast is not the continuation actually followed. Rolling reoptimization can overturn last year's assumed holding commitment. Treat it as an explicit approximation unless both alternative actions are rolled out under the same subsequently implemented causal continuation rule.",
+    "comparison_without_selection": "A long lookahead may better represent fee amortization and may add forecast/continuation error. A one-step gate is easier to audit and may be economically myopic. This review does not select either or establish that one dominates the other."
+  },
+  "full_horizon_risk": {
+    "required_event": "The declared event is D_H=max_{0<=t<=H}(1-R_t/max_{0<=j<=t}R_j)>L, including all actual executed fees and the original initial point. Its risk budget is P(D_H>L)<=alpha at the client's H.",
+    "no_annual_reset": "Do not grant a new alpha allowance at every annual decision or reset the running peak and past MDD. A past exceedance remains an exceedance even if a subsequent action reduces future losses.",
+    "simple_illustration": "If separate new annual breach events were independent with probability .10, their H-year union would be 1-.9^H, not .10. Actual running-peak MDD events are path-dependent and need not have this form; the example only exposes the error in resetting a probability budget.",
+    "gate_not_safety_constraint": "Positive expected net log gain does not imply lower MDD, lower exceedance probability or improved severity. Rejecting a growth-negative trade may also reject a risk-reducing action. Any pre-authorized risk intervention, gate override or pending fallback must be specified as part of the complete policy rather than inferred from this economic comparison.",
+    "risk_budget_propagation": "If a future design allocates conditional risk budgets over time, it must carry the historical breach indicator/running peak and provide an explicit recursion or bound for the original full-H event. This review proposes no such recursion and makes no conditional safety claim.",
+    "actual_execution_readaptation": "Risk suitability of annual restoration to w does not automatically transfer to a gate that sometimes leaves drifted weights in place. Re-evaluate onboarding, product labels and full-H risk diagnostics on the actual implemented gate, initial trade, triggers, overrides and fallback rules before any recommendation."
+  },
+  "constructed_examples": {
+    "common_inputs": {
+      "asset_order": ["equity", "government_bond", "bill_proxy"],
+      "initial_nominal_holdings": [0.0, 0.0, 100.0],
+      "target_after_fee": [1.0, 0.0, 0.0],
+      "cost_rate": 0.0025,
+      "inflation": 0.0,
+      "fee_from_execute_target": 0.24937655860349128,
+      "moved_from_execute_target": 99.75062344139651,
+      "post_trade_wealth": 99.75062344139651,
+      "investable_fraction": 0.9975062344139651,
+      "purpose": "These hand-constructed cases illustrate logic only. They are not market evidence, a proposed portfolio or a proposed gate calibration."
+    },
+    "double_count_reverses_decision": {
+      "next_gross": [1.004, 1.0, 1.0],
+      "hold_next_wealth": 100.0,
+      "trade_next_wealth": 100.1496259351621,
+      "correct_log_delta": 0.0014951410709503161,
+      "wrong_log_delta_if_fee_added_to_direct_ratio_again": -0.0010017391276368826,
+      "conclusion": "One exact execution fee gives a positive local gain; counting the same fee twice reverses its sign. The correct full-switch fee fraction is c/(1+c), not exactly c."
+    },
+    "positive_growth_can_increase_breach_risk": {
+      "equity_gross_outcomes": [1.1, 0.8],
+      "outcome_probabilities": [0.8, 0.2],
+      "bond_and_bill_gross": 1.0,
+      "expected_net_log_delta": 0.029122553382030875,
+      "trade_next_wealth": [109.72568578553617, 79.80049875311721],
+      "trade_MDD_outcomes": [0.0, 0.2019950124688279],
+      "loss_threshold_L": 0.10,
+      "hold_breach_probability": 0.0,
+      "trade_breach_probability": 0.2,
+      "conclusion": "The local growth comparison is positive while breach risk rises above a .10 service reference. Reversing the action would lower breach risk but reduce expected log growth. Growth gating therefore cannot replace the separate risk framework."
+    },
+    "myopic_gate_can_reject_long_horizon_gain_forever": {
+      "equity_gross_every_year": 1.0015,
+      "bond_and_bill_gross_every_year": 1.0,
+      "one_year_net_log_delta": -0.0009980040748512058,
+      "two_year_trade_once_then_hold_net_log_delta": 0.0005008720488847429,
+      "two_year_trade_once_wealth": 100.05009975062346,
+      "two_year_hold_wealth": 100.0,
+      "conclusion": "With a stationary correct forecast and initial all-bill holdings, a repeated one-step positive-growth gate never makes the first purchase: its current state stays the same. Buying once and holding for two years earns a positive net growth difference. No new fee is charged in the second holding year. This proves myopia is possible; it does not select a longer forecast policy."
+    }
+  },
+  "minimum_later_validation_protocol": [
+    "Finish the static product and risk-policy review before selecting or tuning gate variants. Prespecify a small comparison set, fee convention, information set, tie rule, numerical tolerance, initial action and candidate margins/confidence conventions.",
+    "Split whole original development scenarios. Within every inner training fold relearn every data-derived component used by the candidate procedure, including static targets if applicable, forecast mixture and gate nuisance parameters. Do not fit a target on all 1–120 paths and then call its partial-fold evaluation unseen validation.",
+    "Use inner validation for any choice of gate, lookahead length, uncertainty adjustment, margin or review trigger. Outer scenario validation estimates the complete selection-and-execution procedure. Overlapping outer training folds or repeated splits do not create new independent paths or exact binomial certification.",
+    "Simulate actual causal decisions from original initial holdings, updating post-fee positions and realized returns every year. Price hold and trade from the same actual state. Preserve the original initial wealth and all past MDD; do not assess a sequence of hypothetical restored targets instead of executed holdings.",
+    "At each client's own H,L and declared alpha policy cases, assess G_H, exceedance frequency, expected excess, CVaR diagnostics and required median/P10 growth and median/P90 MDD. Also record actual costs, moved wealth, trade fraction, drift, risk interventions, referrals and pending duration. Cost savings alone are not evidence of suitability.",
+    "Compare estimated one-step gains with realized paired next-year gains on held-out paths when those counterfactuals can be computed from the same realized joint returns. This is diagnostic of the forecast/gate procedure; yearly outcomes within a path are dependent and do not provide n*T independent trials or per-action certification.",
+    "Stress declared fee rates and continuation assumptions with frozen design choices. A known fee input may change the gate's break-even calculation mechanically; retuning margins or menus after inspecting stress outcomes would constitute a new selection step.",
+    "Keep all pending or referral paths in aggregate outcomes and denominators, including extended nonresponse. State any human-response assumptions. No new gate or dynamic target rule is selected by this document, and old final outcomes must not drive selection."
+  ],
+  "pending_and_review_specification_required": {
+    "separate_states": "Distinguish onboarding awaiting clarification from an active investor whose annual review raises an issue. Define when each state starts, which known information triggers it and whether the investor was already invested.",
+    "permitted_actions": "State an executable fallback: for example hold current actual assets, continue a previously approved execution policy, or a pre-authorized safety action. These are alternatives for later review, not equivalent policies and not selected here. Holding existing positions is not automatically risk-free.",
+    "delay": "Specify review delay and resume conditions, including the case of no response. A model with no observed human responses must not silently assume immediate perfect resolution or choose an optimal future response after seeing returns.",
+    "accounting": "Pending status does not stop returns, remove previous MDD, waive transfer fees, reset H or erase a breach. Include actual wealth and fallback actions for the full original horizon.",
+    "reporting": "Report referral fraction, pending years, response assumptions and fallback sensitivity separately from trading frequency and suitability. Do not omit hard-to-classify investors or triggered scenarios from risk and growth summaries."
+  },
+  "verification": {
+    "market_data_loaded": false,
+    "strategy_files_modified": false,
+    "examples_computed_with": "PYTHONPATH=src .venv/bin/python; numpy and safeinvest.core.execute_target; constructed arrays only",
+    "identities_checked": [
+      "The direct post-trade wealth ratio and normalized gross ratio plus one log fee agree within 1e-14.",
+      "The double-count example has correct positive and duplicated-fee negative log gain.",
+      "The two-outcome example has positive expected net log gain and an increased .10-threshold MDD exceedance probability.",
+      "The deterministic horizon example has negative one-period and positive two-period trade-once gain."
+    ],
+    "independent_algebra_review": "Core engine agent independently confirmed the two fee formulas and the myopic-horizon sign calculations."
+  },
+  "sources_and_support_boundaries": [
+    {
+      "source": "Local contest accounting implementation",
+      "path": "src/safeinvest/core.py",
+      "supports": "Exact execute_target self-financing fee equation and post-fee target weights used by the numerical examples.",
+      "limitation": "Correct accounting is not a forecast, utility justification, chance-constraint proof or optimal-execution theorem."
+    },
+    {
+      "source": "Boyd et al. (2017), Multi-Period Trading via Convex Optimization, Foundations and Trends in Optimization 3(1), 1–76",
+      "doi": "10.1561/2400000023",
+      "url": "https://stanford.edu/~boyd/papers/pdf/cvx_portfolio.pdf",
+      "access_note": "Primary text read in the earlier literature review; this document does not add a new empirical claim from it.",
+      "supports": "Conceptual separation of single-period decisions, multi-period forecasts, transaction costs and receding-horizon execution.",
+      "limitation": "It does not supply a forecast for these synthetic paths, justify our proposed gate or thresholds, or establish convexity/optimality/certification for relative real MDD with this adaptive policy. The paired-log identities and constructed counterexamples above are direct derivations."
+    }
+  ]
+}

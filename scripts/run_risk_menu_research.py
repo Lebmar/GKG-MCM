@@ -46,6 +46,44 @@ def source_manifest():
     return {str(p.relative_to(ROOT)): sha(p) for p in sources}
 
 
+def verified_sources(start):
+    end = source_manifest()
+    if end != start:
+        raise RuntimeError("Research sources changed during execution; do not attribute results to a new source snapshot")
+    return start
+
+
+def compatible_full_fit():
+    manifest = json.loads((OUT / "fit_manifest.json").read_text())
+    if manifest["sources"] != source_manifest():
+        raise RuntimeError("Full-development fit sources changed; refit the declared method before dependent diagnostics")
+    path = OUT / "full_development_menus.json"
+    if manifest.get("menus_sha256") != sha(path):
+        raise RuntimeError("Full-development menu file hash mismatch")
+    return json.loads(path.read_text())
+
+
+def validate_folds(protocol):
+    """Reject invalid IDs before numpy indexing can turn zero into row -1."""
+    folds = protocol["validation"]["folds"]
+    if len(folds) != 5 or len({f["fold"] for f in folds}) != 5:
+        raise ValueError("Require five distinct complete-scenario folds")
+    all_tests = []
+    expected = set(range(1, 121))
+    for fold in folds:
+        train, test = fold["train_ids"], fold["test_ids"]
+        if any(isinstance(i, (bool, np.bool_)) or not isinstance(i, (int, np.integer))
+               or not 1 <= i <= 120 for i in [*train, *test]):
+            raise ValueError("Fold IDs must be integers in 1..120")
+        if len(train) != 96 or len(test) != 24 or len(set(train)) != 96 or len(set(test)) != 24:
+            raise ValueError("Each fold needs 96 unique train and 24 unique test scenarios")
+        if set(train) & set(test) or set(train) | set(test) != expected:
+            raise ValueError("Fold train/test must partition the 120 development scenarios")
+        all_tests.extend(test)
+    if len(all_tests) != 120 or set(all_tests) != expected:
+        raise ValueError("Each original scenario must appear in exactly one test fold")
+
+
 def cache_key(step, cost):
     return f"step_{round(step * 10000):04d}__cost_{round(cost * 1000000):06d}"
 
@@ -58,17 +96,28 @@ def get_cache(protocol, step=0.05, cost=0.0025):
     required_sources = {name: sha(ROOT / name) for name in [
         "research/safeinvest_research/static.py", "research/safeinvest_research/metrics.py",
         "src/safeinvest/core.py", "src/safeinvest/data.py"]}
+    # Revalidate the permitted input values even when a numerical cache exists.
+    # The digest never incorporates unrequested final-market returns.
+    returns, inflation, ids = load_paths(
+        ROOT / "data/SafeInvest_Synthetic_Data.csv", range(1, 121), allow_final=False)
+    development_hash = hashlib.sha256()
+    for value in (ids, returns, inflation):
+        development_hash.update(np.ascontiguousarray(value).tobytes())
     if file.exists() and metadata.exists():
         manifest = json.loads(metadata.read_text())
         if manifest["source_hashes"] != required_sources:
             raise RuntimeError("Cached numerical sources changed; preserve old cache and use a new research directory")
         if manifest["npz_sha256"] != sha(file):
             raise RuntimeError("Research cache hash mismatch")
+        if (manifest["development_arrays_sha256"] != development_hash.hexdigest()
+                or manifest["scenario_ids"] != ids.tolist()):
+            raise RuntimeError("Cached development market inputs changed")
+        if (not np.isclose(manifest["step"], step, rtol=0, atol=1e-14)
+                or not np.isclose(manifest["cost_rate"], cost, rtol=0, atol=1e-14)):
+            raise RuntimeError("Cached weight-grid or transaction-cost parameters differ")
         with np.load(file) as archive:
             arrays = {k: archive[k] for k in archive.files}
     else:
-        returns, inflation, ids = load_paths(
-            ROOT / "data/SafeInvest_Synthetic_Data.csv", range(1, 121), allow_final=False)
         weights = simplex_grid(step)
         simulation = simulate_annual_targets(returns, inflation, weights, cost_rate=cost)
         arrays = {"scenario_ids": ids, "weights": weights}
@@ -80,9 +129,6 @@ def get_cache(protocol, step=0.05, cost=0.0025):
             arrays[f"H{horizon}__trade_fraction"] = simulation["trades"][..., :horizon].mean(axis=-1)
         file.parent.mkdir(parents=True, exist_ok=True)
         np.savez_compressed(file, **arrays)
-        development_hash = hashlib.sha256()
-        for value in (ids, returns, inflation):
-            development_hash.update(np.ascontiguousarray(value).tobytes())
         write_json(metadata, {
             "created_utc": datetime.now(timezone.utc).isoformat(),
             "scenario_ids": ids.tolist(), "step": step, "cost_rate": cost,
@@ -132,6 +178,7 @@ def summarize_grid(protocol, arrays, metrics):
 
 
 def run_fit(protocol, arrays, metrics):
+    sources_at_start = source_manifest()
     summarize_grid(protocol, arrays, metrics)
     results = {}
     start = time.perf_counter()
@@ -149,13 +196,17 @@ def run_fit(protocol, arrays, metrics):
     write_json(OUT / "fit_manifest.json", {
         "completed_utc": datetime.now(timezone.utc).isoformat(),
         "elapsed_seconds": time.perf_counter() - start,
-        "sources": source_manifest(), "scenario_ids": arrays["scenario_ids"].tolist(),
+        "sources": verified_sources(sources_at_start),
+        "menus_sha256": sha(OUT / "full_development_menus.json"),
+        "scenario_ids": arrays["scenario_ids"].tolist(),
         "scope": "Training/descriptive fit on all 120 development paths; not out-of-sample validation.",
     })
     return results
 
 
 def run_validation(protocol, arrays, metrics):
+    sources_at_start = source_manifest()
+    validate_folds(protocol)
     fold_results, records = {}, []
     start = time.perf_counter()
     for name, alpha, liquidity, floors in policy_cases(protocol):
@@ -191,7 +242,8 @@ def run_validation(protocol, arrays, metrics):
                                     "log_growth": float(fields["log_growth"][index, candidate]),
                                     "mdd": loss,
                                     "breach": bool(loss > profile["loss_tolerance"] + NUMERIC_TOL),
-                                    "excess": max(loss - profile["loss_tolerance"], 0.0)})
+                                    "excess": (loss - profile["loss_tolerance"]
+                                               if loss > profile["loss_tolerance"] + NUMERIC_TOL else 0.0)})
                     records.append(row)
         print(json.dumps({"stage": "validation", "case": name,
                           "fold_assignments": [f["assignments"] for f in fold_results[name]]},
@@ -227,7 +279,7 @@ def run_validation(protocol, arrays, metrics):
     write_json(OUT / "validation_manifest.json", {
         "completed_utc": datetime.now(timezone.utc).isoformat(),
         "elapsed_seconds": time.perf_counter() - start,
-        "sources": source_manifest(), "split_unit": "complete scenario",
+        "sources": verified_sources(sources_at_start), "split_unit": "complete scenario",
         "interpretation": "Overlapping training folds and different fitted policies; OOF counts are internal procedure diagnostics, not an iid fixed-rule certificate.",
         "referral_handling": "Referrals retained in coverage counts; investment outcomes are null for unassigned profiles. No adviser performance or bill-only fallback is invented.",
     })
@@ -235,6 +287,7 @@ def run_validation(protocol, arrays, metrics):
 
 
 def run_bootstrap(protocol, arrays, metrics, full_fits, name=None, replicates=None):
+    sources_at_start = source_manifest()
     name = name or case_id(.10, "risk_only")
     base = full_fits[name]
     replicates = replicates or protocol["stability"]["bootstrap_replicates"]
@@ -277,7 +330,7 @@ def run_bootstrap(protocol, arrays, metrics, full_fits, name=None, replicates=No
     pd.DataFrame(assignments).to_csv(folder / "assignments.csv", index=False)
     write_json(folder / "menus.json", menus)
     summary = {"replicates": replicates, "seed": protocol["stability"]["bootstrap_seed"],
-               "case": name, "sources": source_manifest(),
+               "case": name, "sources": verified_sources(sources_at_start),
                "elapsed_seconds": time.perf_counter() - start,
                "interpretation": "Complete-reselection stability under whole-scenario empirical resampling, not independent market evidence or a risk confidence certificate.",
                "client_assignment_counts": {p["name"]: dict(Counter(a[p["name"]] for a in assignments))
@@ -287,6 +340,7 @@ def run_bootstrap(protocol, arrays, metrics, full_fits, name=None, replicates=No
                "identified_cardinality_counts": {str(k): int(v) for k, v in Counter(frame.identified_cardinality).items()},
                "coverage_counts": {str(k): int(v) for k, v in Counter(frame.covered_clients).items()},
                "weight_alignment": "Minimum total L1 target distance to full-development reference, over all product permutations; original risk labels retained in menus.json.",
+               "alignment_conditioning": "Weight quantiles condition on replicates with the same menu cardinality as the reference; aligned_replicates is the denominator.",
                "aligned_replicates": len(aligned),
                "aligned_weight_quantiles_025_50_975": np.quantile(aligned, [.025, .50, .975], axis=0).tolist() if aligned else None,
                "max_growth_regret_quantiles_025_50_975": np.quantile(frame.max_growth_regret, [.025, .50, .975]).tolist()}
@@ -332,7 +386,7 @@ def main():
     if args.stage in {"fit", "all"}:
         full = run_fit(protocol, arrays, metrics)
     else:
-        full = json.loads((OUT / "full_development_menus.json").read_text())
+        full = compatible_full_fit()
     if args.stage in {"validate", "all"}:
         run_validation(protocol, arrays, metrics)
     if args.stage in {"neighbors", "all"}:
