@@ -42,6 +42,10 @@ technical training screen gamma inside four inner whole-path folds. It does
 not select gamma using outer evaluation results or turn empirical calibration
 into a probability guarantee. Raw and effective assignments, admission evidence
 and every denominator are saved separately.
+Agreement on gamma does not identify exact weights: the strict Balanced target
+holds 15–25% bonds across the five outer training fits, versus 5% in the full
+120-path descriptive fit. These overlapping-fold ranges are not confidence
+intervals and do not support freezing one precise allocation yet.
 
 Complementary diagnostics are recorded separately. The finite-family
 Clopper–Pearson study requires an additional iid scenario assumption and is
@@ -62,6 +66,8 @@ fixed targets is not proof that every dynamic annual policy is infeasible.
 The ideal asset-switching path is a mathematical relaxation, not advice.
 The Q2 study also records the exact-thirds annual baseline, pooled path
 quantiles, actual trade fractions and one explicitly selected severe episode.
+`docs/review_pending_design_contract.json` specifies a proposed next study of
+referral and nonresponse; it has not been executed or adopted as a service rule.
 
 To reproduce the completed development studies with the main requirements:
 

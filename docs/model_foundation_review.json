@@ -78,12 +78,15 @@
       "docs/q2_severe_episode_protocol.json",
       "docs/positive_asset_specification_protocol.json",
       "docs/policy_independent_drawdown_bound_protocol.json",
-      "results/model_review/q2_oof_benchmark_v1/requirements_checklist.json"
+      "results/model_review/q2_oof_benchmark_v1/requirements_checklist.json",
+      "docs/review_pending_design_contract.json"
     ],
     "nested_calibration": "New predeclared reused-development diagnostic keeps service alpha=.10 and chooses technical gamma from0/.025/.05/.075/.10 in four inner folds. Full and five outer contexts select.075; effective OOF BCE10/9/9 of120, versus primary12/13/11; not a probability certificate or proof of optimality.",
     "risk_control_reference": "H<=3 finite joint-support full-history policy tree with absorbing breach, one root chance budget and optional mathematical root-mixture bound.20 synthetic tests and83 independent checks pass; not a30-year solver. Direct conditional-budget recursion and off-support deployment gap are explicitly documented.",
     "measurement_stress": "Adding fee-instant observations changes no empirical grid pass decision or primary OOF breach count. Original/reverse/permuted joint-year stresses and one predeclared severe OOF episode are saved; neither creates new independent data.",
     "product_specification": "The statement says each product uses all three assets. The232 universe permits zero weights and remains a relaxed research comparator. A separate positive172 subset on the same5pp grid completed unchanged nested learning: all six contexts select gamma=.075, strict OOF BCE9/9/9 of120 versus strict fixed-gamma.10 BCE12/14/11. All targets have three positive weights.5% is the grid minimum, not an economically identified floor; no final service freeze.",
-    "unavoidable_loss_bound": "An interval-product lower bound for any annual long-only self-financing rule was proved and independently checked. Zero-fee perfect foresight yields forced BCE0/0/0 and A/D3/6 paths of120; these do not prove global annual-policy infeasibility or existence of a safe causal rule. Static A/D failure remains family-specific."
+    "unavoidable_loss_bound": "An interval-product lower bound for any annual long-only self-financing rule was proved and independently checked. Zero-fee perfect foresight yields forced BCE0/0/0 and A/D3/6 paths of120; these do not prove global annual-policy infeasibility or existence of a safe causal rule. Static A/D failure remains family-specific.",
+    "strict_target_stability": "All six contexts choose gamma=.075 but exact weights are not identified: strict Balanced holds15–25% bonds in five outer training fits, versus5% in full120. Full Balanced target matches none of the five fold targets. These are dependent-fold descriptive ranges, not confidence intervals.",
+    "review_pending_next_contract": "docs/review_pending_design_contract.json is a proposed next-round contract only, not executed or adopted. It separates input/model/financial triggers and proves financial-crossing-only pending hold cannot change the already-latched whole-H breach event; study severity/wealth/fees/recovery instead, without invented human response."
   }
 }
