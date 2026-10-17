@@ -1,0 +1,38 @@
+{
+  "full_development": {
+    "original_nine_training_candidates_reproduced": true,
+    "selected_parent_financials_reproduced": true,
+    "expanded_retains_training_optimum": true,
+    "no_unselected_outer_controller_evaluated": true
+  },
+  "outer_fold_1": {
+    "original_nine_training_candidates_reproduced": true,
+    "selected_parent_financials_reproduced": true,
+    "expanded_retains_training_optimum": true,
+    "no_unselected_outer_controller_evaluated": true
+  },
+  "outer_fold_2": {
+    "original_nine_training_candidates_reproduced": true,
+    "selected_parent_financials_reproduced": true,
+    "expanded_retains_training_optimum": true,
+    "no_unselected_outer_controller_evaluated": true
+  },
+  "outer_fold_3": {
+    "original_nine_training_candidates_reproduced": true,
+    "selected_parent_financials_reproduced": true,
+    "expanded_retains_training_optimum": true,
+    "no_unselected_outer_controller_evaluated": true
+  },
+  "outer_fold_4": {
+    "original_nine_training_candidates_reproduced": true,
+    "selected_parent_financials_reproduced": true,
+    "expanded_retains_training_optimum": true,
+    "no_unselected_outer_controller_evaluated": true
+  },
+  "outer_fold_5": {
+    "original_nine_training_candidates_reproduced": true,
+    "selected_parent_financials_reproduced": true,
+    "expanded_retains_training_optimum": true,
+    "no_unselected_outer_controller_evaluated": true
+  }
+}
