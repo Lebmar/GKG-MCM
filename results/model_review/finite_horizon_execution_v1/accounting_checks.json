@@ -1,0 +1,912 @@
+{
+  "cache_checks": [
+    {
+      "context": "full_development",
+      "policy": "annual_restore",
+      "horizon": 5,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "full_development",
+      "policy": "annual_restore",
+      "horizon": 6,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "full_development",
+      "policy": "annual_restore",
+      "horizon": 15,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "full_development",
+      "policy": "annual_restore",
+      "horizon": 25,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "full_development",
+      "policy": "annual_restore",
+      "horizon": 30,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "full_development",
+      "policy": "equal_weight_annual",
+      "horizon": 5,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "full_development",
+      "policy": "equal_weight_annual",
+      "horizon": 6,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "full_development",
+      "policy": "equal_weight_annual",
+      "horizon": 15,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "full_development",
+      "policy": "equal_weight_annual",
+      "horizon": 25,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "full_development",
+      "policy": "equal_weight_annual",
+      "horizon": 30,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_1_test",
+      "policy": "annual_restore",
+      "horizon": 5,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_1_test",
+      "policy": "annual_restore",
+      "horizon": 6,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_1_test",
+      "policy": "annual_restore",
+      "horizon": 15,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_1_test",
+      "policy": "annual_restore",
+      "horizon": 25,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_1_test",
+      "policy": "annual_restore",
+      "horizon": 30,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_1_test",
+      "policy": "equal_weight_annual",
+      "horizon": 5,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_1_test",
+      "policy": "equal_weight_annual",
+      "horizon": 6,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_1_test",
+      "policy": "equal_weight_annual",
+      "horizon": 15,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_1_test",
+      "policy": "equal_weight_annual",
+      "horizon": 25,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_1_test",
+      "policy": "equal_weight_annual",
+      "horizon": 30,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_2_test",
+      "policy": "annual_restore",
+      "horizon": 5,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_2_test",
+      "policy": "annual_restore",
+      "horizon": 6,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_2_test",
+      "policy": "annual_restore",
+      "horizon": 15,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_2_test",
+      "policy": "annual_restore",
+      "horizon": 25,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_2_test",
+      "policy": "annual_restore",
+      "horizon": 30,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_2_test",
+      "policy": "equal_weight_annual",
+      "horizon": 5,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_2_test",
+      "policy": "equal_weight_annual",
+      "horizon": 6,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_2_test",
+      "policy": "equal_weight_annual",
+      "horizon": 15,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_2_test",
+      "policy": "equal_weight_annual",
+      "horizon": 25,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_2_test",
+      "policy": "equal_weight_annual",
+      "horizon": 30,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_3_test",
+      "policy": "annual_restore",
+      "horizon": 5,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_3_test",
+      "policy": "annual_restore",
+      "horizon": 6,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_3_test",
+      "policy": "annual_restore",
+      "horizon": 15,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_3_test",
+      "policy": "annual_restore",
+      "horizon": 25,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_3_test",
+      "policy": "annual_restore",
+      "horizon": 30,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_3_test",
+      "policy": "equal_weight_annual",
+      "horizon": 5,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_3_test",
+      "policy": "equal_weight_annual",
+      "horizon": 6,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_3_test",
+      "policy": "equal_weight_annual",
+      "horizon": 15,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_3_test",
+      "policy": "equal_weight_annual",
+      "horizon": 25,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_3_test",
+      "policy": "equal_weight_annual",
+      "horizon": 30,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_4_test",
+      "policy": "annual_restore",
+      "horizon": 5,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_4_test",
+      "policy": "annual_restore",
+      "horizon": 6,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_4_test",
+      "policy": "annual_restore",
+      "horizon": 15,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_4_test",
+      "policy": "annual_restore",
+      "horizon": 25,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_4_test",
+      "policy": "annual_restore",
+      "horizon": 30,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_4_test",
+      "policy": "equal_weight_annual",
+      "horizon": 5,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_4_test",
+      "policy": "equal_weight_annual",
+      "horizon": 6,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_4_test",
+      "policy": "equal_weight_annual",
+      "horizon": 15,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_4_test",
+      "policy": "equal_weight_annual",
+      "horizon": 25,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_4_test",
+      "policy": "equal_weight_annual",
+      "horizon": 30,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_5_test",
+      "policy": "annual_restore",
+      "horizon": 5,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_5_test",
+      "policy": "annual_restore",
+      "horizon": 6,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_5_test",
+      "policy": "annual_restore",
+      "horizon": 15,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_5_test",
+      "policy": "annual_restore",
+      "horizon": 25,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_5_test",
+      "policy": "annual_restore",
+      "horizon": 30,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_5_test",
+      "policy": "equal_weight_annual",
+      "horizon": 5,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_5_test",
+      "policy": "equal_weight_annual",
+      "horizon": 6,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_5_test",
+      "policy": "equal_weight_annual",
+      "horizon": 15,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_5_test",
+      "policy": "equal_weight_annual",
+      "horizon": 25,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    },
+    {
+      "context": "fold_5_test",
+      "policy": "equal_weight_annual",
+      "horizon": 30,
+      "cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      }
+    }
+  ],
+  "original_oof": {
+    "original_client_path_records": 600,
+    "assigned_records": 360,
+    "review_records": 240,
+    "annual_oof_matches": true
+  },
+  "annual_and_hold_match_fixed_ablation": true,
+  "myopic_mesh_invariance": true
+}

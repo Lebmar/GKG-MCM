@@ -1,0 +1,91 @@
+[
+  {
+    "client": "A",
+    "total_test_paths": 120,
+    "assigned_test_paths": 0,
+    "review_test_paths": 120,
+    "diagnostic": null
+  },
+  {
+    "client": "B",
+    "total_test_paths": 120,
+    "assigned_test_paths": 120,
+    "review_test_paths": 0,
+    "diagnostic": {
+      "n": 120,
+      "annual_breach_count": 12,
+      "feeobs_breach_count": 12,
+      "newly_flagged_paths": 0,
+      "annual_breach_probability": 0.1,
+      "feeobs_breach_probability": 0.1,
+      "mean_mdd_increment": 7.769753716748315e-05,
+      "max_mdd_increment": 0.001248439450686618,
+      "paths_with_positive_increment": 102,
+      "annual_median_mdd": 0.1406242478408231,
+      "feeobs_median_mdd": 0.14072509777885422,
+      "annual_p90_mdd": 0.24777431141279518,
+      "feeobs_p90_mdd": 0.247827343598683,
+      "annual_expected_excess": 0.004829242391812825,
+      "feeobs_expected_excess": 0.004836377318402322,
+      "annual_cvar90": 0.2982924239181282,
+      "feeobs_cvar90": 0.29836377318402324
+    }
+  },
+  {
+    "client": "C",
+    "total_test_paths": 120,
+    "assigned_test_paths": 120,
+    "review_test_paths": 0,
+    "diagnostic": {
+      "n": 120,
+      "annual_breach_count": 13,
+      "feeobs_breach_count": 13,
+      "newly_flagged_paths": 0,
+      "annual_breach_probability": 0.10833333333333334,
+      "feeobs_breach_probability": 0.10833333333333334,
+      "mean_mdd_increment": 8.055163749375148e-05,
+      "max_mdd_increment": 0.00030668655311208437,
+      "paths_with_positive_increment": 113,
+      "annual_median_mdd": 0.24060590132678888,
+      "feeobs_median_mdd": 0.24078788374561289,
+      "annual_p90_mdd": 0.40174379673102495,
+      "feeobs_p90_mdd": 0.401835044995266,
+      "annual_expected_excess": 0.006125696327608954,
+      "feeobs_expected_excess": 0.006133196187061181,
+      "annual_cvar90": 0.46111164688183753,
+      "feeobs_cvar90": 0.4611790414543397
+    }
+  },
+  {
+    "client": "D",
+    "total_test_paths": 120,
+    "assigned_test_paths": 0,
+    "review_test_paths": 120,
+    "diagnostic": null
+  },
+  {
+    "client": "E",
+    "total_test_paths": 120,
+    "assigned_test_paths": 120,
+    "review_test_paths": 0,
+    "diagnostic": {
+      "n": 120,
+      "annual_breach_count": 11,
+      "feeobs_breach_count": 11,
+      "newly_flagged_paths": 0,
+      "annual_breach_probability": 0.09166666666666666,
+      "feeobs_breach_probability": 0.09166666666666666,
+      "mean_mdd_increment": 0.000335399095449325,
+      "max_mdd_increment": 0.0021204939503554955,
+      "paths_with_positive_increment": 90,
+      "annual_median_mdd": 0.15215665581972332,
+      "feeobs_median_mdd": 0.15225358514023446,
+      "annual_p90_mdd": 0.3365915541593306,
+      "feeobs_p90_mdd": 0.3366689788344803,
+      "annual_expected_excess": 0.007745102079763888,
+      "feeobs_expected_excess": 0.007751753988487161,
+      "annual_cvar90": 0.4274059541679813,
+      "feeobs_cvar90": 0.427472473255214
+    }
+  }
+]

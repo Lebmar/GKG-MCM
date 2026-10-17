@@ -1,0 +1,82 @@
+{
+  "cache": [
+    {
+      "horizon": 5,
+      "cache_max_abs_errors": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "fees": 0.0,
+        "moved": 0.0,
+        "trade_fraction": 0.0
+      },
+      "max_feeobs_minus_annual_mdd": 0.0024937655860348684,
+      "fee_point_never_raises_peak": true
+    },
+    {
+      "horizon": 6,
+      "cache_max_abs_errors": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "fees": 0.0,
+        "moved": 0.0,
+        "trade_fraction": 0.0
+      },
+      "max_feeobs_minus_annual_mdd": 0.0024937655860348684,
+      "fee_point_never_raises_peak": true
+    },
+    {
+      "horizon": 15,
+      "cache_max_abs_errors": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "fees": 0.0,
+        "moved": 0.0,
+        "trade_fraction": 0.0
+      },
+      "max_feeobs_minus_annual_mdd": 0.0024937655860348684,
+      "fee_point_never_raises_peak": true
+    },
+    {
+      "horizon": 25,
+      "cache_max_abs_errors": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "fees": 0.0,
+        "moved": 0.0,
+        "trade_fraction": 0.0
+      },
+      "max_feeobs_minus_annual_mdd": 0.00037311174081802734,
+      "fee_point_never_raises_peak": true
+    },
+    {
+      "horizon": 30,
+      "cache_max_abs_errors": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "fees": 0.0,
+        "moved": 0.0,
+        "trade_fraction": 0.0
+      },
+      "max_feeobs_minus_annual_mdd": 0.0003391572952697597,
+      "fee_point_never_raises_peak": true
+    }
+  ],
+  "annual_growth_and_fees_unchanged": true,
+  "fee_only_adds_observation": true,
+  "referral_rows_retained_null": 240
+}

@@ -1,0 +1,4 @@
+# Keep generated evidence available while making model/code review manageable.
+results/** linguist-generated=true
+research/figures/** linguist-generated=true
+notebooks/*.html linguist-generated=true

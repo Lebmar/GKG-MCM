@@ -1,0 +1,129 @@
+{
+  "completed_utc": "2026-10-17T11:06:20.759043+00:00",
+  "scope": "Research figure of saved development-only internal OOF execution diagnostics; no policy or target selection",
+  "source_artifact_sha256_start": {
+    "results/model_review/finite_horizon_execution_v1/manifest.json": "a8c6264155fd6a9773505e43c3116a5cddd92d25caa420ed9f366393a28e4530",
+    "results/model_review/finite_horizon_execution_v1/client_summary.csv": "bfbb1fd405828e33578a8644f9b30f05468e36f11ff8a3b5d737e51414443aa2",
+    "results/model_review/finite_horizon_execution_v1/client_path_metrics.csv": "e42f4c5cee535b2d484dbc0e59f69ae0e5b671dd10d97c5d9267e1b00e35b8db",
+    "results/model_review/finite_horizon_execution_v1/resolution_action_comparison.csv": "82ecc49bb5edde6fee876e7fe521781e11db7c6edba1bc22b180a1264d1d1b28",
+    "results/model_review/finite_horizon_execution_v1/model_metadata.json": "03133c1320fbf96fbd905a70b7820d9ba57f13978e905c3ec19e45da446657f5",
+    "docs/risk_menu_development_protocol.json": "6a57f3dc3f5a5850af2d8a1b2db597997edbd6054e61443d7ebfeb3fd8e37d51",
+    "scripts/plot_development_structure.py": "6a0f401d3e6b18b6ab9d22e11bec74d5456430af30cb8da172a28163d85b8ed6",
+    "results/model_review/finite_horizon_execution_v1/synthetic_tree_audit.json": "d99f8ac6d4a8a3166ce70e2fb1eae269a344d8a42c9efdd76424c8f2d9701811"
+  },
+  "source_artifact_sha256_end": {
+    "results/model_review/finite_horizon_execution_v1/manifest.json": "a8c6264155fd6a9773505e43c3116a5cddd92d25caa420ed9f366393a28e4530",
+    "results/model_review/finite_horizon_execution_v1/client_summary.csv": "bfbb1fd405828e33578a8644f9b30f05468e36f11ff8a3b5d737e51414443aa2",
+    "results/model_review/finite_horizon_execution_v1/client_path_metrics.csv": "e42f4c5cee535b2d484dbc0e59f69ae0e5b671dd10d97c5d9267e1b00e35b8db",
+    "results/model_review/finite_horizon_execution_v1/resolution_action_comparison.csv": "82ecc49bb5edde6fee876e7fe521781e11db7c6edba1bc22b180a1264d1d1b28",
+    "results/model_review/finite_horizon_execution_v1/model_metadata.json": "03133c1320fbf96fbd905a70b7820d9ba57f13978e905c3ec19e45da446657f5",
+    "docs/risk_menu_development_protocol.json": "6a57f3dc3f5a5850af2d8a1b2db597997edbd6054e61443d7ebfeb3fd8e37d51",
+    "scripts/plot_development_structure.py": "6a0f401d3e6b18b6ab9d22e11bec74d5456430af30cb8da172a28163d85b8ed6",
+    "results/model_review/finite_horizon_execution_v1/synthetic_tree_audit.json": "d99f8ac6d4a8a3166ce70e2fb1eae269a344d8a42c9efdd76424c8f2d9701811"
+  },
+  "script": "scripts/plot_finite_horizon_execution.py",
+  "script_sha256": "373d1542b9429730cb373b6798efaff1774cb6e8c46b90dc816db74a02ec4b7b",
+  "execution_sources_checked_current": true,
+  "execution_inputs_checked_current": true,
+  "all_execution_outputs_checked_against_completion_manifest": true,
+  "market_returns_or_final_results_read": false,
+  "executor_or_policy_called": false,
+  "plotted_values_recomputed_from_saved_path_metrics": true,
+  "review_accounting": {
+    "saved_OOF_client_policy_mesh_rows": 3600,
+    "retained_Review_rows": 1440,
+    "all_Review_financial_fields_null": true,
+    "displayed_clients": [
+      "B",
+      "C",
+      "E"
+    ],
+    "omitted_clients": "A and D retain Review; no adviser or fallback returns are plotted"
+  },
+  "chart": {
+    "figure": "01_oof_growth_risk_and_trading",
+    "layout": "3 metric rows by 3 client columns; no double axes; all bar baselines are zero",
+    "displayed_policies": [
+      "annual_restore",
+      "initial_then_hold",
+      "myopic_gate",
+      "finite_horizon_gate"
+    ],
+    "policy_colors": {
+      "annual_restore": "#1B5E8C",
+      "initial_then_hold": "#57616B",
+      "myopic_gate": "#AD7A19",
+      "finite_horizon_gate": "#A65378"
+    },
+    "primary_mesh_step": 0.05,
+    "fine_mesh_check": 0.025,
+    "finite_horizon_mesh_action_differences": 1,
+    "paired_client_path_years": 6120,
+    "source_fields": {
+      "growth": "client_summary.mean_log_growth; checked as mean(client_path_metrics.log_growth)",
+      "risk": "client_summary.breach_count/breach_probability/assigned_paths; checked from executed mdd - client L > 1e-12",
+      "trading": "client_summary.mean_trade_fraction; checked as mean(client_path_metrics.trade_fraction)",
+      "fine_mesh": "resolution_action_comparison indexed by each fold's frozen assigned target from model_metadata"
+    },
+    "units_and_denominators": {
+      "growth": "100*expm1(mean_paths(log(net real wealth_H/100)/H)), per-year percent; 120 equally weighted paths",
+      "risk": "100*count(MDD-L>1e-12)/120, with count/120 labels; each client's own H and L",
+      "trading": "100*sum(actual-positive-transfer decisions)/(120*client H); initial decision included; no review-frequency claim"
+    },
+    "data_files": [
+      "01_oof_execution_comparison_data.csv",
+      "01_mesh_resolution_check_data.csv"
+    ],
+    "axis_limits": {
+      "growth": [
+        0.0,
+        7.0
+      ],
+      "risk": [
+        0,
+        40.0
+      ],
+      "trading": [
+        0,
+        114
+      ]
+    },
+    "figure_size_inches": [
+      13.4,
+      10.7
+    ],
+    "png_dpi": 240,
+    "count_labels_show_all_120_paths": true,
+    "population_CI_or_winner_selected": false,
+    "minimum_font_points": 10.8
+  },
+  "limitations": [
+    "The fivefold training sets overlap; 120 pooled OOF outcomes are not an independent-population binomial certificate.",
+    "Growth, risk and trading frequency are different empirical outcomes; the figure does not select a winner.",
+    "Original annual-policy targets and assignments are frozen; dynamic execution inherits no suitability or drawdown approval.",
+    "Optional initial gate versus mandatory initial annual/hold allocation is part of the declared intervention.",
+    "Finite-state Bellman tables use an empirical stationary annual mixture and interpolated future values, with no continuous-state error bound.",
+    "Referrals retain null outcomes; no equal-weight customer fallback or adviser outcome is invented.",
+    "All wealth is net of exact initial/later execution fees and actual inflation; MDD is observed annually, including initial100."
+  ],
+  "verification": {
+    "numerical_reconstruction": "passed",
+    "text_bounds": "passed",
+    "visual_inspection": {
+      "status": "passed",
+      "reviewed_utc": "2026-10-17T11:06:36.526000+00:00",
+      "method": "Rendered PNG inspected with view_image after spacing adjustment.",
+      "observations": [
+        "All nine panels, labels and count denominators are readable; title and legend do not overlap.",
+        "All bars start at zero, common row scales are used, and there are no dual axes.",
+        "The footer discloses optional initial trading, overlapping OOF fits, absent dynamic risk approval and the scope of the mesh check."
+      ]
+    }
+  },
+  "outputs_sha256": {
+    "01_oof_growth_risk_and_trading.png": "7fd7a6127da79dbd9f8da2050669370293affbbef7403e9c5f710b2e85204da0",
+    "01_oof_growth_risk_and_trading.svg": "b8e7cd35fc67c3355085c5943c297d9d63369cf400371024fecc4004ceb87399",
+    "01_oof_execution_comparison_data.csv": "017259039c8b23cd175155dcc4b4024c26677bfb0384c1e9990f9cfec7e6000b",
+    "01_mesh_resolution_check_data.csv": "e7a39c13260b74cb8e92c24fca1633d7e2022ee76d3dca7faacc4bdd9c024b13"
+  }
+}

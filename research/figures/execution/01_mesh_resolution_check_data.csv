@@ -1,0 +1,7 @@
+client,horizon_years,policy,coarse_step,fine_step,coarse_breach_count,fine_breach_count,breach_denominator_paths,coarse_geometric_growth_percent,fine_geometric_growth_percent,coarse_actual_transfer_count,fine_actual_transfer_count,paired_path_year_decisions,exact_common_visited_states,action_disagreements_on_exact_common_states,action_disagreements_all_paired_path_years
+B,15,myopic_gate,0.05,0.025,26,26,120,3.8445243069175414,3.8445243069175414,283,283,1800,1800,0,0
+B,15,finite_horizon_gate,0.05,0.025,26,26,120,3.8445243069175414,3.8443330408812226,283,284,1800,1791,1,1
+C,30,myopic_gate,0.05,0.025,40,40,120,5.226928032300137,5.226928032300137,316,316,3600,3600,0,0
+C,30,finite_horizon_gate,0.05,0.025,40,40,120,5.226940665014698,5.226940665014698,317,317,3600,3600,0,0
+E,6,myopic_gate,0.05,0.025,14,14,120,4.91050505674333,4.91050505674333,225,225,720,720,0,0
+E,6,finite_horizon_gate,0.05,0.025,14,14,120,4.910508882059118,4.910508882059118,227,227,720,720,0,0
