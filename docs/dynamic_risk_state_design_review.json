@@ -1,0 +1,169 @@
+{
+  "version": "dynamic-full-horizon-risk-state-mathematical-review-v1",
+  "date_beijing": "2026-10-17",
+  "scope": "Mathematical design option only. No constrained DP implementation, new market model, market-result inspection, policy selection or final-scenario access.",
+  "verdict": "The proposed absorbing-bad-state construction correctly represents the probability of at least one full-horizon annual-endpoint MDD breach. A calibrated Lagrange multiplier is a model-dependent dual price, not an elicited preference coefficient or an automatic risk certificate. Deterministic execution, numerical approximation and estimated forecasts require separate qualifications.",
+  "state_and_transition": {
+    "definitions": "u is current nominal asset weights; z=R/P is current real wealth divided by its historical real running peak; b indicates whether any prior modeled observation had MDD>L; h is remaining horizon. Fixed target w, client L, original horizon H and frozen predictive law are configuration.",
+    "hold": "rho=0 and u_action=u.",
+    "restore": "u_action=w and rho solves the exact proportional self-financing fee equation at current u.",
+    "real_factor": "s=(1-rho)*(u_action dot g)/pi, with pi=1+inflation>0.",
+    "weights": "u_prime=(u_action elementwise g)/(u_action dot g). The common fee and inflation factors cancel in normalized asset weights.",
+    "peak_ratio": "R_prime=R*s and P_prime=max(P,R_prime), hence z_prime=min(1,z*s). The running peak must not reset to current wealth at a review, year boundary or target restoration.",
+    "absorbing_event": "b_prime=b OR (z*s<1-L), equivalently b OR (1-z_prime>L). In numerical implementation use the same direct MDD-minus-L>1e-12 convention as other models; numerical equality is not an extra economic risk allowance.",
+    "terminal_risk": "P(full-horizon MDD>L)=E[b_H]. The terminal indicator is charged once. Summing annual breach indicators or charging a penalty on every year with b=1 solves a different problem.",
+    "initial_state": "For a new client initially at the real wealth peak and before initial fees, z=1 and b=0. For an existing path, initialize z and b from its actual complete observed history. A state with b=0 but current1-z>L is inconsistent.",
+    "sufficiency": "This state is Markov sufficient for the specified probability-penalized objective if future joint(g,pi) draws follow a frozen IID law, fees are proportional, and there are no fixed monetary flows, wealth-dependent rules or unmodeled review dynamics. Time-varying, serially dependent or belief-based forecasts need the corresponding clock, predictor or belief state. Independent complete scenarios do not establish annual IID opportunities."
+  },
+  "measurement_order_and_annual_resolution": {
+    "adopted_annual_endpoint_definition": "Under the existing annual-endpoint MDD convention, fees enter the net annual real factor and the next observed point is the year end. The proposed formula is correct for that convention. A fee-induced dip that recovers before year end is not an extra observed annual MDD point.",
+    "alternative_trade_instant_definition": "If the service instead monitors real wealth immediately after fees, first test b_after_fee=b OR (z*(1-rho)<1-L), then test the year-end point. The fee cannot create a new peak because rho>=0. This changes the risk definition and must not be silently mixed with the annual baseline.",
+    "counterexample": "For L=.10,z=.9001,rho=.002 and subsequent real gross1.01, the post-fee ratio .8982998 breaches .90, while the year-end ratio .907282798 does not. Annual-endpoint and fee-instant monitoring therefore produce different b values.",
+    "intrayear_limit": "Annual returns and annual inflation cannot identify the true continuous-time intrayear peak, drawdown or order of price changes. Neither transition formula provides an intrayear MDD guarantee from these data."
+  },
+  "lagrangian_and_horizon_units": {
+    "primal_total_log": "For g_pi=E[log(R_H/R_0)] and q_pi=P(b_H=1), maximize g_pi subject to q_pi<=alpha.",
+    "lagrangian": "L(pi,eta)=g_pi-eta*(q_pi-alpha), eta>=0. For fixed eta, the action-relevant inner problem is max_pi(g_pi-eta*q_pi).",
+    "terminal_condition": "J_eta,0(u,z,b)=-eta*b.",
+    "bellman": "J_eta,h(u,z,b)=max_a E[log(s_a)+J_eta,h-1(u_prime,z_prime,b_prime)]. The fee occurs in both log(s_a) and the real-risk transition, serving distinct objective and state roles, not being charged twice in wealth.",
+    "dual_upper_bound": "d(eta)=eta*alpha+max_pi(g_pi-eta*q_pi). The additive eta*alpha may be omitted for choosing actions at fixed eta, but must be restored when computing the dual bound or minimizing over eta.",
+    "annualized_growth": "If the primal growth objective is G_H=g_pi/H and its multiplier is eta_G, multiplying the Lagrangian by the original client horizon H gives eta_total=H*eta_G for the total-log Bellman. Eta is dimensioned in log-growth units per unit of breach probability; comparisons across horizons require this scaling.",
+    "do_not_rescale_online": "For a fixed original client objective, eta_total remains fixed as remaining h decreases: past log rewards are constants. Replacing it every year by h*eta_G changes the objective. Recalibrating a new remaining-h problem is a substantive new control problem.",
+    "shadow_price_meaning": "Under a valid convex randomized-policy formulation and appropriate feasibility/boundedness conditions, an optimal eta is a supporting marginal value of relaxing alpha in the specified predictive model. It depends on H,L,fees,opportunity law and admissible policy class; it need not be unique and is not identified customer risk aversion.",
+    "monotonicity": "For exact globally optimal policies at eta1<eta2, the two optimality inequalities imply q(eta2)<=q(eta1). Ties can contain an interval of risks and the selected deterministic risk can jump. Approximate DP/rollout estimates do not automatically retain this property.",
+    "inactive_or_infeasible": "If the risk constraint is slack at the unconstrained optimum, eta0 can suffice and no equality with alpha is required. If every admissible policy has q>alpha, no multiplier creates a feasible policy; report infeasibility rather than continuing to tune eta."
+  },
+  "finite_mdp_occupation_formulation": {
+    "conditions": "For a genuinely finite state/action/horizon model with known fixed transition probabilities, finite rewards, a fixed initial distribution and allowed randomized policies, use nonnegative occupancy x_t(s,a) with linear initial/flow constraints.",
+    "objective": "Expected log reward is sum_t,s,a x_t(s,a)*r_t(s,a).",
+    "risk": "The once-only probability constraint is sum_s:b=1 x_H(s)<=alpha, a linear terminal occupancy constraint. The absorbing b component converts a path event into a terminal expected indicator.",
+    "duality": "When this finite LP is feasible and bounded, ordinary LP strong duality relates its optimum to a dual containing the risk multiplier. This statement is for the stated finite model and randomized policy class, not for an arbitrary deterministic continuous-state implementation.",
+    "policy_extraction": "A feasible occupancy can be converted to a randomized Markov decision rule x_t(s,a)/sum_a x_t(s,a) on reached states. Randomization is an operational modeling choice; it must not be silently used to justify a deterministic service rule.",
+    "source_scope": "The general finite-horizon random-policy/occupancy-LP equivalence is verified in Marianne Akian's lecture notes, chapter7, theorems7.11–7.12. The specialized MDD transition and examples in this review are independent derivations."
+  },
+  "deterministic_randomized_duality_counterexample": {
+    "interpretation": "A one-decision illustrative model, not competition-data estimates or proposed client parameters.",
+    "safe_policy": {"expected_total_log_growth": 0.0, "bad_probability": 0.0},
+    "risky_policy": {"expected_total_log_growth": 0.10, "bad_probability": 0.20},
+    "alpha": 0.10,
+    "deterministic_primal": "Only safe is feasible, so the deterministic optimum is0.",
+    "dual": "d(eta)=max(.10*eta,.10-.10*eta), minimized at eta=.5 with value.05. Thus the deterministic problem has a.05 duality gap.",
+    "randomized_primal": "Choose risky with probability.5 and safe with probability.5, independently before market outcomes. Then expected log growth=.05 and bad probability=.10, matching the randomized LP and dual optimum.",
+    "eta_search_failure": "Below eta=.5 the penalized deterministic optimizer is risky with q=.20; above.5 it is safe with q0; at.5 both tie. A deterministic tie-hold rule need never attain q=.10. Finding eta alone does not select the correct mixing probability or guarantee the constraint in a different stochastic model.",
+    "optional_wealth_realization": "At H1,pi1,c0,L=.10, safe wealth factor1 has the safe point. Risky can have factor.8 with probability.2 and factor exp((.10-.2*log(.8))/.8) with probability.8; its expected log factor is.10 and its annual-endpoint MDD breach probability is.20."
+  },
+  "time_consistency_and_risk_budget": {
+    "penalized_problem": "For a fixed eta and frozen Markov law, the terminal-penalty Bellman problem is dynamically consistent on(u,z,b,h).",
+    "primal_ex_ante_constraint": "The original q<=alpha is an ex-ante full-horizon constraint from the initial state, not a separate conditional risk budget alpha at every future history. Rare reached histories may have conditional breach probability>alpha while the ex-ante policy remains feasible.",
+    "annual_reset_is_different": "With b preserved, newly imposing the same conditional full-history bound alpha at every reached history is generally stronger/different than the original ex-ante bound and infeasible after b1. If b or the event is instead reset each year, repeated per-year10% risks can produce an eventual breach probability far above10%. Neither operation is the original full-horizon risk accounting.",
+    "primal_dynamic_budget_state": "A direct constrained dynamic recursion generally needs a remaining conditional risk-to-go budget r and branch-dependent successor budgets with the appropriate expectation inequality. Calibration of fixed eta is a dual alternative, not proof that(u,z,b,h) alone implements every primal conditional-budget constraint.",
+    "b1_feasibility": "Once b=1, the original full-history event is certain: q=1 under every continuation. A newly imposed conditional full-history bound alpha<1 is infeasible. Do not reset the peak, b or horizon to make this disappear."
+  },
+  "severity_and_review_governance": {
+    "sunk_event": "For b1, -eta*b_H=-eta under every continuation. With unconstrained action availability the remaining optimizer therefore reduces to growth maximization, and the marginal chance penalty cannot discourage worsening an already-breached drawdown. Log utility is still a terminal-wealth preference, not an explicit severity bound.",
+    "state_for_severity": "u,z,b,h do not remember the magnitude of the historical worst drawdown. To optimize expected excess or CVaR of full-horizon MDD, retain m=max historical drawdown (and the needed static CVaR auxiliary specification); b is then determined by m>L. Two histories with identical current z and b1 but past MDD.3 versus.8 have different terminal severity.",
+    "not_parameter_free": "Adding an expected-excess budget, CVaR level/budget or lexicographic severity priority adds normative choices. They cannot be presented as having been solved automatically by eta calibration.",
+    "pending": "Human referral/pending must have an explicit state and action restriction if it enters the modeled control problem. A declared hold-until-review proxy can be scored, but human outcomes and return-to-service behavior cannot be invented. Chance duality does not prove referral improves losses."
+  },
+  "inflation_prediction_statistics_and_mesh": {
+    "inflation": "The direct -log(pi) reward is common across current actions and may be removed as an additive expectation constant under the frozen exogenous law. Inflation must remain in z_prime and b_prime. Its joint dependence with all asset gross returns matters for real drawdown probabilities, so it must not be independently shuffled or replaced by its mean.",
+    "forecast": "The joint asset/inflation IID law is an additional model assumption. Pooling many annual rows does not supply that many independent paths; temporal runs and regime effects can dominate full-horizon drawdown risk.",
+    "mesh": "Duality of an approximate occupancy LP only controls its own projected transition model. Before interpolation calculate each support outcome's true b_prime and keep interpolation in that same absorbing-b layer. Interpolating b across0/1 or deciding the breach after projecting z can invent/delete events. Include the peak z1 and threshold1-L carefully; future crossing risk still has mesh error.",
+    "continuous_replay": "Any computed eta and risk estimate require independent full-policy replay with actual real wealth/peaks and the fixed event definition. Neither zero LP gap nor a tiny value-function residual bounds the continuous-policy MDD probability error.",
+    "statistical_calibration": "Calibrating eta to an estimated P solves at best the predictive optimization problem. It does not account for sampling uncertainty, forecast misspecification, discretization, learned-policy selection or cross-validation dependence.",
+    "static_bound_not_inherited": "The1160-event simultaneous CP diagnostic covered fixed annual-target policies and their five fixed events. A policy with eta, prediction law and dynamic state actions learned from these same paths is not that fixed family just because it retains one of the232 target labels. A new valid conditional/independent statistical design would be required for a formal risk assertion.",
+    "cross_validation": "Whole-scenario training/test separation can diagnose the complete learned rule. Different fold rules with overlapping training sets do not give an iid pooled fixed-policy binomial certificate, and previously exposed final scenarios cannot become a new blind holdout."
+  },
+  "minimal_checks_if_ever_implemented": [
+    "Peak100->120->108 has drawdown.10, not a loss from the initial100; strict equality at L must follow the stated numerical convention. Recovery to a new peak resets current z to1 but never clears b.",
+    "Two breaches along one path incur exactly one terminal bad indicator; a long stay below the threshold is not repeatedly counted.",
+    "Separate fee-instant versus annual-endpoint monitoring using the declared recovery counterexample; do not mix their cached outcomes.",
+    "At eta0, risk-state transitions do not alter the pure expected-log objective; at b1 the fixed chance penalty is a continuation constant, exposing the severity limitation.",
+    "Reproduce the deterministic/randomized dual example; verify dual upper-bound sign and eta*alpha constant, and detect infeasible alpha.",
+    "Check eta_total=H*eta_G against an annualized formulation, keeping the originalH multiplier fixed as remainingh changes.",
+    "For a small finite outcome tree enumerate full-history MDD and compare it with the absorbing-b recursion before testing any grid approximation.",
+    "Use outcome-dependent joint inflation to verify real-risk transitions, and keep absorbing-b layers intact across interpolation."
+  ],
+  "direct_primal_risk_budget_recursion": {
+    "status": "Design and short-tree reference only; no long-horizon constrained solver or new market experiment has been run.",
+    "derivation_scope": "Internal derivation for known finite observable IID joint outcomes, cross-checked against the separately enumerated deterministic history-tree reference. This is not a statistical calibration or a continuous-state deployment result.",
+    "state": {
+      "physical": "(u,z,b,h), with u current nominal asset weights, z=current real wealth/running real peak in(0,1], b the absorbing full-history breach indicator, and h periods remaining.",
+      "budget": "r in[0,1] is the conditional probability-to-go allowance for the same complete-history event, including a prior breach. It is neither a per-year hazard allowance nor a cash-like amount to subtract without conditioning.",
+      "configuration": "Fixed target w, cost c, client threshold L, original client horizon H, frozen joint(gross,inflation) law and explicit on-breach action restriction.",
+      "sufficiency": "For proportional costs, no monetary flows and a frozen IID law, (u,z,b,h,r) is sufficient for a risk-budget dynamic representation of the deterministic history-tree problem. A serially dependent forecast needs its predictor/market/belief state as well. Observable history can change the carried r even when physical financial states coincide."
+    },
+    "exact_finite_model_equations": {
+      "terminal": "F_0(u,z,b;r)=0 if b<=r, and -infinity otherwise. The terminal event is counted once.",
+      "action_timing": "Choose a in{hold,restore-to-w} before observing the next joint outcome j. Choose a contingent vector (r_j) for the subsequent observed branches; the current action cannot depend on the not-yet-observed j.",
+      "current_factor": "For action weights v and exact proportional fee fraction rho, s_j=(1-rho)*(v dot gross_j)/(1+inflation_j). Hold has rho0,v=u; restore has v=w and the exact self-financing fee at actual u.",
+      "physical_transition": "u'_j=(v* gross_j)/(v dot gross_j), z'_j=min(1,z*s_j), b'_j=b OR(1-z'_j>L). Annual-endpoint monitoring is retained; a separate post-fee observation would be a different event definition.",
+      "recursion": "F_h(u,z,b;r)=max over a and r_j in[0,1] of sum_j p_j*[log(s_j)+F_(h-1)(u'_j,z'_j,b'_j;r_j)], subject to sum_j p_j*r_j<=r. Only finite feasible child values may be used; zero-probability outcomes are removed before evaluating expressions with -infinity.",
+      "absorbed_branch": "If b'_j=1 then all future continuations have full-history event probability1, so that positive-probability branch requires r_j=1. This is also implied inductively by the terminal condition, but should be enforced explicitly rather than being obscured by interpolation.",
+      "root": "Initialize z1,b0,r=the declared root budget for a new pre-fee client. Select once from the complete-H problem; after outcome j carry that selected branch's r_j and decrease h by1. Never replace r_j by the original alpha or reset b/peak/H.",
+      "slack": "The expectation constraint need not bind. Unused risk allowance is permitted; forcing sum p_j*r_j=r or forcing q=alpha changes tie handling and can create artificial action choices."
+    },
+    "why_branch_budget_recursion_matches_history_policies": {
+      "necessity": "Any admissible deterministic nonanticipating history policy has a conditional complete-history breach probability q_j after each next observed outcome. Set r_j=q_j. Its root q is sum_j p_j*q_j, so a root-feasible policy supplies a feasible budget vector without requiring q_j<=the original alpha.",
+      "sufficiency": "Conversely, choose one current action and, for every observable outcome, a child policy with q_child<=r_j. Concatenate these already specified child trees. It is nonanticipating and has q_root=sum p_j*q_child<=sum p_j*r_j<=r. Child branches are chosen as a Cartesian product before root screening.",
+      "history_class": "This establishes the finite full-history interpretation. It does not prove that an execution rule depending only on(u,z,b,h), without the carried conditional budget, attains the same deterministic constrained optimum.",
+      "observable_support": "Duplicate identical joint gross/inflation outcomes must be combined or rejected. Distinct invisible row IDs cannot act as a randomization device for an allegedly deterministic history policy.",
+      "constructed_check": "H2, no fees/inflation, initially all bills, fixed equity target; equity gross2 with p.9 and gross.5 with p.1, L.25, root alpha.02. Hold initially, then restore only after observing the rare bad first market row. Both first-step financial states are identical cash, but the root policy has q=.1*.1=.01 and g=.1*(.9*log2+.1*log.5). Its risky child's conditional q.1 exceeds alpha.02; screening every child by alpha would incorrectly discard this feasible history policy."
+    },
+    "post_breach_response_and_severity": {
+      "response_rule": "At b1 only r1 is feasible. The action set must explicitly state hold-only while nonresponse is pending, or continuation of the original two actions. Neither rule clears b, creates adviser gains or retroactively restores initial chance feasibility.",
+      "severity_state": "For only the chance constraint plus log growth, current z and absorbing b suffice under the stated law. To control expected maximum drawdown, expected excess of full-horizon MDD, or CVaR of full-horizon MDD, also retain d=max historical observed drawdown and update d'=max(d,1-z'). Recovered histories with the same current z,b can have different d and hence different terminal severity.",
+      "static_CVaR": "If a static full-horizon CVaR objective/constraint is represented through an auxiliary threshold eta, choose that specification at the root and retain the needed terminal severity functional. Re-optimizing a new conditional eta at every branch generally solves a different nested/time-consistent risk measure.",
+      "inflation": "Common inflation can be removed only as an action-independent additive current reward constant under a fixed exogenous law. It must remain in s_j for z',b',d' and their joint probabilities; a chance-constrained rule cannot omit it merely because immediate paired log gains cancel it."
+    },
+    "nonconvex_budget_frontier_and_interpolation": {
+      "shape": "For deterministic policies on a finite tree, feasible(q,g) pairs are finite and F(r) is a nondecreasing step-like upper envelope, with -infinity below its minimum feasible risk. It is not generally concave in r.",
+      "counterexample": "With only safe(g0,q0) and risky(g.10,q.20), alpha.10 admits deterministic growth0. Linear interpolation in r reports.05, which is the root randomized mixture, not an available deterministic continuation. The corresponding dual upper value also need not equal the deterministic optimum.",
+      "prohibited_extraction": "Do not interpolate a nonconvex r-frontier or replace it by its concave envelope and then claim the interpolated g is a deployable deterministic rule. A convexified value requires an explicitly permitted randomization mechanism and its component policies; a value alone supplies neither.",
+      "feasibility_layers": "Keep b0/b1 separate, preserve all relevant peak and threshold boundaries, and never interpolate finite and infeasible(-infinity) values into invented feasibility. Determine an outcome's true b' before any physical-state projection.",
+      "conservative_budget_grid_option": "For a future finite-model pilot, retain actual policy/backpointer pairs. Round a represented child's required q upward to its budget level, round an available root r downward when selecting a grid level, and enforce the weighted successor-budget inequality. This may lose feasible policies but avoids claiming a smaller represented risk through downward rounding. It does not cure physical-state mesh or forecast error.",
+      "physical_mesh_limit": "Barycentric future-value interpolation defines its own approximate transition model. Even a conservative r-grid, small Bellman residual or zero LP gap does not bound actual continuous-state full-policy breach probability. Independent exact-state replay and resolution diagnostics remain necessary."
+    },
+    "next_implementation_contract": {
+      "scope": "First a finite-support, short-horizon policy/backpointer implementation matching the existing enumerator; no 30-year parameter grid or market winner search.",
+      "input": "Frozen distinct joint(gross,inflation,p) support, target,cost,L,H, declared response rule, actual initial(u,z,b), requested root budget and separately recorded numerical effective budget.",
+      "solve_output": "For each represented state/horizon retain nondominated actual(g,q,action,child-policy IDs,child conditional budgets); root returns feasible/infeasible and one selected deterministic tree, plus optional clearly labeled convex-relaxation upper bound.",
+      "online_output": "Given actual state,h,carried r and frozen policy/version, return the chosen action, explicit successor-budget mapping, modeled g/q, fees and feasibility diagnostics. Actual future returns cannot be inputs to the current action.",
+      "observed_transition": "After the realized outcome is observed, update actual weights/real peak/b and retrieve the preselected budget for that observable branch. Do not optimize the branch after viewing its future outcomes or silently use a newly reset alpha.",
+      "off_support_observations": "A vector of r_j values on an empirical training support is not yet a complete online rule for a new gross/inflation vector outside that support. Before deployment define and audit an explicit outcome-to-budget continuation map or a stated conservative fallback/nonresponse rule. Nearest-neighbor assignment, unconstrained linear interpolation and resetting alpha provide no automatic chance guarantee.",
+      "numerical_budget": "The current short reference uses a declared absolute64*float64-epsilon root probability guard for positive alpha, capped at1, and keeps alpha0 exactly0. This is not a proved accumulated error bound. Record requested/effective alpha, the guard and selected q-requested alpha. Do not grant the root guard anew at every child; primal/dual comparisons use the same effective budget and do not imply strict original-budget feasibility.",
+      "no_confidence_claim": "Known finite-model probabilities, numerical feasibility, fitted-model estimates and empirical OOF frequencies must remain separate. No inherited static finite-family CP guarantee or calibrated customer safety claim is attached to this design."
+    },
+    "required_acceptance_checks": [
+      "At H1 reproduce direct hold/restore enumeration and the exact fee equation, with inflation affecting real risk.",
+      "At H2 reproduce the conditional-budget example and .1-per-period bad-event probability .19 over two independent periods; never reset b, peak or alpha.",
+      "At H3 reproduce the exhaustive8192-policy three-outcome tree and safe Pareto pruning under multiple root budgets.",
+      "Reconstruct every selected policy's root q/g from complete paths independently of the recursion, preserving exact fees, CPI and annual observation order.",
+      "Test alpha0, infeasible states, already-breached states, hold-only pending response and outcomes with zero probability; reject invisible duplicate-support labels.",
+      "Verify deterministic versus randomized safe/risky gap and report primal/dual agreement only for the explicitly stated policy class and effective budget.",
+      "For any future grids, retain executable backpointers, check budget-rounding direction and branch expectation constraints, and treat nonconvex r interpolation as a relaxation rather than a deterministic policy.",
+      "Before any longer-horizon empirical-support experiment, specify the off-support observed-outcome budget mapping and full-policy independent replay contract."
+    ],
+    "completed_short_reference": {
+      "module": "research/experimental_execution/risk_tree_reference.py",
+      "module_sha256": "98c1d3778eca4db06db742819edaa1fe4ad5c65c4e6822104fa21a7064025d19",
+      "tests": "tests/test_risk_tree_reference.py",
+      "synthetic_tests_passed": 18,
+      "independent_audit": "results/model_review/risk_tree_reference_v1/independent_audit.json",
+      "independent_audit_sha256": "3a74271a06d065be5a42b39065f9f57b80d742dd771065d0a8b91f053982ca40",
+      "independent_audit_scope": "Five declared synthetic toys with pruning on/off,83 checks, independent bisection fees and complete path/history enumeration; no market input and no general long-horizon error bound."
+    }
+  },
+  "sources": [
+    {
+      "title": "Marianne Akian, Markov decision processes: Dynamic programming and applications, chapter7, example7.1 and theorems7.11–7.12",
+      "url": "https://www.cmap.polytechnique.fr/~akian/cours-ensta/Lecture_Notes_Akian-ENSTA-Saclay.pdf",
+      "support_scope": "Path-event indicator state augmentation and finite-horizon randomized occupation-measure LP equivalence; no source claim about this competition's risk budget or empirical guarantees."
+    },
+    {
+      "title": "Eitan Altman, Constrained Markov Decision Processes,1999, publisher description and contents",
+      "url": "https://www.routledge.com/Constrained-Markov-Decision-Processes/Stidham-Jr-Altman-Scarsini-Shaked/p/book/9780849303821",
+      "support_scope": "General occupation-measure, Lagrangian/dual-LP and randomization framework; numerical example and specialized state derivations are this review's own."
+    }
+  ]
+}

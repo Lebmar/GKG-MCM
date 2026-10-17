@@ -1,0 +1,17 @@
+{
+  "created_utc": "2026-10-17T11:23:04.132312+00:00",
+  "inputs_sha256": {
+    "results/model_review/nested_static_calibration_v1/manifest.json": "f8e232c1f229f8a273739673743a8d351abb7ba5de28955e3f79ebd0f72e4390",
+    "results/model_review/nested_static_calibration_v1/outer_vs_primary_summary.csv": "c7c46bbfc83a1d744814a61a84f680fbbf2c9bca6fb091bca5d60f3348c7450d",
+    "results/model_review/nested_static_calibration_v1/outer_oof_paths.csv": "4aff951887710c79a09d4727d2fdd531185e42726931446163d425733c0b69a4",
+    "docs/nested_static_calibration_protocol.json": "6c23a403b3108cd16700fe4b1cfb0e57203a5673ad2d0a5f6719041bb6f93f74",
+    "scripts/plot_nested_static_calibration.py": "98ca4ff8c9abac0b2eca4350c8bcce6392f89521c52f2aa8203e63cc72e65322"
+  },
+  "outputs_sha256": {
+    "01_oof_risk_growth_tradeoff.png": "c4919b81f4bc169e5fb03e04cd37c6c9285e90045916b9bca0a4d1ca0babc7fb",
+    "01_oof_calibration_comparison_data.csv": "50e553d5d35a34f527eb89f453e4d0d220e3f001beb2a925ea17c54051fab2ea",
+    "01_oof_risk_growth_tradeoff.svg": "60fda938ec621d7e6aca64bf8ae71b5763d89bd67998fe233fde4c35136b5c55"
+  },
+  "scope": "Frozen nested OOF comparison only; no final scenarios, re-selection or probability certificate",
+  "validation": "Full equal automatic cohorts and effective OOF path-to-summary arithmetic checked"
+}

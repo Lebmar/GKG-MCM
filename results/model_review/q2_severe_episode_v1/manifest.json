@@ -1,0 +1,95 @@
+{
+  "completed_utc": "2026-10-17T11:29:18.716259+00:00",
+  "sources": {
+    "scripts/diagnose_q2_severe_episode.py": "059776623f0cfe61c86d77e5c671743699c398a4463a1cad4065d20b7bb8c315",
+    "docs/q2_severe_episode_protocol.json": "2b94b5beff80f5dd868c1a6ac0c37191c576fd8049aa970127d0d075cd4d79d3",
+    "research/safeinvest_research/metrics.py": "7ec8e4821ce284351a3d8ed7071c687fdf7d6e4cfd225f72cad1d09d623eb008"
+  },
+  "sources_at_end": {
+    "scripts/diagnose_q2_severe_episode.py": "059776623f0cfe61c86d77e5c671743699c398a4463a1cad4065d20b7bb8c315",
+    "docs/q2_severe_episode_protocol.json": "2b94b5beff80f5dd868c1a6ac0c37191c576fd8049aa970127d0d075cd4d79d3",
+    "research/safeinvest_research/metrics.py": "7ec8e4821ce284351a3d8ed7071c687fdf7d6e4cfd225f72cad1d09d623eb008"
+  },
+  "input_sha256": {
+    "results/model_review/risk_menu_v1/validation_oof_paths.csv": "0230b3187d909c6b13b4d084d340c5dd8329cda746fe978058be3b92be54e25d",
+    "results/model_review/risk_menu_v1/validation_fold_menus.json": "d925d747fa6e0b2c475e2d26034429930dc901fbfef0a254c8a571494e43dbb7",
+    "results/model_review/risk_menu_v1/validation_manifest.json": "b8aae4ecfeba1f2cd2f33012219beb61d56e004c097ee49c2bf74663656f0d4f",
+    "results/model_review/fixed_execution_ablation_v1/manifest.json": "1531280102843358192b6d501d4cca73c6bc5f3750c398cc5c71829809bb6c08",
+    "results/model_review/fixed_execution_ablation_v1/executed_paths.npz": "1d2e272579e2a59d1635d0aeeacffafb33bbe6e445a6825aa8cc62317d05cc5a",
+    "results/model_review/fixed_execution_ablation_v1/target_path_metrics.csv": "d77b6fd15a06fa60df5f96718ad7b0f19030628839a9ad627c536c13fb80aa64",
+    "results/model_review/finite_horizon_execution_v1/manifest.json": "a8c6264155fd6a9773505e43c3116a5cddd92d25caa420ed9f366393a28e4530",
+    "results/model_review/finite_horizon_execution_v1/executed_wealth.npz": "912183796585ed69910c22758f0e4481fd15582f9f2ad0e1363365342ff0a3c8",
+    "results/model_review/finite_horizon_execution_v1/action_traces.npz": "39fd62b98c5909a884e3452f895d2b02ce418444609921aa6a0a3deb7ada7a84",
+    "results/model_review/finite_horizon_execution_v1/model_metadata.json": "03133c1320fbf96fbd905a70b7820d9ba57f13978e905c3ec19e45da446657f5",
+    "results/model_review/finite_horizon_execution_v1/target_path_metrics.csv": "0244cb484b24fde216472d1c62dc6f72020bccd82ba112e9f1b9bde52f481547"
+  },
+  "input_sha256_at_end": {
+    "results/model_review/risk_menu_v1/validation_oof_paths.csv": "0230b3187d909c6b13b4d084d340c5dd8329cda746fe978058be3b92be54e25d",
+    "results/model_review/risk_menu_v1/validation_fold_menus.json": "d925d747fa6e0b2c475e2d26034429930dc901fbfef0a254c8a571494e43dbb7",
+    "results/model_review/risk_menu_v1/validation_manifest.json": "b8aae4ecfeba1f2cd2f33012219beb61d56e004c097ee49c2bf74663656f0d4f",
+    "results/model_review/fixed_execution_ablation_v1/manifest.json": "1531280102843358192b6d501d4cca73c6bc5f3750c398cc5c71829809bb6c08",
+    "results/model_review/fixed_execution_ablation_v1/executed_paths.npz": "1d2e272579e2a59d1635d0aeeacffafb33bbe6e445a6825aa8cc62317d05cc5a",
+    "results/model_review/fixed_execution_ablation_v1/target_path_metrics.csv": "d77b6fd15a06fa60df5f96718ad7b0f19030628839a9ad627c536c13fb80aa64",
+    "results/model_review/finite_horizon_execution_v1/manifest.json": "a8c6264155fd6a9773505e43c3116a5cddd92d25caa420ed9f366393a28e4530",
+    "results/model_review/finite_horizon_execution_v1/executed_wealth.npz": "912183796585ed69910c22758f0e4481fd15582f9f2ad0e1363365342ff0a3c8",
+    "results/model_review/finite_horizon_execution_v1/action_traces.npz": "39fd62b98c5909a884e3452f895d2b02ce418444609921aa6a0a3deb7ada7a84",
+    "results/model_review/finite_horizon_execution_v1/model_metadata.json": "03133c1320fbf96fbd905a70b7820d9ba57f13978e905c3ec19e45da446657f5",
+    "results/model_review/finite_horizon_execution_v1/target_path_metrics.csv": "0244cb484b24fde216472d1c62dc6f72020bccd82ba112e9f1b9bde52f481547"
+  },
+  "outputs_sha256": {
+    "episode.json": "d38bddd396aa3dd0984396cdd66314098b8d5c317405c218d03ee5ea013a8242",
+    "yearly_execution.csv": "d638d567d4d12301c72d2e4577a977569e230b232b97d29aa033f25d4a587ca9",
+    "severe_episode.png": "c79f749c49f2847a5a6d5e3253aff638f6c6640ea421f23acba5cddcb222d4b5",
+    "severe_episode.svg": "f88177c683e99d0186a39ef336b4e44c6b7b9f4649d331b04f346f43256834f6"
+  },
+  "protocol": {
+    "version": "2026-10-17-q2-severe-episode-v1",
+    "status": "Declared before selecting the episode; descriptive Q2 execution example only",
+    "selection": {
+      "source": "results/model_review/risk_menu_v1/validation_oof_paths.csv",
+      "case": "alpha_10__risk_only",
+      "client": "C",
+      "rule": "Among the original assigned OOF client-C annual-policy rows, sort by descending saved annual MDD and then ascending scenario ID. Select the first row, without searching for a favorable alternative-policy example.",
+      "scope": "One complete development scenario in its original 24-path evaluation fold; do not mix in full-development targets or fit any new target."
+    },
+    "comparisons": [
+      "annual_restore with that fold's original assigned target",
+      "initial_then_hold with exactly the same target",
+      "finite_horizon_gate at mesh .05, separately simulated for H=30, with exactly the same target",
+      "Exact-thirds annual reference if its saved complete execution artifact exists; label its different target as a reference, not a pure execution ablation"
+    ],
+    "artifact_scope": "Read only saved original OOF rows, recorded fold menus and completed fixed-execution/finite-horizon artifacts. Do not load market CSV, final paths121–180, refit models or add a nested-target example.",
+    "metrics": "Actual saved net real wealth at years0..30, annual-endpoint drawdown/MDD, annual end weights, TV drift from each policy's own fixed target, actual transferred nominal amount, actual nominal fee, trade flag and labeled return years.",
+    "timing": "Fee/transfer for return year t is paid at that year's start, before its annual return; the initial trade is before return year1. Annual wealth at t is the saved year-end point. No fee checkpoints or unknown intrayear price observations are inserted.",
+    "episode": {
+      "trough": "First annual index attaining the annual policy's maximum drawdown",
+      "peak": "First annual index attaining the highest saved annual wealth through that trough",
+      "recovery": "First year after the trough at which annual real wealth returns to that preceding peak, using only a 1e-10 wealth-unit numerical equality guard; otherwise unrecovered by year30",
+      "other_policies": "Record their full-path MDD and their drawdown/wealth at the same annual peak/trough dates, separately from their own worst episode."
+    },
+    "outputs": [
+      "Selected-source and metrics JSON",
+      "Year-by-year CSV including actual fees, transfers, weights and drawdown",
+      "One readable research PNG/SVG with consistent policy colors and explicit episode-selection bias",
+      "Source/input/output SHA and exact reconciliation checks"
+    ],
+    "limitations": "Selection deliberately emphasizes the original annual policy's most severe OOF path. This example cannot rank overall strategy quality, establish causal market drivers, certify risk or represent a typical investor. No model or winner is selected."
+  },
+  "market_or_final_data_loaded": false,
+  "model_refit": false,
+  "figure": {
+    "size_inches": [
+      11.6,
+      10.4
+    ],
+    "png_dpi": 240,
+    "minimum_font_pt": 12,
+    "svg_text": true,
+    "panels": [
+      "Net real wealth",
+      "Annual drawdown",
+      "Own-target TV drift",
+      "Actual nominal fees and trade years"
+    ]
+  }
+}

@@ -1,0 +1,2079 @@
+{
+  "full_development": [
+    {
+      "training_screen_gamma": 0.0,
+      "service_alpha": 0.1,
+      "solver_gamma": 0.0,
+      "total_path_profile_units": 600,
+      "raw_auto_path_profile_units": 300,
+      "raw_review_path_profile_units": 300,
+      "raw_auto_unit_mean_log_growth": 0.027688469554550423,
+      "profiles": {
+        "A": {
+          "total_paths": 120,
+          "auto_n": 0,
+          "review_n": 120,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "B": {
+          "total_paths": 120,
+          "auto_n": 60,
+          "review_n": 60,
+          "auto_folds": 2,
+          "breach_count": 3,
+          "conditional_breach_probability": 0.05,
+          "conditional_mean_log_growth": 0.018527183479749527,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "C": {
+          "total_paths": 120,
+          "auto_n": 120,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 1,
+          "conditional_breach_probability": 0.008333333333333333,
+          "conditional_mean_log_growth": 0.028252212625630223,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "D": {
+          "total_paths": 120,
+          "auto_n": 0,
+          "review_n": 120,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "E": {
+          "total_paths": 120,
+          "auto_n": 120,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 2,
+          "conditional_breach_probability": 0.016666666666666666,
+          "conditional_mean_log_growth": 0.03170536952087107,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        }
+      },
+      "eligible": true,
+      "eligibility_reasons": []
+    },
+    {
+      "training_screen_gamma": 0.025,
+      "service_alpha": 0.1,
+      "solver_gamma": 0.025,
+      "total_path_profile_units": 600,
+      "raw_auto_path_profile_units": 360,
+      "raw_review_path_profile_units": 240,
+      "raw_auto_unit_mean_log_growth": 0.03256683911402362,
+      "profiles": {
+        "A": {
+          "total_paths": 120,
+          "auto_n": 0,
+          "review_n": 120,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "B": {
+          "total_paths": 120,
+          "auto_n": 120,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 2,
+          "conditional_breach_probability": 0.016666666666666666,
+          "conditional_mean_log_growth": 0.02481875327581679,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "C": {
+          "total_paths": 120,
+          "auto_n": 120,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 5,
+          "conditional_breach_probability": 0.041666666666666664,
+          "conditional_mean_log_growth": 0.03609850756676249,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "D": {
+          "total_paths": 120,
+          "auto_n": 0,
+          "review_n": 120,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "E": {
+          "total_paths": 120,
+          "auto_n": 120,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 4,
+          "conditional_breach_probability": 0.03333333333333333,
+          "conditional_mean_log_growth": 0.03678325649949158,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        }
+      },
+      "eligible": true,
+      "eligibility_reasons": []
+    },
+    {
+      "training_screen_gamma": 0.05,
+      "service_alpha": 0.1,
+      "solver_gamma": 0.05,
+      "total_path_profile_units": 600,
+      "raw_auto_path_profile_units": 360,
+      "raw_review_path_profile_units": 240,
+      "raw_auto_unit_mean_log_growth": 0.03579354388599495,
+      "profiles": {
+        "A": {
+          "total_paths": 120,
+          "auto_n": 0,
+          "review_n": 120,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "B": {
+          "total_paths": 120,
+          "auto_n": 120,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 7,
+          "conditional_breach_probability": 0.058333333333333334,
+          "conditional_mean_log_growth": 0.02728851306418567,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "C": {
+          "total_paths": 120,
+          "auto_n": 120,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 8,
+          "conditional_breach_probability": 0.06666666666666667,
+          "conditional_mean_log_growth": 0.037583418600434106,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "D": {
+          "total_paths": 120,
+          "auto_n": 0,
+          "review_n": 120,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "E": {
+          "total_paths": 120,
+          "auto_n": 120,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 7,
+          "conditional_breach_probability": 0.058333333333333334,
+          "conditional_mean_log_growth": 0.04250869999336508,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        }
+      },
+      "eligible": true,
+      "eligibility_reasons": []
+    },
+    {
+      "training_screen_gamma": 0.075,
+      "service_alpha": 0.1,
+      "solver_gamma": 0.075,
+      "total_path_profile_units": 600,
+      "raw_auto_path_profile_units": 360,
+      "raw_review_path_profile_units": 240,
+      "raw_auto_unit_mean_log_growth": 0.03760113479658862,
+      "profiles": {
+        "A": {
+          "total_paths": 120,
+          "auto_n": 0,
+          "review_n": 120,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "B": {
+          "total_paths": 120,
+          "auto_n": 120,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 11,
+          "conditional_breach_probability": 0.09166666666666666,
+          "conditional_mean_log_growth": 0.02897351164141352,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "C": {
+          "total_paths": 120,
+          "auto_n": 120,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 10,
+          "conditional_breach_probability": 0.08333333333333333,
+          "conditional_mean_log_growth": 0.03899196928925978,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "D": {
+          "total_paths": 120,
+          "auto_n": 0,
+          "review_n": 120,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "E": {
+          "total_paths": 120,
+          "auto_n": 120,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 8,
+          "conditional_breach_probability": 0.06666666666666667,
+          "conditional_mean_log_growth": 0.044837923459092564,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        }
+      },
+      "eligible": true,
+      "eligibility_reasons": []
+    },
+    {
+      "training_screen_gamma": 0.1,
+      "service_alpha": 0.1,
+      "solver_gamma": 0.1,
+      "total_path_profile_units": 600,
+      "raw_auto_path_profile_units": 360,
+      "raw_review_path_profile_units": 240,
+      "raw_auto_unit_mean_log_growth": 0.03977917388049104,
+      "profiles": {
+        "A": {
+          "total_paths": 120,
+          "auto_n": 0,
+          "review_n": 120,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "B": {
+          "total_paths": 120,
+          "auto_n": 120,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 14,
+          "conditional_breach_probability": 0.11666666666666667,
+          "conditional_mean_log_growth": 0.03163211092993395,
+          "empirical_service_risk_pass": false,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "C": {
+          "total_paths": 120,
+          "auto_n": 120,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 13,
+          "conditional_breach_probability": 0.10833333333333334,
+          "conditional_mean_log_growth": 0.04119199976503544,
+          "empirical_service_risk_pass": false,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "D": {
+          "total_paths": 120,
+          "auto_n": 0,
+          "review_n": 120,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "E": {
+          "total_paths": 120,
+          "auto_n": 120,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 16,
+          "conditional_breach_probability": 0.13333333333333333,
+          "conditional_mean_log_growth": 0.04651341094650374,
+          "empirical_service_risk_pass": false,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        }
+      },
+      "eligible": false,
+      "eligibility_reasons": [
+        "empirical_service_risk_exceeded:B",
+        "empirical_service_risk_exceeded:C",
+        "empirical_service_risk_exceeded:E"
+      ]
+    }
+  ],
+  "outer_fold_1": [
+    {
+      "training_screen_gamma": 0.0,
+      "service_alpha": 0.1,
+      "solver_gamma": 0.0,
+      "total_path_profile_units": 480,
+      "raw_auto_path_profile_units": 240,
+      "raw_review_path_profile_units": 240,
+      "raw_auto_unit_mean_log_growth": 0.027183468232647636,
+      "profiles": {
+        "A": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "B": {
+          "total_paths": 96,
+          "auto_n": 48,
+          "review_n": 48,
+          "auto_folds": 2,
+          "breach_count": 3,
+          "conditional_breach_probability": 0.0625,
+          "conditional_mean_log_growth": 0.01636979900757493,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "C": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 1,
+          "conditional_breach_probability": 0.010416666666666666,
+          "conditional_mean_log_growth": 0.02804957791682471,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "D": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "E": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 1,
+          "conditional_breach_probability": 0.010416666666666666,
+          "conditional_mean_log_growth": 0.03172419316100692,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        }
+      },
+      "eligible": true,
+      "eligibility_reasons": []
+    },
+    {
+      "training_screen_gamma": 0.025,
+      "service_alpha": 0.1,
+      "solver_gamma": 0.025,
+      "total_path_profile_units": 480,
+      "raw_auto_path_profile_units": 288,
+      "raw_review_path_profile_units": 192,
+      "raw_auto_unit_mean_log_growth": 0.028007949646930923,
+      "profiles": {
+        "A": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "B": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 3,
+          "conditional_breach_probability": 0.03125,
+          "conditional_mean_log_growth": 0.01711698325424524,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "C": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 3,
+          "conditional_breach_probability": 0.03125,
+          "conditional_mean_log_growth": 0.03182143164895853,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "D": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "E": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 3,
+          "conditional_breach_probability": 0.03125,
+          "conditional_mean_log_growth": 0.03508543403758901,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        }
+      },
+      "eligible": true,
+      "eligibility_reasons": []
+    },
+    {
+      "training_screen_gamma": 0.05,
+      "service_alpha": 0.1,
+      "solver_gamma": 0.05,
+      "total_path_profile_units": 480,
+      "raw_auto_path_profile_units": 288,
+      "raw_review_path_profile_units": 192,
+      "raw_auto_unit_mean_log_growth": 0.0334452597713875,
+      "profiles": {
+        "A": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "B": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 7,
+          "conditional_breach_probability": 0.07291666666666667,
+          "conditional_mean_log_growth": 0.026004650228164023,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "C": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 6,
+          "conditional_breach_probability": 0.0625,
+          "conditional_mean_log_growth": 0.035680229987843474,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "D": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "E": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 5,
+          "conditional_breach_probability": 0.052083333333333336,
+          "conditional_mean_log_growth": 0.038650899098155,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        }
+      },
+      "eligible": true,
+      "eligibility_reasons": []
+    },
+    {
+      "training_screen_gamma": 0.075,
+      "service_alpha": 0.1,
+      "solver_gamma": 0.075,
+      "total_path_profile_units": 480,
+      "raw_auto_path_profile_units": 288,
+      "raw_review_path_profile_units": 192,
+      "raw_auto_unit_mean_log_growth": 0.03739427926373928,
+      "profiles": {
+        "A": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "B": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 8,
+          "conditional_breach_probability": 0.08333333333333333,
+          "conditional_mean_log_growth": 0.02920830967449348,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "C": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 7,
+          "conditional_breach_probability": 0.07291666666666667,
+          "conditional_mean_log_growth": 0.03745344703138891,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "D": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "E": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 8,
+          "conditional_breach_probability": 0.08333333333333333,
+          "conditional_mean_log_growth": 0.04552108108533546,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        }
+      },
+      "eligible": true,
+      "eligibility_reasons": []
+    },
+    {
+      "training_screen_gamma": 0.1,
+      "service_alpha": 0.1,
+      "solver_gamma": 0.1,
+      "total_path_profile_units": 480,
+      "raw_auto_path_profile_units": 312,
+      "raw_review_path_profile_units": 168,
+      "raw_auto_unit_mean_log_growth": 0.0364179128171001,
+      "profiles": {
+        "A": {
+          "total_paths": 96,
+          "auto_n": 24,
+          "review_n": 72,
+          "auto_folds": 1,
+          "breach_count": 7,
+          "conditional_breach_probability": 0.2916666666666667,
+          "conditional_mean_log_growth": 0.012438568083000909,
+          "empirical_service_risk_pass": false,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "B": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 11,
+          "conditional_breach_probability": 0.11458333333333333,
+          "conditional_mean_log_growth": 0.030552575921066156,
+          "empirical_service_risk_pass": false,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "C": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 9,
+          "conditional_breach_probability": 0.09375,
+          "conditional_mean_log_growth": 0.03749418988154548,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "D": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "E": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 11,
+          "conditional_breach_probability": 0.11458333333333333,
+          "conditional_mean_log_growth": 0.047201808832213456,
+          "empirical_service_risk_pass": false,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        }
+      },
+      "eligible": false,
+      "eligibility_reasons": [
+        "empirical_service_risk_exceeded:A",
+        "empirical_service_risk_exceeded:B",
+        "empirical_service_risk_exceeded:E"
+      ]
+    }
+  ],
+  "outer_fold_2": [
+    {
+      "training_screen_gamma": 0.0,
+      "service_alpha": 0.1,
+      "solver_gamma": 0.0,
+      "total_path_profile_units": 480,
+      "raw_auto_path_profile_units": 216,
+      "raw_review_path_profile_units": 264,
+      "raw_auto_unit_mean_log_growth": 0.029228463293594156,
+      "profiles": {
+        "A": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "B": {
+          "total_paths": 96,
+          "auto_n": 24,
+          "review_n": 72,
+          "auto_folds": 1,
+          "breach_count": 2,
+          "conditional_breach_probability": 0.08333333333333333,
+          "conditional_mean_log_growth": 0.017318034797801033,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "C": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 1,
+          "conditional_breach_probability": 0.010416666666666666,
+          "conditional_mean_log_growth": 0.030483862935126296,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "D": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "E": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 2,
+          "conditional_breach_probability": 0.020833333333333332,
+          "conditional_mean_log_growth": 0.030950670776010283,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        }
+      },
+      "eligible": true,
+      "eligibility_reasons": []
+    },
+    {
+      "training_screen_gamma": 0.025,
+      "service_alpha": 0.1,
+      "solver_gamma": 0.025,
+      "total_path_profile_units": 480,
+      "raw_auto_path_profile_units": 288,
+      "raw_review_path_profile_units": 192,
+      "raw_auto_unit_mean_log_growth": 0.02991431503425078,
+      "profiles": {
+        "A": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "B": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 2,
+          "conditional_breach_probability": 0.020833333333333332,
+          "conditional_mean_log_growth": 0.01924019034122494,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "C": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 3,
+          "conditional_breach_probability": 0.03125,
+          "conditional_mean_log_growth": 0.0368502981225251,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "D": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "E": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 2,
+          "conditional_breach_probability": 0.020833333333333332,
+          "conditional_mean_log_growth": 0.0336524566390023,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        }
+      },
+      "eligible": true,
+      "eligibility_reasons": []
+    },
+    {
+      "training_screen_gamma": 0.05,
+      "service_alpha": 0.1,
+      "solver_gamma": 0.05,
+      "total_path_profile_units": 480,
+      "raw_auto_path_profile_units": 288,
+      "raw_review_path_profile_units": 192,
+      "raw_auto_unit_mean_log_growth": 0.034356185848662686,
+      "profiles": {
+        "A": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "B": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 4,
+          "conditional_breach_probability": 0.041666666666666664,
+          "conditional_mean_log_growth": 0.026020005291561055,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "C": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 4,
+          "conditional_breach_probability": 0.041666666666666664,
+          "conditional_mean_log_growth": 0.03847570405149839,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "D": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "E": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 6,
+          "conditional_breach_probability": 0.0625,
+          "conditional_mean_log_growth": 0.03857284820292863,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        }
+      },
+      "eligible": true,
+      "eligibility_reasons": []
+    },
+    {
+      "training_screen_gamma": 0.075,
+      "service_alpha": 0.1,
+      "solver_gamma": 0.075,
+      "total_path_profile_units": 480,
+      "raw_auto_path_profile_units": 288,
+      "raw_review_path_profile_units": 192,
+      "raw_auto_unit_mean_log_growth": 0.03713901601533457,
+      "profiles": {
+        "A": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "B": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 9,
+          "conditional_breach_probability": 0.09375,
+          "conditional_mean_log_growth": 0.02804562386571921,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "C": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 8,
+          "conditional_breach_probability": 0.08333333333333333,
+          "conditional_mean_log_growth": 0.04005806049135296,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "D": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "E": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 7,
+          "conditional_breach_probability": 0.07291666666666667,
+          "conditional_mean_log_growth": 0.043313363688931544,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        }
+      },
+      "eligible": true,
+      "eligibility_reasons": []
+    },
+    {
+      "training_screen_gamma": 0.1,
+      "service_alpha": 0.1,
+      "solver_gamma": 0.1,
+      "total_path_profile_units": 480,
+      "raw_auto_path_profile_units": 312,
+      "raw_review_path_profile_units": 168,
+      "raw_auto_unit_mean_log_growth": 0.03650680462222466,
+      "profiles": {
+        "A": {
+          "total_paths": 96,
+          "auto_n": 24,
+          "review_n": 72,
+          "auto_folds": 1,
+          "breach_count": 5,
+          "conditional_breach_probability": 0.20833333333333334,
+          "conditional_mean_log_growth": 0.007925058958928538,
+          "empirical_service_risk_pass": false,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "B": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 11,
+          "conditional_breach_probability": 0.11458333333333333,
+          "conditional_mean_log_growth": 0.03085932416990102,
+          "empirical_service_risk_pass": false,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "C": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 10,
+          "conditional_breach_probability": 0.10416666666666667,
+          "conditional_mean_log_growth": 0.040702020272699264,
+          "empirical_service_risk_pass": false,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "D": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "E": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 10,
+          "conditional_breach_probability": 0.10416666666666667,
+          "conditional_mean_log_growth": 0.0451045058398977,
+          "empirical_service_risk_pass": false,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        }
+      },
+      "eligible": false,
+      "eligibility_reasons": [
+        "empirical_service_risk_exceeded:A",
+        "empirical_service_risk_exceeded:B",
+        "empirical_service_risk_exceeded:C",
+        "empirical_service_risk_exceeded:E"
+      ]
+    }
+  ],
+  "outer_fold_3": [
+    {
+      "training_screen_gamma": 0.0,
+      "service_alpha": 0.1,
+      "solver_gamma": 0.0,
+      "total_path_profile_units": 480,
+      "raw_auto_path_profile_units": 288,
+      "raw_review_path_profile_units": 192,
+      "raw_auto_unit_mean_log_growth": 0.026694424915093263,
+      "profiles": {
+        "A": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "B": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 1,
+          "conditional_breach_probability": 0.010416666666666666,
+          "conditional_mean_log_growth": 0.015737601179470925,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "C": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 2,
+          "conditional_breach_probability": 0.020833333333333332,
+          "conditional_mean_log_growth": 0.03000937565811056,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "D": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "E": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 2,
+          "conditional_breach_probability": 0.020833333333333332,
+          "conditional_mean_log_growth": 0.0343362979076983,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        }
+      },
+      "eligible": true,
+      "eligibility_reasons": []
+    },
+    {
+      "training_screen_gamma": 0.025,
+      "service_alpha": 0.1,
+      "solver_gamma": 0.025,
+      "total_path_profile_units": 480,
+      "raw_auto_path_profile_units": 288,
+      "raw_review_path_profile_units": 192,
+      "raw_auto_unit_mean_log_growth": 0.031063248113723258,
+      "profiles": {
+        "A": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "B": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 4,
+          "conditional_breach_probability": 0.041666666666666664,
+          "conditional_mean_log_growth": 0.02205263039699718,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "C": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 4,
+          "conditional_breach_probability": 0.041666666666666664,
+          "conditional_mean_log_growth": 0.03241479808056525,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "D": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "E": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 3,
+          "conditional_breach_probability": 0.03125,
+          "conditional_mean_log_growth": 0.03872231586360735,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        }
+      },
+      "eligible": true,
+      "eligibility_reasons": []
+    },
+    {
+      "training_screen_gamma": 0.05,
+      "service_alpha": 0.1,
+      "solver_gamma": 0.05,
+      "total_path_profile_units": 480,
+      "raw_auto_path_profile_units": 288,
+      "raw_review_path_profile_units": 192,
+      "raw_auto_unit_mean_log_growth": 0.03715828144679973,
+      "profiles": {
+        "A": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "B": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 7,
+          "conditional_breach_probability": 0.07291666666666667,
+          "conditional_mean_log_growth": 0.027342258074110292,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "C": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 8,
+          "conditional_breach_probability": 0.08333333333333333,
+          "conditional_mean_log_growth": 0.03926164274759791,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "D": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "E": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 8,
+          "conditional_breach_probability": 0.08333333333333333,
+          "conditional_mean_log_growth": 0.044870943518690996,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        }
+      },
+      "eligible": true,
+      "eligibility_reasons": []
+    },
+    {
+      "training_screen_gamma": 0.075,
+      "service_alpha": 0.1,
+      "solver_gamma": 0.075,
+      "total_path_profile_units": 480,
+      "raw_auto_path_profile_units": 288,
+      "raw_review_path_profile_units": 192,
+      "raw_auto_unit_mean_log_growth": 0.039038594730561677,
+      "profiles": {
+        "A": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "B": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 8,
+          "conditional_breach_probability": 0.08333333333333333,
+          "conditional_mean_log_growth": 0.02937960496106674,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "C": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 8,
+          "conditional_breach_probability": 0.08333333333333333,
+          "conditional_mean_log_growth": 0.04095858745475043,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "D": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "E": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 8,
+          "conditional_breach_probability": 0.08333333333333333,
+          "conditional_mean_log_growth": 0.046777591775867856,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        }
+      },
+      "eligible": true,
+      "eligibility_reasons": []
+    },
+    {
+      "training_screen_gamma": 0.1,
+      "service_alpha": 0.1,
+      "solver_gamma": 0.1,
+      "total_path_profile_units": 480,
+      "raw_auto_path_profile_units": 312,
+      "raw_review_path_profile_units": 168,
+      "raw_auto_unit_mean_log_growth": 0.037417873838629614,
+      "profiles": {
+        "A": {
+          "total_paths": 96,
+          "auto_n": 24,
+          "review_n": 72,
+          "auto_folds": 1,
+          "breach_count": 4,
+          "conditional_breach_probability": 0.16666666666666666,
+          "conditional_mean_log_growth": 0.008684250101279097,
+          "empirical_service_risk_pass": false,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "B": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 10,
+          "conditional_breach_probability": 0.10416666666666667,
+          "conditional_mean_log_growth": 0.031032952327783466,
+          "empirical_service_risk_pass": false,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "C": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 9,
+          "conditional_breach_probability": 0.09375,
+          "conditional_mean_log_growth": 0.039784436164460875,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "D": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "E": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 11,
+          "conditional_breach_probability": 0.11458333333333333,
+          "conditional_mean_log_growth": 0.048619638957982124,
+          "empirical_service_risk_pass": false,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        }
+      },
+      "eligible": false,
+      "eligibility_reasons": [
+        "empirical_service_risk_exceeded:A",
+        "empirical_service_risk_exceeded:B",
+        "empirical_service_risk_exceeded:E"
+      ]
+    }
+  ],
+  "outer_fold_4": [
+    {
+      "training_screen_gamma": 0.0,
+      "service_alpha": 0.1,
+      "solver_gamma": 0.0,
+      "total_path_profile_units": 480,
+      "raw_auto_path_profile_units": 240,
+      "raw_review_path_profile_units": 240,
+      "raw_auto_unit_mean_log_growth": 0.026653666557553805,
+      "profiles": {
+        "A": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "B": {
+          "total_paths": 96,
+          "auto_n": 48,
+          "review_n": 48,
+          "auto_folds": 2,
+          "breach_count": 2,
+          "conditional_breach_probability": 0.041666666666666664,
+          "conditional_mean_log_growth": 0.018258400640384104,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "C": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 3,
+          "conditional_breach_probability": 0.03125,
+          "conditional_mean_log_growth": 0.02801858365555444,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "D": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "E": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 2,
+          "conditional_breach_probability": 0.020833333333333332,
+          "conditional_mean_log_growth": 0.029486382418138012,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        }
+      },
+      "eligible": true,
+      "eligibility_reasons": []
+    },
+    {
+      "training_screen_gamma": 0.025,
+      "service_alpha": 0.1,
+      "solver_gamma": 0.025,
+      "total_path_profile_units": 480,
+      "raw_auto_path_profile_units": 288,
+      "raw_review_path_profile_units": 192,
+      "raw_auto_unit_mean_log_growth": 0.03005750003148781,
+      "profiles": {
+        "A": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "B": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 1,
+          "conditional_breach_probability": 0.010416666666666666,
+          "conditional_mean_log_growth": 0.024475263890337075,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "C": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 2,
+          "conditional_breach_probability": 0.020833333333333332,
+          "conditional_mean_log_growth": 0.032962233705913085,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "D": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "E": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 3,
+          "conditional_breach_probability": 0.03125,
+          "conditional_mean_log_growth": 0.03273500249821326,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        }
+      },
+      "eligible": true,
+      "eligibility_reasons": []
+    },
+    {
+      "training_screen_gamma": 0.05,
+      "service_alpha": 0.1,
+      "solver_gamma": 0.05,
+      "total_path_profile_units": 480,
+      "raw_auto_path_profile_units": 288,
+      "raw_review_path_profile_units": 192,
+      "raw_auto_unit_mean_log_growth": 0.035867252611595575,
+      "profiles": {
+        "A": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "B": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 6,
+          "conditional_breach_probability": 0.0625,
+          "conditional_mean_log_growth": 0.028364676571356755,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "C": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 6,
+          "conditional_breach_probability": 0.0625,
+          "conditional_mean_log_growth": 0.03789886941436397,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "D": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "E": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 5,
+          "conditional_breach_probability": 0.052083333333333336,
+          "conditional_mean_log_growth": 0.041338211849066005,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        }
+      },
+      "eligible": true,
+      "eligibility_reasons": []
+    },
+    {
+      "training_screen_gamma": 0.075,
+      "service_alpha": 0.1,
+      "solver_gamma": 0.075,
+      "total_path_profile_units": 480,
+      "raw_auto_path_profile_units": 288,
+      "raw_review_path_profile_units": 192,
+      "raw_auto_unit_mean_log_growth": 0.03790864748055159,
+      "profiles": {
+        "A": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "B": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 7,
+          "conditional_breach_probability": 0.07291666666666667,
+          "conditional_mean_log_growth": 0.029997067113941678,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "C": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 6,
+          "conditional_breach_probability": 0.0625,
+          "conditional_mean_log_growth": 0.03998728366392326,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "D": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "E": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 9,
+          "conditional_breach_probability": 0.09375,
+          "conditional_mean_log_growth": 0.043741591663789804,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        }
+      },
+      "eligible": true,
+      "eligibility_reasons": []
+    },
+    {
+      "training_screen_gamma": 0.1,
+      "service_alpha": 0.1,
+      "solver_gamma": 0.1,
+      "total_path_profile_units": 480,
+      "raw_auto_path_profile_units": 312,
+      "raw_review_path_profile_units": 168,
+      "raw_auto_unit_mean_log_growth": 0.03724358023680755,
+      "profiles": {
+        "A": {
+          "total_paths": 96,
+          "auto_n": 24,
+          "review_n": 72,
+          "auto_folds": 1,
+          "breach_count": 6,
+          "conditional_breach_probability": 0.25,
+          "conditional_mean_log_growth": 0.014702440046581708,
+          "empirical_service_risk_pass": false,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "B": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 10,
+          "conditional_breach_probability": 0.10416666666666667,
+          "conditional_mean_log_growth": 0.03193259398760625,
+          "empirical_service_risk_pass": false,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "C": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 7,
+          "conditional_breach_probability": 0.07291666666666667,
+          "conditional_mean_log_growth": 0.04014175486887713,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "D": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "E": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 14,
+          "conditional_breach_probability": 0.14583333333333334,
+          "conditional_mean_log_growth": 0.04529167690149574,
+          "empirical_service_risk_pass": false,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        }
+      },
+      "eligible": false,
+      "eligibility_reasons": [
+        "empirical_service_risk_exceeded:A",
+        "empirical_service_risk_exceeded:B",
+        "empirical_service_risk_exceeded:E"
+      ]
+    }
+  ],
+  "outer_fold_5": [
+    {
+      "training_screen_gamma": 0.0,
+      "service_alpha": 0.1,
+      "solver_gamma": 0.0,
+      "total_path_profile_units": 480,
+      "raw_auto_path_profile_units": 240,
+      "raw_review_path_profile_units": 240,
+      "raw_auto_unit_mean_log_growth": 0.029664834588121466,
+      "profiles": {
+        "A": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "B": {
+          "total_paths": 96,
+          "auto_n": 48,
+          "review_n": 48,
+          "auto_folds": 2,
+          "breach_count": 2,
+          "conditional_breach_probability": 0.041666666666666664,
+          "conditional_mean_log_growth": 0.018795316621705003,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "C": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 2,
+          "conditional_breach_probability": 0.020833333333333332,
+          "conditional_mean_log_growth": 0.03025306014369823,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "D": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "E": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 3,
+          "conditional_breach_probability": 0.03125,
+          "conditional_mean_log_growth": 0.034511368015752934,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        }
+      },
+      "eligible": true,
+      "eligibility_reasons": []
+    },
+    {
+      "training_screen_gamma": 0.025,
+      "service_alpha": 0.1,
+      "solver_gamma": 0.025,
+      "total_path_profile_units": 480,
+      "raw_auto_path_profile_units": 288,
+      "raw_review_path_profile_units": 192,
+      "raw_auto_unit_mean_log_growth": 0.03245695562169218,
+      "profiles": {
+        "A": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "B": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 3,
+          "conditional_breach_probability": 0.03125,
+          "conditional_mean_log_growth": 0.02527290964022137,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "C": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 4,
+          "conditional_breach_probability": 0.041666666666666664,
+          "conditional_mean_log_growth": 0.03536665152712378,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "D": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "E": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 4,
+          "conditional_breach_probability": 0.041666666666666664,
+          "conditional_mean_log_growth": 0.036731305697731385,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        }
+      },
+      "eligible": true,
+      "eligibility_reasons": []
+    },
+    {
+      "training_screen_gamma": 0.05,
+      "service_alpha": 0.1,
+      "solver_gamma": 0.05,
+      "total_path_profile_units": 480,
+      "raw_auto_path_profile_units": 288,
+      "raw_review_path_profile_units": 192,
+      "raw_auto_unit_mean_log_growth": 0.03702261444633584,
+      "profiles": {
+        "A": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "B": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 5,
+          "conditional_breach_probability": 0.052083333333333336,
+          "conditional_mean_log_growth": 0.028509078101504427,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "C": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 6,
+          "conditional_breach_probability": 0.0625,
+          "conditional_mean_log_growth": 0.03726450743029349,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "D": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "E": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 4,
+          "conditional_breach_probability": 0.041666666666666664,
+          "conditional_mean_log_growth": 0.04529425780720958,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        }
+      },
+      "eligible": true,
+      "eligibility_reasons": []
+    },
+    {
+      "training_screen_gamma": 0.075,
+      "service_alpha": 0.1,
+      "solver_gamma": 0.075,
+      "total_path_profile_units": 480,
+      "raw_auto_path_profile_units": 288,
+      "raw_review_path_profile_units": 192,
+      "raw_auto_unit_mean_log_growth": 0.03819997992317488,
+      "profiles": {
+        "A": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "B": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 7,
+          "conditional_breach_probability": 0.07291666666666667,
+          "conditional_mean_log_growth": 0.029770774135986184,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "C": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 8,
+          "conditional_breach_probability": 0.08333333333333333,
+          "conditional_mean_log_growth": 0.038035675281504866,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "D": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "E": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 6,
+          "conditional_breach_probability": 0.0625,
+          "conditional_mean_log_growth": 0.04679349035203358,
+          "empirical_service_risk_pass": true,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        }
+      },
+      "eligible": true,
+      "eligibility_reasons": []
+    },
+    {
+      "training_screen_gamma": 0.1,
+      "service_alpha": 0.1,
+      "solver_gamma": 0.1,
+      "total_path_profile_units": 480,
+      "raw_auto_path_profile_units": 288,
+      "raw_review_path_profile_units": 192,
+      "raw_auto_unit_mean_log_growth": 0.03985909272672431,
+      "profiles": {
+        "A": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "B": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 12,
+          "conditional_breach_probability": 0.125,
+          "conditional_mean_log_growth": 0.03193994102236108,
+          "empirical_service_risk_pass": false,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "C": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 10,
+          "conditional_breach_probability": 0.10416666666666667,
+          "conditional_mean_log_growth": 0.038910747588815194,
+          "empirical_service_risk_pass": false,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        },
+        "D": {
+          "total_paths": 96,
+          "auto_n": 0,
+          "review_n": 96,
+          "auto_folds": 0,
+          "breach_count": null,
+          "conditional_breach_probability": null,
+          "conditional_mean_log_growth": null,
+          "empirical_service_risk_pass": null,
+          "evidence_note": "No automatic outcomes; risk is null"
+        },
+        "E": {
+          "total_paths": 96,
+          "auto_n": 96,
+          "review_n": 0,
+          "auto_folds": 4,
+          "breach_count": 11,
+          "conditional_breach_probability": 0.11458333333333333,
+          "conditional_mean_log_growth": 0.04872658956899667,
+          "empirical_service_risk_pass": false,
+          "evidence_note": "Conditional auto subgroup, possibly small; dependent-fold empirical heuristic"
+        }
+      },
+      "eligible": false,
+      "eligibility_reasons": [
+        "empirical_service_risk_exceeded:B",
+        "empirical_service_risk_exceeded:C",
+        "empirical_service_risk_exceeded:E"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+client,horizon,loss_tolerance,n_original_paths,forced_breach_count,forced_breach_fraction,empirical_alpha,allowed_breach_count,empirical_budget_impossible_for_entire_declared_class,grid_min_breach_count,grid_min_breach_fraction,grid_candidates_attaining_minimum,finite_grid_empirical_budget_impossible,necessary_bound_is_not_sufficiency
+A,5,0.1,120,3,0.025,0.1,12,False,16,0.13333333333333333,1,True,True
+B,15,0.25,120,0,0.0,0.1,12,False,1,0.008333333333333333,1,False,True
+C,30,0.4,120,0,0.0,0.1,12,False,0,0.0,41,False,True
+D,25,0.15,120,6,0.05,0.1,12,False,33,0.275,1,True,True
+E,6,0.35,120,0,0.0,0.1,12,False,0,0.0,106,False,True

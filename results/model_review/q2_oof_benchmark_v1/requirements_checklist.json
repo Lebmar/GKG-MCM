@@ -1,0 +1,48 @@
+{
+  "purpose": "Working-research completeness checklist against Problem A pp. 1--3; not a final claim of competition completion",
+  "scope": "Current development research only. Earlier final-set inspection prevents any new claim that the same 121--180 data are unseen.",
+  "Q1": {
+    "development_evidence_present": [
+      "Purchasing-power net wealth, annualized log growth and real CAGR",
+      "Annual-endpoint MDD, tail exceedance/excess and CVaR diagnostics separate large loss from ordinary volatility",
+      "Three static products, transparent profile-horizon-specific assignment or Review",
+      "Explicit policy uncertainty and alternative inner-screen calibration"
+    ],
+    "pending_for_final_answer": [
+      "Choose and freeze one coherent three-product/onboarding policy without treating exploratory alternatives as simultaneous final recommendations",
+      "State what liquidity labels can and cannot identify, and give brief A--E explanations",
+      "Clarify whether each portfolio uses all three assets, given zero-weight possibilities in explored long-only menus"
+    ]
+  },
+  "Q2": {
+    "development_evidence_present": [
+      "Frozen OOF Balanced client C uses its stated 30-year horizon, with annual/hold/myopic/finite execution compared on identical paths and targets",
+      "This artifact explicitly restores exact one-third equity/bond/bill annually with the stated fee as the required baseline",
+      "Median and P10 real CAGR, median and P90 MDD, actual trade fraction, mean annual log growth, fees, breach counts and CVaR90 pooled from all 120 path metrics",
+      "Prespecified annual-policy worst OOF C severe-loss episode, with peak/trough/recovery and actual trades/costs",
+      "No-decision-from-evaluation causal execution and finite-horizon approximation checks"
+    ],
+    "pending_for_final_answer": [
+      "Decide and state whether to adopt automated rebalancing or target-weight updates; a hold-versus-restore gate keeps its target fixed and is not a target-change rule",
+      "Provide one customer-facing explanation of at most 50 English words for a trade, target change or human review",
+      "Select the coherent final policy and define its authorized final evaluation; this development table does not supply the required final 121--180 assessment or decide a gate winner"
+    ]
+  },
+  "Q3": {
+    "development_evidence_present": [
+      "Modeling-assumption diagnostics include synthetic-market dependence/annual stationarity concerns, fee-observation MDD sensitivity and finite-mesh execution approximation",
+      "Known final-set exposure, small effective evidence samples, liquidity nonidentification and risk transfer from static to dynamic policies have been recorded"
+    ],
+    "pending_for_final_answer": [
+      "Tie one chosen assumption/cost diagnostic to the actual frozen main recommendation and explicitly say whether that recommendation changes",
+      "Freeze the important limitation, precise human-review/suspension trigger, and pending-review action; do not promise a fresh annual reset of the whole-horizon risk budget"
+    ]
+  },
+  "submission": [
+    "Concise recommendation must cover all three portfolios, A--E, Balanced updates and main safeguard",
+    "English report at most 10 A4 pages, font at least 11pt, members named",
+    "AI use disclosure and independently checked calculations/code/references",
+    "Source/supplement ZIP at most 50 MB; preserve dataset/problem CC BY-NC-SA attribution and license requirements"
+  ],
+  "interpretation": "A development experiment can address an item without resolving the final modeling decision. No safeguard or gate is adopted by this checklist."
+}

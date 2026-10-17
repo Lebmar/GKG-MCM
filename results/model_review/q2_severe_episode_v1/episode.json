@@ -1,0 +1,305 @@
+{
+  "selected": {
+    "scenario_id": 5,
+    "fold": 5,
+    "client": "C",
+    "case": "alpha_10__risk_only",
+    "horizon": 30,
+    "loss_tolerance": 0.4,
+    "assignment": "Balanced",
+    "candidate_index": 157,
+    "target": [
+      0.45,
+      0.15,
+      0.4
+    ],
+    "original_selecting_mdd": 0.5770760890977236
+  },
+  "annual_episode": {
+    "peak_year": 1,
+    "trough_year": 7,
+    "peak_real_wealth": 112.10285570074352,
+    "trough_real_wealth": 47.410978156272016,
+    "mdd": 0.5770760890977236,
+    "recovery_year": 18,
+    "recovered_by_horizon": true,
+    "horizon_year": 30
+  },
+  "policy_metrics": {
+    "annual_restore": {
+      "log_growth": 0.0358141353761698,
+      "cagr": 0.03646318674684437,
+      "mdd": 0.5770760890977236,
+      "volatility": 0.11369349339375169,
+      "terminal_real": 292.8305890041845,
+      "nominal_fees": 0.8233863283965397,
+      "nominal_moved": 329.3545313586156,
+      "trade_fraction": 1.0,
+      "max_end_year_tv_drift": 0.10703936399718356,
+      "terminal_equity": 0.4669620387766807,
+      "terminal_bond": 0.13656870862010528,
+      "terminal_bill": 0.39646925260321403,
+      "target": [
+        0.45,
+        0.15,
+        0.4
+      ],
+      "reference_only": false,
+      "trade_return_years": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "own_maximum_drawdown_episode": {
+        "peak_year": 1,
+        "trough_year": 7,
+        "peak_real_wealth": 112.10285570074352,
+        "trough_real_wealth": 47.410978156272016,
+        "mdd": 0.5770760890977236,
+        "recovery_year": 18,
+        "recovered_by_horizon": true,
+        "horizon_year": 30
+      },
+      "at_annual_episode_dates": {
+        "peak_year_real_wealth": 112.10285570074352,
+        "trough_year_real_wealth": 47.410978156272016,
+        "trough_year_own_running_peak_drawdown": 0.5770760890977236
+      }
+    },
+    "initial_then_hold": {
+      "log_growth": 0.04198836588836322,
+      "cagr": 0.04288234567055101,
+      "mdd": 0.5080205281893365,
+      "volatility": 0.10638339083125031,
+      "terminal_real": 352.41912476545434,
+      "nominal_fees": 0.14977533699450823,
+      "nominal_moved": 59.910134797803295,
+      "trade_fraction": 0.03333333333333333,
+      "max_end_year_tv_drift": 0.3615341974848482,
+      "terminal_equity": 0.8115341974848482,
+      "terminal_bond": 0.034171605063536024,
+      "terminal_bill": 0.15429419745161574,
+      "target": [
+        0.45,
+        0.15,
+        0.4
+      ],
+      "reference_only": false,
+      "trade_return_years": [
+        1
+      ],
+      "own_maximum_drawdown_episode": {
+        "peak_year": 1,
+        "trough_year": 7,
+        "peak_real_wealth": 112.10285570074352,
+        "trough_real_wealth": 55.15230373611882,
+        "mdd": 0.5080205281893365,
+        "recovery_year": 19,
+        "recovered_by_horizon": true,
+        "horizon_year": 30
+      },
+      "at_annual_episode_dates": {
+        "peak_year_real_wealth": 112.10285570074352,
+        "trough_year_real_wealth": 55.15230373611882,
+        "trough_year_own_running_peak_drawdown": 0.5080205281893365
+      }
+    },
+    "finite_horizon_gate": {
+      "log_growth": 0.06454966330789556,
+      "cagr": 0.06667855171455851,
+      "mdd": 0.5826558021312764,
+      "volatility": 0.14112793547202798,
+      "terminal_real": 693.4367872146053,
+      "nominal_fees": 0.23039001986759855,
+      "nominal_moved": 92.15600794703943,
+      "trade_fraction": 0.2,
+      "max_end_year_tv_drift": 0.4969959599698219,
+      "terminal_equity": 0.9469959599698219,
+      "terminal_bond": 0.011164418901570177,
+      "terminal_bill": 0.04183962112860792,
+      "target": [
+        0.45,
+        0.15,
+        0.4
+      ],
+      "reference_only": false,
+      "trade_return_years": [
+        1,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "own_maximum_drawdown_episode": {
+        "peak_year": 1,
+        "trough_year": 7,
+        "peak_real_wealth": 112.10285570074352,
+        "trough_real_wealth": 46.78547639122007,
+        "mdd": 0.5826558021312764,
+        "recovery_year": 17,
+        "recovered_by_horizon": true,
+        "horizon_year": 30
+      },
+      "at_annual_episode_dates": {
+        "peak_year_real_wealth": 112.10285570074352,
+        "trough_year_real_wealth": 46.78547639122007,
+        "trough_year_own_running_peak_drawdown": 0.5826558021312764
+      }
+    },
+    "equal_weight_annual": {
+      "log_growth": 0.02636332967172749,
+      "cagr": 0.026713916344375598,
+      "mdd": 0.5087201421391145,
+      "volatility": 0.10031215498233481,
+      "terminal_real": 220.53801334258958,
+      "nominal_fees": 0.7451657631296076,
+      "nominal_moved": 298.066305251843,
+      "trade_fraction": 1.0,
+      "max_end_year_tv_drift": 0.09565948156522089,
+      "terminal_equity": 0.35303804707730346,
+      "terminal_bond": 0.3097507688810378,
+      "terminal_bill": 0.3372111840416587,
+      "target": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "reference_only": true,
+      "trade_return_years": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "own_maximum_drawdown_episode": {
+        "peak_year": 1,
+        "trough_year": 7,
+        "peak_real_wealth": 109.63269884925926,
+        "trough_real_wealth": 53.860336707569346,
+        "mdd": 0.5087201421391145,
+        "recovery_year": 18,
+        "recovered_by_horizon": true,
+        "horizon_year": 30
+      },
+      "at_annual_episode_dates": {
+        "peak_year_real_wealth": 109.63269884925926,
+        "trough_year_real_wealth": 53.860336707569346,
+        "trough_year_own_running_peak_drawdown": 0.5087201421391145
+      }
+    }
+  },
+  "summary_reconciliation_abs_errors": {
+    "annual_restore": {
+      "log_growth": 0.0,
+      "cagr": 6.938893903907228e-17,
+      "mdd": 0.0,
+      "volatility": 9.71445146547012e-17,
+      "terminal_real": 0.0,
+      "nominal_fees": 0.0,
+      "nominal_moved": 0.0,
+      "trade_fraction": 0.0,
+      "max_end_year_tv_drift": 5.551115123125783e-17,
+      "terminal_equity": 0.0,
+      "terminal_bond": 8.326672684688674e-17,
+      "terminal_bill": 5.551115123125783e-17
+    },
+    "initial_then_hold": {
+      "log_growth": 2.0816681711721685e-17,
+      "cagr": 1.3877787807814457e-17,
+      "mdd": 0.0,
+      "volatility": 1.3877787807814457e-17,
+      "terminal_real": 0.0,
+      "nominal_fees": 2.7755575615628914e-17,
+      "nominal_moved": 0.0,
+      "trade_fraction": 3.469446951953614e-17,
+      "max_end_year_tv_drift": 0.0,
+      "terminal_equity": 0.0,
+      "terminal_bond": 2.7755575615628914e-17,
+      "terminal_bill": 2.7755575615628914e-17
+    },
+    "finite_horizon_gate": {
+      "log_growth": 6.938893903907228e-17,
+      "cagr": 1.3877787807814457e-17,
+      "mdd": 0.0,
+      "volatility": 8.326672684688674e-17,
+      "terminal_real": 0.0,
+      "nominal_fees": 5.551115123125783e-17,
+      "nominal_moved": 1.4210854715202004e-14,
+      "trade_fraction": 0.0,
+      "max_end_year_tv_drift": 0.0,
+      "terminal_equity": 1.1102230246251565e-16,
+      "terminal_bond": 7.632783294297951e-17,
+      "terminal_bill": 2.0816681711721685e-17
+    },
+    "equal_weight_annual": {
+      "log_growth": 9.020562075079397e-17,
+      "cagr": 9.71445146547012e-17,
+      "mdd": 0.0,
+      "volatility": 1.3877787807814457e-17,
+      "terminal_real": 2.842170943040401e-14,
+      "nominal_fees": 0.0,
+      "nominal_moved": 0.0,
+      "trade_fraction": 0.0,
+      "max_end_year_tv_drift": 8.326672684688674e-17,
+      "terminal_equity": 5.551115123125783e-17,
+      "terminal_bond": 0.0,
+      "terminal_bill": 0.0
+    }
+  },
+  "selection_bias": "Annual policy's worst original OOF client-C path; no overall policy ranking or typical-path inference",
+  "timing": "All MDD observations are original annual endpoints. Actual transfer/fee year t precedes its return; no extra fee observation or intrayear market path is inserted."
+}

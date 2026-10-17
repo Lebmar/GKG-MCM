@@ -1,0 +1,54 @@
+{
+  "version": "policy-independent-annual-drawdown-lower-bound-v1",
+  "date_beijing": "2026-10-17",
+  "status": "Declared before computing this new optimistic lower bound or its forced-path counts.",
+  "prior_exposure": "Development portfolios, OOF diagnostics, and temporal-order results have already been inspected. V1 final results were exposed earlier in the project. This is a new mathematical diagnostic on reused development paths, not preregistration on unseen data or a new independent test.",
+  "scope": "Guarded original scenarios1--120 only; each client's first H annual periods. No final scenarios, strategy retuning, new menu selection, inferential certificate, or policy competition.",
+  "allowed_scenario_ids": [1, 120],
+  "forbidden_final_access": true,
+  "profiles": [
+    {"name": "A", "horizon": 5, "loss_tolerance": 0.10},
+    {"name": "B", "horizon": 15, "loss_tolerance": 0.25},
+    {"name": "C", "horizon": 30, "loss_tolerance": 0.40},
+    {"name": "D", "horizon": 25, "loss_tolerance": 0.15},
+    {"name": "E", "horizon": 6, "loss_tolerance": 0.35}
+  ],
+  "admissible_strategy_class": {
+    "timing": "At each annual decision, choose a long-only fully invested combination before that year's return realization; no further trading inside the year. The bound even permits clairvoyance at these annual decisions as an optimistic relaxation.",
+    "assets": "Exactly the three stated assets: equity, government bonds, bill proxy. Any additional permitted cash option would need inclusion in the annual maximum before claiming the bound.",
+    "accounting": "No external deposits/withdrawals, leverage, short positions or negative transaction fees; strictly positive wealth and gross returns. Any nonnegative self-financing transaction cost can only reduce that year's real wealth factor.",
+    "inflation": "The same positive common CPI gross applies to all three assets in a given year. No independently shuffled inflation or mean-inflation replacement.",
+    "observation": "Initial100 plus annual-endpoint real wealth, exactly as the existing MDD metric. The annual lower bound also bounds a strategy's more frequently observed MDD only when the strategy itself still obeys the annual-trading restrictions."
+  },
+  "mathematics": {
+    "annual_envelope": "m_t=max_a((1+r_a,t)/(1+inflation_t)). For any admissible policy's actual real factor f_t, f_t<=m_t.",
+    "interval_proof": "For every interval0<=s<t<=H, R_t/R_s=product_(k=s+1)^t f_k<=product_(k=s+1)^t m_k. Therefore1-R_t/R_s>=1-product m, and taking the maximum over all intervals AND0 gives MDD_policy>=D_star.",
+    "definition": "D_star=max(0,max_(0<=s<t<=H)(1-product_(k=s+1)^t m_k)). Equivalently include the empty interval s=t. Omitting0 would yield a negative value on an always-rising ideal path.",
+    "ideal_path": "Let I_0=100 and I_t=100*product_(k=1)^t m_k. D_star is the annual MDD of this zero-fee, annually clairvoyant best-asset path. Its per-period/interval upper envelope is essential to the proof.",
+    "not_pointwise_dominance": "Pointwise dominance I_t>=R_t alone does not imply an MDD ordering: for example upper path100,200,120 has MDD.4 and lower path100,110,105 has MDD1-105/110. The proof uses every interval's growth ratio.",
+    "intrayear_counterexample": "Two assets with half-year gross(2,.4) and(.4,2) each have annual gross.8, giving annual-envelope D_star.2. A clairvoyant half-year switching strategy can instead have annual gross4 and annual-endpoint MDD0. Annual best-asset gross and its MDD lower bound do not cover strategies permitted to trade inside the year.",
+    "numeric_method": "Use cumulative log(m_t), initial log wealth0, its running peak, and -expm1(logwealth-logpeak) to compute the nonnegative drawdown. Save each path's peak-to-trough witness and best-asset annual evidence."
+  },
+  "forced_event": {
+    "event": "D_star - client_L >1e-12, the same numerical equality guard as prior MDD diagnostics.",
+    "meaning": "Each forced original path must breach under every strategy in the declared annual-trading class, even those with future knowledge. It is a necessary pathwise obstruction, not a deployable strategy.",
+    "budget": "At alpha=.10 on120 equally weighted original paths, more than12 forced paths proves no strategy in this class can satisfy the original empirical120-path budget. This does not establish infeasibility or risk probability under an unknown real distribution.",
+    "nonconverse": "Zero forced paths, or at most12, does not prove the existence of a safe causal policy; different paths' clairvoyant asset choices may be mutually incompatible for a causal rule. No forced count produces a new statistical certificate."
+  },
+  "cached_grid_comparator": {
+    "file": "results/model_review/risk_menu_v1/cache/step_0500__cost_002500.npz",
+    "metadata": "results/model_review/risk_menu_v1/cache/step_0500__cost_002500.json",
+    "family": "The existing232 fixed annual-target candidates at cost.0025, including exact thirds; no weights or policies are refitted.",
+    "comparison": "For each client report the minimum cached candidate breach count, number of candidates attaining that count, and the full candidate-count table. This describes the previous finite family; no minimizing target is promoted or selected.",
+    "consistency_check": "Every cached candidate's per-path MDD must be at least D_star within1e-12, and each candidate's breach count must be no smaller than the forced count. Verify scenario IDs, data-array digest, cache metadata, source hashes and NPZ SHA."
+  },
+  "outputs": ["summary.json", "client_counts.csv", "path_bounds.csv", "clairvoyant_asset_path.csv", "grid_client_counts.csv", "manifest.json"],
+  "provenance": "Hash protocol before market loading. Guard load_paths(...,range(1,121),allow_final=False); record development-array digest, source/input artifact SHA at start/end and output SHA. Abort completion manifest on drift.",
+  "checks": [
+    "Always-increasing envelopes have zero, not negative, MDD.",
+    "Inflation alone and peak-to-trough wealth, rather than initial wealth, can force positive lower bounds.",
+    "Permutation/annual best-asset selection is labelled clairvoyant and is not a nonanticipating investment recommendation.",
+    "Nonnegative exact transaction fees cannot violate the lower bound; random synthetic causal hold/restore trajectories satisfy it.",
+    "Pointwise wealth dominance alone cannot establish MDD ordering; interval ratios are verified in toy examples."
+  ]
+}

@@ -1,0 +1,1002 @@
+{
+  "completed_utc": "2026-10-17T11:24:53.910909+00:00",
+  "status": "passed",
+  "runtime": {
+    "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "numpy": "2.3.5"
+  },
+  "case_count": 5,
+  "solver_comparisons": 10,
+  "checks_passed": 83,
+  "checks": [
+    {
+      "name": "H1_finite_duality_gap/prune=True/feasibility",
+      "passed": true
+    },
+    {
+      "name": "H1_finite_duality_gap/prune=True/optimal_expected_growth",
+      "passed": true
+    },
+    {
+      "name": "H1_finite_duality_gap/prune=True/all_returned_pairs_have_independent_counterpart",
+      "passed": true
+    },
+    {
+      "name": "H1_finite_duality_gap/prune=True/independent_selected_policy_replay",
+      "passed": true
+    },
+    {
+      "name": "H1_finite_duality_gap/prune=True/effective_chance_budget",
+      "passed": true
+    },
+    {
+      "name": "H1_finite_duality_gap/prune=True/mixture_feasibility",
+      "passed": true
+    },
+    {
+      "name": "H1_finite_duality_gap/prune=True/mixture_expected_growth",
+      "passed": true
+    },
+    {
+      "name": "H1_finite_duality_gap/prune=True/mixture_primal_dual_agreement",
+      "passed": true
+    },
+    {
+      "name": "H1_finite_duality_gap/prune=True/mixture_is_upper_bound",
+      "passed": true
+    },
+    {
+      "name": "H1_finite_duality_gap/prune=False/feasibility",
+      "passed": true
+    },
+    {
+      "name": "H1_finite_duality_gap/prune=False/optimal_expected_growth",
+      "passed": true
+    },
+    {
+      "name": "H1_finite_duality_gap/prune=False/all_returned_pairs_have_independent_counterpart",
+      "passed": true
+    },
+    {
+      "name": "H1_finite_duality_gap/prune=False/independent_selected_policy_replay",
+      "passed": true
+    },
+    {
+      "name": "H1_finite_duality_gap/prune=False/effective_chance_budget",
+      "passed": true
+    },
+    {
+      "name": "H1_finite_duality_gap/prune=False/mixture_feasibility",
+      "passed": true
+    },
+    {
+      "name": "H1_finite_duality_gap/prune=False/mixture_expected_growth",
+      "passed": true
+    },
+    {
+      "name": "H1_finite_duality_gap/prune=False/mixture_primal_dual_agreement",
+      "passed": true
+    },
+    {
+      "name": "H1_finite_duality_gap/prune=False/mixture_is_upper_bound",
+      "passed": true
+    },
+    {
+      "name": "H2_joint_three_outcomes/prune=True/feasibility",
+      "passed": true
+    },
+    {
+      "name": "H2_joint_three_outcomes/prune=True/optimal_expected_growth",
+      "passed": true
+    },
+    {
+      "name": "H2_joint_three_outcomes/prune=True/all_returned_pairs_have_independent_counterpart",
+      "passed": true
+    },
+    {
+      "name": "H2_joint_three_outcomes/prune=True/independent_selected_policy_replay",
+      "passed": true
+    },
+    {
+      "name": "H2_joint_three_outcomes/prune=True/effective_chance_budget",
+      "passed": true
+    },
+    {
+      "name": "H2_joint_three_outcomes/prune=True/mixture_feasibility",
+      "passed": true
+    },
+    {
+      "name": "H2_joint_three_outcomes/prune=True/mixture_expected_growth",
+      "passed": true
+    },
+    {
+      "name": "H2_joint_three_outcomes/prune=True/mixture_primal_dual_agreement",
+      "passed": true
+    },
+    {
+      "name": "H2_joint_three_outcomes/prune=True/mixture_is_upper_bound",
+      "passed": true
+    },
+    {
+      "name": "H2_joint_three_outcomes/prune=False/feasibility",
+      "passed": true
+    },
+    {
+      "name": "H2_joint_three_outcomes/prune=False/optimal_expected_growth",
+      "passed": true
+    },
+    {
+      "name": "H2_joint_three_outcomes/prune=False/all_returned_pairs_have_independent_counterpart",
+      "passed": true
+    },
+    {
+      "name": "H2_joint_three_outcomes/prune=False/independent_selected_policy_replay",
+      "passed": true
+    },
+    {
+      "name": "H2_joint_three_outcomes/prune=False/effective_chance_budget",
+      "passed": true
+    },
+    {
+      "name": "H2_joint_three_outcomes/prune=False/mixture_feasibility",
+      "passed": true
+    },
+    {
+      "name": "H2_joint_three_outcomes/prune=False/mixture_expected_growth",
+      "passed": true
+    },
+    {
+      "name": "H2_joint_three_outcomes/prune=False/mixture_primal_dual_agreement",
+      "passed": true
+    },
+    {
+      "name": "H2_joint_three_outcomes/prune=False/mixture_is_upper_bound",
+      "passed": true
+    },
+    {
+      "name": "H3_absorbing_hold_only/prune=True/feasibility",
+      "passed": true
+    },
+    {
+      "name": "H3_absorbing_hold_only/prune=True/optimal_expected_growth",
+      "passed": true
+    },
+    {
+      "name": "H3_absorbing_hold_only/prune=True/all_returned_pairs_have_independent_counterpart",
+      "passed": true
+    },
+    {
+      "name": "H3_absorbing_hold_only/prune=True/independent_selected_policy_replay",
+      "passed": true
+    },
+    {
+      "name": "H3_absorbing_hold_only/prune=True/effective_chance_budget",
+      "passed": true
+    },
+    {
+      "name": "H3_absorbing_hold_only/prune=True/mixture_feasibility",
+      "passed": true
+    },
+    {
+      "name": "H3_absorbing_hold_only/prune=True/mixture_expected_growth",
+      "passed": true
+    },
+    {
+      "name": "H3_absorbing_hold_only/prune=True/mixture_primal_dual_agreement",
+      "passed": true
+    },
+    {
+      "name": "H3_absorbing_hold_only/prune=True/mixture_is_upper_bound",
+      "passed": true
+    },
+    {
+      "name": "H3_absorbing_hold_only/prune=False/feasibility",
+      "passed": true
+    },
+    {
+      "name": "H3_absorbing_hold_only/prune=False/optimal_expected_growth",
+      "passed": true
+    },
+    {
+      "name": "H3_absorbing_hold_only/prune=False/all_returned_pairs_have_independent_counterpart",
+      "passed": true
+    },
+    {
+      "name": "H3_absorbing_hold_only/prune=False/independent_selected_policy_replay",
+      "passed": true
+    },
+    {
+      "name": "H3_absorbing_hold_only/prune=False/effective_chance_budget",
+      "passed": true
+    },
+    {
+      "name": "H3_absorbing_hold_only/prune=False/mixture_feasibility",
+      "passed": true
+    },
+    {
+      "name": "H3_absorbing_hold_only/prune=False/mixture_expected_growth",
+      "passed": true
+    },
+    {
+      "name": "H3_absorbing_hold_only/prune=False/mixture_primal_dual_agreement",
+      "passed": true
+    },
+    {
+      "name": "H3_absorbing_hold_only/prune=False/mixture_is_upper_bound",
+      "passed": true
+    },
+    {
+      "name": "H2_initial_latched_review/prune=True/feasibility",
+      "passed": true
+    },
+    {
+      "name": "H2_initial_latched_review/prune=True/optimal_expected_growth",
+      "passed": true
+    },
+    {
+      "name": "H2_initial_latched_review/prune=True/all_returned_pairs_have_independent_counterpart",
+      "passed": true
+    },
+    {
+      "name": "H2_initial_latched_review/prune=True/mixture_feasibility",
+      "passed": true
+    },
+    {
+      "name": "H2_initial_latched_review/prune=True/mixture_expected_growth",
+      "passed": true
+    },
+    {
+      "name": "H2_initial_latched_review/prune=False/feasibility",
+      "passed": true
+    },
+    {
+      "name": "H2_initial_latched_review/prune=False/optimal_expected_growth",
+      "passed": true
+    },
+    {
+      "name": "H2_initial_latched_review/prune=False/all_returned_pairs_have_independent_counterpart",
+      "passed": true
+    },
+    {
+      "name": "H2_initial_latched_review/prune=False/mixture_feasibility",
+      "passed": true
+    },
+    {
+      "name": "H2_initial_latched_review/prune=False/mixture_expected_growth",
+      "passed": true
+    },
+    {
+      "name": "H1_fee_only_endpoint/prune=True/feasibility",
+      "passed": true
+    },
+    {
+      "name": "H1_fee_only_endpoint/prune=True/optimal_expected_growth",
+      "passed": true
+    },
+    {
+      "name": "H1_fee_only_endpoint/prune=True/all_returned_pairs_have_independent_counterpart",
+      "passed": true
+    },
+    {
+      "name": "H1_fee_only_endpoint/prune=True/independent_selected_policy_replay",
+      "passed": true
+    },
+    {
+      "name": "H1_fee_only_endpoint/prune=True/effective_chance_budget",
+      "passed": true
+    },
+    {
+      "name": "H1_fee_only_endpoint/prune=True/mixture_feasibility",
+      "passed": true
+    },
+    {
+      "name": "H1_fee_only_endpoint/prune=True/mixture_expected_growth",
+      "passed": true
+    },
+    {
+      "name": "H1_fee_only_endpoint/prune=True/mixture_primal_dual_agreement",
+      "passed": true
+    },
+    {
+      "name": "H1_fee_only_endpoint/prune=True/mixture_is_upper_bound",
+      "passed": true
+    },
+    {
+      "name": "H1_fee_only_endpoint/prune=False/feasibility",
+      "passed": true
+    },
+    {
+      "name": "H1_fee_only_endpoint/prune=False/optimal_expected_growth",
+      "passed": true
+    },
+    {
+      "name": "H1_fee_only_endpoint/prune=False/all_returned_pairs_have_independent_counterpart",
+      "passed": true
+    },
+    {
+      "name": "H1_fee_only_endpoint/prune=False/independent_selected_policy_replay",
+      "passed": true
+    },
+    {
+      "name": "H1_fee_only_endpoint/prune=False/effective_chance_budget",
+      "passed": true
+    },
+    {
+      "name": "H1_fee_only_endpoint/prune=False/mixture_feasibility",
+      "passed": true
+    },
+    {
+      "name": "H1_fee_only_endpoint/prune=False/mixture_expected_growth",
+      "passed": true
+    },
+    {
+      "name": "H1_fee_only_endpoint/prune=False/mixture_primal_dual_agreement",
+      "passed": true
+    },
+    {
+      "name": "H1_fee_only_endpoint/prune=False/mixture_is_upper_bound",
+      "passed": true
+    },
+    {
+      "name": "sources_stable_during_audit",
+      "passed": true
+    }
+  ],
+  "maximum_errors": {
+    "optimal_expected_growth": 5.221517662690189e-16,
+    "returned_root_pair": 9.992007221626409e-16,
+    "selected_policy_independent_replay": 5.221517662690189e-16,
+    "mixture_growth": 5.585809592645319e-16
+  },
+  "source_sha256_at_start": {
+    "scripts/audit_risk_tree_reference.py": "78b62b387c8bb08720c4301b403424b89917f117c8cb7bb7733589f85278c6cf",
+    "research/experimental_execution/risk_tree_reference.py": "98c1d3778eca4db06db742819edaa1fe4ad5c65c4e6822104fa21a7064025d19",
+    "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a"
+  },
+  "source_sha256_at_end": {
+    "scripts/audit_risk_tree_reference.py": "78b62b387c8bb08720c4301b403424b89917f117c8cb7bb7733589f85278c6cf",
+    "research/experimental_execution/risk_tree_reference.py": "98c1d3778eca4db06db742819edaa1fe4ad5c65c4e6822104fa21a7064025d19",
+    "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a"
+  },
+  "market_data_read": false,
+  "final_scenarios_read": false,
+  "independence": "Own 90-step scalar fee bisection, breadth-first action bitmasks and terminal path enumeration; no reviewed step/fee/evaluate/Pareto/mixture helper used",
+  "scope": "Finite synthetic iid support, deterministic nonanticipating full-history policy trees; this class can exceed financial-state-only deterministic Markov policies",
+  "observations": "Initial real peak plus annual endpoints only; fees are included in endpoint wealth; no fee-only observation or terminal liquidation",
+  "numerical_semantics": {
+    "audit_absolute_tolerance": 2e-14,
+    "mdd_event_tolerance": 1e-12,
+    "budget": "Requested/effective numerical chance budgets are separately recorded; comparisons use the same effective budget, without claiming exact requested-alpha feasibility"
+  },
+  "non_guarantees": [
+    "No market model calibration or policy selection",
+    "No population or real-market risk certificate",
+    "No continuous-state/long-horizon solver validation",
+    "No general floating-point, approximation or policy-error bound",
+    "Root randomization is a mathematical relaxation, not a deployed advice policy"
+  ],
+  "cases": [
+    {
+      "case": {
+        "name": "H1_finite_duality_gap",
+        "gross": [
+          [
+            0.8,
+            1,
+            1
+          ],
+          [
+            1.198158611484991,
+            1,
+            1
+          ]
+        ],
+        "inflation": [
+          0,
+          0
+        ],
+        "probabilities": [
+          0.2,
+          0.8
+        ],
+        "horizon": 1,
+        "target": [
+          1,
+          0,
+          0
+        ],
+        "loss_tolerance": 0.1,
+        "cost_rate": 0,
+        "on_breach": "continue",
+        "alpha": 0.1
+      },
+      "independently_enumerated_masks": 2,
+      "runs": [
+        {
+          "prune": true,
+          "requested_alpha": 0.1,
+          "effective_alpha": 0.10000000000001422,
+          "numerical_budget_expansion": 1.4210854715202004e-14,
+          "selected_g": 0.0,
+          "selected_q": 0.0,
+          "selected_q_minus_requested_alpha": -0.1,
+          "independent_optimal_g": 0.0,
+          "independent_mixture_g": 0.050000000000007115,
+          "reviewed_mixture_g": 0.05000000000000693,
+          "max_optimum_error": 0.0,
+          "max_root_pair_error": 3.7470027081099033e-16,
+          "max_selected_policy_replay_error": 0.0,
+          "mixture_growth_error": 1.8735013540549517e-16,
+          "returned_root_pairs": 2,
+          "solver_metadata": {
+            "scope": "Fully enumerated short history-tree reference under supplied finite iid model",
+            "max_horizon": 3,
+            "max_outcomes": 3,
+            "g": "Expected total log(real terminal wealth / real current wealth), not annualized",
+            "q": "Probability of any annual-endpoint MDD-L>1e-12, including already-latched breach",
+            "alpha_used_only_at_root": true,
+            "requested_alpha": 0.1,
+            "effective_alpha": 0.10000000000001422,
+            "probability_roundoff_guard": 1.4210854715202004e-14,
+            "applied_probability_guard": 1.4210854715202004e-14,
+            "selected_q_minus_requested_alpha": -0.1,
+            "root_feasibility": "q <= effective_alpha; alpha=0 permits only exactly zero computed q",
+            "probability_guard_meaning": "64*float64 epsilon absolute numerical convention, not a proved total rounding-error bound or a statistical risk margin; relative budget expansion may be substantial near zero",
+            "mixture_dual_scope": "Primal/dual agreement is for effective_alpha; this only gives a looser upper bound at requested_alpha, not strict original-budget feasibility or original-problem strong duality",
+            "on_breach": "continue",
+            "on_breach_meaning": "Continue the same two actions; the breach flag remains absorbing",
+            "policy_class": "Deterministic nonanticipating full-history trees; conditional budgets are implicit in branch choices",
+            "pruning": "Exact weak dominance in q and g, with at least one strict inequality; exact duplicates keep a canonical policy",
+            "peak_observations": "Initial point and annual endpoints; no extra intraperiod fee-only observation or terminal liquidation",
+            "randomized_bound": "Convex relaxation of finite whole-policy root pairs; not deployable randomized advice",
+            "population_probability_inferred": false,
+            "continuous_or_30year_solver": false,
+            "observable_support": "Duplicate positive-probability joint (gross,inflation) rows are rejected, so invisible labels cannot serve as random coins"
+          }
+        },
+        {
+          "prune": false,
+          "requested_alpha": 0.1,
+          "effective_alpha": 0.10000000000001422,
+          "numerical_budget_expansion": 1.4210854715202004e-14,
+          "selected_g": 0.0,
+          "selected_q": 0.0,
+          "selected_q_minus_requested_alpha": -0.1,
+          "independent_optimal_g": 0.0,
+          "independent_mixture_g": 0.050000000000007115,
+          "reviewed_mixture_g": 0.05000000000000693,
+          "max_optimum_error": 0.0,
+          "max_root_pair_error": 3.7470027081099033e-16,
+          "max_selected_policy_replay_error": 0.0,
+          "mixture_growth_error": 1.8735013540549517e-16,
+          "returned_root_pairs": 2,
+          "solver_metadata": {
+            "scope": "Fully enumerated short history-tree reference under supplied finite iid model",
+            "max_horizon": 3,
+            "max_outcomes": 3,
+            "g": "Expected total log(real terminal wealth / real current wealth), not annualized",
+            "q": "Probability of any annual-endpoint MDD-L>1e-12, including already-latched breach",
+            "alpha_used_only_at_root": true,
+            "requested_alpha": 0.1,
+            "effective_alpha": 0.10000000000001422,
+            "probability_roundoff_guard": 1.4210854715202004e-14,
+            "applied_probability_guard": 1.4210854715202004e-14,
+            "selected_q_minus_requested_alpha": -0.1,
+            "root_feasibility": "q <= effective_alpha; alpha=0 permits only exactly zero computed q",
+            "probability_guard_meaning": "64*float64 epsilon absolute numerical convention, not a proved total rounding-error bound or a statistical risk margin; relative budget expansion may be substantial near zero",
+            "mixture_dual_scope": "Primal/dual agreement is for effective_alpha; this only gives a looser upper bound at requested_alpha, not strict original-budget feasibility or original-problem strong duality",
+            "on_breach": "continue",
+            "on_breach_meaning": "Continue the same two actions; the breach flag remains absorbing",
+            "policy_class": "Deterministic nonanticipating full-history trees; conditional budgets are implicit in branch choices",
+            "pruning": "Exact weak dominance in q and g, with at least one strict inequality; exact duplicates keep a canonical policy",
+            "peak_observations": "Initial point and annual endpoints; no extra intraperiod fee-only observation or terminal liquidation",
+            "randomized_bound": "Convex relaxation of finite whole-policy root pairs; not deployable randomized advice",
+            "population_probability_inferred": false,
+            "continuous_or_30year_solver": false,
+            "observable_support": "Duplicate positive-probability joint (gross,inflation) rows are rejected, so invisible labels cannot serve as random coins"
+          }
+        }
+      ]
+    },
+    {
+      "case": {
+        "name": "H2_joint_three_outcomes",
+        "gross": [
+          [
+            0.7,
+            1.08,
+            1.01
+          ],
+          [
+            1.3,
+            0.95,
+            1
+          ],
+          [
+            1,
+            1.02,
+            0.99
+          ]
+        ],
+        "inflation": [
+          0.02,
+          -0.01,
+          0.01
+        ],
+        "probabilities": [
+          0.2,
+          0.3,
+          0.5
+        ],
+        "horizon": 2,
+        "target": [
+          0.5,
+          0.25,
+          0.25
+        ],
+        "loss_tolerance": 0.12,
+        "cost_rate": 0.0025,
+        "on_breach": "continue",
+        "alpha": 0.1
+      },
+      "independently_enumerated_masks": 16,
+      "runs": [
+        {
+          "prune": true,
+          "requested_alpha": 0.1,
+          "effective_alpha": 0.10000000000001422,
+          "numerical_budget_expansion": 1.4210854715202004e-14,
+          "selected_g": -0.011020566749018858,
+          "selected_q": 0.1,
+          "selected_q_minus_requested_alpha": 0.0,
+          "independent_optimal_g": -0.011020566749018336,
+          "independent_mixture_g": -0.009735548313510691,
+          "reviewed_mixture_g": -0.00973554831351125,
+          "max_optimum_error": 5.221517662690189e-16,
+          "max_root_pair_error": 6.349087922075114e-16,
+          "max_selected_policy_replay_error": 5.221517662690189e-16,
+          "mixture_growth_error": 5.585809592645319e-16,
+          "returned_root_pairs": 8,
+          "solver_metadata": {
+            "scope": "Fully enumerated short history-tree reference under supplied finite iid model",
+            "max_horizon": 3,
+            "max_outcomes": 3,
+            "g": "Expected total log(real terminal wealth / real current wealth), not annualized",
+            "q": "Probability of any annual-endpoint MDD-L>1e-12, including already-latched breach",
+            "alpha_used_only_at_root": true,
+            "requested_alpha": 0.1,
+            "effective_alpha": 0.10000000000001422,
+            "probability_roundoff_guard": 1.4210854715202004e-14,
+            "applied_probability_guard": 1.4210854715202004e-14,
+            "selected_q_minus_requested_alpha": 0.0,
+            "root_feasibility": "q <= effective_alpha; alpha=0 permits only exactly zero computed q",
+            "probability_guard_meaning": "64*float64 epsilon absolute numerical convention, not a proved total rounding-error bound or a statistical risk margin; relative budget expansion may be substantial near zero",
+            "mixture_dual_scope": "Primal/dual agreement is for effective_alpha; this only gives a looser upper bound at requested_alpha, not strict original-budget feasibility or original-problem strong duality",
+            "on_breach": "continue",
+            "on_breach_meaning": "Continue the same two actions; the breach flag remains absorbing",
+            "policy_class": "Deterministic nonanticipating full-history trees; conditional budgets are implicit in branch choices",
+            "pruning": "Exact weak dominance in q and g, with at least one strict inequality; exact duplicates keep a canonical policy",
+            "peak_observations": "Initial point and annual endpoints; no extra intraperiod fee-only observation or terminal liquidation",
+            "randomized_bound": "Convex relaxation of finite whole-policy root pairs; not deployable randomized advice",
+            "population_probability_inferred": false,
+            "continuous_or_30year_solver": false,
+            "observable_support": "Duplicate positive-probability joint (gross,inflation) rows are rejected, so invisible labels cannot serve as random coins"
+          }
+        },
+        {
+          "prune": false,
+          "requested_alpha": 0.1,
+          "effective_alpha": 0.10000000000001422,
+          "numerical_budget_expansion": 1.4210854715202004e-14,
+          "selected_g": -0.011020566749018858,
+          "selected_q": 0.1,
+          "selected_q_minus_requested_alpha": 0.0,
+          "independent_optimal_g": -0.011020566749018336,
+          "independent_mixture_g": -0.009735548313510691,
+          "reviewed_mixture_g": -0.00973554831351125,
+          "max_optimum_error": 5.221517662690189e-16,
+          "max_root_pair_error": 6.349087922075114e-16,
+          "max_selected_policy_replay_error": 5.221517662690189e-16,
+          "mixture_growth_error": 5.585809592645319e-16,
+          "returned_root_pairs": 16,
+          "solver_metadata": {
+            "scope": "Fully enumerated short history-tree reference under supplied finite iid model",
+            "max_horizon": 3,
+            "max_outcomes": 3,
+            "g": "Expected total log(real terminal wealth / real current wealth), not annualized",
+            "q": "Probability of any annual-endpoint MDD-L>1e-12, including already-latched breach",
+            "alpha_used_only_at_root": true,
+            "requested_alpha": 0.1,
+            "effective_alpha": 0.10000000000001422,
+            "probability_roundoff_guard": 1.4210854715202004e-14,
+            "applied_probability_guard": 1.4210854715202004e-14,
+            "selected_q_minus_requested_alpha": 0.0,
+            "root_feasibility": "q <= effective_alpha; alpha=0 permits only exactly zero computed q",
+            "probability_guard_meaning": "64*float64 epsilon absolute numerical convention, not a proved total rounding-error bound or a statistical risk margin; relative budget expansion may be substantial near zero",
+            "mixture_dual_scope": "Primal/dual agreement is for effective_alpha; this only gives a looser upper bound at requested_alpha, not strict original-budget feasibility or original-problem strong duality",
+            "on_breach": "continue",
+            "on_breach_meaning": "Continue the same two actions; the breach flag remains absorbing",
+            "policy_class": "Deterministic nonanticipating full-history trees; conditional budgets are implicit in branch choices",
+            "pruning": "Exact weak dominance in q and g, with at least one strict inequality; exact duplicates keep a canonical policy",
+            "peak_observations": "Initial point and annual endpoints; no extra intraperiod fee-only observation or terminal liquidation",
+            "randomized_bound": "Convex relaxation of finite whole-policy root pairs; not deployable randomized advice",
+            "population_probability_inferred": false,
+            "continuous_or_30year_solver": false,
+            "observable_support": "Duplicate positive-probability joint (gross,inflation) rows are rejected, so invisible labels cannot serve as random coins"
+          }
+        }
+      ]
+    },
+    {
+      "case": {
+        "name": "H3_absorbing_hold_only",
+        "gross": [
+          [
+            0.85,
+            1.04,
+            1.01
+          ],
+          [
+            1.25,
+            0.99,
+            1
+          ]
+        ],
+        "inflation": [
+          0.04,
+          -0.01
+        ],
+        "probabilities": [
+          0.25,
+          0.75
+        ],
+        "horizon": 3,
+        "target": [
+          0.7,
+          0.2,
+          0.1
+        ],
+        "loss_tolerance": 0.2,
+        "cost_rate": 0.0025,
+        "on_breach": "hold_only",
+        "alpha": 0.1,
+        "initial": [
+          40,
+          20,
+          40
+        ]
+      },
+      "independently_enumerated_masks": 128,
+      "runs": [
+        {
+          "prune": true,
+          "requested_alpha": 0.1,
+          "effective_alpha": 0.10000000000001422,
+          "numerical_budget_expansion": 1.4210854715202004e-14,
+          "selected_g": 0.2315780568146406,
+          "selected_q": 0.0625,
+          "selected_q_minus_requested_alpha": -0.037500000000000006,
+          "independent_optimal_g": 0.2315780568146408,
+          "independent_mixture_g": 0.277397926360516,
+          "reviewed_mixture_g": 0.2773979263605155,
+          "max_optimum_error": 1.942890293094024e-16,
+          "max_root_pair_error": 5.828670879282072e-16,
+          "max_selected_policy_replay_error": 1.942890293094024e-16,
+          "mixture_growth_error": 4.996003610813204e-16,
+          "returned_root_pairs": 3,
+          "solver_metadata": {
+            "scope": "Fully enumerated short history-tree reference under supplied finite iid model",
+            "max_horizon": 3,
+            "max_outcomes": 3,
+            "g": "Expected total log(real terminal wealth / real current wealth), not annualized",
+            "q": "Probability of any annual-endpoint MDD-L>1e-12, including already-latched breach",
+            "alpha_used_only_at_root": true,
+            "requested_alpha": 0.1,
+            "effective_alpha": 0.10000000000001422,
+            "probability_roundoff_guard": 1.4210854715202004e-14,
+            "applied_probability_guard": 1.4210854715202004e-14,
+            "selected_q_minus_requested_alpha": -0.037500000000000006,
+            "root_feasibility": "q <= effective_alpha; alpha=0 permits only exactly zero computed q",
+            "probability_guard_meaning": "64*float64 epsilon absolute numerical convention, not a proved total rounding-error bound or a statistical risk margin; relative budget expansion may be substantial near zero",
+            "mixture_dual_scope": "Primal/dual agreement is for effective_alpha; this only gives a looser upper bound at requested_alpha, not strict original-budget feasibility or original-problem strong duality",
+            "on_breach": "hold_only",
+            "on_breach_meaning": "Hold actual assets while nonresponse is pending; no adviser or recovery payoff is invented",
+            "policy_class": "Deterministic nonanticipating full-history trees; conditional budgets are implicit in branch choices",
+            "pruning": "Exact weak dominance in q and g, with at least one strict inequality; exact duplicates keep a canonical policy",
+            "peak_observations": "Initial point and annual endpoints; no extra intraperiod fee-only observation or terminal liquidation",
+            "randomized_bound": "Convex relaxation of finite whole-policy root pairs; not deployable randomized advice",
+            "population_probability_inferred": false,
+            "continuous_or_30year_solver": false,
+            "observable_support": "Duplicate positive-probability joint (gross,inflation) rows are rejected, so invisible labels cannot serve as random coins"
+          }
+        },
+        {
+          "prune": false,
+          "requested_alpha": 0.1,
+          "effective_alpha": 0.10000000000001422,
+          "numerical_budget_expansion": 1.4210854715202004e-14,
+          "selected_g": 0.2315780568146406,
+          "selected_q": 0.0625,
+          "selected_q_minus_requested_alpha": -0.037500000000000006,
+          "independent_optimal_g": 0.2315780568146408,
+          "independent_mixture_g": 0.277397926360516,
+          "reviewed_mixture_g": 0.2773979263605155,
+          "max_optimum_error": 1.942890293094024e-16,
+          "max_root_pair_error": 9.992007221626409e-16,
+          "max_selected_policy_replay_error": 1.942890293094024e-16,
+          "mixture_growth_error": 4.996003610813204e-16,
+          "returned_root_pairs": 80,
+          "solver_metadata": {
+            "scope": "Fully enumerated short history-tree reference under supplied finite iid model",
+            "max_horizon": 3,
+            "max_outcomes": 3,
+            "g": "Expected total log(real terminal wealth / real current wealth), not annualized",
+            "q": "Probability of any annual-endpoint MDD-L>1e-12, including already-latched breach",
+            "alpha_used_only_at_root": true,
+            "requested_alpha": 0.1,
+            "effective_alpha": 0.10000000000001422,
+            "probability_roundoff_guard": 1.4210854715202004e-14,
+            "applied_probability_guard": 1.4210854715202004e-14,
+            "selected_q_minus_requested_alpha": -0.037500000000000006,
+            "root_feasibility": "q <= effective_alpha; alpha=0 permits only exactly zero computed q",
+            "probability_guard_meaning": "64*float64 epsilon absolute numerical convention, not a proved total rounding-error bound or a statistical risk margin; relative budget expansion may be substantial near zero",
+            "mixture_dual_scope": "Primal/dual agreement is for effective_alpha; this only gives a looser upper bound at requested_alpha, not strict original-budget feasibility or original-problem strong duality",
+            "on_breach": "hold_only",
+            "on_breach_meaning": "Hold actual assets while nonresponse is pending; no adviser or recovery payoff is invented",
+            "policy_class": "Deterministic nonanticipating full-history trees; conditional budgets are implicit in branch choices",
+            "pruning": "Exact weak dominance in q and g, with at least one strict inequality; exact duplicates keep a canonical policy",
+            "peak_observations": "Initial point and annual endpoints; no extra intraperiod fee-only observation or terminal liquidation",
+            "randomized_bound": "Convex relaxation of finite whole-policy root pairs; not deployable randomized advice",
+            "population_probability_inferred": false,
+            "continuous_or_30year_solver": false,
+            "observable_support": "Duplicate positive-probability joint (gross,inflation) rows are rejected, so invisible labels cannot serve as random coins"
+          }
+        }
+      ]
+    },
+    {
+      "case": {
+        "name": "H2_initial_latched_review",
+        "gross": [
+          [
+            0.8,
+            1,
+            1
+          ],
+          [
+            1.3,
+            1,
+            1
+          ]
+        ],
+        "inflation": [
+          0,
+          0
+        ],
+        "probabilities": [
+          0.2,
+          0.8
+        ],
+        "horizon": 2,
+        "target": [
+          1,
+          0,
+          0
+        ],
+        "loss_tolerance": 0.1,
+        "cost_rate": 0.0025,
+        "on_breach": "hold_only",
+        "alpha": 0.1,
+        "initial": [
+          20,
+          20,
+          40
+        ],
+        "peak": 100,
+        "breached": true
+      },
+      "independently_enumerated_masks": 8,
+      "runs": [
+        {
+          "prune": true,
+          "requested_alpha": 0.1,
+          "effective_alpha": 0.10000000000001422,
+          "numerical_budget_expansion": 1.4210854715202004e-14,
+          "selected_g": null,
+          "selected_q": null,
+          "selected_q_minus_requested_alpha": null,
+          "independent_optimal_g": null,
+          "independent_mixture_g": null,
+          "reviewed_mixture_g": null,
+          "max_optimum_error": 0.0,
+          "max_root_pair_error": 2.220446049250313e-16,
+          "max_selected_policy_replay_error": 0.0,
+          "mixture_growth_error": 0.0,
+          "returned_root_pairs": 1,
+          "solver_metadata": {
+            "scope": "Fully enumerated short history-tree reference under supplied finite iid model",
+            "max_horizon": 3,
+            "max_outcomes": 3,
+            "g": "Expected total log(real terminal wealth / real current wealth), not annualized",
+            "q": "Probability of any annual-endpoint MDD-L>1e-12, including already-latched breach",
+            "alpha_used_only_at_root": true,
+            "requested_alpha": 0.1,
+            "effective_alpha": 0.10000000000001422,
+            "probability_roundoff_guard": 1.4210854715202004e-14,
+            "applied_probability_guard": 1.4210854715202004e-14,
+            "selected_q_minus_requested_alpha": null,
+            "root_feasibility": "q <= effective_alpha; alpha=0 permits only exactly zero computed q",
+            "probability_guard_meaning": "64*float64 epsilon absolute numerical convention, not a proved total rounding-error bound or a statistical risk margin; relative budget expansion may be substantial near zero",
+            "mixture_dual_scope": "Primal/dual agreement is for effective_alpha; this only gives a looser upper bound at requested_alpha, not strict original-budget feasibility or original-problem strong duality",
+            "on_breach": "hold_only",
+            "on_breach_meaning": "Hold actual assets while nonresponse is pending; no adviser or recovery payoff is invented",
+            "policy_class": "Deterministic nonanticipating full-history trees; conditional budgets are implicit in branch choices",
+            "pruning": "Exact weak dominance in q and g, with at least one strict inequality; exact duplicates keep a canonical policy",
+            "peak_observations": "Initial point and annual endpoints; no extra intraperiod fee-only observation or terminal liquidation",
+            "randomized_bound": "Convex relaxation of finite whole-policy root pairs; not deployable randomized advice",
+            "population_probability_inferred": false,
+            "continuous_or_30year_solver": false,
+            "observable_support": "Duplicate positive-probability joint (gross,inflation) rows are rejected, so invisible labels cannot serve as random coins"
+          }
+        },
+        {
+          "prune": false,
+          "requested_alpha": 0.1,
+          "effective_alpha": 0.10000000000001422,
+          "numerical_budget_expansion": 1.4210854715202004e-14,
+          "selected_g": null,
+          "selected_q": null,
+          "selected_q_minus_requested_alpha": null,
+          "independent_optimal_g": null,
+          "independent_mixture_g": null,
+          "reviewed_mixture_g": null,
+          "max_optimum_error": 0.0,
+          "max_root_pair_error": 2.220446049250313e-16,
+          "max_selected_policy_replay_error": 0.0,
+          "mixture_growth_error": 0.0,
+          "returned_root_pairs": 1,
+          "solver_metadata": {
+            "scope": "Fully enumerated short history-tree reference under supplied finite iid model",
+            "max_horizon": 3,
+            "max_outcomes": 3,
+            "g": "Expected total log(real terminal wealth / real current wealth), not annualized",
+            "q": "Probability of any annual-endpoint MDD-L>1e-12, including already-latched breach",
+            "alpha_used_only_at_root": true,
+            "requested_alpha": 0.1,
+            "effective_alpha": 0.10000000000001422,
+            "probability_roundoff_guard": 1.4210854715202004e-14,
+            "applied_probability_guard": 1.4210854715202004e-14,
+            "selected_q_minus_requested_alpha": null,
+            "root_feasibility": "q <= effective_alpha; alpha=0 permits only exactly zero computed q",
+            "probability_guard_meaning": "64*float64 epsilon absolute numerical convention, not a proved total rounding-error bound or a statistical risk margin; relative budget expansion may be substantial near zero",
+            "mixture_dual_scope": "Primal/dual agreement is for effective_alpha; this only gives a looser upper bound at requested_alpha, not strict original-budget feasibility or original-problem strong duality",
+            "on_breach": "hold_only",
+            "on_breach_meaning": "Hold actual assets while nonresponse is pending; no adviser or recovery payoff is invented",
+            "policy_class": "Deterministic nonanticipating full-history trees; conditional budgets are implicit in branch choices",
+            "pruning": "Exact weak dominance in q and g, with at least one strict inequality; exact duplicates keep a canonical policy",
+            "peak_observations": "Initial point and annual endpoints; no extra intraperiod fee-only observation or terminal liquidation",
+            "randomized_bound": "Convex relaxation of finite whole-policy root pairs; not deployable randomized advice",
+            "population_probability_inferred": false,
+            "continuous_or_30year_solver": false,
+            "observable_support": "Duplicate positive-probability joint (gross,inflation) rows are rejected, so invisible labels cannot serve as random coins"
+          }
+        }
+      ]
+    },
+    {
+      "case": {
+        "name": "H1_fee_only_endpoint",
+        "gross": [
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "inflation": [
+          0
+        ],
+        "probabilities": [
+          1.0
+        ],
+        "horizon": 1,
+        "target": [
+          1,
+          0,
+          0
+        ],
+        "loss_tolerance": 0.001,
+        "cost_rate": 0.0025,
+        "on_breach": "continue",
+        "alpha": 0.1
+      },
+      "independently_enumerated_masks": 2,
+      "runs": [
+        {
+          "prune": true,
+          "requested_alpha": 0.1,
+          "effective_alpha": 0.10000000000001422,
+          "numerical_budget_expansion": 1.4210854715202004e-14,
+          "selected_g": 0.0,
+          "selected_q": 0.0,
+          "selected_q_minus_requested_alpha": -0.1,
+          "independent_optimal_g": 0.0,
+          "independent_mixture_g": 0.0,
+          "reviewed_mixture_g": 0.0,
+          "max_optimum_error": 0.0,
+          "max_root_pair_error": 0.0,
+          "max_selected_policy_replay_error": 0.0,
+          "mixture_growth_error": 0.0,
+          "returned_root_pairs": 1,
+          "solver_metadata": {
+            "scope": "Fully enumerated short history-tree reference under supplied finite iid model",
+            "max_horizon": 3,
+            "max_outcomes": 3,
+            "g": "Expected total log(real terminal wealth / real current wealth), not annualized",
+            "q": "Probability of any annual-endpoint MDD-L>1e-12, including already-latched breach",
+            "alpha_used_only_at_root": true,
+            "requested_alpha": 0.1,
+            "effective_alpha": 0.10000000000001422,
+            "probability_roundoff_guard": 1.4210854715202004e-14,
+            "applied_probability_guard": 1.4210854715202004e-14,
+            "selected_q_minus_requested_alpha": -0.1,
+            "root_feasibility": "q <= effective_alpha; alpha=0 permits only exactly zero computed q",
+            "probability_guard_meaning": "64*float64 epsilon absolute numerical convention, not a proved total rounding-error bound or a statistical risk margin; relative budget expansion may be substantial near zero",
+            "mixture_dual_scope": "Primal/dual agreement is for effective_alpha; this only gives a looser upper bound at requested_alpha, not strict original-budget feasibility or original-problem strong duality",
+            "on_breach": "continue",
+            "on_breach_meaning": "Continue the same two actions; the breach flag remains absorbing",
+            "policy_class": "Deterministic nonanticipating full-history trees; conditional budgets are implicit in branch choices",
+            "pruning": "Exact weak dominance in q and g, with at least one strict inequality; exact duplicates keep a canonical policy",
+            "peak_observations": "Initial point and annual endpoints; no extra intraperiod fee-only observation or terminal liquidation",
+            "randomized_bound": "Convex relaxation of finite whole-policy root pairs; not deployable randomized advice",
+            "population_probability_inferred": false,
+            "continuous_or_30year_solver": false,
+            "observable_support": "Duplicate positive-probability joint (gross,inflation) rows are rejected, so invisible labels cannot serve as random coins"
+          }
+        },
+        {
+          "prune": false,
+          "requested_alpha": 0.1,
+          "effective_alpha": 0.10000000000001422,
+          "numerical_budget_expansion": 1.4210854715202004e-14,
+          "selected_g": 0.0,
+          "selected_q": 0.0,
+          "selected_q_minus_requested_alpha": -0.1,
+          "independent_optimal_g": 0.0,
+          "independent_mixture_g": 0.0,
+          "reviewed_mixture_g": 0.0,
+          "max_optimum_error": 0.0,
+          "max_root_pair_error": 4.709774237277031e-16,
+          "max_selected_policy_replay_error": 0.0,
+          "mixture_growth_error": 0.0,
+          "returned_root_pairs": 2,
+          "solver_metadata": {
+            "scope": "Fully enumerated short history-tree reference under supplied finite iid model",
+            "max_horizon": 3,
+            "max_outcomes": 3,
+            "g": "Expected total log(real terminal wealth / real current wealth), not annualized",
+            "q": "Probability of any annual-endpoint MDD-L>1e-12, including already-latched breach",
+            "alpha_used_only_at_root": true,
+            "requested_alpha": 0.1,
+            "effective_alpha": 0.10000000000001422,
+            "probability_roundoff_guard": 1.4210854715202004e-14,
+            "applied_probability_guard": 1.4210854715202004e-14,
+            "selected_q_minus_requested_alpha": -0.1,
+            "root_feasibility": "q <= effective_alpha; alpha=0 permits only exactly zero computed q",
+            "probability_guard_meaning": "64*float64 epsilon absolute numerical convention, not a proved total rounding-error bound or a statistical risk margin; relative budget expansion may be substantial near zero",
+            "mixture_dual_scope": "Primal/dual agreement is for effective_alpha; this only gives a looser upper bound at requested_alpha, not strict original-budget feasibility or original-problem strong duality",
+            "on_breach": "continue",
+            "on_breach_meaning": "Continue the same two actions; the breach flag remains absorbing",
+            "policy_class": "Deterministic nonanticipating full-history trees; conditional budgets are implicit in branch choices",
+            "pruning": "Exact weak dominance in q and g, with at least one strict inequality; exact duplicates keep a canonical policy",
+            "peak_observations": "Initial point and annual endpoints; no extra intraperiod fee-only observation or terminal liquidation",
+            "randomized_bound": "Convex relaxation of finite whole-policy root pairs; not deployable randomized advice",
+            "population_probability_inferred": false,
+            "continuous_or_30year_solver": false,
+            "observable_support": "Duplicate positive-probability joint (gross,inflation) rows are rejected, so invisible labels cannot serve as random coins"
+          }
+        }
+      ]
+    }
+  ]
+}

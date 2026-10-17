@@ -1,0 +1,6 @@
+client,total_paths,nested_auto_n,primary_auto_n,common_auto_n,nested_common_breaches,primary_common_breaches,paired_common_mean_log_growth_delta,interpretation
+A,120,0,0,0,,,,"Paired common-auto subgroup only; unconditional coverage and conditional outcomes are reported separately, no pooled risk certificate"
+B,120,120,120,120,10.0,12.0,-0.001632630165475704,"Paired common-auto subgroup only; unconditional coverage and conditional outcomes are reported separately, no pooled risk certificate"
+C,120,120,120,120,9.0,13.0,-0.002032105213248605,"Paired common-auto subgroup only; unconditional coverage and conditional outcomes are reported separately, no pooled risk certificate"
+D,120,0,0,0,,,,"Paired common-auto subgroup only; unconditional coverage and conditional outcomes are reported separately, no pooled risk certificate"
+E,120,120,120,120,9.0,11.0,-0.0001675413928942158,"Paired common-auto subgroup only; unconditional coverage and conditional outcomes are reported separately, no pooled risk certificate"
