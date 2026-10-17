@@ -115,8 +115,11 @@ bootstrap (`run_risk_menu_research.py`, `analyze_risk_menu_diagnostics.py`),
 nested/strict calibration (`run_nested_static_calibration.py`,
 `run_positive_asset_specification.py`), interval and simultaneous-risk studies,
 and the finite-horizon, fee and temporal-order diagnostic runners. The numerical
-cache is rebuilt only from allowed development paths and is excluded from Git;
-source, data-array and output fingerprints remain in the manifests. A new fit
+cache contains only allowed development paths. Four frozen cache pairs are
+retained in Git because later contracts include their original metadata hashes;
+regenerating a timestamped cache in place would invalidate those contracts.
+Other caches remain disposable. Source, data-array and output fingerprints
+remain in the manifests. A new fit
 requires a new protocol/archive rather than replacement of frozen parents.
 Do not use V1 `final` or `reproduce` to select a revised model.
 

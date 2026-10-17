@@ -1,0 +1,19 @@
+{"context": "full_development", "client": "B", "training_n": 120, "risk_cap": 9, "selected": "eta_0.1", "status": "automated", "elapsed_seconds": 3.9262942089990247}
+{"context": "full_development", "client": "C", "training_n": 120, "risk_cap": 9, "selected": "eta_0.03", "status": "automated", "elapsed_seconds": 20.254157417002716}
+{"context": "full_development", "client": "E", "training_n": 120, "risk_cap": 9, "selected": "eta_0.03", "status": "automated", "elapsed_seconds": 20.7813683340064}
+{"context": "outer_fold_1", "client": "B", "training_n": 96, "risk_cap": 7, "selected": "eta_0.1", "status": "automated", "elapsed_seconds": 23.351588625009754}
+{"context": "outer_fold_1", "client": "C", "training_n": 96, "risk_cap": 7, "selected": "eta_0.1", "status": "automated", "elapsed_seconds": 34.18113916700531}
+{"context": "outer_fold_1", "client": "E", "training_n": 96, "risk_cap": 7, "selected": "eta_0.03", "status": "automated", "elapsed_seconds": 34.53856524999719}
+{"context": "outer_fold_2", "client": "B", "training_n": 96, "risk_cap": 6, "selected": "eta_0.03", "status": "automated", "elapsed_seconds": 37.10787295900809}
+{"context": "outer_fold_2", "client": "C", "training_n": 96, "risk_cap": 6, "selected": "eta_0.03", "status": "automated", "elapsed_seconds": 48.02602533400932}
+{"context": "outer_fold_2", "client": "E", "training_n": 96, "risk_cap": 7, "selected": "eta_0.1", "status": "automated", "elapsed_seconds": 48.38270370900864}
+{"context": "outer_fold_3", "client": "B", "training_n": 96, "risk_cap": 7, "selected": "eta_0.03", "status": "automated", "elapsed_seconds": 50.93728075000399}
+{"context": "outer_fold_3", "client": "C", "training_n": 96, "risk_cap": 6, "selected": "eta_0.03", "status": "automated", "elapsed_seconds": 61.716662709004595}
+{"context": "outer_fold_3", "client": "E", "training_n": 96, "risk_cap": 7, "selected": "eta_0.01", "status": "automated", "elapsed_seconds": 62.07192912499886}
+{"context": "outer_fold_4", "client": "B", "training_n": 96, "risk_cap": 7, "selected": "eta_0.1", "status": "automated", "elapsed_seconds": 64.61814620900259}
+{"context": "outer_fold_4", "client": "C", "training_n": 96, "risk_cap": 7, "selected": "eta_0.03", "status": "automated", "elapsed_seconds": 75.31074733400601}
+{"context": "outer_fold_4", "client": "E", "training_n": 96, "risk_cap": 7, "selected": "eta_0.1", "status": "automated", "elapsed_seconds": 75.66428504200303}
+{"context": "outer_fold_5", "client": "B", "training_n": 96, "risk_cap": 7, "selected": "eta_0.1", "status": "automated", "elapsed_seconds": 78.20741166699736}
+{"context": "outer_fold_5", "client": "C", "training_n": 96, "risk_cap": 6, "selected": "eta_0.03", "status": "automated", "elapsed_seconds": 89.06592029200692}
+{"context": "outer_fold_5", "client": "E", "training_n": 96, "risk_cap": 6, "selected": "eta_0.03", "status": "automated", "elapsed_seconds": 89.42358637500729}
+Wrote risk-priced execution learner to <isolated-copy>/results/model_review/risk_priced_fan_execution_v1

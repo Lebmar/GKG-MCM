@@ -12,8 +12,22 @@ analysis/
 *.synctex.gz
 report/latex/main.pdf
 
-# Rebuildable development simulation arrays; provenance remains in JSON manifests.
+# Other caches are disposable. These four source-frozen cache pairs are retained
+# because downstream provenance includes their original metadata timestamps.
 results/model_review/**/cache/
+!results/model_review/risk_menu_v1/cache/
+results/model_review/risk_menu_v1/cache/*
+!results/model_review/risk_menu_v1/cache/step_0500__cost_000000.json
+!results/model_review/risk_menu_v1/cache/step_0500__cost_000000.npz
+!results/model_review/risk_menu_v1/cache/step_0500__cost_002500.json
+!results/model_review/risk_menu_v1/cache/step_0500__cost_002500.npz
+!results/model_review/risk_menu_v1/cache/step_0500__cost_005000.json
+!results/model_review/risk_menu_v1/cache/step_0500__cost_005000.npz
+!results/model_review/risk_menu_v1/cache/step_0250__cost_002500.json
+!results/model_review/risk_menu_v1/cache/step_0250__cost_002500.npz
+
+# These sanitized logs are evidence referenced by the committed replay receipt.
+!results/model_review/execution_stage_reproduction_v1/*.log
 
 # These are recorded development analyses, rather than disposable root analysis.
 !results/model_review/risk_menu_v1/analysis/

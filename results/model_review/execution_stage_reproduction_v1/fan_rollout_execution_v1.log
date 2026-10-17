@@ -1,0 +1,7 @@
+{"context": "full_development", "elapsed_seconds": 4.395950707999873}
+{"context": "outer_fold_1", "elapsed_seconds": 5.304990999997244}
+{"context": "outer_fold_2", "elapsed_seconds": 6.213940667003044}
+{"context": "outer_fold_3", "elapsed_seconds": 7.107027417005156}
+{"context": "outer_fold_4", "elapsed_seconds": 7.979487999997218}
+{"context": "outer_fold_5", "elapsed_seconds": 8.864389624999603}
+{"output": "results/model_review/fan_rollout_execution_v1", "client_path_rows": 3600, "decision_rows": 36720}
