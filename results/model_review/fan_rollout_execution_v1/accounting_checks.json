@@ -1,0 +1,344 @@
+{
+  "full_development__B": {
+    "annual_replay_max_abs_errors": {
+      "log_growth": 9.71445146547012e-17,
+      "cagr": 9.71445146547012e-17,
+      "mdd": 9.71445146547012e-17,
+      "volatility": 9.71445146547012e-17,
+      "terminal_real": 2.842170943040401e-14
+    },
+    "paired_prefix_identity": {
+      "path_target_pairs": 120,
+      "triggered_pairs": 9,
+      "never_triggered_pairs": 111,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    }
+  },
+  "full_development__C": {
+    "annual_replay_max_abs_errors": {
+      "log_growth": 9.71445146547012e-17,
+      "cagr": 9.71445146547012e-17,
+      "mdd": 8.326672684688674e-17,
+      "volatility": 9.71445146547012e-17,
+      "terminal_real": 5.684341886080802e-14
+    },
+    "paired_prefix_identity": {
+      "path_target_pairs": 120,
+      "triggered_pairs": 9,
+      "never_triggered_pairs": 111,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    }
+  },
+  "full_development__E": {
+    "annual_replay_max_abs_errors": {
+      "log_growth": 9.71445146547012e-17,
+      "cagr": 9.71445146547012e-17,
+      "mdd": 9.71445146547012e-17,
+      "volatility": 9.71445146547012e-17,
+      "terminal_real": 2.842170943040401e-14
+    },
+    "paired_prefix_identity": {
+      "path_target_pairs": 120,
+      "triggered_pairs": 9,
+      "never_triggered_pairs": 111,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    }
+  },
+  "outer_fold_1__B": {
+    "annual_replay_max_abs_errors": {
+      "log_growth": 9.020562075079397e-17,
+      "cagr": 9.71445146547012e-17,
+      "mdd": 8.326672684688674e-17,
+      "volatility": 8.326672684688674e-17,
+      "terminal_real": 2.842170943040401e-14
+    },
+    "paired_prefix_identity": {
+      "path_target_pairs": 24,
+      "triggered_pairs": 2,
+      "never_triggered_pairs": 22,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    }
+  },
+  "outer_fold_1__C": {
+    "annual_replay_max_abs_errors": {
+      "log_growth": 9.627715291671279e-17,
+      "cagr": 9.71445146547012e-17,
+      "mdd": 8.326672684688674e-17,
+      "volatility": 9.71445146547012e-17,
+      "terminal_real": 5.684341886080802e-14
+    },
+    "paired_prefix_identity": {
+      "path_target_pairs": 24,
+      "triggered_pairs": 0,
+      "never_triggered_pairs": 24,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    }
+  },
+  "outer_fold_1__E": {
+    "annual_replay_max_abs_errors": {
+      "log_growth": 9.974659986866641e-17,
+      "cagr": 9.71445146547012e-17,
+      "mdd": 9.71445146547012e-17,
+      "volatility": 8.326672684688674e-17,
+      "terminal_real": 1.4210854715202004e-14
+    },
+    "paired_prefix_identity": {
+      "path_target_pairs": 24,
+      "triggered_pairs": 1,
+      "never_triggered_pairs": 23,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    }
+  },
+  "outer_fold_2__B": {
+    "annual_replay_max_abs_errors": {
+      "log_growth": 8.673617379884035e-17,
+      "cagr": 9.194034422677078e-17,
+      "mdd": 8.326672684688674e-17,
+      "volatility": 8.326672684688674e-17,
+      "terminal_real": 2.842170943040401e-14
+    },
+    "paired_prefix_identity": {
+      "path_target_pairs": 24,
+      "triggered_pairs": 1,
+      "never_triggered_pairs": 23,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    }
+  },
+  "outer_fold_2__C": {
+    "annual_replay_max_abs_errors": {
+      "log_growth": 9.367506770274758e-17,
+      "cagr": 9.71445146547012e-17,
+      "mdd": 6.938893903907228e-17,
+      "volatility": 9.71445146547012e-17,
+      "terminal_real": 2.842170943040401e-14
+    },
+    "paired_prefix_identity": {
+      "path_target_pairs": 24,
+      "triggered_pairs": 1,
+      "never_triggered_pairs": 23,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    }
+  },
+  "outer_fold_2__E": {
+    "annual_replay_max_abs_errors": {
+      "log_growth": 9.71445146547012e-17,
+      "cagr": 9.324138683375338e-17,
+      "mdd": 9.71445146547012e-17,
+      "volatility": 8.326672684688674e-17,
+      "terminal_real": 1.4210854715202004e-14
+    },
+    "paired_prefix_identity": {
+      "path_target_pairs": 24,
+      "triggered_pairs": 1,
+      "never_triggered_pairs": 23,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    }
+  },
+  "outer_fold_3__B": {
+    "annual_replay_max_abs_errors": {
+      "log_growth": 9.020562075079397e-17,
+      "cagr": 9.71445146547012e-17,
+      "mdd": 8.326672684688674e-17,
+      "volatility": 9.71445146547012e-17,
+      "terminal_real": 2.842170943040401e-14
+    },
+    "paired_prefix_identity": {
+      "path_target_pairs": 24,
+      "triggered_pairs": 2,
+      "never_triggered_pairs": 22,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    }
+  },
+  "outer_fold_3__C": {
+    "annual_replay_max_abs_errors": {
+      "log_growth": 9.71445146547012e-17,
+      "cagr": 9.71445146547012e-17,
+      "mdd": 8.326672684688674e-17,
+      "volatility": 8.326672684688674e-17,
+      "terminal_real": 5.684341886080802e-14
+    },
+    "paired_prefix_identity": {
+      "path_target_pairs": 24,
+      "triggered_pairs": 4,
+      "never_triggered_pairs": 20,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    }
+  },
+  "outer_fold_3__E": {
+    "annual_replay_max_abs_errors": {
+      "log_growth": 9.31871767251291e-17,
+      "cagr": 9.465084965798454e-17,
+      "mdd": 8.326672684688674e-17,
+      "volatility": 8.326672684688674e-17,
+      "terminal_real": 2.842170943040401e-14
+    },
+    "paired_prefix_identity": {
+      "path_target_pairs": 24,
+      "triggered_pairs": 1,
+      "never_triggered_pairs": 23,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    }
+  },
+  "outer_fold_4__B": {
+    "annual_replay_max_abs_errors": {
+      "log_growth": 9.627715291671279e-17,
+      "cagr": 8.673617379884035e-17,
+      "mdd": 8.326672684688674e-17,
+      "volatility": 8.326672684688674e-17,
+      "terminal_real": 2.842170943040401e-14
+    },
+    "paired_prefix_identity": {
+      "path_target_pairs": 24,
+      "triggered_pairs": 2,
+      "never_triggered_pairs": 22,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    }
+  },
+  "outer_fold_4__C": {
+    "annual_replay_max_abs_errors": {
+      "log_growth": 9.71445146547012e-17,
+      "cagr": 9.71445146547012e-17,
+      "mdd": 6.938893903907228e-17,
+      "volatility": 8.326672684688674e-17,
+      "terminal_real": 5.684341886080802e-14
+    },
+    "paired_prefix_identity": {
+      "path_target_pairs": 24,
+      "triggered_pairs": 3,
+      "never_triggered_pairs": 21,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    }
+  },
+  "outer_fold_4__E": {
+    "annual_replay_max_abs_errors": {
+      "log_growth": 9.71445146547012e-17,
+      "cagr": 9.71445146547012e-17,
+      "mdd": 8.326672684688674e-17,
+      "volatility": 8.326672684688674e-17,
+      "terminal_real": 2.842170943040401e-14
+    },
+    "paired_prefix_identity": {
+      "path_target_pairs": 24,
+      "triggered_pairs": 1,
+      "never_triggered_pairs": 23,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    }
+  },
+  "outer_fold_5__B": {
+    "annual_replay_max_abs_errors": {
+      "log_growth": 9.71445146547012e-17,
+      "cagr": 9.475926987523309e-17,
+      "mdd": 9.71445146547012e-17,
+      "volatility": 9.71445146547012e-17,
+      "terminal_real": 2.842170943040401e-14
+    },
+    "paired_prefix_identity": {
+      "path_target_pairs": 24,
+      "triggered_pairs": 2,
+      "never_triggered_pairs": 22,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    }
+  },
+  "outer_fold_5__C": {
+    "annual_replay_max_abs_errors": {
+      "log_growth": 9.020562075079397e-17,
+      "cagr": 9.194034422677078e-17,
+      "mdd": 8.326672684688674e-17,
+      "volatility": 9.71445146547012e-17,
+      "terminal_real": 2.842170943040401e-14
+    },
+    "paired_prefix_identity": {
+      "path_target_pairs": 24,
+      "triggered_pairs": 1,
+      "never_triggered_pairs": 23,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    }
+  },
+  "outer_fold_5__E": {
+    "annual_replay_max_abs_errors": {
+      "log_growth": 9.020562075079397e-17,
+      "cagr": 9.71445146547012e-17,
+      "mdd": 9.71445146547012e-17,
+      "volatility": 8.326672684688674e-17,
+      "terminal_real": 1.4210854715202004e-14
+    },
+    "paired_prefix_identity": {
+      "path_target_pairs": 24,
+      "triggered_pairs": 5,
+      "never_triggered_pairs": 19,
+      "same_first_crossing": true,
+      "same_terminal_ever_breached": true,
+      "identical_prefixes_through_crossing": true,
+      "max_prefix_balance_error": 0.0,
+      "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+    }
+  }
+}
