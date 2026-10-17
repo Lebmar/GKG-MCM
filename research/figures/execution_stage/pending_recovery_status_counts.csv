@@ -1,0 +1,13 @@
+client,paired_recovery_status,count,triggered_pair_n,minimum_available_followup,maximum_available_followup
+B,both_recovered,2,9,0,11
+B,annual_only_recovered,0,9,0,11
+B,pending_only_recovered,0,9,0,11
+B,both_censored,7,9,0,11
+C,both_recovered,2,9,1,23
+C,annual_only_recovered,0,9,1,23
+C,pending_only_recovered,0,9,1,23
+C,both_censored,7,9,1,23
+E,both_recovered,1,9,0,4
+E,annual_only_recovered,0,9,0,4
+E,pending_only_recovered,0,9,0,4
+E,both_censored,8,9,0,4

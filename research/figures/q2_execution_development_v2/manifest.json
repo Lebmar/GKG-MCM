@@ -1,0 +1,56 @@
+{
+  "completed_utc": "2026-10-17T14:57:12.232974+00:00",
+  "status": "complete_five_audited_policies",
+  "visual_review_confirmed": true,
+  "sources": {
+    "scripts/plot_current_q2_execution.py": "376a5140ccb39a509c65f6900a4329953372d58e70b0279280316ae427418df9",
+    "scripts/plot_development_structure.py": "6a0f401d3e6b18b6ab9d22e11bec74d5456430af30cb8da172a28163d85b8ed6",
+    "docs/q2_execution_development_protocol.json": "ea3682a8b1362f55710a37844f45ea61758cf30efc62397f14c1f88f3d64c52f"
+  },
+  "sources_at_end": {
+    "scripts/plot_current_q2_execution.py": "376a5140ccb39a509c65f6900a4329953372d58e70b0279280316ae427418df9",
+    "scripts/plot_development_structure.py": "6a0f401d3e6b18b6ab9d22e11bec74d5456430af30cb8da172a28163d85b8ed6",
+    "docs/q2_execution_development_protocol.json": "ea3682a8b1362f55710a37844f45ea61758cf30efc62397f14c1f88f3d64c52f"
+  },
+  "inputs_sha256": {
+    "results/model_review/q2_execution_development_v2/manifest.json": "67f01b04c31ac9cf1e49e5324a06d37ce8a226750e043aa8bc5327908b0a6b5b",
+    "results/model_review/q2_execution_development_v2/summary.csv": "21dc2328224d6d80f0b2aad0479fe8384c35ef00611864284b65c0361d44454d",
+    "results/model_review/q2_execution_development_v2/oof_paths.csv": "1f70a9e73be9266ce9e4d416499b881e37477d09edff35c51b080be0760b45a9",
+    "results/model_review/q2_execution_development_v2/episode.json": "c6fcc3ce89f8f54b8e8dca311328724d24550b9279ec0970063e3d76fce7c2cb",
+    "results/model_review/q2_execution_development_v2/episode_yearly.csv": "5dbfa00461bb259f415e537ab26032114ab51a902d32b404f953615e2de62f99",
+    "results/model_review/q2_execution_development_v2/summary.json": "9f6a9afa25a827a38219d34223876b7a10f1ff4d149042700d2a274f8fc347d8"
+  },
+  "inputs_sha256_at_end": {
+    "results/model_review/q2_execution_development_v2/manifest.json": "67f01b04c31ac9cf1e49e5324a06d37ce8a226750e043aa8bc5327908b0a6b5b",
+    "results/model_review/q2_execution_development_v2/summary.csv": "21dc2328224d6d80f0b2aad0479fe8384c35ef00611864284b65c0361d44454d",
+    "results/model_review/q2_execution_development_v2/oof_paths.csv": "1f70a9e73be9266ce9e4d416499b881e37477d09edff35c51b080be0760b45a9",
+    "results/model_review/q2_execution_development_v2/episode.json": "c6fcc3ce89f8f54b8e8dca311328724d24550b9279ec0970063e3d76fce7c2cb",
+    "results/model_review/q2_execution_development_v2/episode_yearly.csv": "5dbfa00461bb259f415e537ab26032114ab51a902d32b404f953615e2de62f99",
+    "results/model_review/q2_execution_development_v2/summary.json": "9f6a9afa25a827a38219d34223876b7a10f1ff4d149042700d2a274f8fc347d8"
+  },
+  "outputs_sha256": {
+    "01_current_oof_comparison.png": "71e9421aada0f2017c76ee4ba64062ca80aaa907ea832d045c72575f655f98c0",
+    "01_current_oof_comparison.svg": "263febcd7fe2522c5b7986cb56e3f514ddf37d329fae31c1effffd18148737b5",
+    "02_prespecified_annual_severe_episode.png": "be0f9f20b9975d77ada2ac1ff7a10e41967257e413e128552ee6d5e3a3e2927c",
+    "02_prespecified_annual_severe_episode.svg": "beb5a5c9be593e51f1f0124ad3f9699fd356065b358ad043a18bcb381f9acc53",
+    "summary_chart_data.csv": "032e1d85fb37633230dde4b5f3ae2e8eeaa1a23f8b134981fba256a4a9dc10a3",
+    "episode_chart_data.csv": "b72a1c83a2d31aae5dbb96adc76d617b9ae49bcd5c65eea7551c47b35c662075"
+  },
+  "checks": {
+    "text_bounds_passed": true,
+    "cohort_per_policy_original120": true,
+    "quantiles_not_averaged_across_folds": true,
+    "minimum_font_points": 12,
+    "PNG_dpi": 240,
+    "SVG_text_preserved": true,
+    "policy_chosen": false
+  },
+  "final_scenarios_loaded": false,
+  "limitations": [
+    "Exploratory reused development evidence, no untouched final claim",
+    "Overlapping fold training, data-learned different policies, no pooled fixed-rule confidence certificate",
+    "Dynamic policy cannot inherit static finite-family CP certification",
+    "Annual endpoint MDD does not observe unknown intrayear prices",
+    "Training risk screen and priced gate do not guarantee OOF risk or positive unpriced growth at every trade"
+  ]
+}
