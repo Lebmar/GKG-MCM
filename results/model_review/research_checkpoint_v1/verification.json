@@ -1,5 +1,5 @@
 {
-  "completed_utc": "2026-10-17T11:46:54.625561+00:00",
+  "completed_utc": "2026-10-17T11:51:19.230987+00:00",
   "status": "passed",
   "scope": "Saved-file fingerprints, completed test log and executed research notebook; no model fit or market return parsing",
   "hash_comparisons_and_consistency_checks": 653,
@@ -43,8 +43,8 @@
   "notebook": {
     "path": "notebooks/risk_menu_development.ipynb",
     "executed_code_cells": 21,
-    "sha256": "5457f354406db3a98e6ccb1dc6910d8574e6bb16717fc886380072ff78706d31",
-    "reading_copy_sha256": "7ee90f9d5aef4adde092881ef0b725388c18e4cf06829c55498bc2254fa734e3"
+    "sha256": "d7dc551189fd621bde98c991f1dbcafa111efe3f3c384fdfdccb33b2e0098a2d",
+    "reading_copy_sha256": "d101a118786fcbe98958f83291bc2d6b5a1691cb6c030c92b0b88db7e568df25"
   },
   "legacy": {
     "baseline_revision": "7bca10b",

@@ -48,7 +48,8 @@ Clopper–Pearson study requires an additional iid scenario assumption and is
 deliberately conservative; it does not certify real markets or dynamically
 learned policies. The fixed-target annual-versus-buy-and-hold ablation shows why
 a suitability result cannot be inherited after changing the execution rule.
-The finite-horizon prototype corrects a one-period cost-gate counterexample,
+Using frozen targets and assignments from the relaxed232 primary study,
+the finite-horizon prototype corrects a one-period cost-gate counterexample,
 but its growth-only decisions increase B/C/E out-of-fold exceedances to
 26/40/14 out of 120, versus 12/13/11 under annual restoration. It therefore has
 not passed risk suitability. Fee-instant observations and fixed within-path
@@ -131,15 +132,15 @@ been submitted to CMT. There are 31 passing unit/policy tests, 901 passing
 independent numerical/provenance checks, and an exact 13-comparison reproduction
 of the unchanged protocol in a temporary directory.
 
-The frozen policy retains a fixed Balanced target. Its 30-year median real
-growth is 3.66% versus 3.38% for equal weights, while P90 maximum real drawdown
+The frozen policy retains a fixed Balanced target. Its 30-year-horizon median
+annual real CAGR is 3.66% versus 3.38% for equal weights, while P90 maximum real drawdown
 is higher: 43.44% versus 39.52%. Dynamic target updates are not enabled because
 the predeclared incremental utility criterion was not met. Customer C's
 borderline loss-exceedance screen does not retain pointwise calibration on the
 final scenarios. This is a qualified result and a reason for human confirmation,
 not a claim of universal dominance or guaranteed suitability.
 
-## Reproduce
+## Archived V1 reproduction
 
 Use Python 3.12 or later:
 
@@ -168,7 +169,7 @@ copy the repository to a separate directory and move its archived
 `results/frozen` and `results/final` directories outside that copy first.
 Do not remove or replace the original study record to tune against final data.
 
-## Design
+## Archived V1 design
 
 - Three-asset long-only portfolios; 100 units initially in bills.
 - Explicit self-financing fees of 0.25% per amount actually transferred once.
@@ -185,7 +186,7 @@ then. This limitation is retained in the protocol; we do not describe the
 holdout as completely pristine. The formal modelling pipeline gates all final
 returns until the model is frozen.
 
-## Files
+## Archived V1 files
 
 - `docs/protocol.json`: assumptions and selection rule fixed before validation.
 - `src/safeinvest/`: accounting, loading, portfolios and causal policies.
