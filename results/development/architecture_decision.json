@@ -1,0 +1,37 @@
+{
+  "selected": "S2_review",
+  "paired_dynamic_minus_gate": {
+    "mean_utility": {
+      "estimate": 0.04399317479603081,
+      "low95": -0.006341572171081667,
+      "high95": 0.09624948351484477
+    },
+    "median_cagr": {
+      "estimate": -0.001333990545417052,
+      "low95": -0.004956251124177857,
+      "high95": 0.0021552387099877945
+    },
+    "p10_cagr": {
+      "estimate": -0.002072447229989628,
+      "low95": -0.002696597696925984,
+      "high95": 0.0011590842888904648
+    },
+    "p90_mdd": {
+      "estimate": -0.039760231247731814,
+      "low95": -0.05817971174004144,
+      "high95": 0.00621375147288028
+    }
+  },
+  "parameters_tuned_on_validation": false,
+  "protocol_sha256": "3b3bde03e34c6a073ad25bf2e467a5b5f3a64cade3572d9aed493c68ce076632",
+  "fingerprints": {
+    "src/safeinvest/__init__.py": "dcef1e2e1f0f7cd5426988f0f27408eebb9ded3fb32c961f8f23e2edfb6e4ad2",
+    "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a",
+    "src/safeinvest/data.py": "70e511fd05c6e23fd6b8a72f1dc165426fc77a5eb4dbd8a3c13b839bb305a75f",
+    "src/safeinvest/policies.py": "faf44e1631110f249c0cbfaacca8b7e55a13ee830f7628577871197f005d4405",
+    "src/safeinvest/portfolios.py": "a045560366642efd63e13372766a1b64eee8f30ae2853db1c97611aa3777b6af",
+    "scripts/run_study.py": "bb18a3188b5444d86d4dfa212b5ca30203fa9c49b91d29d27eae27904fb89d49",
+    "docs/protocol.json": "3b3bde03e34c6a073ad25bf2e467a5b5f3a64cade3572d9aed493c68ce076632",
+    "data/SafeInvest_Synthetic_Data.csv": "def0177704bf6cb98cec6da325b34208750d988f6ad97ec4a706a0d39e6f82c0"
+  }
+}
