@@ -79,3 +79,25 @@ The separately reviewed next-stage JSON is a design proposal only. It calls
 for complete inner refitting of products and controllers, whole-H calibration,
 explicit coverage and Review. It does not treat a new technical screen as a
 guarantee or tune a threshold to force the observed 14/120 down to a target.
+
+The final requirement crosswalk preserves another distinction for future work:
+Q2 concerns a customer assigned Balanced. An inner fit assigning a different
+product must be recorded outside that case, rather than counted as financial
+Review or mixed into Balanced results. All six current C contexts are Balanced.
+The crosswalk also leaves liquidity policy, a coherent final recommendation,
+new frozen evaluation and the final report/package explicitly open.
+
+An archive check found that ignored cache files and replay logs were required
+by frozen file-hash contracts. Four existing cache pairs and the sanitized
+replay logs are now retained in Git, without changing their bytes. In-place
+regeneration would change historical metadata timestamps. New disposable
+caches remain excluded; the pinned inputs are development-only.
+
+A tracked-files-only clone at financial-source revision 1f7018e then passed
+353 tests, its saved-source checkpoint, and all seven replay stages with all
+73 artifacts again byte-exact. Its receipt and completed test log are under
+`results/model_review/execution_stage_clean_checkout_v1/`; the temporary clone
+was removed. Later notebook scope clarifications and the direct dependency
+version record do not alter those frozen financial sources. The current
+checkpoint checks 46 saved snapshots and 407 distinct files. This extra
+checkout test supplies reproducibility evidence, not a second market sample.

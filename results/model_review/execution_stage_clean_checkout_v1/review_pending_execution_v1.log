@@ -1,0 +1,19 @@
+{"context": "full_development", "client": "B", "paths": 120, "triggered": 9, "baseline_max_error": 2.842170943040401e-14}
+{"context": "full_development", "client": "C", "paths": 120, "triggered": 9, "baseline_max_error": 5.684341886080802e-14}
+{"context": "full_development", "client": "E", "paths": 120, "triggered": 9, "baseline_max_error": 2.842170943040401e-14}
+{"context": "outer_fold_1", "client": "B", "paths": 24, "triggered": 2, "baseline_max_error": 2.842170943040401e-14}
+{"context": "outer_fold_1", "client": "C", "paths": 24, "triggered": 0, "baseline_max_error": 5.684341886080802e-14}
+{"context": "outer_fold_1", "client": "E", "paths": 24, "triggered": 1, "baseline_max_error": 1.4210854715202004e-14}
+{"context": "outer_fold_2", "client": "B", "paths": 24, "triggered": 1, "baseline_max_error": 2.842170943040401e-14}
+{"context": "outer_fold_2", "client": "C", "paths": 24, "triggered": 1, "baseline_max_error": 2.842170943040401e-14}
+{"context": "outer_fold_2", "client": "E", "paths": 24, "triggered": 1, "baseline_max_error": 1.4210854715202004e-14}
+{"context": "outer_fold_3", "client": "B", "paths": 24, "triggered": 2, "baseline_max_error": 2.842170943040401e-14}
+{"context": "outer_fold_3", "client": "C", "paths": 24, "triggered": 4, "baseline_max_error": 5.684341886080802e-14}
+{"context": "outer_fold_3", "client": "E", "paths": 24, "triggered": 1, "baseline_max_error": 2.842170943040401e-14}
+{"context": "outer_fold_4", "client": "B", "paths": 24, "triggered": 2, "baseline_max_error": 2.842170943040401e-14}
+{"context": "outer_fold_4", "client": "C", "paths": 24, "triggered": 3, "baseline_max_error": 5.684341886080802e-14}
+{"context": "outer_fold_4", "client": "E", "paths": 24, "triggered": 1, "baseline_max_error": 2.842170943040401e-14}
+{"context": "outer_fold_5", "client": "B", "paths": 24, "triggered": 2, "baseline_max_error": 2.842170943040401e-14}
+{"context": "outer_fold_5", "client": "C", "paths": 24, "triggered": 1, "baseline_max_error": 2.842170943040401e-14}
+{"context": "outer_fold_5", "client": "E", "paths": 24, "triggered": 5, "baseline_max_error": 1.4210854715202004e-14}
+Wrote review pending execution diagnostic to <isolated-copy>/results/model_review/review_pending_execution_v1

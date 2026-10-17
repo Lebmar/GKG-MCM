@@ -1,0 +1,24 @@
+{
+  "completed_utc": "2026-10-17T15:23:58.585383+00:00",
+  "status": "passed",
+  "git_revision": "1f7018e811ac8d8b52cb60f39c500607eff64124",
+  "inputs": "Git-tracked checkout only; no working-directory untracked files copied",
+  "runtime": "Existing Python virtual environment reused for dependencies only",
+  "unit_tests": {
+    "passed": 353,
+    "seconds": 2.595,
+    "command": "PYTHONPATH=src:research .venv/bin/python -m unittest discover -s tests -q",
+    "log_sha256": "3b5f7ed9f360762cfd2e1f7478a88442a4db73f69adbb09f0977be0247e68990",
+    "result": "OK"
+  },
+  "checkpoint_snapshots": 45,
+  "checkpoint_distinct_files": 397,
+  "executed_notebook_cells": 26,
+  "replayed_studies": 7,
+  "byte_exact_output_artifacts": 73,
+  "limitations": [
+    "Same-source reproducibility, not independent market evidence",
+    "Git revision identifies frozen financial sources and archives; later documentation-only changes are outside this checkout receipt",
+    "Only guarded development paths1-120 parsed; no new final evaluation"
+  ]
+}

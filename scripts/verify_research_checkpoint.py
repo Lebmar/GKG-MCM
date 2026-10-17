@@ -5,6 +5,9 @@ from pathlib import Path
 import re
 import subprocess
 from datetime import datetime, timezone
+from importlib.metadata import version
+import platform
+import sys
 
 import nbformat
 
@@ -95,9 +98,15 @@ def main():
     legacy = subprocess.run(["git", "diff", "--exit-code", "7bca10b", "--", "src", "report", "output"],
                             cwd=ROOT, capture_output=True, text=True)
     assert legacy.returncode == 0, "V1 source/report/output changed"
+    OUT.parent.mkdir(parents=True, exist_ok=True)
+    test_log_snapshot = OUT.parent / "unit_tests.txt"
+    test_log_snapshot.write_bytes(test_log.read_bytes())
     test_log_sha = sha(test_log)
+    assert sha(test_log_snapshot) == test_log_sha
     notebook_sha = sha(notebook_path)
     reading_copy_sha = sha(ROOT / "notebooks/risk_menu_development.html")
+    environment_file = ROOT / "requirements-research-pinned.txt"
+    environment_sha = sha(environment_file)
     summary = {
         "completed_utc": datetime.now(timezone.utc).isoformat(), "status": "passed",
         "scope": "Saved-file fingerprints, completed test log and executed research notebook; no model fit or market return parsing",
@@ -106,11 +115,18 @@ def main():
         "snapshots_sha256": snapshots,
         "unit_tests": {"passed": int(match.group(1)), "seconds": float(match.group(2)),
                        "command": "PYTHONPATH=src:research .venv/bin/python -m unittest discover -s tests -q",
+                       "log_path": str(test_log_snapshot.relative_to(ROOT)),
                        "log_sha256": test_log_sha, "result": "OK"},
         "notebook": {"path": str(notebook_path.relative_to(ROOT)), "executed_code_cells": len(code_cells),
                      "sha256": notebook_sha,
                      "reading_copy_sha256": reading_copy_sha},
         "legacy": {"baseline_revision": "7bca10b", "unchanged_paths": ["src", "report", "output"]},
+        "runtime": {"python": sys.version.split()[0], "system": platform.system(),
+                    "architecture": platform.machine(),
+                    "direct_dependencies": {name: version(name) for name in
+                        ["numpy", "pandas", "matplotlib", "scipy", "pypdf", "nbformat", "nbclient", "ipykernel", "nbconvert"]},
+                    "version_file": str(environment_file.relative_to(ROOT)), "version_file_sha256": environment_sha,
+                    "scope": "Tested direct dependency versions; indirect dependencies and cross-platform byte equality are not locked"},
         "limitations": ["Numerical and provenance checks do not certify risk or forecast validity",
                         "Independent algorithms were separately implemented with AI assistance, not external human peer review",
                         "Development data were reused and earlier final-set results were already inspected"],

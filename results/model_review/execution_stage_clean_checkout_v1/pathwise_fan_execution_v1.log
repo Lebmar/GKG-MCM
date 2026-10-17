@@ -1,0 +1,7 @@
+{"context": "full_development", "elapsed_seconds": 2.3822152500069933}
+{"context": "outer_fold_1", "elapsed_seconds": 4.484290874999715}
+{"context": "outer_fold_2", "elapsed_seconds": 6.44610908300092}
+{"context": "outer_fold_3", "elapsed_seconds": 8.452448042007745}
+{"context": "outer_fold_4", "elapsed_seconds": 10.37058541701117}
+{"context": "outer_fold_5", "elapsed_seconds": 12.399190916999942}
+{"output": "results/model_review/pathwise_fan_execution_v1", "client_paths": 2400, "training_support_rows": 3000}

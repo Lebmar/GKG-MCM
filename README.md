@@ -99,8 +99,13 @@ service recommendation or submission report.
 To replay the seven execution studies without overwriting their evidence:
 
 ```sh
+python -m pip install -r requirements-research-pinned.txt
 python scripts/reproduce_execution_stage.py --output results/model_review/execution_stage_reproduction_new
 ```
+
+The pinned file records the exact direct dependency versions used here with
+Python 3.12. The checkpoint also records the Python version and architecture;
+indirect dependencies and byte equality on other platforms are not locked.
 
 This command runs each frozen runner in a disposable copy, compares its saved
 outputs exactly (named-array equality for NPZ ZIP metadata), then restores its
@@ -131,10 +136,12 @@ audits; they do not replace the primary procedure. The research preserves full
 path folds, records referrals as null outcomes, and distinguishes empirical
 calibration, numerical correctness and statistical evidence.
 
-The latest checkpoint passes **353 tests** and checks 45 saved manifests/audits
-against 397 distinct source, input, result and execution-evidence files. All 73
+The latest checkpoint passes **353 tests** and checks 46 saved manifests/audits
+against 407 distinct source, input, result and execution-evidence files. All 73
 saved artifacts from seven execution studies also reproduce byte for byte in
-an isolated copy, without changing the frozen archives. See
+an isolated copy, without changing the frozen archives. A second replay using
+only Git-tracked files from a fresh clone passes the same tests and matches
+all 73 outputs; its context records the tested financial-source revision. See
 `results/model_review/research_checkpoint_v1/verification.json`; these are
 computational checks, not independent market observations or risk guarantees.
 AI assistance, including separately implemented numerical audits, is disclosed
@@ -147,6 +154,10 @@ The proposed primary family keeps nine fixed-target price candidates; the
 18-controller update family would be a separately declared incremental study.
 More cautious admission may lead to more Review cases and still cannot turn
 reused development results into a new blind test.
+The requirement-by-requirement inventory is
+`docs/problem_A_deliverable_crosswalk.json`. It also separates the Balanced-only
+Q2 case from other future training assignments and records the unresolved
+liquidity, final-policy, evaluation and submission steps.
 
 To rebuild the reading notebook in an activated project virtual environment:
 

@@ -28,6 +28,7 @@ results/model_review/risk_menu_v1/cache/*
 
 # These sanitized logs are evidence referenced by the committed replay receipt.
 !results/model_review/execution_stage_reproduction_v1/*.log
+!results/model_review/execution_stage_clean_checkout_v1/*.log
 
 # These are recorded development analyses, rather than disposable root analysis.
 !results/model_review/risk_menu_v1/analysis/

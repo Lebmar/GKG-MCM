@@ -1,10 +1,10 @@
 {
-  "completed_utc": "2026-10-17T15:09:32.231908+00:00",
+  "completed_utc": "2026-10-17T15:25:49.952004+00:00",
   "status": "passed",
   "scope": "Saved-file fingerprints, completed test log and executed research notebook; no model fit or market return parsing",
-  "hash_comparisons_and_consistency_checks": 2462,
-  "distinct_hashed_files": 397,
-  "saved_snapshots_checked": 45,
+  "hash_comparisons_and_consistency_checks": 2747,
+  "distinct_hashed_files": 407,
+  "saved_snapshots_checked": 46,
   "snapshots_sha256": {
     "research/figures/development_structure/manifest.json": "8dcf529e5dac971e6b8c9de97e29f8dcefb494adacbd250d8af19675122dd05b",
     "research/figures/execution/manifest.json": "6a8f8f62d392de03953a56c87f7168baacd3aec2461679ba042a26085d01944a",
@@ -15,6 +15,7 @@
     "research/figures/selected_controller_cost_stress/manifest.json": "ff55b85bedfb6647554b494fb33aff35c52dd21e23417149e504d869563a98d5",
     "results/model_review/bounded_target_updates_v1/independent_audit.json": "2d9dea5279048d92846b2e54006573ac06be241fd9eaa22703e3e35cd1be410d",
     "results/model_review/bounded_target_updates_v1/manifest.json": "4efb3c3af26b78a940a7f31fc0bf8ed661879c80bbe041ca234b7a161480b155",
+    "results/model_review/execution_stage_clean_checkout_v1/manifest.json": "b82e1d9b80832fb715a817493f5672f7551e20395ed1999a3d5f1e3fadd3876c",
     "results/model_review/execution_stage_reproduction_v1/manifest.json": "66c905fadb28f59e1019469ebdac287ebb6c735baffb672c90d0dcbe58e00f5b",
     "results/model_review/fan_rollout_execution_v1/independent_audit.json": "4999cb28ed86e4de84fc54be4359dbf77ee6fc0abf6339fc8c36f3d89cebcc9a",
     "results/model_review/fan_rollout_execution_v1/manifest.json": "4027d243ae859e4e306d5b0846df459702783c5705568cbe3e6c1e04f55803e6",
@@ -56,14 +57,15 @@
     "passed": 353,
     "seconds": 2.558,
     "command": "PYTHONPATH=src:research .venv/bin/python -m unittest discover -s tests -q",
+    "log_path": "results/model_review/research_checkpoint_v1/unit_tests.txt",
     "log_sha256": "2150d56554d580391bf7e6c6ba15c25a382f0c11e91a184101a395a7031149e8",
     "result": "OK"
   },
   "notebook": {
     "path": "notebooks/risk_menu_development.ipynb",
     "executed_code_cells": 26,
-    "sha256": "7826fcb8e502e494c0271669d12be1bf771571a1daf013cf209584bf9d82e888",
-    "reading_copy_sha256": "f17b2d4124a49062cf26de79c7fd72a22d5652578c38e5ac24f1d121174328f9"
+    "sha256": "2ba7ac9e550a40daeae8c3e72350f357e51303bd1db4abc1631fa1d280a0d7dd",
+    "reading_copy_sha256": "17b4824d080843ebd1e9cdcf92e68974168b636dec488aa4a224d7d6200fc076"
   },
   "legacy": {
     "baseline_revision": "7bca10b",
@@ -72,6 +74,25 @@
       "report",
       "output"
     ]
+  },
+  "runtime": {
+    "python": "3.12.14",
+    "system": "Darwin",
+    "architecture": "arm64",
+    "direct_dependencies": {
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "matplotlib": "3.11.2",
+      "scipy": "1.18.1",
+      "pypdf": "6.10.0",
+      "nbformat": "5.11.1",
+      "nbclient": "0.11.0",
+      "ipykernel": "7.4.0",
+      "nbconvert": "7.17.2"
+    },
+    "version_file": "requirements-research-pinned.txt",
+    "version_file_sha256": "a18dc21251d1dcdba4c19b4137ed62083bf4d82ed6ea8fefc4ae3cbd421f02ee",
+    "scope": "Tested direct dependency versions; indirect dependencies and cross-platform byte equality are not locked"
   },
   "limitations": [
     "Numerical and provenance checks do not certify risk or forecast validity",

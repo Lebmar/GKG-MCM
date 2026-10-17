@@ -1,4 +1,5 @@
 """Build the compact Sources payload from saved, verified development results."""
+import hashlib
 import json
 from pathlib import Path
 
@@ -61,10 +62,22 @@ def main():
              "不同文件数": verification["distinct_hashed_files"],
              "隔离复现实验数": len(reproduction["stages"]),
              "已执行代码单元数": verification["notebook"]["executed_code_cells"]}]
+    evidence_files = ["results/model_review/research_checkpoint_v1/verification.json",
+                      "results/model_review/research_checkpoint_v1/unit_tests.txt",
+                      "results/model_review/execution_stage_reproduction_v1/manifest.json",
+                      "scripts/verify_research_checkpoint.py", "scripts/reproduce_execution_stage.py"]
+    clean_root = BASE / "execution_stage_clean_checkout_v1"
+    if clean_root.exists():
+        clean = json.loads((clean_root / "checkout_context.json").read_text())
+        assert clean["status"] == "passed"
+        assert hashlib.sha256((clean_root / "unit_tests.txt").read_bytes()).hexdigest() == clean["unit_tests"]["log_sha256"]
+        rows[0]["仅Git文件的新克隆复现实验数"] = clean["replayed_studies"]
+        rows[0]["新克隆逐字节匹配产物数"] = clean["byte_exact_output_artifacts"]
+        evidence_files += ["results/model_review/execution_stage_clean_checkout_v1/manifest.json",
+                           "results/model_review/execution_stage_clean_checkout_v1/checkout_context.json",
+                           "results/model_review/execution_stage_clean_checkout_v1/unit_tests.txt"]
     items.append(item("execution-evidence", "计算与来源证据的范围",
-                      ["results/model_review/research_checkpoint_v1/verification.json",
-                       "results/model_review/execution_stage_reproduction_v1/manifest.json",
-                       "scripts/verify_research_checkpoint.py", "scripts/reproduce_execution_stage.py"], rows,
+                      evidence_files, rows,
                       [{"label": "同源隔离复现", "definition": "原归档前后不变；七runner在临时副本重跑，输出逐字节或NPZ逐数组精确一致。"}],
                       "assert verification['status'] ==reproduction['status'] =='passed'\n# source-file checks, test cases and numeric replay are not additional market samples",
                       caveats + ["独立数值算法由AI协助另写，不是外部人类同行审稿。", "测试、数百万次机械检查与同源复现均不能保证未来风险。 "]))

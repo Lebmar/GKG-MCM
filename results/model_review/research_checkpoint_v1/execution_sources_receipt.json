@@ -816,6 +816,9 @@
                 "label": "results/model_review/research_checkpoint_v1/verification.json"
               },
               {
+                "label": "results/model_review/research_checkpoint_v1/unit_tests.txt"
+              },
+              {
                 "label": "results/model_review/execution_stage_reproduction_v1/manifest.json"
               },
               {
@@ -823,6 +826,15 @@
               },
               {
                 "label": "scripts/reproduce_execution_stage.py"
+              },
+              {
+                "label": "results/model_review/execution_stage_clean_checkout_v1/manifest.json"
+              },
+              {
+                "label": "results/model_review/execution_stage_clean_checkout_v1/checkout_context.json"
+              },
+              {
+                "label": "results/model_review/execution_stage_clean_checkout_v1/unit_tests.txt"
               }
             ],
             "metricDefinitions": [
@@ -850,6 +862,11 @@
             },
             {
               "kind": "file",
+              "label": "results/model_review/research_checkpoint_v1/unit_tests.txt",
+              "role": "保存的方法、结果或核查证据"
+            },
+            {
+              "kind": "file",
               "label": "results/model_review/execution_stage_reproduction_v1/manifest.json",
               "role": "保存的方法、结果或核查证据"
             },
@@ -862,6 +879,21 @@
               "kind": "file",
               "label": "scripts/reproduce_execution_stage.py",
               "role": "保存的方法、结果或核查证据"
+            },
+            {
+              "kind": "file",
+              "label": "results/model_review/execution_stage_clean_checkout_v1/manifest.json",
+              "role": "保存的方法、结果或核查证据"
+            },
+            {
+              "kind": "file",
+              "label": "results/model_review/execution_stage_clean_checkout_v1/checkout_context.json",
+              "role": "保存的方法、结果或核查证据"
+            },
+            {
+              "kind": "file",
+              "label": "results/model_review/execution_stage_clean_checkout_v1/unit_tests.txt",
+              "role": "保存的方法、结果或核查证据"
             }
           ],
           "reportingPeriod": "2026-10-17执行阶段开发研究",
@@ -870,15 +902,19 @@
             "已核来源快照数",
             "不同文件数",
             "隔离复现实验数",
-            "已执行代码单元数"
+            "已执行代码单元数",
+            "仅Git文件的新克隆复现实验数",
+            "新克隆逐字节匹配产物数"
           ],
           "rows": [
             {
               "通过测试数": 353,
-              "已核来源快照数": 45,
-              "不同文件数": 397,
+              "已核来源快照数": 46,
+              "不同文件数": 407,
               "隔离复现实验数": 7,
-              "已执行代码单元数": 26
+              "已执行代码单元数": 26,
+              "仅Git文件的新克隆复现实验数": 7,
+              "新克隆逐字节匹配产物数": 73
             }
           ],
           "methods": [
