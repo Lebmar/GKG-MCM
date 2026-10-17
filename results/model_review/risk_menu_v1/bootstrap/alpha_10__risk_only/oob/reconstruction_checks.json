@@ -1,0 +1,95 @@
+{
+  "passed": true,
+  "replicates": [
+    0,
+    1,
+    999
+  ],
+  "checks": [
+    {
+      "replicate": 0,
+      "menu_ids_match": true,
+      "menu_weights_match": true,
+      "assignments_match": true,
+      "chosen_target_ids_match": true,
+      "candidate_indices_by_risk_label": [
+        132,
+        168,
+        211
+      ],
+      "assignments": {
+        "A": "Review",
+        "B": "Conservative",
+        "C": "Balanced",
+        "D": "Review",
+        "E": "Growth"
+      },
+      "chosen_candidate_ids": {
+        "A": null,
+        "B": 132,
+        "C": 168,
+        "D": null,
+        "E": 211
+      },
+      "inbag_unique_n": 75,
+      "oob_n": 45
+    },
+    {
+      "replicate": 1,
+      "menu_ids_match": true,
+      "menu_weights_match": true,
+      "assignments_match": true,
+      "chosen_target_ids_match": true,
+      "candidate_indices_by_risk_label": [
+        60,
+        116,
+        207
+      ],
+      "assignments": {
+        "A": "Conservative",
+        "B": "Balanced",
+        "C": "Balanced",
+        "D": "Review",
+        "E": "Growth"
+      },
+      "chosen_candidate_ids": {
+        "A": 60,
+        "B": 116,
+        "C": 116,
+        "D": null,
+        "E": 207
+      },
+      "inbag_unique_n": 79,
+      "oob_n": 41
+    },
+    {
+      "replicate": 999,
+      "menu_ids_match": true,
+      "menu_weights_match": true,
+      "assignments_match": true,
+      "chosen_target_ids_match": true,
+      "candidate_indices_by_risk_label": [
+        118,
+        157,
+        207
+      ],
+      "assignments": {
+        "A": "Review",
+        "B": "Conservative",
+        "C": "Balanced",
+        "D": "Review",
+        "E": "Growth"
+      },
+      "chosen_candidate_ids": {
+        "A": null,
+        "B": 118,
+        "C": 157,
+        "D": null,
+        "E": 207
+      },
+      "inbag_unique_n": 71,
+      "oob_n": 49
+    }
+  ],
+  "scope": "Unchanged inbag fitting for fixed seed reconstruction only; not an OOB target search."
+}

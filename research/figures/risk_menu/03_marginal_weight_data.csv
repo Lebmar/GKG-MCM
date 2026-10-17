@@ -1,0 +1,10 @@
+reference_role,asset,p025_weight,median_weight,p975_weight,full_fit_weight,aligned_replicates,total_replicates
+Conservative,Equities,0.0,0.3,0.45,0.3,1000,1000
+Conservative,Government bonds,0.0,0.15,0.4,0.2,1000,1000
+Conservative,Bill proxy,0.25,0.5,1.0,0.5,1000,1000
+Balanced,Equities,0.0,0.45,0.5,0.5,1000,1000
+Balanced,Government bonds,0.0,0.05,0.45,0.0,1000,1000
+Balanced,Bill proxy,0.1,0.5,1.0,0.5,1000,1000
+Growth,Equities,0.5,0.75,0.85,0.75,1000,1000
+Growth,Government bonds,0.0,0.05,0.3,0.0,1000,1000
+Growth,Bill proxy,0.0,0.2,0.4012499999999989,0.25,1000,1000

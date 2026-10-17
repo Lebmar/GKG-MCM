@@ -1,0 +1,299 @@
+{
+  "created_utc": "2026-10-17T10:39:33.710473+00:00",
+  "script_sha256": "970fc79498d8a5125a19a51cd42c1df6dc10c77a9a1742fe9705082509d6d199",
+  "input_artifact_sha256": {
+    "docs/risk_menu_development_protocol.json": "6a57f3dc3f5a5850af2d8a1b2db597997edbd6054e61443d7ebfeb3fd8e37d51",
+    "results/model_review/risk_menu_v1/grid_by_client.csv": "c41a1b51669e0c3949d5861e43c069f6488b34a865e376855953171cb070acc8",
+    "results/model_review/risk_menu_v1/full_development_menus.json": "f2c91f807fa1191d58a886777e42d16688b19799c277058491d6b6f83c60608f",
+    "results/model_review/risk_menu_v1/fit_manifest.json": "fe4531f50e5236f657ac6acb5829eb28d3cf0425ed58bacf6dda4a6a03ad3b63",
+    "results/model_review/risk_menu_v1/validation_oof_summary.csv": "98fe1168b31eccfb880d37e9e4b1eb144f0531b549da74cb5a60d082d7d16e52",
+    "results/model_review/risk_menu_v1/validation_manifest.json": "b8aae4ecfeba1f2cd2f33012219beb61d56e004c097ee49c2bf74663656f0d4f",
+    "results/model_review/risk_menu_v1/bootstrap/alpha_10__risk_only/summary.json": "c5ecfdfe498ff0e4b856a4950242745b9254daf4d4bc61a0af2a4fc488f684ae",
+    "results/model_review/risk_menu_v1/bootstrap/alpha_10__risk_only/assignments.csv": "8f4410badb784b6d9f4c814285f9bad32506b9453e944b5e3fb05930da00272c",
+    "results/model_review/risk_menu_v1/bootstrap/alpha_10__risk_only/menus.json": "9e61fb51b86d34e36a2a5b96bf542781ccd0d0ac8f6579690b5cf7c4260be2a2",
+    "results/model_review/risk_menu_v1/independent_audit.json": "34b61ea12f508006fea1b2d09eadc7ce7a8ec701c24148ce035a8ed204acd535",
+    "scripts/plot_development_structure.py": "6a0f401d3e6b18b6ab9d22e11bec74d5456430af30cb8da172a28163d85b8ed6"
+  },
+  "output_artifact_sha256": {
+    "01_client_growth_risk.png": "fe42d3974691e97c17018b696afe003ada928bafb26391ee40b8f046c1972422",
+    "01_client_growth_risk.svg": "bd8bb47b3042ac460d3a7a7d32aba6897e495e588e0776a7a3f13ace808f4b07",
+    "01_client_growth_risk_data.csv": "9a01fcac5c529433b81dfcf3fb0b226d65f9d827b1a062a1d20539431679c649",
+    "02_bootstrap_coverage_data.csv": "30ccfd627ada497b6f0e2ecaeaba2c8ec2653c9d232f9700675d7ec4fd27de22",
+    "02_breach_count_data.csv": "6ef2d664d3d9e90934966231f711ebcc6e4076f9d57d578ca5c614ec61fc1d9f",
+    "02_risk_and_assignment_stability.png": "2c2e6f580efc12f589ebfed1a0e1dd82034fd014cd932e889bc03627b550bc31",
+    "02_risk_and_assignment_stability.svg": "7485b6508a7dc789f82e75cf347c0bdddb3565382b44cd2194cd9aa6f617667c",
+    "03_aligned_weight_variation.png": "e541081aa959a97895e741232d92b95cebfb590b45265cbd3a5cfa8917bf5e13",
+    "03_aligned_weight_variation.svg": "07778aecc45c2333b7b15b511577f03e13b679512048886279c466c0cce189f9",
+    "03_marginal_weight_data.csv": "5b6a110933423184936fb2942a3d48b204231e3f69f8498bf9dfa20ce3deecd6"
+  },
+  "case": "alpha_10__risk_only",
+  "scope": "Saved 1--120 synthetic development artifacts only; no raw market or final-result access.",
+  "figures": {
+    "01_client_growth_risk": {
+      "question": "Show each client's growth-frequency trade-off and the fixed common menu.",
+      "fields": [
+        "client",
+        "horizon",
+        "loss_tolerance",
+        "candidate_index",
+        "mean_log_growth",
+        "breach_probability"
+      ],
+      "source": "grid_by_client.csv plus full_development_menus.json",
+      "rows": 1160,
+      "x": "100*breach_probability, denominator120 original development paths",
+      "y": "100*expm1(mean_log_growth); geometric growth, not mean or median CAGR",
+      "alpha": 0.1,
+      "full_fit_assignments": {
+        "A": "Review",
+        "B": "Conservative",
+        "C": "Balanced",
+        "D": "Review",
+        "E": "Growth"
+      },
+      "main_menu": [
+        {
+          "name": "Conservative",
+          "candidate_index": 115,
+          "weights": [
+            0.3,
+            0.2,
+            0.5
+          ],
+          "identified_by_profiles": true,
+          "reference_mean_log_growth": 0.031145073264587087,
+          "reference_cvar90_mdd": 0.2989711576290992
+        },
+        {
+          "name": "Balanced",
+          "candidate_index": 166,
+          "weights": [
+            0.5,
+            0.0,
+            0.5
+          ],
+          "identified_by_profiles": true,
+          "reference_mean_log_growth": 0.041286186387696704,
+          "reference_cvar90_mdd": 0.41703781043010424
+        },
+        {
+          "name": "Growth",
+          "candidate_index": 211,
+          "weights": [
+            0.75,
+            0.0,
+            0.25
+          ],
+          "identified_by_profiles": true,
+          "reference_mean_log_growth": 0.05342199911121429,
+          "reference_cvar90_mdd": 0.568017565680619
+        }
+      ],
+      "data_file": "01_client_growth_risk_data.csv"
+    },
+    "02_risk_and_assignment_stability": {
+      "question": "Separate observed breach counts from stability of automatic-versus-review decisions.",
+      "case": "alpha_10__risk_only",
+      "breach_count_values": [
+        {
+          "client": "B",
+          "series": "Full fit",
+          "breaches": 12,
+          "n": 120
+        },
+        {
+          "client": "B",
+          "series": "Fold-frozen OOF",
+          "breaches": 12,
+          "n": 120
+        },
+        {
+          "client": "C",
+          "series": "Full fit",
+          "breaches": 12,
+          "n": 120
+        },
+        {
+          "client": "C",
+          "series": "Fold-frozen OOF",
+          "breaches": 13,
+          "n": 120
+        },
+        {
+          "client": "E",
+          "series": "Full fit",
+          "breaches": 12,
+          "n": 120
+        },
+        {
+          "client": "E",
+          "series": "Fold-frozen OOF",
+          "breaches": 11,
+          "n": 120
+        }
+      ],
+      "bootstrap_coverage_values": [
+        {
+          "client": "A",
+          "automatic_replicates": 219,
+          "n_replicates": 1000,
+          "automatic_percent": 21.9
+        },
+        {
+          "client": "B",
+          "automatic_replicates": 1000,
+          "n_replicates": 1000,
+          "automatic_percent": 100.0
+        },
+        {
+          "client": "C",
+          "automatic_replicates": 1000,
+          "n_replicates": 1000,
+          "automatic_percent": 100.0
+        },
+        {
+          "client": "D",
+          "automatic_replicates": 0,
+          "n_replicates": 1000,
+          "automatic_percent": 0.0
+        },
+        {
+          "client": "E",
+          "automatic_replicates": 1000,
+          "n_replicates": 1000,
+          "automatic_percent": 100.0
+        }
+      ],
+      "fields": {
+        "training": "client_product_details.{chosen,breach_count,n}",
+        "OOF": "validation_oof_summary.{breach_count,assigned_test_paths}",
+        "bootstrap": "assignments.csv client columns; checked against summary.automatic_frequency"
+      },
+      "data_files": [
+        "02_breach_count_data.csv",
+        "02_bootstrap_coverage_data.csv"
+      ]
+    },
+    "03_aligned_weight_variation": {
+      "question": "Describe parameter variability separately from automatic coverage stability.",
+      "case": "alpha_10__risk_only",
+      "alignment": "Minimum total L1 target distance to full-development reference, over all product permutations; original risk labels retained in menus.json.",
+      "aligned_replicates": 1000,
+      "total_replicates": 1000,
+      "quantile_method": "linear coordinate quantiles after reperforming minimum-L1 permutation alignment",
+      "fields": [
+        "menus.json.weights_by_risk_label",
+        "full_development_menus.json.menu.weights"
+      ],
+      "values": [
+        {
+          "reference_role": "Conservative",
+          "asset": "Equities",
+          "p025_weight": 0.0,
+          "median_weight": 0.3,
+          "p975_weight": 0.45,
+          "full_fit_weight": 0.3,
+          "aligned_replicates": 1000,
+          "total_replicates": 1000
+        },
+        {
+          "reference_role": "Conservative",
+          "asset": "Government bonds",
+          "p025_weight": 0.0,
+          "median_weight": 0.15,
+          "p975_weight": 0.4,
+          "full_fit_weight": 0.2,
+          "aligned_replicates": 1000,
+          "total_replicates": 1000
+        },
+        {
+          "reference_role": "Conservative",
+          "asset": "Bill proxy",
+          "p025_weight": 0.25,
+          "median_weight": 0.5,
+          "p975_weight": 1.0,
+          "full_fit_weight": 0.5,
+          "aligned_replicates": 1000,
+          "total_replicates": 1000
+        },
+        {
+          "reference_role": "Balanced",
+          "asset": "Equities",
+          "p025_weight": 0.0,
+          "median_weight": 0.45,
+          "p975_weight": 0.5,
+          "full_fit_weight": 0.5,
+          "aligned_replicates": 1000,
+          "total_replicates": 1000
+        },
+        {
+          "reference_role": "Balanced",
+          "asset": "Government bonds",
+          "p025_weight": 0.0,
+          "median_weight": 0.05,
+          "p975_weight": 0.45,
+          "full_fit_weight": 0.0,
+          "aligned_replicates": 1000,
+          "total_replicates": 1000
+        },
+        {
+          "reference_role": "Balanced",
+          "asset": "Bill proxy",
+          "p025_weight": 0.1,
+          "median_weight": 0.5,
+          "p975_weight": 1.0,
+          "full_fit_weight": 0.5,
+          "aligned_replicates": 1000,
+          "total_replicates": 1000
+        },
+        {
+          "reference_role": "Growth",
+          "asset": "Equities",
+          "p025_weight": 0.5,
+          "median_weight": 0.75,
+          "p975_weight": 0.85,
+          "full_fit_weight": 0.75,
+          "aligned_replicates": 1000,
+          "total_replicates": 1000
+        },
+        {
+          "reference_role": "Growth",
+          "asset": "Government bonds",
+          "p025_weight": 0.0,
+          "median_weight": 0.05,
+          "p975_weight": 0.3,
+          "full_fit_weight": 0.0,
+          "aligned_replicates": 1000,
+          "total_replicates": 1000
+        },
+        {
+          "reference_role": "Growth",
+          "asset": "Bill proxy",
+          "p025_weight": 0.0,
+          "median_weight": 0.2,
+          "p975_weight": 0.4012499999999989,
+          "full_fit_weight": 0.25,
+          "aligned_replicates": 1000,
+          "total_replicates": 1000
+        }
+      ],
+      "data_file": "03_marginal_weight_data.csv",
+      "limitation": "Separate coordinate quantiles are not necessarily feasible jointly; no confidence interpretation."
+    }
+  },
+  "verification": {
+    "all_text_bounds_checked": true,
+    "bootstrap_counts_recomputed": true,
+    "weight_alignment_and_quantiles_recomputed": true,
+    "visual_inspection": {
+      "status": "passed",
+      "method": "All three rendered PNGs inspected with view_image at readable display resolution.",
+      "reviewed_utc": "2026-10-17T10:40:28.425264+00:00",
+      "observations": [
+        "No clipped or overlapping labels found; shared scatter scales and the alpha line are visible.",
+        "B/C/E count labels and all five automatic/review frequencies match their CSV receipts.",
+        "Marginal weight ranges, full-fit diamonds and the non-CI/non-joint-portfolio qualifications are legible."
+      ]
+    }
+  }
+}

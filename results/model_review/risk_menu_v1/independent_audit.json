@@ -1,0 +1,496 @@
+{
+  "audit_version": "independent-development-numerical-audit-v1",
+  "completed_utc": "2026-10-17T10:35:34.839850+00:00",
+  "audit_script_sha256": "29cd14c5cdb7e6fa14e5ecca0a51bcc28dbfe0ad88afae17f43b194289b7e669",
+  "scope": "Only scenarios 1–120; independent bisection accounting and training/OOF artifact reconstruction.",
+  "method": "80-step vectorized fee bisection; independent G/CAGR/MDD/volatility and fractional-tail arithmetic; no production executor/simulator/metrics/selector imports.",
+  "not_established": [
+    "Population or real-market safety",
+    "Validity of normative alpha/liquidity/menu preferences",
+    "A fresh unseen holdout",
+    "Global menu optimality on actual data (not re-enumerated here)",
+    "Historical runtime provenance beyond hashes, stored splits and reconstructed train-only statistics"
+  ],
+  "final_scenarios_loaded": false,
+  "identities": {
+    "oof_rows": 5400,
+    "distinct_case_client_scenario_identities": 5400,
+    "automatic_path_outcomes": 3600,
+    "review_path_outcomes_all_null": 1800,
+    "case_client_denominators": 45,
+    "scenarios": 120,
+    "fixed_targets": 232,
+    "horizons": 5,
+    "independent_scenario_target_paths": 27840,
+    "annual_execution_identities": 835200,
+    "cache_metric_values": 1113600,
+    "full_case_fits": 9,
+    "fold_case_fits": 45,
+    "client_training_fit_identities": 270,
+    "distinct_targets_appearing_in_full_or_fold_menus": 35,
+    "full_and_fold_menu_target_ids": [
+      60,
+      62,
+      79,
+      83,
+      97,
+      98,
+      111,
+      114,
+      115,
+      143,
+      144,
+      145,
+      146,
+      147,
+      157,
+      166,
+      167,
+      178,
+      179,
+      180,
+      183,
+      186,
+      189,
+      191,
+      192,
+      197,
+      204,
+      206,
+      207,
+      211,
+      213,
+      226,
+      228,
+      230,
+      231
+    ]
+  },
+  "input_artifact_sha256": {
+    "docs/risk_menu_development_protocol.json": "6a57f3dc3f5a5850af2d8a1b2db597997edbd6054e61443d7ebfeb3fd8e37d51",
+    "results/model_review/risk_menu_v1/full_development_menus.json": "f2c91f807fa1191d58a886777e42d16688b19799c277058491d6b6f83c60608f",
+    "results/model_review/risk_menu_v1/validation_fold_menus.json": "d925d747fa6e0b2c475e2d26034429930dc901fbfef0a254c8a571494e43dbb7",
+    "results/model_review/risk_menu_v1/validation_oof_paths.csv": "0230b3187d909c6b13b4d084d340c5dd8329cda746fe978058be3b92be54e25d",
+    "results/model_review/risk_menu_v1/validation_oof_summary.csv": "98fe1168b31eccfb880d37e9e4b1eb144f0531b549da74cb5a60d082d7d16e52",
+    "results/model_review/risk_menu_v1/fit_manifest.json": "fe4531f50e5236f657ac6acb5829eb28d3cf0425ed58bacf6dda4a6a03ad3b63",
+    "results/model_review/risk_menu_v1/validation_manifest.json": "b8aae4ecfeba1f2cd2f33012219beb61d56e004c097ee49c2bf74663656f0d4f",
+    "results/model_review/risk_menu_v1/cache/step_0500__cost_002500.npz": "558b547574265a6fce5befa6803a55b9d7cbd8cc01a66603d38e080c880d97bb",
+    "results/model_review/risk_menu_v1/cache/step_0500__cost_002500.json": "225a36e8585bf6c5f310979193264a84c88ce98170d60c0d04665abb6bc6b804"
+  },
+  "source_sha256": {
+    "research/safeinvest_research/assessment.py": "5cbd5fab61ca30b5ef258445c5b257be19ee005f078c722fb748c74b6086a773",
+    "research/safeinvest_research/diagnostics.py": "cb200881f59ac4bb9674711fb19076355642abc342bb7a434fe0ebe9446fe836",
+    "research/safeinvest_research/evidence.py": "2654e0151652d9db12157e95180b132eadb26b147452b13700cbc2c2c2bd2305",
+    "research/safeinvest_research/metrics.py": "7ec8e4821ce284351a3d8ed7071c687fdf7d6e4cfd225f72cad1d09d623eb008",
+    "research/safeinvest_research/selection.py": "ea4aeeca113f73c04d56fa48498f34fc41af39730bb046b97548233dc0f26e3a",
+    "research/safeinvest_research/static.py": "3681b49748b7d30a749a5e4dfa6a8ff8675fb3a417b80bac9cb8483b19371552",
+    "scripts/run_risk_menu_research.py": "56d983de7015c481a5e62c5c437fdd53ba65ff4639085b0867489aeaaa778a0b",
+    "docs/risk_menu_development_protocol.json": "6a57f3dc3f5a5850af2d8a1b2db597997edbd6054e61443d7ebfeb3fd8e37d51"
+  },
+  "development_input_arrays_sha256": "56420cb159e13102ea2c6633089263bdddfaa09cc801d6dd74f72801c5506d8c",
+  "cache_source_sha256": {
+    "research/safeinvest_research/static.py": "3681b49748b7d30a749a5e4dfa6a8ff8675fb3a417b80bac9cb8483b19371552",
+    "research/safeinvest_research/metrics.py": "7ec8e4821ce284351a3d8ed7071c687fdf7d6e4cfd225f72cad1d09d623eb008",
+    "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a",
+    "src/safeinvest/data.py": "70e511fd05c6e23fd6b8a72f1dc165426fc77a5eb4dbd8a3c13b839bb305a75f"
+  },
+  "passed": true,
+  "check_invocations": {
+    "synthetic_analytic_fee": 1,
+    "synthetic_funding": 1,
+    "synthetic_transfer_fee": 1,
+    "synthetic_zero_cost": 1,
+    "protocol_development_only_scope": 1,
+    "cache_execution_parameters_match_protocol": 1,
+    "cache_development_only_scope": 1,
+    "cache_npz_manifest_hash": 1,
+    "cache_scenario_axis_ids": 1,
+    "fixed_232_simplex_grid": 1,
+    "fixed_candidate_family_count": 1,
+    "market_cache_scenario_axis_alignment": 1,
+    "development_input_array_hash": 1,
+    "cache_source_hash": 4,
+    "frozen_fit_source_hash": 8,
+    "fit_menu_manifest_hash": 1,
+    "fit_manifest_development_ids": 1,
+    "frozen_validation_source_hash": 8,
+    "self_financing_wealth": 30,
+    "fee_equals_rate_times_incoming_transfer": 30,
+    "sales_fund_purchases_and_fee": 30,
+    "nonnegative_holdings_and_fee": 30,
+    "cache_replay_log_growth": 5,
+    "cache_replay_cagr": 5,
+    "cache_replay_mdd": 5,
+    "cache_replay_volatility": 5,
+    "cache_replay_terminal_real": 5,
+    "cache_replay_fees": 5,
+    "cache_replay_moved": 5,
+    "cache_replay_trade_fraction": 5,
+    "all_nine_predeclared_cases": 1,
+    "protocol_fold_96_24_disjoint_partition": 5,
+    "each_development_path_tested_exactly_once": 1,
+    "full_case_policy_alignment": 9,
+    "shared_menu_unique_capacity": 54,
+    "shared_menu_unique_names": 54,
+    "shared_menu_risk_role_names": 54,
+    "all_profiles_have_assignment": 54,
+    "training_denominator": 54,
+    "menu_target_matches_cache_id": 162,
+    "complete_client_product_detail_table": 54,
+    "oracle_feasible_candidate_count": 270,
+    "client_choice_from_shared_feasible_menu": 270,
+    "unique_client_product_detail": 810,
+    "training_detail_candidate_index": 810,
+    "training_detail_horizon": 810,
+    "training_detail_loss_tolerance": 810,
+    "training_detail_n": 810,
+    "training_detail_breach_count": 810,
+    "training_detail_liquidity_pass": 810,
+    "training_detail_sample_feasible": 810,
+    "training_detail_chosen": 810,
+    "training_detail_one_path_boundary": 810,
+    "training_detail_breach_probability": 810,
+    "training_detail_expected_excess": 810,
+    "training_detail_cvar90_mdd": 810,
+    "training_detail_mean_log_growth": 810,
+    "oracle_growth_train_only": 54,
+    "oracle_has_feasible_target": 54,
+    "identified_menu_objective": 54,
+    "completed_menu_objective": 54,
+    "completed_objective_within_frozen_global_bands": 54,
+    "recorded_completion_verified": 54,
+    "reference_frontier_train_only": 54,
+    "reference_completion_and_label_order": 54,
+    "completion_extension_ids": 54,
+    "completion_capacity_flag": 54,
+    "completion_distinct_risk_flags": 54,
+    "menu_reference_growth_train_only": 162,
+    "menu_reference_cvar_train_only": 162,
+    "menu_role_origin": 162,
+    "complete_five_fold_menu_fits": 9,
+    "stored_fold_matches_predeclared_split": 45,
+    "fold_case_policy_alignment": 45,
+    "unique_oof_case_client_scenario": 5400,
+    "oof_test_only_membership": 5400,
+    "oof_profile_horizon_and_loss": 5400,
+    "oof_alpha": 5400,
+    "oof_liquidity_case": 5400,
+    "oof_frozen_fold_assignment": 5400,
+    "oof_assigned_flag": 5400,
+    "review_outcomes_all_null": 1800,
+    "automatic_outcomes_not_null": 3600,
+    "oof_frozen_fold_candidate": 3600,
+    "oof_replay_cagr": 3600,
+    "oof_replay_log_growth": 3600,
+    "oof_replay_mdd": 3600,
+    "oof_replay_breach": 3600,
+    "oof_replay_excess": 3600,
+    "complete_oof_case_client_groups": 1,
+    "unique_complete_oof_summaries": 1,
+    "coverage_denominator_all_120": 45,
+    "each_fold_contributes_24_oof_paths": 45,
+    "oof_summary_alpha": 45,
+    "oof_summary_total_test_paths": 45,
+    "oof_summary_assigned_test_paths": 45,
+    "oof_summary_review_test_paths": 45,
+    "oof_summary_auto_folds": 45,
+    "oof_summary_review_folds": 45,
+    "review_summary_outcomes_all_null": 15,
+    "oof_summary_breach_count": 30,
+    "oof_summary_breach_probability": 30,
+    "oof_summary_mean_log_growth": 30,
+    "oof_summary_median_cagr": 30,
+    "oof_summary_p10_cagr": 30,
+    "oof_summary_median_mdd": 30,
+    "oof_summary_p90_mdd": 30,
+    "oof_summary_expected_excess": 30,
+    "oof_summary_calibration_warning": 30,
+    "input_artifacts_unchanged_during_audit": 1,
+    "frozen_sources_unchanged_during_audit": 1,
+    "cache_sources_unchanged_during_audit": 1
+  },
+  "total_check_invocations": 79206,
+  "numerical_errors": {
+    "synthetic_analytic_fee": {
+      "maximum_absolute_error": 1.3877787807814457e-17,
+      "maximum_error_divided_by_one_plus_abs_reference": 1.2618746047069213e-17,
+      "compared_values": 3,
+      "atol": 1e-14,
+      "rtol": 1e-14
+    },
+    "synthetic_funding": {
+      "maximum_absolute_error": 0.0,
+      "maximum_error_divided_by_one_plus_abs_reference": 0.0,
+      "compared_values": 3,
+      "atol": 1e-13,
+      "rtol": 1e-12
+    },
+    "synthetic_transfer_fee": {
+      "maximum_absolute_error": 1.3877787807814457e-17,
+      "maximum_error_divided_by_one_plus_abs_reference": 1.2618746047069213e-17,
+      "compared_values": 3,
+      "atol": 1e-14,
+      "rtol": 1e-12
+    },
+    "synthetic_zero_cost": {
+      "maximum_absolute_error": 0.0,
+      "maximum_error_divided_by_one_plus_abs_reference": 0.0,
+      "compared_values": 3,
+      "atol": 0,
+      "rtol": 0
+    },
+    "fixed_232_simplex_grid": {
+      "maximum_absolute_error": 0.0,
+      "maximum_error_divided_by_one_plus_abs_reference": 0.0,
+      "compared_values": 696,
+      "atol": 1e-15,
+      "rtol": 0
+    },
+    "self_financing_wealth": {
+      "maximum_absolute_error": 1.8189894035458565e-12,
+      "maximum_error_divided_by_one_plus_abs_reference": 3.9793975866285938e-16,
+      "compared_values": 835200,
+      "atol": 1e-10,
+      "rtol": 1e-13
+    },
+    "fee_equals_rate_times_incoming_transfer": {
+      "maximum_absolute_error": 7.077671781985373e-16,
+      "maximum_error_divided_by_one_plus_abs_reference": 6.333236219021505e-16,
+      "compared_values": 835200,
+      "atol": 1e-11,
+      "rtol": 1e-13
+    },
+    "sales_fund_purchases_and_fee": {
+      "maximum_absolute_error": 1.812439087700568e-12,
+      "maximum_error_divided_by_one_plus_abs_reference": 1.5192449444999545e-12,
+      "compared_values": 835200,
+      "atol": 1e-10,
+      "rtol": 1e-13
+    },
+    "cache_replay_log_growth": {
+      "maximum_absolute_error": 4.718447854656915e-16,
+      "maximum_error_divided_by_one_plus_abs_reference": 4.585384443052705e-16,
+      "compared_values": 139200,
+      "atol": 1e-12,
+      "rtol": 1e-12
+    },
+    "cache_replay_cagr": {
+      "maximum_absolute_error": 5.759281940243e-16,
+      "maximum_error_divided_by_one_plus_abs_reference": 5.507426289438227e-16,
+      "compared_values": 139200,
+      "atol": 1e-12,
+      "rtol": 1e-12
+    },
+    "cache_replay_mdd": {
+      "maximum_absolute_error": 2.275957200481571e-15,
+      "maximum_error_divided_by_one_plus_abs_reference": 1.7505495762240904e-15,
+      "compared_values": 139200,
+      "atol": 1e-12,
+      "rtol": 1e-12
+    },
+    "cache_replay_volatility": {
+      "maximum_absolute_error": 3.0531133177191805e-16,
+      "maximum_error_divided_by_one_plus_abs_reference": 2.8540266102222127e-16,
+      "compared_values": 139200,
+      "atol": 1e-12,
+      "rtol": 1e-12
+    },
+    "cache_replay_terminal_real": {
+      "maximum_absolute_error": 1.2278178473934531e-11,
+      "maximum_error_divided_by_one_plus_abs_reference": 7.504053291058808e-15,
+      "compared_values": 139200,
+      "atol": 2e-09,
+      "rtol": 2e-13
+    },
+    "cache_replay_fees": {
+      "maximum_absolute_error": 2.842170943040401e-14,
+      "maximum_error_divided_by_one_plus_abs_reference": 5.180547038028567e-15,
+      "compared_values": 139200,
+      "atol": 2e-09,
+      "rtol": 2e-13
+    },
+    "cache_replay_moved": {
+      "maximum_absolute_error": 1.2278178473934531e-11,
+      "maximum_error_divided_by_one_plus_abs_reference": 8.25030379604537e-15,
+      "compared_values": 139200,
+      "atol": 2e-09,
+      "rtol": 2e-13
+    },
+    "cache_replay_trade_fraction": {
+      "maximum_absolute_error": 0.0,
+      "maximum_error_divided_by_one_plus_abs_reference": 0.0,
+      "compared_values": 139200,
+      "atol": 1e-12,
+      "rtol": 1e-12
+    },
+    "menu_target_matches_cache_id": {
+      "maximum_absolute_error": 0.0,
+      "maximum_error_divided_by_one_plus_abs_reference": 0.0,
+      "compared_values": 486,
+      "atol": 1e-12,
+      "rtol": 1e-12
+    },
+    "training_detail_breach_probability": {
+      "maximum_absolute_error": 1.3322676295501878e-15,
+      "maximum_error_divided_by_one_plus_abs_reference": 6.767073673905716e-16,
+      "compared_values": 810,
+      "atol": 1e-12,
+      "rtol": 1e-12
+    },
+    "training_detail_expected_excess": {
+      "maximum_absolute_error": 1.6653345369377348e-16,
+      "maximum_error_divided_by_one_plus_abs_reference": 1.3016093139330552e-16,
+      "compared_values": 810,
+      "atol": 1e-12,
+      "rtol": 1e-12
+    },
+    "training_detail_cvar90_mdd": {
+      "maximum_absolute_error": 3.3306690738754696e-16,
+      "maximum_error_divided_by_one_plus_abs_reference": 2.0817664008260611e-16,
+      "compared_values": 810,
+      "atol": 1e-12,
+      "rtol": 1e-12
+    },
+    "training_detail_mean_log_growth": {
+      "maximum_absolute_error": 1.249000902703301e-16,
+      "maximum_error_divided_by_one_plus_abs_reference": 1.2062108753801975e-16,
+      "compared_values": 810,
+      "atol": 1e-12,
+      "rtol": 1e-12
+    },
+    "oracle_growth_train_only": {
+      "maximum_absolute_error": 1.1102230246251565e-16,
+      "maximum_error_divided_by_one_plus_abs_reference": 1.0616328892596797e-16,
+      "compared_values": 270,
+      "atol": 1e-12,
+      "rtol": 1e-12
+    },
+    "identified_menu_objective": {
+      "maximum_absolute_error": 4.85722573273506e-17,
+      "maximum_error_divided_by_one_plus_abs_reference": 4.829937025468398e-17,
+      "compared_values": 162,
+      "atol": 1e-12,
+      "rtol": 1e-12
+    },
+    "completed_menu_objective": {
+      "maximum_absolute_error": 4.85722573273506e-17,
+      "maximum_error_divided_by_one_plus_abs_reference": 4.829937025468398e-17,
+      "compared_values": 162,
+      "atol": 1e-12,
+      "rtol": 1e-12
+    },
+    "menu_reference_growth_train_only": {
+      "maximum_absolute_error": 5.551115123125783e-17,
+      "maximum_error_divided_by_one_plus_abs_reference": 5.387330874850243e-17,
+      "compared_values": 162,
+      "atol": 1e-12,
+      "rtol": 1e-12
+    },
+    "menu_reference_cvar_train_only": {
+      "maximum_absolute_error": 2.220446049250313e-16,
+      "maximum_error_divided_by_one_plus_abs_reference": 1.341522969247837e-16,
+      "compared_values": 162,
+      "atol": 1e-12,
+      "rtol": 1e-12
+    },
+    "oof_alpha": {
+      "maximum_absolute_error": 0.0,
+      "maximum_error_divided_by_one_plus_abs_reference": 0.0,
+      "compared_values": 5400,
+      "atol": 1e-12,
+      "rtol": 1e-12
+    },
+    "oof_replay_cagr": {
+      "maximum_absolute_error": 2.8449465006019636e-16,
+      "maximum_error_divided_by_one_plus_abs_reference": 2.795171054360718e-16,
+      "compared_values": 3600,
+      "atol": 1e-12,
+      "rtol": 1e-12
+    },
+    "oof_replay_log_growth": {
+      "maximum_absolute_error": 1.9081958235744878e-16,
+      "maximum_error_divided_by_one_plus_abs_reference": 1.8750985383494495e-16,
+      "compared_values": 3600,
+      "atol": 1e-12,
+      "rtol": 1e-12
+    },
+    "oof_replay_mdd": {
+      "maximum_absolute_error": 2.7755575615628914e-16,
+      "maximum_error_divided_by_one_plus_abs_reference": 2.429511299802609e-16,
+      "compared_values": 3600,
+      "atol": 1e-12,
+      "rtol": 1e-12
+    },
+    "oof_replay_excess": {
+      "maximum_absolute_error": 1.1102230246251565e-16,
+      "maximum_error_divided_by_one_plus_abs_reference": 1.0793858862903951e-16,
+      "compared_values": 3600,
+      "atol": 1e-12,
+      "rtol": 1e-12
+    },
+    "oof_summary_alpha": {
+      "maximum_absolute_error": 0.0,
+      "maximum_error_divided_by_one_plus_abs_reference": 0.0,
+      "compared_values": 45,
+      "atol": 1e-12,
+      "rtol": 1e-12
+    },
+    "oof_summary_breach_count": {
+      "maximum_absolute_error": 0.0,
+      "maximum_error_divided_by_one_plus_abs_reference": 0.0,
+      "compared_values": 30,
+      "atol": 1e-12,
+      "rtol": 1e-12
+    },
+    "oof_summary_breach_probability": {
+      "maximum_absolute_error": 0.0,
+      "maximum_error_divided_by_one_plus_abs_reference": 0.0,
+      "compared_values": 30,
+      "atol": 1e-12,
+      "rtol": 1e-12
+    },
+    "oof_summary_mean_log_growth": {
+      "maximum_absolute_error": 1.3877787807814457e-17,
+      "maximum_error_divided_by_one_plus_abs_reference": 1.330451604890056e-17,
+      "compared_values": 30,
+      "atol": 1e-12,
+      "rtol": 1e-12
+    },
+    "oof_summary_median_cagr": {
+      "maximum_absolute_error": 0.0,
+      "maximum_error_divided_by_one_plus_abs_reference": 0.0,
+      "compared_values": 30,
+      "atol": 1e-12,
+      "rtol": 1e-12
+    },
+    "oof_summary_p10_cagr": {
+      "maximum_absolute_error": 0.0,
+      "maximum_error_divided_by_one_plus_abs_reference": 0.0,
+      "compared_values": 30,
+      "atol": 1e-12,
+      "rtol": 1e-12
+    },
+    "oof_summary_median_mdd": {
+      "maximum_absolute_error": 0.0,
+      "maximum_error_divided_by_one_plus_abs_reference": 0.0,
+      "compared_values": 30,
+      "atol": 1e-12,
+      "rtol": 1e-12
+    },
+    "oof_summary_p90_mdd": {
+      "maximum_absolute_error": 0.0,
+      "maximum_error_divided_by_one_plus_abs_reference": 0.0,
+      "compared_values": 30,
+      "atol": 1e-12,
+      "rtol": 1e-12
+    },
+    "oof_summary_expected_excess": {
+      "maximum_absolute_error": 1.734723475976807e-18,
+      "maximum_error_divided_by_one_plus_abs_reference": 1.7227813624403208e-18,
+      "compared_values": 30,
+      "atol": 1e-12,
+      "rtol": 1e-12
+    }
+  },
+  "failures": []
+}

@@ -1,0 +1,146 @@
+{
+  "source_json": "results/model_review/development_structure.json",
+  "source_sha256": "a1ade88c6d2252c7d6ca52d7931a4071866dc943053163ada67f50e296948e5f",
+  "script_sha256": "6a0f401d3e6b18b6ab9d22e11bec74d5456430af30cb8da172a28163d85b8ed6",
+  "scope": "Development1--120 only; research graphics, not competition-report assets or product selection",
+  "no_csv_or_final_results_read": true,
+  "model_reexecuted": false,
+  "output_dimensions_inches": [
+    11.5,
+    4.8
+  ],
+  "minimum_font_points": 12,
+  "png_dpi": 240,
+  "charts": {
+    "01_annual_frequency_and_magnitude": {
+      "question": "Separate how often real annual returns are negative from the amplitude of their distribution.",
+      "source_keys": {
+        "frequency": "market.assets.{asset}.real_annual_loss_share_scenario_equal",
+        "frequency_counts": "market.assets.{asset}.negative_real_annual_count",
+        "magnitude": "market.assets.{asset}.real_return_annual_distribution.{p05,median,p95}"
+      },
+      "asset_order": [
+        "equity",
+        "government_bond",
+        "bill_proxy"
+      ],
+      "frequency_percent": [
+        29.916666666666657,
+        41.25,
+        31.916666666666664
+      ],
+      "negative_year_counts": [
+        1077,
+        1485,
+        1149
+      ],
+      "p05_median_p95_percent": [
+        [
+          -24.663612022941948,
+          10.301573404835251,
+          36.4299264397524
+        ],
+        [
+          -12.307432726100018,
+          1.8564735131590737,
+          17.59460742093256
+        ],
+        [
+          -6.2884129849615205,
+          1.6590654183074816,
+          7.400658030086086
+        ]
+      ],
+      "definitions": {
+        "real_return": "(1+nominal_asset_return)/(1+inflation)-1, excluding portfolio trading fees",
+        "frequency": "average of scenario-specific negative-year fractions; each original scenario has equal weight",
+        "magnitude_quantiles": "linear interpolation, matching the saved descriptive annual summaries; median is np.median",
+        "sampling": "3600 descriptive annual rows, not3600 independent risk-certification trials"
+      }
+    },
+    "02_horizon_path_and_terminal_risk": {
+      "question": "Compare pathwise maximum drawdown with final purchasing-power shortfall at stated horizons.",
+      "source_keys": {
+        "mdd": "predeclared_diagnostic_paths.{strategy}.horizons.{H}.mdd_p90_inverted_cdf",
+        "terminal_frequency": "predeclared_diagnostic_paths.{strategy}.horizons.{H}.terminal_purchasing_power_loss_share",
+        "terminal_counts": "predeclared_diagnostic_paths.{strategy}.horizons.{H}.terminal_purchasing_power_loss_count"
+      },
+      "horizons": [
+        5,
+        6,
+        15,
+        25,
+        30
+      ],
+      "values": {
+        "all_bills": {
+          "mdd_p90_percent": [
+            10.757792386178034,
+            11.290666929613636,
+            17.98155435322689,
+            22.11570675074738,
+            22.11570675074738
+          ],
+          "terminal_loss_percent": [
+            26.666666666666668,
+            23.333333333333332,
+            14.166666666666666,
+            5.0,
+            5.833333333333333
+          ],
+          "terminal_loss_counts": [
+            32,
+            28,
+            17,
+            6,
+            7
+          ]
+        },
+        "equal_weight_annual": {
+          "mdd_p90_percent": [
+            19.25977427647114,
+            21.925349761768253,
+            27.63349479855368,
+            33.869186524823036,
+            34.698414283459414
+          ],
+          "terminal_loss_percent": [
+            17.5,
+            20.833333333333336,
+            9.166666666666666,
+            4.166666666666666,
+            3.3333333333333335
+          ],
+          "terminal_loss_counts": [
+            21,
+            25,
+            11,
+            5,
+            4
+          ]
+        }
+      },
+      "definitions": {
+        "path_risk": "Across-scenario empirical P90 of each path's maximum relative drawdown in inflation-adjusted net wealth, including initial100",
+        "terminal_risk": "Fraction of120 scenarios with real final wealth strictly below initial100",
+        "quantile": "inverted_cdf; empirical CDF generalized inverse, not the interpolated P90 also present in the source JSON",
+        "portfolio_execution": "all bills or fixed equal weights restored annually; identical contest fee convention; initial allocation charged; no deposits, withdrawals or terminal liquidation",
+        "observations": "Annual checks only; no intrayear drawdown observation. Each horizon reuses prefixes of the same120 scenarios, not a new independent sample."
+      }
+    }
+  },
+  "limitations": [
+    "Descriptive outcomes from supplied synthetic development scenarios, not forecasts or real-market guarantees.",
+    "Annual rows are dependent within scenarios; no independent-annual binomial certification.",
+    "Displayed outcome quantiles are not confidence intervals.",
+    "Path MDD uses annual wealth observations; intrayear losses are unavailable.",
+    "Horizon prefixes share scenarios; no paired or causal inference is implied by these display lines.",
+    "Loss frequency alone does not rank overall investment risk; portfolio suitability and liquidity remain separate modelling questions."
+  ],
+  "outputs": {
+    "01_annual_frequency_and_magnitude.png": "bdc3a28d639a15313229dd84b04238977c99dab6a4b8688b80af6b100cab14a2",
+    "01_annual_frequency_and_magnitude.svg": "edaf9bef16a44fb6662b4c5fcec39b75ef75155e1430380875459c66a0500a08",
+    "02_horizon_path_and_terminal_risk.png": "e584ee14973d76ae824eb9b0ec27c7a9603c82ab32b72d0196638caa432cafd8",
+    "02_horizon_path_and_terminal_risk.svg": "9296d07698ec14f6ca7bdc2462def2584487e18ce2516ef55a32fb0494498a53"
+  }
+}

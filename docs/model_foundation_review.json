@@ -55,5 +55,21 @@
     "unit": "complete 30-year scenario",
     "status": "design proposal, not executed or approved as final protocol",
     "caveat": "Overlapping training folds and reused scenarios do not create new independent data or certify a 10% tail probability."
+  },
+  "development_progress_2026_10_17": {
+    "status": "Development diagnostics completed for static empirical menus; no final service policy or report revision approved.",
+    "objective": "Annualized expected log net real growth; full-horizon MDD exceedance budget, with alpha explicitly normative.",
+    "static_study": "232 targets; nine alpha/reserve-policy cases; five whole-scenario folds; 1000 complete bootstrap reselections; fees and local resolution checked.",
+    "risk_evidence": "Primary is empirical. Secondary fixed-family CP uses1160 events and requires iid path assumption. It does not certify real markets, all products or learned dynamic policies.",
+    "sampling": "BCE automatic coverage repeats under bootstrap but exact targets do not. A becomes empirically eligible in some resamples, but conditional OOB diagnostics expose selection optimism. OOB rows are dependent and not an external risk estimate.",
+    "execution": "Frozen annual target suitability is not inherited by buyhold or a gate. Paired annual/hold ablation has been performed with unchanged assignments and real fees.",
+    "remaining": "Choose service meanings and severity/liquidity handling; study horizon-consistent fixed-target execution; then consider weight updates and executable review/pending rules. Formal report remains last.",
+    "new_artifacts": [
+      "docs/risk_menu_development_protocol.json",
+      "docs/simultaneous_static_risk_protocol.json",
+      "docs/bootstrap_oob_diagnostic_protocol.json",
+      "docs/fixed_execution_ablation_protocol.json",
+      "notebooks/risk_menu_development.ipynb"
+    ]
   }
 }

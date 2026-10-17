@@ -1,0 +1,112 @@
+{
+  "replicates": 1000,
+  "seed": 87020261018,
+  "case": "alpha_10__risk_only",
+  "sources": {
+    "research/safeinvest_research/assessment.py": "5cbd5fab61ca30b5ef258445c5b257be19ee005f078c722fb748c74b6086a773",
+    "research/safeinvest_research/diagnostics.py": "cb200881f59ac4bb9674711fb19076355642abc342bb7a434fe0ebe9446fe836",
+    "research/safeinvest_research/evidence.py": "2654e0151652d9db12157e95180b132eadb26b147452b13700cbc2c2c2bd2305",
+    "research/safeinvest_research/metrics.py": "7ec8e4821ce284351a3d8ed7071c687fdf7d6e4cfd225f72cad1d09d623eb008",
+    "research/safeinvest_research/selection.py": "ea4aeeca113f73c04d56fa48498f34fc41af39730bb046b97548233dc0f26e3a",
+    "research/safeinvest_research/static.py": "3681b49748b7d30a749a5e4dfa6a8ff8675fb3a417b80bac9cb8483b19371552",
+    "scripts/run_risk_menu_research.py": "56d983de7015c481a5e62c5c437fdd53ba65ff4639085b0867489aeaaa778a0b",
+    "docs/risk_menu_development_protocol.json": "6a57f3dc3f5a5850af2d8a1b2db597997edbd6054e61443d7ebfeb3fd8e37d51"
+  },
+  "elapsed_seconds": 238.37159620799503,
+  "interpretation": "Complete-reselection stability under whole-scenario empirical resampling, not independent market evidence or a risk confidence certificate.",
+  "client_assignment_counts": {
+    "A": {
+      "Review": 781,
+      "Conservative": 219
+    },
+    "B": {
+      "Conservative": 784,
+      "Balanced": 216
+    },
+    "C": {
+      "Balanced": 946,
+      "Growth": 54
+    },
+    "D": {
+      "Review": 1000
+    },
+    "E": {
+      "Growth": 1000
+    }
+  },
+  "automatic_frequency": {
+    "A": 0.219,
+    "B": 1.0,
+    "C": 1.0,
+    "D": 0.0,
+    "E": 1.0
+  },
+  "identified_cardinality_counts": {
+    "3": 1000
+  },
+  "coverage_counts": {
+    "3": 781,
+    "4": 219
+  },
+  "weight_alignment": "Minimum total L1 target distance to full-development reference, over all product permutations; original risk labels retained in menus.json.",
+  "alignment_conditioning": "Weight quantiles condition on replicates with the same menu cardinality as the reference; aligned_replicates is the denominator.",
+  "aligned_replicates": 1000,
+  "aligned_weight_quantiles_025_50_975": [
+    [
+      [
+        0.0,
+        0.0,
+        0.25
+      ],
+      [
+        0.0,
+        0.0,
+        0.1
+      ],
+      [
+        0.5,
+        0.0,
+        0.0
+      ]
+    ],
+    [
+      [
+        0.3,
+        0.15,
+        0.5
+      ],
+      [
+        0.45,
+        0.05,
+        0.5
+      ],
+      [
+        0.75,
+        0.05,
+        0.2
+      ]
+    ],
+    [
+      [
+        0.45,
+        0.4,
+        1.0
+      ],
+      [
+        0.5,
+        0.45,
+        1.0
+      ],
+      [
+        0.85,
+        0.3,
+        0.4012499999999989
+      ]
+    ]
+  ],
+  "max_growth_regret_quantiles_025_50_975": [
+    0.0,
+    0.0,
+    0.009234030195997755
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "original_assignments": {
+    "A": "Review",
+    "B": "Conservative",
+    "C": "Balanced",
+    "D": "Review",
+    "E": "Growth"
+  },
+  "interpretation": "The original menu weights/names and original customer assignments are frozen for performance. Re-screening is a separate counterfactual and never replaces those outcomes."
+}

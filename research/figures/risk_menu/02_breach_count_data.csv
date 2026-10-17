@@ -1,0 +1,7 @@
+client,series,breaches,n
+B,Full fit,12,120
+B,Fold-frozen OOF,12,120
+C,Full fit,12,120
+C,Fold-frozen OOF,13,120
+E,Full fit,12,120
+E,Fold-frozen OOF,11,120

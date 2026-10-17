@@ -1,0 +1,17 @@
+{
+  "completed_utc": "2026-10-17T10:26:33.428849+00:00",
+  "elapsed_seconds": 8.682785707998846,
+  "sources": {
+    "research/safeinvest_research/assessment.py": "5cbd5fab61ca30b5ef258445c5b257be19ee005f078c722fb748c74b6086a773",
+    "research/safeinvest_research/diagnostics.py": "cb200881f59ac4bb9674711fb19076355642abc342bb7a434fe0ebe9446fe836",
+    "research/safeinvest_research/evidence.py": "2654e0151652d9db12157e95180b132eadb26b147452b13700cbc2c2c2bd2305",
+    "research/safeinvest_research/metrics.py": "7ec8e4821ce284351a3d8ed7071c687fdf7d6e4cfd225f72cad1d09d623eb008",
+    "research/safeinvest_research/selection.py": "ea4aeeca113f73c04d56fa48498f34fc41af39730bb046b97548233dc0f26e3a",
+    "research/safeinvest_research/static.py": "3681b49748b7d30a749a5e4dfa6a8ff8675fb3a417b80bac9cb8483b19371552",
+    "scripts/run_risk_menu_research.py": "56d983de7015c481a5e62c5c437fdd53ba65ff4639085b0867489aeaaa778a0b",
+    "docs/risk_menu_development_protocol.json": "6a57f3dc3f5a5850af2d8a1b2db597997edbd6054e61443d7ebfeb3fd8e37d51"
+  },
+  "split_unit": "complete scenario",
+  "interpretation": "Overlapping training folds and different fitted policies; OOF counts are internal procedure diagnostics, not an iid fixed-rule certificate.",
+  "referral_handling": "Referrals retained in coverage counts; investment outcomes are null for unassigned profiles. No adviser performance or bill-only fallback is invented."
+}

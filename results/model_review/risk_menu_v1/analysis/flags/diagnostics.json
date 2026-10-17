@@ -1,0 +1,3616 @@
+{
+  "primary_case": "alpha_10__risk_only",
+  "policy_dependence": {
+    "A": {
+      "grade": "P2",
+      "assignments_by_case": {
+        "alpha_05__risk_only": "Review",
+        "alpha_05__reference_reserve": "Review",
+        "alpha_05__larger_reserve": "Review",
+        "alpha_10__risk_only": "Review",
+        "alpha_10__reference_reserve": "Review",
+        "alpha_10__larger_reserve": "Review",
+        "alpha_20__risk_only": "Conservative",
+        "alpha_20__reference_reserve": "Conservative",
+        "alpha_20__larger_reserve": "Conservative"
+      },
+      "coverage_policy_sensitive": true,
+      "role_policy_sensitive": true,
+      "target_comparison_available": true,
+      "target_policy_sensitive": false,
+      "meaning": "Normative policy dependence, not statistical failure or risk certification."
+    },
+    "B": {
+      "grade": "P1",
+      "assignments_by_case": {
+        "alpha_05__risk_only": "Conservative",
+        "alpha_05__reference_reserve": "Conservative",
+        "alpha_05__larger_reserve": "Conservative",
+        "alpha_10__risk_only": "Conservative",
+        "alpha_10__reference_reserve": "Conservative",
+        "alpha_10__larger_reserve": "Conservative",
+        "alpha_20__risk_only": "Balanced",
+        "alpha_20__reference_reserve": "Balanced",
+        "alpha_20__larger_reserve": "Balanced"
+      },
+      "coverage_policy_sensitive": false,
+      "role_policy_sensitive": true,
+      "target_comparison_available": true,
+      "target_policy_sensitive": true,
+      "meaning": "Normative policy dependence, not statistical failure or risk certification."
+    },
+    "C": {
+      "grade": "P1",
+      "assignments_by_case": {
+        "alpha_05__risk_only": "Balanced",
+        "alpha_05__reference_reserve": "Balanced",
+        "alpha_05__larger_reserve": "Balanced",
+        "alpha_10__risk_only": "Balanced",
+        "alpha_10__reference_reserve": "Balanced",
+        "alpha_10__larger_reserve": "Balanced",
+        "alpha_20__risk_only": "Balanced",
+        "alpha_20__reference_reserve": "Growth",
+        "alpha_20__larger_reserve": "Growth"
+      },
+      "coverage_policy_sensitive": false,
+      "role_policy_sensitive": true,
+      "target_comparison_available": true,
+      "target_policy_sensitive": true,
+      "meaning": "Normative policy dependence, not statistical failure or risk certification."
+    },
+    "D": {
+      "grade": "P0",
+      "assignments_by_case": {
+        "alpha_05__risk_only": "Review",
+        "alpha_05__reference_reserve": "Review",
+        "alpha_05__larger_reserve": "Review",
+        "alpha_10__risk_only": "Review",
+        "alpha_10__reference_reserve": "Review",
+        "alpha_10__larger_reserve": "Review",
+        "alpha_20__risk_only": "Review",
+        "alpha_20__reference_reserve": "Review",
+        "alpha_20__larger_reserve": "Review"
+      },
+      "coverage_policy_sensitive": false,
+      "role_policy_sensitive": false,
+      "target_comparison_available": false,
+      "target_policy_sensitive": null,
+      "meaning": "Normative policy dependence, not statistical failure or risk certification."
+    },
+    "E": {
+      "grade": "P1",
+      "assignments_by_case": {
+        "alpha_05__risk_only": "Growth",
+        "alpha_05__reference_reserve": "Growth",
+        "alpha_05__larger_reserve": "Growth",
+        "alpha_10__risk_only": "Growth",
+        "alpha_10__reference_reserve": "Growth",
+        "alpha_10__larger_reserve": "Balanced",
+        "alpha_20__risk_only": "Growth",
+        "alpha_20__reference_reserve": "Growth",
+        "alpha_20__larger_reserve": "Growth"
+      },
+      "coverage_policy_sensitive": false,
+      "role_policy_sensitive": true,
+      "target_comparison_available": true,
+      "target_policy_sensitive": true,
+      "meaning": "Normative policy dependence, not statistical failure or risk certification."
+    }
+  },
+  "by_case": {
+    "alpha_05__risk_only": {
+      "label_order": {
+        "reference_horizon": 15,
+        "n_training": 120,
+        "reference_label_candidate_indices": [
+          98,
+          145,
+          197
+        ],
+        "input_menu_matches_reference_order": true,
+        "by_horizon": {
+          "5": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.027228551183069924,
+                0.035265311516184734,
+                0.04636677582583883
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                197
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.19077686455457196,
+                0.2568939930652784,
+                0.3570148372574962
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                197
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.1448624828453059,
+                0.20055597514484907,
+                0.2745924471668287
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                197
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          },
+          "6": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.02589376986899921,
+                0.033506017236668656,
+                0.043965423569071495
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                197
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.20776226805145478,
+                0.28094188158183414,
+                0.3873561722339038
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                197
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.16645281135425208,
+                0.22697982395583535,
+                0.3117536822150599
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                197
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          },
+          "15": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.027923816487027582,
+                0.03686023540887511,
+                0.04905935608384101
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                197
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.2680232772142917,
+                0.36070922156535723,
+                0.5128174066219725
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                197
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.22575064010589813,
+                0.3006764446945104,
+                0.42073569049480464
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                197
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          },
+          "25": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.02969466894107682,
+                0.03899228405952339,
+                0.05145463398328041
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                197
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.319461072335933,
+                0.4123915655437808,
+                0.5606489089662902
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                197
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.26711327522711364,
+                0.34377308925155,
+                0.4789926145446066
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                197
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          },
+          "30": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.02896538953887745,
+                0.037827083580709665,
+                0.04962244458757055
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                197
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.3300952297473115,
+                0.41936982838224135,
+                0.5688181570960105
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                197
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.28479594254945895,
+                0.37286768214983684,
+                0.48839086724558184
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                197
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          }
+        },
+        "any_risk_label_reversal": false,
+        "any_cross_horizon_risk_reversal": false,
+        "reference_risk_ties": [],
+        "interpretation": "Descriptive order diagnostics; no universal hierarchy or population certificate."
+      },
+      "sampling": {
+        "A": {
+          "grade": "consistent_referral",
+          "full_assignment": "Review",
+          "full_screen": null,
+          "automatic_training_folds": 0,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 0,
+          "oof_n_automatically_assigned": 0,
+          "oof_breach_probability": null,
+          "internal_calibration_warning": false,
+          "population_certified": false
+        },
+        "B": {
+          "grade": "sampling_sensitive",
+          "full_assignment": "Conservative",
+          "full_screen": {
+            "breach_count": 6,
+            "n": 120,
+            "alpha": 0.05,
+            "breach_probability": 0.05,
+            "maximum_empirical_count": 6,
+            "empirical_pass": true,
+            "one_path_boundary_pass": true,
+            "one_path_boundary_fail": false,
+            "population_certified": false
+          },
+          "automatic_training_folds": 5,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 5,
+          "oof_n_automatically_assigned": 120,
+          "oof_breach_probability": 0.041666666666666664,
+          "internal_calibration_warning": false,
+          "population_certified": false
+        },
+        "C": {
+          "grade": "internal_calibration_warning",
+          "full_assignment": "Balanced",
+          "full_screen": {
+            "breach_count": 6,
+            "n": 120,
+            "alpha": 0.05,
+            "breach_probability": 0.05,
+            "maximum_empirical_count": 6,
+            "empirical_pass": true,
+            "one_path_boundary_pass": true,
+            "one_path_boundary_fail": false,
+            "population_certified": false
+          },
+          "automatic_training_folds": 5,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 7,
+          "oof_n_automatically_assigned": 120,
+          "oof_breach_probability": 0.058333333333333334,
+          "internal_calibration_warning": true,
+          "population_certified": false
+        },
+        "D": {
+          "grade": "consistent_referral",
+          "full_assignment": "Review",
+          "full_screen": null,
+          "automatic_training_folds": 0,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 0,
+          "oof_n_automatically_assigned": 0,
+          "oof_breach_probability": null,
+          "internal_calibration_warning": false,
+          "population_certified": false
+        },
+        "E": {
+          "grade": "internal_calibration_warning",
+          "full_assignment": "Growth",
+          "full_screen": {
+            "breach_count": 6,
+            "n": 120,
+            "alpha": 0.05,
+            "breach_probability": 0.05,
+            "maximum_empirical_count": 6,
+            "empirical_pass": true,
+            "one_path_boundary_pass": true,
+            "one_path_boundary_fail": false,
+            "population_certified": false
+          },
+          "automatic_training_folds": 5,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 7,
+          "oof_n_automatically_assigned": 120,
+          "oof_breach_probability": 0.058333333333333334,
+          "internal_calibration_warning": true,
+          "population_certified": false
+        }
+      },
+      "oof_automatic_counts": {
+        "A": {
+          "n": 0,
+          "breach_count": 0
+        },
+        "B": {
+          "n": 120,
+          "breach_count": 5
+        },
+        "C": {
+          "n": 120,
+          "breach_count": 7
+        },
+        "D": {
+          "n": 0,
+          "breach_count": 0
+        },
+        "E": {
+          "n": 120,
+          "breach_count": 7
+        }
+      }
+    },
+    "alpha_05__reference_reserve": {
+      "label_order": {
+        "reference_horizon": 15,
+        "n_training": 120,
+        "reference_label_candidate_indices": [
+          98,
+          145,
+          197
+        ],
+        "input_menu_matches_reference_order": true,
+        "by_horizon": {
+          "5": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.027228551183069924,
+                0.035265311516184734,
+                0.04636677582583883
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                197
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.19077686455457196,
+                0.2568939930652784,
+                0.3570148372574962
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                197
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.1448624828453059,
+                0.20055597514484907,
+                0.2745924471668287
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                197
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          },
+          "6": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.02589376986899921,
+                0.033506017236668656,
+                0.043965423569071495
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                197
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.20776226805145478,
+                0.28094188158183414,
+                0.3873561722339038
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                197
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.16645281135425208,
+                0.22697982395583535,
+                0.3117536822150599
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                197
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          },
+          "15": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.027923816487027582,
+                0.03686023540887511,
+                0.04905935608384101
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                197
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.2680232772142917,
+                0.36070922156535723,
+                0.5128174066219725
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                197
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.22575064010589813,
+                0.3006764446945104,
+                0.42073569049480464
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                197
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          },
+          "25": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.02969466894107682,
+                0.03899228405952339,
+                0.05145463398328041
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                197
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.319461072335933,
+                0.4123915655437808,
+                0.5606489089662902
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                197
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.26711327522711364,
+                0.34377308925155,
+                0.4789926145446066
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                197
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          },
+          "30": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.02896538953887745,
+                0.037827083580709665,
+                0.04962244458757055
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                197
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.3300952297473115,
+                0.41936982838224135,
+                0.5688181570960105
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                197
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.28479594254945895,
+                0.37286768214983684,
+                0.48839086724558184
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                197
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          }
+        },
+        "any_risk_label_reversal": false,
+        "any_cross_horizon_risk_reversal": false,
+        "reference_risk_ties": [],
+        "interpretation": "Descriptive order diagnostics; no universal hierarchy or population certificate."
+      },
+      "sampling": {
+        "A": {
+          "grade": "consistent_referral",
+          "full_assignment": "Review",
+          "full_screen": null,
+          "automatic_training_folds": 0,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 0,
+          "oof_n_automatically_assigned": 0,
+          "oof_breach_probability": null,
+          "internal_calibration_warning": false,
+          "population_certified": false
+        },
+        "B": {
+          "grade": "sampling_sensitive",
+          "full_assignment": "Conservative",
+          "full_screen": {
+            "breach_count": 6,
+            "n": 120,
+            "alpha": 0.05,
+            "breach_probability": 0.05,
+            "maximum_empirical_count": 6,
+            "empirical_pass": true,
+            "one_path_boundary_pass": true,
+            "one_path_boundary_fail": false,
+            "population_certified": false
+          },
+          "automatic_training_folds": 5,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 5,
+          "oof_n_automatically_assigned": 120,
+          "oof_breach_probability": 0.041666666666666664,
+          "internal_calibration_warning": false,
+          "population_certified": false
+        },
+        "C": {
+          "grade": "internal_calibration_warning",
+          "full_assignment": "Balanced",
+          "full_screen": {
+            "breach_count": 6,
+            "n": 120,
+            "alpha": 0.05,
+            "breach_probability": 0.05,
+            "maximum_empirical_count": 6,
+            "empirical_pass": true,
+            "one_path_boundary_pass": true,
+            "one_path_boundary_fail": false,
+            "population_certified": false
+          },
+          "automatic_training_folds": 5,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 7,
+          "oof_n_automatically_assigned": 120,
+          "oof_breach_probability": 0.058333333333333334,
+          "internal_calibration_warning": true,
+          "population_certified": false
+        },
+        "D": {
+          "grade": "consistent_referral",
+          "full_assignment": "Review",
+          "full_screen": null,
+          "automatic_training_folds": 0,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 0,
+          "oof_n_automatically_assigned": 0,
+          "oof_breach_probability": null,
+          "internal_calibration_warning": false,
+          "population_certified": false
+        },
+        "E": {
+          "grade": "internal_calibration_warning",
+          "full_assignment": "Growth",
+          "full_screen": {
+            "breach_count": 6,
+            "n": 120,
+            "alpha": 0.05,
+            "breach_probability": 0.05,
+            "maximum_empirical_count": 6,
+            "empirical_pass": true,
+            "one_path_boundary_pass": true,
+            "one_path_boundary_fail": false,
+            "population_certified": false
+          },
+          "automatic_training_folds": 5,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 7,
+          "oof_n_automatically_assigned": 120,
+          "oof_breach_probability": 0.058333333333333334,
+          "internal_calibration_warning": true,
+          "population_certified": false
+        }
+      },
+      "oof_automatic_counts": {
+        "A": {
+          "n": 0,
+          "breach_count": 0
+        },
+        "B": {
+          "n": 120,
+          "breach_count": 5
+        },
+        "C": {
+          "n": 120,
+          "breach_count": 7
+        },
+        "D": {
+          "n": 0,
+          "breach_count": 0
+        },
+        "E": {
+          "n": 120,
+          "breach_count": 7
+        }
+      }
+    },
+    "alpha_05__larger_reserve": {
+      "label_order": {
+        "reference_horizon": 15,
+        "n_training": 120,
+        "reference_label_candidate_indices": [
+          98,
+          145,
+          166
+        ],
+        "input_menu_matches_reference_order": true,
+        "by_horizon": {
+          "5": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.027228551183069924,
+                0.035265311516184734,
+                0.039423435074541456
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                166
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.19077686455457196,
+                0.2568939930652784,
+                0.2836566117212944
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                166
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.1448624828453059,
+                0.20055597514484907,
+                0.21865877336789116
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                166
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          },
+          "6": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.02589376986899921,
+                0.033506017236668656,
+                0.03745157174864206
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                166
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.20776226805145478,
+                0.28094188158183414,
+                0.314303440881328
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                166
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.16645281135425208,
+                0.22697982395583535,
+                0.24596258215400063
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                166
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          },
+          "15": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.027923816487027582,
+                0.03686023540887511,
+                0.041286186387696704
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                166
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.2680232772142917,
+                0.36070922156535723,
+                0.41703781043010424
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                166
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.22575064010589813,
+                0.3006764446945104,
+                0.3523088974303358
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                166
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          },
+          "25": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.02969466894107682,
+                0.03899228405952339,
+                0.0433178713417869
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                166
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.319461072335933,
+                0.4123915655437808,
+                0.4613691078749941
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                166
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.26711327522711364,
+                0.34377308925155,
+                0.38985732712156634
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                166
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          },
+          "30": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.02896538953887745,
+                0.037827083580709665,
+                0.04191856845821538
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                166
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.3300952297473115,
+                0.41936982838224135,
+                0.4691462251464205
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                166
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.28479594254945895,
+                0.37286768214983684,
+                0.3997302497577339
+              ],
+              "ascending_candidate_indices": [
+                98,
+                145,
+                166
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          }
+        },
+        "any_risk_label_reversal": false,
+        "any_cross_horizon_risk_reversal": false,
+        "reference_risk_ties": [],
+        "interpretation": "Descriptive order diagnostics; no universal hierarchy or population certificate."
+      },
+      "sampling": {
+        "A": {
+          "grade": "consistent_referral",
+          "full_assignment": "Review",
+          "full_screen": null,
+          "automatic_training_folds": 0,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 0,
+          "oof_n_automatically_assigned": 0,
+          "oof_breach_probability": null,
+          "internal_calibration_warning": false,
+          "population_certified": false
+        },
+        "B": {
+          "grade": "sampling_sensitive",
+          "full_assignment": "Conservative",
+          "full_screen": {
+            "breach_count": 6,
+            "n": 120,
+            "alpha": 0.05,
+            "breach_probability": 0.05,
+            "maximum_empirical_count": 6,
+            "empirical_pass": true,
+            "one_path_boundary_pass": true,
+            "one_path_boundary_fail": false,
+            "population_certified": false
+          },
+          "automatic_training_folds": 5,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 5,
+          "oof_n_automatically_assigned": 120,
+          "oof_breach_probability": 0.041666666666666664,
+          "internal_calibration_warning": false,
+          "population_certified": false
+        },
+        "C": {
+          "grade": "internal_calibration_warning",
+          "full_assignment": "Balanced",
+          "full_screen": {
+            "breach_count": 6,
+            "n": 120,
+            "alpha": 0.05,
+            "breach_probability": 0.05,
+            "maximum_empirical_count": 6,
+            "empirical_pass": true,
+            "one_path_boundary_pass": true,
+            "one_path_boundary_fail": false,
+            "population_certified": false
+          },
+          "automatic_training_folds": 5,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 7,
+          "oof_n_automatically_assigned": 120,
+          "oof_breach_probability": 0.058333333333333334,
+          "internal_calibration_warning": true,
+          "population_certified": false
+        },
+        "D": {
+          "grade": "consistent_referral",
+          "full_assignment": "Review",
+          "full_screen": null,
+          "automatic_training_folds": 0,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 0,
+          "oof_n_automatically_assigned": 0,
+          "oof_breach_probability": null,
+          "internal_calibration_warning": false,
+          "population_certified": false
+        },
+        "E": {
+          "grade": "development_consistent_auto",
+          "full_assignment": "Growth",
+          "full_screen": {
+            "breach_count": 4,
+            "n": 120,
+            "alpha": 0.05,
+            "breach_probability": 0.03333333333333333,
+            "maximum_empirical_count": 6,
+            "empirical_pass": true,
+            "one_path_boundary_pass": false,
+            "one_path_boundary_fail": false,
+            "population_certified": false
+          },
+          "automatic_training_folds": 5,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 4,
+          "oof_n_automatically_assigned": 120,
+          "oof_breach_probability": 0.03333333333333333,
+          "internal_calibration_warning": false,
+          "population_certified": false
+        }
+      },
+      "oof_automatic_counts": {
+        "A": {
+          "n": 0,
+          "breach_count": 0
+        },
+        "B": {
+          "n": 120,
+          "breach_count": 5
+        },
+        "C": {
+          "n": 120,
+          "breach_count": 7
+        },
+        "D": {
+          "n": 0,
+          "breach_count": 0
+        },
+        "E": {
+          "n": 120,
+          "breach_count": 4
+        }
+      }
+    },
+    "alpha_10__risk_only": {
+      "label_order": {
+        "reference_horizon": 15,
+        "n_training": 120,
+        "reference_label_candidate_indices": [
+          115,
+          166,
+          211
+        ],
+        "input_menu_matches_reference_order": true,
+        "by_horizon": {
+          "5": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.030107747598184884,
+                0.039423435074541456,
+                0.050319368162292134
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                211
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.2136018102113092,
+                0.2836566117212944,
+                0.397361212116166
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                211
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.16909515053934102,
+                0.21865877336789116,
+                0.3038268815394123
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                211
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          },
+          "6": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.02862087610080799,
+                0.03745157174864206,
+                0.047653109097053406
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                211
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.23574138762963134,
+                0.314303440881328,
+                0.4313825478292696
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                211
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.19149659845475653,
+                0.24596258215400063,
+                0.3490638231714431
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                211
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          },
+          "15": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.031145073264587087,
+                0.041286186387696704,
+                0.05342199911121429
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                211
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.2989711576290992,
+                0.41703781043010424,
+                0.568017565680619
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                211
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.2494129265989052,
+                0.3523088974303358,
+                0.4640720785792784
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                211
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          },
+          "25": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.0330836044175257,
+                0.0433178713417869,
+                0.05593404977174179
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                211
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.3524608259770886,
+                0.4613691078749941,
+                0.6186861640183808
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                211
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.30204385176850707,
+                0.38985732712156634,
+                0.5197743249122266
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                211
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          },
+          "30": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.032198386681660605,
+                0.04191856845821538,
+                0.053827020711410954
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                211
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.3605038370823642,
+                0.4691462251464205,
+                0.6281048759524267
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                211
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.31414000298662925,
+                0.3997302497577339,
+                0.5414470225611382
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                211
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          }
+        },
+        "any_risk_label_reversal": false,
+        "any_cross_horizon_risk_reversal": false,
+        "reference_risk_ties": [],
+        "interpretation": "Descriptive order diagnostics; no universal hierarchy or population certificate."
+      },
+      "sampling": {
+        "A": {
+          "grade": "consistent_referral",
+          "full_assignment": "Review",
+          "full_screen": null,
+          "automatic_training_folds": 0,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 0,
+          "oof_n_automatically_assigned": 0,
+          "oof_breach_probability": null,
+          "internal_calibration_warning": false,
+          "population_certified": false
+        },
+        "B": {
+          "grade": "sampling_sensitive",
+          "full_assignment": "Conservative",
+          "full_screen": {
+            "breach_count": 12,
+            "n": 120,
+            "alpha": 0.1,
+            "breach_probability": 0.1,
+            "maximum_empirical_count": 12,
+            "empirical_pass": true,
+            "one_path_boundary_pass": true,
+            "one_path_boundary_fail": false,
+            "population_certified": false
+          },
+          "automatic_training_folds": 5,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 12,
+          "oof_n_automatically_assigned": 120,
+          "oof_breach_probability": 0.1,
+          "internal_calibration_warning": false,
+          "population_certified": false
+        },
+        "C": {
+          "grade": "internal_calibration_warning",
+          "full_assignment": "Balanced",
+          "full_screen": {
+            "breach_count": 12,
+            "n": 120,
+            "alpha": 0.1,
+            "breach_probability": 0.1,
+            "maximum_empirical_count": 12,
+            "empirical_pass": true,
+            "one_path_boundary_pass": true,
+            "one_path_boundary_fail": false,
+            "population_certified": false
+          },
+          "automatic_training_folds": 5,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 13,
+          "oof_n_automatically_assigned": 120,
+          "oof_breach_probability": 0.10833333333333334,
+          "internal_calibration_warning": true,
+          "population_certified": false
+        },
+        "D": {
+          "grade": "consistent_referral",
+          "full_assignment": "Review",
+          "full_screen": null,
+          "automatic_training_folds": 0,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 0,
+          "oof_n_automatically_assigned": 0,
+          "oof_breach_probability": null,
+          "internal_calibration_warning": false,
+          "population_certified": false
+        },
+        "E": {
+          "grade": "sampling_sensitive",
+          "full_assignment": "Growth",
+          "full_screen": {
+            "breach_count": 12,
+            "n": 120,
+            "alpha": 0.1,
+            "breach_probability": 0.1,
+            "maximum_empirical_count": 12,
+            "empirical_pass": true,
+            "one_path_boundary_pass": true,
+            "one_path_boundary_fail": false,
+            "population_certified": false
+          },
+          "automatic_training_folds": 5,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 11,
+          "oof_n_automatically_assigned": 120,
+          "oof_breach_probability": 0.09166666666666666,
+          "internal_calibration_warning": false,
+          "population_certified": false
+        }
+      },
+      "oof_automatic_counts": {
+        "A": {
+          "n": 0,
+          "breach_count": 0
+        },
+        "B": {
+          "n": 120,
+          "breach_count": 12
+        },
+        "C": {
+          "n": 120,
+          "breach_count": 13
+        },
+        "D": {
+          "n": 0,
+          "breach_count": 0
+        },
+        "E": {
+          "n": 120,
+          "breach_count": 11
+        }
+      }
+    },
+    "alpha_10__reference_reserve": {
+      "label_order": {
+        "reference_horizon": 15,
+        "n_training": 120,
+        "reference_label_candidate_indices": [
+          115,
+          166,
+          204
+        ],
+        "input_menu_matches_reference_order": true,
+        "by_horizon": {
+          "5": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.030107747598184884,
+                0.039423435074541456,
+                0.04829564215056605
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                204
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.2136018102113092,
+                0.2836566117212944,
+                0.37508706690746874
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                204
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.16909515053934102,
+                0.21865877336789116,
+                0.2890261989277153
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                204
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          },
+          "6": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.02862087610080799,
+                0.03745157174864206,
+                0.04576924458261713
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                204
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.23574138762963134,
+                0.314303440881328,
+                0.4083852993226411
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                204
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.19149659845475653,
+                0.24596258215400063,
+                0.3235896839557887
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                204
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          },
+          "15": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.031145073264587087,
+                0.041286186387696704,
+                0.051156920493579436
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                204
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.2989711576290992,
+                0.41703781043010424,
+                0.5398145186806219
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                204
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.2494129265989052,
+                0.3523088974303358,
+                0.44144625214419936
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                204
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          },
+          "25": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.0330836044175257,
+                0.0433178713417869,
+                0.05357258674215606
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                204
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.3524608259770886,
+                0.4613691078749941,
+                0.589814151623432
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                204
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.30204385176850707,
+                0.38985732712156634,
+                0.494930549737618
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                204
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          },
+          "30": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.032198386681660605,
+                0.04191856845821538,
+                0.05160718796575013
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                204
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.3605038370823642,
+                0.4691462251464205,
+                0.5985985071568638
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                204
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.31414000298662925,
+                0.3997302497577339,
+                0.5125408851184059
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                204
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          }
+        },
+        "any_risk_label_reversal": false,
+        "any_cross_horizon_risk_reversal": false,
+        "reference_risk_ties": [],
+        "interpretation": "Descriptive order diagnostics; no universal hierarchy or population certificate."
+      },
+      "sampling": {
+        "A": {
+          "grade": "consistent_referral",
+          "full_assignment": "Review",
+          "full_screen": null,
+          "automatic_training_folds": 0,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 0,
+          "oof_n_automatically_assigned": 0,
+          "oof_breach_probability": null,
+          "internal_calibration_warning": false,
+          "population_certified": false
+        },
+        "B": {
+          "grade": "sampling_sensitive",
+          "full_assignment": "Conservative",
+          "full_screen": {
+            "breach_count": 12,
+            "n": 120,
+            "alpha": 0.1,
+            "breach_probability": 0.1,
+            "maximum_empirical_count": 12,
+            "empirical_pass": true,
+            "one_path_boundary_pass": true,
+            "one_path_boundary_fail": false,
+            "population_certified": false
+          },
+          "automatic_training_folds": 5,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 12,
+          "oof_n_automatically_assigned": 120,
+          "oof_breach_probability": 0.1,
+          "internal_calibration_warning": false,
+          "population_certified": false
+        },
+        "C": {
+          "grade": "internal_calibration_warning",
+          "full_assignment": "Balanced",
+          "full_screen": {
+            "breach_count": 12,
+            "n": 120,
+            "alpha": 0.1,
+            "breach_probability": 0.1,
+            "maximum_empirical_count": 12,
+            "empirical_pass": true,
+            "one_path_boundary_pass": true,
+            "one_path_boundary_fail": false,
+            "population_certified": false
+          },
+          "automatic_training_folds": 5,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 13,
+          "oof_n_automatically_assigned": 120,
+          "oof_breach_probability": 0.10833333333333334,
+          "internal_calibration_warning": true,
+          "population_certified": false
+        },
+        "D": {
+          "grade": "consistent_referral",
+          "full_assignment": "Review",
+          "full_screen": null,
+          "automatic_training_folds": 0,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 0,
+          "oof_n_automatically_assigned": 0,
+          "oof_breach_probability": null,
+          "internal_calibration_warning": false,
+          "population_certified": false
+        },
+        "E": {
+          "grade": "development_consistent_auto",
+          "full_assignment": "Growth",
+          "full_screen": {
+            "breach_count": 8,
+            "n": 120,
+            "alpha": 0.1,
+            "breach_probability": 0.06666666666666667,
+            "maximum_empirical_count": 12,
+            "empirical_pass": true,
+            "one_path_boundary_pass": false,
+            "one_path_boundary_fail": false,
+            "population_certified": false
+          },
+          "automatic_training_folds": 5,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 8,
+          "oof_n_automatically_assigned": 120,
+          "oof_breach_probability": 0.06666666666666667,
+          "internal_calibration_warning": false,
+          "population_certified": false
+        }
+      },
+      "oof_automatic_counts": {
+        "A": {
+          "n": 0,
+          "breach_count": 0
+        },
+        "B": {
+          "n": 120,
+          "breach_count": 12
+        },
+        "C": {
+          "n": 120,
+          "breach_count": 13
+        },
+        "D": {
+          "n": 0,
+          "breach_count": 0
+        },
+        "E": {
+          "n": 120,
+          "breach_count": 8
+        }
+      }
+    },
+    "alpha_10__larger_reserve": {
+      "label_order": {
+        "reference_horizon": 15,
+        "n_training": 120,
+        "reference_label_candidate_indices": [
+          115,
+          166,
+          231
+        ],
+        "input_menu_matches_reference_order": true,
+        "by_horizon": {
+          "5": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.030107747598184884,
+                0.039423435074541456,
+                0.059243137969710605
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                231
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.2136018102113092,
+                0.2836566117212944,
+                0.5050281734526769
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                231
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.16909515053934102,
+                0.21865877336789116,
+                0.3837500798546736
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                231
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          },
+          "6": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.02862087610080799,
+                0.03745157174864206,
+                0.055869995430986426
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                231
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.23574138762963134,
+                0.314303440881328,
+                0.5428285408835745
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                231
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.19149659845475653,
+                0.24596258215400063,
+                0.43925333169403036
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                231
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          },
+          "15": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.031145073264587087,
+                0.041286186387696704,
+                0.06351014989089074
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                231
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.2989711576290992,
+                0.41703781043010424,
+                0.6905164431485272
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                231
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.2494129265989052,
+                0.3523088974303358,
+                0.5670753494820693
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                231
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          },
+          "25": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.0330836044175257,
+                0.0433178713417869,
+                0.06650606258655131
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                231
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.3524608259770886,
+                0.4613691078749941,
+                0.7458706222233934
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                231
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.30204385176850707,
+                0.38985732712156634,
+                0.6452647864965636
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                231
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          },
+          "30": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.032198386681660605,
+                0.04191856845821538,
+                0.06368503833637286
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                231
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.3605038370823642,
+                0.4691462251464205,
+                0.7547464414092353
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                231
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.31414000298662925,
+                0.3997302497577339,
+                0.6702947562936954
+              ],
+              "ascending_candidate_indices": [
+                115,
+                166,
+                231
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          }
+        },
+        "any_risk_label_reversal": false,
+        "any_cross_horizon_risk_reversal": false,
+        "reference_risk_ties": [],
+        "interpretation": "Descriptive order diagnostics; no universal hierarchy or population certificate."
+      },
+      "sampling": {
+        "A": {
+          "grade": "consistent_referral",
+          "full_assignment": "Review",
+          "full_screen": null,
+          "automatic_training_folds": 0,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 0,
+          "oof_n_automatically_assigned": 0,
+          "oof_breach_probability": null,
+          "internal_calibration_warning": false,
+          "population_certified": false
+        },
+        "B": {
+          "grade": "sampling_sensitive",
+          "full_assignment": "Conservative",
+          "full_screen": {
+            "breach_count": 12,
+            "n": 120,
+            "alpha": 0.1,
+            "breach_probability": 0.1,
+            "maximum_empirical_count": 12,
+            "empirical_pass": true,
+            "one_path_boundary_pass": true,
+            "one_path_boundary_fail": false,
+            "population_certified": false
+          },
+          "automatic_training_folds": 5,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 12,
+          "oof_n_automatically_assigned": 120,
+          "oof_breach_probability": 0.1,
+          "internal_calibration_warning": false,
+          "population_certified": false
+        },
+        "C": {
+          "grade": "internal_calibration_warning",
+          "full_assignment": "Balanced",
+          "full_screen": {
+            "breach_count": 12,
+            "n": 120,
+            "alpha": 0.1,
+            "breach_probability": 0.1,
+            "maximum_empirical_count": 12,
+            "empirical_pass": true,
+            "one_path_boundary_pass": true,
+            "one_path_boundary_fail": false,
+            "population_certified": false
+          },
+          "automatic_training_folds": 5,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": true,
+          "oof_breach_count": 13,
+          "oof_n_automatically_assigned": 120,
+          "oof_breach_probability": 0.10833333333333334,
+          "internal_calibration_warning": true,
+          "population_certified": false
+        },
+        "D": {
+          "grade": "consistent_referral",
+          "full_assignment": "Review",
+          "full_screen": null,
+          "automatic_training_folds": 0,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 0,
+          "oof_n_automatically_assigned": 0,
+          "oof_breach_probability": null,
+          "internal_calibration_warning": false,
+          "population_certified": false
+        },
+        "E": {
+          "grade": "development_consistent_auto",
+          "full_assignment": "Balanced",
+          "full_screen": {
+            "breach_count": 4,
+            "n": 120,
+            "alpha": 0.1,
+            "breach_probability": 0.03333333333333333,
+            "maximum_empirical_count": 12,
+            "empirical_pass": true,
+            "one_path_boundary_pass": false,
+            "one_path_boundary_fail": false,
+            "population_certified": false
+          },
+          "automatic_training_folds": 5,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": true,
+          "oof_breach_count": 4,
+          "oof_n_automatically_assigned": 120,
+          "oof_breach_probability": 0.03333333333333333,
+          "internal_calibration_warning": false,
+          "population_certified": false
+        }
+      },
+      "oof_automatic_counts": {
+        "A": {
+          "n": 0,
+          "breach_count": 0
+        },
+        "B": {
+          "n": 120,
+          "breach_count": 12
+        },
+        "C": {
+          "n": 120,
+          "breach_count": 13
+        },
+        "D": {
+          "n": 0,
+          "breach_count": 0
+        },
+        "E": {
+          "n": 120,
+          "breach_count": 4
+        }
+      }
+    },
+    "alpha_20__risk_only": {
+      "label_order": {
+        "reference_horizon": 15,
+        "n_training": 120,
+        "reference_label_candidate_indices": [
+          62,
+          146,
+          228
+        ],
+        "input_menu_matches_reference_order": true,
+        "by_horizon": {
+          "5": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.021374848736841763,
+                0.03541308622562958,
+                0.056162462990926205
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                228
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.15646141464395952,
+                0.26214083597255833,
+                0.4696341042646995
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                228
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.1144305055361406,
+                0.1998767606557974,
+                0.3625414513302171
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                228
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          },
+          "6": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.020326823411917935,
+                0.033637103998323384,
+                0.053046165915635754
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                228
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.16581855929839998,
+                0.2867272865913338,
+                0.5065670644703582
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                228
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.13330382624797552,
+                0.23379993742813684,
+                0.40597792431708835
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                228
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          },
+          "15": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.021438899383096118,
+                0.03707304195342312,
+                0.060157711459601824
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                228
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.22423545768482075,
+                0.3634636114281151,
+                0.6485721617570859
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                228
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.18376839052199692,
+                0.30057797157349525,
+                0.5235079546751009
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                228
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          },
+          "25": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.022946092732312733,
+                0.03927664128986028,
+                0.06311686025088632
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                228
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.2766558799749721,
+                0.4184466585950557,
+                0.7015172234329706
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                228
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.24254371361162655,
+                0.34964227641291734,
+                0.6063470984221627
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                228
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          },
+          "30": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.022519073914468158,
+                0.03809865295508412,
+                0.06057594852396444
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                228
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.2864053410484972,
+                0.42595662086117586,
+                0.7099493388805623
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                228
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.24585849638084808,
+                0.37683638114831947,
+                0.6240009560548373
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                228
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          }
+        },
+        "any_risk_label_reversal": false,
+        "any_cross_horizon_risk_reversal": false,
+        "reference_risk_ties": [],
+        "interpretation": "Descriptive order diagnostics; no universal hierarchy or population certificate."
+      },
+      "sampling": {
+        "A": {
+          "grade": "sampling_sensitive",
+          "full_assignment": "Conservative",
+          "full_screen": {
+            "breach_count": 24,
+            "n": 120,
+            "alpha": 0.2,
+            "breach_probability": 0.2,
+            "maximum_empirical_count": 24,
+            "empirical_pass": true,
+            "one_path_boundary_pass": true,
+            "one_path_boundary_fail": false,
+            "population_certified": false
+          },
+          "automatic_training_folds": 5,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 24,
+          "oof_n_automatically_assigned": 120,
+          "oof_breach_probability": 0.2,
+          "internal_calibration_warning": false,
+          "population_certified": false
+        },
+        "B": {
+          "grade": "internal_calibration_warning",
+          "full_assignment": "Balanced",
+          "full_screen": {
+            "breach_count": 24,
+            "n": 120,
+            "alpha": 0.2,
+            "breach_probability": 0.2,
+            "maximum_empirical_count": 24,
+            "empirical_pass": true,
+            "one_path_boundary_pass": true,
+            "one_path_boundary_fail": false,
+            "population_certified": false
+          },
+          "automatic_training_folds": 5,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 25,
+          "oof_n_automatically_assigned": 120,
+          "oof_breach_probability": 0.20833333333333334,
+          "internal_calibration_warning": true,
+          "population_certified": false
+        },
+        "C": {
+          "grade": "development_consistent_auto",
+          "full_assignment": "Balanced",
+          "full_screen": {
+            "breach_count": 7,
+            "n": 120,
+            "alpha": 0.2,
+            "breach_probability": 0.058333333333333334,
+            "maximum_empirical_count": 24,
+            "empirical_pass": true,
+            "one_path_boundary_pass": false,
+            "one_path_boundary_fail": false,
+            "population_certified": false
+          },
+          "automatic_training_folds": 5,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 7,
+          "oof_n_automatically_assigned": 120,
+          "oof_breach_probability": 0.058333333333333334,
+          "internal_calibration_warning": false,
+          "population_certified": false
+        },
+        "D": {
+          "grade": "consistent_referral",
+          "full_assignment": "Review",
+          "full_screen": null,
+          "automatic_training_folds": 0,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 0,
+          "oof_n_automatically_assigned": 0,
+          "oof_breach_probability": null,
+          "internal_calibration_warning": false,
+          "population_certified": false
+        },
+        "E": {
+          "grade": "internal_calibration_warning",
+          "full_assignment": "Growth",
+          "full_screen": {
+            "breach_count": 23,
+            "n": 120,
+            "alpha": 0.2,
+            "breach_probability": 0.19166666666666668,
+            "maximum_empirical_count": 24,
+            "empirical_pass": true,
+            "one_path_boundary_pass": false,
+            "one_path_boundary_fail": false,
+            "population_certified": false
+          },
+          "automatic_training_folds": 5,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 25,
+          "oof_n_automatically_assigned": 120,
+          "oof_breach_probability": 0.20833333333333334,
+          "internal_calibration_warning": true,
+          "population_certified": false
+        }
+      },
+      "oof_automatic_counts": {
+        "A": {
+          "n": 120,
+          "breach_count": 24
+        },
+        "B": {
+          "n": 120,
+          "breach_count": 25
+        },
+        "C": {
+          "n": 120,
+          "breach_count": 7
+        },
+        "D": {
+          "n": 0,
+          "breach_count": 0
+        },
+        "E": {
+          "n": 120,
+          "breach_count": 25
+        }
+      }
+    },
+    "alpha_20__reference_reserve": {
+      "label_order": {
+        "reference_horizon": 15,
+        "n_training": 120,
+        "reference_label_candidate_indices": [
+          62,
+          146,
+          180
+        ],
+        "input_menu_matches_reference_order": true,
+        "by_horizon": {
+          "5": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.021374848736841763,
+                0.03541308622562958,
+                0.042274100271178144
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                180
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.15646141464395952,
+                0.26214083597255833,
+                0.3211949092662256
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                180
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.1144305055361406,
+                0.1998767606557974,
+                0.24018409565922083
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                180
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          },
+          "6": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.020326823411917935,
+                0.033637103998323384,
+                0.04011933504492171
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                180
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.16581855929839998,
+                0.2867272865913338,
+                0.34746263530534083
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                180
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.13330382624797552,
+                0.23379993742813684,
+                0.2940859352360834
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                180
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          },
+          "15": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.021438899383096118,
+                0.03707304195342312,
+                0.044604593230266956
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                180
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.22423545768482075,
+                0.3634636114281151,
+                0.45687184734686764
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                180
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.18376839052199692,
+                0.30057797157349525,
+                0.3807345454448837
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                180
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          },
+          "25": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.022946092732312733,
+                0.03927664128986028,
+                0.046955057840665705
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                180
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.2766558799749721,
+                0.4184466585950557,
+                0.5018049217400784
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                180
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.24254371361162655,
+                0.34964227641291734,
+                0.4333945204471799
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                180
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          },
+          "30": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.022519073914468158,
+                0.03809865295508412,
+                0.04538383627636856
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                180
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.2864053410484972,
+                0.42595662086117586,
+                0.5089542943271508
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                180
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.24585849638084808,
+                0.37683638114831947,
+                0.4480252186003631
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                180
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          }
+        },
+        "any_risk_label_reversal": false,
+        "any_cross_horizon_risk_reversal": false,
+        "reference_risk_ties": [],
+        "interpretation": "Descriptive order diagnostics; no universal hierarchy or population certificate."
+      },
+      "sampling": {
+        "A": {
+          "grade": "sampling_sensitive",
+          "full_assignment": "Conservative",
+          "full_screen": {
+            "breach_count": 24,
+            "n": 120,
+            "alpha": 0.2,
+            "breach_probability": 0.2,
+            "maximum_empirical_count": 24,
+            "empirical_pass": true,
+            "one_path_boundary_pass": true,
+            "one_path_boundary_fail": false,
+            "population_certified": false
+          },
+          "automatic_training_folds": 5,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 24,
+          "oof_n_automatically_assigned": 120,
+          "oof_breach_probability": 0.2,
+          "internal_calibration_warning": false,
+          "population_certified": false
+        },
+        "B": {
+          "grade": "internal_calibration_warning",
+          "full_assignment": "Balanced",
+          "full_screen": {
+            "breach_count": 24,
+            "n": 120,
+            "alpha": 0.2,
+            "breach_probability": 0.2,
+            "maximum_empirical_count": 24,
+            "empirical_pass": true,
+            "one_path_boundary_pass": true,
+            "one_path_boundary_fail": false,
+            "population_certified": false
+          },
+          "automatic_training_folds": 5,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 25,
+          "oof_n_automatically_assigned": 120,
+          "oof_breach_probability": 0.20833333333333334,
+          "internal_calibration_warning": true,
+          "population_certified": false
+        },
+        "C": {
+          "grade": "sampling_sensitive",
+          "full_assignment": "Growth",
+          "full_screen": {
+            "breach_count": 24,
+            "n": 120,
+            "alpha": 0.2,
+            "breach_probability": 0.2,
+            "maximum_empirical_count": 24,
+            "empirical_pass": true,
+            "one_path_boundary_pass": true,
+            "one_path_boundary_fail": false,
+            "population_certified": false
+          },
+          "automatic_training_folds": 5,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 24,
+          "oof_n_automatically_assigned": 120,
+          "oof_breach_probability": 0.2,
+          "internal_calibration_warning": false,
+          "population_certified": false
+        },
+        "D": {
+          "grade": "consistent_referral",
+          "full_assignment": "Review",
+          "full_screen": null,
+          "automatic_training_folds": 0,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 0,
+          "oof_n_automatically_assigned": 0,
+          "oof_breach_probability": null,
+          "internal_calibration_warning": false,
+          "population_certified": false
+        },
+        "E": {
+          "grade": "development_consistent_auto",
+          "full_assignment": "Growth",
+          "full_screen": {
+            "breach_count": 4,
+            "n": 120,
+            "alpha": 0.2,
+            "breach_probability": 0.03333333333333333,
+            "maximum_empirical_count": 24,
+            "empirical_pass": true,
+            "one_path_boundary_pass": false,
+            "one_path_boundary_fail": false,
+            "population_certified": false
+          },
+          "automatic_training_folds": 5,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 4,
+          "oof_n_automatically_assigned": 120,
+          "oof_breach_probability": 0.03333333333333333,
+          "internal_calibration_warning": false,
+          "population_certified": false
+        }
+      },
+      "oof_automatic_counts": {
+        "A": {
+          "n": 120,
+          "breach_count": 24
+        },
+        "B": {
+          "n": 120,
+          "breach_count": 25
+        },
+        "C": {
+          "n": 120,
+          "breach_count": 24
+        },
+        "D": {
+          "n": 0,
+          "breach_count": 0
+        },
+        "E": {
+          "n": 120,
+          "breach_count": 4
+        }
+      }
+    },
+    "alpha_20__larger_reserve": {
+      "label_order": {
+        "reference_horizon": 15,
+        "n_training": 120,
+        "reference_label_candidate_indices": [
+          62,
+          146,
+          166
+        ],
+        "input_menu_matches_reference_order": true,
+        "by_horizon": {
+          "5": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.021374848736841763,
+                0.03541308622562958,
+                0.039423435074541456
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                166
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.15646141464395952,
+                0.26214083597255833,
+                0.2836566117212944
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                166
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.1144305055361406,
+                0.1998767606557974,
+                0.21865877336789116
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                166
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          },
+          "6": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.020326823411917935,
+                0.033637103998323384,
+                0.03745157174864206
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                166
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.16581855929839998,
+                0.2867272865913338,
+                0.314303440881328
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                166
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.13330382624797552,
+                0.23379993742813684,
+                0.24596258215400063
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                166
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          },
+          "15": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.021438899383096118,
+                0.03707304195342312,
+                0.041286186387696704
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                166
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.22423545768482075,
+                0.3634636114281151,
+                0.41703781043010424
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                166
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.18376839052199692,
+                0.30057797157349525,
+                0.3523088974303358
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                166
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          },
+          "25": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.022946092732312733,
+                0.03927664128986028,
+                0.0433178713417869
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                166
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.2766558799749721,
+                0.4184466585950557,
+                0.4613691078749941
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                166
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.24254371361162655,
+                0.34964227641291734,
+                0.38985732712156634
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                166
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          },
+          "30": {
+            "mean_log_growth": {
+              "values_in_reference_label_order": [
+                0.022519073914468158,
+                0.03809865295508412,
+                0.04191856845821538
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                166
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "cvar90_mdd": {
+              "values_in_reference_label_order": [
+                0.2864053410484972,
+                0.42595662086117586,
+                0.4691462251464205
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                166
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            },
+            "p90_mdd": {
+              "values_in_reference_label_order": [
+                0.24585849638084808,
+                0.37683638114831947,
+                0.3997302497577339
+              ],
+              "ascending_candidate_indices": [
+                62,
+                146,
+                166
+              ],
+              "tied_pairs": [],
+              "against_reference_label_order": [],
+              "crossings_against_same_metric_at_reference_horizon": []
+            }
+          }
+        },
+        "any_risk_label_reversal": false,
+        "any_cross_horizon_risk_reversal": false,
+        "reference_risk_ties": [],
+        "interpretation": "Descriptive order diagnostics; no universal hierarchy or population certificate."
+      },
+      "sampling": {
+        "A": {
+          "grade": "sampling_sensitive",
+          "full_assignment": "Conservative",
+          "full_screen": {
+            "breach_count": 24,
+            "n": 120,
+            "alpha": 0.2,
+            "breach_probability": 0.2,
+            "maximum_empirical_count": 24,
+            "empirical_pass": true,
+            "one_path_boundary_pass": true,
+            "one_path_boundary_fail": false,
+            "population_certified": false
+          },
+          "automatic_training_folds": 5,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 24,
+          "oof_n_automatically_assigned": 120,
+          "oof_breach_probability": 0.2,
+          "internal_calibration_warning": false,
+          "population_certified": false
+        },
+        "B": {
+          "grade": "sampling_sensitive",
+          "full_assignment": "Balanced",
+          "full_screen": {
+            "breach_count": 24,
+            "n": 120,
+            "alpha": 0.2,
+            "breach_probability": 0.2,
+            "maximum_empirical_count": 24,
+            "empirical_pass": true,
+            "one_path_boundary_pass": true,
+            "one_path_boundary_fail": false,
+            "population_certified": false
+          },
+          "automatic_training_folds": 5,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 24,
+          "oof_n_automatically_assigned": 120,
+          "oof_breach_probability": 0.2,
+          "internal_calibration_warning": false,
+          "population_certified": false
+        },
+        "C": {
+          "grade": "development_consistent_auto",
+          "full_assignment": "Growth",
+          "full_screen": {
+            "breach_count": 12,
+            "n": 120,
+            "alpha": 0.2,
+            "breach_probability": 0.1,
+            "maximum_empirical_count": 24,
+            "empirical_pass": true,
+            "one_path_boundary_pass": false,
+            "one_path_boundary_fail": false,
+            "population_certified": false
+          },
+          "automatic_training_folds": 5,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 22,
+          "oof_n_automatically_assigned": 120,
+          "oof_breach_probability": 0.18333333333333332,
+          "internal_calibration_warning": false,
+          "population_certified": false
+        },
+        "D": {
+          "grade": "consistent_referral",
+          "full_assignment": "Review",
+          "full_screen": null,
+          "automatic_training_folds": 0,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": false,
+          "oof_breach_count": 0,
+          "oof_n_automatically_assigned": 0,
+          "oof_breach_probability": null,
+          "internal_calibration_warning": false,
+          "population_certified": false
+        },
+        "E": {
+          "grade": "development_consistent_auto",
+          "full_assignment": "Growth",
+          "full_screen": {
+            "breach_count": 4,
+            "n": 120,
+            "alpha": 0.2,
+            "breach_probability": 0.03333333333333333,
+            "maximum_empirical_count": 24,
+            "empirical_pass": true,
+            "one_path_boundary_pass": false,
+            "one_path_boundary_fail": false,
+            "population_certified": false
+          },
+          "automatic_training_folds": 5,
+          "n_folds": 5,
+          "fold_diagnostics_complete": true,
+          "mixed_fold_coverage": false,
+          "full_vs_fold_coverage_disagreement": false,
+          "role_assignment_varies": true,
+          "oof_breach_count": 2,
+          "oof_n_automatically_assigned": 120,
+          "oof_breach_probability": 0.016666666666666666,
+          "internal_calibration_warning": false,
+          "population_certified": false
+        }
+      },
+      "oof_automatic_counts": {
+        "A": {
+          "n": 120,
+          "breach_count": 24
+        },
+        "B": {
+          "n": 120,
+          "breach_count": 24
+        },
+        "C": {
+          "n": 120,
+          "breach_count": 22
+        },
+        "D": {
+          "n": 0,
+          "breach_count": 0
+        },
+        "E": {
+          "n": 120,
+          "breach_count": 2
+        }
+      }
+    }
+  },
+  "interpretation": "Policy dependence, parameter/label ordering and sampling diagnostics are separate; none is a population risk certificate."
+}

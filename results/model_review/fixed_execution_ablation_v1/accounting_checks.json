@@ -1,0 +1,462 @@
+{
+  "contexts": [
+    {
+      "context": "full_development",
+      "horizon": 5,
+      "annual_vs_cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      },
+      "hold_closed_form_max_nominal_abs_error": 7.275957614183426e-12
+    },
+    {
+      "context": "full_development",
+      "horizon": 6,
+      "annual_vs_cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      },
+      "hold_closed_form_max_nominal_abs_error": 7.275957614183426e-12
+    },
+    {
+      "context": "full_development",
+      "horizon": 15,
+      "annual_vs_cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      },
+      "hold_closed_form_max_nominal_abs_error": 7.275957614183426e-12
+    },
+    {
+      "context": "full_development",
+      "horizon": 25,
+      "annual_vs_cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      },
+      "hold_closed_form_max_nominal_abs_error": 7.275957614183426e-12
+    },
+    {
+      "context": "full_development",
+      "horizon": 30,
+      "annual_vs_cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      },
+      "hold_closed_form_max_nominal_abs_error": 7.275957614183426e-12
+    },
+    {
+      "context": "fold_1_test",
+      "horizon": 5,
+      "annual_vs_cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      },
+      "hold_closed_form_max_nominal_abs_error": 2.7284841053187847e-12
+    },
+    {
+      "context": "fold_1_test",
+      "horizon": 6,
+      "annual_vs_cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      },
+      "hold_closed_form_max_nominal_abs_error": 2.7284841053187847e-12
+    },
+    {
+      "context": "fold_1_test",
+      "horizon": 15,
+      "annual_vs_cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      },
+      "hold_closed_form_max_nominal_abs_error": 2.7284841053187847e-12
+    },
+    {
+      "context": "fold_1_test",
+      "horizon": 25,
+      "annual_vs_cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      },
+      "hold_closed_form_max_nominal_abs_error": 2.7284841053187847e-12
+    },
+    {
+      "context": "fold_1_test",
+      "horizon": 30,
+      "annual_vs_cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      },
+      "hold_closed_form_max_nominal_abs_error": 2.7284841053187847e-12
+    },
+    {
+      "context": "fold_2_test",
+      "horizon": 5,
+      "annual_vs_cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      },
+      "hold_closed_form_max_nominal_abs_error": 2.7284841053187847e-12
+    },
+    {
+      "context": "fold_2_test",
+      "horizon": 6,
+      "annual_vs_cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      },
+      "hold_closed_form_max_nominal_abs_error": 2.7284841053187847e-12
+    },
+    {
+      "context": "fold_2_test",
+      "horizon": 15,
+      "annual_vs_cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      },
+      "hold_closed_form_max_nominal_abs_error": 2.7284841053187847e-12
+    },
+    {
+      "context": "fold_2_test",
+      "horizon": 25,
+      "annual_vs_cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      },
+      "hold_closed_form_max_nominal_abs_error": 2.7284841053187847e-12
+    },
+    {
+      "context": "fold_2_test",
+      "horizon": 30,
+      "annual_vs_cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      },
+      "hold_closed_form_max_nominal_abs_error": 2.7284841053187847e-12
+    },
+    {
+      "context": "fold_3_test",
+      "horizon": 5,
+      "annual_vs_cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      },
+      "hold_closed_form_max_nominal_abs_error": 3.637978807091713e-12
+    },
+    {
+      "context": "fold_3_test",
+      "horizon": 6,
+      "annual_vs_cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      },
+      "hold_closed_form_max_nominal_abs_error": 3.637978807091713e-12
+    },
+    {
+      "context": "fold_3_test",
+      "horizon": 15,
+      "annual_vs_cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      },
+      "hold_closed_form_max_nominal_abs_error": 3.637978807091713e-12
+    },
+    {
+      "context": "fold_3_test",
+      "horizon": 25,
+      "annual_vs_cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      },
+      "hold_closed_form_max_nominal_abs_error": 3.637978807091713e-12
+    },
+    {
+      "context": "fold_3_test",
+      "horizon": 30,
+      "annual_vs_cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      },
+      "hold_closed_form_max_nominal_abs_error": 3.637978807091713e-12
+    },
+    {
+      "context": "fold_4_test",
+      "horizon": 5,
+      "annual_vs_cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      },
+      "hold_closed_form_max_nominal_abs_error": 6.366462912410498e-12
+    },
+    {
+      "context": "fold_4_test",
+      "horizon": 6,
+      "annual_vs_cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      },
+      "hold_closed_form_max_nominal_abs_error": 6.366462912410498e-12
+    },
+    {
+      "context": "fold_4_test",
+      "horizon": 15,
+      "annual_vs_cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      },
+      "hold_closed_form_max_nominal_abs_error": 6.366462912410498e-12
+    },
+    {
+      "context": "fold_4_test",
+      "horizon": 25,
+      "annual_vs_cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      },
+      "hold_closed_form_max_nominal_abs_error": 6.366462912410498e-12
+    },
+    {
+      "context": "fold_4_test",
+      "horizon": 30,
+      "annual_vs_cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      },
+      "hold_closed_form_max_nominal_abs_error": 6.366462912410498e-12
+    },
+    {
+      "context": "fold_5_test",
+      "horizon": 5,
+      "annual_vs_cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      },
+      "hold_closed_form_max_nominal_abs_error": 2.7284841053187847e-12
+    },
+    {
+      "context": "fold_5_test",
+      "horizon": 6,
+      "annual_vs_cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      },
+      "hold_closed_form_max_nominal_abs_error": 2.7284841053187847e-12
+    },
+    {
+      "context": "fold_5_test",
+      "horizon": 15,
+      "annual_vs_cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      },
+      "hold_closed_form_max_nominal_abs_error": 2.7284841053187847e-12
+    },
+    {
+      "context": "fold_5_test",
+      "horizon": 25,
+      "annual_vs_cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      },
+      "hold_closed_form_max_nominal_abs_error": 2.7284841053187847e-12
+    },
+    {
+      "context": "fold_5_test",
+      "horizon": 30,
+      "annual_vs_cache_max_abs_error": {
+        "log_growth": 0.0,
+        "cagr": 0.0,
+        "mdd": 0.0,
+        "volatility": 0.0,
+        "terminal_real": 0.0,
+        "nominal_fees": 0.0,
+        "nominal_moved": 0.0,
+        "trade_fraction": 0.0
+      },
+      "hold_closed_form_max_nominal_abs_error": 2.7284841053187847e-12
+    }
+  ],
+  "original_oof": {
+    "original_client_path_records": 600,
+    "assigned_records": 360,
+    "review_records": 240,
+    "annual_oof_matches": true
+  },
+  "initial_fee_and_moved_equal": true,
+  "hold_has_no_subsequent_transfers": true
+}

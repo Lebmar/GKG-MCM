@@ -1,0 +1,1454 @@
+{
+  "created_utc": "2026-10-17T10:10:57.662786+00:00",
+  "scope": {
+    "scenario_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120
+    ],
+    "final_scenarios_loaded": false,
+    "parsed_development_arrays_sha256": "56420cb159e13102ea2c6633089263bdddfaa09cc801d6dd74f72801c5506d8c",
+    "script_sha256": "08504735623b9ec3d25a517100a465997a9e63c7b09a9ba7c75e2c45e1f04feb",
+    "units": "decimal returns/risk fractions, wealth starts at100",
+    "quantiles": "linear interpolation for descriptive quantiles; explicitly suffixed inverted_cdf P10/P90 are empirical inverse-CDF alternatives for chance-constraint consistency; median uses np.median",
+    "bootstrap_seed": 2026101707,
+    "bootstrap_replicates": 2000,
+    "purpose": "development-only structural diagnostics; no new menu or learned policy selected; V1 unchanged"
+  },
+  "market": {
+    "annual_sample_description": {
+      "scenario_count": 120,
+      "annual_rows": 3600,
+      "mixture_weight": "1/120 for a scenario, then 1/30 for a year within it",
+      "not_independent_annual_trials": true,
+      "annual_quantiles_and_correlations": "descriptive weighted mixture; no binomial or iid-row certification",
+      "bootstrap": "percentile intervals from 2000 whole-scenario resamples; descriptive sampling variability under the supplied independent-scenario model, not predictive calibration"
+    },
+    "assets": {
+      "equity": {
+        "real_gross_annual_distribution": {
+          "mean": 1.0828452470792853,
+          "sd": 0.18598163459801562,
+          "min": 0.4633980854761571,
+          "p01": 0.64066086351388,
+          "p05": 0.7533638797705805,
+          "p10": 0.8214320042623953,
+          "p25": 0.9603483031309141,
+          "median": 1.1030157340483524,
+          "p75": 1.2058269034316766,
+          "p90": 1.3006676152895562,
+          "p95": 1.364299264397524,
+          "p99": 1.4998463657320331,
+          "max": 2.046373935795584
+        },
+        "real_return_annual_distribution": {
+          "mean": 0.08284524707928546,
+          "sd": 0.18598163459801562,
+          "min": -0.536601914523843,
+          "p01": -0.35933913648612004,
+          "p05": -0.24663612022941947,
+          "p10": -0.17856799573760473,
+          "p25": -0.0396516968690859,
+          "median": 0.10301573404835251,
+          "p75": 0.20582690343167676,
+          "p90": 0.3006676152895562,
+          "p95": 0.36429926439752397,
+          "p99": 0.4998463657320331,
+          "max": 1.0463739357955841
+        },
+        "nominal_return_annual_distribution": {
+          "mean": 0.11061554681388888,
+          "sd": 0.17995151391000594,
+          "min": -0.48138016,
+          "p01": -0.3462842161,
+          "p05": -0.2116701825,
+          "p10": -0.135275601,
+          "p25": 0.006651055,
+          "median": 0.12583239499999999,
+          "p75": 0.2272616175,
+          "p90": 0.316806787,
+          "p95": 0.3800666439999999,
+          "p99": 0.5247258820999996,
+          "max": 0.75718076
+        },
+        "mean_annual_real_return_scenario_equal": 0.08284524707928549,
+        "mean_annual_log_real_gross_scenario_equal": 0.0637682676763258,
+        "nominal_annual_loss_share_scenario_equal": 0.2422222222222222,
+        "real_annual_loss_share_scenario_equal": 0.2991666666666666,
+        "negative_real_annual_count": 1077,
+        "nonnegative_nominal_but_negative_real_share": 0.06055555555555555,
+        "mean_real_return_cluster_bootstrap95": [
+          0.07516032277013897,
+          0.09003488879107106
+        ],
+        "loss_share_cluster_bootstrap95": [
+          0.2819444444444444,
+          0.3172222222222222
+        ],
+        "scenario_mean_real_return_distribution": {
+          "mean": 0.08284524707928549,
+          "sd": 0.04005081738838295,
+          "min": -0.0289529805583282,
+          "p01": -0.005216958712680083,
+          "p05": 0.017293485959540018,
+          "p10": 0.03327408573040304,
+          "p25": 0.05575291435875085,
+          "median": 0.08438712727675513,
+          "p75": 0.11421757935598187,
+          "p90": 0.1367021047229005,
+          "p95": 0.14163725162041504,
+          "p99": 0.16444606013158716,
+          "max": 0.16704875907059186
+        },
+        "scenario_real_loss_share_distribution": {
+          "mean": 0.2991666666666666,
+          "sd": 0.099246695810583,
+          "min": 0.13333333333333333,
+          "p01": 0.13333333333333333,
+          "p05": 0.16666666666666666,
+          "p10": 0.16666666666666666,
+          "p25": 0.23333333333333334,
+          "median": 0.3,
+          "p75": 0.36666666666666664,
+          "p90": 0.43333333333333335,
+          "p95": 0.5,
+          "p99": 0.5,
+          "max": 0.5333333333333333
+        },
+        "longest_negative_real_year_run_distribution": {
+          "mean": 3.05,
+          "sd": 1.4073635880281836,
+          "min": 1.0,
+          "p01": 1.0,
+          "p05": 1.0,
+          "p10": 2.0,
+          "p25": 2.0,
+          "median": 3.0,
+          "p75": 4.0,
+          "p90": 5.0,
+          "p95": 5.0,
+          "p99": 7.810000000000002,
+          "max": 11.0
+        },
+        "nominal_return_vs_inflation_annual_correlation": -0.13376097432653455,
+        "real_return_vs_inflation_annual_correlation": -0.3591778153077048
+      },
+      "government_bond": {
+        "real_gross_annual_distribution": {
+          "mean": 1.0206335162517775,
+          "sd": 0.09260205472146618,
+          "min": 0.679591163969749,
+          "p01": 0.8023246396861007,
+          "p05": 0.8769256727389998,
+          "p10": 0.9084441947415274,
+          "p25": 0.9619424125936427,
+          "median": 1.0185647351315907,
+          "p75": 1.0756570694486618,
+          "p90": 1.1345011535959622,
+          "p95": 1.1759460742093255,
+          "p99": 1.2603252087291108,
+          "max": 1.6133764581690115
+        },
+        "real_return_annual_distribution": {
+          "mean": 0.020633516251777503,
+          "sd": 0.09260205472146618,
+          "min": -0.32040883603025105,
+          "p01": -0.19767536031389937,
+          "p05": -0.12307432726100018,
+          "p10": -0.09155580525847257,
+          "p25": -0.038057587406357285,
+          "median": 0.018564735131590737,
+          "p75": 0.07565706944866185,
+          "p90": 0.13450115359596218,
+          "p95": 0.17594607420932562,
+          "p99": 0.26032520872911075,
+          "max": 0.6133764581690115
+        },
+        "nominal_return_annual_distribution": {
+          "mean": 0.047430214686111104,
+          "sd": 0.08102976832785849,
+          "min": -0.21052277,
+          "p01": -0.1399063301,
+          "p05": -0.07902592,
+          "p10": -0.048004464999999996,
+          "p25": -0.004295495,
+          "median": 0.04298113,
+          "p75": 0.09457333,
+          "p90": 0.15038564499999996,
+          "p95": 0.183457988,
+          "p99": 0.2678897177,
+          "max": 0.4641271
+        },
+        "mean_annual_real_return_scenario_equal": 0.020633516251777503,
+        "mean_annual_log_real_gross_scenario_equal": 0.01631302824142094,
+        "nominal_annual_loss_share_scenario_equal": 0.26833333333333337,
+        "real_annual_loss_share_scenario_equal": 0.4125,
+        "negative_real_annual_count": 1485,
+        "nonnegative_nominal_but_negative_real_share": 0.15722222222222226,
+        "mean_real_return_cluster_bootstrap95": [
+          0.017492184069254898,
+          0.02385376981290576
+        ],
+        "loss_share_cluster_bootstrap95": [
+          0.39499999999999996,
+          0.42888888888888893
+        ],
+        "scenario_mean_real_return_distribution": {
+          "mean": 0.020633516251777503,
+          "sd": 0.01782343371615616,
+          "min": -0.019201349347928547,
+          "p01": -0.017864114972054253,
+          "p05": -0.0077553482617184555,
+          "p10": -0.0005153724609276245,
+          "p25": 0.010200582093230381,
+          "median": 0.019230075268189827,
+          "p75": 0.03135166494909977,
+          "p90": 0.046341584491436966,
+          "p95": 0.05147255667068935,
+          "p99": 0.06591682010688885,
+          "max": 0.07261233445088197
+        },
+        "scenario_real_loss_share_distribution": {
+          "mean": 0.4125,
+          "sd": 0.0920827075152695,
+          "min": 0.16666666666666666,
+          "p01": 0.173,
+          "p05": 0.23333333333333334,
+          "p10": 0.3,
+          "p25": 0.36666666666666664,
+          "median": 0.4,
+          "p75": 0.4666666666666667,
+          "p90": 0.5333333333333333,
+          "p95": 0.5666666666666667,
+          "p99": 0.627,
+          "max": 0.6666666666666666
+        },
+        "longest_negative_real_year_run_distribution": {
+          "mean": 3.533333333333333,
+          "sd": 1.395872266274211,
+          "min": 1.0,
+          "p01": 2.0,
+          "p05": 2.0,
+          "p10": 2.0,
+          "p25": 3.0,
+          "median": 3.0,
+          "p75": 4.0,
+          "p90": 5.0,
+          "p95": 6.0,
+          "p99": 8.0,
+          "max": 8.0
+        },
+        "nominal_return_vs_inflation_annual_correlation": -0.0927471437837082,
+        "real_return_vs_inflation_annual_correlation": -0.5245889230836946
+      },
+      "bill_proxy": {
+        "real_gross_annual_distribution": {
+          "mean": 1.0129403261251941,
+          "sd": 0.04205767072713745,
+          "min": 0.8011643424028647,
+          "p01": 0.8924190822188002,
+          "p05": 0.9371158701503848,
+          "p10": 0.9596974431073969,
+          "p25": 0.9908973700495863,
+          "median": 1.0165906541830747,
+          "p75": 1.0375594617218091,
+          "p90": 1.0595003071777005,
+          "p95": 1.074006580300861,
+          "p99": 1.1137909581755534,
+          "max": 1.2466377732552558
+        },
+        "real_return_annual_distribution": {
+          "mean": 0.012940326125194176,
+          "sd": 0.042057670727137446,
+          "min": -0.19883565759713528,
+          "p01": -0.10758091778119988,
+          "p05": -0.06288412984961521,
+          "p10": -0.04030255689260304,
+          "p25": -0.009102629950413665,
+          "median": 0.016590654183074816,
+          "p75": 0.03755946172180902,
+          "p90": 0.059500307177700426,
+          "p95": 0.07400658030086085,
+          "p99": 0.11379095817555349,
+          "max": 0.24663777325525582
+        },
+        "nominal_return_annual_distribution": {
+          "mean": 0.04015184085555556,
+          "sd": 0.026836500681275386,
+          "min": -0.02089179,
+          "p01": -0.02089179,
+          "p05": 0.001307957500000002,
+          "p10": 0.010496351000000003,
+          "p25": 0.023393749999999998,
+          "median": 0.037363505000000005,
+          "p75": 0.0537972475,
+          "p90": 0.07236582399999998,
+          "p95": 0.08754168999999999,
+          "p99": 0.12111716669999999,
+          "max": 0.18490631
+        },
+        "mean_annual_real_return_scenario_equal": 0.012940326125194178,
+        "mean_annual_log_real_gross_scenario_equal": 0.011985237960926497,
+        "nominal_annual_loss_share_scenario_equal": 0.04583333333333333,
+        "real_annual_loss_share_scenario_equal": 0.31916666666666665,
+        "negative_real_annual_count": 1149,
+        "nonnegative_nominal_but_negative_real_share": 0.28805555555555556,
+        "mean_real_return_cluster_bootstrap95": [
+          0.011622753108657128,
+          0.014207290886223502
+        ],
+        "loss_share_cluster_bootstrap95": [
+          0.30416666666666664,
+          0.3336111111111111
+        ],
+        "scenario_mean_real_return_distribution": {
+          "mean": 0.012940326125194178,
+          "sd": 0.0072408648398233875,
+          "min": -0.0027368138800583975,
+          "p01": -0.0023384001909565627,
+          "p05": 4.8100248255669755e-05,
+          "p10": 0.002525418907502895,
+          "p25": 0.008062006860037907,
+          "median": 0.014293879353806828,
+          "p75": 0.01776779363559035,
+          "p90": 0.021467031559862945,
+          "p95": 0.02374103035629678,
+          "p99": 0.028498496012659327,
+          "max": 0.03314462982092419
+        },
+        "scenario_real_loss_share_distribution": {
+          "mean": 0.31916666666666665,
+          "sd": 0.08767805679486743,
+          "min": 0.1,
+          "p01": 0.1,
+          "p05": 0.2,
+          "p10": 0.2,
+          "p25": 0.26666666666666666,
+          "median": 0.3333333333333333,
+          "p75": 0.36666666666666664,
+          "p90": 0.43333333333333335,
+          "p95": 0.4666666666666667,
+          "p99": 0.5,
+          "max": 0.5
+        },
+        "longest_negative_real_year_run_distribution": {
+          "mean": 2.8,
+          "sd": 1.0338798590867364,
+          "min": 1.0,
+          "p01": 1.0,
+          "p05": 1.0,
+          "p10": 2.0,
+          "p25": 2.0,
+          "median": 3.0,
+          "p75": 3.0,
+          "p90": 4.0,
+          "p95": 5.0,
+          "p99": 5.0,
+          "max": 7.0
+        },
+        "nominal_return_vs_inflation_annual_correlation": 0.29036659600365605,
+        "real_return_vs_inflation_annual_correlation": -0.8070883081961258
+      }
+    },
+    "inflation_distribution": {
+      "mean": 0.028312580997222222,
+      "sd": 0.04324290115212808,
+      "min": -0.14131981,
+      "p01": -0.057558811099999996,
+      "p05": -0.0291175275,
+      "p10": -0.017690778999999997,
+      "p25": 7.24525e-05,
+      "median": 0.02118854,
+      "p75": 0.0489163875,
+      "p90": 0.085139151,
+      "p95": 0.11178383099999997,
+      "p99": 0.15492750929999982,
+      "max": 0.22958504
+    },
+    "joint_annual_correlation": {
+      "order": [
+        "equity",
+        "government_bond",
+        "bill_proxy",
+        "inflation"
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.17972942792860647,
+          0.26635400148160543,
+          -0.35917781530770476
+        ],
+        [
+          0.17972942792860647,
+          1.0,
+          0.4996733083991538,
+          -0.5245889230836946
+        ],
+        [
+          0.26635400148160543,
+          0.4996733083991538,
+          0.9999999999999999,
+          -0.8070883081961256
+        ],
+        [
+          -0.35917781530770476,
+          -0.5245889230836946,
+          -0.8070883081961255,
+          1.0
+        ]
+      ]
+    },
+    "joint_negative_real_return_patterns": {
+      "bits": "equity,bond,bill; 1 means real gross < 1",
+      "patterns": {
+        "000": {
+          "count": 1405,
+          "share": 0.3902777777777777
+        },
+        "001": {
+          "count": 238,
+          "share": 0.0661111111111111
+        },
+        "010": {
+          "count": 536,
+          "share": 0.1488888888888889
+        },
+        "011": {
+          "count": 344,
+          "share": 0.09555555555555557
+        },
+        "100": {
+          "count": 318,
+          "share": 0.08833333333333335
+        },
+        "101": {
+          "count": 154,
+          "share": 0.042777777777777776
+        },
+        "110": {
+          "count": 192,
+          "share": 0.05333333333333334
+        },
+        "111": {
+          "count": 413,
+          "share": 0.11472222222222223
+        }
+      }
+    },
+    "contemporaneous_high_inflation": {
+      "definition": "contemporaneous pooled annual inflation >= development P75; descriptive, not a forecast",
+      "inflation_cutoff": 0.0489163875,
+      "annual_rows": 900,
+      "scenarios_with_at_least_one_row": 120,
+      "asset_loss_shares": {
+        "equity": 0.6155555555555555,
+        "government_bond": 0.7444444444444445,
+        "bill_proxy": 0.7922222222222223
+      }
+    },
+    "serial_dependence": {
+      "variables": "asset log real gross and raw inflation; no pairs cross scenario boundaries",
+      "small_sample_caveat": "30-year per-path correlations are noisy and demeaning can bias short-path autocorrelations; these summaries do not establish exploitable prediction",
+      "by_asset_and_lag": {
+        "equity": {
+          "1": {
+            "mean_within_scenario_correlation": 0.07110196196531024,
+            "median_within_scenario_correlation": 0.051897486684483976,
+            "p10_p90_within_scenario_correlation": [
+              -0.16759941352768895,
+              0.3166570722600316
+            ],
+            "mean_cluster_bootstrap95": [
+              0.03663003179837024,
+              0.10376780888783498
+            ],
+            "pooled_within_scenario_demeaned_correlation": 0.06739283897882267
+          },
+          "2": {
+            "mean_within_scenario_correlation": -0.016558701618510228,
+            "median_within_scenario_correlation": -0.030610595751237125,
+            "p10_p90_within_scenario_correlation": [
+              -0.22577509518590586,
+              0.2358115463231908
+            ],
+            "mean_cluster_bootstrap95": [
+              -0.050981138698289005,
+              0.017163124319557996
+            ],
+            "pooled_within_scenario_demeaned_correlation": -0.009943411617475879
+          },
+          "3": {
+            "mean_within_scenario_correlation": -0.06585362884237944,
+            "median_within_scenario_correlation": -0.06520183311410536,
+            "p10_p90_within_scenario_correlation": [
+              -0.31149778671933637,
+              0.1561338839208342
+            ],
+            "mean_cluster_bootstrap95": [
+              -0.09603929322218684,
+              -0.03401810393882185
+            ],
+            "pooled_within_scenario_demeaned_correlation": -0.05958018275958724
+          },
+          "5": {
+            "mean_within_scenario_correlation": -0.08727598652232227,
+            "median_within_scenario_correlation": -0.0946942530462313,
+            "p10_p90_within_scenario_correlation": [
+              -0.352813055214914,
+              0.1775987303977457
+            ],
+            "mean_cluster_bootstrap95": [
+              -0.12354676130228903,
+              -0.050618288652175734
+            ],
+            "pooled_within_scenario_demeaned_correlation": -0.08870433432793036
+          }
+        },
+        "government_bond": {
+          "1": {
+            "mean_within_scenario_correlation": 0.003459809641266563,
+            "median_within_scenario_correlation": 0.020191048550145863,
+            "p10_p90_within_scenario_correlation": [
+              -0.2157690318709312,
+              0.2363232170193001
+            ],
+            "mean_cluster_bootstrap95": [
+              -0.027226255127774813,
+              0.032760316782705697
+            ],
+            "pooled_within_scenario_demeaned_correlation": 0.011420199427409492
+          },
+          "2": {
+            "mean_within_scenario_correlation": -0.0332469062970586,
+            "median_within_scenario_correlation": -0.008289787142383351,
+            "p10_p90_within_scenario_correlation": [
+              -0.25069340688400266,
+              0.1840024489838243
+            ],
+            "mean_cluster_bootstrap95": [
+              -0.062472608628444636,
+              -0.0009875575002336002
+            ],
+            "pooled_within_scenario_demeaned_correlation": -0.03638203302074349
+          },
+          "3": {
+            "mean_within_scenario_correlation": -0.05995195967946843,
+            "median_within_scenario_correlation": -0.047775476095107836,
+            "p10_p90_within_scenario_correlation": [
+              -0.34108415258869523,
+              0.19515761429144612
+            ],
+            "mean_cluster_bootstrap95": [
+              -0.09708123590662338,
+              -0.024591608009161818
+            ],
+            "pooled_within_scenario_demeaned_correlation": -0.059884831267911734
+          },
+          "5": {
+            "mean_within_scenario_correlation": -0.02704202750390733,
+            "median_within_scenario_correlation": -0.04837572692776905,
+            "p10_p90_within_scenario_correlation": [
+              -0.23813553176931004,
+              0.22937585548055084
+            ],
+            "mean_cluster_bootstrap95": [
+              -0.05843859130802692,
+              0.004533324006807796
+            ],
+            "pooled_within_scenario_demeaned_correlation": -0.030204949310418554
+          }
+        },
+        "bill_proxy": {
+          "1": {
+            "mean_within_scenario_correlation": 0.013211823461190242,
+            "median_within_scenario_correlation": 0.01252461608144025,
+            "p10_p90_within_scenario_correlation": [
+              -0.16410719026726123,
+              0.2239167099349022
+            ],
+            "mean_cluster_bootstrap95": [
+              -0.016677574614581175,
+              0.04243428786586638
+            ],
+            "pooled_within_scenario_demeaned_correlation": 0.01565245303831909
+          },
+          "2": {
+            "mean_within_scenario_correlation": -0.04023829794890548,
+            "median_within_scenario_correlation": -0.05721293584934121,
+            "p10_p90_within_scenario_correlation": [
+              -0.23549084637741774,
+              0.17562771866714327
+            ],
+            "mean_cluster_bootstrap95": [
+              -0.07139904462152655,
+              -0.009012862033005694
+            ],
+            "pooled_within_scenario_demeaned_correlation": -0.03639303724284537
+          },
+          "3": {
+            "mean_within_scenario_correlation": -0.07853732644739496,
+            "median_within_scenario_correlation": -0.07778611294643989,
+            "p10_p90_within_scenario_correlation": [
+              -0.2904587938167139,
+              0.09411826519197755
+            ],
+            "mean_cluster_bootstrap95": [
+              -0.10662400949364331,
+              -0.04925369392696335
+            ],
+            "pooled_within_scenario_demeaned_correlation": -0.06842936918796386
+          },
+          "5": {
+            "mean_within_scenario_correlation": -0.03338436673840724,
+            "median_within_scenario_correlation": -0.03361254002283256,
+            "p10_p90_within_scenario_correlation": [
+              -0.26436425708307326,
+              0.1884398859554947
+            ],
+            "mean_cluster_bootstrap95": [
+              -0.06530067725087617,
+              -0.003964900311223698
+            ],
+            "pooled_within_scenario_demeaned_correlation": -0.03434976422713508
+          }
+        },
+        "inflation": {
+          "1": {
+            "mean_within_scenario_correlation": 0.05599938955047417,
+            "median_within_scenario_correlation": 0.058257089185443464,
+            "p10_p90_within_scenario_correlation": [
+              -0.1365371511747472,
+              0.2546276565482304
+            ],
+            "mean_cluster_bootstrap95": [
+              0.025908956546927302,
+              0.08646398482299163
+            ],
+            "pooled_within_scenario_demeaned_correlation": 0.06592928473983817
+          },
+          "2": {
+            "mean_within_scenario_correlation": -0.025368744722497186,
+            "median_within_scenario_correlation": -0.026593765884483096,
+            "p10_p90_within_scenario_correlation": [
+              -0.22262637984979483,
+              0.17621327925999955
+            ],
+            "mean_cluster_bootstrap95": [
+              -0.05532488943874877,
+              0.005572950804020757
+            ],
+            "pooled_within_scenario_demeaned_correlation": -0.03265266135297877
+          },
+          "3": {
+            "mean_within_scenario_correlation": -0.056674349670265196,
+            "median_within_scenario_correlation": -0.05405134522176801,
+            "p10_p90_within_scenario_correlation": [
+              -0.2732501854012137,
+              0.1687171201230708
+            ],
+            "mean_cluster_bootstrap95": [
+              -0.08523525481233919,
+              -0.026230589051579153
+            ],
+            "pooled_within_scenario_demeaned_correlation": -0.058151835665757094
+          },
+          "5": {
+            "mean_within_scenario_correlation": -0.01408057091723877,
+            "median_within_scenario_correlation": -0.015488168754159322,
+            "p10_p90_within_scenario_correlation": [
+              -0.22635069852966064,
+              0.2210199430650135
+            ],
+            "mean_cluster_bootstrap95": [
+              -0.046302762573421564,
+              0.017012190609372306
+            ],
+            "pooled_within_scenario_demeaned_correlation": -0.01916373008843875
+          }
+        }
+      }
+    },
+    "early_middle_late_annual_descriptions": {
+      "years_1_10": {
+        "mean_inflation_scenario_equal": 0.030272983633333337,
+        "mean_real_return_scenario_equal": {
+          "equity": 0.0831517585784856,
+          "government_bond": 0.020250179845601277,
+          "bill_proxy": 0.012065855548956188
+        },
+        "real_loss_share_scenario_equal": {
+          "equity": 0.2916666666666667,
+          "government_bond": 0.4091666666666667,
+          "bill_proxy": 0.30833333333333335
+        }
+      },
+      "years_11_20": {
+        "mean_inflation_scenario_equal": 0.027627754949999996,
+        "mean_real_return_scenario_equal": {
+          "equity": 0.08860467483842595,
+          "government_bond": 0.020817961623951553,
+          "bill_proxy": 0.013331728387630717
+        },
+        "real_loss_share_scenario_equal": {
+          "equity": 0.29750000000000004,
+          "government_bond": 0.4166666666666667,
+          "bill_proxy": 0.3233333333333333
+        }
+      },
+      "years_21_30": {
+        "mean_inflation_scenario_equal": 0.027037004408333336,
+        "mean_real_return_scenario_equal": {
+          "equity": 0.07677930782094489,
+          "government_bond": 0.02083240728577968,
+          "bill_proxy": 0.013423394438995628
+        },
+        "real_loss_share_scenario_equal": {
+          "equity": 0.30833333333333335,
+          "government_bond": 0.41166666666666674,
+          "bill_proxy": 0.32583333333333336
+        }
+      }
+    },
+    "between_scenario_structure": {
+      "independence": "asserted by the problem statement, not proved by descriptive correlations",
+      "scenario_specific_summary_distributions": "see per-asset means and loss fractions above",
+      "adjacent_scenario_id_correlation_of_path_means": {
+        "equity": -0.00594589743031104,
+        "government_bond": 0.07798995450019913,
+        "bill_proxy": -0.14960506728327866,
+        "inflation": -0.005490511664680197
+      },
+      "interpretation": "scenario IDs are labels, not market dates; this is an order diagnostic, not evidence for independence or a cross-market forecast"
+    }
+  },
+  "predeclared_diagnostic_paths": {
+    "all_bills": {
+      "target": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "execution": "annually restored fixed target, fee after target weights; initial allocation charged, no terminal liquidation",
+      "horizons": {
+        "5": {
+          "n_scenarios": 120,
+          "annualized_expected_log_growth": 0.011787399435129364,
+          "geometric_growth_expG_minus1": 0.01185714459648189,
+          "cagr_median": 0.015109817966521444,
+          "cagr_p10": -0.011872975060617786,
+          "cagr_p10_inverted_cdf": -0.011946026606599047,
+          "mdd_mean": 0.04869300846704951,
+          "mdd_median": 0.03670726386981377,
+          "mdd_p90": 0.1076090044947635,
+          "mdd_p90_inverted_cdf": 0.10757792386178033,
+          "mdd_cvar90": 0.13836210144335795,
+          "terminal_real_median": 107.78678486071155,
+          "terminal_real_p10": 94.2028167868015,
+          "terminal_purchasing_power_loss_count": 32,
+          "terminal_purchasing_power_loss_share": 0.26666666666666666,
+          "mdd_exceedance": {
+            "0.10": {
+              "count": 16,
+              "share": 0.13333333333333333,
+              "expected_excess": 0.004013290742751105
+            },
+            "0.15": {
+              "count": 3,
+              "share": 0.025,
+              "expected_excess": 0.0010582501328607198
+            },
+            "0.25": {
+              "count": 1,
+              "share": 0.008333333333333333,
+              "expected_excess": 1.4854001893057263e-05
+            },
+            "0.35": {
+              "count": 0,
+              "share": 0.0,
+              "expected_excess": 0.0
+            },
+            "0.40": {
+              "count": 0,
+              "share": 0.0,
+              "expected_excess": 0.0
+            }
+          },
+          "mean_cumulative_nominal_fees": 0.0,
+          "trade_check_share": 0.0
+        },
+        "6": {
+          "n_scenarios": 120,
+          "annualized_expected_log_growth": 0.01117522832301649,
+          "geometric_growth_expG_minus1": 0.011237904442780215,
+          "cagr_median": 0.013371805606944731,
+          "cagr_p10": -0.007977819307847068,
+          "cagr_p10_inverted_cdf": -0.00833521225713052,
+          "mdd_mean": 0.05700540601372519,
+          "mdd_median": 0.046569794174644075,
+          "mdd_p90": 0.11316540874392851,
+          "mdd_p90_inverted_cdf": 0.11290666929613635,
+          "mdd_cvar90": 0.15550755269313532,
+          "terminal_real_median": 108.29612126278818,
+          "terminal_real_p10": 95.30778797546284,
+          "terminal_purchasing_power_loss_count": 28,
+          "terminal_purchasing_power_loss_share": 0.23333333333333334,
+          "mdd_exceedance": {
+            "0.10": {
+              "count": 23,
+              "share": 0.19166666666666668,
+              "expected_excess": 0.006219293420760216
+            },
+            "0.15": {
+              "count": 5,
+              "share": 0.041666666666666664,
+              "expected_excess": 0.0019182239891553268
+            },
+            "0.25": {
+              "count": 1,
+              "share": 0.008333333333333333,
+              "expected_excess": 1.4854001893057263e-05
+            },
+            "0.35": {
+              "count": 0,
+              "share": 0.0,
+              "expected_excess": 0.0
+            },
+            "0.40": {
+              "count": 0,
+              "share": 0.0,
+              "expected_excess": 0.0
+            }
+          },
+          "mean_cumulative_nominal_fees": 0.0,
+          "trade_check_share": 0.0
+        },
+        "15": {
+          "n_scenarios": 120,
+          "annualized_expected_log_growth": 0.010860844970190402,
+          "geometric_growth_expG_minus1": 0.010920038048446145,
+          "cagr_median": 0.010673219277190116,
+          "cagr_p10": -0.0035711303955499483,
+          "cagr_p10_inverted_cdf": -0.003909777634734213,
+          "mdd_mean": 0.10114914485115782,
+          "mdd_median": 0.09260529337174761,
+          "mdd_p90": 0.18030113189359342,
+          "mdd_p90_inverted_cdf": 0.17981554353226892,
+          "mdd_cvar90": 0.2226592435862664,
+          "terminal_real_median": 117.26343133009982,
+          "terminal_real_p10": 94.77528800614886,
+          "terminal_purchasing_power_loss_count": 17,
+          "terminal_purchasing_power_loss_share": 0.14166666666666666,
+          "mdd_exceedance": {
+            "0.10": {
+              "count": 56,
+              "share": 0.4666666666666667,
+              "expected_excess": 0.023914276027946928
+            },
+            "0.15": {
+              "count": 23,
+              "share": 0.19166666666666668,
+              "expected_excess": 0.008565632983621951
+            },
+            "0.25": {
+              "count": 3,
+              "share": 0.025,
+              "expected_excess": 0.000405527061925622
+            },
+            "0.35": {
+              "count": 0,
+              "share": 0.0,
+              "expected_excess": 0.0
+            },
+            "0.40": {
+              "count": 0,
+              "share": 0.0,
+              "expected_excess": 0.0
+            }
+          },
+          "mean_cumulative_nominal_fees": 0.0,
+          "trade_check_share": 0.0
+        },
+        "25": {
+          "n_scenarios": 120,
+          "annualized_expected_log_growth": 0.011936731128491218,
+          "geometric_growth_expG_minus1": 0.012008258220070605,
+          "cagr_median": 0.011431854426071308,
+          "cagr_p10": 0.0029685376569231316,
+          "cagr_p10_inverted_cdf": 0.0023475741694918284,
+          "mdd_mean": 0.13145725504783204,
+          "mdd_median": 0.11909331453479965,
+          "mdd_p90": 0.22156986768014655,
+          "mdd_p90_inverted_cdf": 0.22115706750747377,
+          "mdd_cvar90": 0.2561594415177189,
+          "terminal_real_median": 132.86764933094628,
+          "terminal_real_p10": 107.69319696452287,
+          "terminal_purchasing_power_loss_count": 6,
+          "terminal_purchasing_power_loss_share": 0.05,
+          "mdd_exceedance": {
+            "0.10": {
+              "count": 81,
+              "share": 0.675,
+              "expected_excess": 0.04173022849529578
+            },
+            "0.15": {
+              "count": 38,
+              "share": 0.31666666666666665,
+              "expected_excess": 0.017755286949711995
+            },
+            "0.25": {
+              "count": 8,
+              "share": 0.06666666666666667,
+              "expected_excess": 0.0011277777137339259
+            },
+            "0.35": {
+              "count": 0,
+              "share": 0.0,
+              "expected_excess": 0.0
+            },
+            "0.40": {
+              "count": 0,
+              "share": 0.0,
+              "expected_excess": 0.0
+            }
+          },
+          "mean_cumulative_nominal_fees": 0.0,
+          "trade_check_share": 0.0
+        },
+        "30": {
+          "n_scenarios": 120,
+          "annualized_expected_log_growth": 0.011985237960926499,
+          "geometric_growth_expG_minus1": 0.012057348725678046,
+          "cagr_median": 0.01338957470938773,
+          "cagr_p10": 0.0016912477316338714,
+          "cagr_p10_inverted_cdf": 0.0014336065790765407,
+          "mdd_mean": 0.13850631426252152,
+          "mdd_median": 0.1229048343156226,
+          "mdd_p90": 0.22156986768014655,
+          "mdd_p90_inverted_cdf": 0.22115706750747377,
+          "mdd_cvar90": 0.267205105894546,
+          "terminal_real_median": 149.03676728055933,
+          "terminal_real_p10": 105.20048937468324,
+          "terminal_purchasing_power_loss_count": 7,
+          "terminal_purchasing_power_loss_share": 0.058333333333333334,
+          "mdd_exceedance": {
+            "0.10": {
+              "count": 86,
+              "share": 0.7166666666666667,
+              "expected_excess": 0.04605402464158132
+            },
+            "0.15": {
+              "count": 41,
+              "share": 0.3416666666666667,
+              "expected_excess": 0.020250055767908386
+            },
+            "0.25": {
+              "count": 10,
+              "share": 0.08333333333333333,
+              "expected_excess": 0.0020797959727160494
+            },
+            "0.35": {
+              "count": 0,
+              "share": 0.0,
+              "expected_excess": 0.0
+            },
+            "0.40": {
+              "count": 0,
+              "share": 0.0,
+              "expected_excess": 0.0
+            }
+          },
+          "mean_cumulative_nominal_fees": 0.0,
+          "trade_check_share": 0.0
+        }
+      }
+    },
+    "equal_weight_annual": {
+      "target": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "execution": "annually restored fixed target, fee after target weights; initial allocation charged, no terminal liquidation",
+      "horizons": {
+        "5": {
+          "n_scenarios": 120,
+          "annualized_expected_log_growth": 0.03224643532548386,
+          "geometric_growth_expG_minus1": 0.03277198544776657,
+          "cagr_median": 0.03683326802833209,
+          "cagr_p10": -0.018727505791419484,
+          "cagr_p10_inverted_cdf": -0.020550662277941778,
+          "mdd_mean": 0.08411748337178432,
+          "mdd_median": 0.07304943139289682,
+          "mdd_p90": 0.19309032426113118,
+          "mdd_p90_inverted_cdf": 0.19259774276471142,
+          "mdd_cvar90": 0.2431807807277333,
+          "terminal_real_median": 119.8243942626793,
+          "terminal_real_p10": 90.98080813132917,
+          "terminal_purchasing_power_loss_count": 21,
+          "terminal_purchasing_power_loss_share": 0.175,
+          "mdd_exceedance": {
+            "0.10": {
+              "count": 44,
+              "share": 0.36666666666666664,
+              "expected_excess": 0.02352237535850935
+            },
+            "0.15": {
+              "count": 18,
+              "share": 0.15,
+              "expected_excess": 0.010575979273550367
+            },
+            "0.25": {
+              "count": 4,
+              "share": 0.03333333333333333,
+              "expected_excess": 0.0013561557452324096
+            },
+            "0.35": {
+              "count": 0,
+              "share": 0.0,
+              "expected_excess": 0.0
+            },
+            "0.40": {
+              "count": 0,
+              "share": 0.0,
+              "expected_excess": 0.0
+            }
+          },
+          "mean_cumulative_nominal_fees": 0.20731352778754314,
+          "trade_check_share": 1.0
+        },
+        "6": {
+          "n_scenarios": 120,
+          "annualized_expected_log_growth": 0.030623027126363413,
+          "geometric_growth_expG_minus1": 0.03109673511425271,
+          "cagr_median": 0.03523921439765931,
+          "cagr_p10": -0.022373625635270435,
+          "cagr_p10_inverted_cdf": -0.023186516966268167,
+          "mdd_mean": 0.10145707627426898,
+          "mdd_median": 0.08899442555912146,
+          "mdd_p90": 0.21941756754380162,
+          "mdd_p90_inverted_cdf": 0.21925349761768254,
+          "mdd_cvar90": 0.26645330686286267,
+          "terminal_real_median": 123.09616853080959,
+          "terminal_real_p10": 87.30476678563738,
+          "terminal_purchasing_power_loss_count": 25,
+          "terminal_purchasing_power_loss_share": 0.20833333333333334,
+          "mdd_exceedance": {
+            "0.10": {
+              "count": 52,
+              "share": 0.43333333333333335,
+              "expected_excess": 0.03317815943152985
+            },
+            "0.15": {
+              "count": 29,
+              "share": 0.24166666666666667,
+              "expected_excess": 0.016493004146697268
+            },
+            "0.25": {
+              "count": 8,
+              "share": 0.06666666666666667,
+              "expected_excess": 0.0022160609430039056
+            },
+            "0.35": {
+              "count": 0,
+              "share": 0.0,
+              "expected_excess": 0.0
+            },
+            "0.40": {
+              "count": 0,
+              "share": 0.0,
+              "expected_excess": 0.0
+            }
+          },
+          "mean_cumulative_nominal_fees": 0.2193962098243138,
+          "trade_check_share": 1.0
+        },
+        "15": {
+          "n_scenarios": 120,
+          "annualized_expected_log_growth": 0.03363723358992321,
+          "geometric_growth_expG_minus1": 0.03420936225157542,
+          "cagr_median": 0.03606213147793502,
+          "cagr_p10": 0.001546966004881512,
+          "cagr_p10_inverted_cdf": 0.0005094213403200598,
+          "mdd_mean": 0.16366430493946682,
+          "mdd_median": 0.15189064010901676,
+          "mdd_p90": 0.2766706071671277,
+          "mdd_p90_inverted_cdf": 0.2763349479855368,
+          "mdd_cvar90": 0.32820855442053404,
+          "terminal_real_median": 170.14519109237506,
+          "terminal_real_p10": 102.34702213634039,
+          "terminal_purchasing_power_loss_count": 11,
+          "terminal_purchasing_power_loss_share": 0.09166666666666666,
+          "mdd_exceedance": {
+            "0.10": {
+              "count": 91,
+              "share": 0.7583333333333333,
+              "expected_excess": 0.07118498248806625
+            },
+            "0.15": {
+              "count": 60,
+              "share": 0.5,
+              "expected_excess": 0.04046226043913264
+            },
+            "0.25": {
+              "count": 20,
+              "share": 0.16666666666666666,
+              "expected_excess": 0.00879711626202451
+            },
+            "0.35": {
+              "count": 3,
+              "share": 0.025,
+              "expected_excess": 0.0016883844614671074
+            },
+            "0.40": {
+              "count": 1,
+              "share": 0.008333333333333333,
+              "expected_excess": 0.000906001184492621
+            }
+          },
+          "mean_cumulative_nominal_fees": 0.3814361227162221,
+          "trade_check_share": 1.0
+        },
+        "25": {
+          "n_scenarios": 120,
+          "annualized_expected_log_growth": 0.035828654221710755,
+          "geometric_growth_expG_minus1": 0.03647823510500377,
+          "cagr_median": 0.038506743655687514,
+          "cagr_p10": 0.01162615805536158,
+          "cagr_p10_inverted_cdf": 0.011378845985362318,
+          "mdd_mean": 0.2028409064497348,
+          "mdd_median": 0.1901236438240973,
+          "mdd_p90": 0.339281548790903,
+          "mdd_p90_inverted_cdf": 0.33869186524823036,
+          "mdd_cvar90": 0.38936087798078345,
+          "terminal_real_median": 257.18142806303234,
+          "terminal_real_p10": 133.50641303119633,
+          "terminal_purchasing_power_loss_count": 5,
+          "terminal_purchasing_power_loss_share": 0.041666666666666664,
+          "mdd_exceedance": {
+            "0.10": {
+              "count": 107,
+              "share": 0.8916666666666667,
+              "expected_excess": 0.10591445772020647
+            },
+            "0.15": {
+              "count": 85,
+              "share": 0.7083333333333334,
+              "expected_excess": 0.06708540892765089
+            },
+            "0.25": {
+              "count": 33,
+              "share": 0.275,
+              "expected_excess": 0.020324498575811704
+            },
+            "0.35": {
+              "count": 9,
+              "share": 0.075,
+              "expected_excess": 0.004040494980288708
+            },
+            "0.40": {
+              "count": 4,
+              "share": 0.03333333333333333,
+              "expected_excess": 0.0014251701034648095
+            }
+          },
+          "mean_cumulative_nominal_fees": 0.7044113838623673,
+          "trade_check_share": 1.0
+        },
+        "30": {
+          "n_scenarios": 120,
+          "annualized_expected_log_growth": 0.034812847988894245,
+          "geometric_growth_expG_minus1": 0.035425908623992634,
+          "cagr_median": 0.03576350931386807,
+          "cagr_p10": 0.012772399711318938,
+          "cagr_p10_inverted_cdf": 0.012579587388437119,
+          "mdd_mean": 0.22018988187752112,
+          "mdd_median": 0.2009997304417679,
+          "mdd_p90": 0.3483609420121158,
+          "mdd_p90_inverted_cdf": 0.3469841428345941,
+          "mdd_cvar90": 0.40206700705584114,
+          "terminal_real_median": 286.9581881155193,
+          "terminal_real_p10": 146.3377859799637,
+          "terminal_purchasing_power_loss_count": 4,
+          "terminal_purchasing_power_loss_share": 0.03333333333333333,
+          "mdd_exceedance": {
+            "0.10": {
+              "count": 114,
+              "share": 0.95,
+              "expected_excess": 0.12119808176577933
+            },
+            "0.15": {
+              "count": 93,
+              "share": 0.775,
+              "expected_excess": 0.0788665988752386
+            },
+            "0.25": {
+              "count": 41,
+              "share": 0.3416666666666667,
+              "expected_excess": 0.026245455250932026
+            },
+            "0.35": {
+              "count": 12,
+              "share": 0.1,
+              "expected_excess": 0.005206700705584114
+            },
+            "0.40": {
+              "count": 6,
+              "share": 0.05,
+              "expected_excess": 0.001747556212233752
+            }
+          },
+          "mean_cumulative_nominal_fees": 0.9685225088610968,
+          "trade_check_share": 1.0
+        }
+      }
+    }
+  },
+  "liquidity_assumptions": {
+    "identifiability": {
+      "fixed_bill_floors_0.30_0.10_0_identified": false,
+      "reason": "High/Medium/Low are ordinal. The questionnaire supplies no required amount, access date, withdrawal schedule, external reserve, or permitted liquidation loss. Market returns cannot identify those preferences.",
+      "market_liquidity_vs_reserve": "The contest supplies no asset-specific settlement delay, sale-capacity or liquidity penalty. Assets can be transferred at the common fee at annual reviews. A bill floor is a declared reserve/market-risk buffer proxy, not a measured marketability requirement.",
+      "main_experiment": "No deposits or withdrawals, as required by the problem. Potential-spending scenarios below are supplemental interpretation only.",
+      "low_does_not_imply_zero": "A Low label does not prove that required reserves equal zero."
+    },
+    "questions_to_clarify": [
+      "How much purchasing power could be needed?",
+      "When and how quickly could it be needed?",
+      "Are there reserves outside this account?",
+      "What liquidation loss or delay is acceptable?"
+    ],
+    "possible_predeclared_policy_cases_not_recommendations": {
+      "ordinal_floor_approach": "Declare several monotone floor triplets before testing; treat .30/.10/0 as one unsupported policy case, not a calibrated baseline or a regulatory rule.",
+      "reserve_coverage_approach": "Declare annual potential need q and coverage years K=1 or2; derive b from an explicit bill-accumulation/liability convention. Do not assign q to High/Medium/Low without elicitation or an openly labelled assumption.",
+      "zero_real_return_examples": ".30 corresponds to one year at q=.30 or two years at q=.15; .10 corresponds to one year at q=.10 or two years at q=.05. These interpretations are assumptions, not facts about the five clients.",
+      "immediate_need": "A known immediate need fraction q requires at least q available before earning returns; it is different from the year-end payment examples.",
+      "no_costless_safety_claim": "Higher bill reserves can sacrifice growth and still lose purchasing power; they do not solve inflation risk."
+    },
+    "hypothetical_year_end_real_payment_examples": {
+      "1": {
+        "reserve_multiplier_for_annual_real_need_q": {
+          "mean": 0.9847271521549776,
+          "sd": 0.04129396524649293,
+          "min": 0.8681473893185349,
+          "p01": 0.8773266633056472,
+          "p05": 0.9350548438224044,
+          "p10": 0.9455294791139849,
+          "p25": 0.9623981408358667,
+          "median": 0.9779475981192696,
+          "p75": 1.0001935288342563,
+          "p90": 1.0315004935413477,
+          "p95": 1.076599601508641,
+          "p99": 1.1043384344218936,
+          "max": 1.1312292787634728
+        },
+        "interpretation": "initial reserve fraction b=q*sum_{j=1}^K(1/B_j), where B_j is cumulative real bill gross and each year-end payment is q times initial real wealth",
+        "scenarios": 120,
+        "illustrative_annual_need_fractions": {
+          "0.05": {
+            "zero_real_return_reserve": 0.05,
+            "empirical_p90_required_reserve": 0.051575024677067385,
+            "empirical_p95_required_reserve": 0.05382998007543205
+          },
+          "0.10": {
+            "zero_real_return_reserve": 0.1,
+            "empirical_p90_required_reserve": 0.10315004935413477,
+            "empirical_p95_required_reserve": 0.1076599601508641
+          },
+          "0.15": {
+            "zero_real_return_reserve": 0.15,
+            "empirical_p90_required_reserve": 0.15472507403120214,
+            "empirical_p95_required_reserve": 0.16148994022629615
+          }
+        }
+      },
+      "2": {
+        "reserve_multiplier_for_annual_real_need_q": {
+          "mean": 1.9607517486870383,
+          "sd": 0.09084941674299885,
+          "min": 1.70175386483215,
+          "p01": 1.748004795318894,
+          "p05": 1.8456156819909977,
+          "p10": 1.862510143256907,
+          "p25": 1.9043065973130366,
+          "median": 1.9484001672745261,
+          "p75": 2.0156681863978,
+          "p90": 2.0814542801326645,
+          "p95": 2.1332832392888297,
+          "p99": 2.2113618244659787,
+          "max": 2.2232950389326023
+        },
+        "interpretation": "initial reserve fraction b=q*sum_{j=1}^K(1/B_j), where B_j is cumulative real bill gross and each year-end payment is q times initial real wealth",
+        "scenarios": 120,
+        "illustrative_annual_need_fractions": {
+          "0.05": {
+            "zero_real_return_reserve": 0.1,
+            "empirical_p90_required_reserve": 0.10407271400663323,
+            "empirical_p95_required_reserve": 0.10666416196444149
+          },
+          "0.10": {
+            "zero_real_return_reserve": 0.2,
+            "empirical_p90_required_reserve": 0.20814542801326646,
+            "empirical_p95_required_reserve": 0.21332832392888298
+          },
+          "0.15": {
+            "zero_real_return_reserve": 0.3,
+            "empirical_p90_required_reserve": 0.31221814201989967,
+            "empirical_p95_required_reserve": 0.31999248589332446
+          }
+        }
+      }
+    },
+    "example_limitations": "Uses first1or2 years of 120 original scenarios. q, K, payment timing and P90/P95 reserve quantile are extra assumptions. Empirical reserve quantiles are not independently certified coverage and are not client preferences. No spending, fees on withdrawals, income or external resources are supplied; these examples must not replace the contest no-withdrawal paths.",
+    "primary_sources": [
+      {
+        "title": "2026 MCM Senior Group Problem A",
+        "path": "docs/problem_A.pdf",
+        "pages": [
+          1,
+          2
+        ],
+        "supports": "Only horizon, loss tolerance and ordinal liquidity are supplied; no later deposits or withdrawals are allowed."
+      },
+      {
+        "title": "SEC Investor.gov: Investment Products",
+        "url": "https://www.investor.gov/introduction-investing/investing-basics/investment-products",
+        "accessed": "2026-10-17",
+        "supports": "Liquidity concerns ease and cost of converting investments into usable money; product choice also depends on goals, timeframe and risk tolerance.",
+        "does_not_support": "Any .30/.10/0 floor, liability fraction or probability guarantee."
+      },
+      {
+        "title": "FINRA: Suitability Considerations and Sales Practices for Senior Investors, 2016 conference materials, reproduction of Notice11-25",
+        "url": "https://www.finra.org/sites/default/files/2016_SIPC_Suitability.pdf",
+        "accessed": "2026-10-17",
+        "supports": "Conceptual liquidity needs include obligations, speed, amount and conversion losses/costs.",
+        "does_not_support": "A current regulatory conclusion or a mandated allocation for this academic contest."
+      }
+    ]
+  },
+  "interpretation_limits": [
+    "All probabilities describe the supplied synthetic development distribution, not guaranteed future markets.",
+    "3600 annual rows are not independent trials; the original scenario is the sampling unit.",
+    "Nominal annual returns and real gross/return summaries exclude portfolio fees; diagnostic portfolio paths include fees consistently.",
+    "Serial structure and contemporaneous correlation do not prove forecast usefulness or identify a causal inflation mechanism.",
+    "Annual observations omit intrayear drawdowns and transaction timing detail.",
+    "No parameters or products may be justified by old final outcomes or a desired client mapping."
+  ]
+}

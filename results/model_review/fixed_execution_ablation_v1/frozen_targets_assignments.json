@@ -1,0 +1,542 @@
+[
+  {
+    "context": "full_development",
+    "scenario_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120
+    ],
+    "menu": [
+      {
+        "name": "Conservative",
+        "candidate_index": 115,
+        "weights": [
+          0.3,
+          0.2,
+          0.5
+        ],
+        "identified_by_profiles": true,
+        "reference_mean_log_growth": 0.031145073264587087,
+        "reference_cvar90_mdd": 0.2989711576290992
+      },
+      {
+        "name": "Balanced",
+        "candidate_index": 166,
+        "weights": [
+          0.5,
+          0.0,
+          0.5
+        ],
+        "identified_by_profiles": true,
+        "reference_mean_log_growth": 0.041286186387696704,
+        "reference_cvar90_mdd": 0.41703781043010424
+      },
+      {
+        "name": "Growth",
+        "candidate_index": 211,
+        "weights": [
+          0.75,
+          0.0,
+          0.25
+        ],
+        "identified_by_profiles": true,
+        "reference_mean_log_growth": 0.05342199911121429,
+        "reference_cvar90_mdd": 0.568017565680619
+      }
+    ],
+    "assignments": {
+      "A": "Review",
+      "B": "Conservative",
+      "C": "Balanced",
+      "D": "Review",
+      "E": "Growth"
+    }
+  },
+  {
+    "context": "fold_1_test",
+    "scenario_ids": [
+      1,
+      9,
+      13,
+      18,
+      26,
+      31,
+      34,
+      42,
+      44,
+      50,
+      51,
+      65,
+      66,
+      69,
+      73,
+      77,
+      78,
+      79,
+      84,
+      101,
+      109,
+      111,
+      113,
+      118
+    ],
+    "menu": [
+      {
+        "name": "Conservative",
+        "candidate_index": 114,
+        "weights": [
+          0.3,
+          0.15,
+          0.55
+        ],
+        "identified_by_profiles": true,
+        "reference_mean_log_growth": 0.030401742918768054,
+        "reference_cvar90_mdd": 0.30286110888496875
+      },
+      {
+        "name": "Balanced",
+        "candidate_index": 157,
+        "weights": [
+          0.45,
+          0.15,
+          0.4
+        ],
+        "identified_by_profiles": true,
+        "reference_mean_log_growth": 0.03873743668930206,
+        "reference_cvar90_mdd": 0.4021257208234467
+      },
+      {
+        "name": "Growth",
+        "candidate_index": 206,
+        "weights": [
+          0.7,
+          0.1,
+          0.2
+        ],
+        "identified_by_profiles": true,
+        "reference_mean_log_growth": 0.05079301315100248,
+        "reference_cvar90_mdd": 0.5579416186542909
+      }
+    ],
+    "assignments": {
+      "A": "Review",
+      "B": "Conservative",
+      "C": "Balanced",
+      "D": "Review",
+      "E": "Growth"
+    }
+  },
+  {
+    "context": "fold_2_test",
+    "scenario_ids": [
+      3,
+      15,
+      27,
+      30,
+      33,
+      35,
+      38,
+      40,
+      48,
+      53,
+      54,
+      59,
+      61,
+      62,
+      74,
+      75,
+      76,
+      96,
+      99,
+      102,
+      107,
+      112,
+      117,
+      120
+    ],
+    "menu": [
+      {
+        "name": "Conservative",
+        "candidate_index": 111,
+        "weights": [
+          0.3,
+          0.0,
+          0.7
+        ],
+        "identified_by_profiles": true,
+        "reference_mean_log_growth": 0.029863164776900413,
+        "reference_cvar90_mdd": 0.2902434470134237
+      },
+      {
+        "name": "Balanced",
+        "candidate_index": 157,
+        "weights": [
+          0.45,
+          0.15,
+          0.4
+        ],
+        "identified_by_profiles": true,
+        "reference_mean_log_growth": 0.03915146197643619,
+        "reference_cvar90_mdd": 0.3921793685632168
+      },
+      {
+        "name": "Growth",
+        "candidate_index": 206,
+        "weights": [
+          0.7,
+          0.1,
+          0.2
+        ],
+        "identified_by_profiles": true,
+        "reference_mean_log_growth": 0.051344453515432376,
+        "reference_cvar90_mdd": 0.5464854483214411
+      }
+    ],
+    "assignments": {
+      "A": "Review",
+      "B": "Conservative",
+      "C": "Balanced",
+      "D": "Review",
+      "E": "Growth"
+    }
+  },
+  {
+    "context": "fold_3_test",
+    "scenario_ids": [
+      8,
+      10,
+      16,
+      19,
+      20,
+      24,
+      28,
+      29,
+      32,
+      36,
+      46,
+      55,
+      57,
+      67,
+      68,
+      71,
+      89,
+      91,
+      93,
+      98,
+      106,
+      108,
+      110,
+      116
+    ],
+    "menu": [
+      {
+        "name": "Conservative",
+        "candidate_index": 114,
+        "weights": [
+          0.3,
+          0.15,
+          0.55
+        ],
+        "identified_by_profiles": true,
+        "reference_mean_log_growth": 0.03118516548409774,
+        "reference_cvar90_mdd": 0.304217082737465
+      },
+      {
+        "name": "Balanced",
+        "candidate_index": 166,
+        "weights": [
+          0.5,
+          0.0,
+          0.5
+        ],
+        "identified_by_profiles": true,
+        "reference_mean_log_growth": 0.04119929825796621,
+        "reference_cvar90_mdd": 0.4294230120330586
+      },
+      {
+        "name": "Growth",
+        "candidate_index": 207,
+        "weights": [
+          0.7,
+          0.15,
+          0.15
+        ],
+        "identified_by_profiles": true,
+        "reference_mean_log_growth": 0.05147064771875833,
+        "reference_cvar90_mdd": 0.5621365535566492
+      }
+    ],
+    "assignments": {
+      "A": "Review",
+      "B": "Conservative",
+      "C": "Balanced",
+      "D": "Review",
+      "E": "Growth"
+    }
+  },
+  {
+    "context": "fold_4_test",
+    "scenario_ids": [
+      2,
+      7,
+      12,
+      17,
+      23,
+      25,
+      39,
+      45,
+      47,
+      49,
+      58,
+      63,
+      64,
+      70,
+      81,
+      82,
+      83,
+      94,
+      95,
+      97,
+      103,
+      105,
+      114,
+      115
+    ],
+    "menu": [
+      {
+        "name": "Conservative",
+        "candidate_index": 115,
+        "weights": [
+          0.3,
+          0.2,
+          0.5
+        ],
+        "identified_by_profiles": true,
+        "reference_mean_log_growth": 0.031097669719519463,
+        "reference_cvar90_mdd": 0.29625620788411616
+      },
+      {
+        "name": "Balanced",
+        "candidate_index": 167,
+        "weights": [
+          0.5,
+          0.05,
+          0.45
+        ],
+        "identified_by_profiles": true,
+        "reference_mean_log_growth": 0.04198195944327592,
+        "reference_cvar90_mdd": 0.4087037830937977
+      },
+      {
+        "name": "Growth",
+        "candidate_index": 207,
+        "weights": [
+          0.7,
+          0.15,
+          0.15
+        ],
+        "identified_by_profiles": true,
+        "reference_mean_log_growth": 0.05254396891697544,
+        "reference_cvar90_mdd": 0.5261101494761774
+      }
+    ],
+    "assignments": {
+      "A": "Review",
+      "B": "Conservative",
+      "C": "Balanced",
+      "D": "Review",
+      "E": "Growth"
+    }
+  },
+  {
+    "context": "fold_5_test",
+    "scenario_ids": [
+      4,
+      5,
+      6,
+      11,
+      14,
+      21,
+      22,
+      37,
+      41,
+      43,
+      52,
+      56,
+      60,
+      72,
+      80,
+      85,
+      86,
+      87,
+      88,
+      90,
+      92,
+      100,
+      104,
+      119
+    ],
+    "menu": [
+      {
+        "name": "Conservative",
+        "candidate_index": 115,
+        "weights": [
+          0.3,
+          0.2,
+          0.5
+        ],
+        "identified_by_profiles": true,
+        "reference_mean_log_growth": 0.031635696136117324,
+        "reference_cvar90_mdd": 0.28424577389611916
+      },
+      {
+        "name": "Balanced",
+        "candidate_index": 157,
+        "weights": [
+          0.45,
+          0.15,
+          0.4
+        ],
+        "identified_by_profiles": true,
+        "reference_mean_log_growth": 0.03994984913472729,
+        "reference_cvar90_mdd": 0.3752969541710915
+      },
+      {
+        "name": "Growth",
+        "candidate_index": 213,
+        "weights": [
+          0.75,
+          0.1,
+          0.15
+        ],
+        "identified_by_profiles": true,
+        "reference_mean_log_growth": 0.05469888112882614,
+        "reference_cvar90_mdd": 0.5554802129890185
+      }
+    ],
+    "assignments": {
+      "A": "Review",
+      "B": "Conservative",
+      "C": "Balanced",
+      "D": "Review",
+      "E": "Growth"
+    }
+  }
+]

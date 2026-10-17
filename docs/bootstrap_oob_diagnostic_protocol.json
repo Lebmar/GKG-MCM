@@ -1,0 +1,64 @@
+{
+  "version": "bootstrap-oob-posthoc-diagnostic-v1",
+  "date_beijing": "2026-10-17",
+  "status": "Declared before computing or inspecting OOB performance from the stored bootstrap fits.",
+  "scope": "Secondary posthoc functional diagnostic of the existing 1000 whole-scenario bootstrap fits for alpha_10__risk_only. The primary selection process, alpha, menus and assignments remain frozen.",
+  "prior_exposure": "The full-development menu and internal five-fold outcomes, bootstrap assignment frequencies and target identities are already known. V1 final evaluation was seen earlier in the project. This is not preregistration on unseen development data or a new blind holdout.",
+  "allowed_scenario_ids": [1, 120],
+  "forbidden_final_scenario_access": true,
+  "case": "alpha_10__risk_only",
+  "replicates": 1000,
+  "seed": 87020261018,
+  "index_reconstruction": "Exactly rng=np.random.default_rng(seed); samples=rng.integers(0,120,size=(1000,120)). Repeated inbag indices retain their training multiplicities. Unique inbag IDs and OOB complement are recorded separately. No reseeding per replicate.",
+  "frozen_decisions": "Use each stored assignment and its stored candidate ID, with its menu label; do not choose an OOB oracle, replace a target, rescreen on OOB, or modify a referral.",
+  "reconstruction_checks": {
+    "fixed_replicates": [0, 1, 999],
+    "method": "Re-run the unchanged fit_menu on exactly the reconstructed repeated inbag indices; compare stored menu IDs, weights, assignments and per-client chosen candidate IDs.",
+    "all_replicates": "Require stored replicate identities 0..999 exactly once, assigned target membership in that replicate menu, consistent Review flags, and unique inbag/OOB disjoint partition of IDs1..120."
+  },
+  "per_replicate_client_outputs": {
+    "identity": ["replicate", "client", "horizon", "loss_tolerance", "assignment", "assigned", "candidate_index"],
+    "membership": ["inbag_n_with_multiplicity", "inbag_unique_n", "oob_n", "inbag_scenario_ids_with_multiplicity", "inbag_unique_scenario_ids", "oob_scenario_ids"],
+    "metrics_each_sample": ["mean_annualized_log_growth", "breach_count", "breach_probability", "expected_excess_mdd", "cvar90_mdd"],
+    "samples": {
+      "inbag": "Use all 120 repeated inbag indices and their multiplicities, exactly the empirical training distribution.",
+      "oob": "Use each omitted original scenario once; denominator is replicate-specific.",
+      "original120_including_inbag": "Frozen-target descriptive performance on all original120 paths; explicitly includes training observations and is not validation."
+    },
+    "referrals": "Retain all 5000 replicate-client rows and membership denominators. Review rows have NULL candidate and NULL investment outcomes in every sample; no adviser outcome or bill-only fallback is invented.",
+    "coverage": "Report automatic/referral indicators and counts. OOB investment metrics condition on that replicate-client being automatically assigned; no reassignment after viewing OOB."
+  },
+  "summary_policy": {
+    "primary_aggregation_unit": "replicate-client; summarize each client's scalar OOB metrics across automatically assigned replicates, with each replicate equally weighted, plus explicit conditioning counts and OOB denominator distribution.",
+    "statistics": ["count", "mean", "median", "p025", "p975", "minimum", "maximum"],
+    "quantile_method": "inverted_cdf empirical generalized inverse; median is the mean of the two middle values when even.",
+    "paired_differences": "For each automatically assigned replicate-client, report OOB minus inbag mean growth, breach probability, expected excess MDD and CVaR90, then summarize those differences across replicates.",
+    "threshold_diagnostics": "Report the fraction of automatically assigned replicates with OOB empirical breach proportion > .10; this is descriptive and affected by small/discrete OOB denominators, not a significance test or calibrated confidence.",
+    "no_pooled_certificate": "Do not treat repeated OOB rows as independent, do not compute a pooled binomial certificate or a new confidence interval for population risk. Different fitted menus and overlapping OOB/training sets prevent such an interpretation.",
+    "no_bootstrap_confidence_claim": "Across-replicate quantiles describe this empirical resampling procedure; they are not asserted to be calibrated confidence intervals for true risk, weights or growth."
+  },
+  "identity_and_role_outputs": {
+    "complete_menu_recurrence": "Exact ordered risk-label candidate tuple equals the full-development menu tuple; also disclose an unordered-set check.",
+    "client_original_target_recurrence": "Fraction of all 1000 replicates with the same chosen target as full development, and conditional fraction among automatic replicates; if original assignment is Review, original-target recurrence is not applicable and original referral recurrence is reported separately.",
+    "role_movement": "Counts of original role versus bootstrap assigned role, jointly with whether A is automatically assigned. These are relative catalogue labels, not inferred preference changes.",
+    "no_target_search": "All results describe existing stored menus and assignments only."
+  },
+  "accounting_and_risk": {
+    "cache": "results/model_review/risk_menu_v1/cache/step_0500__cost_002500.npz",
+    "candidate_count": 232,
+    "cost_rate": 0.0025,
+    "horizons": [5, 6, 15, 25, 30],
+    "risk_event": "MDD - client_L > 1e-12, consistent with the unchanged primary metrics.",
+    "severity": "Expected excess is zero for numerical equality; CVaR90 includes fractional boundary probability atoms.",
+    "cache_validation": "Require development IDs1..120 only, cache/metadata hashes, current numerical source hashes and guarded load_paths(...,range(1,121),allow_final=False) development input-array digest. No final-return value is requested or parsed."
+  },
+  "expected_outputs": [
+    "results/model_review/risk_menu_v1/bootstrap/alpha_10__risk_only/oob/memberships.json",
+    "results/model_review/risk_menu_v1/bootstrap/alpha_10__risk_only/oob/replicate_client_metrics.csv",
+    "results/model_review/risk_menu_v1/bootstrap/alpha_10__risk_only/oob/summary.json",
+    "results/model_review/risk_menu_v1/bootstrap/alpha_10__risk_only/oob/reconstruction_checks.json",
+    "results/model_review/risk_menu_v1/bootstrap/alpha_10__risk_only/oob/manifest.json"
+  ],
+  "provenance": "Hash this protocol before performance computation. Record source and input artifact SHA256 before and after execution; abort writing performance outputs if either changes. Record output hashes in a manifest; the manifest cannot hash itself.",
+  "prohibited_actions": ["Changing the primary selector or runner", "Selecting targets by OOB outcomes", "Tuning alpha using OOB", "Accessing scenarios121..180", "Calling the repeated OOB observations independent market evidence"]
+}

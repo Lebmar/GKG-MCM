@@ -15,6 +15,55 @@ This repository records a reproducible investigation of purchasing-power risk,
 customer suitability, selective rebalancing and bounded target updates. It does
 not assume that a more complicated policy improves investment outcomes.
 
+## Current development research
+
+The new work uses scenarios **1–120 only** and keeps the V1 archives intact.
+Start with `notebooks/objective_risk_foundations.ipynb`, then
+`notebooks/risk_menu_development.ipynb`. An executed reading copy is available
+as `notebooks/risk_menu_development.html`; it is a research note, not a submission
+report. The notebook separates the growth objective, risk-budget policy,
+sampling evidence, liquidity assumptions and the actual execution rule.
+
+The static study declares its procedure in
+`docs/risk_menu_development_protocol.json`: 232 fixed targets, three risk-budget
+cases, three reserve-policy cases, five whole-scenario folds and 1,000 complete
+bootstrap reselections. Results, diagnostics and independent accounting replay
+are under `results/model_review/risk_menu_v1/`. The primary 10% sample-screen
+menu is a candidate for further study: its B/C/E assignments all sit on the
+12/120 training boundary, while precise weights vary substantially on resampling.
+
+Two complementary diagnostics are recorded separately. The finite-family
+Clopper–Pearson study requires an additional iid scenario assumption and is
+deliberately conservative; it does not certify real markets or dynamically
+learned policies. The fixed-target annual-versus-buy-and-hold ablation shows why
+a suitability result cannot be inherited after changing the execution rule.
+Neither diagnostic selects a new final service policy.
+
+To reproduce the completed development studies with the main requirements:
+
+```sh
+python scripts/inspect_development_structure.py
+python scripts/run_risk_menu_research.py all
+python scripts/analyze_risk_menu_diagnostics.py all
+python scripts/run_simultaneous_risk_diagnostic.py all
+python scripts/analyze_bootstrap_oob.py
+python scripts/run_fixed_execution_ablation.py
+python scripts/audit_risk_menu_results.py
+python scripts/plot_development_structure.py
+python scripts/plot_risk_menu_research.py
+```
+
+These runners write their dedicated research directories. The numerical cache
+is rebuilt from the allowed development paths and is excluded from Git; source,
+data-array and output fingerprints remain in the manifests. Do not use the old
+V1 `final` or `reproduce` command to select a revised model.
+
+Notebook authoring tools are optional and listed in `requirements-review.txt`.
+The readable HTML hides code cells; the notebook retains the code, outputs,
+formulas and links to the recorded methods. A finite-horizon execution prototype
+is being studied separately under `research/experimental_execution/`, with its
+own protocol and numerical audits; it has not replaced the primary procedure.
+
 ## Archived V1 prototype
 
 The 9-page report and 2.76 MB supplementary ZIP are in `output/`. They have not

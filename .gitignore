@@ -12,3 +12,10 @@ analysis/
 *.synctex.gz
 report/latex/main.pdf
 
+# Rebuildable development simulation arrays; provenance remains in JSON manifests.
+results/model_review/**/cache/
+
+# These are recorded development analyses, rather than disposable root analysis.
+!results/model_review/risk_menu_v1/analysis/
+!results/model_review/risk_menu_v1/analysis/**
+
