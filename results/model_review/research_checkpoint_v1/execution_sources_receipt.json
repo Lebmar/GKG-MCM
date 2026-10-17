@@ -1,0 +1,894 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "strict-calibration",
+      "title": "严格三资产规格与内层风险余量",
+      "assumptions": [
+        "服务参考α固定10%；训练γ是技术参数。",
+        "三资产至少5%来自既定网格最小正点，未被解释为问卷偏好。"
+      ],
+      "queries": [
+        {
+          "id": "strict-oof",
+          "source": {
+            "label": "同规格完整路径折外对照",
+            "files": [
+              {
+                "label": "results/model_review/positive_asset_specification_v1/outer_strict_vs_relaxed_summary.csv"
+              },
+              {
+                "label": "results/model_review/positive_asset_specification_v1/nested_context_refits.json"
+              },
+              {
+                "label": "docs/positive_asset_specification_protocol.json"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "超限",
+                "definition": "客户完整H内年度最大实际回撤超过L+1e−12。"
+              },
+              {
+                "label": "增长差",
+                "definition": "两程序在相同120条自动分配路径上的平均年化log净实际增长差，乘100为百分点。"
+              }
+            ],
+            "filters": [
+              "strict172",
+              "B/C/E；nested effective 与 fixed_gamma10 raw",
+              "五个外层整路径折；γ只在四个内层折选择"
+            ],
+            "caveats": [
+              "复用的开发数据；训练折相互重叠。",
+              "不是未来风险保证、连续最优或最终服务批准。",
+              "旧版121–180结果已被看过，未称新盲测。"
+            ]
+          },
+          "sourceRoles": [
+            {
+              "kind": "file",
+              "label": "results/model_review/positive_asset_specification_v1/outer_strict_vs_relaxed_summary.csv",
+              "role": "已保存开发研究的输入、方法或结果证据"
+            },
+            {
+              "kind": "file",
+              "label": "results/model_review/positive_asset_specification_v1/nested_context_refits.json",
+              "role": "已保存开发研究的输入、方法或结果证据"
+            },
+            {
+              "kind": "file",
+              "label": "docs/positive_asset_specification_protocol.json",
+              "role": "已保存开发研究的输入、方法或结果证据"
+            }
+          ],
+          "reportingPeriod": "2026-10-17开发研究；原情景1–120",
+          "columns": [
+            "客户",
+            "完整路径数",
+            "固定10%训练筛选超限数",
+            "内层选择超限数",
+            "年化log增长变化_百分点"
+          ],
+          "rows": [
+            {
+              "客户": "B",
+              "完整路径数": 120,
+              "固定10%训练筛选超限数": 12,
+              "内层选择超限数": 9,
+              "年化log增长变化_百分点": -0.19460574575046014
+            },
+            {
+              "客户": "C",
+              "完整路径数": 120,
+              "固定10%训练筛选超限数": 14,
+              "内层选择超限数": 9,
+              "年化log增长变化_百分点": -0.18034019034215976
+            },
+            {
+              "客户": "E",
+              "完整路径数": 120,
+              "固定10%训练筛选超限数": 11,
+              "内层选择超限数": 9,
+              "年化log增长变化_百分点": -0.0542906932155203
+            }
+          ],
+          "methods": [
+            {
+              "language": "python",
+              "code": "a = table[(specification == 'strict172') & (procedure == 'fixed_gamma10') & (view == 'raw')]\nb = table[(specification == 'strict172') & (procedure == 'nested') & (view == 'effective')]\ndelta_pp = 100 * (b.mean_log_growth - a.mean_log_growth)"
+            }
+          ]
+        },
+        {
+          "id": "strict-weights",
+          "source": {
+            "label": "全开发描述性拟合的候选权重",
+            "files": [
+              {
+                "label": "results/model_review/positive_asset_specification_v1/nested_context_refits.json"
+              },
+              {
+                "label": "results/model_review/positive_asset_specification_v1/candidate_mapping.csv"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "权重",
+                "definition": "股票、政府债、票据的长期年度恢复目标；百分数合计100。"
+              }
+            ],
+            "filters": [
+              "full_development raw_fit menu",
+              "172 local索引显式映射回原232索引"
+            ],
+            "caveats": [
+              "全120拟合是描述性训练结果，区别于五个折外训练菜单。",
+              "风险维度候选分配B/C/E；流动性与动态执行仍需后续审定。"
+            ]
+          },
+          "sourceRoles": [
+            {
+              "kind": "file",
+              "label": "results/model_review/positive_asset_specification_v1/nested_context_refits.json",
+              "role": "已保存开发研究的输入、方法或结果证据"
+            },
+            {
+              "kind": "file",
+              "label": "results/model_review/positive_asset_specification_v1/candidate_mapping.csv",
+              "role": "已保存开发研究的输入、方法或结果证据"
+            }
+          ],
+          "reportingPeriod": "2026-10-17开发研究；原情景1–120",
+          "columns": [
+            "产品",
+            "股票_百分数",
+            "政府债_百分数",
+            "票据_百分数"
+          ],
+          "rows": [
+            {
+              "产品": "Conservative",
+              "股票_百分数": 25.0,
+              "政府债_百分数": 30.0,
+              "票据_百分数": 45.0
+            },
+            {
+              "产品": "Balanced",
+              "股票_百分数": 45.0,
+              "政府债_百分数": 5.0,
+              "票据_百分数": 50.0
+            },
+            {
+              "产品": "Growth",
+              "股票_百分数": 70.0,
+              "政府债_百分数": 10.0,
+              "票据_百分数": 20.0
+            }
+          ],
+          "methods": [
+            {
+              "language": "python",
+              "code": "weight_percent = 100 * np.asarray(product['weights'])"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "execution",
+      "title": "增长门槛没有继承原风险适配",
+      "assumptions": [
+        "同一折、同一目标、同一原客户分配；净费用0.25%。"
+      ],
+      "queries": [
+        {
+          "id": "execution-oof",
+          "source": {
+            "label": "原放宽规格目标的执行消融",
+            "files": [
+              {
+                "label": "results/model_review/finite_horizon_execution_v1/client_summary.csv"
+              },
+              {
+                "label": "results/model_review/finite_horizon_execution_v1/manifest.json"
+              },
+              {
+                "label": "docs/finite_horizon_execution_prototype_protocol.json"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "交易比例",
+                "definition": "实际发生转移的审查次数/客户H内全部审查次数，包含初始配置。"
+              }
+            ],
+            "filters": [
+              "scope=oof；mesh=.05或年度基准无mesh",
+              "annual_restore vs finite_horizon_gate"
+            ],
+            "caveats": [
+              "此实验保留原232研究的目标，尚未验证新的严格三资产菜单动态规则。",
+              "增长门槛没有MDD约束；这不是可直接部署的受控策略。"
+            ]
+          },
+          "sourceRoles": [
+            {
+              "kind": "file",
+              "label": "results/model_review/finite_horizon_execution_v1/client_summary.csv",
+              "role": "已保存开发研究的输入、方法或结果证据"
+            },
+            {
+              "kind": "file",
+              "label": "results/model_review/finite_horizon_execution_v1/manifest.json",
+              "role": "已保存开发研究的输入、方法或结果证据"
+            },
+            {
+              "kind": "file",
+              "label": "docs/finite_horizon_execution_prototype_protocol.json",
+              "role": "已保存开发研究的输入、方法或结果证据"
+            }
+          ],
+          "reportingPeriod": "2026-10-17开发研究；原情景1–120",
+          "columns": [
+            "客户",
+            "执行规则",
+            "自动路径数",
+            "超限数",
+            "年化平均log增长_百分数",
+            "实际交易审查比例_百分数"
+          ],
+          "rows": [
+            {
+              "客户": "E",
+              "执行规则": "annual_restore",
+              "自动路径数": 120,
+              "超限数": 11,
+              "年化平均log增长_百分数": 4.64134224308202,
+              "实际交易审查比例_百分数": 100.0
+            },
+            {
+              "客户": "B",
+              "执行规则": "annual_restore",
+              "自动路径数": 120,
+              "超限数": 12,
+              "年化平均log增长_百分数": 3.0879647465076,
+              "实际交易审查比例_百分数": 100.0
+            },
+            {
+              "客户": "C",
+              "执行规则": "annual_restore",
+              "自动路径数": 120,
+              "超限数": 13,
+              "年化平均log增长_百分数": 4.092074361872959,
+              "实际交易审查比例_百分数": 100.0
+            },
+            {
+              "客户": "E",
+              "执行规则": "finite_horizon_gate",
+              "自动路径数": 120,
+              "超限数": 14,
+              "年化平均log增长_百分数": 4.79375043970425,
+              "实际交易审查比例_百分数": 31.527777777777782
+            },
+            {
+              "客户": "B",
+              "执行规则": "finite_horizon_gate",
+              "自动路径数": 120,
+              "超限数": 26,
+              "年化平均log增长_百分数": 3.7724636000415903,
+              "实际交易审查比例_百分数": 15.722222222222221
+            },
+            {
+              "客户": "C",
+              "执行规则": "finite_horizon_gate",
+              "自动路径数": 120,
+              "超限数": 40,
+              "年化平均log增长_百分数": 5.0949171501701205,
+              "实际交易审查比例_百分数": 8.80555555555555
+            }
+          ],
+          "methods": [
+            {
+              "language": "python",
+              "code": "rows = summary[(scope == 'oof') & policy.isin(['annual_restore','finite_horizon_gate'])]\ntrade_percent = 100 * mean_trade_fraction\nbreach_fraction = breach_count / assigned_paths"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lower-bound",
+      "title": "固定目标族失败的范围",
+      "assumptions": [
+        "年度初交易、年内持仓不变；long-only fully invested、无注资或杠杆；费用非负。"
+      ],
+      "queries": [
+        {
+          "id": "unavoidable",
+          "source": {
+            "label": "年度区间乘积下界",
+            "files": [
+              {
+                "label": "results/model_review/policy_independent_drawdown_bound_v1/client_counts.csv"
+              },
+              {
+                "label": "results/model_review/policy_independent_drawdown_bound_v1/independent_audit.json"
+              },
+              {
+                "label": "docs/policy_independent_drawdown_bound_protocol.json"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "理想下界",
+                "definition": "每年预知最好资产、零费用的放宽路径MDD；由所有区间收益比给出任何上述年度策略的MDD下界。"
+              }
+            ],
+            "filters": [
+              "各客户first H；原情景1–120"
+            ],
+            "caveats": [
+              "理想路径不是可实施建议。",
+              "未超限不证明存在安全因果策略。",
+              "所有forced count≤12，不能证明整个年度策略类经验不可行；A/D仅固定目标族失败。"
+            ]
+          },
+          "sourceRoles": [
+            {
+              "kind": "file",
+              "label": "results/model_review/policy_independent_drawdown_bound_v1/client_counts.csv",
+              "role": "已保存开发研究的输入、方法或结果证据"
+            },
+            {
+              "kind": "file",
+              "label": "results/model_review/policy_independent_drawdown_bound_v1/independent_audit.json",
+              "role": "已保存开发研究的输入、方法或结果证据"
+            },
+            {
+              "kind": "file",
+              "label": "docs/policy_independent_drawdown_bound_protocol.json",
+              "role": "已保存开发研究的输入、方法或结果证据"
+            }
+          ],
+          "reportingPeriod": "2026-10-17开发研究；原情景1–120",
+          "columns": [
+            "客户",
+            "期限",
+            "完整路径数",
+            "理想下界仍超限",
+            "232固定目标最少超限",
+            "10%经验额度条数"
+          ],
+          "rows": [
+            {
+              "客户": "A",
+              "期限": 5,
+              "完整路径数": 120,
+              "理想下界仍超限": 3,
+              "232固定目标最少超限": 16,
+              "10%经验额度条数": 12
+            },
+            {
+              "客户": "B",
+              "期限": 15,
+              "完整路径数": 120,
+              "理想下界仍超限": 0,
+              "232固定目标最少超限": 1,
+              "10%经验额度条数": 12
+            },
+            {
+              "客户": "C",
+              "期限": 30,
+              "完整路径数": 120,
+              "理想下界仍超限": 0,
+              "232固定目标最少超限": 0,
+              "10%经验额度条数": 12
+            },
+            {
+              "客户": "D",
+              "期限": 25,
+              "完整路径数": 120,
+              "理想下界仍超限": 6,
+              "232固定目标最少超限": 33,
+              "10%经验额度条数": 12
+            },
+            {
+              "客户": "E",
+              "期限": 6,
+              "完整路径数": 120,
+              "理想下界仍超限": 0,
+              "232固定目标最少超限": 0,
+              "10%经验额度条数": 12
+            }
+          ],
+          "methods": [
+            {
+              "language": "python",
+              "code": "m = np.max((1 + asset_returns) / (1 + inflation[..., None]), axis=-1)\nideal = 100 * np.cumprod(m, axis=-1)\n# prepend wealth100, then compute peak-to-trough MDD; compare to each L"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "current-c",
+      "title": "C客户：同120条完整路径的五策略比较",
+      "assumptions": [
+        "原始开发情景1–120；整路径外折；已重复使用的数据。"
+      ],
+      "queries": [
+        {
+          "id": "current-c-saved",
+          "source": {
+            "label": "C客户：同120条完整路径的五策略比较",
+            "files": [
+              {
+                "label": "results/model_review/q2_execution_development_v2/summary.csv"
+              },
+              {
+                "label": "results/model_review/q2_execution_development_v2/manifest.json"
+              },
+              {
+                "label": "docs/q2_execution_development_protocol.json"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "超限",
+                "definition": "30年年度端点最大实际回撤超过40%+1e−12；原120条作分母。"
+              },
+              {
+                "label": "费用与比例",
+                "definition": "总名义费用按初始100计；交易分母30次，更新分母29次。"
+              }
+            ],
+            "filters": [
+              "只读取已保存研究产物，不重新拟合或载入市场收益"
+            ],
+            "caveats": [
+              "OOF由不同训练折学得，不能作单一固定策略的风险证书。",
+              "V1已看过121–180结果；本轮没有新的盲测集。",
+              "所有新实验均未成为最终参赛模型；没有上传CMT。",
+              "精确三等分年度对照使用不同目标，不能把差异全归因于执行。",
+              "Expanded与Priced相同；六个训练环境均选择不更新模式。"
+            ]
+          },
+          "sourceRoles": [
+            {
+              "kind": "file",
+              "label": "results/model_review/q2_execution_development_v2/summary.csv",
+              "role": "保存的方法、结果或核查证据"
+            },
+            {
+              "kind": "file",
+              "label": "results/model_review/q2_execution_development_v2/manifest.json",
+              "role": "保存的方法、结果或核查证据"
+            },
+            {
+              "kind": "file",
+              "label": "docs/q2_execution_development_protocol.json",
+              "role": "保存的方法、结果或核查证据"
+            }
+          ],
+          "reportingPeriod": "2026-10-17执行阶段开发研究",
+          "columns": [
+            "策略",
+            "原路径数",
+            "超限数",
+            "中位实际CAGR_pct",
+            "P90实际回撤_pct",
+            "平均总名义费用_初始100",
+            "实际交易比例_pct",
+            "更新比例_29次机会_pct"
+          ],
+          "rows": [
+            {
+              "策略": "strict_annual",
+              "原路径数": 120,
+              "超限数": 9,
+              "中位实际CAGR_pct": 3.99683142409923,
+              "P90实际回撤_pct": 38.19662536820991,
+              "平均总名义费用_初始100": 1.0917790292420717,
+              "实际交易比例_pct": 100.0,
+              "更新比例_29次机会_pct": 0.0
+            },
+            {
+              "策略": "annual_then_pending",
+              "原路径数": 120,
+              "超限数": 9,
+              "中位实际CAGR_pct": 4.04883122697249,
+              "P90实际回撤_pct": 38.19662536820991,
+              "平均总名义费用_初始100": 1.0715256305988012,
+              "实际交易比例_pct": 97.30555555555556,
+              "更新比例_29次机会_pct": 0.0
+            },
+            {
+              "策略": "risk_priced_learner",
+              "原路径数": 120,
+              "超限数": 14,
+              "中位实际CAGR_pct": 4.31387784120206,
+              "P90实际回撤_pct": 41.22320701933276,
+              "平均总名义费用_初始100": 0.7390408251202878,
+              "实际交易比例_pct": 24.52777777777778,
+              "更新比例_29次机会_pct": 0.0
+            },
+            {
+              "策略": "equal_weight_annual",
+              "原路径数": 120,
+              "超限数": 6,
+              "中位实际CAGR_pct": 3.5763509313868,
+              "P90实际回撤_pct": 34.698414283459414,
+              "平均总名义费用_初始100": 0.9685225088610968,
+              "实际交易比例_pct": 100.0,
+              "更新比例_29次机会_pct": 0.0
+            },
+            {
+              "策略": "expanded_target_learner",
+              "原路径数": 120,
+              "超限数": 14,
+              "中位实际CAGR_pct": 4.31387784120206,
+              "P90实际回撤_pct": 41.22320701933276,
+              "平均总名义费用_初始100": 0.7390408251202878,
+              "实际交易比例_pct": 24.52777777777778,
+              "更新比例_29次机会_pct": 0.0
+            }
+          ],
+          "methods": [
+            {
+              "language": "python",
+              "code": "summary = read_csv('q2_execution_development_v2/summary.csv')\n# no path removal, policy selection or final evaluation; pct =100 *saved_fraction"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "known-fees",
+      "title": "冻结控制器的五档已知费用压力",
+      "assumptions": [
+        "原始开发情景1–120；整路径外折；已重复使用的数据。"
+      ],
+      "queries": [
+        {
+          "id": "known-fees-saved",
+          "source": {
+            "label": "冻结控制器的五档已知费用压力",
+            "files": [
+              {
+                "label": "results/model_review/selected_controller_cost_stress_v1/summary.csv"
+              },
+              {
+                "label": "results/model_review/selected_controller_cost_stress_v1/independent_audit.json"
+              },
+              {
+                "label": "docs/selected_controller_cost_stress_protocol.json"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "压力口径",
+                "definition": "真实费用与预测费用同时改变；固定默认成本下选中的目标、价格、模式和准入。"
+              }
+            ],
+            "filters": [
+              "只读取已保存研究产物，不重新拟合或载入市场收益"
+            ],
+            "caveats": [
+              "OOF由不同训练折学得，不能作单一固定策略的风险证书。",
+              "V1已看过121–180结果；本轮没有新的盲测集。",
+              "所有新实验均未成为最终参赛模型；没有上传CMT。",
+              "不是费用估错压力或重新风险校准。",
+              "学习器交易占比的均值非单调；不可据此选择最佳费率。 "
+            ]
+          },
+          "sourceRoles": [
+            {
+              "kind": "file",
+              "label": "results/model_review/selected_controller_cost_stress_v1/summary.csv",
+              "role": "保存的方法、结果或核查证据"
+            },
+            {
+              "kind": "file",
+              "label": "results/model_review/selected_controller_cost_stress_v1/independent_audit.json",
+              "role": "保存的方法、结果或核查证据"
+            },
+            {
+              "kind": "file",
+              "label": "docs/selected_controller_cost_stress_protocol.json",
+              "role": "保存的方法、结果或核查证据"
+            }
+          ],
+          "reportingPeriod": "2026-10-17执行阶段开发研究",
+          "columns": [
+            "费率_pct",
+            "策略",
+            "原路径数",
+            "超限数",
+            "平均年化log增长_pct",
+            "平均总名义费用_初始100",
+            "实际交易比例_pct"
+          ],
+          "rows": [
+            {
+              "费率_pct": 0.0,
+              "策略": "fixed_target_learner",
+              "原路径数": 120,
+              "超限数": 14,
+              "平均年化log增长_pct": 4.29522902923377,
+              "平均总名义费用_初始100": 0.0,
+              "实际交易比例_pct": 24.861111111111107
+            },
+            {
+              "费率_pct": 0.0,
+              "策略": "expanded_target_learner",
+              "原路径数": 120,
+              "超限数": 14,
+              "平均年化log增长_pct": 4.29522902923377,
+              "平均总名义费用_初始100": 0.0,
+              "实际交易比例_pct": 24.861111111111107
+            },
+            {
+              "费率_pct": 0.0,
+              "策略": "annual_then_pending",
+              "原路径数": 120,
+              "超限数": 9,
+              "平均年化log增长_pct": 3.92212372950244,
+              "平均总名义费用_初始100": 0.0,
+              "实际交易比例_pct": 97.30555555555556
+            },
+            {
+              "费率_pct": 0.0,
+              "策略": "equal_thirds_annual",
+              "原路径数": 120,
+              "超限数": 5,
+              "平均年化log增长_pct": 3.49548060295801,
+              "平均总名义费用_初始100": 0.0,
+              "实际交易比例_pct": 100.0
+            },
+            {
+              "费率_pct": 0.125,
+              "策略": "fixed_target_learner",
+              "原路径数": 120,
+              "超限数": 14,
+              "平均年化log增长_pct": 4.29510093914127,
+              "平均总名义费用_初始100": 0.3685268992823346,
+              "实际交易比例_pct": 24.694444444444443
+            },
+            {
+              "费率_pct": 0.125,
+              "策略": "expanded_target_learner",
+              "原路径数": 120,
+              "超限数": 14,
+              "平均年化log增长_pct": 4.29510093914127,
+              "平均总名义费用_初始100": 0.3685268992823346,
+              "实际交易比例_pct": 24.694444444444443
+            },
+            {
+              "费率_pct": 0.125,
+              "策略": "annual_then_pending",
+              "原路径数": 120,
+              "超限数": 9,
+              "平均年化log增长_pct": 3.9150810241463505,
+              "平均总名义费用_初始100": 0.5368841080219998,
+              "实际交易比例_pct": 97.30555555555556
+            },
+            {
+              "费率_pct": 0.125,
+              "策略": "equal_thirds_annual",
+              "原路径数": 120,
+              "超限数": 5,
+              "平均年化log增长_pct": 3.4883786922455,
+              "平均总名义费用_初始100": 0.4852728462988439,
+              "实际交易比例_pct": 100.0
+            },
+            {
+              "费率_pct": 0.25,
+              "策略": "fixed_target_learner",
+              "原路径数": 120,
+              "超限数": 14,
+              "平均年化log增长_pct": 4.29005197288062,
+              "平均总名义费用_初始100": 0.7390408251202878,
+              "实际交易比例_pct": 24.52777777777778
+            },
+            {
+              "费率_pct": 0.25,
+              "策略": "expanded_target_learner",
+              "原路径数": 120,
+              "超限数": 14,
+              "平均年化log增长_pct": 4.29005197288062,
+              "平均总名义费用_初始100": 0.7390408251202878,
+              "实际交易比例_pct": 24.52777777777778
+            },
+            {
+              "费率_pct": 0.25,
+              "策略": "annual_then_pending",
+              "原路径数": 120,
+              "超限数": 9,
+              "平均年化log增长_pct": 3.90804588574566,
+              "平均总名义费用_初始100": 1.0715256305988012,
+              "实际交易比例_pct": 97.30555555555556
+            },
+            {
+              "费率_pct": 0.25,
+              "策略": "equal_thirds_annual",
+              "原路径数": 120,
+              "超限数": 6,
+              "平均年化log增长_pct": 3.4812847988894196,
+              "平均总名义费用_初始100": 0.9685225088610968,
+              "实际交易比例_pct": 100.0
+            },
+            {
+              "费率_pct": 0.5,
+              "策略": "fixed_target_learner",
+              "原路径数": 120,
+              "超限数": 14,
+              "平均年化log增长_pct": 4.27750039657238,
+              "平均总名义费用_初始100": 1.4788451859348704,
+              "实际交易比例_pct": 24.33333333333333
+            },
+            {
+              "费率_pct": 0.5,
+              "策略": "expanded_target_learner",
+              "原路径数": 120,
+              "超限数": 14,
+              "平均年化log增长_pct": 4.27750039657238,
+              "平均总名义费用_初始100": 1.4788451859348704,
+              "实际交易比例_pct": 24.33333333333333
+            },
+            {
+              "费率_pct": 0.5,
+              "策略": "annual_then_pending",
+              "原路径数": 120,
+              "超限数": 9,
+              "平均年化log增长_pct": 3.8939982534316604,
+              "平均总名义费用_初始100": 2.1341242033576053,
+              "实际交易比例_pct": 97.30555555555556
+            },
+            {
+              "费率_pct": 0.5,
+              "策略": "equal_thirds_annual",
+              "原路径数": 120,
+              "超限数": 6,
+              "平均年化log增长_pct": 3.4671209884683205,
+              "平均总名义费用_初始100": 1.9289929633049343,
+              "实际交易比例_pct": 100.0
+            },
+            {
+              "费率_pct": 1.0,
+              "策略": "fixed_target_learner",
+              "原路径数": 120,
+              "超限数": 14,
+              "平均年化log增长_pct": 4.24327953651524,
+              "平均总名义费用_初始100": 2.891820631585334,
+              "实际交易比例_pct": 24.63888888888889
+            },
+            {
+              "费率_pct": 1.0,
+              "策略": "expanded_target_learner",
+              "原路径数": 120,
+              "超限数": 14,
+              "平均年化log增长_pct": 4.24327953651524,
+              "平均总名义费用_初始100": 2.891820631585334,
+              "实际交易比例_pct": 24.63888888888889
+            },
+            {
+              "费率_pct": 1.0,
+              "策略": "annual_then_pending",
+              "原路径数": 120,
+              "超限数": 9,
+              "平均年化log增长_pct": 3.86599317246314,
+              "平均总名义费用_初始100": 4.232882393839566,
+              "实际交易比例_pct": 97.30555555555556
+            },
+            {
+              "费率_pct": 1.0,
+              "策略": "equal_thirds_annual",
+              "原路径数": 120,
+              "超限数": 6,
+              "平均年化log增长_pct": 3.4388888200450696,
+              "平均总名义费用_初始100": 3.8260938304216,
+              "实际交易比例_pct": 100.0
+            }
+          ],
+          "methods": [
+            {
+              "language": "python",
+              "code": "rows = read_csv('selected_controller_cost_stress_v1/summary.csv').query(\"scope =='outer_oof'\")\n# same120 paths reused at each known rate; no new training selection"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "execution-evidence",
+      "title": "计算与来源证据的范围",
+      "assumptions": [
+        "原始开发情景1–120；整路径外折；已重复使用的数据。"
+      ],
+      "queries": [
+        {
+          "id": "execution-evidence-saved",
+          "source": {
+            "label": "计算与来源证据的范围",
+            "files": [
+              {
+                "label": "results/model_review/research_checkpoint_v1/verification.json"
+              },
+              {
+                "label": "results/model_review/execution_stage_reproduction_v1/manifest.json"
+              },
+              {
+                "label": "scripts/verify_research_checkpoint.py"
+              },
+              {
+                "label": "scripts/reproduce_execution_stage.py"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "同源隔离复现",
+                "definition": "原归档前后不变；七runner在临时副本重跑，输出逐字节或NPZ逐数组精确一致。"
+              }
+            ],
+            "filters": [
+              "只读取已保存研究产物，不重新拟合或载入市场收益"
+            ],
+            "caveats": [
+              "OOF由不同训练折学得，不能作单一固定策略的风险证书。",
+              "V1已看过121–180结果；本轮没有新的盲测集。",
+              "所有新实验均未成为最终参赛模型；没有上传CMT。",
+              "独立数值算法由AI协助另写，不是外部人类同行审稿。",
+              "测试、数百万次机械检查与同源复现均不能保证未来风险。 "
+            ]
+          },
+          "sourceRoles": [
+            {
+              "kind": "file",
+              "label": "results/model_review/research_checkpoint_v1/verification.json",
+              "role": "保存的方法、结果或核查证据"
+            },
+            {
+              "kind": "file",
+              "label": "results/model_review/execution_stage_reproduction_v1/manifest.json",
+              "role": "保存的方法、结果或核查证据"
+            },
+            {
+              "kind": "file",
+              "label": "scripts/verify_research_checkpoint.py",
+              "role": "保存的方法、结果或核查证据"
+            },
+            {
+              "kind": "file",
+              "label": "scripts/reproduce_execution_stage.py",
+              "role": "保存的方法、结果或核查证据"
+            }
+          ],
+          "reportingPeriod": "2026-10-17执行阶段开发研究",
+          "columns": [
+            "通过测试数",
+            "已核来源快照数",
+            "不同文件数",
+            "隔离复现实验数",
+            "已执行代码单元数"
+          ],
+          "rows": [
+            {
+              "通过测试数": 353,
+              "已核来源快照数": 45,
+              "不同文件数": 397,
+              "隔离复现实验数": 7,
+              "已执行代码单元数": 26
+            }
+          ],
+          "methods": [
+            {
+              "language": "python",
+              "code": "assert verification['status'] ==reproduction['status'] =='passed'\n# source-file checks, test cases and numeric replay are not additional market samples"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

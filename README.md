@@ -66,42 +66,59 @@ fixed targets is not proof that every dynamic annual policy is infeasible.
 The ideal asset-switching path is a mathematical relaxation, not advice.
 The Q2 study also records the exact-thirds annual baseline, pooled path
 quantiles, actual trade fractions and one explicitly selected severe episode.
-`docs/review_pending_design_contract.json` specifies a proposed next study of
-referral and nonresponse; it has not been executed or adopted as a service rule.
+The original proposed referral contract remains unchanged. Its executed
+post-crossing hold study has a separate protocol and archive: it preserves the
+first crossing and full-horizon exceedance event exactly, while subsequent loss
+severity and recovery can change. Missing adviser-response data are not replaced
+with invented returns or response times.
 
-To reproduce the completed development studies with the main requirements:
+The strict172 execution studies then compare unconditional calendar-fan growth,
+mean-risk and pathwise guards. A synthetic counterexample shows why a local
+Pareto comparison using an unconditional fan need not improve full-path risk.
+The stronger pathwise guard has a narrower support-dependent argument, but makes
+no additional hold decisions at any of five known fee rates. These are separate
+mathematical, numerical and development-data results.
+
+A finite-family learner selects a risk-adjusted trading price using training
+paths, with both a 10% empirical cap and a declared no-worse-than-reference
+training constraint. It improves growth and fees in the pooled outer-fold
+comparison, but B/C/E exceedances are **10/14/10 of 120**, versus 9/9/9 for annual
+restoration followed by post-crossing hold. Customer C therefore exceeds the
+10% reference frequency. Training admission does not establish future safety.
+Allowing moves among the three frozen targets does not help the predeclared
+training selector: all six contexts select the fixed-target controller. This
+does not show that every possible weight-update method is valueless.
+
+Current C comparisons, the exact-thirds annual benchmark and a severe episode
+selected by the original annual rule are under
+`results/model_review/q2_execution_development_v2/`. Known-fee sensitivity keeps
+the default-cost selected controllers frozen; it is recorded separately under
+`results/model_review/selected_controller_cost_stress_v1/`. None is a final
+service recommendation or submission report.
+
+To replay the seven execution studies without overwriting their evidence:
 
 ```sh
-python scripts/inspect_development_structure.py
-python scripts/run_risk_menu_research.py all
-python scripts/analyze_risk_menu_diagnostics.py all
-python scripts/run_simultaneous_risk_diagnostic.py all
-python scripts/run_nested_static_calibration.py
-python scripts/run_positive_asset_specification.py
-python scripts/audit_nested_static_calibration.py
-python scripts/audit_positive_asset_specification.py
-python scripts/analyze_bootstrap_oob.py
-python scripts/analyze_policy_independent_drawdown.py
-python scripts/audit_policy_independent_drawdown.py
-python scripts/run_fixed_execution_ablation.py
-python scripts/audit_finite_horizon_execution.py
-python scripts/audit_risk_tree_reference.py
-python scripts/run_finite_horizon_execution_prototype.py
-python scripts/check_fee_checkpoint_risk.py
-python scripts/run_temporal_order_diagnostic.py
-python scripts/diagnose_q2_severe_episode.py
-python scripts/summarize_q2_oof_equal_benchmark.py
-python scripts/audit_risk_menu_results.py
-python scripts/plot_development_structure.py
-python scripts/plot_risk_menu_research.py
-python scripts/plot_finite_horizon_execution.py
-python scripts/plot_nested_static_calibration.py
+python scripts/reproduce_execution_stage.py --output results/model_review/execution_stage_reproduction_new
 ```
 
-These runners write their dedicated research directories. The numerical cache
-is rebuilt from the allowed development paths and is excluded from Git; source,
-data-array and output fingerprints remain in the manifests. Do not use the old
-V1 `final` or `reproduce` command to select a revised model.
+This command runs each frozen runner in a disposable copy, compares its saved
+outputs exactly (named-array equality for NPZ ZIP metadata), then restores its
+original frozen archive in the copy before replaying its child. Parent manifest
+and audit timestamps are part of downstream hash contracts; do not rerun all
+stages consecutively over the original archives. A fresh receipt needs a new
+output directory. Same-source reproduction is distinct from the separately
+implemented accounting audits and from statistical validation.
+
+Earlier source stages are indexed in their manifests: static menus and
+bootstrap (`run_risk_menu_research.py`, `analyze_risk_menu_diagnostics.py`),
+nested/strict calibration (`run_nested_static_calibration.py`,
+`run_positive_asset_specification.py`), interval and simultaneous-risk studies,
+and the finite-horizon, fee and temporal-order diagnostic runners. The numerical
+cache is rebuilt only from allowed development paths and is excluded from Git;
+source, data-array and output fingerprints remain in the manifests. A new fit
+requires a new protocol/archive rather than replacement of frozen parents.
+Do not use V1 `final` or `reproduce` to select a revised model.
 
 Notebook authoring tools are optional and listed in `requirements-review.txt`.
 The readable HTML hides code cells; the notebook retains the code, outputs,
@@ -111,12 +128,22 @@ audits; they do not replace the primary procedure. The research preserves full
 path folds, records referrals as null outcomes, and distinguishes empirical
 calibration, numerical correctness and statistical evidence.
 
-The latest checkpoint passes **222 tests** and checks 26 saved manifests/audits
-against 205 distinct source, input and result files. See
+The latest checkpoint passes **353 tests** and checks 45 saved manifests/audits
+against 397 distinct source, input, result and execution-evidence files. All 73
+saved artifacts from seven execution studies also reproduce byte for byte in
+an isolated copy, without changing the frozen archives. See
 `results/model_review/research_checkpoint_v1/verification.json`; these are
 computational checks, not independent market observations or risk guarantees.
 AI assistance, including separately implemented numerical audits, is disclosed
 in `docs/DATA_NOTICE.md`.
+
+The next-stage proposal is `docs/dynamic_calibration_next_stage.json`. It has
+been reviewed but not executed: calibrate the complete learning procedure in
+inner whole-path folds, refitting its product menu as well as its controller.
+The proposed primary family keeps nine fixed-target price candidates; the
+18-controller update family would be a separately declared incremental study.
+More cautious admission may lead to more Review cases and still cannot turn
+reused development results into a new blind test.
 
 To rebuild the reading notebook in an activated project virtual environment:
 

@@ -1,0 +1,643 @@
+{
+  "completed_utc": "2026-10-17T15:08:32.124124+00:00",
+  "status": "passed",
+  "elapsed_seconds": 470.2814849169954,
+  "stages": [
+    {
+      "stage": "review_pending_execution_v1",
+      "seconds": 1.5044462919904618,
+      "artifact_comparisons": {
+        "client_path_metrics.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "paired_path_differences.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "yearly_trace.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "profile_summary.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "context_profile_summary.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "paired_profile_summary.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "paired_context_profile_summary.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "executed_paths.npz": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "execution_groups.json": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        }
+      },
+      "status": "passed"
+    },
+    {
+      "stage": "fan_rollout_execution_v1",
+      "seconds": 9.635742292011855,
+      "artifact_comparisons": {
+        "summary.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "accounting_checks.json": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "decision_gates.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "paired_summary.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "client_paths.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "contexts.json": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "actual_traces.npz": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        }
+      },
+      "status": "passed"
+    },
+    {
+      "stage": "pathwise_fan_execution_v1",
+      "seconds": 12.427415583006223,
+      "artifact_comparisons": {
+        "summary.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "accounting_checks.json": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "training_support_paths.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "training_traces.npz": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "decision_gates.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "paired_summary.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "client_paths.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "training_support_summary.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "contexts.json": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "actual_traces.npz": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        }
+      },
+      "status": "passed"
+    },
+    {
+      "stage": "pathwise_cost_stress_v1",
+      "seconds": 68.35944683299749,
+      "artifact_comparisons": {
+        "summary.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "accounting_checks.json": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "decision_changes_by_path.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "training_support_paths.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "training_traces.npz": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "decision_gates.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "paired_summary.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "client_paths.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "training_support_summary.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "decision_changes_summary.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "contexts.json": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "base_reproduction.json": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "actual_traces.npz": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        }
+      },
+      "status": "passed"
+    },
+    {
+      "stage": "risk_priced_fan_execution_v1",
+      "seconds": 90.22205250000115,
+      "artifact_comparisons": {
+        "training_candidate_paths.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "training_candidate_summary.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "client_paths.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "summary.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "paired_paths.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "paired_summary.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "decision_gates.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "coverage.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "actual_traces.npz": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "context_selections.json": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "accounting_checks.json": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        }
+      },
+      "status": "passed"
+    },
+    {
+      "stage": "bounded_target_updates_v1",
+      "seconds": 244.6151122500014,
+      "artifact_comparisons": {
+        "client_paths.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "summary.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "paired_paths.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "paired_summary.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "training_candidate_paths.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "training_candidate_summary.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "decision_gates.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "actual_traces.npz": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "context_selections.json": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "accounting_checks.json": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        }
+      },
+      "status": "passed"
+    },
+    {
+      "stage": "selected_controller_cost_stress_v1",
+      "seconds": 41.98754304199247,
+      "artifact_comparisons": {
+        "frozen_controller_plan.json": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "summary.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "policy_contrasts_paths.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "paired_vs_default_paths.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "paired_vs_default_summary.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "parent_catalog_metadata.json": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "decision_changes_by_path.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "decision_gates.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "client_paths.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "decision_changes_summary.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "policy_contrasts_summary.csv": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "base_reproduction.json": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        },
+        "actual_traces.npz": {
+          "comparison": "byte_exact",
+          "arrays": 0
+        }
+      },
+      "status": "passed"
+    }
+  ],
+  "source_and_artifact_sha256_start": {
+    "data/SafeInvest_Synthetic_Data.csv": "def0177704bf6cb98cec6da325b34208750d988f6ad97ec4a706a0d39e6f82c0",
+    "docs/bounded_target_update_protocol.json": "e33f7401d3c631c1c155e6f0639ffabb4c3190b4b32ebb8e9a42f541a4f6e591",
+    "docs/fan_rollout_execution_protocol.json": "dece4b446f8bd20ee5590ffc1188b13ddd57f19631a21e7b362ad800df030cd3",
+    "docs/fan_rollout_mathematical_review.json": "499754a2265573b9753568acbff06618cc969d79e9c0a5dee81d9247d9a3d046",
+    "docs/pathwise_cost_stress_protocol.json": "1f915b3633efac48dc5b551aabf463e807d7a2e7b8eb002ffd1cc7793dff3de6",
+    "docs/pathwise_fan_execution_protocol.json": "c2417e0c812fa9fc870eb3915012fc7556cd18f29238941a69bc9a5db617197c",
+    "docs/positive_asset_specification_protocol.json": "ff23c3fcdad54d83a2896a11459db1cec3e4f48fe6352d994139e4c9ff79475c",
+    "docs/review_pending_design_contract.json": "27516c993a31ea5eec2fa80559f2caddf3a9ce72cb08e7e0bf4d058160109200",
+    "docs/review_pending_execution_protocol.json": "8e85cff91a0f0459b0b67d5e76d3f87c3988b89992251fcbf067393f6776a559",
+    "docs/risk_menu_development_protocol.json": "6a57f3dc3f5a5850af2d8a1b2db597997edbd6054e61443d7ebfeb3fd8e37d51",
+    "docs/risk_priced_fan_execution_protocol.json": "67051393a4f56bc6ae754795b5b47e38b6a01b57f9607ae3fe3374540df93bb6",
+    "docs/selected_controller_cost_stress_protocol.json": "9d2e62ddf6dd14ea5b21b41142b2b4e75a3d20296f7a948b2255cf459e7e3672",
+    "research/experimental_execution/bounded_target_update.py": "5b237da1d3864818d52a62c472089453d65837ec96c3ecb5558538ecea201282",
+    "research/experimental_execution/fan_rollout.py": "d195d721c895700925e9b24c91640c59737fe4eb542272376d2de78ce62fe1ba",
+    "research/experimental_execution/pathwise_fan_rollout.py": "1970d04e4af3fbf7ab474857e2beb970f7fbb2a0e100bad8bf2c176a45e6ba79",
+    "research/experimental_execution/review_pending.py": "9038d420c9ea48df068c58a6abee3f993ac414f85dd0290cb56e3d703aae3894",
+    "research/experimental_execution/risk_priced_fan_rollout.py": "2a935cfe1d039f6a020e104fe92aa659bb92aac2a0b3bed2ef767437015ba472",
+    "research/safeinvest_research/metrics.py": "7ec8e4821ce284351a3d8ed7071c687fdf7d6e4cfd225f72cad1d09d623eb008",
+    "results/model_review/bounded_target_updates_v1/accounting_checks.json": "f71ce51072064b5ebb884b8ee8610d5513a310d396c4d38ca9cf2a47e202b4da",
+    "results/model_review/bounded_target_updates_v1/actual_traces.npz": "3b152955357bd732808314903a1d9c3cdd64753f5d734325e85cd40c54e43d70",
+    "results/model_review/bounded_target_updates_v1/client_paths.csv": "c7487cfe3283fc60528468a0232b65a36c5b1bd529971ea75b906beac50feed3",
+    "results/model_review/bounded_target_updates_v1/context_selections.json": "d71135d258ce8eed1ce60846e36c3b5be677766c1c4ca072d30ef09823caa0c9",
+    "results/model_review/bounded_target_updates_v1/decision_gates.csv": "c7079cd0995d40bc590ba1214be5a87f48cd0778e12742a1287f07ac7f1b6fd6",
+    "results/model_review/bounded_target_updates_v1/independent_audit.json": "2d9dea5279048d92846b2e54006573ac06be241fd9eaa22703e3e35cd1be410d",
+    "results/model_review/bounded_target_updates_v1/manifest.json": "4efb3c3af26b78a940a7f31fc0bf8ed661879c80bbe041ca234b7a161480b155",
+    "results/model_review/bounded_target_updates_v1/paired_paths.csv": "6f33d3188f30bda766ff2125e40bb4904d340c1edc1544922163c1188b265856",
+    "results/model_review/bounded_target_updates_v1/paired_summary.csv": "28e257eb659d0f74bdc06f761688565257af9f0fd9af8653ed7ca3595f49c687",
+    "results/model_review/bounded_target_updates_v1/summary.csv": "11f64c60bd4570cff25de6aafdcbf1cc3ec87d520cd5ac119dcf74bda4f81c20",
+    "results/model_review/bounded_target_updates_v1/training_candidate_paths.csv": "dc63046c9e7e15e99d0ac3e7820f7095d3319395800a274d698a937900421f1c",
+    "results/model_review/bounded_target_updates_v1/training_candidate_summary.csv": "5cd94fc872bbe6283048e2a2eb41c5d6f8035cee9569c65c70cb183e8da6b086",
+    "results/model_review/fan_rollout_execution_v1/accounting_checks.json": "e3d4e4ace9e787206467648dc97504750b12082579c5391c672cf217a2dcd78c",
+    "results/model_review/fan_rollout_execution_v1/actual_traces.npz": "23c08dd22f458c843e496a59a82dda478087872d138beaed0528123b54a1289b",
+    "results/model_review/fan_rollout_execution_v1/client_paths.csv": "4999e15dc10eda3e10f1432c8d234a1c2305d9e4b5e032dea5cc42d7239bde3a",
+    "results/model_review/fan_rollout_execution_v1/contexts.json": "dc4386ccba8a257fb97020988b1ed7df69db4155ad8477e7286b62350ef8c0ea",
+    "results/model_review/fan_rollout_execution_v1/decision_gates.csv": "9a918d748ebf35ae6603a8c15637fbcb95189a74f0fda969f28501e14f146e67",
+    "results/model_review/fan_rollout_execution_v1/independent_audit.json": "4999cb28ed86e4de84fc54be4359dbf77ee6fc0abf6339fc8c36f3d89cebcc9a",
+    "results/model_review/fan_rollout_execution_v1/manifest.json": "4027d243ae859e4e306d5b0846df459702783c5705568cbe3e6c1e04f55803e6",
+    "results/model_review/fan_rollout_execution_v1/paired_summary.csv": "b17239adbd0afd5e4d934c5af360996c8e4bc155ec052d6a695bb15db7517ccc",
+    "results/model_review/fan_rollout_execution_v1/summary.csv": "36180abf3dd9fdba018757b22799e9c6cf0a97234935eb33a060195bdc09bf44",
+    "results/model_review/pathwise_cost_stress_v1/accounting_checks.json": "732df5f2bb96bf16076c58defd4c203afdbf47672fe8309a079c39337881caf4",
+    "results/model_review/pathwise_cost_stress_v1/actual_traces.npz": "36a099e82181732a90d62cf3c48ecd86e2e490768cdc7833ac3198eccf315459",
+    "results/model_review/pathwise_cost_stress_v1/base_reproduction.json": "d5a86ec32885dba0a6f6f284e6d6457fe3a6b29c5f6480552c2dcfc487175f52",
+    "results/model_review/pathwise_cost_stress_v1/client_paths.csv": "92c176bde8302716cda3246470f0118d032369f14067da56933029841d175d61",
+    "results/model_review/pathwise_cost_stress_v1/contexts.json": "d13450e05051c02d2bf54a4edfc77ef01d880cee0c78238cc3d7204a6ab27aa1",
+    "results/model_review/pathwise_cost_stress_v1/decision_changes_by_path.csv": "aced235f6240de0a78ba50ab2aec83f201dd13655e1f0aa8f1046a2bee273ae2",
+    "results/model_review/pathwise_cost_stress_v1/decision_changes_summary.csv": "c68ac0fdc17993c4d8b803448c68279713016c4b9f4c7ab1b29c09eee76154b9",
+    "results/model_review/pathwise_cost_stress_v1/decision_gates.csv": "242b8f994cb09e921b4e5297e7ac211faf47639a8daafe9cd4509784510c13a0",
+    "results/model_review/pathwise_cost_stress_v1/independent_audit.json": "df25cf755b2122c588e59231fcbf7e51a10ec8a77a010c796a9f3bb9c240178c",
+    "results/model_review/pathwise_cost_stress_v1/manifest.json": "f6a73388689597aa60a6cbcc10d4117f99f371a101282e8dc97ffc431be528f8",
+    "results/model_review/pathwise_cost_stress_v1/paired_summary.csv": "1d83b7dcf1e4dd5732310d43fe1a245c1c7e70f5a716e7a196defd2df4713922",
+    "results/model_review/pathwise_cost_stress_v1/summary.csv": "1ecd424af0d4a18443daa3ea28c69069ad509e0665d57795c51e93757b46b15b",
+    "results/model_review/pathwise_cost_stress_v1/training_support_paths.csv": "c9a2643f4ded5967240c795f6e795122ea51c04012f8bc91fad6d8270c151d0e",
+    "results/model_review/pathwise_cost_stress_v1/training_support_summary.csv": "aef65e9484ec9c92937098acdc56c797db739ce24c2cb08f26eb39afdc74e4e6",
+    "results/model_review/pathwise_cost_stress_v1/training_traces.npz": "5a95b16bba08264d80df604ad281aedb929b50e16a8d097eddaa620806343d74",
+    "results/model_review/pathwise_fan_execution_v1/accounting_checks.json": "6f2c638420ec60dd31cda1bf000590a6004e706ca6a18e32f3d132f683f23b0b",
+    "results/model_review/pathwise_fan_execution_v1/actual_traces.npz": "1a9caf21d6004f9c9d870618b7bbc1c9e2db88d2aefcf4988536c52e2372f8fe",
+    "results/model_review/pathwise_fan_execution_v1/client_paths.csv": "409d22c235fac614e4ee41a3e554f0901ed89355ce5083c167e3921d1f87a797",
+    "results/model_review/pathwise_fan_execution_v1/contexts.json": "af80e209bbd673a5c3c125814d6eb5839d2b6377d4fcae7f7fc34863ce4037d8",
+    "results/model_review/pathwise_fan_execution_v1/decision_gates.csv": "9845e7f40ace93050137cb09bd4d5e8d6eb63a41a874abaf2f8f28d7b71955ba",
+    "results/model_review/pathwise_fan_execution_v1/independent_audit.json": "fa923f39031942598f6d886b76ab7484ec69ebd67955acb7bf6a5b140847006b",
+    "results/model_review/pathwise_fan_execution_v1/manifest.json": "9d95187a921fdc13644c61df1178c39835133d42da925e863a80b091793b3cc7",
+    "results/model_review/pathwise_fan_execution_v1/paired_summary.csv": "b453a614bcadb40b03ffb19210f6f332761259573c887b1afd403ae0a45ac03e",
+    "results/model_review/pathwise_fan_execution_v1/summary.csv": "62cdf5296b78d963390a8cbd19f48f879ed414f250198b035653b70bc86c1ec4",
+    "results/model_review/pathwise_fan_execution_v1/training_support_paths.csv": "924ab01561d717fafb3a60562c4d21575b84dd57f43d8a6e78c388099b727a86",
+    "results/model_review/pathwise_fan_execution_v1/training_support_summary.csv": "e2d20c34444967742b03e2b14abf2d31910aa6bca5a5da5fed6cde345794c1f6",
+    "results/model_review/pathwise_fan_execution_v1/training_traces.npz": "10e6d8f6b2b5f4f18256d6e5404e92840207251fa2dc8ef083b1c58386e8f096",
+    "results/model_review/positive_asset_specification_v1/candidate_mapping.json": "c6221636a667536cbf1e4dbaa132c4cca1b00efb692dc180f5fc189655a744d5",
+    "results/model_review/positive_asset_specification_v1/manifest.json": "da65841decff7d50ec7baa8fe80c4e6593112ea0c7d083affe2a0dd68f2f306e",
+    "results/model_review/positive_asset_specification_v1/nested_context_refits.json": "d13450e05051c02d2bf54a4edfc77ef01d880cee0c78238cc3d7204a6ab27aa1",
+    "results/model_review/positive_asset_specification_v1/nested_full_paths.csv": "bb72ae6b72ea72da01f800fd0f9ae0139046c8684e67374cc0966fb849d52516",
+    "results/model_review/positive_asset_specification_v1/nested_outer_oof_paths.csv": "4a4a9dba68e824b3dc13161391433be25ec9eb5fc873e4bdc6548eb23ab67c8f",
+    "results/model_review/review_pending_execution_v1/client_path_metrics.csv": "748a573bcadbdcf569c6966117ac4621ad921ed2456a1ed39054b83ef7b1d2b1",
+    "results/model_review/review_pending_execution_v1/context_profile_summary.csv": "85025a156b4c726648fc6343123f80b0519bdec75d8c85226b221520ba2d09a7",
+    "results/model_review/review_pending_execution_v1/executed_paths.npz": "80070ac1bf9d7f0c74fccf1b2e458d5c32299193e38d5e8eca250529f50391a2",
+    "results/model_review/review_pending_execution_v1/execution_groups.json": "ca9ca89a436501da17f26807395cc04df493bdfb346b4d206951f13761e77a60",
+    "results/model_review/review_pending_execution_v1/independent_audit.json": "3e8f8fb523d2fb4fc8bbb9bbb1c35a27ff7031c04944006f37692e9fd0b68558",
+    "results/model_review/review_pending_execution_v1/manifest.json": "2c1221f819ff8b273a96cd773aebeca5a475218de77c3a9c92ad9a1285c9d742",
+    "results/model_review/review_pending_execution_v1/paired_context_profile_summary.csv": "67c63d1601a16f1334e020b31762531fa6b0603b9176bf3ce674b49024eb21e0",
+    "results/model_review/review_pending_execution_v1/paired_path_differences.csv": "de83329486d25b08a70dcc3f85bbf3372c9fd811f193a71bf55363c2f8b2b165",
+    "results/model_review/review_pending_execution_v1/paired_profile_summary.csv": "84c90abee3dd327174dbe2406f9cb9c39b395319d5c223611a7a8489012ff048",
+    "results/model_review/review_pending_execution_v1/profile_summary.csv": "6b9fb28922c84b848a7c69075737d8d637f32fa1eaf7e7480ca20aed70e6b443",
+    "results/model_review/review_pending_execution_v1/yearly_trace.csv": "20dd60d52923a31ab80d382b98ecbef656fefdb499277bc06e45973216b62174",
+    "results/model_review/risk_menu_v1/cache/step_0500__cost_002500.json": "225a36e8585bf6c5f310979193264a84c88ce98170d60c0d04665abb6bc6b804",
+    "results/model_review/risk_menu_v1/cache/step_0500__cost_002500.npz": "558b547574265a6fce5befa6803a55b9d7cbd8cc01a66603d38e080c880d97bb",
+    "results/model_review/risk_priced_fan_execution_v1/accounting_checks.json": "0ee9498c2e9ca2248810173b95d68f3519d92d57f0f915c9da8905e752c63480",
+    "results/model_review/risk_priced_fan_execution_v1/actual_traces.npz": "4e5547b1e563b9562396fc6663ccbaaf7d7ca1a955d44a5337329784a676e5c1",
+    "results/model_review/risk_priced_fan_execution_v1/client_paths.csv": "660b2d05831a39dc179c4555f46a146ffa9c79331cd6bf9d35ebaad1e774a46e",
+    "results/model_review/risk_priced_fan_execution_v1/context_selections.json": "281fab47e231ab0cd8ebd42d95f47301443e1f3393962b51c10c13a7d06b7a65",
+    "results/model_review/risk_priced_fan_execution_v1/coverage.csv": "b42170476d51071682e22f12913c5140aeb46be312aa8c3f3f1d085d49949850",
+    "results/model_review/risk_priced_fan_execution_v1/decision_gates.csv": "62f30dae18693465e14a89e4dc0e769884beb42304c2df8776d3dea946ba0bfb",
+    "results/model_review/risk_priced_fan_execution_v1/independent_audit.json": "02c7ac0bf810155c0cf06f927e509620629ce34d508e7bd6d313a6ad53cfdd20",
+    "results/model_review/risk_priced_fan_execution_v1/manifest.json": "a3e5dc61ba2a5b9df1e0b3976f69f25fc5823a7d5f52d1dba344eadd7b0bc321",
+    "results/model_review/risk_priced_fan_execution_v1/paired_paths.csv": "55a675963c149d71d65d1a80b5730c865cd9bd559e807dfc00a4ac67444e67dd",
+    "results/model_review/risk_priced_fan_execution_v1/paired_summary.csv": "672508d10ece65a6164bfd07de4bc273bfac70ef1a10eee1b41c30093cd9b4b9",
+    "results/model_review/risk_priced_fan_execution_v1/summary.csv": "f30f543c7f2c27dd88887323f47a7f66e451341c9369f3e158061099a362560d",
+    "results/model_review/risk_priced_fan_execution_v1/training_candidate_paths.csv": "6969a27d62df0c8b10a439a049e34a358fe9f3dc0ed9d8a14f1823b7e3bc0750",
+    "results/model_review/risk_priced_fan_execution_v1/training_candidate_summary.csv": "0920ed3e86b8b59d75bc446ad3675ba66eaa7f1b0d703afd8b74848a061096ac",
+    "results/model_review/selected_controller_cost_stress_v1/actual_traces.npz": "e5752ac65ca76b7de556b00169ddbd81c2a5ea5a3e0a3ee166573c400600d2f3",
+    "results/model_review/selected_controller_cost_stress_v1/base_reproduction.json": "07ab1865e79f4743cdabaf64f4248eff18fd67bf9dcf8b98096f1f53d6986e02",
+    "results/model_review/selected_controller_cost_stress_v1/client_paths.csv": "849ff6e9ee88ef4ae7345380aaf92d9f5f3f83f0494f2c97e559f4b032b06018",
+    "results/model_review/selected_controller_cost_stress_v1/decision_changes_by_path.csv": "3913e17d1e977e4cf6e59aba949c3511f606e6d8029d6fa98230c2b3f6dcf161",
+    "results/model_review/selected_controller_cost_stress_v1/decision_changes_summary.csv": "7b4b832b69b8fba1f0c79726f26fd6c6cfd4ebfae40155d25e8c88198aabc812",
+    "results/model_review/selected_controller_cost_stress_v1/decision_gates.csv": "0a801f79238ab070eea2fdd23059d1174614405136bf0e1fca07487df4b5bdc0",
+    "results/model_review/selected_controller_cost_stress_v1/frozen_controller_plan.json": "bf4c2922e2c39adf73d04dbf7c5ac4916cc061baff746826e4877a0f41b95f3e",
+    "results/model_review/selected_controller_cost_stress_v1/independent_audit.json": "bd123e806afe1785ad49942d1827e99d8949c818d2b8c4d04b7d6f2f2763bb8c",
+    "results/model_review/selected_controller_cost_stress_v1/manifest.json": "f9f31bae6ca085c37ccfaf7df5fc05da7827c294b1037d59158b7080d1254c8b",
+    "results/model_review/selected_controller_cost_stress_v1/paired_vs_default_paths.csv": "9ff6abc5f851a8463e59afbfd1a0983b06bd5fda0171dbfb89937aff2ffe27ad",
+    "results/model_review/selected_controller_cost_stress_v1/paired_vs_default_summary.csv": "1c0597cc9ff0b3cac5bd5a60aecf2cbbb65aee7bcda20139e51a2f9861ea7735",
+    "results/model_review/selected_controller_cost_stress_v1/parent_catalog_metadata.json": "af858a51ef11918994a757e54055dabb2ab5c90dde84d8462c4520f17750b2b8",
+    "results/model_review/selected_controller_cost_stress_v1/policy_contrasts_paths.csv": "65fbb83d988589e0a97594a81fa9dcc771523e97d0d123d951967ffcf2567ac6",
+    "results/model_review/selected_controller_cost_stress_v1/policy_contrasts_summary.csv": "2131e63b99feb55feaaada3d779365fd23f23d77cabb3349943d58dd1f57b904",
+    "results/model_review/selected_controller_cost_stress_v1/summary.csv": "e8c9008e753ccb3c977aec1ee9c6edcf85f0c07a86dbcb0f68dc91114c0d6b8f",
+    "scripts/audit_bounded_target_updates.py": "7130354a02a9200e6736dc6ec9d1e2a789bcde3dbb6cda63a95c366849942760",
+    "scripts/audit_fan_rollout_execution.py": "9f9d4a274e3be531040193e1654ec6bdf74733ad5204937b8a8d8195d02940fb",
+    "scripts/audit_pathwise_cost_stress.py": "7f072bd6e58e639dcb344fc436dec3f64852f21a93de79e16c9363bf88fb7367",
+    "scripts/audit_pathwise_fan_execution.py": "18238d8491477325be415311590b3f2f72de2046fe51b693035d08c513f8e8a9",
+    "scripts/audit_review_pending_execution.py": "9c208ce69a03f1a13460908ec04b39a8dc232eacbb8882b5bdef3aafae60a264",
+    "scripts/audit_risk_priced_fan_execution.py": "e15aa1b6204a919eacfc222ce98990be8606536624157f6bec48f46148ba9e90",
+    "scripts/audit_selected_controller_cost_stress.py": "72c26673bd139e1aefaf508e4d26c75982329b28f3def3cd806bd93f713fa2b8",
+    "scripts/reproduce_execution_stage.py": "e1fe9bd81811db66237e5566c53006f64992103db49088bcc33ee6e385369294",
+    "scripts/run_bounded_target_updates.py": "f0f893070c028e2be05a37936195806269d8aaeba32a75b9660b72ba3113f8ee",
+    "scripts/run_fan_rollout_execution.py": "100fe1fd5f9e3718cbf7e804e4dca736c81b407bc3c93a1a0eb24d47a02732e6",
+    "scripts/run_pathwise_cost_stress.py": "3044511db5d8cf34a7b5a4b231178664086b83ea73ebc7ae7af5341fd03eb746",
+    "scripts/run_pathwise_fan_execution.py": "6b55b72fba513092986f07d336c15af2b34670093386f8bc5ccf96e29118a92b",
+    "scripts/run_review_pending_execution.py": "19a39b08eba906bbbe6c8457e1ffdc43acda6d51ecc201a3c18ff9a713f992d5",
+    "scripts/run_risk_priced_fan_execution.py": "68b34a4b0592f68327c09200b61dc8d980e8fbea7e282518de8164140ffc6bab",
+    "scripts/run_selected_controller_cost_stress.py": "fe96ab6d0f400bcc22e656bc5f3d4449e04beaf713c90936537b4863d4f915b5",
+    "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a",
+    "src/safeinvest/data.py": "70e511fd05c6e23fd6b8a72f1dc165426fc77a5eb4dbd8a3c13b839bb305a75f",
+    "tests/test_bounded_target_update.py": "564652c1bb013b57c3527863562b34df03d34052f177e0173462d8fc001de865",
+    "tests/test_bounded_target_updates.py": "61926ecc0e4b420db3940fc99f6aa04ee8b0d34f9fff6002191f443a55f7267e",
+    "tests/test_execution_stage_reproduction.py": "4454900f21c4c052b48adc57cfa824662fdea2614cf826a05d1c1f9b491bd6fd",
+    "tests/test_pathwise_cost_stress.py": "3805180789ce37d3ab8a6b0859a7cbda668ad11a189b57d90a0f1fc696bf5924",
+    "tests/test_review_pending_execution.py": "c5b990fc13e86b991f1ed2f70b0304a48ec027f0423db6d5cf504b55344ae431",
+    "tests/test_risk_priced_fan_execution.py": "9b413e2325d6f90223621edc2d99af62d1001f91035eda5c393e974d8b461943",
+    "tests/test_risk_priced_fan_rollout.py": "043bdc4f7f3cec0e9edec85250e3d6c3a05a90093dc2dc596f9c0ac17915aa0c",
+    "tests/test_selected_controller_cost_stress.py": "6f30119b2b48052271ff52dd14d157a8b292a14f51819b57e4d047389bc8098b"
+  },
+  "source_and_artifact_sha256_end": {
+    "data/SafeInvest_Synthetic_Data.csv": "def0177704bf6cb98cec6da325b34208750d988f6ad97ec4a706a0d39e6f82c0",
+    "docs/bounded_target_update_protocol.json": "e33f7401d3c631c1c155e6f0639ffabb4c3190b4b32ebb8e9a42f541a4f6e591",
+    "docs/fan_rollout_execution_protocol.json": "dece4b446f8bd20ee5590ffc1188b13ddd57f19631a21e7b362ad800df030cd3",
+    "docs/fan_rollout_mathematical_review.json": "499754a2265573b9753568acbff06618cc969d79e9c0a5dee81d9247d9a3d046",
+    "docs/pathwise_cost_stress_protocol.json": "1f915b3633efac48dc5b551aabf463e807d7a2e7b8eb002ffd1cc7793dff3de6",
+    "docs/pathwise_fan_execution_protocol.json": "c2417e0c812fa9fc870eb3915012fc7556cd18f29238941a69bc9a5db617197c",
+    "docs/positive_asset_specification_protocol.json": "ff23c3fcdad54d83a2896a11459db1cec3e4f48fe6352d994139e4c9ff79475c",
+    "docs/review_pending_design_contract.json": "27516c993a31ea5eec2fa80559f2caddf3a9ce72cb08e7e0bf4d058160109200",
+    "docs/review_pending_execution_protocol.json": "8e85cff91a0f0459b0b67d5e76d3f87c3988b89992251fcbf067393f6776a559",
+    "docs/risk_menu_development_protocol.json": "6a57f3dc3f5a5850af2d8a1b2db597997edbd6054e61443d7ebfeb3fd8e37d51",
+    "docs/risk_priced_fan_execution_protocol.json": "67051393a4f56bc6ae754795b5b47e38b6a01b57f9607ae3fe3374540df93bb6",
+    "docs/selected_controller_cost_stress_protocol.json": "9d2e62ddf6dd14ea5b21b41142b2b4e75a3d20296f7a948b2255cf459e7e3672",
+    "research/experimental_execution/bounded_target_update.py": "5b237da1d3864818d52a62c472089453d65837ec96c3ecb5558538ecea201282",
+    "research/experimental_execution/fan_rollout.py": "d195d721c895700925e9b24c91640c59737fe4eb542272376d2de78ce62fe1ba",
+    "research/experimental_execution/pathwise_fan_rollout.py": "1970d04e4af3fbf7ab474857e2beb970f7fbb2a0e100bad8bf2c176a45e6ba79",
+    "research/experimental_execution/review_pending.py": "9038d420c9ea48df068c58a6abee3f993ac414f85dd0290cb56e3d703aae3894",
+    "research/experimental_execution/risk_priced_fan_rollout.py": "2a935cfe1d039f6a020e104fe92aa659bb92aac2a0b3bed2ef767437015ba472",
+    "research/safeinvest_research/metrics.py": "7ec8e4821ce284351a3d8ed7071c687fdf7d6e4cfd225f72cad1d09d623eb008",
+    "results/model_review/bounded_target_updates_v1/accounting_checks.json": "f71ce51072064b5ebb884b8ee8610d5513a310d396c4d38ca9cf2a47e202b4da",
+    "results/model_review/bounded_target_updates_v1/actual_traces.npz": "3b152955357bd732808314903a1d9c3cdd64753f5d734325e85cd40c54e43d70",
+    "results/model_review/bounded_target_updates_v1/client_paths.csv": "c7487cfe3283fc60528468a0232b65a36c5b1bd529971ea75b906beac50feed3",
+    "results/model_review/bounded_target_updates_v1/context_selections.json": "d71135d258ce8eed1ce60846e36c3b5be677766c1c4ca072d30ef09823caa0c9",
+    "results/model_review/bounded_target_updates_v1/decision_gates.csv": "c7079cd0995d40bc590ba1214be5a87f48cd0778e12742a1287f07ac7f1b6fd6",
+    "results/model_review/bounded_target_updates_v1/independent_audit.json": "2d9dea5279048d92846b2e54006573ac06be241fd9eaa22703e3e35cd1be410d",
+    "results/model_review/bounded_target_updates_v1/manifest.json": "4efb3c3af26b78a940a7f31fc0bf8ed661879c80bbe041ca234b7a161480b155",
+    "results/model_review/bounded_target_updates_v1/paired_paths.csv": "6f33d3188f30bda766ff2125e40bb4904d340c1edc1544922163c1188b265856",
+    "results/model_review/bounded_target_updates_v1/paired_summary.csv": "28e257eb659d0f74bdc06f761688565257af9f0fd9af8653ed7ca3595f49c687",
+    "results/model_review/bounded_target_updates_v1/summary.csv": "11f64c60bd4570cff25de6aafdcbf1cc3ec87d520cd5ac119dcf74bda4f81c20",
+    "results/model_review/bounded_target_updates_v1/training_candidate_paths.csv": "dc63046c9e7e15e99d0ac3e7820f7095d3319395800a274d698a937900421f1c",
+    "results/model_review/bounded_target_updates_v1/training_candidate_summary.csv": "5cd94fc872bbe6283048e2a2eb41c5d6f8035cee9569c65c70cb183e8da6b086",
+    "results/model_review/fan_rollout_execution_v1/accounting_checks.json": "e3d4e4ace9e787206467648dc97504750b12082579c5391c672cf217a2dcd78c",
+    "results/model_review/fan_rollout_execution_v1/actual_traces.npz": "23c08dd22f458c843e496a59a82dda478087872d138beaed0528123b54a1289b",
+    "results/model_review/fan_rollout_execution_v1/client_paths.csv": "4999e15dc10eda3e10f1432c8d234a1c2305d9e4b5e032dea5cc42d7239bde3a",
+    "results/model_review/fan_rollout_execution_v1/contexts.json": "dc4386ccba8a257fb97020988b1ed7df69db4155ad8477e7286b62350ef8c0ea",
+    "results/model_review/fan_rollout_execution_v1/decision_gates.csv": "9a918d748ebf35ae6603a8c15637fbcb95189a74f0fda969f28501e14f146e67",
+    "results/model_review/fan_rollout_execution_v1/independent_audit.json": "4999cb28ed86e4de84fc54be4359dbf77ee6fc0abf6339fc8c36f3d89cebcc9a",
+    "results/model_review/fan_rollout_execution_v1/manifest.json": "4027d243ae859e4e306d5b0846df459702783c5705568cbe3e6c1e04f55803e6",
+    "results/model_review/fan_rollout_execution_v1/paired_summary.csv": "b17239adbd0afd5e4d934c5af360996c8e4bc155ec052d6a695bb15db7517ccc",
+    "results/model_review/fan_rollout_execution_v1/summary.csv": "36180abf3dd9fdba018757b22799e9c6cf0a97234935eb33a060195bdc09bf44",
+    "results/model_review/pathwise_cost_stress_v1/accounting_checks.json": "732df5f2bb96bf16076c58defd4c203afdbf47672fe8309a079c39337881caf4",
+    "results/model_review/pathwise_cost_stress_v1/actual_traces.npz": "36a099e82181732a90d62cf3c48ecd86e2e490768cdc7833ac3198eccf315459",
+    "results/model_review/pathwise_cost_stress_v1/base_reproduction.json": "d5a86ec32885dba0a6f6f284e6d6457fe3a6b29c5f6480552c2dcfc487175f52",
+    "results/model_review/pathwise_cost_stress_v1/client_paths.csv": "92c176bde8302716cda3246470f0118d032369f14067da56933029841d175d61",
+    "results/model_review/pathwise_cost_stress_v1/contexts.json": "d13450e05051c02d2bf54a4edfc77ef01d880cee0c78238cc3d7204a6ab27aa1",
+    "results/model_review/pathwise_cost_stress_v1/decision_changes_by_path.csv": "aced235f6240de0a78ba50ab2aec83f201dd13655e1f0aa8f1046a2bee273ae2",
+    "results/model_review/pathwise_cost_stress_v1/decision_changes_summary.csv": "c68ac0fdc17993c4d8b803448c68279713016c4b9f4c7ab1b29c09eee76154b9",
+    "results/model_review/pathwise_cost_stress_v1/decision_gates.csv": "242b8f994cb09e921b4e5297e7ac211faf47639a8daafe9cd4509784510c13a0",
+    "results/model_review/pathwise_cost_stress_v1/independent_audit.json": "df25cf755b2122c588e59231fcbf7e51a10ec8a77a010c796a9f3bb9c240178c",
+    "results/model_review/pathwise_cost_stress_v1/manifest.json": "f6a73388689597aa60a6cbcc10d4117f99f371a101282e8dc97ffc431be528f8",
+    "results/model_review/pathwise_cost_stress_v1/paired_summary.csv": "1d83b7dcf1e4dd5732310d43fe1a245c1c7e70f5a716e7a196defd2df4713922",
+    "results/model_review/pathwise_cost_stress_v1/summary.csv": "1ecd424af0d4a18443daa3ea28c69069ad509e0665d57795c51e93757b46b15b",
+    "results/model_review/pathwise_cost_stress_v1/training_support_paths.csv": "c9a2643f4ded5967240c795f6e795122ea51c04012f8bc91fad6d8270c151d0e",
+    "results/model_review/pathwise_cost_stress_v1/training_support_summary.csv": "aef65e9484ec9c92937098acdc56c797db739ce24c2cb08f26eb39afdc74e4e6",
+    "results/model_review/pathwise_cost_stress_v1/training_traces.npz": "5a95b16bba08264d80df604ad281aedb929b50e16a8d097eddaa620806343d74",
+    "results/model_review/pathwise_fan_execution_v1/accounting_checks.json": "6f2c638420ec60dd31cda1bf000590a6004e706ca6a18e32f3d132f683f23b0b",
+    "results/model_review/pathwise_fan_execution_v1/actual_traces.npz": "1a9caf21d6004f9c9d870618b7bbc1c9e2db88d2aefcf4988536c52e2372f8fe",
+    "results/model_review/pathwise_fan_execution_v1/client_paths.csv": "409d22c235fac614e4ee41a3e554f0901ed89355ce5083c167e3921d1f87a797",
+    "results/model_review/pathwise_fan_execution_v1/contexts.json": "af80e209bbd673a5c3c125814d6eb5839d2b6377d4fcae7f7fc34863ce4037d8",
+    "results/model_review/pathwise_fan_execution_v1/decision_gates.csv": "9845e7f40ace93050137cb09bd4d5e8d6eb63a41a874abaf2f8f28d7b71955ba",
+    "results/model_review/pathwise_fan_execution_v1/independent_audit.json": "fa923f39031942598f6d886b76ab7484ec69ebd67955acb7bf6a5b140847006b",
+    "results/model_review/pathwise_fan_execution_v1/manifest.json": "9d95187a921fdc13644c61df1178c39835133d42da925e863a80b091793b3cc7",
+    "results/model_review/pathwise_fan_execution_v1/paired_summary.csv": "b453a614bcadb40b03ffb19210f6f332761259573c887b1afd403ae0a45ac03e",
+    "results/model_review/pathwise_fan_execution_v1/summary.csv": "62cdf5296b78d963390a8cbd19f48f879ed414f250198b035653b70bc86c1ec4",
+    "results/model_review/pathwise_fan_execution_v1/training_support_paths.csv": "924ab01561d717fafb3a60562c4d21575b84dd57f43d8a6e78c388099b727a86",
+    "results/model_review/pathwise_fan_execution_v1/training_support_summary.csv": "e2d20c34444967742b03e2b14abf2d31910aa6bca5a5da5fed6cde345794c1f6",
+    "results/model_review/pathwise_fan_execution_v1/training_traces.npz": "10e6d8f6b2b5f4f18256d6e5404e92840207251fa2dc8ef083b1c58386e8f096",
+    "results/model_review/positive_asset_specification_v1/candidate_mapping.json": "c6221636a667536cbf1e4dbaa132c4cca1b00efb692dc180f5fc189655a744d5",
+    "results/model_review/positive_asset_specification_v1/manifest.json": "da65841decff7d50ec7baa8fe80c4e6593112ea0c7d083affe2a0dd68f2f306e",
+    "results/model_review/positive_asset_specification_v1/nested_context_refits.json": "d13450e05051c02d2bf54a4edfc77ef01d880cee0c78238cc3d7204a6ab27aa1",
+    "results/model_review/positive_asset_specification_v1/nested_full_paths.csv": "bb72ae6b72ea72da01f800fd0f9ae0139046c8684e67374cc0966fb849d52516",
+    "results/model_review/positive_asset_specification_v1/nested_outer_oof_paths.csv": "4a4a9dba68e824b3dc13161391433be25ec9eb5fc873e4bdc6548eb23ab67c8f",
+    "results/model_review/review_pending_execution_v1/client_path_metrics.csv": "748a573bcadbdcf569c6966117ac4621ad921ed2456a1ed39054b83ef7b1d2b1",
+    "results/model_review/review_pending_execution_v1/context_profile_summary.csv": "85025a156b4c726648fc6343123f80b0519bdec75d8c85226b221520ba2d09a7",
+    "results/model_review/review_pending_execution_v1/executed_paths.npz": "80070ac1bf9d7f0c74fccf1b2e458d5c32299193e38d5e8eca250529f50391a2",
+    "results/model_review/review_pending_execution_v1/execution_groups.json": "ca9ca89a436501da17f26807395cc04df493bdfb346b4d206951f13761e77a60",
+    "results/model_review/review_pending_execution_v1/independent_audit.json": "3e8f8fb523d2fb4fc8bbb9bbb1c35a27ff7031c04944006f37692e9fd0b68558",
+    "results/model_review/review_pending_execution_v1/manifest.json": "2c1221f819ff8b273a96cd773aebeca5a475218de77c3a9c92ad9a1285c9d742",
+    "results/model_review/review_pending_execution_v1/paired_context_profile_summary.csv": "67c63d1601a16f1334e020b31762531fa6b0603b9176bf3ce674b49024eb21e0",
+    "results/model_review/review_pending_execution_v1/paired_path_differences.csv": "de83329486d25b08a70dcc3f85bbf3372c9fd811f193a71bf55363c2f8b2b165",
+    "results/model_review/review_pending_execution_v1/paired_profile_summary.csv": "84c90abee3dd327174dbe2406f9cb9c39b395319d5c223611a7a8489012ff048",
+    "results/model_review/review_pending_execution_v1/profile_summary.csv": "6b9fb28922c84b848a7c69075737d8d637f32fa1eaf7e7480ca20aed70e6b443",
+    "results/model_review/review_pending_execution_v1/yearly_trace.csv": "20dd60d52923a31ab80d382b98ecbef656fefdb499277bc06e45973216b62174",
+    "results/model_review/risk_menu_v1/cache/step_0500__cost_002500.json": "225a36e8585bf6c5f310979193264a84c88ce98170d60c0d04665abb6bc6b804",
+    "results/model_review/risk_menu_v1/cache/step_0500__cost_002500.npz": "558b547574265a6fce5befa6803a55b9d7cbd8cc01a66603d38e080c880d97bb",
+    "results/model_review/risk_priced_fan_execution_v1/accounting_checks.json": "0ee9498c2e9ca2248810173b95d68f3519d92d57f0f915c9da8905e752c63480",
+    "results/model_review/risk_priced_fan_execution_v1/actual_traces.npz": "4e5547b1e563b9562396fc6663ccbaaf7d7ca1a955d44a5337329784a676e5c1",
+    "results/model_review/risk_priced_fan_execution_v1/client_paths.csv": "660b2d05831a39dc179c4555f46a146ffa9c79331cd6bf9d35ebaad1e774a46e",
+    "results/model_review/risk_priced_fan_execution_v1/context_selections.json": "281fab47e231ab0cd8ebd42d95f47301443e1f3393962b51c10c13a7d06b7a65",
+    "results/model_review/risk_priced_fan_execution_v1/coverage.csv": "b42170476d51071682e22f12913c5140aeb46be312aa8c3f3f1d085d49949850",
+    "results/model_review/risk_priced_fan_execution_v1/decision_gates.csv": "62f30dae18693465e14a89e4dc0e769884beb42304c2df8776d3dea946ba0bfb",
+    "results/model_review/risk_priced_fan_execution_v1/independent_audit.json": "02c7ac0bf810155c0cf06f927e509620629ce34d508e7bd6d313a6ad53cfdd20",
+    "results/model_review/risk_priced_fan_execution_v1/manifest.json": "a3e5dc61ba2a5b9df1e0b3976f69f25fc5823a7d5f52d1dba344eadd7b0bc321",
+    "results/model_review/risk_priced_fan_execution_v1/paired_paths.csv": "55a675963c149d71d65d1a80b5730c865cd9bd559e807dfc00a4ac67444e67dd",
+    "results/model_review/risk_priced_fan_execution_v1/paired_summary.csv": "672508d10ece65a6164bfd07de4bc273bfac70ef1a10eee1b41c30093cd9b4b9",
+    "results/model_review/risk_priced_fan_execution_v1/summary.csv": "f30f543c7f2c27dd88887323f47a7f66e451341c9369f3e158061099a362560d",
+    "results/model_review/risk_priced_fan_execution_v1/training_candidate_paths.csv": "6969a27d62df0c8b10a439a049e34a358fe9f3dc0ed9d8a14f1823b7e3bc0750",
+    "results/model_review/risk_priced_fan_execution_v1/training_candidate_summary.csv": "0920ed3e86b8b59d75bc446ad3675ba66eaa7f1b0d703afd8b74848a061096ac",
+    "results/model_review/selected_controller_cost_stress_v1/actual_traces.npz": "e5752ac65ca76b7de556b00169ddbd81c2a5ea5a3e0a3ee166573c400600d2f3",
+    "results/model_review/selected_controller_cost_stress_v1/base_reproduction.json": "07ab1865e79f4743cdabaf64f4248eff18fd67bf9dcf8b98096f1f53d6986e02",
+    "results/model_review/selected_controller_cost_stress_v1/client_paths.csv": "849ff6e9ee88ef4ae7345380aaf92d9f5f3f83f0494f2c97e559f4b032b06018",
+    "results/model_review/selected_controller_cost_stress_v1/decision_changes_by_path.csv": "3913e17d1e977e4cf6e59aba949c3511f606e6d8029d6fa98230c2b3f6dcf161",
+    "results/model_review/selected_controller_cost_stress_v1/decision_changes_summary.csv": "7b4b832b69b8fba1f0c79726f26fd6c6cfd4ebfae40155d25e8c88198aabc812",
+    "results/model_review/selected_controller_cost_stress_v1/decision_gates.csv": "0a801f79238ab070eea2fdd23059d1174614405136bf0e1fca07487df4b5bdc0",
+    "results/model_review/selected_controller_cost_stress_v1/frozen_controller_plan.json": "bf4c2922e2c39adf73d04dbf7c5ac4916cc061baff746826e4877a0f41b95f3e",
+    "results/model_review/selected_controller_cost_stress_v1/independent_audit.json": "bd123e806afe1785ad49942d1827e99d8949c818d2b8c4d04b7d6f2f2763bb8c",
+    "results/model_review/selected_controller_cost_stress_v1/manifest.json": "f9f31bae6ca085c37ccfaf7df5fc05da7827c294b1037d59158b7080d1254c8b",
+    "results/model_review/selected_controller_cost_stress_v1/paired_vs_default_paths.csv": "9ff6abc5f851a8463e59afbfd1a0983b06bd5fda0171dbfb89937aff2ffe27ad",
+    "results/model_review/selected_controller_cost_stress_v1/paired_vs_default_summary.csv": "1c0597cc9ff0b3cac5bd5a60aecf2cbbb65aee7bcda20139e51a2f9861ea7735",
+    "results/model_review/selected_controller_cost_stress_v1/parent_catalog_metadata.json": "af858a51ef11918994a757e54055dabb2ab5c90dde84d8462c4520f17750b2b8",
+    "results/model_review/selected_controller_cost_stress_v1/policy_contrasts_paths.csv": "65fbb83d988589e0a97594a81fa9dcc771523e97d0d123d951967ffcf2567ac6",
+    "results/model_review/selected_controller_cost_stress_v1/policy_contrasts_summary.csv": "2131e63b99feb55feaaada3d779365fd23f23d77cabb3349943d58dd1f57b904",
+    "results/model_review/selected_controller_cost_stress_v1/summary.csv": "e8c9008e753ccb3c977aec1ee9c6edcf85f0c07a86dbcb0f68dc91114c0d6b8f",
+    "scripts/audit_bounded_target_updates.py": "7130354a02a9200e6736dc6ec9d1e2a789bcde3dbb6cda63a95c366849942760",
+    "scripts/audit_fan_rollout_execution.py": "9f9d4a274e3be531040193e1654ec6bdf74733ad5204937b8a8d8195d02940fb",
+    "scripts/audit_pathwise_cost_stress.py": "7f072bd6e58e639dcb344fc436dec3f64852f21a93de79e16c9363bf88fb7367",
+    "scripts/audit_pathwise_fan_execution.py": "18238d8491477325be415311590b3f2f72de2046fe51b693035d08c513f8e8a9",
+    "scripts/audit_review_pending_execution.py": "9c208ce69a03f1a13460908ec04b39a8dc232eacbb8882b5bdef3aafae60a264",
+    "scripts/audit_risk_priced_fan_execution.py": "e15aa1b6204a919eacfc222ce98990be8606536624157f6bec48f46148ba9e90",
+    "scripts/audit_selected_controller_cost_stress.py": "72c26673bd139e1aefaf508e4d26c75982329b28f3def3cd806bd93f713fa2b8",
+    "scripts/reproduce_execution_stage.py": "e1fe9bd81811db66237e5566c53006f64992103db49088bcc33ee6e385369294",
+    "scripts/run_bounded_target_updates.py": "f0f893070c028e2be05a37936195806269d8aaeba32a75b9660b72ba3113f8ee",
+    "scripts/run_fan_rollout_execution.py": "100fe1fd5f9e3718cbf7e804e4dca736c81b407bc3c93a1a0eb24d47a02732e6",
+    "scripts/run_pathwise_cost_stress.py": "3044511db5d8cf34a7b5a4b231178664086b83ea73ebc7ae7af5341fd03eb746",
+    "scripts/run_pathwise_fan_execution.py": "6b55b72fba513092986f07d336c15af2b34670093386f8bc5ccf96e29118a92b",
+    "scripts/run_review_pending_execution.py": "19a39b08eba906bbbe6c8457e1ffdc43acda6d51ecc201a3c18ff9a713f992d5",
+    "scripts/run_risk_priced_fan_execution.py": "68b34a4b0592f68327c09200b61dc8d980e8fbea7e282518de8164140ffc6bab",
+    "scripts/run_selected_controller_cost_stress.py": "fe96ab6d0f400bcc22e656bc5f3d4449e04beaf713c90936537b4863d4f915b5",
+    "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a",
+    "src/safeinvest/data.py": "70e511fd05c6e23fd6b8a72f1dc165426fc77a5eb4dbd8a3c13b839bb305a75f",
+    "tests/test_bounded_target_update.py": "564652c1bb013b57c3527863562b34df03d34052f177e0173462d8fc001de865",
+    "tests/test_bounded_target_updates.py": "61926ecc0e4b420db3940fc99f6aa04ee8b0d34f9fff6002191f443a55f7267e",
+    "tests/test_execution_stage_reproduction.py": "4454900f21c4c052b48adc57cfa824662fdea2614cf826a05d1c1f9b491bd6fd",
+    "tests/test_pathwise_cost_stress.py": "3805180789ce37d3ab8a6b0859a7cbda668ad11a189b57d90a0f1fc696bf5924",
+    "tests/test_review_pending_execution.py": "c5b990fc13e86b991f1ed2f70b0304a48ec027f0423db6d5cf504b55344ae431",
+    "tests/test_risk_priced_fan_execution.py": "9b413e2325d6f90223621edc2d99af62d1001f91035eda5c393e974d8b461943",
+    "tests/test_risk_priced_fan_rollout.py": "043bdc4f7f3cec0e9edec85250e3d6c3a05a90093dc2dc596f9c0ac17915aa0c",
+    "tests/test_selected_controller_cost_stress.py": "6f30119b2b48052271ff52dd14d157a8b292a14f51819b57e4d047389bc8098b"
+  },
+  "outputs_sha256": {
+    "review_pending_execution_v1.log": "1fa807387b9231b8d3e01d053c8a1a09242ea79c37c315ffd1d3f6c2f8c69fc4",
+    "fan_rollout_execution_v1.log": "9ba4158564850f0c408cc8953ed60c33177b7fcfbcfe60c4c85867a131d1426d",
+    "pathwise_fan_execution_v1.log": "8d5e3f7283ed83d17956ae8dbddf8ca0c1439baf1f21eca2a050e4a5bf7f7c6d",
+    "pathwise_cost_stress_v1.log": "d53f8378542e0a73e968a1e5a859a0681aac00694b20ab87b7a594df076c7ace",
+    "risk_priced_fan_execution_v1.log": "8f2dd3ad9172addc9257e66356bc57688669c5e73fcce98c63e5a42dab9ed149",
+    "bounded_target_updates_v1.log": "80257a0cf3cb082e867f2a3bfe940dbfacc32f932526b76d22225aa5d271397a",
+    "selected_controller_cost_stress_v1.log": "c02f88f6469de5196c491fd402931d1f10fbdf011540732e0db5210723bbc098"
+  },
+  "final_scenarios_loaded": false,
+  "scope": "Same-source deterministic replay of seven development execution studies; exact outputs, original archives unchanged",
+  "limitations": [
+    "This is reproducibility evidence, not an independent execution algorithm or independent market data",
+    "Complete original scenario files are copied as bytes; guarded runners parse only scenarios1-120 with allow_final=False",
+    "Parent archives are restored between stages to preserve frozen manifest/audit hash contracts",
+    "Replay manifests have new time metadata and are deliberately excluded from artifact equality; no financial numerical tolerance is allowed"
+  ]
+}

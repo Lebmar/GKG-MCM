@@ -12,18 +12,31 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "results/model_review/research_checkpoint_v1/verification.json"
 HASH_KEYS = {
     "sources", "sources_at_end", "source_sha256_start", "source_sha256_end",
+    "source_sha256", "cache_source_sha256", "sources_sha256", "sources_sha256_at_end",
     "source_sha256_at_start", "source_sha256_at_end", "sources_at_start",
     "frozen_input_hashes", "frozen_input_hashes_at_end", "input_sha256", "input_sha256_at_end",
-    "input_hashes", "input_hashes_at_end", "inputs_sha256", "input_artifact_sha256",
+    "input_hashes", "input_hashes_at_end", "inputs_sha256", "inputs_sha256_at_end", "input_artifact_sha256",
+    "frozen_dependency_sha256", "frozen_dependency_sha256_at_end",
+    "source_and_artifact_sha256_start", "source_and_artifact_sha256_end",
+    "source_and_evidence_sha256_start", "source_and_evidence_sha256_end",
+    "source_artifact_sha256_start", "source_artifact_sha256_end",
+    "evidence_sha256_start", "evidence_sha256_end",
     "input_artifact_sha256_start", "input_artifact_sha256_end", "artifacts_at_start", "artifacts_at_end",
-    "outputs_sha256", "output_artifact_sha256", "output_file_sha256_after_write",
+    "outputs", "outputs_sha256", "output_artifact_sha256", "output_file_sha256_after_write",
 }
 PAIRS = [
     ("sources", "sources_at_end"), ("sources_at_start", "sources_at_end"),
+    ("sources_sha256", "sources_sha256_at_end"),
     ("source_sha256_start", "source_sha256_end"),
     ("source_sha256_at_start", "source_sha256_at_end"),
     ("frozen_input_hashes", "frozen_input_hashes_at_end"),
     ("input_sha256", "input_sha256_at_end"), ("input_hashes", "input_hashes_at_end"),
+    ("frozen_dependency_sha256", "frozen_dependency_sha256_at_end"),
+    ("source_and_artifact_sha256_start", "source_and_artifact_sha256_end"),
+    ("source_and_evidence_sha256_start", "source_and_evidence_sha256_end"),
+    ("source_artifact_sha256_start", "source_artifact_sha256_end"),
+    ("evidence_sha256_start", "evidence_sha256_end"),
+    ("inputs_sha256", "inputs_sha256_at_end"),
     ("input_artifact_sha256_start", "input_artifact_sha256_end"),
     ("artifacts_at_start", "artifacts_at_end"),
 ]
@@ -46,11 +59,15 @@ def main():
 
     for path in paths:
         item = json.loads(path.read_text())
+        if path.name == "independent_audit.json":
+            assert item.get("status") == "passed" or item.get("passed") is True, path
+            checks += 1
         for before, after in PAIRS:
             if before in item and after in item:
                 assert item[before] == item[after], (path, before, after)
                 checks += 1
         assert not item.get("final_scenarios_loaded", False), path
+        assert not item.get("final_scenarios_read", False), path
         for key in HASH_KEYS:
             values = item.get(key)
             if not isinstance(values, dict):
@@ -78,6 +95,9 @@ def main():
     legacy = subprocess.run(["git", "diff", "--exit-code", "7bca10b", "--", "src", "report", "output"],
                             cwd=ROOT, capture_output=True, text=True)
     assert legacy.returncode == 0, "V1 source/report/output changed"
+    test_log_sha = sha(test_log)
+    notebook_sha = sha(notebook_path)
+    reading_copy_sha = sha(ROOT / "notebooks/risk_menu_development.html")
     summary = {
         "completed_utc": datetime.now(timezone.utc).isoformat(), "status": "passed",
         "scope": "Saved-file fingerprints, completed test log and executed research notebook; no model fit or market return parsing",
@@ -86,10 +106,10 @@ def main():
         "snapshots_sha256": snapshots,
         "unit_tests": {"passed": int(match.group(1)), "seconds": float(match.group(2)),
                        "command": "PYTHONPATH=src:research .venv/bin/python -m unittest discover -s tests -q",
-                       "log_sha256": sha(test_log), "result": "OK"},
+                       "log_sha256": test_log_sha, "result": "OK"},
         "notebook": {"path": str(notebook_path.relative_to(ROOT)), "executed_code_cells": len(code_cells),
-                     "sha256": sha(notebook_path),
-                     "reading_copy_sha256": sha(ROOT / "notebooks/risk_menu_development.html")},
+                     "sha256": notebook_sha,
+                     "reading_copy_sha256": reading_copy_sha},
         "legacy": {"baseline_revision": "7bca10b", "unchanged_paths": ["src", "report", "output"]},
         "limitations": ["Numerical and provenance checks do not certify risk or forecast validity",
                         "Independent algorithms were separately implemented with AI assistance, not external human peer review",

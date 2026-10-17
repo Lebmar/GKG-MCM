@@ -32,6 +32,8 @@ md(r"""
 
 主要进展：232个放宽规格组合完成9个政策情形、完整情景五折验证及1,000次完整重选bootstrap；另对172个严格正权重组合执行相同内外层学习，并完成有限期限执行原型、费用观测、年份顺序压力检查和独立费用重放。主要风险发现：原经验规则的B/C/E分配均贴在训练超限边界；A的可行性结论会随重抽样翻转；只按增长决定是否交易，会明显增加原分配的回撤超限。内层选择训练余量提供了新的严格三资产候选，仍需后续审定。
 
+执行阶段进一步比较首次超限后持仓等待、两类局部门槛、逐路径保护、训练选择的风险调整交易规则和三目标更新规则。逐路径保护在五档费用下没有增加持仓不动的决定；风险调整门槛改善了增长和费用，但C的折外超限为14/120，仍未保持10%参考频率。允许目标更新的18个候选中，六个训练环境均选择不更新的简单控制器。下文同时保存这些负面结果，不能把训练通过替代为未来安全证明。
+
 **数据历史必须保留。** 本轮只使用开发情景 1–120。V1 曾读过 121–180 的评估结果，故本轮不能声称有一个尚未看过的最终测试集。新实验流程在本轮选型前写入协议，但开发数据此前已被使用；“事先规定流程”不等于“数据未见”。没有重新生成 V1 论文、没有上传 CMT。
 
 **题面规格也需要区分。** 题面写每个产品使用三类资产；以下232候选允许零权重，是放宽该规格的研究对照，不能直接视为最终三资产产品。三类资产均为正权重的补充诊断另列，保持同一内外层选择流程；当前网格最小正点5%来自分辨率，不是从问卷识别的资产下限。
@@ -634,46 +636,165 @@ figure(episode_root / 'severe_episode.png',
 print('年初支付转移费，随后实现该年回报；图不推断未知的年内市场低谷。')
 """)
 
+md(r"""
+### 10.5 超限后等待审核：事件不可撤销，后续严重度仍可变化
+
+本轮不改产品、客户分配或问卷阈值，使用严格172规格的冻结六个情景上下文。原策略与等待策略直到首次年度回撤超限 $\tau$ 完全相同；等待从下一个决策开始，只持有实际资产数量，价格、通胀、财富、历史峰值与回撤继续演化。假设到原期限结束都没有人工回应，是一个可计分情景，不是对真实顾问响应时间的估计。
+
+这带来一个逐路径恒等式：没有超限，两臂始终相同；已经超限，两臂的吸收标记都已为1。因此，两臂的首次超限时间和完整期限“至少一次超限”必相同。B/C/E各为9/120；不能把等待审核说成降低了这个事件的概率。等待可以影响的是后续严重度、终值、费用和恢复。
+
+恢复的参考固定为首次超限时的历史峰值 $P_\tau$，不随以后新高重选。只有以后年度实际财富达到该峰值才记录恢复；到原H尚未恢复的条目右删失，不能填一个虚构未来日期。每个客户触发子群仅9条，已恢复者的中位时长只描述该子群，不代表总体恢复时间。
+""")
+
+code("""
+pending_root = ROOT / 'results/model_review/review_pending_execution_v1'
+pending_audit = readj(pending_root / 'independent_audit.json')
+assert pending_audit['status'] == 'passed'
+pending_summary = pd.read_csv(pending_root / 'profile_summary.csv')
+pending_oof = pending_summary.query("scope == 'oof' and subset == 'all_assigned'")
+show(pending_oof[['client', 'arm', 'total_profile_paths', 'auto_n', 'review_n', 'breach_count',
+                  'mean_log_growth', 'mean_nominal_fees', 'recovery_risk_set_n', 'recovered_n', 'right_censored_n']],
+     {'mean_log_growth': '{:.4%}', 'mean_nominal_fees': '{:.5f}'})
+figure(ROOT / 'research/figures/execution_stage/01_pending_triggered_severity.png',
+       '严格172固定组合：同一首次超限后等待持有，对后续最大回撤及新增严重度的逐路径影响。')
+figure(ROOT / 'research/figures/execution_stage/02_pending_growth_cost_recovery.png',
+       '相同触发与随访窗口下，等待持有的增长、费用和恢复状态；删失未被当作已恢复。')
+""")
+
+md(r"""
+### 10.6 局部预测更好，为什么整条策略仍可能更差
+
+比较动作 $a$ 时，先执行当前的持有或恢复目标，再假设未来按“每年恢复目标，首次超限后持有”的基准B继续。训练情景从当前日历年到原H的完整联合后缀构成共同预测扇形。每条后缀保留资产、通胀和时间次序；它们是无条件参考，并非已证明正确的“给定当前历史后的未来分布”。每年重新混合这些后缀不自动产生一个动态一致的条件模型。
+
+两种先行对照是：只最大化预测净对数增长；以及只有当持有相对恢复的预测平均增长不低、预测超限条数不高时才省掉交易。后者称局部Pareto持有。它没有新风险系数，但也没有整体风险保障。两条合成路径已给出反例：当前比较中持有的平均增长更高，两个动作预测超限数相同；完整路径实际重放却从1/2超限升为2/2，第一条末财富由135降为130。原因是比较忽略了已观察历史透露的路径信息。精确平均或增加同类后缀，不能自动修复这个条件预测问题。
+
+更保守的逐路径规则要求：对**每一条**训练后缀，持有的未来净增长都不低，终端超限标记都不高，才允许省交易。对同一固定扇形中保留的完整路径，可从任意一致状态反向归纳证明该规则相对B的增长/事件非劣性；换成扇形之外的新路径则没有这个结论。本轮默认费用下，它在全部训练与OOF情景中都退回了B，没有额外省交易。零增长容差是动作门槛；1e-10只用于数值性质核查，不能偷偷作为可牺牲的经济收益。
+""")
+
+code("""
+figure(ROOT / 'research/figures/execution_stage/04_five_strategy_oof_comparison.png',
+       '五种冻结目标执行规则的OOF增长、回撤、事件频率与实际交易比例；逐路径保护规则在本轮等于等待基准。')
+support = pd.read_csv(ROOT / 'results/model_review/pathwise_fan_execution_v1/training_support_summary.csv')
+served_support = support.query('assigned_paths > 0')
+assert served_support.breach_order_violations.eq(0).all()
+assert served_support.strictly_negative_computed_growth_delta_count.eq(0).all()
+print('同一固定fan性质检查：', int(served_support.assigned_paths.sum()), '个context/client/path配对；不是独立市场样本数。')
+print('每客户full120加五组重叠96=600个训练身份；OOF仍仅原120条完整情景。')
+""")
+
+md(r"""
+### 10.7 用完整路径训练风险调整交易门槛
+
+下一项研究保留相同产品和预测参考，增加一组事先声明的技术参数，而不把它冒充客户风险厌恶。对于当前恢复与持有，计算包含所有当前/未来基准费用的总对数增长差 $\Delta g_t$ 与预测完整历史超限概率差 $\Delta q_t$，有限价门槛为
+
+$$\Delta g_t-H\eta\,\Delta q_t>10^{-12}.$$
+
+H始终是客户原期限，不随剩余年份缩短而重定价。$\eta$ 是每单位超限概率对应的年化对数增长交换价；有限网格为0、.001、.003、.01、.03、.1、.3、1，另有单列的“先最小预测风险，再比较增长”候选。后者不用无穷大乘法。这个有限网格是可检查的技术搜索范围，不是问卷识别出的偏好、真实KKT影子价或条件风险预算。
+
+每个训练上下文、每个已分配客户都完整重放九个候选；只有完整期限超限条数不高于“原年度参照条数”和“10%乘训练条数向下取整”二者较小值的候选才可入选。再最大化训练平均年化净对数增长；数值并列优先较小有限价。这个相对参照上限是额外的保守设计选择。若全不合格，在投资前转介执行审核，不能用年度恢复偷偷填成合格。折外只运行训练选定的一个候选，或保留审核空结果。
+
+题面要求预计收益足以解释成本，并没有要求收益只能是增长。因此，风险下降可以构成交易收益：有限价每笔主动恢复都必须具有严格正的上述净分数，未定价增长可以下降。必须同时披露收益定义、参数选择依据和预测误差，不能把正分数说成实际获利保证。初配与已经等待的账户另列，不伪造预测分数。
+""")
+
+code("""
+price_root = ROOT / 'results/model_review/risk_priced_fan_execution_v1'
+assert readj(price_root / 'independent_audit.json')['status'] == 'passed'
+price_summary = pd.read_csv(price_root / 'summary.csv')
+show(price_summary.query("scope == 'outer_oof'")[[
+    'client', 'policy', 'total_paths', 'assigned_paths', 'review_paths', 'breach_count',
+    'mean_log_growth', 'median_cagr', 'p10_cagr', 'p90_mdd', 'mean_trade_fraction']],
+    {x: '{:.2%}' for x in ['mean_log_growth','median_cagr','p10_cagr','p90_mdd','mean_trade_fraction']})
+selections = readj(price_root / 'context_selections.json')
+price_choices = []
+for context, value in selections.items():
+    for client in ['B', 'C', 'E']:
+        selection = value['profiles'][client]
+        picked = selection.get('selected_candidate')
+        price_choices.append({'context': context, 'client': client,
+            'selected': picked['execution_candidate_id'] if picked else 'Review',
+            'training_n': selection['n_training'], 'training_breach_cap': selection['training_breach_cap']})
+show(pd.DataFrame(price_choices))
+print('C折外14/120次超限，超过10%参考频率；训练筛选仍未自动传递到折外。它是候选研究，尚非最终采纳。')
+""")
+
+md(r"""
+### 10.8 自动更新目标权重的增量，而非强迫模型更新
+
+原C客户始终以该折的Balanced目标开始。扩展研究只允许在**已冻结的三个产品目标**之间更新，不拟合第四组权重。每个动作的预测延续必须与其含义一致：持有继续以当前目标作为未来B；切换到目标m则执行m，并以m作为未来B。实际目标身份和漂移持仓分别保留；目标身份变化但没有实际资金转移时，更新计数与交易计数分别记录。
+
+比较两个学习流程：九个固定目标价格候选；以及包含原九个候选加九个允许更新候选的18项扩展族。两者使用同一个完整路径训练风险上限和增长目标，近似并列优先不更新。扩展族包含原方案，使是否更新可以由训练证据决定；只有训练选中的配置进入相应24条折外路径。三产品的名称不保证它们在C的30年期限下按风险排序，切换后的适配必须由完整控制器重新评估。
+
+两流程可以同时选到不同的技术价格，所以差异表示“允许更新加入学习流程”的增量，不是固定同一价格下某一次换仓的因果收益。所有结果和费用都报告，不能看到OOF后再扩大目标或价格网格。
+
+交易比例包含初配，分母为H次决策；初配不算目标更新，更新比例的分母为H−1次机会。下表把核心归档中按H保存的更新比例换算为29次更新机会口径；当前实际更新数全部为零。六个训练环境都选择不允许更新的模式，故两学习流程的折外结果一致。
+""")
+
+code("""
+update_root = ROOT / 'results/model_review/bounded_target_updates_v1'
+assert readj(update_root / 'independent_audit.json')['status'] == 'passed'
+update_summary = pd.read_csv(update_root / 'summary.csv')
+update_summary['target_updates_per_29_opportunities'] = update_summary.mean_target_update_fraction * update_summary.horizon / (update_summary.horizon - 1)
+show(update_summary[['scope','policy','total_paths','assigned_paths','review_paths',
+                     'breach_count','mean_log_growth','median_cagr','p10_cagr','p90_mdd',
+                     'mean_trade_fraction','target_updates_per_29_opportunities']],
+     {x:'{:.2%}' for x in ['mean_log_growth','median_cagr','p10_cagr','p90_mdd',
+                            'mean_trade_fraction','target_updates_per_29_opportunities']})
+update_choices = readj(update_root / 'context_selections.json')
+show(pd.DataFrame([{'context':context,
+    'selected':value['selected_controller']['controller_id'] if value['selected_controller'] else 'Review',
+    'training_breach_cap':value['training_breach_cap'],
+    'parent_fixed_price_order':value['parent_fixed_selected_candidate_order']}
+    for context,value in update_choices.items()]))
+q2_current = ROOT / 'results/model_review/q2_execution_development_v2'
+assert readj(q2_current / 'manifest.json')['final_scenarios_loaded'] is False
+figure(ROOT / 'research/figures/q2_execution_development_v2/01_current_oof_comparison.png',
+       'C客户120条OOF路径：严格年度、超限后等待、风险定价、精确三等分及扩展学习流程的共同指标。')
+figure(ROOT / 'research/figures/q2_execution_development_v2/02_prespecified_annual_severe_episode.png',
+       '按原严格年度规则最大回撤选中的同一严重场景；各策略原始财富、回撤和首次超限后恢复过程。')
+""")
+
+md(r"""
+### 10.9 费用敏感性也要对准所比较的控制器
+
+逐路径保护规则先在0、0.125%、0.25%、0.5%、1%五档费用下检查；所有档位都没有额外持有，不能据此说减少了交易。对于新选定的固定/可更新控制器，另一项预先声明的压力测试冻结默认费用下训练选中的价格、模式、目标和分配，只改变已知费用输入。预测与真实执行使用同一档费用，不在压力结果上重新学习参数或挑最好费率。
+
+这是已知费用变化下的动作与表现敏感性，不是费用被错误估计时的鲁棒保证；非默认费用下也没有重新获得风险校准证书。固定参数并不意味着固定动作，费用变化会改变预测净收益，进而改变后续整个持仓路径。全轨迹动作变化比例不能解释为保持同一状态时某个动作的因果效果。
+""")
+
+code("""
+cost_root = ROOT / 'results/model_review/selected_controller_cost_stress_v1'
+assert readj(cost_root / 'independent_audit.json')['status'] == 'passed'
+cost_summary = pd.read_csv(cost_root / 'summary.csv')
+print('所选控制器费用压力结果见：', cost_root.relative_to(ROOT))
+show(cost_summary.query("scope == 'outer_oof'")[[
+    'cost_rate','policy','total_paths','assigned_paths','review_paths','breach_count',
+    'mean_log_growth','median_cagr','p10_cagr','p90_mdd','mean_nominal_fees','mean_trade_fraction']],
+    {**{x:'{:.2%}' for x in ['cost_rate','mean_log_growth','median_cagr','p10_cagr','p90_mdd','mean_trade_fraction']},
+     'mean_nominal_fees':'{:.5f}'})
+print('五档OOF：两学习器均14/120超限，年度等待均9/120；无法用费用变化消除这一风险差距。')
+figure(ROOT / 'research/figures/selected_controller_cost_stress/known_cost_oof_sensitivity.png',
+       '冻结默认选型的C控制器：已知费用共同改变时的超限、增长、总名义费用和非单调交易比例。')
+""")
+
 md("""
 ## 11. 数值核查、复现与结论边界
 
 独立审计不调用原费用执行器，以向量化二分重新解自融资费用，重放232×120条30年路径，独立重算增长、回撤和CVaR，并逐条检查折外冻结分配、Review空结果和120分母。数值正确只能证明计算与规定一致，不能证明目标偏好、同分布假设或未来风险有效。
 
-本次研究已支持：用明确的增长目标和完整期限风险预算替代不明λ；把经验选型、证据强度和人工审核分开；承认精确权重的不稳定性；验证费用一致的有限期限执行原型，并查明它未维持原风险适配。**本次未完成：最终服务菜单、经风险验证的动态执行规则、顾问待办行为及最终英文论文。**
+本次研究已支持：用明确的增长目标和完整期限风险预算替代不明λ；把经验选型、证据强度和人工审核分开；承认精确权重的不稳定性；验证费用一致的有限期限执行原型、完整等待状态、风险调整净收益门槛及目标更新学习流程，并逐项查明其作用和局限。**本次未完成：最终服务菜单和控制器的共同审定、真正人工响应/再入服务资料、最终冻结评估及英文论文。**
 
-下一轮转介/等待设计保存在 `docs/review_pending_design_contract.json`，尚未运行或采纳。它分开输入失败、模型失效和客户损失超限；保留原期限、财富历史与超限标记。若两策略直到首次超限完全相同，再在等待中改为持有，它们的完整期限“至少一次超限”事件必逐路径相同；未来实验只能检验严重度、财富、费用和恢复时间，不能声称撤销了既成事件。人工响应资料缺失时不虚构顾问收益或时延。
+转介/等待原设计保存在 `docs/review_pending_design_contract.json`，其独立执行协议和结果另存，保留原设计历史。它分开输入失败、模型失效和客户损失超限；保留原期限、财富历史与超限标记。首次超限后才改变持仓，不能撤销既成事件。人工响应资料缺失时不虚构顾问收益或时延。局部预测、支持内性质、训练筛选、折外结果和未来风险保证必须分别解释；数百万次机械核对也不能增加独立市场样本数。
 
-完整复现（所有命令均只为本轮开发研究；不要调用V1的final/reproduce来重新选型）：
+当前保存结果可用 `scripts/verify_research_checkpoint.py` 做来源指纹与执行证据复核。执行阶段七项实验另提供隔离复现：
 
 ```bash
-.venv/bin/python scripts/inspect_development_structure.py
-.venv/bin/python scripts/plot_development_structure.py
-.venv/bin/python scripts/run_risk_menu_research.py all
-.venv/bin/python scripts/analyze_risk_menu_diagnostics.py all
-.venv/bin/python scripts/analyze_policy_independent_drawdown.py
-.venv/bin/python scripts/audit_policy_independent_drawdown.py
-.venv/bin/python scripts/run_simultaneous_risk_diagnostic.py all
-.venv/bin/python scripts/run_nested_static_calibration.py
-.venv/bin/python scripts/run_positive_asset_specification.py
-.venv/bin/python scripts/audit_positive_asset_specification.py
-.venv/bin/python scripts/audit_nested_static_calibration.py
-.venv/bin/python scripts/analyze_bootstrap_oob.py
-.venv/bin/python scripts/run_fixed_execution_ablation.py
-.venv/bin/python scripts/audit_finite_horizon_execution.py
-.venv/bin/python scripts/audit_risk_tree_reference.py
-.venv/bin/python scripts/run_finite_horizon_execution_prototype.py
-.venv/bin/python scripts/check_fee_checkpoint_risk.py
-.venv/bin/python scripts/run_temporal_order_diagnostic.py
-.venv/bin/python scripts/diagnose_q2_severe_episode.py
-.venv/bin/python scripts/summarize_q2_oof_equal_benchmark.py
-.venv/bin/python scripts/audit_risk_menu_results.py
-.venv/bin/python scripts/plot_risk_menu_research.py
-.venv/bin/python scripts/plot_finite_horizon_execution.py
-.venv/bin/python scripts/plot_nested_static_calibration.py
-.venv/bin/python scripts/build_risk_menu_notebook.py
+.venv/bin/python scripts/reproduce_execution_stage.py --output results/model_review/execution_stage_reproduction_new
+.venv/bin/python scripts/verify_research_checkpoint.py
 ```
 
-命令会核对或写入专用开发研究目录；原始情景文件和V1归档保留。如需同时保留两轮结果，先复制仓库，在副本重跑；支持输出目录参数的runner也可另选目录，复现前查看对应脚本。bootstrap和独立重放需要比本笔记的表格读取更长时间。
+隔离复现逐项在临时副本执行七个冻结runner，比较原始产物的字节或NPZ具名数组的精确值，随后在副本恢复该项的原冻结归档，再运行下一项。这样避免新时间戳改变父manifest/audit指纹，误使下游协议失效；原仓库研究文件前后指纹必须相同。副本只解析1–120开发情景。该工具验证同一实现的可复现性，不是独立算法或新市场证据；新的复现收据必须另选空目录。
+
+更早的静态学习、bootstrap及各项诊断脚本见README的来源索引与每项manifest。**不要在原仓库把全部runner连续重跑并覆盖冻结父归档**：它们的元数据也属于后继协议的一部分。重新设计或重估应建立新研究目录和新协议；不要调用V1的final/reproduce重新选型。笔记本只读取已保存产物，不重新拟合模型。
 
 支持方法定义的主要来源：[NIST精确二项区间](https://www.itl.nist.gov/div898/software/dataplot/refman2/auxillar/exacbino.htm)、[Rockafellar–Uryasev一般损失分布下的CVaR](https://sites.math.washington.edu/~rtr/papers/rtr187-CVaR2.pdf)、[Bengio–Grandvalet交叉验证误差依赖的讨论](https://www.jmlr.org/papers/volume5/grandvalet04a/grandvalet04a.pdf)。具体政策、候选族及本轮数据历史见仓库协议；上述来源不提供我们的客户参数或安全保证。
 """)
