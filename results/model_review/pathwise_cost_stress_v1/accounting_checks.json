@@ -1,0 +1,902 @@
+{
+  "zero__full_development__B": {
+    "path_target_pairs": 120,
+    "triggered_pairs": 8,
+    "never_triggered_pairs": 112,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "zero__full_development__C": {
+    "path_target_pairs": 120,
+    "triggered_pairs": 9,
+    "never_triggered_pairs": 111,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "zero__full_development__E": {
+    "path_target_pairs": 120,
+    "triggered_pairs": 9,
+    "never_triggered_pairs": 111,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "zero__outer_fold_1__B": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 2,
+    "never_triggered_pairs": 22,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "zero__outer_fold_1__C": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 0,
+    "never_triggered_pairs": 24,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "zero__outer_fold_1__E": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 1,
+    "never_triggered_pairs": 23,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "zero__outer_fold_2__B": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 1,
+    "never_triggered_pairs": 23,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "zero__outer_fold_2__C": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 1,
+    "never_triggered_pairs": 23,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "zero__outer_fold_2__E": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 1,
+    "never_triggered_pairs": 23,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "zero__outer_fold_3__B": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 1,
+    "never_triggered_pairs": 23,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "zero__outer_fold_3__C": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 4,
+    "never_triggered_pairs": 20,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "zero__outer_fold_3__E": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 1,
+    "never_triggered_pairs": 23,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "zero__outer_fold_4__B": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 2,
+    "never_triggered_pairs": 22,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "zero__outer_fold_4__C": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 3,
+    "never_triggered_pairs": 21,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "zero__outer_fold_4__E": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 1,
+    "never_triggered_pairs": 23,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "zero__outer_fold_5__B": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 2,
+    "never_triggered_pairs": 22,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "zero__outer_fold_5__C": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 1,
+    "never_triggered_pairs": 23,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "zero__outer_fold_5__E": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 5,
+    "never_triggered_pairs": 19,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "half__full_development__B": {
+    "path_target_pairs": 120,
+    "triggered_pairs": 8,
+    "never_triggered_pairs": 112,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "half__full_development__C": {
+    "path_target_pairs": 120,
+    "triggered_pairs": 9,
+    "never_triggered_pairs": 111,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "half__full_development__E": {
+    "path_target_pairs": 120,
+    "triggered_pairs": 9,
+    "never_triggered_pairs": 111,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "half__outer_fold_1__B": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 2,
+    "never_triggered_pairs": 22,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "half__outer_fold_1__C": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 0,
+    "never_triggered_pairs": 24,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "half__outer_fold_1__E": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 1,
+    "never_triggered_pairs": 23,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "half__outer_fold_2__B": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 1,
+    "never_triggered_pairs": 23,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "half__outer_fold_2__C": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 1,
+    "never_triggered_pairs": 23,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "half__outer_fold_2__E": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 1,
+    "never_triggered_pairs": 23,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "half__outer_fold_3__B": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 1,
+    "never_triggered_pairs": 23,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "half__outer_fold_3__C": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 4,
+    "never_triggered_pairs": 20,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "half__outer_fold_3__E": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 1,
+    "never_triggered_pairs": 23,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "half__outer_fold_4__B": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 2,
+    "never_triggered_pairs": 22,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "half__outer_fold_4__C": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 3,
+    "never_triggered_pairs": 21,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "half__outer_fold_4__E": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 1,
+    "never_triggered_pairs": 23,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "half__outer_fold_5__B": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 2,
+    "never_triggered_pairs": 22,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "half__outer_fold_5__C": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 1,
+    "never_triggered_pairs": 23,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "half__outer_fold_5__E": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 5,
+    "never_triggered_pairs": 19,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "base__full_development__B": {
+    "path_target_pairs": 120,
+    "triggered_pairs": 9,
+    "never_triggered_pairs": 111,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "base__full_development__C": {
+    "path_target_pairs": 120,
+    "triggered_pairs": 9,
+    "never_triggered_pairs": 111,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "base__full_development__E": {
+    "path_target_pairs": 120,
+    "triggered_pairs": 9,
+    "never_triggered_pairs": 111,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "base__outer_fold_1__B": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 2,
+    "never_triggered_pairs": 22,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "base__outer_fold_1__C": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 0,
+    "never_triggered_pairs": 24,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "base__outer_fold_1__E": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 1,
+    "never_triggered_pairs": 23,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "base__outer_fold_2__B": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 1,
+    "never_triggered_pairs": 23,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "base__outer_fold_2__C": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 1,
+    "never_triggered_pairs": 23,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "base__outer_fold_2__E": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 1,
+    "never_triggered_pairs": 23,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "base__outer_fold_3__B": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 2,
+    "never_triggered_pairs": 22,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "base__outer_fold_3__C": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 4,
+    "never_triggered_pairs": 20,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "base__outer_fold_3__E": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 1,
+    "never_triggered_pairs": 23,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "base__outer_fold_4__B": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 2,
+    "never_triggered_pairs": 22,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "base__outer_fold_4__C": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 3,
+    "never_triggered_pairs": 21,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "base__outer_fold_4__E": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 1,
+    "never_triggered_pairs": 23,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "base__outer_fold_5__B": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 2,
+    "never_triggered_pairs": 22,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "base__outer_fold_5__C": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 1,
+    "never_triggered_pairs": 23,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "base__outer_fold_5__E": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 5,
+    "never_triggered_pairs": 19,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "double__full_development__B": {
+    "path_target_pairs": 120,
+    "triggered_pairs": 9,
+    "never_triggered_pairs": 111,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "double__full_development__C": {
+    "path_target_pairs": 120,
+    "triggered_pairs": 9,
+    "never_triggered_pairs": 111,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "double__full_development__E": {
+    "path_target_pairs": 120,
+    "triggered_pairs": 9,
+    "never_triggered_pairs": 111,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "double__outer_fold_1__B": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 2,
+    "never_triggered_pairs": 22,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "double__outer_fold_1__C": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 0,
+    "never_triggered_pairs": 24,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "double__outer_fold_1__E": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 1,
+    "never_triggered_pairs": 23,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "double__outer_fold_2__B": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 1,
+    "never_triggered_pairs": 23,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "double__outer_fold_2__C": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 1,
+    "never_triggered_pairs": 23,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "double__outer_fold_2__E": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 1,
+    "never_triggered_pairs": 23,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "double__outer_fold_3__B": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 2,
+    "never_triggered_pairs": 22,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "double__outer_fold_3__C": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 4,
+    "never_triggered_pairs": 20,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "double__outer_fold_3__E": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 1,
+    "never_triggered_pairs": 23,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "double__outer_fold_4__B": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 2,
+    "never_triggered_pairs": 22,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "double__outer_fold_4__C": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 3,
+    "never_triggered_pairs": 21,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "double__outer_fold_4__E": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 1,
+    "never_triggered_pairs": 23,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "double__outer_fold_5__B": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 2,
+    "never_triggered_pairs": 22,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "double__outer_fold_5__C": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 1,
+    "never_triggered_pairs": 23,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "double__outer_fold_5__E": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 5,
+    "never_triggered_pairs": 19,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "quadruple__full_development__B": {
+    "path_target_pairs": 120,
+    "triggered_pairs": 10,
+    "never_triggered_pairs": 110,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "quadruple__full_development__C": {
+    "path_target_pairs": 120,
+    "triggered_pairs": 10,
+    "never_triggered_pairs": 110,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "quadruple__full_development__E": {
+    "path_target_pairs": 120,
+    "triggered_pairs": 9,
+    "never_triggered_pairs": 111,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "quadruple__outer_fold_1__B": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 2,
+    "never_triggered_pairs": 22,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "quadruple__outer_fold_1__C": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 0,
+    "never_triggered_pairs": 24,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "quadruple__outer_fold_1__E": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 1,
+    "never_triggered_pairs": 23,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "quadruple__outer_fold_2__B": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 1,
+    "never_triggered_pairs": 23,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "quadruple__outer_fold_2__C": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 1,
+    "never_triggered_pairs": 23,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "quadruple__outer_fold_2__E": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 1,
+    "never_triggered_pairs": 23,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "quadruple__outer_fold_3__B": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 3,
+    "never_triggered_pairs": 21,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "quadruple__outer_fold_3__C": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 4,
+    "never_triggered_pairs": 20,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "quadruple__outer_fold_3__E": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 1,
+    "never_triggered_pairs": 23,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "quadruple__outer_fold_4__B": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 2,
+    "never_triggered_pairs": 22,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "quadruple__outer_fold_4__C": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 3,
+    "never_triggered_pairs": 21,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "quadruple__outer_fold_4__E": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 1,
+    "never_triggered_pairs": 23,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "quadruple__outer_fold_5__B": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 2,
+    "never_triggered_pairs": 22,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "quadruple__outer_fold_5__C": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 1,
+    "never_triggered_pairs": 23,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  },
+  "quadruple__outer_fold_5__E": {
+    "path_target_pairs": 24,
+    "triggered_pairs": 5,
+    "never_triggered_pairs": 19,
+    "same_first_crossing": true,
+    "same_terminal_ever_breached": true,
+    "identical_prefixes_through_crossing": true,
+    "max_prefix_balance_error": 0.0,
+    "interpretation": "Identical full-H everbreach is structural; only subsequent outcomes can differ"
+  }
+}

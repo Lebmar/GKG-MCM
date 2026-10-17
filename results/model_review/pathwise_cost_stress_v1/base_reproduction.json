@@ -1,0 +1,42 @@
+{
+  "client_paths.csv": {
+    "rows": 2400,
+    "numeric_columns": 19,
+    "max_abs_error": 2.2737367544323206e-13,
+    "identities_and_null_masks_match": true
+  },
+  "summary.csv": {
+    "rows": 20,
+    "numeric_columns": 21,
+    "max_abs_error": 5.684341886080802e-14,
+    "identities_and_null_masks_match": true
+  },
+  "paired_summary.csv": {
+    "rows": 10,
+    "numeric_columns": 17,
+    "max_abs_error": 0.0,
+    "identities_and_null_masks_match": true
+  },
+  "training_support_paths.csv": {
+    "rows": 3000,
+    "numeric_columns": 7,
+    "max_abs_error": 4.440892098500626e-16,
+    "identities_and_null_masks_match": true
+  },
+  "training_support_summary.csv": {
+    "rows": 30,
+    "numeric_columns": 12,
+    "max_abs_error": 0.0,
+    "identities_and_null_masks_match": true
+  },
+  "actual_traces.npz": {
+    "array_fields": 846,
+    "max_abs_error": 0.0,
+    "matches": true
+  },
+  "training_traces.npz": {
+    "array_fields": 846,
+    "max_abs_error": 0.0,
+    "matches": true
+  }
+}
