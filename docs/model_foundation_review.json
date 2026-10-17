@@ -8,14 +8,14 @@
       "item": "Growth-risk objective and lambda=10/4/1",
       "type": "preference modelling",
       "existing_evidence": "Economic units can be derived; the three numerical preferences have not been identified from questionnaire information.",
-      "next_check": "Compare explicit drawdown preferences with risk-constraint-first formulation. Explain horizon scaling and average drawdown versus tail suitability.",
+      "next_check": "Foundation formulation reviewed in objective_risk_decision.json with reproducible mathematical audit. Recommended: retire unidentified lambdas, use annualized expected log growth subject to an explicit full-horizon exceedance budget. Empirical frontier/product selection follows discussion.",
       "acceptance": "A stated economic trade-off and consistent use of horizon; do not select a preference merely to maximize backtest returns."
     },
     {
       "item": "10% exceedance screen and liquidity floors",
       "type": "service policy",
       "existing_evidence": "Disclosed assumptions with limited alpha sensitivity; not established from withdrawal or customer-preference data.",
-      "next_check": "Separate questionnaire loss amount from exceedance probability. Study interval, exceedance severity and assignment stability under training resampling.",
+      "next_check": "Mathematical/statistical meaning reviewed in objective_risk_decision.json. 10% remains an openly normative reference case with 5%/20% policy probes; no certification from same-sample binomial limits. Still to design: sample-screen rule, instability/review criterion, liquidity floors and development-only assignment diagnostics.",
       "acceptance": "No client-specific exceptions chosen to force desired labels; uncertain boundary cases are explicit."
     },
     {

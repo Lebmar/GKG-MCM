@@ -1,0 +1,250 @@
+{
+  "scope": "Pure mathematical diagnostics; no market scenario or archived result is read.",
+  "date_beijing": "2026-10-17",
+  "scipy_version": "1.18.1",
+  "script_sha256": "5f75324f2496db907b31cfadc41a4d463d0e01151db4f41536de7e2d6405523d",
+  "lambda_tradeoffs": [
+    {
+      "lambda": 10,
+      "mdd_increase": 0.01,
+      "terminal_geometric_wealth_compensation": 0.10517091807564763,
+      "annual_factor_minus_one_H5": 0.02020134002675581,
+      "annual_factor_minus_one_H15": 0.006688938354019327,
+      "annual_factor_minus_one_H30": 0.0033388950668758596
+    },
+    {
+      "lambda": 4,
+      "mdd_increase": 0.01,
+      "terminal_geometric_wealth_compensation": 0.040810774192388224,
+      "annual_factor_minus_one_H5": 0.008032085504273432,
+      "annual_factor_minus_one_H15": 0.0026702253848241695,
+      "annual_factor_minus_one_H30": 0.001334222617415673
+    },
+    {
+      "lambda": 1,
+      "mdd_increase": 0.01,
+      "terminal_geometric_wealth_compensation": 0.010050167084168058,
+      "annual_factor_minus_one_H5": 0.002002001334000267,
+      "annual_factor_minus_one_H15": 0.0006668889382798365,
+      "annual_factor_minus_one_H30": 0.0003333888950622428
+    }
+  ],
+  "lambda_interpretation": "Multiplicative compensation for a one-percentage-point increase in expected MDD, holding expected log terminal wealth minus lambda times expected MDD fixed. Annual entries are factors minus one, not additive CAGR percentage points.",
+  "fixed_rule_binomial_examples": [
+    {
+      "exceedances": 0,
+      "independent_paths": 24,
+      "point_estimate": 0.0,
+      "one_sided_95_upper": 0.11734615615494873,
+      "binomial_cdf_at_upper": 0.05000000000000005
+    },
+    {
+      "exceedances": 0,
+      "independent_paths": 30,
+      "point_estimate": 0.0,
+      "one_sided_95_upper": 0.09503385285530411,
+      "binomial_cdf_at_upper": 0.05000000000000005
+    },
+    {
+      "exceedances": 0,
+      "independent_paths": 120,
+      "point_estimate": 0.0,
+      "one_sided_95_upper": 0.024655401055656376,
+      "binomial_cdf_at_upper": 0.05000000000000005
+    },
+    {
+      "exceedances": 8,
+      "independent_paths": 80,
+      "point_estimate": 0.1,
+      "one_sided_95_upper": 0.17320462604366654,
+      "binomial_cdf_at_upper": 0.049999999999999795
+    },
+    {
+      "exceedances": 12,
+      "independent_paths": 120,
+      "point_estimate": 0.1,
+      "one_sided_95_upper": 0.15698351392816026,
+      "binomial_cdf_at_upper": 0.05000000000000021
+    },
+    {
+      "exceedances": 6,
+      "independent_paths": 120,
+      "point_estimate": 0.05,
+      "one_sided_95_upper": 0.09629631737693807,
+      "binomial_cdf_at_upper": 0.04999999999999976
+    },
+    {
+      "exceedances": 7,
+      "independent_paths": 120,
+      "point_estimate": 0.058333333333333334,
+      "one_sided_95_upper": 0.10677172541532226,
+      "binomial_cdf_at_upper": 0.050000000000000405
+    }
+  ],
+  "binomial_scope": "One-sided pointwise exact coverage requires a fixed strategy evaluated on independent identically distributed complete paths, without selection on these evaluation outcomes. These examples do not certify V1 or a new policy.",
+  "maximum_k_at_n120_for_upper_le_10pct": 6,
+  "minimum_zero_exceedance_n_for_upper_le_10pct": 29,
+  "zero_exceedance_bonferroni_M232_upper": {
+    "80": 0.10015330635806874,
+    "120": 0.06793610866362765
+  },
+  "bonferroni_scope": "Illustration for one H,L and 232 finite strategies fixed independently of the evaluation sample. Not valid for the full learned forecast/policy family without further coverage work.",
+  "same_mean_mdd_counterexample": {
+    "steady_loss": {
+      "wealth_paths": [
+        [
+          100,
+          90,
+          100
+        ]
+      ],
+      "probabilities": [
+        1.0
+      ],
+      "mdd_by_outcome": [
+        0.1
+      ],
+      "expected_log_terminal_ratio": 0.0,
+      "mean_mdd": 0.1,
+      "tolerance": 0.25,
+      "exceedance_probability": 0.0,
+      "expected_excess_mdd": 0.0,
+      "cvar_90_mdd": 0.1
+    },
+    "rare_deep_loss": {
+      "wealth_paths": [
+        [
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          50,
+          100
+        ]
+      ],
+      "probabilities": [
+        0.8,
+        0.2
+      ],
+      "mdd_by_outcome": [
+        0.0,
+        0.5
+      ],
+      "expected_log_terminal_ratio": 0.0,
+      "mean_mdd": 0.1,
+      "tolerance": 0.25,
+      "exceedance_probability": 0.2,
+      "expected_excess_mdd": 0.05,
+      "cvar_90_mdd": 0.5
+    }
+  },
+  "same_exceedance_probability_counterexample": {
+    "small_overshoot": {
+      "wealth_paths": [
+        [
+          100,
+          90,
+          100
+        ],
+        [
+          100,
+          79,
+          100
+        ]
+      ],
+      "probabilities": [
+        0.9,
+        0.1
+      ],
+      "mdd_by_outcome": [
+        0.1,
+        0.21
+      ],
+      "expected_log_terminal_ratio": 0.0,
+      "mean_mdd": 0.11100000000000002,
+      "tolerance": 0.2,
+      "exceedance_probability": 0.1,
+      "expected_excess_mdd": 0.000999999999999998,
+      "cvar_90_mdd": 0.21
+    },
+    "large_overshoot": {
+      "wealth_paths": [
+        [
+          100,
+          90,
+          100
+        ],
+        [
+          100,
+          20,
+          100
+        ]
+      ],
+      "probabilities": [
+        0.9,
+        0.1
+      ],
+      "mdd_by_outcome": [
+        0.1,
+        0.8
+      ],
+      "expected_log_terminal_ratio": 0.0,
+      "mean_mdd": 0.17000000000000004,
+      "tolerance": 0.2,
+      "exceedance_probability": 0.1,
+      "expected_excess_mdd": 0.06000000000000001,
+      "cvar_90_mdd": 0.8
+    }
+  },
+  "constructed_example_numerical_comparison_tolerance": 1e-12,
+  "inflation_log_cancellation_example": {
+    "nominal_terminal_a": [
+      110.0,
+      160.0,
+      92.0
+    ],
+    "nominal_terminal_b": [
+      106.0,
+      140.0,
+      99.0
+    ],
+    "common_price_index": [
+      1.1,
+      1.5,
+      0.97
+    ],
+    "nominal_expected_log_gap": 0.032413797073107424,
+    "real_expected_log_gap": 0.03241379707310734,
+    "scope": "Constructed outcomes verify a pathwise algebraic identity, not an empirical independence assumption."
+  },
+  "sunk_mdd_example": {
+    "past_mdd": 0.35,
+    "tolerance": 0.25,
+    "future_mdd_including_past_peak": [
+      0.1,
+      0.3
+    ],
+    "full_mdd_for_both_actions": [
+      0.35,
+      0.35
+    ],
+    "scope": "Two possible continuation-path MDD values; historical loss cannot be undone. Full-path exceedance is already certain after a past breach."
+  },
+  "repeated_annual_hazard_example": {
+    "conditional_new_breach_probability_each_year": 0.1,
+    "years": 30,
+    "full_horizon_breach_probability": 0.9576088417247838,
+    "scope": "Illustration with a constant conditional hazard given survival. A 10% annual/new-decision budget is not a 10% full-horizon budget. This is not a fitted market model."
+  },
+  "checks": {
+    "beta_quantile_reconciles_with_binomial_cdf_inversion": true,
+    "zero_exceedance_sample_size_boundary": true,
+    "counterexamples_recomputed_from_positive_wealth_paths": true,
+    "discrete_cvar_variational_definition_handles_atoms": true,
+    "partial_boundary_atom_cvar_27pct": true,
+    "equality_boundary_and_invalid_input_guards": true,
+    "inflation_term_cancels_without_independence_assumption": true
+  }
+}
