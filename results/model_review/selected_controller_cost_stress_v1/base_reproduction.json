@@ -1,0 +1,374 @@
+{
+  "bounded__full_development__C__fixed_target_learner": {
+    "behavior_state_Q_fields": 59,
+    "max_abs_error": 0.0,
+    "excluded_metadata_fields": [
+      "annual_prices"
+    ],
+    "parent_catalog_metadata": {
+      "finite_values_or_null": [
+        0.0,
+        0.001,
+        0.003,
+        0.01,
+        0.03,
+        0.1,
+        0.3,
+        1.0,
+        null
+      ],
+      "risk_first_indices": [
+        8
+      ]
+    },
+    "parent_catalog_risk_first_label_present": true,
+    "new_actual_price_catalog_size": 1
+  },
+  "price__full_development__C__risk_priced_learner": {
+    "behavior_state_Q_fields": 48,
+    "max_abs_error": 0.0,
+    "excluded_metadata_fields": [
+      "annual_prices"
+    ],
+    "parent_catalog_metadata": {
+      "finite_values_or_null": [
+        0.0,
+        0.001,
+        0.003,
+        0.01,
+        0.03,
+        0.1,
+        0.3,
+        1.0,
+        null
+      ],
+      "risk_first_indices": [
+        8
+      ]
+    },
+    "parent_catalog_risk_first_label_present": true,
+    "new_actual_price_catalog_size": 1
+  },
+  "bounded__full_development__C__expanded_target_learner": {
+    "behavior_state_Q_fields": 59,
+    "max_abs_error": 0.0,
+    "excluded_metadata_fields": [
+      "annual_prices"
+    ],
+    "parent_catalog_metadata": {
+      "finite_values_or_null": [
+        0.0,
+        0.001,
+        0.003,
+        0.01,
+        0.03,
+        0.1,
+        0.3,
+        1.0,
+        null
+      ],
+      "risk_first_indices": [
+        8
+      ]
+    },
+    "parent_catalog_risk_first_label_present": true,
+    "new_actual_price_catalog_size": 1
+  },
+  "price__full_development__C__annual_then_pending": {
+    "behavior_state_Q_fields": 36,
+    "max_abs_error": 0.0,
+    "excluded_metadata_fields": [],
+    "parent_catalog_metadata": null,
+    "parent_catalog_risk_first_label_present": false,
+    "new_actual_price_catalog_size": null
+  },
+  "bounded__outer_fold_1__C__fixed_target_learner": {
+    "behavior_state_Q_fields": 59,
+    "max_abs_error": 0.0,
+    "excluded_metadata_fields": [
+      "annual_prices"
+    ],
+    "parent_catalog_metadata": {
+      "finite_values_or_null": [
+        0.1
+      ],
+      "risk_first_indices": []
+    },
+    "parent_catalog_risk_first_label_present": false,
+    "new_actual_price_catalog_size": 1
+  },
+  "price__outer_fold_1__C__risk_priced_learner": {
+    "behavior_state_Q_fields": 48,
+    "max_abs_error": 0.0,
+    "excluded_metadata_fields": [
+      "annual_prices"
+    ],
+    "parent_catalog_metadata": {
+      "finite_values_or_null": [
+        0.1
+      ],
+      "risk_first_indices": []
+    },
+    "parent_catalog_risk_first_label_present": false,
+    "new_actual_price_catalog_size": 1
+  },
+  "bounded__outer_fold_1__C__expanded_target_learner": {
+    "behavior_state_Q_fields": 59,
+    "max_abs_error": 0.0,
+    "excluded_metadata_fields": [
+      "annual_prices"
+    ],
+    "parent_catalog_metadata": {
+      "finite_values_or_null": [
+        0.1
+      ],
+      "risk_first_indices": []
+    },
+    "parent_catalog_risk_first_label_present": false,
+    "new_actual_price_catalog_size": 1
+  },
+  "price__outer_fold_1__C__annual_then_pending": {
+    "behavior_state_Q_fields": 36,
+    "max_abs_error": 0.0,
+    "excluded_metadata_fields": [],
+    "parent_catalog_metadata": null,
+    "parent_catalog_risk_first_label_present": false,
+    "new_actual_price_catalog_size": null
+  },
+  "bounded__outer_fold_2__C__fixed_target_learner": {
+    "behavior_state_Q_fields": 59,
+    "max_abs_error": 0.0,
+    "excluded_metadata_fields": [
+      "annual_prices"
+    ],
+    "parent_catalog_metadata": {
+      "finite_values_or_null": [
+        0.03
+      ],
+      "risk_first_indices": []
+    },
+    "parent_catalog_risk_first_label_present": false,
+    "new_actual_price_catalog_size": 1
+  },
+  "price__outer_fold_2__C__risk_priced_learner": {
+    "behavior_state_Q_fields": 48,
+    "max_abs_error": 0.0,
+    "excluded_metadata_fields": [
+      "annual_prices"
+    ],
+    "parent_catalog_metadata": {
+      "finite_values_or_null": [
+        0.03
+      ],
+      "risk_first_indices": []
+    },
+    "parent_catalog_risk_first_label_present": false,
+    "new_actual_price_catalog_size": 1
+  },
+  "bounded__outer_fold_2__C__expanded_target_learner": {
+    "behavior_state_Q_fields": 59,
+    "max_abs_error": 0.0,
+    "excluded_metadata_fields": [
+      "annual_prices"
+    ],
+    "parent_catalog_metadata": {
+      "finite_values_or_null": [
+        0.03
+      ],
+      "risk_first_indices": []
+    },
+    "parent_catalog_risk_first_label_present": false,
+    "new_actual_price_catalog_size": 1
+  },
+  "price__outer_fold_2__C__annual_then_pending": {
+    "behavior_state_Q_fields": 36,
+    "max_abs_error": 0.0,
+    "excluded_metadata_fields": [],
+    "parent_catalog_metadata": null,
+    "parent_catalog_risk_first_label_present": false,
+    "new_actual_price_catalog_size": null
+  },
+  "bounded__outer_fold_3__C__fixed_target_learner": {
+    "behavior_state_Q_fields": 59,
+    "max_abs_error": 0.0,
+    "excluded_metadata_fields": [
+      "annual_prices"
+    ],
+    "parent_catalog_metadata": {
+      "finite_values_or_null": [
+        0.03
+      ],
+      "risk_first_indices": []
+    },
+    "parent_catalog_risk_first_label_present": false,
+    "new_actual_price_catalog_size": 1
+  },
+  "price__outer_fold_3__C__risk_priced_learner": {
+    "behavior_state_Q_fields": 48,
+    "max_abs_error": 0.0,
+    "excluded_metadata_fields": [
+      "annual_prices"
+    ],
+    "parent_catalog_metadata": {
+      "finite_values_or_null": [
+        0.03
+      ],
+      "risk_first_indices": []
+    },
+    "parent_catalog_risk_first_label_present": false,
+    "new_actual_price_catalog_size": 1
+  },
+  "bounded__outer_fold_3__C__expanded_target_learner": {
+    "behavior_state_Q_fields": 59,
+    "max_abs_error": 0.0,
+    "excluded_metadata_fields": [
+      "annual_prices"
+    ],
+    "parent_catalog_metadata": {
+      "finite_values_or_null": [
+        0.03
+      ],
+      "risk_first_indices": []
+    },
+    "parent_catalog_risk_first_label_present": false,
+    "new_actual_price_catalog_size": 1
+  },
+  "price__outer_fold_3__C__annual_then_pending": {
+    "behavior_state_Q_fields": 36,
+    "max_abs_error": 0.0,
+    "excluded_metadata_fields": [],
+    "parent_catalog_metadata": null,
+    "parent_catalog_risk_first_label_present": false,
+    "new_actual_price_catalog_size": null
+  },
+  "bounded__outer_fold_4__C__fixed_target_learner": {
+    "behavior_state_Q_fields": 59,
+    "max_abs_error": 0.0,
+    "excluded_metadata_fields": [
+      "annual_prices"
+    ],
+    "parent_catalog_metadata": {
+      "finite_values_or_null": [
+        0.03
+      ],
+      "risk_first_indices": []
+    },
+    "parent_catalog_risk_first_label_present": false,
+    "new_actual_price_catalog_size": 1
+  },
+  "price__outer_fold_4__C__risk_priced_learner": {
+    "behavior_state_Q_fields": 48,
+    "max_abs_error": 0.0,
+    "excluded_metadata_fields": [
+      "annual_prices"
+    ],
+    "parent_catalog_metadata": {
+      "finite_values_or_null": [
+        0.03
+      ],
+      "risk_first_indices": []
+    },
+    "parent_catalog_risk_first_label_present": false,
+    "new_actual_price_catalog_size": 1
+  },
+  "bounded__outer_fold_4__C__expanded_target_learner": {
+    "behavior_state_Q_fields": 59,
+    "max_abs_error": 0.0,
+    "excluded_metadata_fields": [
+      "annual_prices"
+    ],
+    "parent_catalog_metadata": {
+      "finite_values_or_null": [
+        0.03
+      ],
+      "risk_first_indices": []
+    },
+    "parent_catalog_risk_first_label_present": false,
+    "new_actual_price_catalog_size": 1
+  },
+  "price__outer_fold_4__C__annual_then_pending": {
+    "behavior_state_Q_fields": 36,
+    "max_abs_error": 0.0,
+    "excluded_metadata_fields": [],
+    "parent_catalog_metadata": null,
+    "parent_catalog_risk_first_label_present": false,
+    "new_actual_price_catalog_size": null
+  },
+  "bounded__outer_fold_5__C__fixed_target_learner": {
+    "behavior_state_Q_fields": 59,
+    "max_abs_error": 0.0,
+    "excluded_metadata_fields": [
+      "annual_prices"
+    ],
+    "parent_catalog_metadata": {
+      "finite_values_or_null": [
+        0.03
+      ],
+      "risk_first_indices": []
+    },
+    "parent_catalog_risk_first_label_present": false,
+    "new_actual_price_catalog_size": 1
+  },
+  "price__outer_fold_5__C__risk_priced_learner": {
+    "behavior_state_Q_fields": 48,
+    "max_abs_error": 0.0,
+    "excluded_metadata_fields": [
+      "annual_prices"
+    ],
+    "parent_catalog_metadata": {
+      "finite_values_or_null": [
+        0.03
+      ],
+      "risk_first_indices": []
+    },
+    "parent_catalog_risk_first_label_present": false,
+    "new_actual_price_catalog_size": 1
+  },
+  "bounded__outer_fold_5__C__expanded_target_learner": {
+    "behavior_state_Q_fields": 59,
+    "max_abs_error": 0.0,
+    "excluded_metadata_fields": [
+      "annual_prices"
+    ],
+    "parent_catalog_metadata": {
+      "finite_values_or_null": [
+        0.03
+      ],
+      "risk_first_indices": []
+    },
+    "parent_catalog_risk_first_label_present": false,
+    "new_actual_price_catalog_size": 1
+  },
+  "price__outer_fold_5__C__annual_then_pending": {
+    "behavior_state_Q_fields": 36,
+    "max_abs_error": 0.0,
+    "excluded_metadata_fields": [],
+    "parent_catalog_metadata": null,
+    "parent_catalog_risk_first_label_present": false,
+    "new_actual_price_catalog_size": null
+  },
+  "expanded__fixed_target_learner__CSV": {
+    "rows": 240,
+    "fields": 46,
+    "max_abs_error": 2.2737367544323206e-13,
+    "NULL_masks_and_identities_match": true
+  },
+  "expanded__expanded_target_learner__CSV": {
+    "rows": 240,
+    "fields": 46,
+    "max_abs_error": 2.2737367544323206e-13,
+    "NULL_masks_and_identities_match": true
+  },
+  "fixed__fixed_target_learner__CSV": {
+    "rows": 240,
+    "fields": 39,
+    "max_abs_error": 2.2737367544323206e-13,
+    "NULL_masks_and_identities_match": true
+  },
+  "fixed__annual_then_pending__CSV": {
+    "rows": 240,
+    "fields": 39,
+    "max_abs_error": 2.2737367544323206e-13,
+    "NULL_masks_and_identities_match": true
+  }
+}

@@ -1,0 +1,5488 @@
+{
+  "completed_utc": "2026-10-17T15:00:20.984079+00:00",
+  "status": "passed",
+  "checks_passed": 5207368,
+  "actual_arm_paths_replayed": 4800,
+  "actual_decisions_replayed": 144000,
+  "maximum_errors": {
+    "annual_price": 0.0,
+    "action_scores": 0.0,
+    "selected_score": 0.0,
+    "holdings": 4.547473508864641e-13,
+    "weights": 2.220446049250313e-16,
+    "nominal_wealth": 1.1368683772161603e-12,
+    "real_wealth": 5.684341886080801e-13,
+    "real_peak": 4.547473508864641e-13,
+    "current_drawdown": 5.551115123125783e-16,
+    "running_mdd": 3.3306690738754696e-16,
+    "cpi": 0.0,
+    "posttrade_holdings": 4.547473508864641e-13,
+    "fees": 3.552713678800501e-15,
+    "moved": 1.7053025658242404e-13,
+    "pretrade_wealth": 9.094947017729282e-13,
+    "fee_fraction": 3.2051726724102725e-18,
+    "moved_fraction": 2.1684043449710089e-16,
+    "pretrade_tv_drift": 1.249000902703301e-16,
+    "end_year_tv_drift": 1.249000902703301e-16,
+    "drawdown_at_trigger": 0.0,
+    "peak_at_trigger": 5.684341886080802e-14,
+    "real_wealth_at_trigger": 4.263256414560601e-14,
+    "added_severity": 0.0,
+    "terminal_excess": 0.0,
+    "end_weights": 2.220446049250313e-16,
+    "log_growth": 1.3183898417423734e-16,
+    "cagr": 1.3877787807814457e-16,
+    "mdd": 3.885780586188048e-16,
+    "volatility": 1.3877787807814457e-16,
+    "terminal_real": 5.684341886080801e-13,
+    "nominal_fees": 7.105427357601002e-15,
+    "nominal_moved": 4.547473508864641e-13,
+    "trade_fraction": 1.3877787807814457e-16,
+    "target_execution_fraction": 1.3877787807814457e-16,
+    "terminal_equity": 2.220446049250313e-16,
+    "terminal_bond": 1.8041124150158794e-16,
+    "terminal_bill": 1.5265566588595902e-16,
+    "excess": 1.942890293094024e-16,
+    "target_update_fraction": 0.0,
+    "fee": 3.552713678800501e-15,
+    "qg": 6.661338147750939e-16,
+    "score": 9.996344030316351e-17,
+    "mean_log_growth": 4.85722573273506e-17,
+    "median_cagr": 5.551115123125783e-17,
+    "p10_cagr": 0.0,
+    "median_mdd": 8.326672684688674e-17,
+    "p90_mdd": 0.0,
+    "cvar90_mdd": 1.1102230246251565e-16,
+    "breach_probability": 6.938893903907228e-17,
+    "mean_excess": 9.389190813724468e-17,
+    "mean_target_update_fraction": 0.0,
+    "mean_target_update_count": 0.0,
+    "mean_nominal_fees": 4.440892098500626e-16,
+    "mean_nominal_moved": 5.684341886080802e-14,
+    "mean_trade_fraction": 1.1102230246251565e-16,
+    "mean_target_execution_fraction": 1.1102230246251565e-16,
+    "mean_terminal_equity": 1.1102230246251565e-16,
+    "mean_terminal_bond": 5.551115123125783e-17,
+    "mean_terminal_bill": 1.1102230246251565e-16,
+    "breach": 0.0,
+    "target_update_count": 0.0,
+    "summary_log_growth": 6.635317295611287e-17,
+    "summary_cagr": 6.591949208711867e-17,
+    "summary_mdd": 1.1709383462843448e-16,
+    "summary_volatility": 8.844379222050502e-17,
+    "summary_terminal_real": 1.4210854715202004e-14,
+    "summary_nominal_fees": 2.220446049250313e-16,
+    "summary_nominal_moved": 1.4210854715202004e-14,
+    "summary_trade_fraction": 8.825405684032006e-17,
+    "summary_target_execution_fraction": 8.825405684032006e-17,
+    "summary_terminal_equity": 9.64939933512099e-17,
+    "summary_terminal_bond": 9.367506770274758e-17,
+    "summary_terminal_bill": 9.427137889761461e-17,
+    "summary_breach": 6.245004513516506e-17,
+    "summary_excess": 9.683280653011161e-17,
+    "summary_target_update_fraction": 0.0,
+    "summary_target_update_count": 0.0,
+    "fraction": 9.020562075079397e-17,
+    "both_fraction": 9.020562075079397e-17,
+    "outer_fold": 0.0,
+    "loss_tolerance": 0.0,
+    "candidate_local_index": 0.0,
+    "candidate_original232_index": 0.0,
+    "selection_training_n": 0.0,
+    "execution_review_reason": 0.0,
+    "execution_candidate_order": 0.0,
+    "original_H_total_price": 0.0,
+    "reference_training_breach_count": 0.0,
+    "training_breach_cap": 0.0,
+    "first_crossing": 0.0,
+    "price_order": 0.0,
+    "controller_order": 0.0,
+    "qg_hold": 0.0,
+    "qg_restore": 0.0,
+    "predicted_score": 0.0,
+    "predicted_growth_advantage_restore": 0.0,
+    "qg_actions": 0.0,
+    "targets": 0.0,
+    "loss_tolerances": 0.0,
+    "target_matrix": 0.0
+  },
+  "Q_subset_results": [
+    {
+      "cost_label": "zero",
+      "context": "full_development",
+      "policy": "fixed_target_learner",
+      "scenario_id": 1,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 120,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.1522410550067916,
+        null,
+        1.1536014967835386,
+        null
+      ],
+      "independent_bad": [
+        14,
+        -1,
+        12,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "zero",
+      "context": "full_development",
+      "policy": "fixed_target_learner",
+      "scenario_id": 1,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 120,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.607330058191332,
+        null,
+        0.6065026910216235,
+        null
+      ],
+      "independent_bad": [
+        4,
+        -1,
+        4,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "zero",
+      "context": "full_development",
+      "policy": "fixed_target_learner",
+      "scenario_id": 1,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 120,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.025562668910302566,
+        null,
+        0.024709008946912678,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "zero",
+      "context": "full_development",
+      "policy": "expanded_target_learner",
+      "scenario_id": 1,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 120,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.1522410550067916,
+        null,
+        1.1536014967835386,
+        null
+      ],
+      "independent_bad": [
+        14,
+        -1,
+        12,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "zero",
+      "context": "full_development",
+      "policy": "expanded_target_learner",
+      "scenario_id": 1,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 120,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.607330058191332,
+        null,
+        0.6065026910216235,
+        null
+      ],
+      "independent_bad": [
+        4,
+        -1,
+        4,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "zero",
+      "context": "full_development",
+      "policy": "expanded_target_learner",
+      "scenario_id": 1,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 120,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.025562668910302566,
+        null,
+        0.024709008946912678,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "zero",
+      "context": "outer_fold_1",
+      "policy": "fixed_target_learner",
+      "scenario_id": 1,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.0902680948619865,
+        null,
+        1.0942353616811886,
+        null
+      ],
+      "independent_bad": [
+        9,
+        -1,
+        9,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "zero",
+      "context": "outer_fold_1",
+      "policy": "fixed_target_learner",
+      "scenario_id": 1,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.5825649100995739,
+        null,
+        0.5793855701071285,
+        null
+      ],
+      "independent_bad": [
+        2,
+        -1,
+        2,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "zero",
+      "context": "outer_fold_1",
+      "policy": "fixed_target_learner",
+      "scenario_id": 1,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.027418207861865922,
+        null,
+        0.026668781393322915,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "zero",
+      "context": "outer_fold_1",
+      "policy": "expanded_target_learner",
+      "scenario_id": 1,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.0902680948619865,
+        null,
+        1.0942353616811886,
+        null
+      ],
+      "independent_bad": [
+        9,
+        -1,
+        9,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "zero",
+      "context": "outer_fold_1",
+      "policy": "expanded_target_learner",
+      "scenario_id": 1,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.5825649100995739,
+        null,
+        0.5793855701071285,
+        null
+      ],
+      "independent_bad": [
+        2,
+        -1,
+        2,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "zero",
+      "context": "outer_fold_1",
+      "policy": "expanded_target_learner",
+      "scenario_id": 1,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.027418207861865922,
+        null,
+        0.026668781393322915,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "zero",
+      "context": "outer_fold_2",
+      "policy": "fixed_target_learner",
+      "scenario_id": 3,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.1548445319269656,
+        null,
+        1.1530401613886019,
+        null
+      ],
+      "independent_bad": [
+        6,
+        -1,
+        6,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "zero",
+      "context": "outer_fold_2",
+      "policy": "fixed_target_learner",
+      "scenario_id": 3,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.6267873775472147,
+        null,
+        0.628359888013847,
+        null
+      ],
+      "independent_bad": [
+        7,
+        -1,
+        7,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "zero",
+      "context": "outer_fold_2",
+      "policy": "fixed_target_learner",
+      "scenario_id": 3,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.02987959293666571,
+        null,
+        0.02852316598128646,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "zero",
+      "context": "outer_fold_2",
+      "policy": "expanded_target_learner",
+      "scenario_id": 3,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.1548445319269656,
+        null,
+        1.1530401613886019,
+        null
+      ],
+      "independent_bad": [
+        6,
+        -1,
+        6,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "zero",
+      "context": "outer_fold_2",
+      "policy": "expanded_target_learner",
+      "scenario_id": 3,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.6267873775472147,
+        null,
+        0.628359888013847,
+        null
+      ],
+      "independent_bad": [
+        7,
+        -1,
+        7,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "zero",
+      "context": "outer_fold_2",
+      "policy": "expanded_target_learner",
+      "scenario_id": 3,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.02987959293666571,
+        null,
+        0.02852316598128646,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "zero",
+      "context": "outer_fold_3",
+      "policy": "fixed_target_learner",
+      "scenario_id": 8,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.178923225179097,
+        null,
+        1.180887163203961,
+        null
+      ],
+      "independent_bad": [
+        6,
+        -1,
+        6,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "zero",
+      "context": "outer_fold_3",
+      "policy": "fixed_target_learner",
+      "scenario_id": 8,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.6193110452134333,
+        null,
+        0.6232970402940208,
+        null
+      ],
+      "independent_bad": [
+        5,
+        -1,
+        5,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "zero",
+      "context": "outer_fold_3",
+      "policy": "fixed_target_learner",
+      "scenario_id": 8,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.02563991613238617,
+        null,
+        0.024515969953309777,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "zero",
+      "context": "outer_fold_3",
+      "policy": "expanded_target_learner",
+      "scenario_id": 8,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.178923225179097,
+        null,
+        1.180887163203961,
+        null
+      ],
+      "independent_bad": [
+        6,
+        -1,
+        6,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "zero",
+      "context": "outer_fold_3",
+      "policy": "expanded_target_learner",
+      "scenario_id": 8,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.6193110452134333,
+        null,
+        0.6232970402940208,
+        null
+      ],
+      "independent_bad": [
+        5,
+        -1,
+        5,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "zero",
+      "context": "outer_fold_3",
+      "policy": "expanded_target_learner",
+      "scenario_id": 8,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.02563991613238617,
+        null,
+        0.024515969953309777,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "zero",
+      "context": "outer_fold_4",
+      "policy": "fixed_target_learner",
+      "scenario_id": 2,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.1729155918647913,
+        null,
+        1.1709988065673171,
+        null
+      ],
+      "independent_bad": [
+        7,
+        -1,
+        7,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "zero",
+      "context": "outer_fold_4",
+      "policy": "fixed_target_learner",
+      "scenario_id": 2,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.6134473453248057,
+        null,
+        0.607664367659046,
+        null
+      ],
+      "independent_bad": [
+        3,
+        -1,
+        3,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "zero",
+      "context": "outer_fold_4",
+      "policy": "fixed_target_learner",
+      "scenario_id": 2,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.024317913898184523,
+        null,
+        0.02207740313817977,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "zero",
+      "context": "outer_fold_4",
+      "policy": "expanded_target_learner",
+      "scenario_id": 2,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.1729155918647913,
+        null,
+        1.1709988065673171,
+        null
+      ],
+      "independent_bad": [
+        7,
+        -1,
+        7,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "zero",
+      "context": "outer_fold_4",
+      "policy": "expanded_target_learner",
+      "scenario_id": 2,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.6134473453248057,
+        null,
+        0.607664367659046,
+        null
+      ],
+      "independent_bad": [
+        3,
+        -1,
+        3,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "zero",
+      "context": "outer_fold_4",
+      "policy": "expanded_target_learner",
+      "scenario_id": 2,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.024317913898184523,
+        null,
+        0.02207740313817977,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "zero",
+      "context": "outer_fold_5",
+      "policy": "fixed_target_learner",
+      "scenario_id": 4,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.0917785429742775,
+        null,
+        1.0891576235153306,
+        null
+      ],
+      "independent_bad": [
+        6,
+        -1,
+        6,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "zero",
+      "context": "outer_fold_5",
+      "policy": "fixed_target_learner",
+      "scenario_id": 4,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.5698281386013879,
+        null,
+        0.5626393206880286,
+        null
+      ],
+      "independent_bad": [
+        2,
+        -1,
+        2,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "zero",
+      "context": "outer_fold_5",
+      "policy": "fixed_target_learner",
+      "scenario_id": 4,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.02153611811101742,
+        null,
+        0.021243977418270443,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "zero",
+      "context": "outer_fold_5",
+      "policy": "expanded_target_learner",
+      "scenario_id": 4,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.0917785429742775,
+        null,
+        1.0891576235153306,
+        null
+      ],
+      "independent_bad": [
+        6,
+        -1,
+        6,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "zero",
+      "context": "outer_fold_5",
+      "policy": "expanded_target_learner",
+      "scenario_id": 4,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.5698281386013879,
+        null,
+        0.5626393206880286,
+        null
+      ],
+      "independent_bad": [
+        2,
+        -1,
+        2,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "zero",
+      "context": "outer_fold_5",
+      "policy": "expanded_target_learner",
+      "scenario_id": 4,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.02153611811101742,
+        null,
+        0.021243977418270443,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "half",
+      "context": "full_development",
+      "policy": "fixed_target_learner",
+      "scenario_id": 1,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 120,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.151006090511351,
+        null,
+        1.1522853619574605,
+        null
+      ],
+      "independent_bad": [
+        14,
+        -1,
+        12,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "half",
+      "context": "full_development",
+      "policy": "fixed_target_learner",
+      "scenario_id": 1,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 120,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.6066831607028393,
+        null,
+        0.6058464509917366,
+        null
+      ],
+      "independent_bad": [
+        4,
+        -1,
+        4,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "half",
+      "context": "full_development",
+      "policy": "fixed_target_learner",
+      "scenario_id": 1,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 120,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.025562668910302417,
+        null,
+        0.024654296901318103,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "half",
+      "context": "full_development",
+      "policy": "expanded_target_learner",
+      "scenario_id": 1,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 120,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.151006090511351,
+        null,
+        1.1522853619574605,
+        null
+      ],
+      "independent_bad": [
+        14,
+        -1,
+        12,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "half",
+      "context": "full_development",
+      "policy": "expanded_target_learner",
+      "scenario_id": 1,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 120,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.6066831607028393,
+        null,
+        0.6058464509917366,
+        null
+      ],
+      "independent_bad": [
+        4,
+        -1,
+        4,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "half",
+      "context": "full_development",
+      "policy": "expanded_target_learner",
+      "scenario_id": 1,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 120,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.025562668910302417,
+        null,
+        0.024654296901318103,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "half",
+      "context": "outer_fold_1",
+      "policy": "fixed_target_learner",
+      "scenario_id": 1,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.0889961846938612,
+        null,
+        1.0929008143142973,
+        null
+      ],
+      "independent_bad": [
+        9,
+        -1,
+        9,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "half",
+      "context": "outer_fold_1",
+      "policy": "fixed_target_learner",
+      "scenario_id": 1,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.5818741983168473,
+        null,
+        0.5786735156943194,
+        null
+      ],
+      "independent_bad": [
+        2,
+        -1,
+        2,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "half",
+      "context": "outer_fold_1",
+      "policy": "fixed_target_learner",
+      "scenario_id": 1,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.02741820786186563,
+        null,
+        0.026629586168168653,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "half",
+      "context": "outer_fold_1",
+      "policy": "expanded_target_learner",
+      "scenario_id": 1,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.0889961846938612,
+        null,
+        1.0929008143142973,
+        null
+      ],
+      "independent_bad": [
+        9,
+        -1,
+        9,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "half",
+      "context": "outer_fold_1",
+      "policy": "expanded_target_learner",
+      "scenario_id": 1,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.5818741983168473,
+        null,
+        0.5786735156943194,
+        null
+      ],
+      "independent_bad": [
+        2,
+        -1,
+        2,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "half",
+      "context": "outer_fold_1",
+      "policy": "expanded_target_learner",
+      "scenario_id": 1,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.02741820786186563,
+        null,
+        0.026629586168168653,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "half",
+      "context": "outer_fold_2",
+      "policy": "fixed_target_learner",
+      "scenario_id": 3,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.1535329955657347,
+        null,
+        1.1517122587469484,
+        null
+      ],
+      "independent_bad": [
+        6,
+        -1,
+        6,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "half",
+      "context": "outer_fold_2",
+      "policy": "fixed_target_learner",
+      "scenario_id": 3,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.6261645791336933,
+        null,
+        0.6277023726533103,
+        null
+      ],
+      "independent_bad": [
+        7,
+        -1,
+        7,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "half",
+      "context": "outer_fold_2",
+      "policy": "fixed_target_learner",
+      "scenario_id": 3,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.029879592936665648,
+        null,
+        0.028441471250475026,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "half",
+      "context": "outer_fold_2",
+      "policy": "expanded_target_learner",
+      "scenario_id": 3,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.1535329955657347,
+        null,
+        1.1517122587469484,
+        null
+      ],
+      "independent_bad": [
+        6,
+        -1,
+        6,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "half",
+      "context": "outer_fold_2",
+      "policy": "expanded_target_learner",
+      "scenario_id": 3,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.6261645791336933,
+        null,
+        0.6277023726533103,
+        null
+      ],
+      "independent_bad": [
+        7,
+        -1,
+        7,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "half",
+      "context": "outer_fold_2",
+      "policy": "expanded_target_learner",
+      "scenario_id": 3,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.029879592936665648,
+        null,
+        0.028441471250475026,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "half",
+      "context": "outer_fold_3",
+      "policy": "fixed_target_learner",
+      "scenario_id": 8,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.1776642769001935,
+        null,
+        1.1795859046368617,
+        null
+      ],
+      "independent_bad": [
+        6,
+        -1,
+        6,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "half",
+      "context": "outer_fold_3",
+      "policy": "fixed_target_learner",
+      "scenario_id": 8,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.6186387970995213,
+        null,
+        0.6225694720880057,
+        null
+      ],
+      "independent_bad": [
+        5,
+        -1,
+        5,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "half",
+      "context": "outer_fold_3",
+      "policy": "fixed_target_learner",
+      "scenario_id": 8,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.025639916132386132,
+        null,
+        0.024432307016354616,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "half",
+      "context": "outer_fold_3",
+      "policy": "expanded_target_learner",
+      "scenario_id": 8,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.1776642769001935,
+        null,
+        1.1795859046368617,
+        null
+      ],
+      "independent_bad": [
+        6,
+        -1,
+        6,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "half",
+      "context": "outer_fold_3",
+      "policy": "expanded_target_learner",
+      "scenario_id": 8,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.6186387970995213,
+        null,
+        0.6225694720880057,
+        null
+      ],
+      "independent_bad": [
+        5,
+        -1,
+        5,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "half",
+      "context": "outer_fold_3",
+      "policy": "expanded_target_learner",
+      "scenario_id": 8,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.025639916132386132,
+        null,
+        0.024432307016354616,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "half",
+      "context": "outer_fold_4",
+      "policy": "fixed_target_learner",
+      "scenario_id": 2,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.1715837872510122,
+        null,
+        1.1696450259089632,
+        null
+      ],
+      "independent_bad": [
+        7,
+        -1,
+        7,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "half",
+      "context": "outer_fold_4",
+      "policy": "fixed_target_learner",
+      "scenario_id": 2,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.6127153890219259,
+        null,
+        0.6069073212583529,
+        null
+      ],
+      "independent_bad": [
+        3,
+        -1,
+        3,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "half",
+      "context": "outer_fold_4",
+      "policy": "fixed_target_learner",
+      "scenario_id": 2,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.024317913898184648,
+        null,
+        0.02191252083941937,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "half",
+      "context": "outer_fold_4",
+      "policy": "expanded_target_learner",
+      "scenario_id": 2,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.1715837872510122,
+        null,
+        1.1696450259089632,
+        null
+      ],
+      "independent_bad": [
+        7,
+        -1,
+        7,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "half",
+      "context": "outer_fold_4",
+      "policy": "expanded_target_learner",
+      "scenario_id": 2,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.6127153890219259,
+        null,
+        0.6069073212583529,
+        null
+      ],
+      "independent_bad": [
+        3,
+        -1,
+        3,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "half",
+      "context": "outer_fold_4",
+      "policy": "expanded_target_learner",
+      "scenario_id": 2,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.024317913898184648,
+        null,
+        0.02191252083941937,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "half",
+      "context": "outer_fold_5",
+      "policy": "fixed_target_learner",
+      "scenario_id": 4,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.0904534653559756,
+        null,
+        1.087816368149814,
+        null
+      ],
+      "independent_bad": [
+        6,
+        -1,
+        6,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "half",
+      "context": "outer_fold_5",
+      "policy": "fixed_target_learner",
+      "scenario_id": 4,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.5690430344854639,
+        null,
+        0.5618263024937192,
+        null
+      ],
+      "independent_bad": [
+        2,
+        -1,
+        2,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "half",
+      "context": "outer_fold_5",
+      "policy": "fixed_target_learner",
+      "scenario_id": 4,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.021536118111017414,
+        null,
+        0.021192379858932364,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "half",
+      "context": "outer_fold_5",
+      "policy": "expanded_target_learner",
+      "scenario_id": 4,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.0904534653559756,
+        null,
+        1.087816368149814,
+        null
+      ],
+      "independent_bad": [
+        6,
+        -1,
+        6,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "half",
+      "context": "outer_fold_5",
+      "policy": "expanded_target_learner",
+      "scenario_id": 4,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.5690430344854639,
+        null,
+        0.5618263024937192,
+        null
+      ],
+      "independent_bad": [
+        2,
+        -1,
+        2,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "half",
+      "context": "outer_fold_5",
+      "policy": "expanded_target_learner",
+      "scenario_id": 4,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.021536118111017414,
+        null,
+        0.021192379858932364,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "base",
+      "context": "full_development",
+      "policy": "fixed_target_learner",
+      "scenario_id": 1,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 120,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.1497726231406318,
+        null,
+        1.154792542121595,
+        null
+      ],
+      "independent_bad": [
+        14,
+        -1,
+        14,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "base",
+      "context": "full_development",
+      "policy": "fixed_target_learner",
+      "scenario_id": 1,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 120,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.6060370522730637,
+        null,
+        0.605191012128984,
+        null
+      ],
+      "independent_bad": [
+        4,
+        -1,
+        4,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "base",
+      "context": "full_development",
+      "policy": "fixed_target_learner",
+      "scenario_id": 1,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 120,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.025562668910302344,
+        null,
+        0.024599656994079858,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "base",
+      "context": "full_development",
+      "policy": "expanded_target_learner",
+      "scenario_id": 1,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 120,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.1497726231406318,
+        null,
+        1.154792542121595,
+        null
+      ],
+      "independent_bad": [
+        14,
+        -1,
+        14,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "base",
+      "context": "full_development",
+      "policy": "expanded_target_learner",
+      "scenario_id": 1,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 120,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.6060370522730637,
+        null,
+        0.605191012128984,
+        null
+      ],
+      "independent_bad": [
+        4,
+        -1,
+        4,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "base",
+      "context": "full_development",
+      "policy": "expanded_target_learner",
+      "scenario_id": 1,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 120,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.025562668910302344,
+        null,
+        0.024599656994079858,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "base",
+      "context": "outer_fold_1",
+      "policy": "fixed_target_learner",
+      "scenario_id": 1,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.0877258610322798,
+        null,
+        1.0915679269754894,
+        null
+      ],
+      "independent_bad": [
+        9,
+        -1,
+        9,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "base",
+      "context": "outer_fold_1",
+      "policy": "fixed_target_learner",
+      "scenario_id": 1,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.5811843631332562,
+        null,
+        0.5779623718135362,
+        null
+      ],
+      "independent_bad": [
+        2,
+        -1,
+        2,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "base",
+      "context": "outer_fold_1",
+      "policy": "fixed_target_learner",
+      "scenario_id": 1,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.0274182078618658,
+        null,
+        0.026590413889842724,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "base",
+      "context": "outer_fold_1",
+      "policy": "expanded_target_learner",
+      "scenario_id": 1,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.0877258610322798,
+        null,
+        1.0915679269754894,
+        null
+      ],
+      "independent_bad": [
+        9,
+        -1,
+        9,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "base",
+      "context": "outer_fold_1",
+      "policy": "expanded_target_learner",
+      "scenario_id": 1,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.5811843631332562,
+        null,
+        0.5779623718135362,
+        null
+      ],
+      "independent_bad": [
+        2,
+        -1,
+        2,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "base",
+      "context": "outer_fold_1",
+      "policy": "expanded_target_learner",
+      "scenario_id": 1,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.0274182078618658,
+        null,
+        0.026590413889842724,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "base",
+      "context": "outer_fold_2",
+      "policy": "fixed_target_learner",
+      "scenario_id": 3,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.1522231123795876,
+        null,
+        1.1503860149584224,
+        null
+      ],
+      "independent_bad": [
+        6,
+        -1,
+        6,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "base",
+      "context": "outer_fold_2",
+      "policy": "fixed_target_learner",
+      "scenario_id": 3,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.6255425613677923,
+        null,
+        0.6270456789035325,
+        null
+      ],
+      "independent_bad": [
+        7,
+        -1,
+        7,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "base",
+      "context": "outer_fold_2",
+      "policy": "fixed_target_learner",
+      "scenario_id": 3,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.029879592936665793,
+        null,
+        0.02835989221863615,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "base",
+      "context": "outer_fold_2",
+      "policy": "expanded_target_learner",
+      "scenario_id": 3,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.1522231123795876,
+        null,
+        1.1503860149584224,
+        null
+      ],
+      "independent_bad": [
+        6,
+        -1,
+        6,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "base",
+      "context": "outer_fold_2",
+      "policy": "expanded_target_learner",
+      "scenario_id": 3,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.6255425613677923,
+        null,
+        0.6270456789035325,
+        null
+      ],
+      "independent_bad": [
+        7,
+        -1,
+        7,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "base",
+      "context": "outer_fold_2",
+      "policy": "expanded_target_learner",
+      "scenario_id": 3,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.029879592936665793,
+        null,
+        0.02835989221863615,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "base",
+      "context": "outer_fold_3",
+      "policy": "fixed_target_learner",
+      "scenario_id": 8,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.1764068610385745,
+        null,
+        1.1782862293313137,
+        null
+      ],
+      "independent_bad": [
+        6,
+        -1,
+        6,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "base",
+      "context": "outer_fold_3",
+      "policy": "fixed_target_learner",
+      "scenario_id": 8,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.617943818158273,
+        null,
+        0.621842773449477,
+        null
+      ],
+      "independent_bad": [
+        5,
+        -1,
+        5,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "base",
+      "context": "outer_fold_3",
+      "policy": "fixed_target_learner",
+      "scenario_id": 8,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.02563991613238616,
+        null,
+        0.024348751972318727,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "base",
+      "context": "outer_fold_3",
+      "policy": "expanded_target_learner",
+      "scenario_id": 8,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.1764068610385745,
+        null,
+        1.1782862293313137,
+        null
+      ],
+      "independent_bad": [
+        6,
+        -1,
+        6,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "base",
+      "context": "outer_fold_3",
+      "policy": "expanded_target_learner",
+      "scenario_id": 8,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.617943818158273,
+        null,
+        0.621842773449477,
+        null
+      ],
+      "independent_bad": [
+        5,
+        -1,
+        5,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "base",
+      "context": "outer_fold_3",
+      "policy": "expanded_target_learner",
+      "scenario_id": 8,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.02563991613238616,
+        null,
+        0.024348751972318727,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "base",
+      "context": "outer_fold_4",
+      "policy": "fixed_target_learner",
+      "scenario_id": 2,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.1702536052396375,
+        null,
+        1.166570014861425,
+        null
+      ],
+      "independent_bad": [
+        7,
+        -1,
+        7,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "base",
+      "context": "outer_fold_4",
+      "policy": "fixed_target_learner",
+      "scenario_id": 2,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.6119843188818039,
+        null,
+        0.6061512010324422,
+        null
+      ],
+      "independent_bad": [
+        3,
+        -1,
+        3,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "base",
+      "context": "outer_fold_4",
+      "policy": "fixed_target_learner",
+      "scenario_id": 2,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.024317913898184527,
+        null,
+        0.021747837807843378,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "base",
+      "context": "outer_fold_4",
+      "policy": "expanded_target_learner",
+      "scenario_id": 2,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.1702536052396375,
+        null,
+        1.166570014861425,
+        null
+      ],
+      "independent_bad": [
+        7,
+        -1,
+        7,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "base",
+      "context": "outer_fold_4",
+      "policy": "expanded_target_learner",
+      "scenario_id": 2,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.6119843188818039,
+        null,
+        0.6061512010324422,
+        null
+      ],
+      "independent_bad": [
+        3,
+        -1,
+        3,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "base",
+      "context": "outer_fold_4",
+      "policy": "expanded_target_learner",
+      "scenario_id": 2,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.024317913898184527,
+        null,
+        0.021747837807843378,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "base",
+      "context": "outer_fold_5",
+      "policy": "fixed_target_learner",
+      "scenario_id": 4,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.0891300681708505,
+        null,
+        1.0864768152772868,
+        null
+      ],
+      "independent_bad": [
+        6,
+        -1,
+        6,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "base",
+      "context": "outer_fold_5",
+      "policy": "fixed_target_learner",
+      "scenario_id": 4,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.5682589227680318,
+        null,
+        0.5610143203518215,
+        null
+      ],
+      "independent_bad": [
+        2,
+        -1,
+        2,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "base",
+      "context": "outer_fold_5",
+      "policy": "fixed_target_learner",
+      "scenario_id": 4,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.02153611811101749,
+        null,
+        0.021140824749033605,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "base",
+      "context": "outer_fold_5",
+      "policy": "expanded_target_learner",
+      "scenario_id": 4,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.0891300681708505,
+        null,
+        1.0864768152772868,
+        null
+      ],
+      "independent_bad": [
+        6,
+        -1,
+        6,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "base",
+      "context": "outer_fold_5",
+      "policy": "expanded_target_learner",
+      "scenario_id": 4,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.5682589227680318,
+        null,
+        0.5610143203518215,
+        null
+      ],
+      "independent_bad": [
+        2,
+        -1,
+        2,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "base",
+      "context": "outer_fold_5",
+      "policy": "expanded_target_learner",
+      "scenario_id": 4,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.02153611811101749,
+        null,
+        0.021140824749033605,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "double",
+      "context": "full_development",
+      "policy": "fixed_target_learner",
+      "scenario_id": 1,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 120,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.1473101683208315,
+        null,
+        1.1504538182557102,
+        null
+      ],
+      "independent_bad": [
+        14,
+        -1,
+        14,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "double",
+      "context": "full_development",
+      "policy": "fixed_target_learner",
+      "scenario_id": 1,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 120,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.6047471966333998,
+        null,
+        0.6038825318992094,
+        null
+      ],
+      "independent_bad": [
+        4,
+        -1,
+        4,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "double",
+      "context": "full_development",
+      "policy": "fixed_target_learner",
+      "scenario_id": 1,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 120,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.025562668910302396,
+        null,
+        0.02449059302440767,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "double",
+      "context": "full_development",
+      "policy": "expanded_target_learner",
+      "scenario_id": 1,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 120,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.1473101683208315,
+        null,
+        1.1504538182557102,
+        null
+      ],
+      "independent_bad": [
+        14,
+        -1,
+        14,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "double",
+      "context": "full_development",
+      "policy": "expanded_target_learner",
+      "scenario_id": 1,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 120,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.6047471966333998,
+        null,
+        0.6038825318992094,
+        null
+      ],
+      "independent_bad": [
+        4,
+        -1,
+        4,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "double",
+      "context": "full_development",
+      "policy": "expanded_target_learner",
+      "scenario_id": 1,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 120,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.025562668910302396,
+        null,
+        0.02449059302440767,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "double",
+      "context": "outer_fold_1",
+      "policy": "fixed_target_learner",
+      "scenario_id": 1,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.085189960096505,
+        null,
+        1.0889071187113224,
+        null
+      ],
+      "independent_bad": [
+        9,
+        -1,
+        9,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "double",
+      "context": "outer_fold_1",
+      "policy": "fixed_target_learner",
+      "scenario_id": 1,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.5798073155407203,
+        null,
+        0.5765428083034556,
+        null
+      ],
+      "independent_bad": [
+        2,
+        -1,
+        2,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "double",
+      "context": "outer_fold_1",
+      "policy": "fixed_target_learner",
+      "scenario_id": 1,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.027418207861865676,
+        null,
+        0.026512138092996063,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "double",
+      "context": "outer_fold_1",
+      "policy": "expanded_target_learner",
+      "scenario_id": 1,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.085189960096505,
+        null,
+        1.0889071187113224,
+        null
+      ],
+      "independent_bad": [
+        9,
+        -1,
+        9,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "double",
+      "context": "outer_fold_1",
+      "policy": "expanded_target_learner",
+      "scenario_id": 1,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.5798073155407203,
+        null,
+        0.5765428083034556,
+        null
+      ],
+      "independent_bad": [
+        2,
+        -1,
+        2,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "double",
+      "context": "outer_fold_1",
+      "policy": "expanded_target_learner",
+      "scenario_id": 1,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.027418207861865676,
+        null,
+        0.026512138092996063,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "double",
+      "context": "outer_fold_2",
+      "policy": "fixed_target_learner",
+      "scenario_id": 3,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.1496082917845925,
+        null,
+        1.147738490237441,
+        null
+      ],
+      "independent_bad": [
+        6,
+        -1,
+        6,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "double",
+      "context": "outer_fold_2",
+      "policy": "fixed_target_learner",
+      "scenario_id": 3,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.6243008615718731,
+        null,
+        0.6257347497361138,
+        null
+      ],
+      "independent_bad": [
+        7,
+        -1,
+        7,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "double",
+      "context": "outer_fold_2",
+      "policy": "fixed_target_learner",
+      "scenario_id": 3,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.02987959293666555,
+        null,
+        0.02819708026904273,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "double",
+      "context": "outer_fold_2",
+      "policy": "expanded_target_learner",
+      "scenario_id": 3,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.1496082917845925,
+        null,
+        1.147738490237441,
+        null
+      ],
+      "independent_bad": [
+        6,
+        -1,
+        6,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "double",
+      "context": "outer_fold_2",
+      "policy": "expanded_target_learner",
+      "scenario_id": 3,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.6243008615718731,
+        null,
+        0.6257347497361138,
+        null
+      ],
+      "independent_bad": [
+        7,
+        -1,
+        7,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "double",
+      "context": "outer_fold_2",
+      "policy": "expanded_target_learner",
+      "scenario_id": 3,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.02987959293666555,
+        null,
+        0.02819708026904273,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "double",
+      "context": "outer_fold_3",
+      "policy": "fixed_target_learner",
+      "scenario_id": 8,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.1738966144990675,
+        null,
+        1.175691616068909,
+        null
+      ],
+      "independent_bad": [
+        6,
+        -1,
+        6,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "double",
+      "context": "outer_fold_3",
+      "policy": "fixed_target_learner",
+      "scenario_id": 8,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.6166056610581889,
+        null,
+        0.6203919779939282,
+        null
+      ],
+      "independent_bad": [
+        5,
+        -1,
+        5,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "double",
+      "context": "outer_fold_3",
+      "policy": "fixed_target_learner",
+      "scenario_id": 8,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.02563991613238618,
+        null,
+        0.024181964728076714,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "double",
+      "context": "outer_fold_3",
+      "policy": "expanded_target_learner",
+      "scenario_id": 8,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.1738966144990675,
+        null,
+        1.175691616068909,
+        null
+      ],
+      "independent_bad": [
+        6,
+        -1,
+        6,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "double",
+      "context": "outer_fold_3",
+      "policy": "expanded_target_learner",
+      "scenario_id": 8,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.6166056610581889,
+        null,
+        0.6203919779939282,
+        null
+      ],
+      "independent_bad": [
+        5,
+        -1,
+        5,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "double",
+      "context": "outer_fold_3",
+      "policy": "expanded_target_learner",
+      "scenario_id": 8,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.02563991613238618,
+        null,
+        0.024181964728076714,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "double",
+      "context": "outer_fold_4",
+      "policy": "fixed_target_learner",
+      "scenario_id": 2,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.167598096475185,
+        null,
+        1.1638727618329192,
+        null
+      ],
+      "independent_bad": [
+        7,
+        -1,
+        7,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "double",
+      "context": "outer_fold_4",
+      "policy": "fixed_target_learner",
+      "scenario_id": 2,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.6105248302156608,
+        null,
+        0.6046417318648855,
+        null
+      ],
+      "independent_bad": [
+        3,
+        -1,
+        3,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "double",
+      "context": "outer_fold_4",
+      "policy": "fixed_target_learner",
+      "scenario_id": 2,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.024317913898184513,
+        null,
+        0.021419068094153077,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "double",
+      "context": "outer_fold_4",
+      "policy": "expanded_target_learner",
+      "scenario_id": 2,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.167598096475185,
+        null,
+        1.1638727618329192,
+        null
+      ],
+      "independent_bad": [
+        7,
+        -1,
+        7,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "double",
+      "context": "outer_fold_4",
+      "policy": "expanded_target_learner",
+      "scenario_id": 2,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.6105248302156608,
+        null,
+        0.6046417318648855,
+        null
+      ],
+      "independent_bad": [
+        3,
+        -1,
+        3,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "double",
+      "context": "outer_fold_4",
+      "policy": "expanded_target_learner",
+      "scenario_id": 2,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.024317913898184513,
+        null,
+        0.021419068094153077,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "double",
+      "context": "outer_fold_5",
+      "policy": "fixed_target_learner",
+      "scenario_id": 4,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.0864883010872644,
+        null,
+        1.0838028028017985,
+        null
+      ],
+      "independent_bad": [
+        6,
+        -1,
+        6,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "double",
+      "context": "outer_fold_5",
+      "policy": "fixed_target_learner",
+      "scenario_id": 4,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.566693668658227,
+        null,
+        0.5593934559485811,
+        null
+      ],
+      "independent_bad": [
+        2,
+        -1,
+        2,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "double",
+      "context": "outer_fold_5",
+      "policy": "fixed_target_learner",
+      "scenario_id": 4,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.021062883099098456,
+        null,
+        0.021155393449312807,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "double",
+      "context": "outer_fold_5",
+      "policy": "expanded_target_learner",
+      "scenario_id": 4,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.0864883010872644,
+        null,
+        1.0838028028017985,
+        null
+      ],
+      "independent_bad": [
+        6,
+        -1,
+        6,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "double",
+      "context": "outer_fold_5",
+      "policy": "expanded_target_learner",
+      "scenario_id": 4,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.566693668658227,
+        null,
+        0.5593934559485811,
+        null
+      ],
+      "independent_bad": [
+        2,
+        -1,
+        2,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "double",
+      "context": "outer_fold_5",
+      "policy": "expanded_target_learner",
+      "scenario_id": 4,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.021062883099098456,
+        null,
+        0.021155393449312807,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "quadruple",
+      "context": "full_development",
+      "policy": "fixed_target_learner",
+      "scenario_id": 1,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 120,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.1423677514549944,
+        null,
+        1.145242437473547,
+        null
+      ],
+      "independent_bad": [
+        15,
+        -1,
+        15,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "quadruple",
+      "context": "full_development",
+      "policy": "fixed_target_learner",
+      "scenario_id": 1,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 120,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.6021415416335015,
+        null,
+        0.6012397708129363,
+        null
+      ],
+      "independent_bad": [
+        5,
+        -1,
+        5,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "quadruple",
+      "context": "full_development",
+      "policy": "fixed_target_learner",
+      "scenario_id": 1,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 120,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.02556266891030247,
+        null,
+        0.024273324493425067,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "quadruple",
+      "context": "full_development",
+      "policy": "expanded_target_learner",
+      "scenario_id": 1,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 120,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.1423677514549944,
+        null,
+        1.145242437473547,
+        null
+      ],
+      "independent_bad": [
+        15,
+        -1,
+        15,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "quadruple",
+      "context": "full_development",
+      "policy": "expanded_target_learner",
+      "scenario_id": 1,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 120,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.6021415416335015,
+        null,
+        0.6012397708129363,
+        null
+      ],
+      "independent_bad": [
+        5,
+        -1,
+        5,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "quadruple",
+      "context": "full_development",
+      "policy": "expanded_target_learner",
+      "scenario_id": 1,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 120,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.02556266891030247,
+        null,
+        0.024273324493425067,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "quadruple",
+      "context": "outer_fold_1",
+      "policy": "fixed_target_learner",
+      "scenario_id": 1,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.0800716859886006,
+        null,
+        1.0836052770446298,
+        null
+      ],
+      "independent_bad": [
+        10,
+        -1,
+        9,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "quadruple",
+      "context": "outer_fold_1",
+      "policy": "fixed_target_learner",
+      "scenario_id": 1,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.5770636625670528,
+        null,
+        0.5737145271634495,
+        null
+      ],
+      "independent_bad": [
+        2,
+        -1,
+        2,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "quadruple",
+      "context": "outer_fold_1",
+      "policy": "fixed_target_learner",
+      "scenario_id": 1,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.02741820786186581,
+        null,
+        0.026355860975102344,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "quadruple",
+      "context": "outer_fold_1",
+      "policy": "expanded_target_learner",
+      "scenario_id": 1,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.0800716859886006,
+        null,
+        1.0836052770446298,
+        null
+      ],
+      "independent_bad": [
+        10,
+        -1,
+        9,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "quadruple",
+      "context": "outer_fold_1",
+      "policy": "expanded_target_learner",
+      "scenario_id": 1,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.5770636625670528,
+        null,
+        0.5737145271634495,
+        null
+      ],
+      "independent_bad": [
+        2,
+        -1,
+        2,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "quadruple",
+      "context": "outer_fold_1",
+      "policy": "expanded_target_learner",
+      "scenario_id": 1,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.02741820786186581,
+        null,
+        0.026355860975102344,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "quadruple",
+      "context": "outer_fold_2",
+      "policy": "fixed_target_learner",
+      "scenario_id": 3,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.144398339800148,
+        null,
+        1.142463201202058,
+        null
+      ],
+      "independent_bad": [
+        6,
+        -1,
+        6,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "quadruple",
+      "context": "outer_fold_2",
+      "policy": "fixed_target_learner",
+      "scenario_id": 3,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.6218267617145499,
+        null,
+        0.6231226794785258,
+        null
+      ],
+      "independent_bad": [
+        7,
+        -1,
+        7,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "quadruple",
+      "context": "outer_fold_2",
+      "policy": "fixed_target_learner",
+      "scenario_id": 3,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.02943160711807726,
+        null,
+        0.028079894455489213,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "quadruple",
+      "context": "outer_fold_2",
+      "policy": "expanded_target_learner",
+      "scenario_id": 3,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.144398339800148,
+        null,
+        1.142463201202058,
+        null
+      ],
+      "independent_bad": [
+        6,
+        -1,
+        6,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "quadruple",
+      "context": "outer_fold_2",
+      "policy": "expanded_target_learner",
+      "scenario_id": 3,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.6218267617145499,
+        null,
+        0.6231226794785258,
+        null
+      ],
+      "independent_bad": [
+        7,
+        -1,
+        7,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "quadruple",
+      "context": "outer_fold_2",
+      "policy": "expanded_target_learner",
+      "scenario_id": 3,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.02943160711807726,
+        null,
+        0.028079894455489213,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "quadruple",
+      "context": "outer_fold_3",
+      "policy": "fixed_target_learner",
+      "scenario_id": 8,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.1688943803997385,
+        null,
+        1.1705212546212957,
+        null
+      ],
+      "independent_bad": [
+        6,
+        -1,
+        6,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "quadruple",
+      "context": "outer_fold_3",
+      "policy": "fixed_target_learner",
+      "scenario_id": 8,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.6139389344549884,
+        null,
+        0.6175007497851259,
+        null
+      ],
+      "independent_bad": [
+        5,
+        -1,
+        5,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "quadruple",
+      "context": "outer_fold_3",
+      "policy": "fixed_target_learner",
+      "scenario_id": 8,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.025639916132385976,
+        null,
+        0.023849675800527558,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "quadruple",
+      "context": "outer_fold_3",
+      "policy": "expanded_target_learner",
+      "scenario_id": 8,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.1688943803997385,
+        null,
+        1.1705212546212957,
+        null
+      ],
+      "independent_bad": [
+        6,
+        -1,
+        6,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "quadruple",
+      "context": "outer_fold_3",
+      "policy": "expanded_target_learner",
+      "scenario_id": 8,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.6139389344549884,
+        null,
+        0.6175007497851259,
+        null
+      ],
+      "independent_bad": [
+        5,
+        -1,
+        5,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "quadruple",
+      "context": "outer_fold_3",
+      "policy": "expanded_target_learner",
+      "scenario_id": 8,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.025639916132385976,
+        null,
+        0.023849675800527558,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "quadruple",
+      "context": "outer_fold_4",
+      "policy": "fixed_target_learner",
+      "scenario_id": 2,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.1623064133717667,
+        null,
+        1.1584979915746134,
+        null
+      ],
+      "independent_bad": [
+        7,
+        -1,
+        7,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "quadruple",
+      "context": "outer_fold_4",
+      "policy": "fixed_target_learner",
+      "scenario_id": 2,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.6073026632805535,
+        null,
+        0.6016881633171911,
+        null
+      ],
+      "independent_bad": [
+        3,
+        -1,
+        3,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "quadruple",
+      "context": "outer_fold_4",
+      "policy": "fixed_target_learner",
+      "scenario_id": 2,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.024317913898184492,
+        null,
+        0.02076390394952675,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "quadruple",
+      "context": "outer_fold_4",
+      "policy": "expanded_target_learner",
+      "scenario_id": 2,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.1623064133717667,
+        null,
+        1.1584979915746134,
+        null
+      ],
+      "independent_bad": [
+        7,
+        -1,
+        7,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "quadruple",
+      "context": "outer_fold_4",
+      "policy": "expanded_target_learner",
+      "scenario_id": 2,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.6073026632805535,
+        null,
+        0.6016881633171911,
+        null
+      ],
+      "independent_bad": [
+        3,
+        -1,
+        3,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "quadruple",
+      "context": "outer_fold_4",
+      "policy": "expanded_target_learner",
+      "scenario_id": 2,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.024317913898184492,
+        null,
+        0.02076390394952675,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "quadruple",
+      "context": "outer_fold_5",
+      "policy": "fixed_target_learner",
+      "scenario_id": 4,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.081224782897272,
+        null,
+        1.0784750563924228,
+        null
+      ],
+      "independent_bad": [
+        6,
+        -1,
+        6,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "quadruple",
+      "context": "outer_fold_5",
+      "policy": "fixed_target_learner",
+      "scenario_id": 4,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.563574982946723,
+        null,
+        0.5561640690458881,
+        null
+      ],
+      "independent_bad": [
+        2,
+        -1,
+        2,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "quadruple",
+      "context": "outer_fold_5",
+      "policy": "fixed_target_learner",
+      "scenario_id": 4,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.021062883099098484,
+        null,
+        0.02106737378569784,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 2
+    },
+    {
+      "cost_label": "quadruple",
+      "context": "outer_fold_5",
+      "policy": "expanded_target_learner",
+      "scenario_id": 4,
+      "year": 2,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        1.081224782897272,
+        null,
+        1.0784750563924228,
+        null
+      ],
+      "independent_bad": [
+        6,
+        -1,
+        6,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "quadruple",
+      "context": "outer_fold_5",
+      "policy": "expanded_target_learner",
+      "scenario_id": 4,
+      "year": 16,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.563574982946723,
+        null,
+        0.5561640690458881,
+        null
+      ],
+      "independent_bad": [
+        2,
+        -1,
+        2,
+        -1
+      ],
+      "independent_action": 0
+    },
+    {
+      "cost_label": "quadruple",
+      "context": "outer_fold_5",
+      "policy": "expanded_target_learner",
+      "scenario_id": 4,
+      "year": 30,
+      "status": "audited",
+      "training_paths": 96,
+      "available_actions": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "independent_qg": [
+        0.021062883099098484,
+        null,
+        0.02106737378569784,
+        null
+      ],
+      "independent_bad": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "independent_action": 2
+    }
+  ],
+  "Q_subset_audited": 180,
+  "Q_subset_pending_skipped": 0,
+  "Q_subset_action_disagreements": [],
+  "base_reproduction_independent_receipts": [
+    {
+      "parent": "bounded_target_updates_v1",
+      "source_policy": "fixed_target_learner",
+      "cost_policy": "fixed_target_learner",
+      "CSV_rows": 240,
+      "CSV_fields": 44,
+      "parent_arrays_checked": 354,
+      "excluded_metadata": "annual_prices only; actual single-price metadata independently checked"
+    },
+    {
+      "parent": "bounded_target_updates_v1",
+      "source_policy": "expanded_target_learner",
+      "cost_policy": "expanded_target_learner",
+      "CSV_rows": 240,
+      "CSV_fields": 44,
+      "parent_arrays_checked": 354,
+      "excluded_metadata": "annual_prices only; actual single-price metadata independently checked"
+    },
+    {
+      "parent": "risk_priced_fan_execution_v1",
+      "source_policy": "risk_priced_learner",
+      "cost_policy": "fixed_target_learner",
+      "CSV_rows": 240,
+      "CSV_fields": 37,
+      "parent_arrays_checked": 288,
+      "excluded_metadata": "annual_prices only; actual single-price metadata independently checked"
+    },
+    {
+      "parent": "risk_priced_fan_execution_v1",
+      "source_policy": "annual_then_pending",
+      "cost_policy": "annual_then_pending",
+      "CSV_rows": 240,
+      "CSV_fields": 37,
+      "parent_arrays_checked": 216,
+      "excluded_metadata": "annual_prices only; actual single-price metadata independently checked"
+    }
+  ],
+  "source_and_artifact_sha256_start": {
+    "results/model_review/selected_controller_cost_stress_v1/frozen_controller_plan.json": "bf4c2922e2c39adf73d04dbf7c5ac4916cc061baff746826e4877a0f41b95f3e",
+    "results/model_review/selected_controller_cost_stress_v1/summary.csv": "e8c9008e753ccb3c977aec1ee9c6edcf85f0c07a86dbcb0f68dc91114c0d6b8f",
+    "results/model_review/selected_controller_cost_stress_v1/policy_contrasts_paths.csv": "65fbb83d988589e0a97594a81fa9dcc771523e97d0d123d951967ffcf2567ac6",
+    "results/model_review/selected_controller_cost_stress_v1/paired_vs_default_paths.csv": "9ff6abc5f851a8463e59afbfd1a0983b06bd5fda0171dbfb89937aff2ffe27ad",
+    "results/model_review/selected_controller_cost_stress_v1/paired_vs_default_summary.csv": "1c0597cc9ff0b3cac5bd5a60aecf2cbbb65aee7bcda20139e51a2f9861ea7735",
+    "results/model_review/selected_controller_cost_stress_v1/parent_catalog_metadata.json": "af858a51ef11918994a757e54055dabb2ab5c90dde84d8462c4520f17750b2b8",
+    "results/model_review/selected_controller_cost_stress_v1/decision_changes_by_path.csv": "3913e17d1e977e4cf6e59aba949c3511f606e6d8029d6fa98230c2b3f6dcf161",
+    "results/model_review/selected_controller_cost_stress_v1/decision_gates.csv": "0a801f79238ab070eea2fdd23059d1174614405136bf0e1fca07487df4b5bdc0",
+    "results/model_review/selected_controller_cost_stress_v1/client_paths.csv": "849ff6e9ee88ef4ae7345380aaf92d9f5f3f83f0494f2c97e559f4b032b06018",
+    "results/model_review/selected_controller_cost_stress_v1/decision_changes_summary.csv": "7b4b832b69b8fba1f0c79726f26fd6c6cfd4ebfae40155d25e8c88198aabc812",
+    "results/model_review/selected_controller_cost_stress_v1/policy_contrasts_summary.csv": "2131e63b99feb55feaaada3d779365fd23f23d77cabb3349943d58dd1f57b904",
+    "results/model_review/selected_controller_cost_stress_v1/base_reproduction.json": "07ab1865e79f4743cdabaf64f4248eff18fd67bf9dcf8b98096f1f53d6986e02",
+    "results/model_review/selected_controller_cost_stress_v1/actual_traces.npz": "e5752ac65ca76b7de556b00169ddbd81c2a5ea5a3e0a3ee166573c400600d2f3",
+    "results/model_review/selected_controller_cost_stress_v1/manifest.json": "f9f31bae6ca085c37ccfaf7df5fc05da7827c294b1037d59158b7080d1254c8b",
+    "scripts/audit_selected_controller_cost_stress.py": "72c26673bd139e1aefaf508e4d26c75982329b28f3def3cd806bd93f713fa2b8",
+    "scripts/audit_bounded_target_updates.py": "7130354a02a9200e6736dc6ec9d1e2a789bcde3dbb6cda63a95c366849942760",
+    "scripts/audit_fan_rollout_execution.py": "9f9d4a274e3be531040193e1654ec6bdf74733ad5204937b8a8d8195d02940fb",
+    "scripts/audit_review_pending_execution.py": "9c208ce69a03f1a13460908ec04b39a8dc232eacbb8882b5bdef3aafae60a264",
+    "scripts/run_bounded_target_updates.py": "f0f893070c028e2be05a37936195806269d8aaeba32a75b9660b72ba3113f8ee",
+    "tests/test_bounded_target_updates.py": "61926ecc0e4b420db3940fc99f6aa04ee8b0d34f9fff6002191f443a55f7267e",
+    "research/experimental_execution/bounded_target_update.py": "5b237da1d3864818d52a62c472089453d65837ec96c3ecb5558538ecea201282",
+    "tests/test_bounded_target_update.py": "564652c1bb013b57c3527863562b34df03d34052f177e0173462d8fc001de865",
+    "research/experimental_execution/risk_priced_fan_rollout.py": "2a935cfe1d039f6a020e104fe92aa659bb92aac2a0b3bed2ef767437015ba472",
+    "research/experimental_execution/fan_rollout.py": "d195d721c895700925e9b24c91640c59737fe4eb542272376d2de78ce62fe1ba",
+    "research/experimental_execution/review_pending.py": "9038d420c9ea48df068c58a6abee3f993ac414f85dd0290cb56e3d703aae3894",
+    "scripts/run_risk_priced_fan_execution.py": "68b34a4b0592f68327c09200b61dc8d980e8fbea7e282518de8164140ffc6bab",
+    "scripts/run_fan_rollout_execution.py": "100fe1fd5f9e3718cbf7e804e4dca736c81b407bc3c93a1a0eb24d47a02732e6",
+    "research/safeinvest_research/metrics.py": "7ec8e4821ce284351a3d8ed7071c687fdf7d6e4cfd225f72cad1d09d623eb008",
+    "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a",
+    "src/safeinvest/data.py": "70e511fd05c6e23fd6b8a72f1dc165426fc77a5eb4dbd8a3c13b839bb305a75f",
+    "docs/bounded_target_update_protocol.json": "e33f7401d3c631c1c155e6f0639ffabb4c3190b4b32ebb8e9a42f541a4f6e591",
+    "tests/test_risk_priced_fan_execution.py": "9b413e2325d6f90223621edc2d99af62d1001f91035eda5c393e974d8b461943",
+    "docs/risk_priced_fan_execution_protocol.json": "67051393a4f56bc6ae754795b5b47e38b6a01b57f9607ae3fe3374540df93bb6",
+    "tests/test_risk_priced_fan_rollout.py": "043bdc4f7f3cec0e9edec85250e3d6c3a05a90093dc2dc596f9c0ac17915aa0c",
+    "scripts/run_selected_controller_cost_stress.py": "fe96ab6d0f400bcc22e656bc5f3d4449e04beaf713c90936537b4863d4f915b5",
+    "tests/test_selected_controller_cost_stress.py": "6f30119b2b48052271ff52dd14d157a8b292a14f51819b57e4d047389bc8098b",
+    "docs/selected_controller_cost_stress_protocol.json": "9d2e62ddf6dd14ea5b21b41142b2b4e75a3d20296f7a948b2255cf459e7e3672",
+    "results/model_review/risk_priced_fan_execution_v1/training_candidate_paths.csv": "6969a27d62df0c8b10a439a049e34a358fe9f3dc0ed9d8a14f1823b7e3bc0750",
+    "results/model_review/risk_priced_fan_execution_v1/training_candidate_summary.csv": "0920ed3e86b8b59d75bc446ad3675ba66eaa7f1b0d703afd8b74848a061096ac",
+    "results/model_review/risk_priced_fan_execution_v1/client_paths.csv": "660b2d05831a39dc179c4555f46a146ffa9c79331cd6bf9d35ebaad1e774a46e",
+    "results/model_review/risk_priced_fan_execution_v1/summary.csv": "f30f543c7f2c27dd88887323f47a7f66e451341c9369f3e158061099a362560d",
+    "results/model_review/risk_priced_fan_execution_v1/paired_paths.csv": "55a675963c149d71d65d1a80b5730c865cd9bd559e807dfc00a4ac67444e67dd",
+    "results/model_review/risk_priced_fan_execution_v1/paired_summary.csv": "672508d10ece65a6164bfd07de4bc273bfac70ef1a10eee1b41c30093cd9b4b9",
+    "results/model_review/risk_priced_fan_execution_v1/decision_gates.csv": "62f30dae18693465e14a89e4dc0e769884beb42304c2df8776d3dea946ba0bfb",
+    "results/model_review/risk_priced_fan_execution_v1/coverage.csv": "b42170476d51071682e22f12913c5140aeb46be312aa8c3f3f1d085d49949850",
+    "results/model_review/risk_priced_fan_execution_v1/actual_traces.npz": "4e5547b1e563b9562396fc6663ccbaaf7d7ca1a955d44a5337329784a676e5c1",
+    "results/model_review/risk_priced_fan_execution_v1/context_selections.json": "281fab47e231ab0cd8ebd42d95f47301443e1f3393962b51c10c13a7d06b7a65",
+    "results/model_review/risk_priced_fan_execution_v1/accounting_checks.json": "0ee9498c2e9ca2248810173b95d68f3519d92d57f0f915c9da8905e752c63480",
+    "docs/positive_asset_specification_protocol.json": "ff23c3fcdad54d83a2896a11459db1cec3e4f48fe6352d994139e4c9ff79475c",
+    "results/model_review/positive_asset_specification_v1/manifest.json": "da65841decff7d50ec7baa8fe80c4e6593112ea0c7d083affe2a0dd68f2f306e",
+    "results/model_review/positive_asset_specification_v1/nested_context_refits.json": "d13450e05051c02d2bf54a4edfc77ef01d880cee0c78238cc3d7204a6ab27aa1",
+    "results/model_review/positive_asset_specification_v1/candidate_mapping.json": "c6221636a667536cbf1e4dbaa132c4cca1b00efb692dc180f5fc189655a744d5",
+    "results/model_review/positive_asset_specification_v1/nested_full_paths.csv": "bb72ae6b72ea72da01f800fd0f9ae0139046c8684e67374cc0966fb849d52516",
+    "results/model_review/positive_asset_specification_v1/nested_outer_oof_paths.csv": "4a4a9dba68e824b3dc13161391433be25ec9eb5fc873e4bdc6548eb23ab67c8f",
+    "docs/fan_rollout_execution_protocol.json": "dece4b446f8bd20ee5590ffc1188b13ddd57f19631a21e7b362ad800df030cd3",
+    "docs/review_pending_execution_protocol.json": "8e85cff91a0f0459b0b67d5e76d3f87c3988b89992251fcbf067393f6776a559",
+    "docs/fan_rollout_mathematical_review.json": "499754a2265573b9753568acbff06618cc969d79e9c0a5dee81d9247d9a3d046",
+    "results/model_review/risk_menu_v1/cache/step_0500__cost_002500.npz": "558b547574265a6fce5befa6803a55b9d7cbd8cc01a66603d38e080c880d97bb",
+    "results/model_review/risk_menu_v1/cache/step_0500__cost_002500.json": "225a36e8585bf6c5f310979193264a84c88ce98170d60c0d04665abb6bc6b804",
+    "results/model_review/review_pending_execution_v1/manifest.json": "2c1221f819ff8b273a96cd773aebeca5a475218de77c3a9c92ad9a1285c9d742",
+    "results/model_review/review_pending_execution_v1/client_path_metrics.csv": "748a573bcadbdcf569c6966117ac4621ad921ed2456a1ed39054b83ef7b1d2b1",
+    "results/model_review/review_pending_execution_v1/independent_audit.json": "3e8f8fb523d2fb4fc8bbb9bbb1c35a27ff7031c04944006f37692e9fd0b68558",
+    "results/model_review/fan_rollout_execution_v1/manifest.json": "4027d243ae859e4e306d5b0846df459702783c5705568cbe3e6c1e04f55803e6",
+    "results/model_review/risk_priced_fan_execution_v1/manifest.json": "a3e5dc61ba2a5b9df1e0b3976f69f25fc5823a7d5f52d1dba344eadd7b0bc321",
+    "results/model_review/risk_priced_fan_execution_v1/independent_audit.json": "02c7ac0bf810155c0cf06f927e509620629ce34d508e7bd6d313a6ad53cfdd20",
+    "scripts/audit_risk_priced_fan_execution.py": "e15aa1b6204a919eacfc222ce98990be8606536624157f6bec48f46148ba9e90",
+    "results/model_review/bounded_target_updates_v1/client_paths.csv": "c7487cfe3283fc60528468a0232b65a36c5b1bd529971ea75b906beac50feed3",
+    "results/model_review/bounded_target_updates_v1/summary.csv": "11f64c60bd4570cff25de6aafdcbf1cc3ec87d520cd5ac119dcf74bda4f81c20",
+    "results/model_review/bounded_target_updates_v1/paired_paths.csv": "6f33d3188f30bda766ff2125e40bb4904d340c1edc1544922163c1188b265856",
+    "results/model_review/bounded_target_updates_v1/paired_summary.csv": "28e257eb659d0f74bdc06f761688565257af9f0fd9af8653ed7ca3595f49c687",
+    "results/model_review/bounded_target_updates_v1/training_candidate_paths.csv": "dc63046c9e7e15e99d0ac3e7820f7095d3319395800a274d698a937900421f1c",
+    "results/model_review/bounded_target_updates_v1/training_candidate_summary.csv": "5cd94fc872bbe6283048e2a2eb41c5d6f8035cee9569c65c70cb183e8da6b086",
+    "results/model_review/bounded_target_updates_v1/decision_gates.csv": "c7079cd0995d40bc590ba1214be5a87f48cd0778e12742a1287f07ac7f1b6fd6",
+    "results/model_review/bounded_target_updates_v1/actual_traces.npz": "3b152955357bd732808314903a1d9c3cdd64753f5d734325e85cd40c54e43d70",
+    "results/model_review/bounded_target_updates_v1/context_selections.json": "d71135d258ce8eed1ce60846e36c3b5be677766c1c4ca072d30ef09823caa0c9",
+    "results/model_review/bounded_target_updates_v1/accounting_checks.json": "f71ce51072064b5ebb884b8ee8610d5513a310d396c4d38ca9cf2a47e202b4da",
+    "data/SafeInvest_Synthetic_Data.csv": "def0177704bf6cb98cec6da325b34208750d988f6ad97ec4a706a0d39e6f82c0",
+    "results/model_review/bounded_target_updates_v1/manifest.json": "4efb3c3af26b78a940a7f31fc0bf8ed661879c80bbe041ca234b7a161480b155",
+    "results/model_review/bounded_target_updates_v1/independent_audit.json": "2d9dea5279048d92846b2e54006573ac06be241fd9eaa22703e3e35cd1be410d"
+  },
+  "source_and_artifact_sha256_end": {
+    "results/model_review/selected_controller_cost_stress_v1/frozen_controller_plan.json": "bf4c2922e2c39adf73d04dbf7c5ac4916cc061baff746826e4877a0f41b95f3e",
+    "results/model_review/selected_controller_cost_stress_v1/summary.csv": "e8c9008e753ccb3c977aec1ee9c6edcf85f0c07a86dbcb0f68dc91114c0d6b8f",
+    "results/model_review/selected_controller_cost_stress_v1/policy_contrasts_paths.csv": "65fbb83d988589e0a97594a81fa9dcc771523e97d0d123d951967ffcf2567ac6",
+    "results/model_review/selected_controller_cost_stress_v1/paired_vs_default_paths.csv": "9ff6abc5f851a8463e59afbfd1a0983b06bd5fda0171dbfb89937aff2ffe27ad",
+    "results/model_review/selected_controller_cost_stress_v1/paired_vs_default_summary.csv": "1c0597cc9ff0b3cac5bd5a60aecf2cbbb65aee7bcda20139e51a2f9861ea7735",
+    "results/model_review/selected_controller_cost_stress_v1/parent_catalog_metadata.json": "af858a51ef11918994a757e54055dabb2ab5c90dde84d8462c4520f17750b2b8",
+    "results/model_review/selected_controller_cost_stress_v1/decision_changes_by_path.csv": "3913e17d1e977e4cf6e59aba949c3511f606e6d8029d6fa98230c2b3f6dcf161",
+    "results/model_review/selected_controller_cost_stress_v1/decision_gates.csv": "0a801f79238ab070eea2fdd23059d1174614405136bf0e1fca07487df4b5bdc0",
+    "results/model_review/selected_controller_cost_stress_v1/client_paths.csv": "849ff6e9ee88ef4ae7345380aaf92d9f5f3f83f0494f2c97e559f4b032b06018",
+    "results/model_review/selected_controller_cost_stress_v1/decision_changes_summary.csv": "7b4b832b69b8fba1f0c79726f26fd6c6cfd4ebfae40155d25e8c88198aabc812",
+    "results/model_review/selected_controller_cost_stress_v1/policy_contrasts_summary.csv": "2131e63b99feb55feaaada3d779365fd23f23d77cabb3349943d58dd1f57b904",
+    "results/model_review/selected_controller_cost_stress_v1/base_reproduction.json": "07ab1865e79f4743cdabaf64f4248eff18fd67bf9dcf8b98096f1f53d6986e02",
+    "results/model_review/selected_controller_cost_stress_v1/actual_traces.npz": "e5752ac65ca76b7de556b00169ddbd81c2a5ea5a3e0a3ee166573c400600d2f3",
+    "results/model_review/selected_controller_cost_stress_v1/manifest.json": "f9f31bae6ca085c37ccfaf7df5fc05da7827c294b1037d59158b7080d1254c8b",
+    "scripts/audit_selected_controller_cost_stress.py": "72c26673bd139e1aefaf508e4d26c75982329b28f3def3cd806bd93f713fa2b8",
+    "scripts/audit_bounded_target_updates.py": "7130354a02a9200e6736dc6ec9d1e2a789bcde3dbb6cda63a95c366849942760",
+    "scripts/audit_fan_rollout_execution.py": "9f9d4a274e3be531040193e1654ec6bdf74733ad5204937b8a8d8195d02940fb",
+    "scripts/audit_review_pending_execution.py": "9c208ce69a03f1a13460908ec04b39a8dc232eacbb8882b5bdef3aafae60a264",
+    "scripts/run_bounded_target_updates.py": "f0f893070c028e2be05a37936195806269d8aaeba32a75b9660b72ba3113f8ee",
+    "tests/test_bounded_target_updates.py": "61926ecc0e4b420db3940fc99f6aa04ee8b0d34f9fff6002191f443a55f7267e",
+    "research/experimental_execution/bounded_target_update.py": "5b237da1d3864818d52a62c472089453d65837ec96c3ecb5558538ecea201282",
+    "tests/test_bounded_target_update.py": "564652c1bb013b57c3527863562b34df03d34052f177e0173462d8fc001de865",
+    "research/experimental_execution/risk_priced_fan_rollout.py": "2a935cfe1d039f6a020e104fe92aa659bb92aac2a0b3bed2ef767437015ba472",
+    "research/experimental_execution/fan_rollout.py": "d195d721c895700925e9b24c91640c59737fe4eb542272376d2de78ce62fe1ba",
+    "research/experimental_execution/review_pending.py": "9038d420c9ea48df068c58a6abee3f993ac414f85dd0290cb56e3d703aae3894",
+    "scripts/run_risk_priced_fan_execution.py": "68b34a4b0592f68327c09200b61dc8d980e8fbea7e282518de8164140ffc6bab",
+    "scripts/run_fan_rollout_execution.py": "100fe1fd5f9e3718cbf7e804e4dca736c81b407bc3c93a1a0eb24d47a02732e6",
+    "research/safeinvest_research/metrics.py": "7ec8e4821ce284351a3d8ed7071c687fdf7d6e4cfd225f72cad1d09d623eb008",
+    "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a",
+    "src/safeinvest/data.py": "70e511fd05c6e23fd6b8a72f1dc165426fc77a5eb4dbd8a3c13b839bb305a75f",
+    "docs/bounded_target_update_protocol.json": "e33f7401d3c631c1c155e6f0639ffabb4c3190b4b32ebb8e9a42f541a4f6e591",
+    "tests/test_risk_priced_fan_execution.py": "9b413e2325d6f90223621edc2d99af62d1001f91035eda5c393e974d8b461943",
+    "docs/risk_priced_fan_execution_protocol.json": "67051393a4f56bc6ae754795b5b47e38b6a01b57f9607ae3fe3374540df93bb6",
+    "tests/test_risk_priced_fan_rollout.py": "043bdc4f7f3cec0e9edec85250e3d6c3a05a90093dc2dc596f9c0ac17915aa0c",
+    "scripts/run_selected_controller_cost_stress.py": "fe96ab6d0f400bcc22e656bc5f3d4449e04beaf713c90936537b4863d4f915b5",
+    "tests/test_selected_controller_cost_stress.py": "6f30119b2b48052271ff52dd14d157a8b292a14f51819b57e4d047389bc8098b",
+    "docs/selected_controller_cost_stress_protocol.json": "9d2e62ddf6dd14ea5b21b41142b2b4e75a3d20296f7a948b2255cf459e7e3672",
+    "results/model_review/risk_priced_fan_execution_v1/training_candidate_paths.csv": "6969a27d62df0c8b10a439a049e34a358fe9f3dc0ed9d8a14f1823b7e3bc0750",
+    "results/model_review/risk_priced_fan_execution_v1/training_candidate_summary.csv": "0920ed3e86b8b59d75bc446ad3675ba66eaa7f1b0d703afd8b74848a061096ac",
+    "results/model_review/risk_priced_fan_execution_v1/client_paths.csv": "660b2d05831a39dc179c4555f46a146ffa9c79331cd6bf9d35ebaad1e774a46e",
+    "results/model_review/risk_priced_fan_execution_v1/summary.csv": "f30f543c7f2c27dd88887323f47a7f66e451341c9369f3e158061099a362560d",
+    "results/model_review/risk_priced_fan_execution_v1/paired_paths.csv": "55a675963c149d71d65d1a80b5730c865cd9bd559e807dfc00a4ac67444e67dd",
+    "results/model_review/risk_priced_fan_execution_v1/paired_summary.csv": "672508d10ece65a6164bfd07de4bc273bfac70ef1a10eee1b41c30093cd9b4b9",
+    "results/model_review/risk_priced_fan_execution_v1/decision_gates.csv": "62f30dae18693465e14a89e4dc0e769884beb42304c2df8776d3dea946ba0bfb",
+    "results/model_review/risk_priced_fan_execution_v1/coverage.csv": "b42170476d51071682e22f12913c5140aeb46be312aa8c3f3f1d085d49949850",
+    "results/model_review/risk_priced_fan_execution_v1/actual_traces.npz": "4e5547b1e563b9562396fc6663ccbaaf7d7ca1a955d44a5337329784a676e5c1",
+    "results/model_review/risk_priced_fan_execution_v1/context_selections.json": "281fab47e231ab0cd8ebd42d95f47301443e1f3393962b51c10c13a7d06b7a65",
+    "results/model_review/risk_priced_fan_execution_v1/accounting_checks.json": "0ee9498c2e9ca2248810173b95d68f3519d92d57f0f915c9da8905e752c63480",
+    "docs/positive_asset_specification_protocol.json": "ff23c3fcdad54d83a2896a11459db1cec3e4f48fe6352d994139e4c9ff79475c",
+    "results/model_review/positive_asset_specification_v1/manifest.json": "da65841decff7d50ec7baa8fe80c4e6593112ea0c7d083affe2a0dd68f2f306e",
+    "results/model_review/positive_asset_specification_v1/nested_context_refits.json": "d13450e05051c02d2bf54a4edfc77ef01d880cee0c78238cc3d7204a6ab27aa1",
+    "results/model_review/positive_asset_specification_v1/candidate_mapping.json": "c6221636a667536cbf1e4dbaa132c4cca1b00efb692dc180f5fc189655a744d5",
+    "results/model_review/positive_asset_specification_v1/nested_full_paths.csv": "bb72ae6b72ea72da01f800fd0f9ae0139046c8684e67374cc0966fb849d52516",
+    "results/model_review/positive_asset_specification_v1/nested_outer_oof_paths.csv": "4a4a9dba68e824b3dc13161391433be25ec9eb5fc873e4bdc6548eb23ab67c8f",
+    "docs/fan_rollout_execution_protocol.json": "dece4b446f8bd20ee5590ffc1188b13ddd57f19631a21e7b362ad800df030cd3",
+    "docs/review_pending_execution_protocol.json": "8e85cff91a0f0459b0b67d5e76d3f87c3988b89992251fcbf067393f6776a559",
+    "docs/fan_rollout_mathematical_review.json": "499754a2265573b9753568acbff06618cc969d79e9c0a5dee81d9247d9a3d046",
+    "results/model_review/risk_menu_v1/cache/step_0500__cost_002500.npz": "558b547574265a6fce5befa6803a55b9d7cbd8cc01a66603d38e080c880d97bb",
+    "results/model_review/risk_menu_v1/cache/step_0500__cost_002500.json": "225a36e8585bf6c5f310979193264a84c88ce98170d60c0d04665abb6bc6b804",
+    "results/model_review/review_pending_execution_v1/manifest.json": "2c1221f819ff8b273a96cd773aebeca5a475218de77c3a9c92ad9a1285c9d742",
+    "results/model_review/review_pending_execution_v1/client_path_metrics.csv": "748a573bcadbdcf569c6966117ac4621ad921ed2456a1ed39054b83ef7b1d2b1",
+    "results/model_review/review_pending_execution_v1/independent_audit.json": "3e8f8fb523d2fb4fc8bbb9bbb1c35a27ff7031c04944006f37692e9fd0b68558",
+    "results/model_review/fan_rollout_execution_v1/manifest.json": "4027d243ae859e4e306d5b0846df459702783c5705568cbe3e6c1e04f55803e6",
+    "results/model_review/risk_priced_fan_execution_v1/manifest.json": "a3e5dc61ba2a5b9df1e0b3976f69f25fc5823a7d5f52d1dba344eadd7b0bc321",
+    "results/model_review/risk_priced_fan_execution_v1/independent_audit.json": "02c7ac0bf810155c0cf06f927e509620629ce34d508e7bd6d313a6ad53cfdd20",
+    "scripts/audit_risk_priced_fan_execution.py": "e15aa1b6204a919eacfc222ce98990be8606536624157f6bec48f46148ba9e90",
+    "results/model_review/bounded_target_updates_v1/client_paths.csv": "c7487cfe3283fc60528468a0232b65a36c5b1bd529971ea75b906beac50feed3",
+    "results/model_review/bounded_target_updates_v1/summary.csv": "11f64c60bd4570cff25de6aafdcbf1cc3ec87d520cd5ac119dcf74bda4f81c20",
+    "results/model_review/bounded_target_updates_v1/paired_paths.csv": "6f33d3188f30bda766ff2125e40bb4904d340c1edc1544922163c1188b265856",
+    "results/model_review/bounded_target_updates_v1/paired_summary.csv": "28e257eb659d0f74bdc06f761688565257af9f0fd9af8653ed7ca3595f49c687",
+    "results/model_review/bounded_target_updates_v1/training_candidate_paths.csv": "dc63046c9e7e15e99d0ac3e7820f7095d3319395800a274d698a937900421f1c",
+    "results/model_review/bounded_target_updates_v1/training_candidate_summary.csv": "5cd94fc872bbe6283048e2a2eb41c5d6f8035cee9569c65c70cb183e8da6b086",
+    "results/model_review/bounded_target_updates_v1/decision_gates.csv": "c7079cd0995d40bc590ba1214be5a87f48cd0778e12742a1287f07ac7f1b6fd6",
+    "results/model_review/bounded_target_updates_v1/actual_traces.npz": "3b152955357bd732808314903a1d9c3cdd64753f5d734325e85cd40c54e43d70",
+    "results/model_review/bounded_target_updates_v1/context_selections.json": "d71135d258ce8eed1ce60846e36c3b5be677766c1c4ca072d30ef09823caa0c9",
+    "results/model_review/bounded_target_updates_v1/accounting_checks.json": "f71ce51072064b5ebb884b8ee8610d5513a310d396c4d38ca9cf2a47e202b4da",
+    "data/SafeInvest_Synthetic_Data.csv": "def0177704bf6cb98cec6da325b34208750d988f6ad97ec4a706a0d39e6f82c0",
+    "results/model_review/bounded_target_updates_v1/manifest.json": "4efb3c3af26b78a940a7f31fc0bf8ed661879c80bbe041ca234b7a161480b155",
+    "results/model_review/bounded_target_updates_v1/independent_audit.json": "2d9dea5279048d92846b2e54006573ac06be241fd9eaa22703e3e35cd1be410d"
+  },
+  "development_arrays_sha256": "56420cb159e13102ea2c6633089263bdddfaa09cc801d6dd74f72801c5506d8c",
+  "scenario_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120
+  ],
+  "final_scenarios_read": false,
+  "independence": "Own100-step scalar fee/state reconstruction, independently carried target identity and scalar fan/current-action comparison; no reviewed execution/runner/selection implementation imported",
+  "limitations": [
+    "All actual transitions and published summaries/pairs/changes are independently replayed/reaggregated; future Q values cover only the fixed prospective subset",
+    "Controller parameters and admission are imposed from default-cost parents; no stress-cost empirical chance feasibility or optimal recalibration is claimed",
+    "Hypothetical known cost enters both actual and forecasts; this is not cost estimation-error robustness",
+    "Whole-trajectory disagreements involve changed states/history, not same-state marginal fee effects",
+    "Repeated paths, overlapping folds, duplicate chosen learners and rates are not independent market evidence",
+    "No fee winner, target/price/gamma/admission retuning, probability certificate or final-set access"
+  ],
+  "original_manifests_modified": false
+}

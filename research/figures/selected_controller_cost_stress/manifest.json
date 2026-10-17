@@ -1,0 +1,79 @@
+{
+  "completed_utc": "2026-10-17T15:02:03.264415+00:00",
+  "status": "complete_audited_and_visually_reviewed",
+  "independent_audit_passed": true,
+  "visual_review_confirmed": true,
+  "sources": {
+    "scripts/plot_selected_controller_cost_stress.py": "05ba951dfb65703e1d70a62c1c9ed338839ded3397cfdaa7d869ce545fd440fb",
+    "scripts/plot_development_structure.py": "6a0f401d3e6b18b6ab9d22e11bec74d5456430af30cb8da172a28163d85b8ed6",
+    "research/safeinvest_research/metrics.py": "7ec8e4821ce284351a3d8ed7071c687fdf7d6e4cfd225f72cad1d09d623eb008"
+  },
+  "sources_at_end": {
+    "scripts/plot_selected_controller_cost_stress.py": "05ba951dfb65703e1d70a62c1c9ed338839ded3397cfdaa7d869ce545fd440fb",
+    "scripts/plot_development_structure.py": "6a0f401d3e6b18b6ab9d22e11bec74d5456430af30cb8da172a28163d85b8ed6",
+    "research/safeinvest_research/metrics.py": "7ec8e4821ce284351a3d8ed7071c687fdf7d6e4cfd225f72cad1d09d623eb008"
+  },
+  "input_sha256": {
+    "results/model_review/selected_controller_cost_stress_v1/manifest.json": "f9f31bae6ca085c37ccfaf7df5fc05da7827c294b1037d59158b7080d1254c8b",
+    "results/model_review/selected_controller_cost_stress_v1/summary.csv": "e8c9008e753ccb3c977aec1ee9c6edcf85f0c07a86dbcb0f68dc91114c0d6b8f",
+    "results/model_review/selected_controller_cost_stress_v1/client_paths.csv": "849ff6e9ee88ef4ae7345380aaf92d9f5f3f83f0494f2c97e559f4b032b06018",
+    "docs/selected_controller_cost_stress_protocol.json": "9d2e62ddf6dd14ea5b21b41142b2b4e75a3d20296f7a948b2255cf459e7e3672",
+    "results/model_review/selected_controller_cost_stress_v1/independent_audit.json": "bd123e806afe1785ad49942d1827e99d8949c818d2b8c4d04b7d6f2f2763bb8c"
+  },
+  "input_sha256_at_end": {
+    "results/model_review/selected_controller_cost_stress_v1/manifest.json": "f9f31bae6ca085c37ccfaf7df5fc05da7827c294b1037d59158b7080d1254c8b",
+    "results/model_review/selected_controller_cost_stress_v1/summary.csv": "e8c9008e753ccb3c977aec1ee9c6edcf85f0c07a86dbcb0f68dc91114c0d6b8f",
+    "results/model_review/selected_controller_cost_stress_v1/client_paths.csv": "849ff6e9ee88ef4ae7345380aaf92d9f5f3f83f0494f2c97e559f4b032b06018",
+    "docs/selected_controller_cost_stress_protocol.json": "9d2e62ddf6dd14ea5b21b41142b2b4e75a3d20296f7a948b2255cf459e7e3672",
+    "results/model_review/selected_controller_cost_stress_v1/independent_audit.json": "bd123e806afe1785ad49942d1827e99d8949c818d2b8c4d04b7d6f2f2763bb8c"
+  },
+  "outputs_sha256": {
+    "known_cost_oof_sensitivity.png": "fc8380d9776d5fc5927320e4947f3fbe889b3bf260eec574325c4a03706064bc",
+    "known_cost_oof_sensitivity.svg": "3039b83177a26a917e407520f84b40002d494f0ad1d483e9daf42ae2f7f3d9ff",
+    "oof_chart_data.csv": "3aaf025f59c3bec287a8284aa176202f3576f6b35570409735737e8ef8873be4",
+    "oof_paths.csv": "a692269f384dfde6809904caaeaded4c8867d54cb742e509767c6d123f547fe2",
+    "individual_path_nonmonotonicity.csv": "b1bc186f7cbab493d1a31a46d1506b6e41ad063f114c42069ed6b03b170eb309"
+  },
+  "scope": {
+    "client": "C",
+    "H": 30,
+    "L": 0.4,
+    "same_original_scenarios": 120,
+    "outer_folds": 5,
+    "paths_per_fold": 24,
+    "cost_cases": 5,
+    "cost_settings_are_not_market_samples": true,
+    "selection_frozen_at_cost": 0.0025,
+    "actual_and_forecast_cost_equal": true,
+    "risk_recalibrated": false,
+    "target_update_denominator_excluding_inception": 29,
+    "trade_denominator_including_inception": 30
+  },
+  "summary_metadata": {
+    "scenario_axis": 0,
+    "growth_definition": "log(real_terminal/100)/H",
+    "median_method": "numpy.median; mean of the two middle values for even sample sizes",
+    "p10_p90_method": "inverted_cdf; empirical CDF generalized inverse",
+    "cvar90_definition": "average of the worst 10% probability mass, including fractional boundary atoms",
+    "numerical_boundary_tolerance": 1e-12,
+    "risk_event": "MDD - L > 1e-12; smaller differences treated as numerical equality"
+  },
+  "checks": {
+    "pooled_path_recomputation_matches_saved_summary": true,
+    "summary_max_abs_error": 5.684341886080802e-14,
+    "independent_order_statistics_and_worst12_CVaR": true,
+    "all_policy_rate_groups_same_120_fold_mapping": true,
+    "fixed_expanded_all_path_metrics_exactly_equal": true,
+    "fee_equals_cost_times_actual_transfer": true,
+    "trade_and_update_integer_counts_checked": true,
+    "text_bounds_passed": true,
+    "minimum_font_points": 12,
+    "PNG_dpi": 240,
+    "SVG_text_preserved": true
+  },
+  "final_scenarios_loaded": false,
+  "raw_market_loaded": false,
+  "new_model_fit_or_replay": false,
+  "new_policy_selected": false,
+  "interpretation": "OOF mean annual growth decreases and nominal fee means increase across these five cases; learner mean trade frequency is nonmonotonic. A separate descriptive repeated-path table records individual nonmonotonicity without treating cost cases as independent observations. No risk guarantee, recalibration, winner choice or unchanged-policy-after-refitting claim."
+}

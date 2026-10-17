@@ -1,0 +1,94 @@
+{
+  "bounded__full_development__C__fixed_target_learner": {
+    "finite_values_or_null": [
+      0.0,
+      0.001,
+      0.003,
+      0.01,
+      0.03,
+      0.1,
+      0.3,
+      1.0,
+      null
+    ],
+    "risk_first_indices": [
+      8
+    ]
+  },
+  "bounded__full_development__C__expanded_target_learner": {
+    "finite_values_or_null": [
+      0.0,
+      0.001,
+      0.003,
+      0.01,
+      0.03,
+      0.1,
+      0.3,
+      1.0,
+      null
+    ],
+    "risk_first_indices": [
+      8
+    ]
+  },
+  "bounded__outer_fold_1__C__fixed_target_learner": {
+    "finite_values_or_null": [
+      0.1
+    ],
+    "risk_first_indices": []
+  },
+  "bounded__outer_fold_1__C__expanded_target_learner": {
+    "finite_values_or_null": [
+      0.1
+    ],
+    "risk_first_indices": []
+  },
+  "bounded__outer_fold_2__C__fixed_target_learner": {
+    "finite_values_or_null": [
+      0.03
+    ],
+    "risk_first_indices": []
+  },
+  "bounded__outer_fold_2__C__expanded_target_learner": {
+    "finite_values_or_null": [
+      0.03
+    ],
+    "risk_first_indices": []
+  },
+  "bounded__outer_fold_3__C__fixed_target_learner": {
+    "finite_values_or_null": [
+      0.03
+    ],
+    "risk_first_indices": []
+  },
+  "bounded__outer_fold_3__C__expanded_target_learner": {
+    "finite_values_or_null": [
+      0.03
+    ],
+    "risk_first_indices": []
+  },
+  "bounded__outer_fold_4__C__fixed_target_learner": {
+    "finite_values_or_null": [
+      0.03
+    ],
+    "risk_first_indices": []
+  },
+  "bounded__outer_fold_4__C__expanded_target_learner": {
+    "finite_values_or_null": [
+      0.03
+    ],
+    "risk_first_indices": []
+  },
+  "bounded__outer_fold_5__C__fixed_target_learner": {
+    "finite_values_or_null": [
+      0.03
+    ],
+    "risk_first_indices": []
+  },
+  "bounded__outer_fold_5__C__expanded_target_learner": {
+    "finite_values_or_null": [
+      0.03
+    ],
+    "risk_first_indices": []
+  }
+}
