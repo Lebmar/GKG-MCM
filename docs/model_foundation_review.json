@@ -1,0 +1,59 @@
+{
+  "status": "model-development-reopened",
+  "date_beijing": "2026-10-17",
+  "legacy_version": "V1 is an auditable prototype, not an accepted final model. Its report, frozen sources and evaluations remain unchanged.",
+  "validation_limit": "Scenarios 121–180 have been evaluated and inspected. Subsequent development must not claim a fresh blind final test. New work is exploratory modelling and scenario-level internal validation on 1–120.",
+  "priority": [
+    {
+      "item": "Growth-risk objective and lambda=10/4/1",
+      "type": "preference modelling",
+      "existing_evidence": "Economic units can be derived; the three numerical preferences have not been identified from questionnaire information.",
+      "next_check": "Compare explicit drawdown preferences with risk-constraint-first formulation. Explain horizon scaling and average drawdown versus tail suitability.",
+      "acceptance": "A stated economic trade-off and consistent use of horizon; do not select a preference merely to maximize backtest returns."
+    },
+    {
+      "item": "10% exceedance screen and liquidity floors",
+      "type": "service policy",
+      "existing_evidence": "Disclosed assumptions with limited alpha sensitivity; not established from withdrawal or customer-preference data.",
+      "next_check": "Separate questionnaire loss amount from exceedance probability. Study interval, exceedance severity and assignment stability under training resampling.",
+      "acceptance": "No client-specific exceptions chosen to force desired labels; uncertain boundary cases are explicit."
+    },
+    {
+      "item": "5-year blocks and 256 forecast scenarios",
+      "type": "statistical assumption and numerical approximation",
+      "existing_evidence": "Joint resampling preserves asset-inflation relationships within blocks. Dependence length and decision convergence have not been validated.",
+      "next_check": "Audit numerical Monte Carlo variation before selecting simulation size. Then examine development-only temporal structure and block lengths.",
+      "acceptance": "Simulation error must be small relative to the action margin; numerical convergence does not certify forecast validity."
+    },
+    {
+      "item": "0.002 action margin, asset floor and target restrictions",
+      "type": "algorithm and product design",
+      "existing_evidence": "Implemented and tested, with no evidence yet that these particular settings are necessary or stable.",
+      "next_check": "Separate forecast uncertainty from a conservatism preference; compare continuous/grid sensitivity and bounded-update ablations only after base objectives are settled.",
+      "acceptance": "Decisions should not depend materially on one arbitrary seed or one grid point."
+    },
+    {
+      "item": "25% review trigger and permanent pending",
+      "type": "governance and missing-human-response assumption",
+      "existing_evidence": "Mechanically executable; no demonstrated real service capacity, response time or guaranteed loss mitigation.",
+      "next_check": "Distinguish financial risk breach, model failure and input failure. State realistic pending alternatives without inventing adviser returns.",
+      "acceptance": "Explain why human review is required and why waiting behaviour is appropriate; do not equate a pause with risk elimination."
+    }
+  ],
+  "work_order": [
+    "Agree on mathematical objective, risk definitions and parameter meanings.",
+    "Check base portfolio and forecast numerical/stochastic stability.",
+    "Predeclare scenario-level nested internal validation and limited candidates.",
+    "Evaluate customer suitability and cost-gated execution with uncertainty.",
+    "Evaluate incremental target updates and governance rules.",
+    "Write or revise the submission report after model review and development evidence."
+  ],
+  "internal_validation_draft": {
+    "population": "scenarios 1–120 only",
+    "outer_folds": 5,
+    "inner_folds": 4,
+    "unit": "complete 30-year scenario",
+    "status": "design proposal, not executed or approved as final protocol",
+    "caveat": "Overlapping training folds and reused scenarios do not create new independent data or certify a 10% tail probability."
+  }
+}

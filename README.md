@@ -3,11 +3,19 @@
 2026 HKUST(GZ) MCM Senior Group Problem A. Team **Lebmar**, number **87**.
 Author: **Chengxuan YUAN**.
 
+**Current status: model foundations under review.** The V1 code and report below
+are an archived, auditable prototype; they are not the accepted final competition
+model or a submission recommendation. Work has returned to the objective,
+parameter meanings, assumptions, internal validation and decision rules.
+See `docs/model_foundation_review.json`. No report is being regenerated in this
+phase. The old evaluation scenarios have already been seen and cannot be
+represented as a new blind test for subsequent changes.
+
 This repository records a reproducible investigation of purchasing-power risk,
 customer suitability, selective rebalancing and bounded target updates. It does
 not assume that a more complicated policy improves investment outcomes.
 
-## First complete review draft
+## Archived V1 prototype
 
 The 9-page report and 2.76 MB supplementary ZIP are in `output/`. They have not
 been submitted to CMT. There are 31 passing unit/policy tests, 901 passing
