@@ -1,7 +1,7 @@
 {
   "version": "fixed-state-fan-deletion-and-continuation-v1",
   "drafted_utc": "2026-10-18T14:20:45.347544+00:00",
-  "execution_ready": false,
+  "execution_ready": true,
   "purpose": "Diagnose fixed archived states only; no model or admission changes",
   "prior_exposure": "All earlier development and final-guard outcomes are known. This is subsequent development, not a new blind evaluation.",
   "data": {
@@ -4534,7 +4534,18 @@
     }
   ],
   "expected_slots": 39,
-  "execution_sources_sha256": {},
+  "execution_sources_sha256": {
+    "scripts/diagnose_fan_continuation.py": "1edb0905f1d0189304aa46198a22eca159725ac42b5cbc2e9a58d7ccf5350666",
+    "research/experimental_execution/fan_continuation_diagnostic.py": "1711df5150ad991fa1f95bf2460d9ae40639dca768f58e89b0aac6d6c8abab71",
+    "tests/test_fan_continuation_diagnostic.py": "da176db01d2a20647073d7a6e40602860664f9dc44b5205ec26701dd77b9437d",
+    "research/experimental_execution/fan_rollout.py": "d195d721c895700925e9b24c91640c59737fe4eb542272376d2de78ce62fe1ba",
+    "research/experimental_execution/risk_priced_fan_rollout.py": "2a935cfe1d039f6a020e104fe92aa659bb92aac2a0b3bed2ef767437015ba472",
+    "research/experimental_execution/fixed_state_counterfactual.py": "69a08ff5bcfa9748e454424df88132b15a75a053d93bb3b19b2ef2ed176e4da9",
+    "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a",
+    "src/safeinvest/data.py": "70e511fd05c6e23fd6b8a72f1dc165426fc77a5eb4dbd8a3c13b839bb305a75f",
+    "src/safeinvest/__init__.py": "dcef1e2e1f0f7cd5426988f0f27408eebb9ded3fb32c961f8f23e2edfb6e4ad2",
+    "requirements-research-pinned.txt": "a18dc21251d1dcdba4c19b4137ed62083bf4d82ed6ea8fefc4ae3cbd421f02ee"
+  },
   "frozen_input_sha256": {
     "data/SafeInvest_Synthetic_Data.csv": "def0177704bf6cb98cec6da325b34208750d988f6ad97ec4a706a0d39e6f82c0",
     "docs/main_model_registry.json": "2d73f73d47523c922329c59c78548f8bc67a8bb93d4e8d3eef67a5bd1d2e7074",
@@ -4551,7 +4562,8 @@
     "results/model_review/refit_stability_v1/manifest.json": "035bfa20b4e659e88ff48b56ffdc21a6563db32a0490d2ec8a6852154018e5a5",
     "results/model_review/refit_stability_v1/independent_audit.json": "7725716ddbfb2da1071027936fc90374668f99161e6e15b57fd3f80b90a9e712",
     "results/model_review/joint_liquidity_refit_v1/context_selections.json": "9620df702547f68f7c0d304e664d5bb433500c08138a492a4bdba9fae2d4321b",
-    "results/model_review/refit_stability_v1/context_selections.json": "3e9ff0e536857b2d4366d5368ad5c22f42a00402335f3e7426872ff6e693c13b"
+    "results/model_review/refit_stability_v1/context_selections.json": "3e9ff0e536857b2d4366d5368ad5c22f42a00402335f3e7426872ff6e693c13b",
+    "docs/fan_continuation_audit_plan.json": "eb2eb8709f8e1239000a5a07da835255db6414eb7f31381808cc19be0eaa388b"
   },
   "design": {
     "active": "Use every declared slot unless its saved state is already breached; no replacement or outcome-based selection.",
@@ -4590,5 +4602,28 @@
       9,
       13
     ]
-  }
+  },
+  "frozen_utc": "2026-10-18T14:34:04.152085+00:00",
+  "parent_git_commit": "52d002febbe11b46bde61d9a0be0351ef48a4b90",
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3"
+  },
+  "execution_source_review": {
+    "reviewer": "root AI source review, distinct from later arithmetic audit",
+    "reviewed": "Full producer/helper source read, history and same-current-action continuation semantics checked; 22 pure/synthetic tests passed, no new numeric outputs read",
+    "corrections_before_freeze": [
+      "Use original dd-L>TOL expression exactly",
+      "Save original stored score as saved_score",
+      "Report active unique marketIDs and terminal-year control counts"
+    ]
+  },
+  "freeze_attempt_history": [
+    {
+      "status": "aborted before protocol mutation or numerical execution",
+      "reason": "Root freeze list mistakenly included nonexistent research/experimental_execution/__init__.py. It is a namespace package. The draft was committed as52d002f; execution_ready remainedFalse.",
+      "resolution": "Remove nonexistent initialization path; hash actual imported modules and retain namespace implementation."
+    }
+  ]
 }
