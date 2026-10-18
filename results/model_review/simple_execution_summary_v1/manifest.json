@@ -1,0 +1,53 @@
+{
+  "status": "complete",
+  "completed_utc": "2026-10-18T05:39:31.265139+00:00",
+  "sources": {
+    "scripts/summarize_simple_execution_comparison.py": "110abd1289c465f35f97b4ecb45fe46b9f6bba17f80779cebfebe350fffda689",
+    "scripts/plot_development_structure.py": "6a0f401d3e6b18b6ab9d22e11bec74d5456430af30cb8da172a28163d85b8ed6"
+  },
+  "sources_at_end": {
+    "scripts/summarize_simple_execution_comparison.py": "110abd1289c465f35f97b4ecb45fe46b9f6bba17f80779cebfebe350fffda689",
+    "scripts/plot_development_structure.py": "6a0f401d3e6b18b6ab9d22e11bec74d5456430af30cb8da172a28163d85b8ed6"
+  },
+  "input_sha256": {
+    "results/model_review/simple_execution_comparison_v1/manifest.json": "056a6389cdf13dc0f3e16feac618ab8fa215f4bc228cc6eec18066e53f5dd31b",
+    "results/model_review/simple_execution_comparison_v1/independent_audit.json": "065544294539a333a43535c5e287f92b31ea70a81344d0323ff8a743561ab22d",
+    "results/model_review/simple_execution_comparison_v1/client_paths.csv.gz": "fad707a5199577999ca34a1a59c51d5f83cd14fe98aeaac6932fea9d542764b9",
+    "results/model_review/refit_stability_v1/manifest.json": "035bfa20b4e659e88ff48b56ffdc21a6563db32a0490d2ec8a6852154018e5a5",
+    "results/model_review/refit_stability_v1/independent_audit.json": "7725716ddbfb2da1071027936fc90374668f99161e6e15b57fd3f80b90a9e712",
+    "results/model_review/refit_stability_v1/client_paths.csv.gz": "47c487dc12e5969f26450da66a350548dc81464e4562fa655c9f80c08f7481c7",
+    "results/model_review/simple_execution_comparison_v1/inner_gate_summaries.csv.gz": "5b64acb8640f31141e3ebbb66c762307ad47865c5de0baf0a2262efd13785d49",
+    "results/model_review/simple_execution_comparison_v1/fit_admission.csv.gz": "127a04f76b2b2dd6bf4fed5fb06aa6965629bb5e3c39371c60c650259a4004da",
+    "docs/simple_execution_comparison_protocol.json": "f4c399807679ef18119b56af28358b7a1b35d2acf0bdaf32c4b0de03d233d9db",
+    "docs/simple_drift_cost_interpretation.json": "ec9fa5044c8eeddaf1f062cc69d8a0ed813e6287587beee83267ff79bcb97d14"
+  },
+  "input_sha256_at_end": {
+    "results/model_review/simple_execution_comparison_v1/manifest.json": "056a6389cdf13dc0f3e16feac618ab8fa215f4bc228cc6eec18066e53f5dd31b",
+    "results/model_review/simple_execution_comparison_v1/independent_audit.json": "065544294539a333a43535c5e287f92b31ea70a81344d0323ff8a743561ab22d",
+    "results/model_review/simple_execution_comparison_v1/client_paths.csv.gz": "fad707a5199577999ca34a1a59c51d5f83cd14fe98aeaac6932fea9d542764b9",
+    "results/model_review/refit_stability_v1/manifest.json": "035bfa20b4e659e88ff48b56ffdc21a6563db32a0490d2ec8a6852154018e5a5",
+    "results/model_review/refit_stability_v1/independent_audit.json": "7725716ddbfb2da1071027936fc90374668f99161e6e15b57fd3f80b90a9e712",
+    "results/model_review/refit_stability_v1/client_paths.csv.gz": "47c487dc12e5969f26450da66a350548dc81464e4562fa655c9f80c08f7481c7",
+    "results/model_review/simple_execution_comparison_v1/inner_gate_summaries.csv.gz": "5b64acb8640f31141e3ebbb66c762307ad47865c5de0baf0a2262efd13785d49",
+    "results/model_review/simple_execution_comparison_v1/fit_admission.csv.gz": "127a04f76b2b2dd6bf4fed5fb06aa6965629bb5e3c39371c60c650259a4004da",
+    "docs/simple_execution_comparison_protocol.json": "f4c399807679ef18119b56af28358b7a1b35d2acf0bdaf32c4b0de03d233d9db",
+    "docs/simple_drift_cost_interpretation.json": "ec9fa5044c8eeddaf1f062cc69d8a0ed813e6287587beee83267ff79bcb97d14"
+  },
+  "outputs_sha256": {
+    "results/model_review/simple_execution_summary_v1/paired_comparisons.csv": "60729e34c8c17e3b89c7a7ace447dcc2d3c0c44fc3dc968cb17a43e3ab7477f6",
+    "results/model_review/simple_execution_summary_v1/findings.json": "7e33ddaae56ae0ff7a551daf6898af09f4dcb202bb232ba3aa7397472048f40d",
+    "results/model_review/simple_execution_summary_v1/repeat_methods.csv": "53ee1fbb99b45b48beeefdd08577db46f1f6310ca2f66be4fc6d4b47aaa75463",
+    "results/model_review/simple_execution_summary_v1/common_path_pairs.csv": "db78177cb7c33046c4a9236ca83c57ea0bdee1ba6c1f7f29b17e49d71f1803eb",
+    "research/figures/simple_execution/01_simple_controls_and_learners.svg": "ca6c27a57ade9adeafc67e6648362243a346ad8d46f4299f7c8aa89687613a36",
+    "research/figures/simple_execution/01_simple_controls_and_learners.png": "77d05ce6bd0462b1e15a7e8322935a34ab7c43208bbad0d82444db3ad96fdb52"
+  },
+  "row_counts": {
+    "repeat_methods": 20,
+    "common_path_pairs": 3600,
+    "paired_comparisons": 30
+  },
+  "visual_review_confirmed": true,
+  "raw_market_loaded": false,
+  "final_scenarios_loaded": false,
+  "new_fit_or_selection": false
+}

@@ -29,8 +29,10 @@ HASH_KEYS = {
     "sources_and_artifacts_at_start", "sources_and_artifacts_at_end",
     "evidence_sha256", "source_evidence_sha256_start", "source_evidence_sha256_end", "sources_sha256_at_start",
     "frozen_input_sha256", "execution_sources_sha256",
-    "reviewed_sources_sha256", "audit_source_sha256", "source_input_artifact_sha256",
+    "reviewed_sources_sha256", "audit_source_sha256", "audit_sources_sha256", "source_input_artifact_sha256",
     "outputs_sha256_before", "outputs_sha256_after",
+    "copied_files_sha256_before", "copied_files_sha256_after", "wrapper_test_sources_sha256",
+    "original_archive_sha256_start", "original_archive_sha256_end",
     "outputs", "outputs_sha256", "output_artifact_sha256", "output_file_sha256_after_write",
 }
 PAIRS = [
@@ -53,6 +55,8 @@ PAIRS = [
     ("sources_and_artifacts_at_start", "sources_and_artifacts_at_end"),
     ("source_evidence_sha256_start", "source_evidence_sha256_end"),
     ("outputs_sha256_before", "outputs_sha256_after"),
+    ("copied_files_sha256_before", "copied_files_sha256_after"),
+    ("original_archive_sha256_start", "original_archive_sha256_end"),
 ]
 
 
@@ -83,6 +87,16 @@ def main():
                           ROOT / "docs/current_diagnostic_claims_review.json",
                           ROOT / "docs/admission_stability_judgment.json",
                           ROOT / "docs/refit_stability_independent_judgment.json",
+                          ROOT / "docs/simple_drift_cost_interpretation.json",
+                          ROOT / "docs/simple_drift_execution_implementation_review.json",
+                          ROOT / "docs/simple_execution_comparison_protocol.json",
+                          ROOT / "docs/simple_execution_design_review.json",
+                          ROOT / "docs/simple_execution_final_source_review.json",
+                          ROOT / "docs/simple_execution_preexecution_method_review.json",
+                          ROOT / "docs/simple_execution_freeze_receipt.json",
+                          ROOT / "docs/simple_execution_audit_plan.json",
+                          ROOT / "docs/simple_execution_diagnostic_judgment.json",
+                          ROOT / "docs/simple_execution_independent_judgment.json",
                           ROOT / "results/model_review/incremental_admission_risk_v1/repeatability_receipt.json",
                           ROOT / "docs/service_refinement_readiness_review.json",
                           ROOT / "docs/liquidity_policy_refinement_review.json",
@@ -150,7 +164,8 @@ def main():
     notebook_sha = sha(notebook_path)
     reading_copy_sha = sha(ROOT / "notebooks/risk_menu_development.html")
     additional_notebooks = []
-    for companion in [ROOT / "notebooks/admission_stability_forecasts.ipynb"]:
+    for companion in [ROOT / "notebooks/admission_stability_forecasts.ipynb",
+                      ROOT / "notebooks/simple_execution_diagnostic.ipynb"]:
         if not companion.exists():
             continue
         saved = nbformat.read(companion, as_version=4)
@@ -171,7 +186,7 @@ def main():
         "distinct_hashed_files": len(digests), "saved_snapshots_checked": len(snapshots),
         "snapshots_sha256": snapshots,
         "unit_tests": {"passed": int(match.group(1)), "seconds": float(match.group(2)),
-                       "command": "PYTHONPATH=src:research .venv/bin/python -m unittest discover -s tests -q",
+                       "command": "PYTHONPATH=src:research .venv/bin/python -m unittest discover -s tests -v",
                        "log_path": str(test_log_snapshot.relative_to(ROOT)),
                        "log_sha256": test_log_sha, "result": "OK"},
         "notebook": {"path": str(notebook_path.relative_to(ROOT)), "executed_code_cells": len(code_cells),

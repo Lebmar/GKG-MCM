@@ -279,3 +279,74 @@ is not a fresh-clone or full numerical replay. Seven frozen forecast CSVs
 retain their original CRLF endings; staged diff-check notices are limited to
 those line endings, with no trailing spaces/tabs or source/Markdown/SVG issue.
 The checkpoint checks94 saved snapshots and698 distinct hashed files.
+
+
+## 2026-10-18 — Simplified execution controls, full gates and exact replay
+
+After the earlier development results were known, a separately reviewed
+protocol froze two diagnostic architectures before their new numerical run.
+The ready source/protocol was committed asba111c4. Both reuse125 exact Q1
+component bundles from the parent study, whose raw-menu audit scope is2624
+fits; this stage doeszero new static refits. It performs125 new Q2 training
+jobs on the same five fixed partitions. Candidate bands0/5%/10% use pre-return
+TV drift, mandatory charged initial restoration and full-history pending hold.
+Annual control has only band0. Fixed alpha10%, complete-training cap no worse
+than B, one global G tie band and exact severity/actual-fee/order ties precede
+an independent same-U inner risk gate. Review outcomes stayNULL; references
+never replace service. Each outer fit gives one A(S,C) decision to24 returns.
+
+Explicit source guards validate every cached target/name/local/global index
+against its Q1 raw menu. New pure controls and125-job boundary fixtures pass,
+including independent100-step transfer-fee accounts and altered-target rejection.
+The analytic destination-transfer bound is d/(1+tau)<=m<=d, fee fractiontau*m.
+Inside5/10% bands this bounds an avoided hypothetical restoration fee by
+1.25/2.5bp at the stated rate. Actual triggered trades can cost more; a same
+state/fee example with opposite future equity returns proves drift alone does
+not establish benefit>cost. These are technical diagnostic thresholds, not
+identified preferences or optimal transaction rules.
+
+All125 Q2 jobs complete in6.11s. Annual control admits120,120,120,96,120 paths
+with9,8,7,10,7 events; TV admits96,96,72,72,72 with8,7,6,5,4. Training feasible
+families include B, so absence of final candidate failure is imposed rather
+than evidence of safety. Annual24/25 andTV17/25 fit admission have separate
+inner gates; annual's one rejection exceeds the absolute inner cap, TV's eight
+reject by one extra same-U B event. Common-U membership agrees for both
+architectures. Fourth-repeat annual automatic10/96 differs from hypothetical
+full B10/120; the rejected24 havezero B events, a cohort-denominator effect
+which cannot justify outer-based gate changes or financial imputation.
+
+TV versus B on matching automatic groups saves fees and increases mean G
+slightly, but meanMDD rises in all five repeats and events are8vs7,7vs7,6vs5,
+5vs5,4vs2. Versus the old learner on common automated paths, TV instead lowers
+both G and MDD, with fees changing sign. No method, seed or threshold is chosen
+from these observed tradeoffs. Neither simple architecture estimates per-trade
+benefit versus cost, so both remain diagnostic controls rather than a complete
+final Q2 proposal.
+
+The independently frozen audit passes5,100,120 checks, covers28800 training
+metrics,4800 inner method rows,2400 inner B rows,2400 outer rows and9240 saved
+physical accounts. Its exact-key scalar cache replays4280 unique accounts,
+128400 transitions; maximum discrepancy is7.96e-12. This caches identical
+physical calculations, not independent market observations. No numerical or
+audit implementation failure occurs. The source/input closure replay also
+passes on its first attempt:45 copied files,125 tasks,15 deterministic
+artifacts byteexact and18540 named NPZ arrays exact. Only declared runtime
+metadata is normalized; original20 study/audit files remain byte-identical.
+This is a same-source closure copy, not a fresh Git clone or new market test.
+
+603 tests pass in42.975s. The separately executed simple_execution_diagnostic
+notebook retains all repeats, NULLs and construction facts. The actual PNG was
+inspected after fixing bar-label collisions. Browser HTML review remains
+unavailable; executed output and static HTML checks are recorded without
+claiming a full-page rendered review. All V1 source/report/output and prior
+research remain intact. No new final market evaluation, final architecture
+approval, submission paper or CMT upload is produced. The next modelling
+question is an explicit, inspectable benefit-cost estimate with the simple
+controls retained as benchmarks, rather than a tuned alpha or best seed.
+
+The final companion executes9 code cells withzero errors; static HTML checks
+cover13 tables andone embedded inspected PNG. The final checkpoint checks109
+saved snapshots/755 distinct files, and the phase Git-index proof binds93
+source/input/output files exactly. One whitespace-only blank line in the
+reproduction test is retained because its bytes are already bound by the
+successful replay receipt; it is the sole staged diff-check exception.

@@ -12,6 +12,9 @@ joint-liquidity history is in notebook sections10.12–10.15. The newest
 [executed research companion](notebooks/admission_stability_forecasts.ipynb)
 and [reading copy](notebooks/admission_stability_forecasts.html) examine the
 risk cost of new admission, complete-refit stability and prediction assumptions.
+The subsequent [simplification diagnostic](notebooks/simple_execution_diagnostic.ipynb)
+and [reading copy](notebooks/simple_execution_diagnostic.html) compare smaller
+execution families; they do not select a final Q2 strategy.
 No report is being regenerated in this
 phase. The old evaluation scenarios have already been seen and cannot be
 represented as a new blind test for subsequent changes.
@@ -66,6 +69,31 @@ conditional trading values or tail probabilities and do not select a new
 controller. The diagnostic and independent augmented-least-squares audit
 are under `results/model_review/forecast_assumptions_v2/`; judgments are in
 `docs/forecast_assumption_diagnostic_judgment.json`.
+
+The follow-up simplification diagnostic is frozen before its own numerical
+run, after the prior development results were known. It reuses125 matching,
+audited Q1 components and runs125 new Q2 tasks. Annual positive-control
+admission counts are120,120,120,96,120 with9,8,7,10,7 events; TV-band counts
+are96,96,72,72,72 with8,7,6,5,4 events. The families include annual B, making
+supported training feasibility an imposed property. An independent inner gate
+still rejects one annual and eight TV fits. On each TV automatic cohort,
+growth rises modestly and fees fall relative to B, but mean MDD rises and
+events are8vs7,7vs7,6vs5,5vs5,4vs2. No risk dominance, best architecture or
+future10% certificate is inferred. The TV rule also lacks the per-trade
+benefit-cost estimate required of a complete final Q2 solution.
+
+`docs/simple_drift_cost_interpretation.json` proves the immediate fee bounds
+and gives a same-drift/same-fee counterexample to a benefit claim. The study,
+independent scalar-account audit and same-source isolated replay are under
+`simple_execution_comparison_v1/`, `simple_execution_summary_v1/` and
+`simple_execution_reproduction_v1/` inside `results/model_review/`. Replay
+matches15 deterministic artifacts and18,540 named NPZ arrays, with only
+declared timing normalization. This is a source/input closure copy, not a
+fresh Git clone or another market sample. Replay without overwriting evidence:
+
+```sh
+python scripts/reproduce_simple_execution_stage.py --output results/model_review/simple_execution_reproduction_new
+```
 
 The static study declares its procedure in
 `docs/risk_menu_development_protocol.json`: 232 fixed targets, three risk-budget
@@ -273,8 +301,8 @@ audits; they do not replace the primary procedure. The research preserves full
 path folds, records referrals as null outcomes, and distinguishes empirical
 calibration, numerical correctness and statistical evidence.
 
-The latest checkpoint passes **540 tests** and checks 94 saved manifests/audits
-against 698 distinct source, input, result and execution-evidence files. The
+The latest checkpoint passes **603 tests** and checks 109 saved manifests/audits
+against 755 distinct source, input, result and execution-evidence files. The
 new joint stage passes 538,236 independent selection/accounting checks and its
 30-task isolated replay matches 18 deterministic output files byte for byte;
 progress differs only in declared runtime fields. The first implementation

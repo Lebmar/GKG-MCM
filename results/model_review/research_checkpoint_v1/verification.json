@@ -1,10 +1,10 @@
 {
-  "completed_utc": "2026-10-18T05:16:25.775852+00:00",
+  "completed_utc": "2026-10-18T05:48:05.779406+00:00",
   "status": "passed",
   "scope": "Saved-file fingerprints, completed test log and executed research notebook; no model fit or market return parsing",
-  "hash_comparisons_and_consistency_checks": 5107,
-  "distinct_hashed_files": 698,
-  "saved_snapshots_checked": 94,
+  "hash_comparisons_and_consistency_checks": 5908,
+  "distinct_hashed_files": 755,
+  "saved_snapshots_checked": 109,
   "snapshots_sha256": {
     "docs/admission_stability_judgment.json": "26244e6398aa43d3c0138dc7028551a9e3e3270d0456148809075eda7705030b",
     "docs/coverage_admission_policy_review.json": "c74d4270239315e58a55cda8f983570e21383131e4c1f0e47801fde1879a93bf",
@@ -26,6 +26,16 @@
     "docs/service_governance_independent_review.json": "bdb0c164d0ef1e1e3531962566850e0cc0dcdb81436e4801c24ac464f6434fa1",
     "docs/service_policy_refinement_contract.json": "cc379f88b88d70433a0cda382a577ede621dc1f85d5f0a78c319900af1f79818",
     "docs/service_refinement_readiness_review.json": "98ff90324461e415c86857d135450e64f4b5006ac5343d215e1e9558f77e8cbc",
+    "docs/simple_drift_cost_interpretation.json": "ec9fa5044c8eeddaf1f062cc69d8a0ed813e6287587beee83267ff79bcb97d14",
+    "docs/simple_drift_execution_implementation_review.json": "91783c67fbb14043af2cd5e9ef70fd51b5f669067b7badc194a7982eb8eba78a",
+    "docs/simple_execution_audit_plan.json": "4e228aa82813842e28d073592986de3205a8b0d59e3c50d3a136f6939a328be4",
+    "docs/simple_execution_comparison_protocol.json": "f4c399807679ef18119b56af28358b7a1b35d2acf0bdaf32c4b0de03d233d9db",
+    "docs/simple_execution_design_review.json": "66d49cfcd69981e8b97f17088f91529a214dd1fd346c0316d36f97da572ccefe",
+    "docs/simple_execution_diagnostic_judgment.json": "fde34c7e5f294f708b9ac4fbcb81383b793815c3175fc803546ee2dd67d29893",
+    "docs/simple_execution_final_source_review.json": "348f134cdd61148a0c23cf87c2ce5cc952c512f6266f8265ffc55f4a8e418501",
+    "docs/simple_execution_freeze_receipt.json": "ee00d83cd9676f0798e289e34cd7f76ac70c247b1cd8140905d5d5ccc350a380",
+    "docs/simple_execution_independent_judgment.json": "5891c678584239e9dba07790cb7f40dfaa1b858743280b016df4acd9681113d5",
+    "docs/simple_execution_preexecution_method_review.json": "09f181882a3bb5e11a0870f090f953bddff02704163b3b9947621c73db639111",
     "research/figures/development_structure/manifest.json": "8dcf529e5dac971e6b8c9de97e29f8dcefb494adacbd250d8af19675122dd05b",
     "research/figures/execution/manifest.json": "6a8f8f62d392de03953a56c87f7168baacd3aec2461679ba042a26085d01944a",
     "research/figures/execution_stage/manifest.json": "97058189adbdb9917d13739525137df58528ce5b45acf6949b15e2065af3f849",
@@ -98,15 +108,20 @@
     "results/model_review/selected_controller_cost_stress_v1/independent_audit.json": "bd123e806afe1785ad49942d1827e99d8949c818d2b8c4d04b7d6f2f2763bb8c",
     "results/model_review/selected_controller_cost_stress_v1/manifest.json": "f9f31bae6ca085c37ccfaf7df5fc05da7827c294b1037d59158b7080d1254c8b",
     "results/model_review/service_policy_design_v1/manifest.json": "fe6371740ecc563a002f607b873e105f70401da03e9ef9a1af045119183b1ce2",
+    "results/model_review/simple_execution_comparison_v1/independent_audit.json": "065544294539a333a43535c5e287f92b31ea70a81344d0323ff8a743561ab22d",
+    "results/model_review/simple_execution_comparison_v1/manifest.json": "056a6389cdf13dc0f3e16feac618ab8fa215f4bc228cc6eec18066e53f5dd31b",
+    "results/model_review/simple_execution_git_archive_v1/manifest.json": "7266557988ed48aca03b1f8484a39b5cda7f32e2670319dd63c8e591b91ae85a",
+    "results/model_review/simple_execution_reproduction_v1/manifest.json": "4a18a4d4018ed8f0def9b607441430404dd3d3e620f19a231a74eef69b05bebf",
+    "results/model_review/simple_execution_summary_v1/manifest.json": "165916baf3d181b43dfe26d3759e7744eb3476b84462905a8b9f09aa1d2be4f3",
     "results/model_review/simultaneous_static_risk_v1/all_manifest.json": "eda7b2efa762f818edd92e03ecdbf9ed93a35dd3e33020e6ffff7db22064cc06",
     "results/model_review/temporal_order_v1/manifest.json": "b60345b971e4ef0c38c5c9c1446276991dbee3ac6b51a581ba85f88a79f01b19"
   },
   "unit_tests": {
-    "passed": 540,
-    "seconds": 21.345,
-    "command": "PYTHONPATH=src:research .venv/bin/python -m unittest discover -s tests -q",
+    "passed": 603,
+    "seconds": 42.975,
+    "command": "PYTHONPATH=src:research .venv/bin/python -m unittest discover -s tests -v",
     "log_path": "results/model_review/research_checkpoint_v1/unit_tests.txt",
-    "log_sha256": "1825ff0c62244336c2fad1f2640663371cf43215488795f8554a806e1b7adab0",
+    "log_sha256": "7aa3a0e921273c15c92ab16a308ea032858647df7b63d33954c6f9f8d01dda87",
     "result": "OK"
   },
   "notebook": {
@@ -122,6 +137,13 @@
       "sha256": "947fbec57dbef9679bb169c366438bf2aabea96f5e18614ac5e2c2bcdb7ab5e8",
       "reading_copy_path": "notebooks/admission_stability_forecasts.html",
       "reading_copy_sha256": "480949931bd003ff62821b7e8e166e5e750e00b27102f938ed0d04ec9a6db30e"
+    },
+    {
+      "path": "notebooks/simple_execution_diagnostic.ipynb",
+      "executed_code_cells": 9,
+      "sha256": "c4f37597ce8fa3c8f564ae763b8c894c948009b0fed8eef183fe65861c322c18",
+      "reading_copy_path": "notebooks/simple_execution_diagnostic.html",
+      "reading_copy_sha256": "39c52a2eb51bc92d165dbc5ebf647022e1e225158e6da9f81efa606907feb06f"
     }
   ],
   "legacy": {
