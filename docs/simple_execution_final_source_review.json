@@ -1,0 +1,130 @@
+{
+  "version": "simple-execution-final-source-review-v1",
+  "completed_utc": "2026-10-18T05:30:20.699177+00:00",
+  "status": "No source/method blocker for the prespecified diagnostic; ROOT must complete protocol source hashes/ready flag before numerical execution",
+  "scope": {
+    "source_review_read_only": true,
+    "new_market_run": false,
+    "new_market_data_loaded": false,
+    "new_final_evaluation": false,
+    "paper_written": false,
+    "frozen_artifacts_modified": false,
+    "independent_AI_review_not_human_peer_review": true,
+    "earlier_method_reviews_preserved": true
+  },
+  "protocol_handoff": {
+    "path": "docs/simple_execution_comparison_protocol.json",
+    "state_at_review": "Draft execution_ready=false; ROOT fills final execution_sources_sha256/frozen_input_sha256/status/ready after all required source/pipeline/audit-plan checks.",
+    "protocol_hash": "Deliberately absent while ROOT completes its final metadata; a separate later freeze receipt may bind the final protocol SHA without altering this review."
+  },
+  "source_findings": [
+    {
+      "check": "CachedQ1 identity",
+      "result": "Exact125jobset, canonicalstaticcontext, owntrain/evalIDs, effectiveClabel/publiccase all checked. Addedsemanticguard checks own uniqueeffective menu product againstq1_product and Balancedq2product byname,weights andlocal/original232 IDs. Q1Review/outsideproductnull semantics retained. No oldnineprice choices/financialmetrics used."
+    },
+    {
+      "check": "Selection accounting",
+      "result": "Allthree unique candidates simulated oncompleteownT, includingpendingphysicalB atdelta0. NewlycomputedkB must equalcandidate0 eventcount. Fixedcap min(kB,floor(.1n+1e−12)); all3metricsvalidated; globalG band then exactexcess/mean_nominal_fees/order, noarchitectureselection."
+    },
+    {
+      "check": "Nested timing",
+      "result": "Eachinner72 choosesfromowntraining before24validation. Finaljob computes alltrainingmetrics for retention, but innergatefailure skipsfinalfamilyranking. Q1Review/outside has priority over anypassedinnergate. Noouterreturn enters choices."
+    },
+    {
+      "check": "Same-U reference",
+      "result": "B physicallyevaluated withowninner72target; gatejoins exactoriginalIDandjob_ID. PositiveU required; absolute .1countgate andsame-U Bcountgate independentlyrecorded. Zeroauto riskNULL, not0."
+    },
+    {
+      "check": "Outer case/NULL and references",
+      "result": "Eacharchitecture ownfixedinitialchoice applies uniformly to24heldoutIDs. Onlyalreadyselecteddistinctdelta plusdeclaredBreference evaluated; rejectedfinancials remainNULL evenwhilehypotheticalB/EQ referenceavailable. Exactthirds reference usesannualalwaysrestore. No fallbackbetweenarchitectures."
+    },
+    {
+      "check": "Learner/reference identity",
+      "result": "Runnerdefines localLEARNERS/REFERENCES/performance_summary/paired_outputs; oldjointLEARNERS cannot misclassify newdiagnostics asreferences. Samecase denominators andreferenceavailability remainseparate."
+    },
+    {
+      "check": "Trajectory metadata",
+      "result": "Selectedactual/inner anddeclaredB statearchives have architecture/threshold/order metadata; noQsubset/annualprice/forecastvalues invented. Delta0is exactannualpendingcomponent, notstaticannualpostbreachgrowth."
+    },
+    {
+      "check": "Protocol/source integrity",
+      "result": "Runner source_manifest excludes newprotocolselfreference; mainrecords separateprotocolSHA andguard rechecks source/input/protocol aroundeachjob andexport. Mainrejects draftreadyfalse, overwrite, incomplete125jobs, inputhash/arraydigest mismatch andunexpectedrowinventory. Guardedloaderrequests1–120 withallow_finalFalse."
+    },
+    {
+      "check": "Statistics",
+      "result": "Repeat120,fit24,originalscenario5relatedfits preserved. OwnfinancialNULLs andcommon-evaluablepairs areexplicit; no effectiveN600/IID25-fit inference or bestseed/architecture selection."
+    }
+  ],
+  "analytic_fee_review": {
+    "source": "docs/simple_drift_cost_interpretation.json",
+    "status": "Proof and counterexample checked independently",
+    "proof": "For m=sum[(v-w)-tau*m*v]_+, monotonicity givesm<=d. Positivepart Lipschitz lowerbound givesm>=d−tau*m*sumv=d−tau*m; rearrange. Multiplybynonnegativefee rate givesfractionbounds.",
+    "bound": "d/(1+tau)<=m<=d; tau*d/(1+tau)<=fee/pretradewealth<=tau*d.",
+    "units": "At d=.05/.10 andtau=.0025, theupperpotentialrestorationfees are1.25/2.5basispoints. Insidebands these areupperbounds onthedeferredoptionalrestoration. Triggeredtransactions have d>band andmaycostmore; no pertradefeecap orfuturebenefit isproven.",
+    "benefit_counterexample": "Samecurrentweights,target,transferfee can haveoppositesign restore-minus-hold nextyearnetlogbenefit underdifferentfutureequityreturns; driftbyitself doesnotestimatebenefit>cost."
+  },
+  "tests": {
+    "command": "PYTHONPATH=src:research .venv/bin/python -m unittest tests.test_simple_execution_pipeline tests.test_simple_drift_execution tests.test_simple_drift_independent_replay tests.test_drift_fee_bounds -q",
+    "passed": 32,
+    "elapsed_seconds": 4.6,
+    "pipeline_tests": 8,
+    "pure_component_tests": 18,
+    "additional_independent_replay_tests": 2,
+    "analytic_fee_tests": 4,
+    "data_scope": "Syntheticinmemoryonly. Protocolreadcontainsidentity/design, notfinancialobservations; no rawmarketread ornewmarketresult."
+  },
+  "resolved_preexecution_changes": [
+    "Explicitcachedtargetsemanticguard andrealisticfixture added beforefreeze; tamperingname/weights/local/globalID rejected.",
+    "Meanexcess isexistingmax(mdd−L,0), eventtol remains1e−12; exactfee tie usesmean_nominal_fees. Earlieradvisorydesignrecordnotrewritten.",
+    "Newsourcevalidates all3completecandidate summaries andkBderivedfromnewdelta0B; no oldreference trainingcount reused."
+  ],
+  "nonnegotiable_interpretation": [
+    "Diagnosticpositivecontrols only; they lacktheQ2 pertradeestimatedbenefitversuscost requirement.",
+    "B inclusion removes sometrainingfamilyemptiness byconstruction; notempiricaldiscoveryofgreater safety.",
+    "Finaltarget/delta can differfrominnerones; inner riskpasseddoesnotcertifyfinaltrue risk.",
+    "Severalarchitecture/evidencechangesoccurtogether, notpurecausalforecastablation.",
+    "No newfinal121–180read orindependentblindclaim; allfive repeats useolddevelopment120.",
+    "Independentnumericalaudit andcompleteoutputchecks stillrequired aftertheactualstudy; currentsourcereviewdoesnotpredeclaretheirsuccess."
+  ],
+  "provenance": {
+    "sources_and_evidence_at_start": {
+      "scripts/run_simple_execution_comparison.py": "b82071d44305d6aceefacce83e49275a0ac4b7ad5cc59cc71d62258a4f99de36",
+      "research/experimental_execution/simple_drift_execution.py": "60dc564d8cf0abda4f2d7b2a83114c03473f8968d1f6af1ce35dd60fc84097c7",
+      "tests/test_simple_execution_pipeline.py": "29b8cffaf15fe36650a3261143dd4eac8d55a910cce3305520dffee079e4cf79",
+      "tests/test_simple_drift_execution.py": "29c31c1355d3ac47ba8320f51dbf20f4847ad2a0b3057e821c5a863ef273272b",
+      "tests/test_simple_drift_independent_replay.py": "2153c51e95f8edc17c0a36e9df84222d2f650ece4ab0b174af4b82c22360c6a7",
+      "tests/test_drift_fee_bounds.py": "b013bfc42e95b8ac0f56885a3b53c5b2a536a28ea7ec6d2c1ed7577b58d03701",
+      "docs/simple_drift_cost_interpretation.json": "ec9fa5044c8eeddaf1f062cc69d8a0ed813e6287587beee83267ff79bcb97d14",
+      "docs/simple_execution_design_review.json": "66d49cfcd69981e8b97f17088f91529a214dd1fd346c0316d36f97da572ccefe",
+      "docs/simple_drift_execution_implementation_review.json": "91783c67fbb14043af2cd5e9ef70fd51b5f669067b7badc194a7982eb8eba78a",
+      "docs/simple_execution_preexecution_method_review.json": "09f181882a3bb5e11a0870f090f953bddff02704163b3b9947621c73db639111",
+      "scripts/run_joint_liquidity_refit.py": "d6c6dfa2b18fd4b0fcfc9ec97b6a822c87f50ea1f42b2ee763d06a394e8641fe",
+      "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a",
+      "src/safeinvest/data.py": "70e511fd05c6e23fd6b8a72f1dc165426fc77a5eb4dbd8a3c13b839bb305a75f",
+      "docs/refit_stability_protocol.json": "8e9ab035073b91e4004c76c41296c56665d2199620e92d8cc0eb4eaca7a4efae",
+      "results/model_review/refit_stability_v1/manifest.json": "035bfa20b4e659e88ff48b56ffdc21a6563db32a0490d2ec8a6852154018e5a5",
+      "results/model_review/refit_stability_v1/independent_audit.json": "7725716ddbfb2da1071027936fc90374668f99161e6e15b57fd3f80b90a9e712",
+      "results/model_review/refit_stability_v1/static_refits.json.gz": "1621772a0a0d0dfb822692a21ff5b8fd15b90b0977c9ba6f78f9bfd10bf87fa7"
+    },
+    "sources_and_evidence_at_end": {
+      "scripts/run_simple_execution_comparison.py": "b82071d44305d6aceefacce83e49275a0ac4b7ad5cc59cc71d62258a4f99de36",
+      "research/experimental_execution/simple_drift_execution.py": "60dc564d8cf0abda4f2d7b2a83114c03473f8968d1f6af1ce35dd60fc84097c7",
+      "tests/test_simple_execution_pipeline.py": "29b8cffaf15fe36650a3261143dd4eac8d55a910cce3305520dffee079e4cf79",
+      "tests/test_simple_drift_execution.py": "29c31c1355d3ac47ba8320f51dbf20f4847ad2a0b3057e821c5a863ef273272b",
+      "tests/test_simple_drift_independent_replay.py": "2153c51e95f8edc17c0a36e9df84222d2f650ece4ab0b174af4b82c22360c6a7",
+      "tests/test_drift_fee_bounds.py": "b013bfc42e95b8ac0f56885a3b53c5b2a536a28ea7ec6d2c1ed7577b58d03701",
+      "docs/simple_drift_cost_interpretation.json": "ec9fa5044c8eeddaf1f062cc69d8a0ed813e6287587beee83267ff79bcb97d14",
+      "docs/simple_execution_design_review.json": "66d49cfcd69981e8b97f17088f91529a214dd1fd346c0316d36f97da572ccefe",
+      "docs/simple_drift_execution_implementation_review.json": "91783c67fbb14043af2cd5e9ef70fd51b5f669067b7badc194a7982eb8eba78a",
+      "docs/simple_execution_preexecution_method_review.json": "09f181882a3bb5e11a0870f090f953bddff02704163b3b9947621c73db639111",
+      "scripts/run_joint_liquidity_refit.py": "d6c6dfa2b18fd4b0fcfc9ec97b6a822c87f50ea1f42b2ee763d06a394e8641fe",
+      "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a",
+      "src/safeinvest/data.py": "70e511fd05c6e23fd6b8a72f1dc165426fc77a5eb4dbd8a3c13b839bb305a75f",
+      "docs/refit_stability_protocol.json": "8e9ab035073b91e4004c76c41296c56665d2199620e92d8cc0eb4eaca7a4efae",
+      "results/model_review/refit_stability_v1/manifest.json": "035bfa20b4e659e88ff48b56ffdc21a6563db32a0490d2ec8a6852154018e5a5",
+      "results/model_review/refit_stability_v1/independent_audit.json": "7725716ddbfb2da1071027936fc90374668f99161e6e15b57fd3f80b90a9e712",
+      "results/model_review/refit_stability_v1/static_refits.json.gz": "1621772a0a0d0dfb822692a21ff5b8fd15b90b0977c9ba6f78f9bfd10bf87fa7"
+    },
+    "source_hashes_match": true
+  }
+}
