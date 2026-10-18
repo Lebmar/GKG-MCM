@@ -1,0 +1,9 @@
+target,channel,original_path_n,state_to_calendar_mse_ratio,relative_mse_reduction_percent,included_in_primary_vector
+next_year,bill_real_log,120,0.9948945573036828,0.5105442696317186,True
+next_year,bond_real_log,120,0.9908471605499124,0.9152839450087602,True
+next_year,equity_real_log,120,0.9860697199112652,1.3930280088734759,True
+next_year,inflation_log,120,0.9857036190657222,1.4296380934277764,False
+remaining_to_original30_mean_annual,bill_real_log,120,0.9999884605712388,0.0011539428761198067,True
+remaining_to_original30_mean_annual,bond_real_log,120,1.0000447431457289,-0.004474314572888716,True
+remaining_to_original30_mean_annual,equity_real_log,120,0.9966385137163496,0.33614862836504056,True
+remaining_to_original30_mean_annual,inflation_log,120,0.997809653119204,0.21903468807960014,False

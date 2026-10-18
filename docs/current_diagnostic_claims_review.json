@@ -1,0 +1,115 @@
+{
+  "version": "current-diagnostic-claims-review-v1",
+  "completed_utc": "2026-10-18T05:01:08.507831+00:00",
+  "status": "No outstanding blocking claim error in reviewed incremental-risk and forecast sections after one wording correction",
+  "review_kind": "Read-only cross-artifact numerical and interpretation check; not independent human peer review or new policy validation",
+  "scope": {
+    "included": [
+      "Locked incremental_admission_risk_v1",
+      "Audited forecast_assumptions_v2",
+      "Their completed figure receipts",
+      "Sections1,2,4 and related general boundaries in scripts/build_admission_stability_notebook.py"
+    ],
+    "excluded": [
+      "All refit_stability_v1 result files; that audit was not yet complete",
+      "Stability numerical claims and final rendered notebook",
+      "Raw market data",
+      "Final scenarios121-180"
+    ]
+  },
+  "issues": [
+    {
+      "id": "calendar-scales-wording",
+      "severity": "methodological wording",
+      "original_claim": "Every calendar year mean and scale estimated from96 training paths",
+      "problem": "Calendar means are separate by original year, but feature/outcome scales are pooled RMS centered residuals across training96×29 rows per channel/target; the original wording suggested calendar-specific scales.",
+      "resolution": "Root changed wording to calendar-year training-only means followed by channelwise training96×29 pooled residual RMS. Corrected text reread and confirmed.",
+      "status": "corrected"
+    },
+    {
+      "id": "training-target-context",
+      "severity": "clarity",
+      "problem": "Same training target was correct but exact fold2 weights were initially implicit; readers might carry over the full120 menu weights.",
+      "resolution": "Root explicitly added outer-fit2 target40/25/35 and distinction from full120 descriptive45/5/50. Saved first-year restored weights and original Q1 context rows independently checked.",
+      "status": "clarified"
+    }
+  ],
+  "verified_claims": [
+    {
+      "claim": "24 newly admitted original market paths for clientC, not24 customers; incremental_paths has72 records because there are3 saved arms per ID.",
+      "check": "24 unique primary IDs; same24 each reference;72 three-arm rows;24 same-ID B pair rows; all outer_fold_2."
+    },
+    {
+      "claim": "The newly admitted24 differ from the72 primary automatically evaluated original IDs across outer folds1,2,5.",
+      "check": "Saved admission partition retains common48+incremental24+neither48; no missing learner financial outcomes are filled."
+    },
+    {
+      "claim": "Primary vs same-target annual B: larger MDD24/24, larger annualized log growth18/24, lower total nominal fees22/24; breach3vs1.",
+      "check": "Independently recomputed direction counts from paired CSV; references remain hypothetical."
+    },
+    {
+      "claim": "Primary-only breaches35/year19 and112/year26 have equal crossing-year end weights versusB but unequal current drawdown.",
+      "check": "Locked annual inventories and figure equality guard; historical real wealth/peak identity preserves original history. No causal decomposition claim."
+    },
+    {
+      "claim": "Fixed next-year comparator relative standardized MSE reduction0.9389259733310285%; remaining-to-original30 mean-annual reduction0.10911342527227808%.",
+      "check": "Recomputed ratios from path_losses: mean29 annual errors per original path/channel already saved, mean3 real-asset channel losses per path, equal120-path aggregation. Inflation excluded."
+    },
+    {
+      "claim": "960 saved prediction loss rows and27840 annual prediction rows do not increase original-path sample size beyond120.",
+      "check": "2 targets×4 channels×120 original IDs;29 scored original decisions per path."
+    },
+    {
+      "claim": "Forecast percentages are MSE reductions, not investment returns, Q-value improvement, conditional breach calibration, or evidence to replace the controller.",
+      "check": "Notebook paragraph and frozen findings explicitly restrict inference; no new financial strategy or parameter selected."
+    },
+    {
+      "claim": "Marginal empirical10–90 interval coverage approximately78.1–78.8%.",
+      "check": "Summary eight channel/horizon rows range0.7810344827586206 to0.7876436781609196. No exact80% finite-sample guarantee or conditional-Q conclusion stated."
+    },
+    {
+      "claim": "Same original fold2 target is40/25/35; full120 C menu45/5/50 belongs to a different fit.",
+      "check": "Saved Q1 context assignment table and all newly admitted first-year restored weights agree."
+    }
+  ],
+  "builder_snapshot_for_review_only": {
+    "path": "scripts/build_admission_stability_notebook.py",
+    "sha256_at_review": "36f8e7c9a3991bd341240fd006cf943e8309f3647f3d45ae03621bb6b6ad0aff",
+    "frozen_dependency": false,
+    "note": "Root is still adding independently audited stability material; this snapshot is informational and must not be enforced as a frozen runtime source. Stability claims were not reviewed here."
+  },
+  "source_input_artifact_sha256": {
+    "docs/incremental_admission_risk_diagnostic_protocol.json": "c37b8b614b2aee40fbabf55b6d577b9d7303f730079d1f00aaa632be4ae1b956",
+    "docs/forecast_assumption_diagnostic_protocol.json": "d12e57ed11ff6b1af1a635d8041eb8c27808634a9c6e198a1894dec5bdd0a439",
+    "docs/forecast_assumption_diagnostic_judgment.json": "a32d02356bfbb1b85881e405a41da8841dc6643c87e1b196a3980405b2740f5c",
+    "research/experimental_execution/calendar_state_diagnostic.py": "d52854705a11e057d798f2fa56604322ae67eb5450f4f7ba0d2cf038096a26b8",
+    "results/model_review/joint_liquidity_refit_v1/q1_context_assignments.csv": "931ee3905c6ec5438f19c1821077a5f5f7ae18f0bc44421eab56edb04b83b79e",
+    "research/figures/incremental_admission_risk/manifest.json": "c26e24e2268ef08d6bd28ecf63a52617f23a90608dd488a0216643a29c774e8b",
+    "research/figures/forecast_assumptions_v2/manifest.json": "bc8010fcf287c61500e287ba7652d8e52a7632acc6508d679e9efb922890828e",
+    "results/model_review/incremental_admission_risk_v1/manifest.json": "558ebbc4f15189c065e298bd83333445d5c4b3897c49ee524cb665087743bfe0",
+    "results/model_review/incremental_admission_risk_v1/findings.json": "971f8d0e5b7d751dcad642fa4167f3daf5c4d9c3ccf2369ca08527766f51ba74",
+    "results/model_review/incremental_admission_risk_v1/consistency_checks.json": "f27fda6c2548ce8cdf38751548789af620551b6229945675a2e4b6842319100b",
+    "results/model_review/incremental_admission_risk_v1/incremental_paths.csv": "b4163458b3d9a892ae1e41f1abfcdb8b8cf7f9459be67e4a1cd41c7ae55c697a",
+    "results/model_review/incremental_admission_risk_v1/incremental_paired_paths.csv": "732c9021134cb54a2e3a5d4d590718a7d60c681f4b448a12dd460618774cbc1a",
+    "results/model_review/incremental_admission_risk_v1/incremental_annual_states.csv": "8cd1570dec155ad27539e87acfaa84aa9630e0446c686c9143b96bf5b4c63980",
+    "results/model_review/incremental_admission_risk_v1/admission_partition.csv": "7d44226a7f8bba6d6c8ff4132f2ae980a0e433e8c3ae61fce3b3e9de8a39cabb",
+    "results/model_review/forecast_assumptions_v2/manifest.json": "8462b516302142dd644e6e2440d5a15b971fd1226b26d6efdd0ef2df02947001",
+    "results/model_review/forecast_assumptions_v2/independent_audit.json": "b47af35bb59755bc0d4405fd874aec4b490fae64366438d1d4e1a04d80e882c5",
+    "results/model_review/forecast_assumptions_v2/findings.json": "02a66a5c3e12d2011385599c67cad55c2a2eba494a9779e5d34e1467e623999b",
+    "results/model_review/forecast_assumptions_v2/summary.csv": "a29bb8b11a04716328315715d78800437cda4fb4b5040c421bda36b2379b3980",
+    "results/model_review/forecast_assumptions_v2/fold_summary.csv": "e4cdc4ceb59585b769ee1273dcbe725a1041922979775878a7db95a2a44232a1",
+    "results/model_review/forecast_assumptions_v2/path_losses.csv": "ac8b9b1d7ea28ffe97f2f1c274de9ee51900bb6fc1adc398c1511362e9ffae6e",
+    "results/model_review/forecast_assumptions_v2/training_scales.csv": "840fe0a9c1a80d729742cad110d92badcb1da92423b06a3048d23013561022e3"
+  },
+  "sources_unchanged_during_review": true,
+  "new_fits": 0,
+  "new_policy_simulations": 0,
+  "model_or_threshold_changes": false,
+  "raw_market_loaded": false,
+  "final_scenarios_loaded": false,
+  "limitations": [
+    "This review does not identify causal contributions to the new24 breaches.",
+    "The reused development design supplies no new blind, external or population-risk validation.",
+    "Final notebook and later stability claims still require their own completed audit and rendered verification."
+  ]
+}

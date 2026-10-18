@@ -7,9 +7,12 @@ Author: **Chengxuan YUAN**.
 are an archived, auditable prototype; they are not the accepted final competition
 model or a submission recommendation. Work has returned to the objective,
 parameter meanings, assumptions, internal validation and decision rules.
-See `docs/model_foundation_review.json`; the latest parameter/refit, coverage and
-joint-liquidity judgments are in notebook sections10.12–10.15 and
-`docs/service_refinement_readiness_review.json`. No report is being regenerated in this
+See `docs/model_foundation_review.json`; parameter/refit, coverage and
+joint-liquidity history is in notebook sections10.12–10.15. The newest
+[executed research companion](notebooks/admission_stability_forecasts.ipynb)
+and [reading copy](notebooks/admission_stability_forecasts.html) examine the
+risk cost of new admission, complete-refit stability and prediction assumptions.
+No report is being regenerated in this
 phase. The old evaluation scenarios have already been seen and cannot be
 represented as a new blind test for subsequent changes.
 
@@ -26,6 +29,43 @@ A [reading copy](notebooks/risk_menu_development.html) hides code cells;
 it is a research note, not a submission
 report. The notebook separates the growth objective, risk-budget policy,
 sampling evidence, liquidity assumptions and the actual execution rule.
+
+The 2026-10-18 follow-up freezes three separate diagnostics. The added24 paths
+from the old second outer fold use the same40/25/35 equity/bond/bill target
+for the learned controller and annual/pending reference. All24 have larger
+MDD under the controller;18 have higher annual log growth and22 lower fees.
+Events are3 versus1, mean MDD27.97% versus24.92%, and empirical CVaR90 of
+MDD47.69% versus43.51%. All24 remain visible, including the two primary-only
+crossings. Their crossing-year end weights agree, but wealth and historical
+peaks differ. Complete state reconstruction confirms the original peak and
+absorbing event history; this is not a causal attribution to any one trade.
+See `results/model_review/incremental_admission_risk_v1/`.
+
+Five newly fixed complete-refit partitions use125 training tasks. Primary
+automatic path counts are0,48,120,72,48 out of the same original120 in each
+repeat; conditional event counts areNULL,8,12,7,3. All25 final fits keep C
+Balanced, but only12 admit execution:7 have no top eligible inner budget,
+6 have no feasible final controller within that set. Of12 admitted fits,
+8 select a controller exactly at its training event cap and4 have only one
+event of slack. The canonical rule admits7 fits; the common168 scenario-repeat
+financial records are identical. These are overlapping fits and repeated
+market records, not independent deployment trials or600 new scenarios.
+Admission is determined from training data and C before evaluation returns;
+each fit applies one initial decision to all24 held-out paths. The new rules
+remain research comparators, with no stable10% guarantee. See
+`docs/refit_stability_protocol.json`,
+`results/model_review/refit_stability_v1/` and
+`results/model_review/refit_stability_summary_v1/`.
+
+The fixed previous-year-state predictor uses the original five whole-path
+folds, train-only calendar centering and pooled residual scales, and fixed
+ridge penalty1. Three-real-asset path-averaged standardized MSE falls by0.939%
+for next-year quantities and0.109% for remaining-horizon averages. Inflation
+is a separate channel. These small prediction-loss differences do not validate
+conditional trading values or tail probabilities and do not select a new
+controller. The diagnostic and independent augmented-least-squares audit
+are under `results/model_review/forecast_assumptions_v2/`; judgments are in
+`docs/forecast_assumption_diagnostic_judgment.json`.
 
 The static study declares its procedure in
 `docs/risk_menu_development_protocol.json`: 232 fixed targets, three risk-budget
@@ -233,8 +273,8 @@ audits; they do not replace the primary procedure. The research preserves full
 path folds, records referrals as null outcomes, and distinguishes empirical
 calibration, numerical correctness and statistical evidence.
 
-The latest checkpoint passes **496 tests** and checks 74 saved manifests/audits
-against 592 distinct source, input, result and execution-evidence files. The
+The latest checkpoint passes **540 tests** and checks 94 saved manifests/audits
+against 698 distinct source, input, result and execution-evidence files. The
 new joint stage passes 538,236 independent selection/accounting checks and its
 30-task isolated replay matches 18 deterministic output files byte for byte;
 progress differs only in declared runtime fields. The first implementation

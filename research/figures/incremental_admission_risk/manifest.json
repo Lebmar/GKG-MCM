@@ -1,0 +1,57 @@
+{
+  "completed_utc": "2026-10-18T04:48:37.564023+00:00",
+  "status": "complete",
+  "visual_review_confirmed": true,
+  "sources": {
+    "scripts/plot_incremental_admission_risk.py": "0d7a423bb671c4803e4c821e54e6610965c28bed8197be66c4ac471bb45884d8",
+    "scripts/plot_development_structure.py": "6a0f401d3e6b18b6ab9d22e11bec74d5456430af30cb8da172a28163d85b8ed6"
+  },
+  "sources_at_end": {
+    "scripts/plot_incremental_admission_risk.py": "0d7a423bb671c4803e4c821e54e6610965c28bed8197be66c4ac471bb45884d8",
+    "scripts/plot_development_structure.py": "6a0f401d3e6b18b6ab9d22e11bec74d5456430af30cb8da172a28163d85b8ed6"
+  },
+  "input_sha256": {
+    "results/model_review/incremental_admission_risk_v1/manifest.json": "558ebbc4f15189c065e298bd83333445d5c4b3897c49ee524cb665087743bfe0",
+    "results/model_review/incremental_admission_risk_v1/findings.json": "971f8d0e5b7d751dcad642fa4167f3daf5c4d9c3ccf2369ca08527766f51ba74",
+    "results/model_review/incremental_admission_risk_v1/consistency_checks.json": "f27fda6c2548ce8cdf38751548789af620551b6229945675a2e4b6842319100b",
+    "results/model_review/incremental_admission_risk_v1/incremental_paths.csv": "b4163458b3d9a892ae1e41f1abfcdb8b8cf7f9459be67e4a1cd41c7ae55c697a",
+    "results/model_review/incremental_admission_risk_v1/incremental_paired_paths.csv": "732c9021134cb54a2e3a5d4d590718a7d60c681f4b448a12dd460618774cbc1a",
+    "results/model_review/incremental_admission_risk_v1/incremental_annual_states.csv": "8cd1570dec155ad27539e87acfaa84aa9630e0446c686c9143b96bf5b4c63980",
+    "docs/incremental_admission_risk_diagnostic_protocol.json": "c37b8b614b2aee40fbabf55b6d577b9d7303f730079d1f00aaa632be4ae1b956"
+  },
+  "input_sha256_at_end": {
+    "results/model_review/incremental_admission_risk_v1/manifest.json": "558ebbc4f15189c065e298bd83333445d5c4b3897c49ee524cb665087743bfe0",
+    "results/model_review/incremental_admission_risk_v1/findings.json": "971f8d0e5b7d751dcad642fa4167f3daf5c4d9c3ccf2369ca08527766f51ba74",
+    "results/model_review/incremental_admission_risk_v1/consistency_checks.json": "f27fda6c2548ce8cdf38751548789af620551b6229945675a2e4b6842319100b",
+    "results/model_review/incremental_admission_risk_v1/incremental_paths.csv": "b4163458b3d9a892ae1e41f1abfcdb8b8cf7f9459be67e4a1cd41c7ae55c697a",
+    "results/model_review/incremental_admission_risk_v1/incremental_paired_paths.csv": "732c9021134cb54a2e3a5d4d590718a7d60c681f4b448a12dd460618774cbc1a",
+    "results/model_review/incremental_admission_risk_v1/incremental_annual_states.csv": "8cd1570dec155ad27539e87acfaa84aa9630e0446c686c9143b96bf5b4c63980",
+    "docs/incremental_admission_risk_diagnostic_protocol.json": "c37b8b614b2aee40fbabf55b6d577b9d7303f730079d1f00aaa632be4ae1b956"
+  },
+  "outputs_sha256": {
+    "01_new_admission_all_24_pairs.png": "44cde913d770d06818eacf2fdc3cf49d8dc8c4afc212e1be1754a056c46f3a39",
+    "01_new_admission_all_24_pairs.svg": "14cb0d7138f46ae344a9128b14e3df6bc0fb8885736d362c5d21f83679f5e3ff",
+    "02_primary_only_full_history.png": "5dc1a21fd87bbcd1db8625cda310baef4abe0e507d7fd9252b06cd2204293541",
+    "02_primary_only_full_history.svg": "5c2957ddf7e707125743470d6e58c886541b9e404d6eb5205d7e1061b022a374",
+    "all_24_pair_plot_data.csv": "0ac012566164a746888bc6e962e5ff8994a94949daa9fc037a3af60995b307d0",
+    "primary_only_full_history_plot_data.csv": "d2b520717e60074555befa209b0d6eef345ec826af36705e74d4c46799aa8bc4"
+  },
+  "fixed_original_client": "C",
+  "fixed_original_horizon": 30,
+  "fixed_loss_tolerance": 0.4,
+  "units": "Original market paths for one client; no customer coverage claim",
+  "checks": {
+    "all_24_pairs_visible": true,
+    "every_primary_only_breach_visible": true,
+    "full_30_year_history": true,
+    "crossing_weights_equality_checked": true,
+    "fonts_min_points": 12,
+    "text_bounds_passed": true,
+    "source_attribution_visible": true,
+    "svg_text_preserved": true,
+    "svg_trailing_whitespace_normalized_before_hash": true
+  },
+  "raw_market_paths_loaded": false,
+  "new_policy_or_fit": false,
+  "final_scenarios_loaded": false
+}

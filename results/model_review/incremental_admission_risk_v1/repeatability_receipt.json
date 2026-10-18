@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "method": "Same-source same-input repeated read-only extraction; original source and audited artifacts unchanged",
+  "deterministic_output_files": 10,
+  "outputs_sha256_before": {
+    "admission_partition.csv": "7d44226a7f8bba6d6c8ff4132f2ae980a0e433e8c3ae61fce3b3e9de8a39cabb",
+    "common_context_summary.csv": "2aa280d33351c204c78594c4eeb3a31376c2296cfb505938b6640038cd0ed99d",
+    "consistency_checks.json": "f27fda6c2548ce8cdf38751548789af620551b6229945675a2e4b6842319100b",
+    "event_witness_annual_states.csv": "d695a1647026473962738e2a8b9e9c67e6bb744550052e231373d356502e3318",
+    "findings.json": "971f8d0e5b7d751dcad642fa4167f3daf5c4d9c3ccf2369ca08527766f51ba74",
+    "incremental_annual_states.csv": "8cd1570dec155ad27539e87acfaa84aa9630e0446c686c9143b96bf5b4c63980",
+    "incremental_paired_paths.csv": "732c9021134cb54a2e3a5d4d590718a7d60c681f4b448a12dd460618774cbc1a",
+    "incremental_paired_summary.csv": "c0c0cac3e63089d2f2e5600849e67ae5091d9607a14aee899d7801485683fb6f",
+    "incremental_paths.csv": "b4163458b3d9a892ae1e41f1abfcdb8b8cf7f9459be67e4a1cd41c7ae55c697a",
+    "incremental_summary.csv": "4a53ed26a04e22c8149fbec12e8882a1b9c753ae5490ca197c4066b1ad6cc162"
+  },
+  "outputs_sha256_after": {
+    "admission_partition.csv": "7d44226a7f8bba6d6c8ff4132f2ae980a0e433e8c3ae61fce3b3e9de8a39cabb",
+    "common_context_summary.csv": "2aa280d33351c204c78594c4eeb3a31376c2296cfb505938b6640038cd0ed99d",
+    "consistency_checks.json": "f27fda6c2548ce8cdf38751548789af620551b6229945675a2e4b6842319100b",
+    "event_witness_annual_states.csv": "d695a1647026473962738e2a8b9e9c67e6bb744550052e231373d356502e3318",
+    "findings.json": "971f8d0e5b7d751dcad642fa4167f3daf5c4d9c3ccf2369ca08527766f51ba74",
+    "incremental_annual_states.csv": "8cd1570dec155ad27539e87acfaa84aa9630e0446c686c9143b96bf5b4c63980",
+    "incremental_paired_paths.csv": "732c9021134cb54a2e3a5d4d590718a7d60c681f4b448a12dd460618774cbc1a",
+    "incremental_paired_summary.csv": "c0c0cac3e63089d2f2e5600849e67ae5091d9607a14aee899d7801485683fb6f",
+    "incremental_paths.csv": "b4163458b3d9a892ae1e41f1abfcdb8b8cf7f9459be67e4a1cd41c7ae55c697a",
+    "incremental_summary.csv": "4a53ed26a04e22c8149fbec12e8882a1b9c753ae5490ca197c4066b1ad6cc162"
+  },
+  "sources_unchanged": true,
+  "limitations": "Deterministic extraction is not a fresh blind experiment, a new market replay, or independent scientific review."
+}

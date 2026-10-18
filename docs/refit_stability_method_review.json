@@ -1,0 +1,207 @@
+{
+  "version": "refit-stability-method-review-v1",
+  "created_utc": "2026-10-18T04:40:27.733744+00:00",
+  "status": "prospective bounded resampling-method recommendation before new stability fits; exploratory reuse, not new blind validation",
+  "scope": {
+    "new_market_fit": false,
+    "new_simulation": false,
+    "raw_scenario_data_loaded": false,
+    "frozen_source_modified": false,
+    "new_file_only": "docs/refit_stability_method_review.json",
+    "paper_written": false,
+    "role": "independent AI method-design review, not human peer review"
+  },
+  "research_question": "Does the complete fixed joint-liquidity learner repeatedly change Q1 case membership, beta/top-E/refit admission, price, target and conditional outcomes under whole-path repartition of the same development120? Do newly admitted subgroups consistently bear extra observed risk?",
+  "fixed_primary": "joint_tie_set_refit_learner",
+  "fixed_comparator": "joint_canonical_learner",
+  "proposal": {
+    "repeats": 5,
+    "outer_folds_per_repeat": 5,
+    "outer_training_n": 96,
+    "outer_evaluation_n": 24,
+    "complete_outer_fits": 25,
+    "dynamic_inner_folds_per_outer_fit": 4,
+    "dynamic_inner_training_n": 72,
+    "dynamic_inner_validation_n": 24,
+    "jobs_per_fit": 5,
+    "total_static_dynamic_training_jobs": 125,
+    "full120_new_fit": false,
+    "partition_unit": "Complete original joint 30-year return/inflation scenario; never split individual years between training/evaluation.",
+    "outer_rule": "For each prespecified repeat, default_rng(outer_seed).permutation(sorted(1..120)), array_split5; save sorted 24-test and sorted96-complement identities before outcomes.",
+    "dynamic_inner_rule": "For each outer training S, default_rng(dynamic_inner_seed).permutation(sorted(S)), array_split4; save four sorted24-test/sorted72-complement folds. Full Q1 gamma/menu/admission is relearned within each T72 and final S96.",
+    "static_rule": "make_context(T, seed=static_seed, name, context_id, outer_test_ids). Four static subfolds exactly as frozen adapter; T72 gives54/18 and T96 gives72/24. For final S96 the full parent context is reused, including its dynamic-fourfold inner_seed and identities. Never pass unsupported sizes.",
+    "seed_recommendation": {
+      "base": 87020261018000,
+      "repeat_index": "1..5",
+      "fold_index": "1..5",
+      "context_id": "100*repeat_index+fold_index",
+      "outer_seed": "base+repeat_index",
+      "dynamic_inner_seed": "base+1000+context_id",
+      "static_inner_seed": "base+100000+10*context_id+dynamic_inner_fold",
+      "static_final_seed": "base+1000+context_id; exactly the parent dynamic_inner_seed",
+      "note": "Every derived integer and fold membership must be serialized in root protocol before first fit. This concrete seed proposal may be replaced before execution only; no outcome-based seed change.",
+      "required_coupling": "The parent context inner_folds define both four dynamic beta folds and final S96 static calibration subfolds in the frozen algorithm. Keep this coupling; do not introduce a separate final-static partition."
+    },
+    "unchanged": [
+      "all five original H/L/liquidity questionnaires",
+      "strict172 candidates including exact thirds and local/original232 mapping",
+      "joint High30/Medium10/Low0 normative target floors in every static fit and oracle",
+      "static gamma candidates/admission logic/all-profile objective",
+      "dynamic beta candidates and service alpha=.10",
+      "nine original fixed-target annual-price controllers, original cost .0025",
+      "global1e-12 ties and top-E-only refit-aware selector",
+      "C-H30/L.4 only, effective Q1 Balanced prerequisite",
+      "original accounting and no-target-update/absorbing pending rules"
+    ],
+    "evaluate": "Only final training-selected distinct price orders, deduplicated across two learners; references separately hypothetical. Never inspect unselected outer learner outcomes.",
+    "stop_rule": "Complete the one fixed25-fit batch. No extra repeats, seed search, grid expansion, floor/alpha/beta/eta/ranking tuning or primary replacement based on resulting admission/performance. Report incomplete jobs and implementation failures honestly if execution fails."
+  },
+  "case_partition": {
+    "identity": "original_n=balanced_case_n+q1_review_n+not_balanced_case_n; balanced_case_n=case_auto_n+case_execReview_n",
+    "q1_review": "Effective Q1 Review with calibration/risk/liquidity/intersection/menu/inner-auto evidence reasons; not automatically execution or financial risk failure.",
+    "outside_balanced": "Effective Conservative/Growth means not_balanced_case, not Review; C dynamic financial outcomes NULL.",
+    "execution_review": "Balanced case but empty E or no E-refit-feasible training controller; financial outcomes NULL.",
+    "no_coverage_floor": true,
+    "zero_auto_risk": null,
+    "no_review_financial_fallback": true
+  },
+  "exact_expected_rows_if_old_table_semantics_retained": {
+    "static_inner_oof_paths": 240000,
+    "static_fits": 125,
+    "training_candidate_paths": 86400,
+    "training_candidate_summary": 1125,
+    "inner_validation_paths": 12000,
+    "beta_summaries": 125,
+    "client_paths_four_policies": 2400,
+    "q1_context_assignments": 125,
+    "q1_effective_paths": 3000,
+    "fit_admission_two_learners": 50,
+    "row_derivations": {
+      "sum_job_training_n": "100*72+25*96=9600",
+      "static_inner_oof_paths": "9600*5 profiles*5 gammas",
+      "training_candidate_paths": "9600*9 candidates",
+      "inner_validation_paths": "25*96*5 betas",
+      "client_paths_four_policies": "25*24*4",
+      "q1_effective_paths": "25*24*5 profiles"
+    }
+  },
+  "reporting_plan": [
+    {
+      "unit": "fit",
+      "denominator": "25 completed outer fits, 5 per repeat; separate from old5fits",
+      "fields": [
+        "Q1 raw/effective C case",
+        "selected static gamma",
+        "all3target weights and candidate identities",
+        "canonical beta/order/status",
+        "top E/refit attempts/primary beta/order/status",
+        "explicit non-admission cause"
+      ],
+      "interpretation": "Descriptive sensitivity to fixed partition mechanism; overlapping training fits are not independent deployment trials."
+    },
+    {
+      "unit": "repeat",
+      "denominator": "120 original OOF paths for C per repeat, each once",
+      "fields": [
+        "full case partition",
+        "conditional auto k/n risk",
+        "auto meanG,median/P10 CAGR,median/P90 MDD,CVaR90,fees,tradefraction",
+        "canonical-primary common-auto and newly primary-auto cohort counts/events",
+        "paired hypothetical B/EQ differences on same auto cohorts"
+      ],
+      "interpretation": "Five metric values/ranges/IQR and every denominator; no CI/p-value over five repeats, no treating pooled600 as new independent market observations."
+    },
+    {
+      "unit": "scenario",
+      "denominator": "120 original scenario IDs, each evaluated five times",
+      "fields": [
+        "times Q1 Balanced/Review/outside",
+        "times auto/execReview per learner",
+        "common-auto versus newly admitted times",
+        "breach count among automatic evaluations",
+        "range of weights/price and financial metrics when observed"
+      ],
+      "interpretation": "Reused-path decision instability. Never impute rejected returns. An original scenario repeated five times is one original market path evaluated under related training fits."
+    },
+    {
+      "unit": "selection/target",
+      "denominator": "25 finalfits; inner fits separately",
+      "fields": [
+        "gamma,beta,eta/order,top-E frequencies",
+        "menu candidate identity frequencies",
+        "descriptive pairwise L1 weight distances",
+        "same original path financial/action changes across admitted fits"
+      ],
+      "interpretation": "Mode/frequency is not confidence in a unique parameter; gamma/beta/eta are technical controls, not elicited customer preferences."
+    },
+    {
+      "unit": "pooled scenario-repeat",
+      "denominator": "600 repeated OOF identities per policy",
+      "fields": [
+        "explicit weighted auto count,breach numerator and conditional denominator"
+      ],
+      "interpretation": "Optional bookkeeping only, clearly labelled repeated scenario-fit outcomes. No binomial risk guarantee, effective N600 or deployment customer coverage."
+    }
+  ],
+  "forecast_diagnostic_design_review": {
+    "target": "At genuine held-out C annual calendar years, compare annual asset logreturn relative to bills against same-calendar joint training fan, using only training market paths and no actual future for prediction.",
+    "dependence": "Within-scenario years and repeated train/eval partitions are dependent. Aggregate each complete path first when comparing forecast error; report year/asset structure without pretending thousands of forecast rows are IID.",
+    "estimand": "This audits the declared same-calendar unconditional marginal forecast. One held-out realized future per state is not a known true conditional distribution or proof of conditional calibration/miscalibration.",
+    "joint_and_tail": "Marginal relative-return intervals or PIT/ranks cannot validate joint cross-asset dependence, tail dependence, history-conditioned probabilities, or lifetime everbreach conditional Q.",
+    "scoring": "Use predeclared finite empirical proper score such as CRPS plus mean forecast error and interval/rank summaries; explicit finite-rank/tie convention. Do not choose score/bandwidth/fan source/calendar pooling after looking at outcomes.",
+    "relative_bills": "Relative nominal logreturn to bills cancels common CPI; cannot by itself certify real-purchasing-power or bill reserve safety.",
+    "actual_policy": "Do not reconstruct an implementable oracle strategy from realized branch suffixes. Saved current-hold/restore-plus-B diagnostic is explanatory and is not forecast of adaptive future policy.",
+    "possible_interpretation": "A finding that same-calendar marginal distributions vary by split or calendar year supports caution about forecast stability. It does not uniquely attribute controller risk to a forecast error versus target/state/selection changes."
+  },
+  "preexecution_checklist": [
+    "Freeze all25outer contexts/125jobs and exact seeds/IDs before any new market fit.",
+    "Validate every training/evaluation disjointness/complement/size and each scenario once per repeat.",
+    "Final S96 static calibration context must equal parent dynamic4fold context including seed and folds; separate final-static seed would change the frozen learning algorithm.",
+    "Source/hash identity equals frozen joint learner; import helpers rather than monkeypatching old modules.",
+    "Synthetic all-case tests include Q1 Review and outsideBalanced, emptyE, allErefitfail, distinct selected prices and duplicate selected orders.",
+    "Compute repeated structure even when every actualnewfit happens to be Balanced; do not omit dormant NULL branches.",
+    "Independent summary/selection/partition audit then bounded independent financial/Q replay; no probability certification.",
+    "No oldold or new source/results changed after freeze; preserve implementation failure artifact before any repair.",
+    "Do not count repeated reference outcomes or deduplicated price arms as independent observations."
+  ],
+  "acceptance_limits": [
+    "Resampling from120 already reused scenarios cannot restore unseen-data status. Historical V1 final121–180 was seen; never parse those rows in this stage.",
+    "No claim of award, deployment safety, identified risk preference, population coverage or guaranteed10% exceedance.",
+    "A stable selector may repeatedly make a poor forecast; an unstable selected parameter may still induce identical actions. Report both selection and decision/outcome stability."
+  ],
+  "provenance": {
+    "sources_and_evidence_at_start": {
+      "docs/joint_liquidity_refit_protocol.json": "1e92a4f7b374bd7437315c89e513a830f12211b54cb08d3c4341dffdc9f1e3f6",
+      "docs/service_refinement_readiness_review.json": "98ff90324461e415c86857d135450e64f4b5006ac5343d215e1e9558f77e8cbc",
+      "docs/refit_aware_selection_contract.json": "d139340300c65bd28f3869bce061b120e1925cb95cfb0660151a2e95905e8d50",
+      "research/experimental_execution/nested_static_adapter.py": "9401e5b7454b9b0b88b28060baefeb3920dab9fd3e3c31870d00977e5ca84d6f",
+      "research/experimental_execution/joint_liquidity_static.py": "f12fc90a78594f91a11c46a4ca7306237024404098df467e9dc66e110ee78c10",
+      "research/experimental_execution/refit_aware_selection.py": "12d90c14e1208143014a4d0f9d8eadd69960bd966308f24d5d13f7873866d7c6",
+      "research/experimental_execution/nested_dynamic_selection.py": "a293daf2383477e4b33fffd5dacad04ab8fbc71dc92edab2c9f9ff492a28aa20",
+      "scripts/run_joint_liquidity_refit.py": "d6c6dfa2b18fd4b0fcfc9ec97b6a822c87f50ea1f42b2ee763d06a394e8641fe",
+      "results/model_review/joint_liquidity_refit_v1/manifest.json": "28819dca54041e22ae53ac924b71e023c005f96cd73ca66d102b3a1ac20a4c99",
+      "results/model_review/joint_liquidity_refit_v1/independent_audit.json": "16339e76e41e07b6f37fbd0c88baff3ffe77d245e77258ef9bc8060fd79b3a15"
+    },
+    "sources_and_evidence_at_end": {
+      "docs/joint_liquidity_refit_protocol.json": "1e92a4f7b374bd7437315c89e513a830f12211b54cb08d3c4341dffdc9f1e3f6",
+      "docs/service_refinement_readiness_review.json": "98ff90324461e415c86857d135450e64f4b5006ac5343d215e1e9558f77e8cbc",
+      "docs/refit_aware_selection_contract.json": "d139340300c65bd28f3869bce061b120e1925cb95cfb0660151a2e95905e8d50",
+      "research/experimental_execution/nested_static_adapter.py": "9401e5b7454b9b0b88b28060baefeb3920dab9fd3e3c31870d00977e5ca84d6f",
+      "research/experimental_execution/joint_liquidity_static.py": "f12fc90a78594f91a11c46a4ca7306237024404098df467e9dc66e110ee78c10",
+      "research/experimental_execution/refit_aware_selection.py": "12d90c14e1208143014a4d0f9d8eadd69960bd966308f24d5d13f7873866d7c6",
+      "research/experimental_execution/nested_dynamic_selection.py": "a293daf2383477e4b33fffd5dacad04ab8fbc71dc92edab2c9f9ff492a28aa20",
+      "scripts/run_joint_liquidity_refit.py": "d6c6dfa2b18fd4b0fcfc9ec97b6a822c87f50ea1f42b2ee763d06a394e8641fe",
+      "results/model_review/joint_liquidity_refit_v1/manifest.json": "28819dca54041e22ae53ac924b71e023c005f96cd73ca66d102b3a1ac20a4c99",
+      "results/model_review/joint_liquidity_refit_v1/independent_audit.json": "16339e76e41e07b6f37fbd0c88baff3ffe77d245e77258ef9bc8060fd79b3a15"
+    },
+    "source_hashes_match": true,
+    "literature_newly_browsed": false,
+    "method_source": "Direct frozen learner/readiness/adapter inspection; recommendations above are methodological choices, not attributed as external theorem."
+  },
+  "design_correction_before_market_execution": {
+    "reason": "Root caught that the frozen final static bundle reuses the parent context whose four inner folds also supply dynamic beta validation. The initial independent final-static seed recommendation would change this dependence. Corrected before any new stability fit; no observed market result used.",
+    "old_recommendation": "base+200000+context_id",
+    "accepted_recommendation": "base+1000+context_id, same as parent dynamic inner seed",
+    "specification_status": "prospective recommendation correction, old frozen sources unchanged"
+  }
+}

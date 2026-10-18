@@ -1,0 +1,44 @@
+{
+  "version": "refit-stability-independent-audit-plan-v1",
+  "declared_utc": "2026-10-18T04:48:43.950938+00:00",
+  "status": "Ready before newnumeric manifest; independent arithmetic implementation, not probability certification",
+  "reviewed_protocol": {
+    "path": "docs/refit_stability_protocol.json",
+    "sha256": "8e9ab035073b91e4004c76c41296c56665d2199620e92d8cc0eb4eaca7a4efae"
+  },
+  "audit_source_sha256": {
+    "scripts/audit_refit_stability.py": "346ae1fe54d8bba5b17ecc2683db434bedd7a994181c5ccb554fa9b1acee6748",
+    "tests/test_audit_refit_stability.py": "b1c131d10d1a338a4ceab08c423c4233af0f4f8b84233d6d93702d697f1b2b35",
+    "scripts/audit_fan_rollout_execution.py": "9f9d4a274e3be531040193e1654ec6bdf74733ad5204937b8a8d8195d02940fb",
+    "scripts/audit_review_pending_execution.py": "9c208ce69a03f1a13460908ec04b39a8dc232eacbb8882b5bdef3aafae60a264",
+    "src/safeinvest/data.py": "70e511fd05c6e23fd6b8a72f1dc165426fc77a5eb4dbd8a3c13b839bb305a75f"
+  },
+  "new_market_fit": false,
+  "new_final_evaluation": false,
+  "reviewed_implementation_imported": false,
+  "synthetic_tests": 10,
+  "outputs": [
+    "results/model_review/refit_stability_v1/independent_audit.json"
+  ],
+  "checks": [
+    "Guarded1–120 loader and savedarray digest/cache/mapping identity",
+    "Independent reconstruction of all5outer permutations,25 complete contexts,125 jobs and within-parent finalstatic/dynamic fold coupling",
+    "All2500 static inner fits and125 final static fits: complete172 risk/liquidity/joint masks,oracle,menu arithmetic,rawassignment,pooledgamma and effectiveadmission cause",
+    "All9price complete-training path aggregates and5beta trainingcaps, all5inner-beta pooledcounts/objectives",
+    "Canonical and topE-only/refit-aware final choices including every attemptedcap,case priority andfinancialNULL",
+    "Allselectedactual andinner physical state trees independently replayed with 100-stepfee bisection plus gate arithmetical score/action",
+    "Eachselectedlearner/inneruniqueprice smallestoriginalevalID at originalyears2,16,30 scalar fan checked; pending/nonautoskips no replacement",
+    "OwnH Q1 cached annualevaluation and allrepeat/fit/scenario summaries,pairedcommonauto/differences,referenceavailability separatefromcustomerservice",
+    "Everymanifestsource/input/output hashcurrent and start=end; auditselfsnapshotstart=end"
+  ],
+  "paired_fold_derivation": "Raw paired rows have repeat_id/context/scenario_id; deriveouter_fold from independently reconstructed context without changing savedfile. Other raw decision/evidence rows carry explicit outer_fold.",
+  "limits": [
+    "No rerun static globalmenu search or unavailable9price training state trees",
+    "Previously audited annualcache used forQ1, not another independentannualsimulator",
+    "Sharedprices,twomethods,fits,years,repeats are dependent; no binomialCI or effectiveN600",
+    "Allresultsreuseddevelopment120,not blind orriskguarantee;no121–180parse",
+    "AIindependent arithmetic implementation not human peerreview"
+  ],
+  "source_hashes_are_pre_audit": true,
+  "on_implementation_error": "Stop audit; preserve failurediagnostic, repair only auditcode/test and record sourcechange. Never modify frozenrunner/protocol or numericoutputs to satisfy audit."
+}

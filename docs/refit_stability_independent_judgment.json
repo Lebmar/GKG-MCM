@@ -1,0 +1,251 @@
+{
+  "version": "refit-stability-independent-judgment-v1",
+  "written_utc": "2026-10-18T05:09:05.651866+00:00",
+  "scope": {
+    "new_fit": false,
+    "new_market_simulation": false,
+    "raw_market_data_read": false,
+    "new_final_evaluation": false,
+    "read_results_only_after_independent_audit_passed": true,
+    "paper_written": false
+  },
+  "conclusion": "The fixed whole learner is numerically implemented and auditable, but its dynamic execution admission and conditional outcomes are materially sensitive to prespecified training partitions. These results do not support a stable10% full-horizon risk claim or a deployment-ready superiority claim. No threshold, seed, price, floor or primary method is changed by this judgment.",
+  "fit_counts": {
+    "complete_outer_fits": 25,
+    "complete_training_jobs": 125,
+    "primary_auto_fits": 12,
+    "canonical_auto_fits": 7,
+    "interpretation": "Dependent completed-task counts, not independent deployment successes or customer-population coverage."
+  },
+  "repeat_results": {
+    "joint_canonical_learner": [
+      {
+        "repeat_id": 1,
+        "original_n": 120,
+        "case_auto_n": 0,
+        "case_execReview_n": 120,
+        "breach_count": null,
+        "conditional_breach_probability": null
+      },
+      {
+        "repeat_id": 2,
+        "original_n": 120,
+        "case_auto_n": 24,
+        "case_execReview_n": 96,
+        "breach_count": 5,
+        "conditional_breach_probability": 0.2083333333333333
+      },
+      {
+        "repeat_id": 3,
+        "original_n": 120,
+        "case_auto_n": 48,
+        "case_execReview_n": 72,
+        "breach_count": 4,
+        "conditional_breach_probability": 0.0833333333333333
+      },
+      {
+        "repeat_id": 4,
+        "original_n": 120,
+        "case_auto_n": 48,
+        "case_execReview_n": 72,
+        "breach_count": 4,
+        "conditional_breach_probability": 0.0833333333333333
+      },
+      {
+        "repeat_id": 5,
+        "original_n": 120,
+        "case_auto_n": 48,
+        "case_execReview_n": 72,
+        "breach_count": 3,
+        "conditional_breach_probability": 0.0625
+      }
+    ],
+    "joint_tie_set_refit_learner": [
+      {
+        "repeat_id": 1,
+        "original_n": 120,
+        "case_auto_n": 0,
+        "case_execReview_n": 120,
+        "breach_count": null,
+        "conditional_breach_probability": null
+      },
+      {
+        "repeat_id": 2,
+        "original_n": 120,
+        "case_auto_n": 48,
+        "case_execReview_n": 72,
+        "breach_count": 8,
+        "conditional_breach_probability": 0.1666666666666666
+      },
+      {
+        "repeat_id": 3,
+        "original_n": 120,
+        "case_auto_n": 120,
+        "case_execReview_n": 0,
+        "breach_count": 12,
+        "conditional_breach_probability": 0.1
+      },
+      {
+        "repeat_id": 4,
+        "original_n": 120,
+        "case_auto_n": 72,
+        "case_execReview_n": 48,
+        "breach_count": 7,
+        "conditional_breach_probability": 0.0972222222222222
+      },
+      {
+        "repeat_id": 5,
+        "original_n": 120,
+        "case_auto_n": 48,
+        "case_execReview_n": 72,
+        "breach_count": 3,
+        "conditional_breach_probability": 0.0625
+      }
+    ]
+  },
+  "Q1_and_Q2_distinction": {
+    "C_effective_Q1_label": "Balanced in all25 final fits",
+    "static_gamma_values": [
+      0.05,
+      0.075,
+      0.1
+    ],
+    "C_target_equity_range": [
+      0.4,
+      0.45
+    ],
+    "C_target_bill_range": [
+      0.3,
+      0.5
+    ],
+    "interpretation": "Stable effective product label does not imply identical target, gamma, dynamic forecast/state/action, execution admission or financial risk. Other profiles keep their own H/L."
+  },
+  "same_path_comparison": {
+    "identity": "repeat_id/outer_fold/context/original_scenario_id",
+    "common_automatic_scenario_repeat_records": 168,
+    "saved_financial_fields_exactly_equal": true,
+    "fields_compared": [
+      "log_growth",
+      "cagr",
+      "mdd",
+      "breach",
+      "nominal_fees",
+      "trade_fraction"
+    ],
+    "new_primary_automatic_scenario_repeat_records": 120,
+    "distinct_original_market_paths_in_new_records": 92,
+    "new_observed_event_count": 14,
+    "new_by_repeat": [
+      {
+        "repeat_id": 2,
+        "scenario_repeat_n": 24,
+        "event_count": 3
+      },
+      {
+        "repeat_id": 3,
+        "scenario_repeat_n": 72,
+        "event_count": 8
+      },
+      {
+        "repeat_id": 4,
+        "scenario_repeat_n": 24,
+        "event_count": 3
+      }
+    ],
+    "interpretation": "Access changes add a different evaluated group.120 new repeated records represent92 original market paths, not120 new independent paths; common168 saved financial records have no changed performance."
+  },
+  "scenario_frequency": {
+    "joint_canonical_learner": {
+      "0": 19,
+      "1": 51,
+      "2": 34,
+      "3": 15,
+      "4": 1
+    },
+    "joint_tie_set_refit_learner": {
+      "1": 19,
+      "2": 47,
+      "3": 41,
+      "4": 13
+    }
+  },
+  "key_judgments": [
+    {
+      "issue": "Initial admission estimand",
+      "judgment": "Initial service decision is A(S,C), the same for all24 evaluation futures under one fit. Per-original-path admission frequency describes the five fitted training sets that held that path out; it does not mean the controller sees the unknown future or admits customer subpopulations by future risk."
+    },
+    {
+      "issue": "Zero-auto repeat",
+      "judgment": "Repeat1 rejects Q2 execution for all120 validation identities under both rules. Conditional risk and performance are NULL, not zero. This is algorithm abstention under the declared empirical rules, not missing computation."
+    },
+    {
+      "issue": "Risk reference stability",
+      "judgment": "Primary repeat2 has8/48=16.67% observed full-H events and canonical has5/24=20.83%. Aggregate primary repeat3 equals12/120=10%; this equality is no guarantee, and no single favorable repeat may be chosen."
+    },
+    {
+      "issue": "Sample size and causality",
+      "judgment": "Every outer training sample is96 and dynamic inner sample72. Different outer memberships, inner partitions, gamma, common targets, fans and resulting states vary together. Cross-fit changes cannot be uniquely attributed to sample-size rounding, liquidity or a specific forecast omission."
+    },
+    {
+      "issue": "Parameter versus decision stability",
+      "judgment": "Different beta/eta frequencies do not prove different actions, unique preferences or statistical non-identifiability. Here the primary and canonical methods have identical observed financial outcomes on their common admitted168 records; the effect is additional initial admission, not demonstrated better common-path trading."
+    },
+    {
+      "issue": "Risk/coverage interpretation",
+      "judgment": "The primary admits more fitted runs, but the added repeated group has14 events among120 observed records. These are dependent scenario-fit outcomes. Do not report14/120 as an external risk estimate or call either method safer solely from unequal conditional fractions."
+    },
+    {
+      "issue": "No outcome-driven repair",
+      "judgment": "Do not select a favorable seed/repeat or switch to canonical because of these outcomes. Preserve the fixed primary as an experimental candidate and separately freeze any future change to risk evidence, fan or policy family."
+    }
+  ],
+  "audit_closure": {
+    "status": "passed",
+    "checks_passed": 1801082,
+    "actual_accounts": 1656,
+    "inner_accounts": 2208,
+    "active_Q_states": 316,
+    "pending_Q_skips": 17,
+    "no_automatic_Q_job_policy_skips": 40,
+    "static_mask_profile_fit_units": 13120,
+    "static_mask_candidate_cells": 2256640,
+    "unsupported_static_refit_job": "c505_inner4",
+    "mask_count_explanation": "125 jobs completed; all2500 static subfold fits exist,124 supported final rawmenus exist,one selected-gammaNone job has no final rawmenu bydesign. Hence2624×5=13120 mask units, not13125.",
+    "source_artifact_start_end_equal": true,
+    "limitations": "Independent arithmetic replay is not independent human review, new data, probability certification or exact rerun of global menu optimization/unrecorded training states."
+  },
+  "recommended_next_decision": "Discuss why execution admission is sensitive and whether the risk reference is an empirical design rule versus a service promise. Any new conditional joint fan or policy change needs a separately fixed whole-learner evaluation. Do not insert a mean-only ridge forecast directly into the current joint suffix control problem.",
+  "provenance": {
+    "sources_and_evidence_at_start": {
+      "docs/refit_stability_protocol.json": "8e9ab035073b91e4004c76c41296c56665d2199620e92d8cc0eb4eaca7a4efae",
+      "docs/refit_stability_method_review.json": "21b675aa5d5e07ebc7a2c3784b141bde7505c67770cac1c5a388650545d1d390",
+      "docs/refit_stability_preexecution_review.json": "bdc95ddaa527d4c3e7239f11a1a6ab8e3dd238286af314469aa8c75b585aa47b",
+      "docs/refit_stability_audit_plan.json": "768bfd22246bac206db402220457c26d30214d8871058c961cdb23e88b19c06a",
+      "scripts/audit_refit_stability.py": "346ae1fe54d8bba5b17ecc2683db434bedd7a994181c5ccb554fa9b1acee6748",
+      "tests/test_audit_refit_stability.py": "b1c131d10d1a338a4ceab08c423c4233af0f4f8b84233d6d93702d697f1b2b35",
+      "results/model_review/refit_stability_v1/manifest.json": "035bfa20b4e659e88ff48b56ffdc21a6563db32a0490d2ec8a6852154018e5a5",
+      "results/model_review/refit_stability_v1/independent_audit.json": "7725716ddbfb2da1071027936fc90374668f99161e6e15b57fd3f80b90a9e712",
+      "results/model_review/refit_stability_v1/summary.csv.gz": "fef0c812972e093a02cdd898ef492184f931303ab5a9ecee89ea1733677fcdc5",
+      "results/model_review/refit_stability_v1/client_paths.csv.gz": "47c487dc12e5969f26450da66a350548dc81464e4562fa655c9f80c08f7481c7",
+      "results/model_review/refit_stability_v1/fit_admission.csv.gz": "f9c3af6caffae8cfbf1d2c49a899d1319b3673fb43d5219a1f20d8d72f98489b",
+      "results/model_review/refit_stability_v1/q1_context_assignments.csv.gz": "5bd77e26f277c460be8d99e6ffead390686cae612283a18de4382b5f5a32425d",
+      "results/model_review/refit_stability_v1/per_scenario_stability.csv.gz": "bf61856b2d113a78306daf627a14e6f3d3f19e6a650e68845d116db2f45d5e04"
+    },
+    "sources_and_evidence_at_end": {
+      "docs/refit_stability_protocol.json": "8e9ab035073b91e4004c76c41296c56665d2199620e92d8cc0eb4eaca7a4efae",
+      "docs/refit_stability_method_review.json": "21b675aa5d5e07ebc7a2c3784b141bde7505c67770cac1c5a388650545d1d390",
+      "docs/refit_stability_preexecution_review.json": "bdc95ddaa527d4c3e7239f11a1a6ab8e3dd238286af314469aa8c75b585aa47b",
+      "docs/refit_stability_audit_plan.json": "768bfd22246bac206db402220457c26d30214d8871058c961cdb23e88b19c06a",
+      "scripts/audit_refit_stability.py": "346ae1fe54d8bba5b17ecc2683db434bedd7a994181c5ccb554fa9b1acee6748",
+      "tests/test_audit_refit_stability.py": "b1c131d10d1a338a4ceab08c423c4233af0f4f8b84233d6d93702d697f1b2b35",
+      "results/model_review/refit_stability_v1/manifest.json": "035bfa20b4e659e88ff48b56ffdc21a6563db32a0490d2ec8a6852154018e5a5",
+      "results/model_review/refit_stability_v1/independent_audit.json": "7725716ddbfb2da1071027936fc90374668f99161e6e15b57fd3f80b90a9e712",
+      "results/model_review/refit_stability_v1/summary.csv.gz": "fef0c812972e093a02cdd898ef492184f931303ab5a9ecee89ea1733677fcdc5",
+      "results/model_review/refit_stability_v1/client_paths.csv.gz": "47c487dc12e5969f26450da66a350548dc81464e4562fa655c9f80c08f7481c7",
+      "results/model_review/refit_stability_v1/fit_admission.csv.gz": "f9c3af6caffae8cfbf1d2c49a899d1319b3673fb43d5219a1f20d8d72f98489b",
+      "results/model_review/refit_stability_v1/q1_context_assignments.csv.gz": "5bd77e26f277c460be8d99e6ffead390686cae612283a18de4382b5f5a32425d",
+      "results/model_review/refit_stability_v1/per_scenario_stability.csv.gz": "bf61856b2d113a78306daf627a14e6f3d3f19e6a650e68845d116db2f45d5e04"
+    },
+    "source_hashes_match": true
+  }
+}

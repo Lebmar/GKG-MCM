@@ -1,0 +1,51 @@
+{
+  "completed_utc": "2026-10-18T04:57:02.611840+00:00",
+  "status": "complete",
+  "visual_review_confirmed": true,
+  "sources": {
+    "scripts/plot_forecast_assumptions_v2.py": "22ab3940f5005a2680e887790f5dbb91dbea4cc8383b19fc24f364cc1c1956ee",
+    "scripts/plot_development_structure.py": "6a0f401d3e6b18b6ab9d22e11bec74d5456430af30cb8da172a28163d85b8ed6"
+  },
+  "sources_at_end": {
+    "scripts/plot_forecast_assumptions_v2.py": "22ab3940f5005a2680e887790f5dbb91dbea4cc8383b19fc24f364cc1c1956ee",
+    "scripts/plot_development_structure.py": "6a0f401d3e6b18b6ab9d22e11bec74d5456430af30cb8da172a28163d85b8ed6"
+  },
+  "input_sha256": {
+    "results/model_review/forecast_assumptions_v2/manifest.json": "8462b516302142dd644e6e2440d5a15b971fd1226b26d6efdd0ef2df02947001",
+    "results/model_review/forecast_assumptions_v2/independent_audit.json": "b47af35bb59755bc0d4405fd874aec4b490fae64366438d1d4e1a04d80e882c5",
+    "results/model_review/forecast_assumptions_v2/findings.json": "02a66a5c3e12d2011385599c67cad55c2a2eba494a9779e5d34e1467e623999b",
+    "results/model_review/forecast_assumptions_v2/summary.csv": "a29bb8b11a04716328315715d78800437cda4fb4b5040c421bda36b2379b3980",
+    "results/model_review/forecast_assumptions_v2/fold_summary.csv": "e4cdc4ceb59585b769ee1273dcbe725a1041922979775878a7db95a2a44232a1",
+    "docs/forecast_assumption_diagnostic_protocol.json": "d12e57ed11ff6b1af1a635d8041eb8c27808634a9c6e198a1894dec5bdd0a439",
+    "docs/forecast_assumption_diagnostic_judgment.json": "a32d02356bfbb1b85881e405a41da8841dc6643c87e1b196a3980405b2740f5c"
+  },
+  "input_sha256_at_end": {
+    "results/model_review/forecast_assumptions_v2/manifest.json": "8462b516302142dd644e6e2440d5a15b971fd1226b26d6efdd0ef2df02947001",
+    "results/model_review/forecast_assumptions_v2/independent_audit.json": "b47af35bb59755bc0d4405fd874aec4b490fae64366438d1d4e1a04d80e882c5",
+    "results/model_review/forecast_assumptions_v2/findings.json": "02a66a5c3e12d2011385599c67cad55c2a2eba494a9779e5d34e1467e623999b",
+    "results/model_review/forecast_assumptions_v2/summary.csv": "a29bb8b11a04716328315715d78800437cda4fb4b5040c421bda36b2379b3980",
+    "results/model_review/forecast_assumptions_v2/fold_summary.csv": "e4cdc4ceb59585b769ee1273dcbe725a1041922979775878a7db95a2a44232a1",
+    "docs/forecast_assumption_diagnostic_protocol.json": "d12e57ed11ff6b1af1a635d8041eb8c27808634a9c6e198a1894dec5bdd0a439",
+    "docs/forecast_assumption_diagnostic_judgment.json": "a32d02356bfbb1b85881e405a41da8841dc6643c87e1b196a3980405b2740f5c"
+  },
+  "outputs_sha256": {
+    "01_fixed_lag_state_prediction_losses.png": "92589f6cb9d9b6f75f452520eb763f336e8083509b73ca2d131c779a3338dc43",
+    "01_fixed_lag_state_prediction_losses.svg": "0eecb27df29f9aa89cf683d3b85dee7f1212db56041aa580e11457e7433ad023",
+    "channel_plot_data.csv": "a15132b95cdebad39f14c7f512fd61d9e1971b6adadf80f6d6abcc2f43f97c16",
+    "fold_plot_data.csv": "04f9e7a29b497f4d987396df0ab54611922d03a4db7447195484a228789616d0"
+  },
+  "raw_market_loaded": false,
+  "final_scenarios_loaded": false,
+  "new_policy_or_fit": false,
+  "checks": {
+    "font_min_points": 12,
+    "png_dpi": 240,
+    "svg_text_preserved": true,
+    "text_bounds_passed": true,
+    "zero_reference_visible": true,
+    "primary_three_real_assets_and_separate_inflation_visible": true,
+    "uncertainty_not_fabricated": true,
+    "source_attribution_visible": true,
+    "not_q_or_tail_calibration_visible": true
+  }
+}

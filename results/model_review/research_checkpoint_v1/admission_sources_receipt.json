@@ -1,0 +1,410 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "incremental-24",
+      "title": "旧第二外折新增24条：增长、费用与回撤代价",
+      "assumptions": [
+        "原始开发情景1–120；整路径外折；已重复使用的数据。"
+      ],
+      "queries": [
+        {
+          "id": "incremental-24-saved",
+          "source": {
+            "label": "旧第二外折新增24条：增长、费用与回撤代价",
+            "files": [
+              {
+                "label": "docs/incremental_admission_risk_diagnostic_protocol.json"
+              },
+              {
+                "label": "results/model_review/incremental_admission_risk_v1/incremental_summary.csv"
+              },
+              {
+                "label": "results/model_review/incremental_admission_risk_v1/incremental_paired_summary.csv"
+              },
+              {
+                "label": "results/model_review/incremental_admission_risk_v1/consistency_checks.json"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "比较对象",
+                "definition": "同一原情景、同一40/25/35目标；全期限30年实际峰值回撤。等权参照目标不同。"
+              },
+              {
+                "label": "CVaR90",
+                "definition": "24个观察的经验最差10%分数尾质量均值，不是置信上界。"
+              }
+            ],
+            "filters": [
+              "只读取已保存研究产物，不重新拟合或载入市场收益"
+            ],
+            "caveats": [
+              "仅原开发情景1–120，已重复使用；没有新盲测。",
+              "Review金融结果留空；假想参照不是自动服务兜底。",
+              "数值审计与测试不增加市场样本，也不是外部人类同行评审。",
+              "两学习器共同准入为48条；新增24条单列，不把二者混为共同72条。"
+            ]
+          },
+          "sourceRoles": [
+            {
+              "kind": "file",
+              "label": "docs/incremental_admission_risk_diagnostic_protocol.json",
+              "role": "保存的方法、结果或核查证据"
+            },
+            {
+              "kind": "file",
+              "label": "results/model_review/incremental_admission_risk_v1/incremental_summary.csv",
+              "role": "保存的方法、结果或核查证据"
+            },
+            {
+              "kind": "file",
+              "label": "results/model_review/incremental_admission_risk_v1/incremental_paired_summary.csv",
+              "role": "保存的方法、结果或核查证据"
+            },
+            {
+              "kind": "file",
+              "label": "results/model_review/incremental_admission_risk_v1/consistency_checks.json",
+              "role": "保存的方法、结果或核查证据"
+            }
+          ],
+          "reportingPeriod": "2026-10-17至18执行阶段开发研究",
+          "columns": [
+            "策略",
+            "新增原情景数",
+            "超限数",
+            "平均MDD_pct",
+            "P90_MDD_pct",
+            "经验CVaR90_MDD_pct",
+            "平均年化log增长_pct",
+            "总名义费用_初始100"
+          ],
+          "rows": [
+            {
+              "策略": "joint_tie_set_refit_learner",
+              "新增原情景数": 24,
+              "超限数": 3,
+              "平均MDD_pct": 27.972743142916162,
+              "P90_MDD_pct": 41.53597923215667,
+              "经验CVaR90_MDD_pct": 47.694610883262015,
+              "平均年化log增长_pct": 3.7313923224022902,
+              "总名义费用_初始100": 0.6672700522460345
+            },
+            {
+              "策略": "annual_then_pending",
+              "新增原情景数": 24,
+              "超限数": 1,
+              "平均MDD_pct": 24.91770941773938,
+              "P90_MDD_pct": 37.51364275426438,
+              "经验CVaR90_MDD_pct": 43.510788350512094,
+              "平均年化log增长_pct": 3.3140074876586,
+              "总名义费用_初始100": 0.9996975160677464
+            },
+            {
+              "策略": "equal_thirds_annual",
+              "新增原情景数": 24,
+              "超限数": 1,
+              "平均MDD_pct": 23.22313251639965,
+              "P90_MDD_pct": 35.417986461390385,
+              "经验CVaR90_MDD_pct": 40.22328424040375,
+              "平均年化log增长_pct": 3.00018893178955,
+              "总名义费用_初始100": 0.9181035132969102
+            }
+          ],
+          "methods": [
+            {
+              "language": "python",
+              "code": "saved = read_csv('incremental_summary.csv')\n# no fitting, path filtering or new policy selection"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "five-refits",
+      "title": "五组完整重拟合：准入与条件风险",
+      "assumptions": [
+        "原始开发情景1–120；整路径外折；已重复使用的数据。"
+      ],
+      "queries": [
+        {
+          "id": "five-refits-saved",
+          "source": {
+            "label": "五组完整重拟合：准入与条件风险",
+            "files": [
+              {
+                "label": "docs/refit_stability_protocol.json"
+              },
+              {
+                "label": "results/model_review/refit_stability_v1/manifest.json"
+              },
+              {
+                "label": "results/model_review/refit_stability_v1/independent_audit.json"
+              },
+              {
+                "label": "results/model_review/refit_stability_summary_v1/repeat_summary.csv"
+              },
+              {
+                "label": "results/model_review/refit_stability_summary_v1/fit_contexts.csv"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "分母",
+                "definition": "每组仍为原120条；外层训练96、评估24，完整25个外层拟合、125训练任务。每拟合在看评估收益前作同一客户准入决定，统一作用于24条路径。"
+              },
+              {
+                "label": "解释",
+                "definition": "600条重复记录不是600独立市场样本；25个拟合重叠，不能据此建立二项置信区间。"
+              }
+            ],
+            "filters": [
+              "只读取已保存研究产物，不重新拟合或载入市场收益"
+            ],
+            "caveats": [
+              "仅原开发情景1–120，已重复使用；没有新盲测。",
+              "Review金融结果留空；假想参照不是自动服务兜底。",
+              "数值审计与测试不增加市场样本，也不是外部人类同行评审。",
+              "不同准入集合的条件风险不能直接解释为全人群安全优劣。"
+            ]
+          },
+          "sourceRoles": [
+            {
+              "kind": "file",
+              "label": "docs/refit_stability_protocol.json",
+              "role": "保存的方法、结果或核查证据"
+            },
+            {
+              "kind": "file",
+              "label": "results/model_review/refit_stability_v1/manifest.json",
+              "role": "保存的方法、结果或核查证据"
+            },
+            {
+              "kind": "file",
+              "label": "results/model_review/refit_stability_v1/independent_audit.json",
+              "role": "保存的方法、结果或核查证据"
+            },
+            {
+              "kind": "file",
+              "label": "results/model_review/refit_stability_summary_v1/repeat_summary.csv",
+              "role": "保存的方法、结果或核查证据"
+            },
+            {
+              "kind": "file",
+              "label": "results/model_review/refit_stability_summary_v1/fit_contexts.csv",
+              "role": "保存的方法、结果或核查证据"
+            }
+          ],
+          "reportingPeriod": "2026-10-17至18执行阶段开发研究",
+          "columns": [
+            "重复划分",
+            "方法",
+            "原情景数",
+            "自动准入数",
+            "Review或范围外数",
+            "准入后超限数",
+            "条件超限_pct"
+          ],
+          "rows": [
+            {
+              "重复划分": 1,
+              "方法": "joint_canonical_learner",
+              "原情景数": 120,
+              "自动准入数": 0,
+              "Review或范围外数": 120,
+              "准入后超限数": null,
+              "条件超限_pct": null
+            },
+            {
+              "重复划分": 1,
+              "方法": "joint_tie_set_refit_learner",
+              "原情景数": 120,
+              "自动准入数": 0,
+              "Review或范围外数": 120,
+              "准入后超限数": null,
+              "条件超限_pct": null
+            },
+            {
+              "重复划分": 2,
+              "方法": "joint_canonical_learner",
+              "原情景数": 120,
+              "自动准入数": 24,
+              "Review或范围外数": 96,
+              "准入后超限数": 5,
+              "条件超限_pct": 20.83333333333333
+            },
+            {
+              "重复划分": 2,
+              "方法": "joint_tie_set_refit_learner",
+              "原情景数": 120,
+              "自动准入数": 48,
+              "Review或范围外数": 72,
+              "准入后超限数": 8,
+              "条件超限_pct": 16.66666666666666
+            },
+            {
+              "重复划分": 3,
+              "方法": "joint_canonical_learner",
+              "原情景数": 120,
+              "自动准入数": 48,
+              "Review或范围外数": 72,
+              "准入后超限数": 4,
+              "条件超限_pct": 8.33333333333333
+            },
+            {
+              "重复划分": 3,
+              "方法": "joint_tie_set_refit_learner",
+              "原情景数": 120,
+              "自动准入数": 120,
+              "Review或范围外数": 0,
+              "准入后超限数": 12,
+              "条件超限_pct": 10.0
+            },
+            {
+              "重复划分": 4,
+              "方法": "joint_canonical_learner",
+              "原情景数": 120,
+              "自动准入数": 48,
+              "Review或范围外数": 72,
+              "准入后超限数": 4,
+              "条件超限_pct": 8.33333333333333
+            },
+            {
+              "重复划分": 4,
+              "方法": "joint_tie_set_refit_learner",
+              "原情景数": 120,
+              "自动准入数": 72,
+              "Review或范围外数": 48,
+              "准入后超限数": 7,
+              "条件超限_pct": 9.72222222222222
+            },
+            {
+              "重复划分": 5,
+              "方法": "joint_canonical_learner",
+              "原情景数": 120,
+              "自动准入数": 48,
+              "Review或范围外数": 72,
+              "准入后超限数": 3,
+              "条件超限_pct": 6.25
+            },
+            {
+              "重复划分": 5,
+              "方法": "joint_tie_set_refit_learner",
+              "原情景数": 120,
+              "自动准入数": 48,
+              "Review或范围外数": 72,
+              "准入后超限数": 3,
+              "条件超限_pct": 6.25
+            }
+          ],
+          "methods": [
+            {
+              "language": "python",
+              "code": "saved = read_csv('repeat_summary.csv')\n# all five preregistered repeats retained; no favorable seed selected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lag-state",
+      "title": "固定上一年状态比较器：均值预测假设诊断",
+      "assumptions": [
+        "原始开发情景1–120；整路径外折；已重复使用的数据。"
+      ],
+      "queries": [
+        {
+          "id": "lag-state-saved",
+          "source": {
+            "label": "固定上一年状态比较器：均值预测假设诊断",
+            "files": [
+              {
+                "label": "docs/forecast_assumption_diagnostic_protocol.json"
+              },
+              {
+                "label": "docs/forecast_assumption_diagnostic_judgment.json"
+              },
+              {
+                "label": "results/model_review/forecast_assumptions_v2/summary.csv"
+              },
+              {
+                "label": "results/model_review/forecast_assumptions_v2/independent_audit.json"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "主指标",
+                "definition": "每原路径先平均29期，再平均三实际资产通道的训练尺度标准化平方误差；通胀另列。"
+              },
+              {
+                "label": "模型",
+                "definition": "固定岭系数1；逐日历年训练均值中心化、训练96×29残差通道池化尺度；未装入交易控制器。"
+              }
+            ],
+            "filters": [
+              "只读取已保存研究产物，不重新拟合或载入市场收益"
+            ],
+            "caveats": [
+              "仅原开发情景1–120，已重复使用；没有新盲测。",
+              "Review金融结果留空；假想参照不是自动服务兜底。",
+              "数值审计与测试不增加市场样本，也不是外部人类同行评审。",
+              "小幅均值预测改善不是收益提高，也不证明Q值或30年超限概率校准。"
+            ]
+          },
+          "sourceRoles": [
+            {
+              "kind": "file",
+              "label": "docs/forecast_assumption_diagnostic_protocol.json",
+              "role": "保存的方法、结果或核查证据"
+            },
+            {
+              "kind": "file",
+              "label": "docs/forecast_assumption_diagnostic_judgment.json",
+              "role": "保存的方法、结果或核查证据"
+            },
+            {
+              "kind": "file",
+              "label": "results/model_review/forecast_assumptions_v2/summary.csv",
+              "role": "保存的方法、结果或核查证据"
+            },
+            {
+              "kind": "file",
+              "label": "results/model_review/forecast_assumptions_v2/independent_audit.json",
+              "role": "保存的方法、结果或核查证据"
+            }
+          ],
+          "reportingPeriod": "2026-10-17至18执行阶段开发研究",
+          "columns": [
+            "预测对象",
+            "原路径数",
+            "状态模型相对日历模型MSE",
+            "相对误差减少_pct",
+            "状态模型误差更低路径占比_pct"
+          ],
+          "rows": [
+            {
+              "预测对象": "next_year",
+              "原路径数": 120,
+              "状态模型相对日历模型MSE": 0.9906107402666897,
+              "相对误差减少_pct": 0.9389259733310285,
+              "状态模型误差更低路径占比_pct": 65.83333333333333
+            },
+            {
+              "预测对象": "remaining_to_original30_mean_annual",
+              "原路径数": 120,
+              "状态模型相对日历模型MSE": 0.9989088657472772,
+              "相对误差减少_pct": 0.10911342527227808,
+              "状态模型误差更低路径占比_pct": 54.166666666666664
+            }
+          ],
+          "methods": [
+            {
+              "language": "python",
+              "code": "ratio = saved_state_standardized_MSE / saved_calendar_standardized_MSE\n# no lambda search, new trading forecast or conditional tail probability claim"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

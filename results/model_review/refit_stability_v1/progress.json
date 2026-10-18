@@ -1,0 +1,1288 @@
+{
+  "completed_jobs": [
+    {
+      "job_id": "c101_inner1",
+      "repeat_id": 1,
+      "outer_fold": 1,
+      "seconds": 6.5177166250014125,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c101_inner2",
+      "repeat_id": 1,
+      "outer_fold": 1,
+      "seconds": 6.5365031250003085,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c101_inner3",
+      "repeat_id": 1,
+      "outer_fold": 1,
+      "seconds": 6.4554359590001695,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c101_inner4",
+      "repeat_id": 1,
+      "outer_fold": 1,
+      "seconds": 6.696904665999682,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c101_refit",
+      "repeat_id": 1,
+      "outer_fold": 1,
+      "seconds": 10.971257082999728,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 96,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c102_inner1",
+      "repeat_id": 1,
+      "outer_fold": 2,
+      "seconds": 6.44308862500111,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c102_inner2",
+      "repeat_id": 1,
+      "outer_fold": 2,
+      "seconds": 6.429153999999471,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c102_inner3",
+      "repeat_id": 1,
+      "outer_fold": 2,
+      "seconds": 6.929280915999698,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c102_inner4",
+      "repeat_id": 1,
+      "outer_fold": 2,
+      "seconds": 6.539623874999961,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c102_refit",
+      "repeat_id": 1,
+      "outer_fold": 2,
+      "seconds": 10.503836832998786,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 96,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c103_inner1",
+      "repeat_id": 1,
+      "outer_fold": 3,
+      "seconds": 6.414377166000122,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c103_inner2",
+      "repeat_id": 1,
+      "outer_fold": 3,
+      "seconds": 6.623905708000166,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c103_inner3",
+      "repeat_id": 1,
+      "outer_fold": 3,
+      "seconds": 0.8031005829998321,
+      "case_status": "not_balanced_case",
+      "gamma": 0.025,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c103_inner4",
+      "repeat_id": 1,
+      "outer_fold": 3,
+      "seconds": 6.514800750001086,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c103_refit",
+      "repeat_id": 1,
+      "outer_fold": 3,
+      "seconds": 10.597964582999339,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 96,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c104_inner1",
+      "repeat_id": 1,
+      "outer_fold": 4,
+      "seconds": 6.370771042000342,
+      "case_status": "balanced_case",
+      "gamma": 0.1,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c104_inner2",
+      "repeat_id": 1,
+      "outer_fold": 4,
+      "seconds": 6.556725250000454,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c104_inner3",
+      "repeat_id": 1,
+      "outer_fold": 4,
+      "seconds": 6.2974511249994976,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c104_inner4",
+      "repeat_id": 1,
+      "outer_fold": 4,
+      "seconds": 6.279412584000966,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c104_refit",
+      "repeat_id": 1,
+      "outer_fold": 4,
+      "seconds": 10.313433666000492,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 96,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c105_inner1",
+      "repeat_id": 1,
+      "outer_fold": 5,
+      "seconds": 6.53172933300084,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c105_inner2",
+      "repeat_id": 1,
+      "outer_fold": 5,
+      "seconds": 6.0652715409996745,
+      "case_status": "balanced_case",
+      "gamma": 0.1,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c105_inner3",
+      "repeat_id": 1,
+      "outer_fold": 5,
+      "seconds": 6.2834147499997925,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c105_inner4",
+      "repeat_id": 1,
+      "outer_fold": 5,
+      "seconds": 6.576793999998699,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c105_refit",
+      "repeat_id": 1,
+      "outer_fold": 5,
+      "seconds": 10.43606491600076,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 96,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c201_inner1",
+      "repeat_id": 2,
+      "outer_fold": 1,
+      "seconds": 6.593097707998822,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c201_inner2",
+      "repeat_id": 2,
+      "outer_fold": 1,
+      "seconds": 6.439773915999467,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c201_inner3",
+      "repeat_id": 2,
+      "outer_fold": 1,
+      "seconds": 6.506120125000962,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c201_inner4",
+      "repeat_id": 2,
+      "outer_fold": 1,
+      "seconds": 6.612809915999605,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c201_refit",
+      "repeat_id": 2,
+      "outer_fold": 1,
+      "seconds": 10.602266792000592,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 96,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c202_inner1",
+      "repeat_id": 2,
+      "outer_fold": 2,
+      "seconds": 6.952537125000163,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c202_inner2",
+      "repeat_id": 2,
+      "outer_fold": 2,
+      "seconds": 7.239722833000997,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c202_inner3",
+      "repeat_id": 2,
+      "outer_fold": 2,
+      "seconds": 6.751767000001564,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c202_inner4",
+      "repeat_id": 2,
+      "outer_fold": 2,
+      "seconds": 6.914042665999659,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c202_refit",
+      "repeat_id": 2,
+      "outer_fold": 2,
+      "seconds": 10.70830712499992,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 96,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c203_inner1",
+      "repeat_id": 2,
+      "outer_fold": 3,
+      "seconds": 6.28583583299951,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c203_inner2",
+      "repeat_id": 2,
+      "outer_fold": 3,
+      "seconds": 6.534638834000361,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c203_inner3",
+      "repeat_id": 2,
+      "outer_fold": 3,
+      "seconds": 6.379582042000038,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c203_inner4",
+      "repeat_id": 2,
+      "outer_fold": 3,
+      "seconds": 6.582417375000659,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c203_refit",
+      "repeat_id": 2,
+      "outer_fold": 3,
+      "seconds": 10.242257583000537,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 96,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c204_inner1",
+      "repeat_id": 2,
+      "outer_fold": 4,
+      "seconds": 6.621457958000974,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c204_inner2",
+      "repeat_id": 2,
+      "outer_fold": 4,
+      "seconds": 6.250005000001693,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c204_inner3",
+      "repeat_id": 2,
+      "outer_fold": 4,
+      "seconds": 6.531331333999333,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c204_inner4",
+      "repeat_id": 2,
+      "outer_fold": 4,
+      "seconds": 6.461380041999291,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c204_refit",
+      "repeat_id": 2,
+      "outer_fold": 4,
+      "seconds": 10.343168749999677,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 96,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c205_inner1",
+      "repeat_id": 2,
+      "outer_fold": 5,
+      "seconds": 6.470433541999228,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c205_inner2",
+      "repeat_id": 2,
+      "outer_fold": 5,
+      "seconds": 6.517618333000428,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c205_inner3",
+      "repeat_id": 2,
+      "outer_fold": 5,
+      "seconds": 6.667285792000257,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c205_inner4",
+      "repeat_id": 2,
+      "outer_fold": 5,
+      "seconds": 6.751040000001012,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c205_refit",
+      "repeat_id": 2,
+      "outer_fold": 5,
+      "seconds": 10.733092791999297,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 96,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c301_inner1",
+      "repeat_id": 3,
+      "outer_fold": 1,
+      "seconds": 6.491525167000873,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c301_inner2",
+      "repeat_id": 3,
+      "outer_fold": 1,
+      "seconds": 6.227103833000001,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c301_inner3",
+      "repeat_id": 3,
+      "outer_fold": 1,
+      "seconds": 6.357300290999774,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c301_inner4",
+      "repeat_id": 3,
+      "outer_fold": 1,
+      "seconds": 6.561239500000738,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c301_refit",
+      "repeat_id": 3,
+      "outer_fold": 1,
+      "seconds": 10.657368332998885,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 96,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c302_inner1",
+      "repeat_id": 3,
+      "outer_fold": 2,
+      "seconds": 6.577522749999844,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c302_inner2",
+      "repeat_id": 3,
+      "outer_fold": 2,
+      "seconds": 6.851488083000731,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c302_inner3",
+      "repeat_id": 3,
+      "outer_fold": 2,
+      "seconds": 6.325883542000156,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c302_inner4",
+      "repeat_id": 3,
+      "outer_fold": 2,
+      "seconds": 6.41067566700076,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c302_refit",
+      "repeat_id": 3,
+      "outer_fold": 2,
+      "seconds": 10.507759833000819,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 96,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c303_inner1",
+      "repeat_id": 3,
+      "outer_fold": 3,
+      "seconds": 6.454544000000169,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c303_inner2",
+      "repeat_id": 3,
+      "outer_fold": 3,
+      "seconds": 6.767748291000316,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c303_inner3",
+      "repeat_id": 3,
+      "outer_fold": 3,
+      "seconds": 6.380130625000675,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c303_inner4",
+      "repeat_id": 3,
+      "outer_fold": 3,
+      "seconds": 6.612571667001248,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c303_refit",
+      "repeat_id": 3,
+      "outer_fold": 3,
+      "seconds": 10.69560433299921,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 96,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c304_inner1",
+      "repeat_id": 3,
+      "outer_fold": 4,
+      "seconds": 6.328818583000611,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c304_inner2",
+      "repeat_id": 3,
+      "outer_fold": 4,
+      "seconds": 6.5825183340002695,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c304_inner3",
+      "repeat_id": 3,
+      "outer_fold": 4,
+      "seconds": 6.581704375001209,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c304_inner4",
+      "repeat_id": 3,
+      "outer_fold": 4,
+      "seconds": 6.499802291000378,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c304_refit",
+      "repeat_id": 3,
+      "outer_fold": 4,
+      "seconds": 10.70285466599853,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 96,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c305_inner1",
+      "repeat_id": 3,
+      "outer_fold": 5,
+      "seconds": 6.831078541001261,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c305_inner2",
+      "repeat_id": 3,
+      "outer_fold": 5,
+      "seconds": 6.791717417001564,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c305_inner3",
+      "repeat_id": 3,
+      "outer_fold": 5,
+      "seconds": 6.743035833000249,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c305_inner4",
+      "repeat_id": 3,
+      "outer_fold": 5,
+      "seconds": 6.555640375001531,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c305_refit",
+      "repeat_id": 3,
+      "outer_fold": 5,
+      "seconds": 11.621962249999342,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 96,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c401_inner1",
+      "repeat_id": 4,
+      "outer_fold": 1,
+      "seconds": 7.396045833000244,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c401_inner2",
+      "repeat_id": 4,
+      "outer_fold": 1,
+      "seconds": 7.21098641700155,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c401_inner3",
+      "repeat_id": 4,
+      "outer_fold": 1,
+      "seconds": 6.834717499999897,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c401_inner4",
+      "repeat_id": 4,
+      "outer_fold": 1,
+      "seconds": 7.1867182919995685,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c401_refit",
+      "repeat_id": 4,
+      "outer_fold": 1,
+      "seconds": 11.946461665998868,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 96,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c402_inner1",
+      "repeat_id": 4,
+      "outer_fold": 2,
+      "seconds": 6.502266875000714,
+      "case_status": "balanced_case",
+      "gamma": 0.1,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c402_inner2",
+      "repeat_id": 4,
+      "outer_fold": 2,
+      "seconds": 7.057978333999927,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c402_inner3",
+      "repeat_id": 4,
+      "outer_fold": 2,
+      "seconds": 6.710156374998405,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c402_inner4",
+      "repeat_id": 4,
+      "outer_fold": 2,
+      "seconds": 6.666196874999514,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c402_refit",
+      "repeat_id": 4,
+      "outer_fold": 2,
+      "seconds": 11.22463450000032,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 96,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c403_inner1",
+      "repeat_id": 4,
+      "outer_fold": 3,
+      "seconds": 6.5205437500007974,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c403_inner2",
+      "repeat_id": 4,
+      "outer_fold": 3,
+      "seconds": 6.756450042001234,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c403_inner3",
+      "repeat_id": 4,
+      "outer_fold": 3,
+      "seconds": 6.90355558400006,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c403_inner4",
+      "repeat_id": 4,
+      "outer_fold": 3,
+      "seconds": 6.444745875000081,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c403_refit",
+      "repeat_id": 4,
+      "outer_fold": 3,
+      "seconds": 10.903999125001064,
+      "case_status": "balanced_case",
+      "gamma": 0.1,
+      "training_n": 96,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c404_inner1",
+      "repeat_id": 4,
+      "outer_fold": 4,
+      "seconds": 6.780532417000359,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c404_inner2",
+      "repeat_id": 4,
+      "outer_fold": 4,
+      "seconds": 6.902995374999591,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c404_inner3",
+      "repeat_id": 4,
+      "outer_fold": 4,
+      "seconds": 6.667772042001161,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c404_inner4",
+      "repeat_id": 4,
+      "outer_fold": 4,
+      "seconds": 6.702022959001624,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c404_refit",
+      "repeat_id": 4,
+      "outer_fold": 4,
+      "seconds": 10.601402291998966,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 96,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c405_inner1",
+      "repeat_id": 4,
+      "outer_fold": 5,
+      "seconds": 6.676841041999069,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c405_inner2",
+      "repeat_id": 4,
+      "outer_fold": 5,
+      "seconds": 6.928579708999678,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c405_inner3",
+      "repeat_id": 4,
+      "outer_fold": 5,
+      "seconds": 7.079354457999216,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c405_inner4",
+      "repeat_id": 4,
+      "outer_fold": 5,
+      "seconds": 6.956904583999858,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c405_refit",
+      "repeat_id": 4,
+      "outer_fold": 5,
+      "seconds": 11.210456667000471,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 96,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c501_inner1",
+      "repeat_id": 5,
+      "outer_fold": 1,
+      "seconds": 7.051719708000746,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c501_inner2",
+      "repeat_id": 5,
+      "outer_fold": 1,
+      "seconds": 6.840795000000071,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c501_inner3",
+      "repeat_id": 5,
+      "outer_fold": 1,
+      "seconds": 6.630124875000547,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c501_inner4",
+      "repeat_id": 5,
+      "outer_fold": 1,
+      "seconds": 6.915398249999271,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c501_refit",
+      "repeat_id": 5,
+      "outer_fold": 1,
+      "seconds": 11.000762333000239,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 96,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c502_inner1",
+      "repeat_id": 5,
+      "outer_fold": 2,
+      "seconds": 7.859500667000248,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c502_inner2",
+      "repeat_id": 5,
+      "outer_fold": 2,
+      "seconds": 7.705546541999865,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c502_inner3",
+      "repeat_id": 5,
+      "outer_fold": 2,
+      "seconds": 7.212129499999719,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c502_inner4",
+      "repeat_id": 5,
+      "outer_fold": 2,
+      "seconds": 6.886858833000588,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c502_refit",
+      "repeat_id": 5,
+      "outer_fold": 2,
+      "seconds": 11.268435916999806,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 96,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c503_inner1",
+      "repeat_id": 5,
+      "outer_fold": 3,
+      "seconds": 7.072981166000318,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c503_inner2",
+      "repeat_id": 5,
+      "outer_fold": 3,
+      "seconds": 7.274009499999011,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c503_inner3",
+      "repeat_id": 5,
+      "outer_fold": 3,
+      "seconds": 7.076072834001025,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c503_inner4",
+      "repeat_id": 5,
+      "outer_fold": 3,
+      "seconds": 7.1641990410007566,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c503_refit",
+      "repeat_id": 5,
+      "outer_fold": 3,
+      "seconds": 10.89267079199999,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 96,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c504_inner1",
+      "repeat_id": 5,
+      "outer_fold": 4,
+      "seconds": 7.698397707999902,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c504_inner2",
+      "repeat_id": 5,
+      "outer_fold": 4,
+      "seconds": 7.48612200000025,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c504_inner3",
+      "repeat_id": 5,
+      "outer_fold": 4,
+      "seconds": 8.393148125000153,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c504_inner4",
+      "repeat_id": 5,
+      "outer_fold": 4,
+      "seconds": 8.236036583000896,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c504_refit",
+      "repeat_id": 5,
+      "outer_fold": 4,
+      "seconds": 13.396108499999173,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 96,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c505_inner1",
+      "repeat_id": 5,
+      "outer_fold": 5,
+      "seconds": 8.54723841699888,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c505_inner2",
+      "repeat_id": 5,
+      "outer_fold": 5,
+      "seconds": 10.296523541999704,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c505_inner3",
+      "repeat_id": 5,
+      "outer_fold": 5,
+      "seconds": 9.144004583000424,
+      "case_status": "balanced_case",
+      "gamma": 0.05,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c505_inner4",
+      "repeat_id": 5,
+      "outer_fold": 5,
+      "seconds": 1.184493000000657,
+      "case_status": "q1_review",
+      "gamma": null,
+      "training_n": 72,
+      "evaluation_n": 24
+    },
+    {
+      "job_id": "c505_refit",
+      "repeat_id": 5,
+      "outer_fold": 5,
+      "seconds": 15.798748666000392,
+      "case_status": "balanced_case",
+      "gamma": 0.075,
+      "training_n": 96,
+      "evaluation_n": 24
+    }
+  ],
+  "execution_sources_sha256": {
+    "docs/joint_liquidity_refit_protocol.json": "1e92a4f7b374bd7437315c89e513a830f12211b54cb08d3c4341dffdc9f1e3f6",
+    "docs/refit_stability_protocol.json": "8e9ab035073b91e4004c76c41296c56665d2199620e92d8cc0eb4eaca7a4efae",
+    "research/experimental_execution/fan_rollout.py": "d195d721c895700925e9b24c91640c59737fe4eb542272376d2de78ce62fe1ba",
+    "research/experimental_execution/joint_liquidity_static.py": "f12fc90a78594f91a11c46a4ca7306237024404098df467e9dc66e110ee78c10",
+    "research/experimental_execution/nested_dynamic_selection.py": "a293daf2383477e4b33fffd5dacad04ab8fbc71dc92edab2c9f9ff492a28aa20",
+    "research/experimental_execution/nested_static_adapter.py": "9401e5b7454b9b0b88b28060baefeb3920dab9fd3e3c31870d00977e5ca84d6f",
+    "research/experimental_execution/refit_aware_selection.py": "12d90c14e1208143014a4d0f9d8eadd69960bd966308f24d5d13f7873866d7c6",
+    "research/experimental_execution/review_pending.py": "9038d420c9ea48df068c58a6abee3f993ac414f85dd0290cb56e3d703aae3894",
+    "research/experimental_execution/risk_priced_fan_rollout.py": "2a935cfe1d039f6a020e104fe92aa659bb92aac2a0b3bed2ef767437015ba472",
+    "research/experimental_execution/service_governance.py": "0600c38d751febb693311a6d57f1c19dcbea3006ecf8fc5e7b0e9dfaeb50f63f",
+    "research/safeinvest_research/assessment.py": "5cbd5fab61ca30b5ef258445c5b257be19ee005f078c722fb748c74b6086a773",
+    "research/safeinvest_research/diagnostics.py": "cb200881f59ac4bb9674711fb19076355642abc342bb7a434fe0ebe9446fe836",
+    "research/safeinvest_research/evidence.py": "2654e0151652d9db12157e95180b132eadb26b147452b13700cbc2c2c2bd2305",
+    "research/safeinvest_research/metrics.py": "7ec8e4821ce284351a3d8ed7071c687fdf7d6e4cfd225f72cad1d09d623eb008",
+    "research/safeinvest_research/selection.py": "ea4aeeca113f73c04d56fa48498f34fc41af39730bb046b97548233dc0f26e3a",
+    "research/safeinvest_research/static.py": "3681b49748b7d30a749a5e4dfa6a8ff8675fb3a417b80bac9cb8483b19371552",
+    "scripts/run_fan_rollout_execution.py": "100fe1fd5f9e3718cbf7e804e4dca736c81b407bc3c93a1a0eb24d47a02732e6",
+    "scripts/run_joint_liquidity_refit.py": "d6c6dfa2b18fd4b0fcfc9ec97b6a822c87f50ea1f42b2ee763d06a394e8641fe",
+    "scripts/run_nested_static_calibration.py": "30a2b11b362d955a5a09d5e34bbaf6d1b762293721e68ef62ad7111af5b33bdf",
+    "scripts/run_positive_asset_specification.py": "c9bd14276c32fba88535d13d227a28570f43cf324a8e929991937f091a1e1f1c",
+    "scripts/run_refit_stability.py": "08a7f7e92a2f7272e24b0ed13922f25048f2a4911a351860d4fe39c96334189b",
+    "scripts/run_risk_menu_research.py": "56d983de7015c481a5e62c5c437fdd53ba65ff4639085b0867489aeaaa778a0b",
+    "scripts/run_risk_priced_fan_execution.py": "68b34a4b0592f68327c09200b61dc8d980e8fbea7e282518de8164140ffc6bab",
+    "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a",
+    "src/safeinvest/data.py": "70e511fd05c6e23fd6b8a72f1dc165426fc77a5eb4dbd8a3c13b839bb305a75f",
+    "tests/test_joint_liquidity_pipeline_smoke.py": "eafaa9c455a6398255d3b78915535b71c59b152f5013fb85bc8caae36735e23e",
+    "tests/test_joint_liquidity_refit.py": "d55fafddaec63e890dde8a1b5172861302b67d24c13c6079671015735e5e9eb8",
+    "tests/test_joint_liquidity_static.py": "46c2a73662e47098b5b9c7d6a4c4df38ce8ee7a8c4cd2cd11a745eddf918f7a8",
+    "tests/test_refit_aware_selection.py": "aa67e9188916e68b4ff8562b80c1ffc2f0dc33488ed346e1464d54801d7c7300",
+    "tests/test_refit_stability.py": "f450ce3c2ab360d4c3b275b0c2d023d90e5fa7a0c61372105cacbc4812c4e142",
+    "tests/test_refit_stability_pipeline.py": "bf00a988d0205c21b6154033917d8cefbe01493f87d919ff8f0d4b475f23390f"
+  },
+  "final_scenarios_loaded": false
+}

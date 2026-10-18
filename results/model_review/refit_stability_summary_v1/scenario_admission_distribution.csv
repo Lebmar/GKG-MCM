@@ -1,0 +1,13 @@
+policy,admitted_of_5,original_scenario_n,original_scenario_total
+joint_canonical_learner,0,19,120
+joint_canonical_learner,1,51,120
+joint_canonical_learner,2,34,120
+joint_canonical_learner,3,15,120
+joint_canonical_learner,4,1,120
+joint_canonical_learner,5,0,120
+joint_tie_set_refit_learner,0,0,120
+joint_tie_set_refit_learner,1,19,120
+joint_tie_set_refit_learner,2,47,120
+joint_tie_set_refit_learner,3,41,120
+joint_tie_set_refit_learner,4,13,120
+joint_tie_set_refit_learner,5,0,120

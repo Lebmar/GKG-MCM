@@ -29,6 +29,8 @@ HASH_KEYS = {
     "sources_and_artifacts_at_start", "sources_and_artifacts_at_end",
     "evidence_sha256", "source_evidence_sha256_start", "source_evidence_sha256_end", "sources_sha256_at_start",
     "frozen_input_sha256", "execution_sources_sha256",
+    "reviewed_sources_sha256", "audit_source_sha256", "source_input_artifact_sha256",
+    "outputs_sha256_before", "outputs_sha256_after",
     "outputs", "outputs_sha256", "output_artifact_sha256", "output_file_sha256_after_write",
 }
 PAIRS = [
@@ -50,6 +52,7 @@ PAIRS = [
     ("source_input_artifact_sha256_start", "source_input_artifact_sha256_end"),
     ("sources_and_artifacts_at_start", "sources_and_artifacts_at_end"),
     ("source_evidence_sha256_start", "source_evidence_sha256_end"),
+    ("outputs_sha256_before", "outputs_sha256_after"),
 ]
 
 
@@ -70,6 +73,17 @@ def main():
     paths += [p for p in [ROOT / "docs/nested_dynamic_stage_review.json",
                           ROOT / "docs/liquidity_service_design.json",
                           ROOT / "docs/coverage_admission_policy_review.json",
+                          ROOT / "docs/incremental_admission_risk_diagnostic_protocol.json",
+                          ROOT / "docs/refit_stability_method_review.json",
+                          ROOT / "docs/refit_stability_preexecution_review.json",
+                          ROOT / "docs/refit_stability_protocol.json",
+                          ROOT / "docs/refit_stability_audit_plan.json",
+                          ROOT / "docs/forecast_assumption_diagnostic_protocol.json",
+                          ROOT / "docs/forecast_assumption_diagnostic_judgment.json",
+                          ROOT / "docs/current_diagnostic_claims_review.json",
+                          ROOT / "docs/admission_stability_judgment.json",
+                          ROOT / "docs/refit_stability_independent_judgment.json",
+                          ROOT / "results/model_review/incremental_admission_risk_v1/repeatability_receipt.json",
                           ROOT / "docs/service_refinement_readiness_review.json",
                           ROOT / "docs/liquidity_policy_refinement_review.json",
                           ROOT / "docs/service_governance_independent_review.json",
@@ -135,6 +149,19 @@ def main():
     assert sha(test_log_snapshot) == test_log_sha
     notebook_sha = sha(notebook_path)
     reading_copy_sha = sha(ROOT / "notebooks/risk_menu_development.html")
+    additional_notebooks = []
+    for companion in [ROOT / "notebooks/admission_stability_forecasts.ipynb"]:
+        if not companion.exists():
+            continue
+        saved = nbformat.read(companion, as_version=4)
+        companion_code = [cell for cell in saved.cells if cell.cell_type == "code"]
+        assert companion_code and all(cell.execution_count is not None for cell in companion_code)
+        assert not any(output.output_type == "error" for cell in companion_code for output in cell.outputs)
+        reading_copy = companion.with_suffix(".html")
+        additional_notebooks.append({"path": str(companion.relative_to(ROOT)),
+            "executed_code_cells": len(companion_code), "sha256": sha(companion),
+            "reading_copy_path": str(reading_copy.relative_to(ROOT)), "reading_copy_sha256": sha(reading_copy)})
+
     environment_file = ROOT / "requirements-research-pinned.txt"
     environment_sha = sha(environment_file)
     summary = {
@@ -150,6 +177,7 @@ def main():
         "notebook": {"path": str(notebook_path.relative_to(ROOT)), "executed_code_cells": len(code_cells),
                      "sha256": notebook_sha,
                      "reading_copy_sha256": reading_copy_sha},
+        "additional_notebooks": additional_notebooks,
         "legacy": {"baseline_revision": "7bca10b", "unchanged_paths": ["src", "report", "output"]},
         "runtime": {"python": sys.version.split()[0], "system": platform.system(),
                     "architecture": platform.machine(),

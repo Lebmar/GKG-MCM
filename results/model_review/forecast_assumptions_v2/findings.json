@@ -1,0 +1,106 @@
+{
+  "primary_vector_results": [
+    {
+      "target": "next_year",
+      "primary_metric": "path-averaged three-real-asset standardized MSE; inflation excluded",
+      "original_path_n": 120,
+      "baseline_standardized_vector_mse": 1.0231017969721636,
+      "state_standardized_vector_mse": 1.0134956284667755,
+      "state_to_calendar_mse_ratio": 0.9906107402666897,
+      "paired_mean_loss_difference": -0.009606168505388084,
+      "path_loss_difference_q10_q50_q90": [
+        -0.03463437645886401,
+        -0.008394801516711181,
+        0.014206908220057816
+      ],
+      "path_fraction_state_lower_loss": 0.6583333333333333,
+      "fold_results": [
+        {
+          "fold": 1,
+          "original_path_n": 24,
+          "state_to_calendar_standardized_mse_ratio": 0.9958876399877996
+        },
+        {
+          "fold": 2,
+          "original_path_n": 24,
+          "state_to_calendar_standardized_mse_ratio": 0.9858781612232888
+        },
+        {
+          "fold": 3,
+          "original_path_n": 24,
+          "state_to_calendar_standardized_mse_ratio": 0.9926693088535036
+        },
+        {
+          "fold": 4,
+          "original_path_n": 24,
+          "state_to_calendar_standardized_mse_ratio": 0.9902959578563928
+        },
+        {
+          "fold": 5,
+          "original_path_n": 24,
+          "state_to_calendar_standardized_mse_ratio": 0.9888543839983904
+        }
+      ],
+      "interpretation": "Fixed-comparator descriptive development-path prediction diagnostic. No confidence interval, IID annual-row inference, learned trading-Q claim or future risk guarantee."
+    },
+    {
+      "target": "remaining_to_original30_mean_annual",
+      "primary_metric": "path-averaged three-real-asset standardized MSE; inflation excluded",
+      "original_path_n": 120,
+      "baseline_standardized_vector_mse": 1.030687766207877,
+      "state_standardized_vector_mse": 1.0295631474823053,
+      "state_to_calendar_mse_ratio": 0.9989088657472772,
+      "paired_mean_loss_difference": -0.0011246187255716945,
+      "path_loss_difference_q10_q50_q90": [
+        -0.00921121714976465,
+        -0.0003842972182345472,
+        0.00644751760055964
+      ],
+      "path_fraction_state_lower_loss": 0.5416666666666666,
+      "fold_results": [
+        {
+          "fold": 1,
+          "original_path_n": 24,
+          "state_to_calendar_standardized_mse_ratio": 1.0003421924999327
+        },
+        {
+          "fold": 2,
+          "original_path_n": 24,
+          "state_to_calendar_standardized_mse_ratio": 0.9982849181228959
+        },
+        {
+          "fold": 3,
+          "original_path_n": 24,
+          "state_to_calendar_standardized_mse_ratio": 0.999125611531294
+        },
+        {
+          "fold": 4,
+          "original_path_n": 24,
+          "state_to_calendar_standardized_mse_ratio": 0.9982834206593217
+        },
+        {
+          "fold": 5,
+          "original_path_n": 24,
+          "state_to_calendar_standardized_mse_ratio": 0.9989062537083809
+        }
+      ],
+      "interpretation": "Fixed-comparator descriptive development-path prediction diagnostic. No confidence interval, IID annual-row inference, learned trading-Q claim or future risk guarantee."
+    }
+  ],
+  "limitations": [
+    "Original120 development paths have already informed design; held-out means disjoint in this diagnostic fit, not fresh blind or external validation.",
+    "Each fold fits on96 original complete paths; evaluation targets enter scoring only; evaluation t-1 observation may enter the frozen comparator at decisiont.",
+    "The annual3480 rows per channel/horizon are correlated within120 paths; no IID annual-row inference, and overlapping five training folds are not five independent deployment trials.",
+    "Fixed state comparator can reveal simple predictive association or underperformance for these quantities; its success or failure neither proves nor refutes every conditional forecast law.",
+    "Nominal empirical interval coverage is a marginal fan property on reused development paths. It does not certify conditional trading Q, local action advantage, tail event probability, or10% full-horizon risk.",
+    "Remaining-horizon log-quantity prediction improvement is not equivalent to trading-Q improvement or a tested adaptive continuation.",
+    "No new financial policy, beta, eta, admission rule, liquidity floor, menu, risk threshold, target or final scenario evaluation is selected or run.",
+    "Features and all centering/scaling are training-only and temporally available. No future held-out market observations or labels fit the model."
+  ],
+  "no_policy_or_parameter_changes": true,
+  "all_training_centering_scaling": true,
+  "annual_rows_treated_independent": false,
+  "final_scenarios_loaded": false,
+  "nominal_interval_label": 0.8,
+  "interval_definition": "Training same-calendar 10th to 90th quantiles; numpy linear method; inclusive endpoints. Descriptive marginal interval only."
+}
