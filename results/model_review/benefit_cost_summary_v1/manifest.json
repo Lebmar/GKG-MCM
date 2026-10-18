@@ -1,0 +1,51 @@
+{
+  "status": "complete",
+  "parent_manifest_sha256": "84210684a3dea11b1670c27a72274644bfb2b55623d5fc35da522128142f1230",
+  "source_sha256": {
+    "scripts/summarize_benefit_cost_execution.py": "bb435afcd52814cd54c8edc40afd57a26cc051a35e38cba4d76c7bb5daa25be1"
+  },
+  "artifacts_at_start": {
+    "results/model_review/benefit_cost_execution_v1/job_choices.json.gz": "422b653613c1423a74805c6ce4e9b4a64916e2f1548cb1019ed356948ad8e718",
+    "results/model_review/benefit_cost_execution_v1/training_paths.csv.gz": "de5ff061ab608f3020ebf4bd1f5a442ba83f010763448ec942d6ad433d2ca72d",
+    "results/model_review/benefit_cost_execution_v1/client_paths.csv.gz": "0a4740dddd020bd47b627989791597e7917e059af0e149eb3a407da235f06e67",
+    "results/model_review/benefit_cost_execution_v1/training_summary.csv.gz": "958773ee28e9c4e82fe93eae70e8fe9cb008a9ee2cef96cac6e7487ced2d2d60",
+    "results/model_review/benefit_cost_execution_v1/inner_gate_summaries.csv.gz": "b88c5950b8696723d427fa8b3e0c6e5063620a5b30b029a7ae03c8c8be93e9a4",
+    "results/model_review/benefit_cost_execution_v1/fit_admission.csv.gz": "0b03b258e2ed544fd18924aa30997472fd8a24ea2d533ec18c83d4d5f18c3341",
+    "results/model_review/benefit_cost_execution_v1/inner_validation_paths.csv.gz": "47a2a511a2122c9ba55146bb9d3ad5017533f9bd0ae294d86af1fba073cf1597",
+    "results/model_review/benefit_cost_execution_v1/inner_reference_paths.csv.gz": "d762c4b88c64c6d9a82607d551512f5a610a24d64e44d4f123bc24753904d4e6",
+    "results/model_review/benefit_cost_execution_v1/manifest.json": "84210684a3dea11b1670c27a72274644bfb2b55623d5fc35da522128142f1230",
+    "results/model_review/benefit_cost_execution_v1/trace_groups.json": "0af05bf2b131e6528e53963d1a2d17a2c5b97deff7a333d91a54062ad4c86df2",
+    "results/model_review/benefit_cost_execution_v1/progress.json": "c1d86fb501f4d0a0ed531b369de60cde51cbc01ac63e67af18b1617a4a4a4298",
+    "results/model_review/benefit_cost_execution_v1/independent_audit.json": "8171abb5da337416e1b6a0d79bdbcbb14c9aecd4047c60636fc2730bfd26b772",
+    "results/model_review/benefit_cost_execution_v1/validation_traces.npz": "dc4110e23910e8fa3469438168c82b8ca03bfb32d502f7a1000c38877aa9a310",
+    "results/model_review/benefit_cost_execution_v1/actual_traces.npz": "8fe372108298f3178b783cf6257e707584983ef9eb6199ca0efa6b7b8f18bed8"
+  },
+  "artifacts_at_end": {
+    "results/model_review/benefit_cost_execution_v1/job_choices.json.gz": "422b653613c1423a74805c6ce4e9b4a64916e2f1548cb1019ed356948ad8e718",
+    "results/model_review/benefit_cost_execution_v1/training_paths.csv.gz": "de5ff061ab608f3020ebf4bd1f5a442ba83f010763448ec942d6ad433d2ca72d",
+    "results/model_review/benefit_cost_execution_v1/client_paths.csv.gz": "0a4740dddd020bd47b627989791597e7917e059af0e149eb3a407da235f06e67",
+    "results/model_review/benefit_cost_execution_v1/training_summary.csv.gz": "958773ee28e9c4e82fe93eae70e8fe9cb008a9ee2cef96cac6e7487ced2d2d60",
+    "results/model_review/benefit_cost_execution_v1/inner_gate_summaries.csv.gz": "b88c5950b8696723d427fa8b3e0c6e5063620a5b30b029a7ae03c8c8be93e9a4",
+    "results/model_review/benefit_cost_execution_v1/fit_admission.csv.gz": "0b03b258e2ed544fd18924aa30997472fd8a24ea2d533ec18c83d4d5f18c3341",
+    "results/model_review/benefit_cost_execution_v1/inner_validation_paths.csv.gz": "47a2a511a2122c9ba55146bb9d3ad5017533f9bd0ae294d86af1fba073cf1597",
+    "results/model_review/benefit_cost_execution_v1/inner_reference_paths.csv.gz": "d762c4b88c64c6d9a82607d551512f5a610a24d64e44d4f123bc24753904d4e6",
+    "results/model_review/benefit_cost_execution_v1/manifest.json": "84210684a3dea11b1670c27a72274644bfb2b55623d5fc35da522128142f1230",
+    "results/model_review/benefit_cost_execution_v1/trace_groups.json": "0af05bf2b131e6528e53963d1a2d17a2c5b97deff7a333d91a54062ad4c86df2",
+    "results/model_review/benefit_cost_execution_v1/progress.json": "c1d86fb501f4d0a0ed531b369de60cde51cbc01ac63e67af18b1617a4a4a4298",
+    "results/model_review/benefit_cost_execution_v1/independent_audit.json": "8171abb5da337416e1b6a0d79bdbcbb14c9aecd4047c60636fc2730bfd26b772",
+    "results/model_review/benefit_cost_execution_v1/validation_traces.npz": "dc4110e23910e8fa3469438168c82b8ca03bfb32d502f7a1000c38877aa9a310",
+    "results/model_review/benefit_cost_execution_v1/actual_traces.npz": "8fe372108298f3178b783cf6257e707584983ef9eb6199ca0efa6b7b8f18bed8"
+  },
+  "outputs_sha256": {
+    "decision_summary.csv.gz": "cfd889f20f894f14a8cb22e241c69f1493b1f7422eef5d527fce6974d3eb068d",
+    "full_development_admission.json": "b012eeababa088c4e13a5a364e7a7408e48831f06035260318859c6535106935",
+    "paired_B_summary.csv.gz": "f1ad887f8a990eb23205a66ed456bf0494da179d7095087f86c66872a63db1d1",
+    "repeat_summary.csv.gz": "b49adc7350bba061c9f5115be88bccf712bc9626507320feffcb67ecd1abb116"
+  },
+  "limitations": [
+    "Primary named before execution; no outcome-driven switch",
+    "Five repeated OOF results reuse original120 paths",
+    "Full-development outcome is in-sample, not validation",
+    "NULL risk for zero automatic coverage"
+  ]
+}

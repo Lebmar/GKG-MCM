@@ -1,0 +1,51 @@
+{
+  "status": "complete",
+  "parent_manifest_sha256": "0db6897a5b5390adcb0727cc3421d462713a622c5239f81233371b0b2d0a5e80",
+  "source_sha256": {
+    "scripts/summarize_constrained_fan_execution.py": "a300f87aab9d4064f341f1319399313a222e488fa7cfec2afa25a90b5fe97a8a"
+  },
+  "artifacts_at_start": {
+    "results/model_review/constrained_fan_execution_v1/job_choices.json.gz": "e279fde7601672003fefe64056d5c3736821d38a34034f65d9a43327ec8c1318",
+    "results/model_review/constrained_fan_execution_v1/training_paths.csv.gz": "f5852e5e5a335ebeddf8c88e21ec00d0fa4317d54addf91428e9c0ccee284415",
+    "results/model_review/constrained_fan_execution_v1/client_paths.csv.gz": "2f78be6756e076ff27f3ae208a0efe0b7fd123a898a113aa58b9795efc5bac1e",
+    "results/model_review/constrained_fan_execution_v1/training_summary.csv.gz": "290d4631fb92d382d90ac546791c39dc56fad1b01ea2d34cc3ee6b6bc4a54156",
+    "results/model_review/constrained_fan_execution_v1/inner_gate_summaries.csv.gz": "323172615bbb810089975997f1138ecd1d0d78d5b636418a6ed8a06a8d73faf7",
+    "results/model_review/constrained_fan_execution_v1/fit_admission.csv.gz": "0d0440d27032c92f49b0446e860a798d5d72ff405b2602bb3d606b4015be4865",
+    "results/model_review/constrained_fan_execution_v1/inner_validation_paths.csv.gz": "8b9eb2b661f0d8306ee1ffef841ac4f9d59a537d0d88ff70ea5abb8e23d75274",
+    "results/model_review/constrained_fan_execution_v1/inner_reference_paths.csv.gz": "d762c4b88c64c6d9a82607d551512f5a610a24d64e44d4f123bc24753904d4e6",
+    "results/model_review/constrained_fan_execution_v1/manifest.json": "0db6897a5b5390adcb0727cc3421d462713a622c5239f81233371b0b2d0a5e80",
+    "results/model_review/constrained_fan_execution_v1/trace_groups.json": "0af05bf2b131e6528e53963d1a2d17a2c5b97deff7a333d91a54062ad4c86df2",
+    "results/model_review/constrained_fan_execution_v1/progress.json": "7e317b6894faa121bae925a6024f932c3fc8b511589ba5ef4c3ff324b42c1471",
+    "results/model_review/constrained_fan_execution_v1/independent_audit.json": "69fb683db7e6ca9c59b9df3047ea18d3103dd910249469c4788295d0976074c2",
+    "results/model_review/constrained_fan_execution_v1/validation_traces.npz": "dc4110e23910e8fa3469438168c82b8ca03bfb32d502f7a1000c38877aa9a310",
+    "results/model_review/constrained_fan_execution_v1/actual_traces.npz": "8fe372108298f3178b783cf6257e707584983ef9eb6199ca0efa6b7b8f18bed8"
+  },
+  "artifacts_at_end": {
+    "results/model_review/constrained_fan_execution_v1/job_choices.json.gz": "e279fde7601672003fefe64056d5c3736821d38a34034f65d9a43327ec8c1318",
+    "results/model_review/constrained_fan_execution_v1/training_paths.csv.gz": "f5852e5e5a335ebeddf8c88e21ec00d0fa4317d54addf91428e9c0ccee284415",
+    "results/model_review/constrained_fan_execution_v1/client_paths.csv.gz": "2f78be6756e076ff27f3ae208a0efe0b7fd123a898a113aa58b9795efc5bac1e",
+    "results/model_review/constrained_fan_execution_v1/training_summary.csv.gz": "290d4631fb92d382d90ac546791c39dc56fad1b01ea2d34cc3ee6b6bc4a54156",
+    "results/model_review/constrained_fan_execution_v1/inner_gate_summaries.csv.gz": "323172615bbb810089975997f1138ecd1d0d78d5b636418a6ed8a06a8d73faf7",
+    "results/model_review/constrained_fan_execution_v1/fit_admission.csv.gz": "0d0440d27032c92f49b0446e860a798d5d72ff405b2602bb3d606b4015be4865",
+    "results/model_review/constrained_fan_execution_v1/inner_validation_paths.csv.gz": "8b9eb2b661f0d8306ee1ffef841ac4f9d59a537d0d88ff70ea5abb8e23d75274",
+    "results/model_review/constrained_fan_execution_v1/inner_reference_paths.csv.gz": "d762c4b88c64c6d9a82607d551512f5a610a24d64e44d4f123bc24753904d4e6",
+    "results/model_review/constrained_fan_execution_v1/manifest.json": "0db6897a5b5390adcb0727cc3421d462713a622c5239f81233371b0b2d0a5e80",
+    "results/model_review/constrained_fan_execution_v1/trace_groups.json": "0af05bf2b131e6528e53963d1a2d17a2c5b97deff7a333d91a54062ad4c86df2",
+    "results/model_review/constrained_fan_execution_v1/progress.json": "7e317b6894faa121bae925a6024f932c3fc8b511589ba5ef4c3ff324b42c1471",
+    "results/model_review/constrained_fan_execution_v1/independent_audit.json": "69fb683db7e6ca9c59b9df3047ea18d3103dd910249469c4788295d0976074c2",
+    "results/model_review/constrained_fan_execution_v1/validation_traces.npz": "dc4110e23910e8fa3469438168c82b8ca03bfb32d502f7a1000c38877aa9a310",
+    "results/model_review/constrained_fan_execution_v1/actual_traces.npz": "8fe372108298f3178b783cf6257e707584983ef9eb6199ca0efa6b7b8f18bed8"
+  },
+  "outputs_sha256": {
+    "decision_summary.csv.gz": "cfd889f20f894f14a8cb22e241c69f1493b1f7422eef5d527fce6974d3eb068d",
+    "full_development_admission.json": "777b7863fc241bd3f1459d2416e74156f22cb40c8f7c8da06d88a4b136b47538",
+    "paired_B_summary.csv.gz": "d0fbbd6d8155d987d1eccffe27407602d142c90852736c55146c1a92fef0487c",
+    "repeat_summary.csv.gz": "dbdcb4d6f0e0ef11bdcc8804506c0f9e37a0d92b5327ac833f4efff5e0d2ef18"
+  },
+  "limitations": [
+    "Single repair controller fixed prospectively after rejected growth-only development; no further family expansion",
+    "Five repeated OOF results reuse original120 paths",
+    "Full-development outcome is in-sample, not validation",
+    "NULL risk for zero automatic coverage"
+  ]
+}

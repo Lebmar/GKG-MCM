@@ -1,0 +1,2599 @@
+{
+  "status": "passed",
+  "checks_passed": 1925729,
+  "maximum_absolute_errors": {
+    "Q1/exact_target": 0.0,
+    "choices/cache_B_count": 0.0,
+    "identity/context_id": 0.0,
+    "identity/repeat_id": 0.0,
+    "identity/outer_fold": 0.0,
+    "identity/horizon": 0.0,
+    "identity/loss_tolerance": 0.0,
+    "identity/selection_training_n": 0.0,
+    "identity/static_gamma": 0.0,
+    "identity/candidate_local_index": 0.0,
+    "identity/candidate_original232_index": 0.0,
+    "path/original_H_growth": 1.3877787807814457e-16,
+    "path/CAGR": 1.1102230246251565e-16,
+    "path/one_way_fee": 5.329070518200751e-15,
+    "path/excess": 9.93129189996722e-17,
+    "path/terminal_simplex": 4.440892098500626e-16,
+    "summary/n_training": 0.0,
+    "summary/breach_count": 0.0,
+    "summary/mean_log_growth": 6.245004513516506e-17,
+    "summary/mean_excess": 9.194034422677078e-17,
+    "summary/mean_nominal_fees": 4.440892098500626e-16,
+    "summary/optional_count": 0.0,
+    "admission/reference_training_breach_count": 0.0,
+    "admission/training_breach_cap": 0.0,
+    "admission/n_training": 0.0,
+    "gate/original_n": 0.0,
+    "nested_gate/original_n": 0.0,
+    "gate/auto_inner_n": 0.0,
+    "nested_gate/auto_inner_n": 0.0,
+    "fit_admission/training_n": 0.0,
+    "fit_admission/evaluation_n": 0.0,
+    "saved/holdings": 6.821210263296962e-13,
+    "saved/weights": 1.1102230246251565e-16,
+    "saved/nominal_wealth": 1.3642420526593924e-12,
+    "saved/real_wealth": 6.821210263296962e-13,
+    "saved/cpi": 0.0,
+    "saved/real_peak": 6.821210263296962e-13,
+    "saved/current_drawdown": 7.771561172376096e-16,
+    "saved/running_mdd": 2.220446049250313e-16,
+    "saved/posttrade_holdings": 6.821210263296962e-13,
+    "saved/fees": 5.412337245047638e-16,
+    "saved/moved": 2.4158453015843406e-13,
+    "saved/pretrade_wealth": 1.3642420526593924e-12,
+    "saved/fee_fraction": 8.673617379884035e-19,
+    "saved/moved_fraction": 1.97758476261356e-16,
+    "saved/pretrade_tv_drift": 1.1102230246251565e-16,
+    "saved/end_year_tv_drift": 1.1102230246251565e-16,
+    "saved/targets": 0.0,
+    "saved/optional/recovery_endpoint": 0.0,
+    "saved/optional/recovery_time": 0.0,
+    "saved/optional/available_followup": 0.0,
+    "saved/optional/observed_followup": 0.0,
+    "saved/optional/terminal_excess": 1.1102230246251565e-16,
+    "saved/optional/end_weights": 1.1102230246251565e-16,
+    "saved/optional/trade_count": 0.0,
+    "saved/optional/target_execution_count": 0.0,
+    "saved/optional/nominal_fees": 2.4424906541753444e-15,
+    "saved/optional/nominal_moved": 4.547473508864641e-13,
+    "saved/optional/log_growth": 4.85722573273506e-17,
+    "saved/optional/cagr": 5.551115123125783e-17,
+    "saved/optional/mdd": 2.220446049250313e-16,
+    "saved/optional/volatility": 4.163336342344337e-17,
+    "saved/optional/terminal_real": 4.547473508864641e-13,
+    "saved/optional/excess": 1.1102230246251565e-16,
+    "replayed_metric/log_growth": 1.3877787807814457e-16,
+    "replayed_metric/cagr": 1.249000902703301e-16,
+    "replayed_metric/mdd": 2.220446049250313e-16,
+    "replayed_metric/volatility": 1.1102230246251565e-16,
+    "replayed_metric/terminal_real": 4.547473508864641e-13,
+    "replayed_metric/excess": 1.7477339020466331e-16,
+    "replayed_metric/nominal_fees": 2.4424906541753444e-15,
+    "replayed_metric/nominal_moved": 4.547473508864641e-13,
+    "replayed_metric/trade_fraction": 1.1102230246251565e-16,
+    "replayed_metric/target_execution_fraction": 1.1102230246251565e-16,
+    "replayed_metric/terminal_equity": 1.1102230246251565e-16,
+    "replayed_metric/terminal_bond": 9.71445146547012e-17,
+    "replayed_metric/terminal_bill": 1.1102230246251565e-16,
+    "replayed_metric/mean_fee_fraction": 9.993633524885137e-17,
+    "saved/optional/drawdown_at_trigger": 1.1102230246251565e-16,
+    "saved/optional/peak_at_trigger": 2.842170943040401e-14,
+    "saved/optional/real_wealth_at_trigger": 2.842170943040401e-14,
+    "saved/optional/added_severity": 0.0,
+    "replayed_metric/first_crossing": 0.0
+  },
+  "counts": {
+    "training_rows": 10080,
+    "training_summaries": 130,
+    "admission_gates": 26,
+    "selected_trace_accounts": 3912,
+    "selected_trace_decisions": 117360,
+    "model_trace_accounts": 0,
+    "independent_forecast_states": 0,
+    "unique_initial_forecasts": 0,
+    "unavailable_forecast_slots": 272,
+    "pending_forecast_slots": 0,
+    "full120_paired_paths": 0
+  },
+  "membership": {
+    "repeated_outer_contexts": 25,
+    "full_descriptive_contexts": 1,
+    "dynamic_jobs": 130,
+    "repeated_original_records": 600,
+    "descriptive_in_sample_records": 120
+  },
+  "fixed_forecast_state_inventory": [
+    {
+      "job_id": "c101_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 4,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c101_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 4,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c101_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 3,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c101_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 3,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c101_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 7,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c101_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 7,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c101_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c101_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c101_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c101_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c101_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 16,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c101_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 30,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c102_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c102_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c102_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 15,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c102_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 15,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c102_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 4,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c102_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 4,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c102_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 10,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c102_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 10,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c102_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c102_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c103_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c103_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c103_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c103_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c103_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 6,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "not_balanced_case"
+    },
+    {
+      "job_id": "c103_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 6,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "not_balanced_case"
+    },
+    {
+      "job_id": "c103_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 3,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c103_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 3,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c103_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 11,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c103_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 11,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c104_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 11,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c104_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 11,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c104_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 3,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c104_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 3,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c104_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c104_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c104_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c104_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c104_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 4,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c104_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 4,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c105_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 4,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c105_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 4,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c105_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 6,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c105_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 6,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c105_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c105_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c105_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c105_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c105_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 3,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c105_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 3,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c201_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c201_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c201_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 3,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c201_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 3,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c201_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 20,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c201_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 20,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c201_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c201_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c201_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 9,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c201_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 9,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c202_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 4,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c202_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 4,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c202_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 8,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c202_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 8,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c202_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c202_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c202_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c202_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c202_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 3,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c202_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 3,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c202_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 3,
+      "original_year": 16,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c202_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 3,
+      "original_year": 30,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c203_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 4,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c203_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 4,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c203_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 8,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c203_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 8,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c203_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 3,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c203_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 3,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c203_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c203_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c203_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c203_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c204_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 5,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c204_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 5,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c204_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 12,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c204_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 12,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c204_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 13,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c204_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 13,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c204_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c204_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c204_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c204_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c205_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 12,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c205_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 12,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c205_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c205_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c205_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 5,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c205_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 5,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c205_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c205_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c205_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 13,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c205_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 13,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c301_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 9,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c301_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 9,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c301_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 6,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c301_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 6,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c301_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 14,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c301_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 14,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c301_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c301_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c301_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c301_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c302_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 12,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c302_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 12,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c302_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 4,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c302_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 4,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c302_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c302_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c302_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 6,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c302_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 6,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c302_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c302_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c303_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 4,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c303_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 4,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c303_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c303_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c303_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c303_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c303_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 12,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c303_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 12,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c303_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 6,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c303_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 6,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c303_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 6,
+      "original_year": 16,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c303_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 6,
+      "original_year": 30,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c304_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 4,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c304_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 4,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c304_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c304_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c304_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 5,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c304_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 5,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c304_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c304_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c304_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 3,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c304_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 3,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c305_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c305_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c305_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 3,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c305_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 3,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c305_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c305_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c305_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 4,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c305_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 4,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c305_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 5,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c305_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 5,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c401_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c401_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c401_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 8,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c401_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 8,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c401_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c401_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c401_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 18,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c401_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 18,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c401_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 4,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c401_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 4,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c402_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 7,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c402_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 7,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c402_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 4,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c402_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 4,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c402_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 6,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c402_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 6,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c402_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 19,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c402_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 19,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c402_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c402_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c403_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c403_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c403_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 3,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c403_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 3,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c403_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 4,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c403_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 4,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c403_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c403_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c403_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 5,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c403_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 5,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c404_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 11,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c404_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 11,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c404_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c404_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c404_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c404_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c404_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 4,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c404_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 4,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c404_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 8,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c404_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 8,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c404_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 8,
+      "original_year": 16,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c404_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 8,
+      "original_year": 30,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c405_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c405_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c405_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 4,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c405_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 4,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c405_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 8,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c405_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 8,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c405_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c405_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c405_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 9,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c405_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 9,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c501_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 4,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c501_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 4,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c501_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 13,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c501_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 13,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c501_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 3,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c501_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 3,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c501_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c501_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c501_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c501_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c502_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 5,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c502_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 5,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c502_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 8,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c502_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 8,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c502_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c502_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c502_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 4,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c502_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 4,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c502_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 7,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c502_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 7,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c503_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 3,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c503_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 3,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c503_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c503_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c503_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 8,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c503_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 8,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c503_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c503_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c503_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 5,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c503_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 5,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c504_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 8,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c504_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 8,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c504_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c504_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c504_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 7,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c504_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 7,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c504_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 5,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c504_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 5,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c504_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 3,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c504_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 3,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c505_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 7,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c505_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 7,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c505_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 23,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c505_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 23,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c505_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 5,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c505_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 5,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c505_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "q1_review"
+    },
+    {
+      "job_id": "c505_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "q1_review"
+    },
+    {
+      "job_id": "c505_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c505_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c505_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 16,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c505_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 30,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c0_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c0_inner1",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c0_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 6,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c0_inner2",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 6,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c0_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c0_inner3",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 2,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c0_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 13,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c0_inner4",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 13,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c0_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 1,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c0_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 2,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c0_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 16,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    },
+    {
+      "job_id": "c0_refit",
+      "policy": "constrained_net_growth_rollout",
+      "scenario_id": 1,
+      "original_year": 30,
+      "status": "unavailable_no_substitution",
+      "execution_status": "execution_review"
+    }
+  ],
+  "elapsed_seconds": 15.085063583999727,
+  "limitations": [
+    "Training metric rows and gates all reconciled; unrecorded full training policy trees not all independently regenerated",
+    "Only deterministic forecast subset independently recomputed, not every adaptively chosen Q",
+    "Independent automated audit is not human review, true-risk certification, or fresh holdout evidence"
+  ],
+  "training_economic_breakdown_scope": "All financial means/event/optional counts aggregated; unrecorded training economic/risk/sacrifice/infeasibility classifications checked for partition and count bounds only, not fully independently regenerated",
+  "every_saved_Q_level_recomputed": false,
+  "unrecorded_full_training_policy_trees_replayed": false,
+  "frozen_schema_note": "Inception decision_detail literal is41 characters but frozen U40 field stores mandatory_initial_restore_diagnostic_onl; exact serialized prefix audited, no action or numeric effect",
+  "completed_utc": "2026-10-18T08:46:46.739693+00:00",
+  "parent_manifest_sha256": "0db6897a5b5390adcb0727cc3421d462713a622c5239f81233371b0b2d0a5e80",
+  "protocol_sha256": "641b09eed24f7ccd51de30bd55c27420d5e5d5177da351d080f97c172cc2a368",
+  "audit_plan_sha256": "fdc42683cb8f5fb9d25db06bc3ba5ec9a1b6713341c531e374b51a6dd7a4d47d",
+  "auditor_sha256": "294f4eaba283c8af95fc3bd4fa19389cf989427b7a1b893f6493ec95349abb3a",
+  "sources_and_artifacts_at_start": {
+    "docs/constrained_fan_execution_protocol.json": "641b09eed24f7ccd51de30bd55c27420d5e5d5177da351d080f97c172cc2a368",
+    "docs/constrained_fan_execution_audit_plan.json": "fdc42683cb8f5fb9d25db06bc3ba5ec9a1b6713341c531e374b51a6dd7a4d47d",
+    "results/model_review/constrained_fan_execution_v1/manifest.json": "0db6897a5b5390adcb0727cc3421d462713a622c5239f81233371b0b2d0a5e80",
+    "scripts/audit_constrained_fan_execution.py": "294f4eaba283c8af95fc3bd4fa19389cf989427b7a1b893f6493ec95349abb3a",
+    "tests/test_audit_constrained_fan_execution.py": "d7ff6852ade48c788578298008337c7d53707c78b5a6ae971e79be158645d784",
+    "results/model_review/risk_menu_v1/cache/step_0500__cost_002500.npz": "558b547574265a6fce5befa6803a55b9d7cbd8cc01a66603d38e080c880d97bb",
+    "scripts/audit_simple_execution_comparison.py": "1a2e2ddb59f6f725cd3996513e67434c15c011346c19946ffdd98709dd45f248",
+    "scripts/audit_benefit_cost_execution.py": "e43f93fd48baec45bb98dd41504d6a0a6961bed448a044509713e8ebab1c9b53",
+    "scripts/audit_fan_rollout_execution.py": "9f9d4a274e3be531040193e1654ec6bdf74733ad5204937b8a8d8195d02940fb",
+    "scripts/audit_review_pending_execution.py": "9c208ce69a03f1a13460908ec04b39a8dc232eacbb8882b5bdef3aafae60a264",
+    "docs/joint_liquidity_refit_protocol.json": "1e92a4f7b374bd7437315c89e513a830f12211b54cb08d3c4341dffdc9f1e3f6",
+    "requirements-research-pinned.txt": "a18dc21251d1dcdba4c19b4137ed62083bf4d82ed6ea8fefc4ae3cbd421f02ee",
+    "research/experimental_execution/benefit_cost_execution.py": "a048b37588bb19b33950ee8144858cc42bec3c55d8a3df0640e6b959eb4ba13b",
+    "research/experimental_execution/constrained_fan_rollout.py": "81a42402915410d4c97b8d0f0f7252855631324f346bcb1b7b91208806b767e0",
+    "research/experimental_execution/fan_rollout.py": "d195d721c895700925e9b24c91640c59737fe4eb542272376d2de78ce62fe1ba",
+    "research/experimental_execution/joint_liquidity_static.py": "f12fc90a78594f91a11c46a4ca7306237024404098df467e9dc66e110ee78c10",
+    "research/experimental_execution/nested_dynamic_selection.py": "a293daf2383477e4b33fffd5dacad04ab8fbc71dc92edab2c9f9ff492a28aa20",
+    "research/experimental_execution/nested_static_adapter.py": "9401e5b7454b9b0b88b28060baefeb3920dab9fd3e3c31870d00977e5ca84d6f",
+    "research/experimental_execution/refit_aware_selection.py": "12d90c14e1208143014a4d0f9d8eadd69960bd966308f24d5d13f7873866d7c6",
+    "research/experimental_execution/review_pending.py": "9038d420c9ea48df068c58a6abee3f993ac414f85dd0290cb56e3d703aae3894",
+    "research/experimental_execution/risk_priced_fan_rollout.py": "2a935cfe1d039f6a020e104fe92aa659bb92aac2a0b3bed2ef767437015ba472",
+    "research/experimental_execution/service_governance.py": "0600c38d751febb693311a6d57f1c19dcbea3006ecf8fc5e7b0e9dfaeb50f63f",
+    "research/experimental_execution/simple_drift_execution.py": "60dc564d8cf0abda4f2d7b2a83114c03473f8968d1f6af1ce35dd60fc84097c7",
+    "research/safeinvest_research/assessment.py": "5cbd5fab61ca30b5ef258445c5b257be19ee005f078c722fb748c74b6086a773",
+    "research/safeinvest_research/diagnostics.py": "cb200881f59ac4bb9674711fb19076355642abc342bb7a434fe0ebe9446fe836",
+    "research/safeinvest_research/evidence.py": "2654e0151652d9db12157e95180b132eadb26b147452b13700cbc2c2c2bd2305",
+    "research/safeinvest_research/metrics.py": "7ec8e4821ce284351a3d8ed7071c687fdf7d6e4cfd225f72cad1d09d623eb008",
+    "research/safeinvest_research/selection.py": "ea4aeeca113f73c04d56fa48498f34fc41af39730bb046b97548233dc0f26e3a",
+    "research/safeinvest_research/static.py": "3681b49748b7d30a749a5e4dfa6a8ff8675fb3a417b80bac9cb8483b19371552",
+    "scripts/run_benefit_cost_execution.py": "fffdbb3b197a0291a8803d1ee2b1b37f6e5abbee3f1a8e21cdcc5e7cf6126cbf",
+    "scripts/run_constrained_fan_execution.py": "7e597baa745c3cdfebd2fcc72053f398879f44a08d8619600f1bf6090d953838",
+    "scripts/run_fan_rollout_execution.py": "100fe1fd5f9e3718cbf7e804e4dca736c81b407bc3c93a1a0eb24d47a02732e6",
+    "scripts/run_joint_liquidity_refit.py": "d6c6dfa2b18fd4b0fcfc9ec97b6a822c87f50ea1f42b2ee763d06a394e8641fe",
+    "scripts/run_nested_static_calibration.py": "30a2b11b362d955a5a09d5e34bbaf6d1b762293721e68ef62ad7111af5b33bdf",
+    "scripts/run_positive_asset_specification.py": "c9bd14276c32fba88535d13d227a28570f43cf324a8e929991937f091a1e1f1c",
+    "scripts/run_risk_menu_research.py": "56d983de7015c481a5e62c5c437fdd53ba65ff4639085b0867489aeaaa778a0b",
+    "scripts/run_risk_priced_fan_execution.py": "68b34a4b0592f68327c09200b61dc8d980e8fbea7e282518de8164140ffc6bab",
+    "scripts/run_simple_execution_comparison.py": "b82071d44305d6aceefacce83e49275a0ac4b7ad5cc59cc71d62258a4f99de36",
+    "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a",
+    "src/safeinvest/data.py": "70e511fd05c6e23fd6b8a72f1dc165426fc77a5eb4dbd8a3c13b839bb305a75f",
+    "tests/test_benefit_cost_execution.py": "84f13605eb1c3e62192a8ba6a81065ff0e166ec7acf1e30fdbf1a430497f4731",
+    "tests/test_benefit_cost_pipeline.py": "a5a47c88c066d2420e9fd9e509c55cc9c509813a74b612ef293375a7a8e893cf",
+    "tests/test_constrained_fan_pipeline.py": "2c547088b784417aa744236c4f13b63c64e3fc574e7f75860fceab76b2b2bfb1",
+    "tests/test_constrained_fan_rollout.py": "dee5fe018562e01840a61e79653782b72a5c9db2f93688b513e9f8f211312169",
+    "tests/test_joint_liquidity_pipeline_smoke.py": "eafaa9c455a6398255d3b78915535b71c59b152f5013fb85bc8caae36735e23e",
+    "tests/test_joint_liquidity_refit.py": "d55fafddaec63e890dde8a1b5172861302b67d24c13c6079671015735e5e9eb8",
+    "tests/test_joint_liquidity_static.py": "46c2a73662e47098b5b9c7d6a4c4df38ce8ee7a8c4cd2cd11a745eddf918f7a8",
+    "tests/test_refit_aware_selection.py": "aa67e9188916e68b4ff8562b80c1ffc2f0dc33488ed346e1464d54801d7c7300",
+    "tests/test_simple_drift_execution.py": "29c31c1355d3ac47ba8320f51dbf20f4847ad2a0b3057e821c5a863ef273272b",
+    "tests/test_simple_execution_pipeline.py": "29b8cffaf15fe36650a3261143dd4eac8d55a910cce3305520dffee079e4cf79",
+    "docs/refit_stability_protocol.json": "8e9ab035073b91e4004c76c41296c56665d2199620e92d8cc0eb4eaca7a4efae",
+    "results/model_review/refit_stability_v1/manifest.json": "035bfa20b4e659e88ff48b56ffdc21a6563db32a0490d2ec8a6852154018e5a5",
+    "results/model_review/refit_stability_v1/independent_audit.json": "7725716ddbfb2da1071027936fc90374668f99161e6e15b57fd3f80b90a9e712",
+    "results/model_review/refit_stability_v1/static_refits.json.gz": "1621772a0a0d0dfb822692a21ff5b8fd15b90b0977c9ba6f78f9bfd10bf87fa7",
+    "results/model_review/joint_liquidity_refit_v1/manifest.json": "28819dca54041e22ae53ac924b71e023c005f96cd73ca66d102b3a1ac20a4c99",
+    "results/model_review/joint_liquidity_refit_v1/independent_audit.json": "16339e76e41e07b6f37fbd0c88baff3ffe77d245e77258ef9bc8060fd79b3a15",
+    "results/model_review/joint_liquidity_refit_v1/static_refits.json": "f46236a5b3c49973cf6d4286b8f711a7ad44f39b0871c7605e5a18ce873038dd",
+    "data/SafeInvest_Synthetic_Data.csv": "def0177704bf6cb98cec6da325b34208750d988f6ad97ec4a706a0d39e6f82c0",
+    "docs/benefit_cost_estimand_review.json": "5b768f5523ba04061325f2f3c01a913f02a8f60903d70b0c0734b2294c0c0ba9",
+    "docs/benefit_cost_final_design_review.json": "a5c8b7db38ddd46c3ec67b49063e60820ff6ad58d6cc9c7051031e1c34c6fc85",
+    "docs/benefit_cost_preexecution_review.json": "99d69566713c53f3ed538aa9cfc4fb8f477462908366ba49857eb9345bfff8ca",
+    "docs/benefit_cost_execution_audit_plan.json": "c6914c904cd2614f466ff01077cb795b924a51d5b7ba5c575db44cc47ff80e82",
+    "docs/forecast_assumption_diagnostic_judgment.json": "a32d02356bfbb1b85881e405a41da8841dc6643c87e1b196a3980405b2740f5c",
+    "docs/admission_stability_judgment.json": "26244e6398aa43d3c0138dc7028551a9e3e3270d0456148809075eda7705030b",
+    "docs/benefit_cost_execution_protocol.json": "263eee9d3ba78cd5a8cd87150f74fde6a5d98a3b25e268ef25bcb78096d3a5cd",
+    "docs/constrained_rollout_design_review.json": "a0841a0e0922eabb3cd4a182b4e54097562b87eda49c4a24e5423c440549733f",
+    "docs/constrained_fan_preexecution_review.json": "19f783c0ac1a72cec1a3d25d1b5ba878789c8f2b1814ff1644ff6760f3811b81",
+    "results/model_review/benefit_cost_execution_v1/manifest.json": "84210684a3dea11b1670c27a72274644bfb2b55623d5fc35da522128142f1230",
+    "results/model_review/benefit_cost_execution_v1/independent_audit.json": "8171abb5da337416e1b6a0d79bdbcbb14c9aecd4047c60636fc2730bfd26b772",
+    "results/model_review/benefit_cost_execution_v1/training_summary.csv.gz": "958773ee28e9c4e82fe93eae70e8fe9cb008a9ee2cef96cac6e7487ced2d2d60",
+    "results/model_review/benefit_cost_execution_v1/inner_gate_summaries.csv.gz": "b88c5950b8696723d427fa8b3e0c6e5063620a5b30b029a7ae03c8c8be93e9a4",
+    "docs/objective_risk_decision.json": "0ad119355fb399c9ca52b47742ec581b1d1448b414cc5361594c4efec342a473",
+    "results/model_review/constrained_fan_execution_v1/job_choices.json.gz": "e279fde7601672003fefe64056d5c3736821d38a34034f65d9a43327ec8c1318",
+    "results/model_review/constrained_fan_execution_v1/training_paths.csv.gz": "f5852e5e5a335ebeddf8c88e21ec00d0fa4317d54addf91428e9c0ccee284415",
+    "results/model_review/constrained_fan_execution_v1/client_paths.csv.gz": "2f78be6756e076ff27f3ae208a0efe0b7fd123a898a113aa58b9795efc5bac1e",
+    "results/model_review/constrained_fan_execution_v1/training_summary.csv.gz": "290d4631fb92d382d90ac546791c39dc56fad1b01ea2d34cc3ee6b6bc4a54156",
+    "results/model_review/constrained_fan_execution_v1/inner_gate_summaries.csv.gz": "323172615bbb810089975997f1138ecd1d0d78d5b636418a6ed8a06a8d73faf7",
+    "results/model_review/constrained_fan_execution_v1/fit_admission.csv.gz": "0d0440d27032c92f49b0446e860a798d5d72ff405b2602bb3d606b4015be4865",
+    "results/model_review/constrained_fan_execution_v1/inner_validation_paths.csv.gz": "8b9eb2b661f0d8306ee1ffef841ac4f9d59a537d0d88ff70ea5abb8e23d75274",
+    "results/model_review/constrained_fan_execution_v1/inner_reference_paths.csv.gz": "d762c4b88c64c6d9a82607d551512f5a610a24d64e44d4f123bc24753904d4e6",
+    "results/model_review/constrained_fan_execution_v1/trace_groups.json": "0af05bf2b131e6528e53963d1a2d17a2c5b97deff7a333d91a54062ad4c86df2",
+    "results/model_review/constrained_fan_execution_v1/progress.json": "7e317b6894faa121bae925a6024f932c3fc8b511589ba5ef4c3ff324b42c1471",
+    "results/model_review/constrained_fan_execution_v1/validation_traces.npz": "dc4110e23910e8fa3469438168c82b8ca03bfb32d502f7a1000c38877aa9a310",
+    "results/model_review/constrained_fan_execution_v1/actual_traces.npz": "8fe372108298f3178b783cf6257e707584983ef9eb6199ca0efa6b7b8f18bed8"
+  },
+  "sources_and_artifacts_at_end": {
+    "docs/constrained_fan_execution_protocol.json": "641b09eed24f7ccd51de30bd55c27420d5e5d5177da351d080f97c172cc2a368",
+    "docs/constrained_fan_execution_audit_plan.json": "fdc42683cb8f5fb9d25db06bc3ba5ec9a1b6713341c531e374b51a6dd7a4d47d",
+    "results/model_review/constrained_fan_execution_v1/manifest.json": "0db6897a5b5390adcb0727cc3421d462713a622c5239f81233371b0b2d0a5e80",
+    "scripts/audit_constrained_fan_execution.py": "294f4eaba283c8af95fc3bd4fa19389cf989427b7a1b893f6493ec95349abb3a",
+    "tests/test_audit_constrained_fan_execution.py": "d7ff6852ade48c788578298008337c7d53707c78b5a6ae971e79be158645d784",
+    "results/model_review/risk_menu_v1/cache/step_0500__cost_002500.npz": "558b547574265a6fce5befa6803a55b9d7cbd8cc01a66603d38e080c880d97bb",
+    "scripts/audit_simple_execution_comparison.py": "1a2e2ddb59f6f725cd3996513e67434c15c011346c19946ffdd98709dd45f248",
+    "scripts/audit_benefit_cost_execution.py": "e43f93fd48baec45bb98dd41504d6a0a6961bed448a044509713e8ebab1c9b53",
+    "scripts/audit_fan_rollout_execution.py": "9f9d4a274e3be531040193e1654ec6bdf74733ad5204937b8a8d8195d02940fb",
+    "scripts/audit_review_pending_execution.py": "9c208ce69a03f1a13460908ec04b39a8dc232eacbb8882b5bdef3aafae60a264",
+    "docs/joint_liquidity_refit_protocol.json": "1e92a4f7b374bd7437315c89e513a830f12211b54cb08d3c4341dffdc9f1e3f6",
+    "requirements-research-pinned.txt": "a18dc21251d1dcdba4c19b4137ed62083bf4d82ed6ea8fefc4ae3cbd421f02ee",
+    "research/experimental_execution/benefit_cost_execution.py": "a048b37588bb19b33950ee8144858cc42bec3c55d8a3df0640e6b959eb4ba13b",
+    "research/experimental_execution/constrained_fan_rollout.py": "81a42402915410d4c97b8d0f0f7252855631324f346bcb1b7b91208806b767e0",
+    "research/experimental_execution/fan_rollout.py": "d195d721c895700925e9b24c91640c59737fe4eb542272376d2de78ce62fe1ba",
+    "research/experimental_execution/joint_liquidity_static.py": "f12fc90a78594f91a11c46a4ca7306237024404098df467e9dc66e110ee78c10",
+    "research/experimental_execution/nested_dynamic_selection.py": "a293daf2383477e4b33fffd5dacad04ab8fbc71dc92edab2c9f9ff492a28aa20",
+    "research/experimental_execution/nested_static_adapter.py": "9401e5b7454b9b0b88b28060baefeb3920dab9fd3e3c31870d00977e5ca84d6f",
+    "research/experimental_execution/refit_aware_selection.py": "12d90c14e1208143014a4d0f9d8eadd69960bd966308f24d5d13f7873866d7c6",
+    "research/experimental_execution/review_pending.py": "9038d420c9ea48df068c58a6abee3f993ac414f85dd0290cb56e3d703aae3894",
+    "research/experimental_execution/risk_priced_fan_rollout.py": "2a935cfe1d039f6a020e104fe92aa659bb92aac2a0b3bed2ef767437015ba472",
+    "research/experimental_execution/service_governance.py": "0600c38d751febb693311a6d57f1c19dcbea3006ecf8fc5e7b0e9dfaeb50f63f",
+    "research/experimental_execution/simple_drift_execution.py": "60dc564d8cf0abda4f2d7b2a83114c03473f8968d1f6af1ce35dd60fc84097c7",
+    "research/safeinvest_research/assessment.py": "5cbd5fab61ca30b5ef258445c5b257be19ee005f078c722fb748c74b6086a773",
+    "research/safeinvest_research/diagnostics.py": "cb200881f59ac4bb9674711fb19076355642abc342bb7a434fe0ebe9446fe836",
+    "research/safeinvest_research/evidence.py": "2654e0151652d9db12157e95180b132eadb26b147452b13700cbc2c2c2bd2305",
+    "research/safeinvest_research/metrics.py": "7ec8e4821ce284351a3d8ed7071c687fdf7d6e4cfd225f72cad1d09d623eb008",
+    "research/safeinvest_research/selection.py": "ea4aeeca113f73c04d56fa48498f34fc41af39730bb046b97548233dc0f26e3a",
+    "research/safeinvest_research/static.py": "3681b49748b7d30a749a5e4dfa6a8ff8675fb3a417b80bac9cb8483b19371552",
+    "scripts/run_benefit_cost_execution.py": "fffdbb3b197a0291a8803d1ee2b1b37f6e5abbee3f1a8e21cdcc5e7cf6126cbf",
+    "scripts/run_constrained_fan_execution.py": "7e597baa745c3cdfebd2fcc72053f398879f44a08d8619600f1bf6090d953838",
+    "scripts/run_fan_rollout_execution.py": "100fe1fd5f9e3718cbf7e804e4dca736c81b407bc3c93a1a0eb24d47a02732e6",
+    "scripts/run_joint_liquidity_refit.py": "d6c6dfa2b18fd4b0fcfc9ec97b6a822c87f50ea1f42b2ee763d06a394e8641fe",
+    "scripts/run_nested_static_calibration.py": "30a2b11b362d955a5a09d5e34bbaf6d1b762293721e68ef62ad7111af5b33bdf",
+    "scripts/run_positive_asset_specification.py": "c9bd14276c32fba88535d13d227a28570f43cf324a8e929991937f091a1e1f1c",
+    "scripts/run_risk_menu_research.py": "56d983de7015c481a5e62c5c437fdd53ba65ff4639085b0867489aeaaa778a0b",
+    "scripts/run_risk_priced_fan_execution.py": "68b34a4b0592f68327c09200b61dc8d980e8fbea7e282518de8164140ffc6bab",
+    "scripts/run_simple_execution_comparison.py": "b82071d44305d6aceefacce83e49275a0ac4b7ad5cc59cc71d62258a4f99de36",
+    "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a",
+    "src/safeinvest/data.py": "70e511fd05c6e23fd6b8a72f1dc165426fc77a5eb4dbd8a3c13b839bb305a75f",
+    "tests/test_benefit_cost_execution.py": "84f13605eb1c3e62192a8ba6a81065ff0e166ec7acf1e30fdbf1a430497f4731",
+    "tests/test_benefit_cost_pipeline.py": "a5a47c88c066d2420e9fd9e509c55cc9c509813a74b612ef293375a7a8e893cf",
+    "tests/test_constrained_fan_pipeline.py": "2c547088b784417aa744236c4f13b63c64e3fc574e7f75860fceab76b2b2bfb1",
+    "tests/test_constrained_fan_rollout.py": "dee5fe018562e01840a61e79653782b72a5c9db2f93688b513e9f8f211312169",
+    "tests/test_joint_liquidity_pipeline_smoke.py": "eafaa9c455a6398255d3b78915535b71c59b152f5013fb85bc8caae36735e23e",
+    "tests/test_joint_liquidity_refit.py": "d55fafddaec63e890dde8a1b5172861302b67d24c13c6079671015735e5e9eb8",
+    "tests/test_joint_liquidity_static.py": "46c2a73662e47098b5b9c7d6a4c4df38ce8ee7a8c4cd2cd11a745eddf918f7a8",
+    "tests/test_refit_aware_selection.py": "aa67e9188916e68b4ff8562b80c1ffc2f0dc33488ed346e1464d54801d7c7300",
+    "tests/test_simple_drift_execution.py": "29c31c1355d3ac47ba8320f51dbf20f4847ad2a0b3057e821c5a863ef273272b",
+    "tests/test_simple_execution_pipeline.py": "29b8cffaf15fe36650a3261143dd4eac8d55a910cce3305520dffee079e4cf79",
+    "docs/refit_stability_protocol.json": "8e9ab035073b91e4004c76c41296c56665d2199620e92d8cc0eb4eaca7a4efae",
+    "results/model_review/refit_stability_v1/manifest.json": "035bfa20b4e659e88ff48b56ffdc21a6563db32a0490d2ec8a6852154018e5a5",
+    "results/model_review/refit_stability_v1/independent_audit.json": "7725716ddbfb2da1071027936fc90374668f99161e6e15b57fd3f80b90a9e712",
+    "results/model_review/refit_stability_v1/static_refits.json.gz": "1621772a0a0d0dfb822692a21ff5b8fd15b90b0977c9ba6f78f9bfd10bf87fa7",
+    "results/model_review/joint_liquidity_refit_v1/manifest.json": "28819dca54041e22ae53ac924b71e023c005f96cd73ca66d102b3a1ac20a4c99",
+    "results/model_review/joint_liquidity_refit_v1/independent_audit.json": "16339e76e41e07b6f37fbd0c88baff3ffe77d245e77258ef9bc8060fd79b3a15",
+    "results/model_review/joint_liquidity_refit_v1/static_refits.json": "f46236a5b3c49973cf6d4286b8f711a7ad44f39b0871c7605e5a18ce873038dd",
+    "data/SafeInvest_Synthetic_Data.csv": "def0177704bf6cb98cec6da325b34208750d988f6ad97ec4a706a0d39e6f82c0",
+    "docs/benefit_cost_estimand_review.json": "5b768f5523ba04061325f2f3c01a913f02a8f60903d70b0c0734b2294c0c0ba9",
+    "docs/benefit_cost_final_design_review.json": "a5c8b7db38ddd46c3ec67b49063e60820ff6ad58d6cc9c7051031e1c34c6fc85",
+    "docs/benefit_cost_preexecution_review.json": "99d69566713c53f3ed538aa9cfc4fb8f477462908366ba49857eb9345bfff8ca",
+    "docs/benefit_cost_execution_audit_plan.json": "c6914c904cd2614f466ff01077cb795b924a51d5b7ba5c575db44cc47ff80e82",
+    "docs/forecast_assumption_diagnostic_judgment.json": "a32d02356bfbb1b85881e405a41da8841dc6643c87e1b196a3980405b2740f5c",
+    "docs/admission_stability_judgment.json": "26244e6398aa43d3c0138dc7028551a9e3e3270d0456148809075eda7705030b",
+    "docs/benefit_cost_execution_protocol.json": "263eee9d3ba78cd5a8cd87150f74fde6a5d98a3b25e268ef25bcb78096d3a5cd",
+    "docs/constrained_rollout_design_review.json": "a0841a0e0922eabb3cd4a182b4e54097562b87eda49c4a24e5423c440549733f",
+    "docs/constrained_fan_preexecution_review.json": "19f783c0ac1a72cec1a3d25d1b5ba878789c8f2b1814ff1644ff6760f3811b81",
+    "results/model_review/benefit_cost_execution_v1/manifest.json": "84210684a3dea11b1670c27a72274644bfb2b55623d5fc35da522128142f1230",
+    "results/model_review/benefit_cost_execution_v1/independent_audit.json": "8171abb5da337416e1b6a0d79bdbcbb14c9aecd4047c60636fc2730bfd26b772",
+    "results/model_review/benefit_cost_execution_v1/training_summary.csv.gz": "958773ee28e9c4e82fe93eae70e8fe9cb008a9ee2cef96cac6e7487ced2d2d60",
+    "results/model_review/benefit_cost_execution_v1/inner_gate_summaries.csv.gz": "b88c5950b8696723d427fa8b3e0c6e5063620a5b30b029a7ae03c8c8be93e9a4",
+    "docs/objective_risk_decision.json": "0ad119355fb399c9ca52b47742ec581b1d1448b414cc5361594c4efec342a473",
+    "results/model_review/constrained_fan_execution_v1/job_choices.json.gz": "e279fde7601672003fefe64056d5c3736821d38a34034f65d9a43327ec8c1318",
+    "results/model_review/constrained_fan_execution_v1/training_paths.csv.gz": "f5852e5e5a335ebeddf8c88e21ec00d0fa4317d54addf91428e9c0ccee284415",
+    "results/model_review/constrained_fan_execution_v1/client_paths.csv.gz": "2f78be6756e076ff27f3ae208a0efe0b7fd123a898a113aa58b9795efc5bac1e",
+    "results/model_review/constrained_fan_execution_v1/training_summary.csv.gz": "290d4631fb92d382d90ac546791c39dc56fad1b01ea2d34cc3ee6b6bc4a54156",
+    "results/model_review/constrained_fan_execution_v1/inner_gate_summaries.csv.gz": "323172615bbb810089975997f1138ecd1d0d78d5b636418a6ed8a06a8d73faf7",
+    "results/model_review/constrained_fan_execution_v1/fit_admission.csv.gz": "0d0440d27032c92f49b0446e860a798d5d72ff405b2602bb3d606b4015be4865",
+    "results/model_review/constrained_fan_execution_v1/inner_validation_paths.csv.gz": "8b9eb2b661f0d8306ee1ffef841ac4f9d59a537d0d88ff70ea5abb8e23d75274",
+    "results/model_review/constrained_fan_execution_v1/inner_reference_paths.csv.gz": "d762c4b88c64c6d9a82607d551512f5a610a24d64e44d4f123bc24753904d4e6",
+    "results/model_review/constrained_fan_execution_v1/trace_groups.json": "0af05bf2b131e6528e53963d1a2d17a2c5b97deff7a333d91a54062ad4c86df2",
+    "results/model_review/constrained_fan_execution_v1/progress.json": "7e317b6894faa121bae925a6024f932c3fc8b511589ba5ef4c3ff324b42c1471",
+    "results/model_review/constrained_fan_execution_v1/validation_traces.npz": "dc4110e23910e8fa3469438168c82b8ca03bfb32d502f7a1000c38877aa9a310",
+    "results/model_review/constrained_fan_execution_v1/actual_traces.npz": "8fe372108298f3178b783cf6257e707584983ef9eb6199ca0efa6b7b8f18bed8"
+  },
+  "scenario_ids_loaded": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120
+  ],
+  "final_scenarios_loaded": false,
+  "q1_component_audit_scope": "Completed parent Q1 components referenced; own130 identities, menu/target/candidate indices and Review reasons checked; no repeated all172 optimizer audit",
+  "interpretation": "Automated arithmetic/action/fixed-subset audit; not human review, conditional calibration, fresh holdout evidence or a risk guarantee"
+}

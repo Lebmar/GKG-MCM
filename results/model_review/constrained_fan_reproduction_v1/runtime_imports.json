@@ -1,0 +1,30 @@
+{
+  "local_imported_files_sha256": {
+    "src/safeinvest/__init__.py": "dcef1e2e1f0f7cd5426988f0f27408eebb9ded3fb32c961f8f23e2edfb6e4ad2",
+    "src/safeinvest/data.py": "70e511fd05c6e23fd6b8a72f1dc165426fc77a5eb4dbd8a3c13b839bb305a75f",
+    "research/safeinvest_research/metrics.py": "7ec8e4821ce284351a3d8ed7071c687fdf7d6e4cfd225f72cad1d09d623eb008",
+    "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a",
+    "research/experimental_execution/review_pending.py": "9038d420c9ea48df068c58a6abee3f993ac414f85dd0290cb56e3d703aae3894",
+    "scripts/run_fan_rollout_execution.py": "100fe1fd5f9e3718cbf7e804e4dca736c81b407bc3c93a1a0eb24d47a02732e6",
+    "scripts/run_risk_priced_fan_execution.py": "68b34a4b0592f68327c09200b61dc8d980e8fbea7e282518de8164140ffc6bab",
+    "research/safeinvest_research/selection.py": "ea4aeeca113f73c04d56fa48498f34fc41af39730bb046b97548233dc0f26e3a",
+    "research/safeinvest_research/static.py": "3681b49748b7d30a749a5e4dfa6a8ff8675fb3a417b80bac9cb8483b19371552",
+    "scripts/run_risk_menu_research.py": "56d983de7015c481a5e62c5c437fdd53ba65ff4639085b0867489aeaaa778a0b",
+    "research/safeinvest_research/evidence.py": "2654e0151652d9db12157e95180b132eadb26b147452b13700cbc2c2c2bd2305",
+    "scripts/run_nested_static_calibration.py": "30a2b11b362d955a5a09d5e34bbaf6d1b762293721e68ef62ad7111af5b33bdf",
+    "scripts/run_positive_asset_specification.py": "c9bd14276c32fba88535d13d227a28570f43cf324a8e929991937f091a1e1f1c",
+    "research/experimental_execution/nested_static_adapter.py": "9401e5b7454b9b0b88b28060baefeb3920dab9fd3e3c31870d00977e5ca84d6f",
+    "research/experimental_execution/joint_liquidity_static.py": "f12fc90a78594f91a11c46a4ca7306237024404098df467e9dc66e110ee78c10",
+    "research/experimental_execution/nested_dynamic_selection.py": "a293daf2383477e4b33fffd5dacad04ab8fbc71dc92edab2c9f9ff492a28aa20",
+    "research/experimental_execution/refit_aware_selection.py": "12d90c14e1208143014a4d0f9d8eadd69960bd966308f24d5d13f7873866d7c6",
+    "research/experimental_execution/service_governance.py": "0600c38d751febb693311a6d57f1c19dcbea3006ecf8fc5e7b0e9dfaeb50f63f",
+    "scripts/run_joint_liquidity_refit.py": "d6c6dfa2b18fd4b0fcfc9ec97b6a822c87f50ea1f42b2ee763d06a394e8641fe",
+    "research/experimental_execution/simple_drift_execution.py": "60dc564d8cf0abda4f2d7b2a83114c03473f8968d1f6af1ce35dd60fc84097c7",
+    "scripts/run_simple_execution_comparison.py": "b82071d44305d6aceefacce83e49275a0ac4b7ad5cc59cc71d62258a4f99de36",
+    "research/experimental_execution/fan_rollout.py": "d195d721c895700925e9b24c91640c59737fe4eb542272376d2de78ce62fe1ba",
+    "research/experimental_execution/constrained_fan_rollout.py": "81a42402915410d4c97b8d0f0f7252855631324f346bcb1b7b91208806b767e0",
+    "research/experimental_execution/benefit_cost_execution.py": "a048b37588bb19b33950ee8144858cc42bec3c55d8a3df0640e6b959eb4ba13b",
+    "scripts/run_benefit_cost_execution.py": "fffdbb3b197a0291a8803d1ee2b1b37f6e5abbee3f1a8e21cdcc5e7cf6126cbf"
+  },
+  "original_project_module_imported": false
+}

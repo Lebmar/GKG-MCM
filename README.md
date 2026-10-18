@@ -3,7 +3,13 @@
 2026 HKUST(GZ) MCM Senior Group Problem A. Team **Lebmar**, number **87**.
 Author: **Chengxuan YUAN**.
 
-**Current status: model foundations under review.** The V1 code and report below
+**Current status: cost estimates, the main mathematical framework and admission
+rules are fixed for this research checkpoint; full-development C execution is
+Review. A robust autonomous C investment strategy has not been demonstrated.**
+Start with the [current model registry](docs/main_model_registry.json),
+[independent convergence judgment](docs/final_model_convergence_judgment.json),
+and [research companion](notebooks/final_model_development.ipynb).
+The V1 code and report below
 are an archived, auditable prototype; they are not the accepted final competition
 model or a submission recommendation. Work has returned to the objective,
 parameter meanings, assumptions, internal validation and decision rules.
@@ -24,6 +30,36 @@ customer suitability, selective rebalancing and bounded target updates. It does
 not assume that a more complicated policy improves investment outcomes.
 
 ## Current development research
+
+The benefit-cost investigation retained two failed simplifications openly.
+Strictly positive predicted financial-growth trading produced31/120 complete
+training events; a single local constrained repair produced25/120, against a
+same-target annual/pending reference cap of9. Both were prospectively frozen,
+independently audited and replayed in isolated source/input copies. Neither
+was relabelled as a successful strategy or rescued with a new alpha/price.
+
+The main framework therefore retains the previously developed complete-policy
+constrained learner, followed by one prospectively fixed additional guard.
+Its existing target, selected beta/eta and top-E/refit rule are immutable.
+Only the old selected beta's inner predictions are checked against B on the
+identical automatic set U; failure means Review without another candidate.
+This is an openly subsequent development choice, not a retrospectively
+prespecified winner. Eta is a technical finite-controller index, not an
+identified customer preference or a KKT multiplier. The action score uses
+already-net Q values, including current and future continuation fees, and
+does not subtract another transaction cost. Risk-reducing trades may sacrifice
+predicted financial growth and are explicitly labelled as such.
+
+The final full120 fit passes the absolute inner count cap12 but has10 events
+against B's8 on the same U, so its automatic execution is Review. That two-event
+difference is not claimed statistically significant: the rejection implements
+a conservative empirical norm, stricter than the problem explicitly requires.
+Across five dependent repeats the added guard retains0,24,0,24,48 automatic
+path records, withNULL,5,NULL,1,3 events. On common automatic groups it saves
+fees and increases mean growth but has more events and larger meanMDD than B;
+one repeat has5/24=20.83%. The96 admitted scenario-repeat records involve74
+original IDs. Neither a risk guarantee nor independent96/600 observations
+is claimed. See `results/model_review/global_policy_admission_v1/`.
 
 The new work uses scenarios **1–120 only** and keeps the V1 archives intact.
 Start with `notebooks/objective_risk_foundations.ipynb`, then the
@@ -301,9 +337,10 @@ audits; they do not replace the primary procedure. The research preserves full
 path folds, records referrals as null outcomes, and distinguishes empirical
 calibration, numerical correctness and statistical evidence.
 
-The latest checkpoint passes **603 tests** and checks 109 saved manifests/audits
-against 755 distinct source, input, result and execution-evidence files. The
-new joint stage passes 538,236 independent selection/accounting checks and its
+The latest checkpoint passes **725 tests** and checks 143 saved manifests,
+audits and receipts against 877 distinct source, input, result and execution
+evidence files. The phase Git-index proof binds172 frozen package files. The
+previous joint stage passes 538,236 independent selection/accounting checks and its
 30-task isolated replay matches 18 deterministic output files byte for byte;
 progress differs only in declared runtime fields. The first implementation
 attempt's export failure is explicitly preserved. These are computational

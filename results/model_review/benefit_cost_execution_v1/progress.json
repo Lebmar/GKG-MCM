@@ -1,0 +1,1045 @@
+{
+  "completed_jobs": [
+    {
+      "job_id": "c101_inner1",
+      "stage": "inner",
+      "repeat_id": 1,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18648487500104238
+    },
+    {
+      "job_id": "c101_inner2",
+      "stage": "inner",
+      "repeat_id": 1,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18407312500130502
+    },
+    {
+      "job_id": "c101_inner3",
+      "stage": "inner",
+      "repeat_id": 1,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.1793445419971249
+    },
+    {
+      "job_id": "c101_inner4",
+      "stage": "inner",
+      "repeat_id": 1,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18589241699737613
+    },
+    {
+      "job_id": "c101_refit",
+      "stage": "refit",
+      "repeat_id": 1,
+      "training_n": 96,
+      "evaluation_n": 24,
+      "seconds": 0.2891723339998862
+    },
+    {
+      "job_id": "c102_inner1",
+      "stage": "inner",
+      "repeat_id": 1,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18605270799889695
+    },
+    {
+      "job_id": "c102_inner2",
+      "stage": "inner",
+      "repeat_id": 1,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18203666699992027
+    },
+    {
+      "job_id": "c102_inner3",
+      "stage": "inner",
+      "repeat_id": 1,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.2076324579975335
+    },
+    {
+      "job_id": "c102_inner4",
+      "stage": "inner",
+      "repeat_id": 1,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18025341700194986
+    },
+    {
+      "job_id": "c102_refit",
+      "stage": "refit",
+      "repeat_id": 1,
+      "training_n": 96,
+      "evaluation_n": 24,
+      "seconds": 0.28429487500034156
+    },
+    {
+      "job_id": "c103_inner1",
+      "stage": "inner",
+      "repeat_id": 1,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.181805041996995
+    },
+    {
+      "job_id": "c103_inner2",
+      "stage": "inner",
+      "repeat_id": 1,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18263583299994934
+    },
+    {
+      "job_id": "c103_inner3",
+      "stage": "inner",
+      "repeat_id": 1,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.014029917001607828
+    },
+    {
+      "job_id": "c103_inner4",
+      "stage": "inner",
+      "repeat_id": 1,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.19394666600055643
+    },
+    {
+      "job_id": "c103_refit",
+      "stage": "refit",
+      "repeat_id": 1,
+      "training_n": 96,
+      "evaluation_n": 24,
+      "seconds": 0.2890637919990695
+    },
+    {
+      "job_id": "c104_inner1",
+      "stage": "inner",
+      "repeat_id": 1,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.2017195830012497
+    },
+    {
+      "job_id": "c104_inner2",
+      "stage": "inner",
+      "repeat_id": 1,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.1899135829989973
+    },
+    {
+      "job_id": "c104_inner3",
+      "stage": "inner",
+      "repeat_id": 1,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18891862500095158
+    },
+    {
+      "job_id": "c104_inner4",
+      "stage": "inner",
+      "repeat_id": 1,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18976220900003682
+    },
+    {
+      "job_id": "c104_refit",
+      "stage": "refit",
+      "repeat_id": 1,
+      "training_n": 96,
+      "evaluation_n": 24,
+      "seconds": 0.2941553329983435
+    },
+    {
+      "job_id": "c105_inner1",
+      "stage": "inner",
+      "repeat_id": 1,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18741154099916457
+    },
+    {
+      "job_id": "c105_inner2",
+      "stage": "inner",
+      "repeat_id": 1,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.188734375002241
+    },
+    {
+      "job_id": "c105_inner3",
+      "stage": "inner",
+      "repeat_id": 1,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18533437500082073
+    },
+    {
+      "job_id": "c105_inner4",
+      "stage": "inner",
+      "repeat_id": 1,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18985991600129637
+    },
+    {
+      "job_id": "c105_refit",
+      "stage": "refit",
+      "repeat_id": 1,
+      "training_n": 96,
+      "evaluation_n": 24,
+      "seconds": 0.3002851669989468
+    },
+    {
+      "job_id": "c201_inner1",
+      "stage": "inner",
+      "repeat_id": 2,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18457170799956657
+    },
+    {
+      "job_id": "c201_inner2",
+      "stage": "inner",
+      "repeat_id": 2,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.1828657080004632
+    },
+    {
+      "job_id": "c201_inner3",
+      "stage": "inner",
+      "repeat_id": 2,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18565391700030887
+    },
+    {
+      "job_id": "c201_inner4",
+      "stage": "inner",
+      "repeat_id": 2,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.1843989579974732
+    },
+    {
+      "job_id": "c201_refit",
+      "stage": "refit",
+      "repeat_id": 2,
+      "training_n": 96,
+      "evaluation_n": 24,
+      "seconds": 0.289172624998173
+    },
+    {
+      "job_id": "c202_inner1",
+      "stage": "inner",
+      "repeat_id": 2,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.1866272499974002
+    },
+    {
+      "job_id": "c202_inner2",
+      "stage": "inner",
+      "repeat_id": 2,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18347608299882268
+    },
+    {
+      "job_id": "c202_inner3",
+      "stage": "inner",
+      "repeat_id": 2,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18590458399921772
+    },
+    {
+      "job_id": "c202_inner4",
+      "stage": "inner",
+      "repeat_id": 2,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18209870799910277
+    },
+    {
+      "job_id": "c202_refit",
+      "stage": "refit",
+      "repeat_id": 2,
+      "training_n": 96,
+      "evaluation_n": 24,
+      "seconds": 0.2895983329981391
+    },
+    {
+      "job_id": "c203_inner1",
+      "stage": "inner",
+      "repeat_id": 2,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18500683399906848
+    },
+    {
+      "job_id": "c203_inner2",
+      "stage": "inner",
+      "repeat_id": 2,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18468112499976996
+    },
+    {
+      "job_id": "c203_inner3",
+      "stage": "inner",
+      "repeat_id": 2,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.1845625000023574
+    },
+    {
+      "job_id": "c203_inner4",
+      "stage": "inner",
+      "repeat_id": 2,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18611187499845983
+    },
+    {
+      "job_id": "c203_refit",
+      "stage": "refit",
+      "repeat_id": 2,
+      "training_n": 96,
+      "evaluation_n": 24,
+      "seconds": 0.3350716669992835
+    },
+    {
+      "job_id": "c204_inner1",
+      "stage": "inner",
+      "repeat_id": 2,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18562616700000945
+    },
+    {
+      "job_id": "c204_inner2",
+      "stage": "inner",
+      "repeat_id": 2,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18148637500053155
+    },
+    {
+      "job_id": "c204_inner3",
+      "stage": "inner",
+      "repeat_id": 2,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18328520800059778
+    },
+    {
+      "job_id": "c204_inner4",
+      "stage": "inner",
+      "repeat_id": 2,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18629424999744515
+    },
+    {
+      "job_id": "c204_refit",
+      "stage": "refit",
+      "repeat_id": 2,
+      "training_n": 96,
+      "evaluation_n": 24,
+      "seconds": 0.2935774590005167
+    },
+    {
+      "job_id": "c205_inner1",
+      "stage": "inner",
+      "repeat_id": 2,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.1875579999978072
+    },
+    {
+      "job_id": "c205_inner2",
+      "stage": "inner",
+      "repeat_id": 2,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18334441700062598
+    },
+    {
+      "job_id": "c205_inner3",
+      "stage": "inner",
+      "repeat_id": 2,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18593187499936903
+    },
+    {
+      "job_id": "c205_inner4",
+      "stage": "inner",
+      "repeat_id": 2,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18326012499892386
+    },
+    {
+      "job_id": "c205_refit",
+      "stage": "refit",
+      "repeat_id": 2,
+      "training_n": 96,
+      "evaluation_n": 24,
+      "seconds": 0.2895607499995094
+    },
+    {
+      "job_id": "c301_inner1",
+      "stage": "inner",
+      "repeat_id": 3,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18508858299901476
+    },
+    {
+      "job_id": "c301_inner2",
+      "stage": "inner",
+      "repeat_id": 3,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18409316600082093
+    },
+    {
+      "job_id": "c301_inner3",
+      "stage": "inner",
+      "repeat_id": 3,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18631699999968987
+    },
+    {
+      "job_id": "c301_inner4",
+      "stage": "inner",
+      "repeat_id": 3,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18259141700036707
+    },
+    {
+      "job_id": "c301_refit",
+      "stage": "refit",
+      "repeat_id": 3,
+      "training_n": 96,
+      "evaluation_n": 24,
+      "seconds": 0.29769916700024623
+    },
+    {
+      "job_id": "c302_inner1",
+      "stage": "inner",
+      "repeat_id": 3,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18652599999768427
+    },
+    {
+      "job_id": "c302_inner2",
+      "stage": "inner",
+      "repeat_id": 3,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18662699999913457
+    },
+    {
+      "job_id": "c302_inner3",
+      "stage": "inner",
+      "repeat_id": 3,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.1851537090005877
+    },
+    {
+      "job_id": "c302_inner4",
+      "stage": "inner",
+      "repeat_id": 3,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18488849999994272
+    },
+    {
+      "job_id": "c302_refit",
+      "stage": "refit",
+      "repeat_id": 3,
+      "training_n": 96,
+      "evaluation_n": 24,
+      "seconds": 0.29808533300092677
+    },
+    {
+      "job_id": "c303_inner1",
+      "stage": "inner",
+      "repeat_id": 3,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.24158366700066836
+    },
+    {
+      "job_id": "c303_inner2",
+      "stage": "inner",
+      "repeat_id": 3,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.1904869169993617
+    },
+    {
+      "job_id": "c303_inner3",
+      "stage": "inner",
+      "repeat_id": 3,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.1857235000024957
+    },
+    {
+      "job_id": "c303_inner4",
+      "stage": "inner",
+      "repeat_id": 3,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18541362500036485
+    },
+    {
+      "job_id": "c303_refit",
+      "stage": "refit",
+      "repeat_id": 3,
+      "training_n": 96,
+      "evaluation_n": 24,
+      "seconds": 0.2977219580025121
+    },
+    {
+      "job_id": "c304_inner1",
+      "stage": "inner",
+      "repeat_id": 3,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18493687500085798
+    },
+    {
+      "job_id": "c304_inner2",
+      "stage": "inner",
+      "repeat_id": 3,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18693366600200534
+    },
+    {
+      "job_id": "c304_inner3",
+      "stage": "inner",
+      "repeat_id": 3,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18588212499889778
+    },
+    {
+      "job_id": "c304_inner4",
+      "stage": "inner",
+      "repeat_id": 3,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.186829124999349
+    },
+    {
+      "job_id": "c304_refit",
+      "stage": "refit",
+      "repeat_id": 3,
+      "training_n": 96,
+      "evaluation_n": 24,
+      "seconds": 0.29590545800238033
+    },
+    {
+      "job_id": "c305_inner1",
+      "stage": "inner",
+      "repeat_id": 3,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18564241700005368
+    },
+    {
+      "job_id": "c305_inner2",
+      "stage": "inner",
+      "repeat_id": 3,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18498595799974282
+    },
+    {
+      "job_id": "c305_inner3",
+      "stage": "inner",
+      "repeat_id": 3,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18534366699896054
+    },
+    {
+      "job_id": "c305_inner4",
+      "stage": "inner",
+      "repeat_id": 3,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.186959749997186
+    },
+    {
+      "job_id": "c305_refit",
+      "stage": "refit",
+      "repeat_id": 3,
+      "training_n": 96,
+      "evaluation_n": 24,
+      "seconds": 0.2887891669997771
+    },
+    {
+      "job_id": "c401_inner1",
+      "stage": "inner",
+      "repeat_id": 4,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18713520800156402
+    },
+    {
+      "job_id": "c401_inner2",
+      "stage": "inner",
+      "repeat_id": 4,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18406512499859673
+    },
+    {
+      "job_id": "c401_inner3",
+      "stage": "inner",
+      "repeat_id": 4,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18501062499854015
+    },
+    {
+      "job_id": "c401_inner4",
+      "stage": "inner",
+      "repeat_id": 4,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.1826599170017289
+    },
+    {
+      "job_id": "c401_refit",
+      "stage": "refit",
+      "repeat_id": 4,
+      "training_n": 96,
+      "evaluation_n": 24,
+      "seconds": 0.2894171660009306
+    },
+    {
+      "job_id": "c402_inner1",
+      "stage": "inner",
+      "repeat_id": 4,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18237583299924154
+    },
+    {
+      "job_id": "c402_inner2",
+      "stage": "inner",
+      "repeat_id": 4,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.1849458329998015
+    },
+    {
+      "job_id": "c402_inner3",
+      "stage": "inner",
+      "repeat_id": 4,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18508229200233473
+    },
+    {
+      "job_id": "c402_inner4",
+      "stage": "inner",
+      "repeat_id": 4,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18349250000028405
+    },
+    {
+      "job_id": "c402_refit",
+      "stage": "refit",
+      "repeat_id": 4,
+      "training_n": 96,
+      "evaluation_n": 24,
+      "seconds": 0.2890371249995951
+    },
+    {
+      "job_id": "c403_inner1",
+      "stage": "inner",
+      "repeat_id": 4,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.1848214999990887
+    },
+    {
+      "job_id": "c403_inner2",
+      "stage": "inner",
+      "repeat_id": 4,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18690720899758162
+    },
+    {
+      "job_id": "c403_inner3",
+      "stage": "inner",
+      "repeat_id": 4,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.1867506249982398
+    },
+    {
+      "job_id": "c403_inner4",
+      "stage": "inner",
+      "repeat_id": 4,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18547604200284695
+    },
+    {
+      "job_id": "c403_refit",
+      "stage": "refit",
+      "repeat_id": 4,
+      "training_n": 96,
+      "evaluation_n": 24,
+      "seconds": 0.2907593750023807
+    },
+    {
+      "job_id": "c404_inner1",
+      "stage": "inner",
+      "repeat_id": 4,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18453408300047158
+    },
+    {
+      "job_id": "c404_inner2",
+      "stage": "inner",
+      "repeat_id": 4,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18438466699808487
+    },
+    {
+      "job_id": "c404_inner3",
+      "stage": "inner",
+      "repeat_id": 4,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18435166599738295
+    },
+    {
+      "job_id": "c404_inner4",
+      "stage": "inner",
+      "repeat_id": 4,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18510900000183028
+    },
+    {
+      "job_id": "c404_refit",
+      "stage": "refit",
+      "repeat_id": 4,
+      "training_n": 96,
+      "evaluation_n": 24,
+      "seconds": 0.28849075000107405
+    },
+    {
+      "job_id": "c405_inner1",
+      "stage": "inner",
+      "repeat_id": 4,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18337045799853513
+    },
+    {
+      "job_id": "c405_inner2",
+      "stage": "inner",
+      "repeat_id": 4,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18326162499943166
+    },
+    {
+      "job_id": "c405_inner3",
+      "stage": "inner",
+      "repeat_id": 4,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18356412499997532
+    },
+    {
+      "job_id": "c405_inner4",
+      "stage": "inner",
+      "repeat_id": 4,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18585729199912748
+    },
+    {
+      "job_id": "c405_refit",
+      "stage": "refit",
+      "repeat_id": 4,
+      "training_n": 96,
+      "evaluation_n": 24,
+      "seconds": 0.29608570799973677
+    },
+    {
+      "job_id": "c501_inner1",
+      "stage": "inner",
+      "repeat_id": 5,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18561483300072723
+    },
+    {
+      "job_id": "c501_inner2",
+      "stage": "inner",
+      "repeat_id": 5,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.1851699170001666
+    },
+    {
+      "job_id": "c501_inner3",
+      "stage": "inner",
+      "repeat_id": 5,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.1845465830010653
+    },
+    {
+      "job_id": "c501_inner4",
+      "stage": "inner",
+      "repeat_id": 5,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18658508400039864
+    },
+    {
+      "job_id": "c501_refit",
+      "stage": "refit",
+      "repeat_id": 5,
+      "training_n": 96,
+      "evaluation_n": 24,
+      "seconds": 0.29372433300159173
+    },
+    {
+      "job_id": "c502_inner1",
+      "stage": "inner",
+      "repeat_id": 5,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18394916699980968
+    },
+    {
+      "job_id": "c502_inner2",
+      "stage": "inner",
+      "repeat_id": 5,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.185947459001909
+    },
+    {
+      "job_id": "c502_inner3",
+      "stage": "inner",
+      "repeat_id": 5,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.1846559170007822
+    },
+    {
+      "job_id": "c502_inner4",
+      "stage": "inner",
+      "repeat_id": 5,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18143641600181581
+    },
+    {
+      "job_id": "c502_refit",
+      "stage": "refit",
+      "repeat_id": 5,
+      "training_n": 96,
+      "evaluation_n": 24,
+      "seconds": 0.29629695900075603
+    },
+    {
+      "job_id": "c503_inner1",
+      "stage": "inner",
+      "repeat_id": 5,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.186986832999537
+    },
+    {
+      "job_id": "c503_inner2",
+      "stage": "inner",
+      "repeat_id": 5,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.1859322090022033
+    },
+    {
+      "job_id": "c503_inner3",
+      "stage": "inner",
+      "repeat_id": 5,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18379812500279513
+    },
+    {
+      "job_id": "c503_inner4",
+      "stage": "inner",
+      "repeat_id": 5,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18498487500255578
+    },
+    {
+      "job_id": "c503_refit",
+      "stage": "refit",
+      "repeat_id": 5,
+      "training_n": 96,
+      "evaluation_n": 24,
+      "seconds": 0.317470374997356
+    },
+    {
+      "job_id": "c504_inner1",
+      "stage": "inner",
+      "repeat_id": 5,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.1844236249999085
+    },
+    {
+      "job_id": "c504_inner2",
+      "stage": "inner",
+      "repeat_id": 5,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18492237500322517
+    },
+    {
+      "job_id": "c504_inner3",
+      "stage": "inner",
+      "repeat_id": 5,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.1813142909995804
+    },
+    {
+      "job_id": "c504_inner4",
+      "stage": "inner",
+      "repeat_id": 5,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.18386275000011665
+    },
+    {
+      "job_id": "c504_refit",
+      "stage": "refit",
+      "repeat_id": 5,
+      "training_n": 96,
+      "evaluation_n": 24,
+      "seconds": 0.30295750000004773
+    },
+    {
+      "job_id": "c505_inner1",
+      "stage": "inner",
+      "repeat_id": 5,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.1847473749985511
+    },
+    {
+      "job_id": "c505_inner2",
+      "stage": "inner",
+      "repeat_id": 5,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.1847076250014652
+    },
+    {
+      "job_id": "c505_inner3",
+      "stage": "inner",
+      "repeat_id": 5,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.21377566600131104
+    },
+    {
+      "job_id": "c505_inner4",
+      "stage": "inner",
+      "repeat_id": 5,
+      "training_n": 72,
+      "evaluation_n": 24,
+      "seconds": 0.014279375001933658
+    },
+    {
+      "job_id": "c505_refit",
+      "stage": "refit",
+      "repeat_id": 5,
+      "training_n": 96,
+      "evaluation_n": 24,
+      "seconds": 0.2925104169989936
+    },
+    {
+      "job_id": "c0_inner1",
+      "stage": "inner",
+      "repeat_id": 0,
+      "training_n": 90,
+      "evaluation_n": 30,
+      "seconds": 0.25577845799853094
+    },
+    {
+      "job_id": "c0_inner2",
+      "stage": "inner",
+      "repeat_id": 0,
+      "training_n": 90,
+      "evaluation_n": 30,
+      "seconds": 0.25562662499942235
+    },
+    {
+      "job_id": "c0_inner3",
+      "stage": "inner",
+      "repeat_id": 0,
+      "training_n": 90,
+      "evaluation_n": 30,
+      "seconds": 0.2555529170022055
+    },
+    {
+      "job_id": "c0_inner4",
+      "stage": "inner",
+      "repeat_id": 0,
+      "training_n": 90,
+      "evaluation_n": 30,
+      "seconds": 0.25463445800050977
+    },
+    {
+      "job_id": "c0_refit",
+      "stage": "refit",
+      "repeat_id": 0,
+      "training_n": 120,
+      "evaluation_n": 120,
+      "seconds": 0.427320624999993
+    }
+  ],
+  "final_scenarios_loaded": false
+}

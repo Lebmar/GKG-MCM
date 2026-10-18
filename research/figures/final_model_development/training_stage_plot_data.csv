@@ -1,0 +1,4 @@
+method,training_n,training_k,training_cap,B_training_k,service_status,detail
+One-year positive net gate,120,31.0,9,9,execution_review,Completed failed simplification; unchanged
+Local alpha rollout,120,25.0,9,9,execution_review,Completed failed simplification; unchanged
+Retained global learner,120,9.0,9,9,execution_review,Old chosen controller + additional same-U guard

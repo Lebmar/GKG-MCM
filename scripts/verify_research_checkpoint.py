@@ -33,6 +33,7 @@ HASH_KEYS = {
     "outputs_sha256_before", "outputs_sha256_after",
     "copied_files_sha256_before", "copied_files_sha256_after", "wrapper_test_sources_sha256",
     "original_archive_sha256_start", "original_archive_sha256_end",
+    "wrapper_engine_source_sha256", "wrapper_engine_source_sha256_at_end",
     "outputs", "outputs_sha256", "output_artifact_sha256", "output_file_sha256_after_write",
 }
 PAIRS = [
@@ -57,6 +58,7 @@ PAIRS = [
     ("outputs_sha256_before", "outputs_sha256_after"),
     ("copied_files_sha256_before", "copied_files_sha256_after"),
     ("original_archive_sha256_start", "original_archive_sha256_end"),
+    ("wrapper_engine_source_sha256", "wrapper_engine_source_sha256_at_end"),
 ]
 
 
@@ -97,6 +99,13 @@ def main():
                           ROOT / "docs/simple_execution_audit_plan.json",
                           ROOT / "docs/simple_execution_diagnostic_judgment.json",
                           ROOT / "docs/simple_execution_independent_judgment.json",
+                          *sorted((ROOT / 'docs').glob('benefit_cost_*.json')),
+                          *sorted((ROOT / 'docs').glob('constrained_*.json')),
+                          *sorted((ROOT / 'docs').glob('global_policy_*.json')),
+                          ROOT / 'docs/main_model_registry.json',
+                          ROOT / 'docs/final_model_convergence_judgment.json',
+                          ROOT / 'research/figures/final_model_development/notebook_execution.json',
+                          ROOT / 'research/figures/final_model_development/html_static_validation.json',
                           ROOT / "results/model_review/incremental_admission_risk_v1/repeatability_receipt.json",
                           ROOT / "docs/service_refinement_readiness_review.json",
                           ROOT / "docs/liquidity_policy_refinement_review.json",
@@ -165,7 +174,8 @@ def main():
     reading_copy_sha = sha(ROOT / "notebooks/risk_menu_development.html")
     additional_notebooks = []
     for companion in [ROOT / "notebooks/admission_stability_forecasts.ipynb",
-                      ROOT / "notebooks/simple_execution_diagnostic.ipynb"]:
+                      ROOT / "notebooks/simple_execution_diagnostic.ipynb",
+                      ROOT / "notebooks/final_model_development.ipynb"]:
         if not companion.exists():
             continue
         saved = nbformat.read(companion, as_version=4)
@@ -173,6 +183,11 @@ def main():
         assert companion_code and all(cell.execution_count is not None for cell in companion_code)
         assert not any(output.output_type == "error" for cell in companion_code for output in cell.outputs)
         reading_copy = companion.with_suffix(".html")
+        if companion.name=='final_model_development.ipynb':
+            execution=json.loads((ROOT/'research/figures/final_model_development/notebook_execution.json').read_text())
+            assert execution['notebook_sha256']==sha(companion)
+            assert execution['html_sha256']==sha(reading_copy)
+            assert execution['figure_manifest_sha256']==sha(ROOT/'research/figures/final_model_development/manifest.json')
         additional_notebooks.append({"path": str(companion.relative_to(ROOT)),
             "executed_code_cells": len(companion_code), "sha256": sha(companion),
             "reading_copy_path": str(reading_copy.relative_to(ROOT)), "reading_copy_sha256": sha(reading_copy)})

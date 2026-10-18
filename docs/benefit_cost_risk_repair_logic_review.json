@@ -1,0 +1,52 @@
+{
+  "version": "benefit-cost-risk-repair-independent-logic-v1",
+  "written_utc": "2026-10-18T08:29:31.690821+00:00",
+  "status": "Logical recommendation after parent reported complete all-Review run; numerical judgment remains provisional pending independent audit and complete summary",
+  "read_boundary": {
+    "new_result_files_read": false,
+    "partial_results_read": false,
+    "new_market_data_read": false,
+    "final_scenarios_121_180_read": false,
+    "parent_report_only": "Parent reports completed130tasks, both frozen architectures allReview from empty inner U, and full120 primary positive initial economic estimate but complete training risk31/120 versus B9. These numbers are not independently reverified in this logic document."
+  },
+  "judgment": {
+    "old_frozen_model": "Preserve it and its failure evidence exactly. AllReview is the honest result of that complete service algorithm. It is not evidence of a useful deployed C investment controller and should not be relabelled as such.",
+    "is_short_growth_gate_too_strong": "It is stronger than the contest qualitative cost-benefit requirement. It forbids a trade with negative one-year net expected log growth even if the trade is needed, within the available actions/model, to restore an explicitly adopted risk-service constraint. This exclusion is a defensible growth-only design choice, but not a condition forced by the problem.",
+    "not_the_only_cause": "The empirical calendar law, fixed target, pending convention, limited two-action set and strict complete/inner evidence requirements may also limit feasibility. AllReview alone does not establish which single design change will succeed. Parent reported primary and remaining-H both fail; changing the benefit horizon alone is therefore not an established remedy.",
+    "recommend_next": "If convergence means choosing an explainable C execution strategy that can actually be admitted, make exactly one separately frozen constrained risk-repair controller, then stop expanding this local design family. Do not select a favorable old price, alter alpha, replace the frozen main with its sensitivity, or silently fill Review returns."
+  },
+  "why_risk_repair_needs_no_eta": {
+    "constrained_objective": "A chance constraint is a noncompensatory feasibility requirement, not a fixed currency/log-growth price. First restrict actions to those satisfying the declared model-relative risk cap; then maximize net expected log growth among them. No eta is needed to convert a probability change into money.",
+    "necessary_in_restricted_set": "If hold violates the modeled cap and paid restoration satisfies it, restoration is the unique feasible action among these two modeled alternatives. It can be selected even when its net growth Q difference is negative; the purpose is risk-service repair, not a positive expected cash/log return claim.",
+    "cost_justification": "Use risk feasibility as the explicitly stated benefit for this branch. Current and future fees already reduce its net-growth value, and max-net-growth among feasible actions prevents ignoring costs within that admissible set. This is a constrained interpretation of benefit justifies cost, not a quantified claim that risk reduction in probability points is numerically larger than a fee in currency.",
+    "limits": "This interpretation is not the problem unique mandated utility. The risk cap remains a normative service choice, the two-action continuation is restricted, and a model-relative repair need not repair true or realized risk. It does not prove every such trade is globally necessary, customer-preferred or economically optimal."
+  },
+  "one_minimal_candidate_only": {
+    "name": "fixed_cap_feasibility_first_B_rollout",
+    "components": "Reuse the same fixed-context Q1 target and full original state. At active post-inception year t, compute exactly two empirical same-calendar full-original-H action values from this state: hold now then B; paid restore now then B. B restores the approved target in later years before its own branch first breach and holds afterward. Carry actual CPI/peak/past MDD/originalH and existing pending convention.",
+    "net_growth_values": "Qg_hold,Qg_restore are expected full-H terminal log wealth values including current and every later branch fee. Their paired difference is already NET. Do not subtract current fee again. Report the exact current executor fee separately for transparency.",
+    "risk_values": "Use integer terminal full-history everbreach counts k_hold,k_restore from those same branch trajectories on identical N own-training suffixes. The local cap is K=floor(.10*N+existing_tol), not a new price, confidence bound or searched fraction.",
+    "nonempty_rule": "Let A={a in{hold,restore}:k_a<=K}. If nonempty, choose maximal netQg within A using one predeclared exact/numerical-tie convention ending in hold. If both actions qualify, a lower-risk action is not automatically preferred over higher-growth action; this differs from the old global risk-first price.",
+    "empty_rule": "If neither action qualifies, flag local_model_infeasible. Choose smallest k, then largest netQg within that risk-count tie, then hold. This is a fully specified best-effort action for complete path evaluation, not an assertion that the risk cap was repaired or an annual-B rescue. Do not manufacture local feasibility by loosening K.",
+    "inception": "Preserve Q1 approved initial allocation as mandatory with one exact fee and no all-bill risk-direction veto. Do not retain the failed short-horizon positivity filter as an undisclosed initial eligibility requirement; evaluate the Q1/full-H paid policy and complete training risk instead. This changed inception contract must be explicit in the new protocol.",
+    "pending": "Already breached actual accounts hold permanently as before, with no new human-response assumption. Do not reset alpha, peak, past risk or original horizon.",
+    "deployment": "It is one fixed controller, not a horizon/guard/price family. Require the same complete training k<=min(kB,floor(.10n)) and positive own-U inner absolute+B-relative gates; final own refit must pass. Q1Review/outsideBalanced retain priority. No economic or annual-B fallback.",
+    "same_resources": "Use the same frozen repeated contexts/Q1 cache and own full120 context, no added seeds, no new market evidence and no reading121–180. Keep old failed positive-net architectures as archived comparators, not renamed candidate variants."
+  },
+  "essential_cautions_for_this_candidate": [
+    "The local cap is applied to the complete remaining original-H event with actual inherited history, not an annual loss event. Nevertheless repeatedly imposing a statewise10% cap does not propagate a dynamically valid conditional risk budget or prove the original unconditional chance constraint. Present it as a constrained rollout heuristic and retain complete-policy evaluation.",
+    "The empirical same-calendar suffix law is not established as the true state-conditional law. A theoretical exact-conditional rollout improvement result cannot be imported.",
+    "The empty-action-set branch must remain visible and its frequency/reasons reported. A min-risk fallback can remain above the modeled cap; it is not safe simply because it was the least bad available action.",
+    "Different netQg branches may pay different future fees and trigger different pending times. Removing the current fee can change those continuations, so no simple additional cost offset may be imposed on their already-paid values.",
+    "A negative netQg restoration can be called risk repair only when its selected reason and branch risk evidence actually support that description. Neither a negative-growth action selected from an empty feasible set nor an equal-risk growth loss may be called guaranteed necessary repair.",
+    "This controller is new development designed after observed failures. Successful reused-development evidence, if any, would not become fresh confirmatory validation."
+  ],
+  "convergence_decision": {
+    "now": "Freeze the completed allReview result as a failure of that design and keep its primary identity. Do not market it as the final investable C controller.",
+    "one_more_step": "Given the task explicitly requires an economic and risk-aware executable policy, the one constrained repair candidate is a justified focused final refinement rather than parameter fishing, provided its rule and no-expansion stop are fixed before its outcomes.",
+    "if_repair_passes": "Adopt the prospectively designated repair architecture only under its predeclared training/inner/final gates; show observed risk/coverage tradeoffs and remaining forecast limitations, not a universal superiority claim.",
+    "if_repair_also_fails": "Conclude the current supported data, target/action class and declared evidence rules do not justify an automatic C service. Deliver an explicit Review/human-service limitation and the complete failure diagnosis. Do not endlessly add candidate prices or relax conditions to force deployment.",
+    "criteria_not_to_move": "Alpha, questionnaireH/L, fee model, target-cache identity, repeated contexts, original denominators and the distinction between financial outcomes and unservedReview remain fixed."
+  },
+  "prior_logic_plan_sha256": "2c72a5e86348f2394485a7438d96260df2489175a06c023c719a3952bcf0d9c3"
+}

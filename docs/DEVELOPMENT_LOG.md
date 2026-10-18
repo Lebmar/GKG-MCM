@@ -350,3 +350,102 @@ saved snapshots/755 distinct files, and the phase Git-index proof binds93
 source/input/output files exactly. One whitespace-only blank line in the
 reproduction test is retained because its bytes are already bound by the
 successful replay receipt; it is the sole staged diff-check exception.
+
+
+## 2026-10-18 — Benefit-cost estimates and main-framework admission convergence
+
+The user requested that transaction benefits/costs be made explicit and the
+main model/admission rule converge before paper writing. All new financial
+work uses development scenarios1–120 only. Original joint-liquidity Q1 caches
+are reused after exact context/target/local-original-candidate verification;
+no static menu is refitted in this phase. The original full120 static context
+has outer_test_ids=[], while its separate dynamic descriptive evaluation has
+120 training IDs. A local validation wrapper preserves this distinction.
+
+First, a prospectively frozen one-year positive-net-growth controller and
+remaining-original-H sensitivity compare one trade then hold with hold. Gross
+paired log advantage minus exact current log fee equals the direct paid net
+ratio. Both apply a common full-H buy-and-hold risk-direction veto; deployment
+requires positive initial economics, then mandatory initial execution. They
+complete130 tasks but both reject all26 final fits: full120 training has31
+events versus the same-target B cap9. Independent audit checks2,775,963
+identities, all20160 training rows and260 fixed complete-policy witness slots;
+256 witnesses replay and4 Q1/outside slots remain unavailable without replacement.
+All3912 saved reference accounts replay; no learner has been admitted, so an
+empty learner forecast subset is not relabelled as safety evidence.
+
+The overly narrow financial-growth interpretation would prohibit some
+risk-reducing restorations. One additional controller is frozen prospectively:
+full-H current-action-then-B netQ; local alpha=.1 feasible actions maximize
+netQg, with an explicit min-event-count/net-growth/hold least-violation rule
+when both are infeasible. No price grid, alpha change or new architecture is
+selected after that experiment. All130 tasks complete; full120 events improve
+to25 but remain above9, and all26 fits stayReview. Independent audit checks
+1,925,729 identities,10080 training rows,130 summaries,26 gates and3912 complete
+reference accounts. Its272 planned learner Q slots are unavailable, not
+substituted. A frozen experimental U40 initial diagnostic label clips one
+character from its41-character literal; actions, fees and Qs are unaffected,
+and the independent audit records it without changing frozen source.
+
+These failures reject the two simplifications, not every feasible policy.
+A public subsequent-development judgment retains the pre-existing
+joint_tie_set_refit_learner mathematical framework. Within each beta it
+maximizes complete-training G over feasible9 controllers; beta selection first
+maximizes inner automatic coverage then conditional growth, with unchanged
+top-E/refit feasibility. Eta is a technical finite-controller index, not an
+elicited risk preference, uniquely identified structural parameter or KKT
+multiplier. Finite scores Delta_netQg-H*eta*Delta_model_probability already
+contain current and future branch fees; no extra fee is subtracted. Negative
+or tied net-growth restorations must strictly reduce predicted event count;
+risk_first has a separate integer lexicographic check. Growth sacrifices are
+model opportunity costs, not realized losses or summable overlapping Q gaps.
+
+A separately frozen final postfit guard makes no new fit, price/target/beta
+choice or rejected-fit rescue. Only an old already-automated fit's exact final
+beta original inner predictions define U; require positiveU, k<=floor(.1U),
+and k<=same-U B with matching job/target/IDs. The26 fits retain13 old refusals,
+add9 refusals and retain4 automated OOF fits. Full120 training has9 events,
+but the selected-beta inner procedure has10/120 versus B8/120: absolute cap12
+passes, comparative guard fails, so current C is executionReview with NULL
+financial outputs. This two-event difference is not declared statistically
+significant; the relative guard is an explicit conservative norm stricter
+than the problem requires, not an inferred law or true-risk certificate.
+
+The five dependent repeated OOF populations admit0,24,0,24,48 records with
+NULL,5,NULL,1,3 events; same-outer-A B counts areNULL,4,NULL,0,2. One admitted
+cohort has5/24=20.83%. Every nonempty same-A comparison has higher growth and
+lower fees but higher meanMDD and more events.96 admitted scenario-repeat
+records involve74 original market IDs.678 optional restorations comprise376
+net-growth improvements and302 risk reductions with strict predicted growth
+cost. All408 old selected accounts/12240 decisions remain separately labelled
+archived development evidence; rejected financial results never fill new
+service outcomes. The independent overlay audit checks605004 identities and
+all26/2160/12240 records, maximum numeric difference2.22e-16, with parent
+manifest and source/input/artifact hashes bound.
+
+Two isolated source/input-copy numerical replays match12 saved artifacts each;
+the final saved-data postprocess replay matches5 artifacts byteexact and its
+manifest exactly without copying or reading a raw market CSV. These are
+reproduction, not new market validation or fresh Git clones.725 tests pass in
+156.254s. Research source/report/output remain unchanged from7bca10b.
+
+The final research companion executes11/11 code cells withzero errors and
+exports10 tables/3 embedded plots. Root actually inspects all three PNGs,
+requests legend/title and NULL-label layout fixes, then reinspects/confirms.
+The whole HTML browser view remains unverified; standard MathJax/require.js
+CDN rendering is not claimed fully offline. An early checkpoint correctly
+blocks an unexecuted companion; the notebook is completed before rerunning
+the check, rather than weakening that guard.
+
+The conclusion is convergence of estimands, mathematical framework and
+admission rules, not proof of a successful autonomous C investment service.
+Current C remainsReview. Forecast calibration and service stability remain
+material limits; no paper rewrite, final121–180 reopening, CMT upload or
+regenerated submission ZIP is performed in this phase.
+
+Final checkpoint passes143 saved snapshots and877 distinct hashed files; the
+phase Git-index proof binds172 frozen source/input/output/package-helper files.
+Its sole new Git-style exceptions are446 Matplotlib SVG path line-end spaces
+across three frozen figures. The builder strips EOF whitespace only; the
+already-hashed figures and executed notebook are preserved, with a separately
+fingerprinted explanatory note. All non-SVG staged files pass diff checks.

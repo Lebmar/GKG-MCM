@@ -1,0 +1,36 @@
+{
+  "status": "passed_static_checks",
+  "completed_utc": "2026-10-18T09:36:04.998290+00:00",
+  "notebook_sha256": "328c95b278446d4f3f4ad8d9115a42124d72221f5f6ef524b81881b4d34454e3",
+  "html_sha256": "cbe83db8dfc9c7a61caa270a65302df4369dad3ae2e3f0718b70d8d9ab4dcdff",
+  "builder_sha256": "230bb57591681e200b3c9df2c54283cd413c926ef264d6448b7bea59841f2734",
+  "figure_manifest_sha256": "405caf326573c7bcd33a853da5378b24f977aba50eed38609700c78fcfa6b8df",
+  "execution_receipt_sha256": "25b74da10065f6cb36482fe576ddbd4fefb5b8a6104b5f6cce197f0f0db7fc3a",
+  "code_cells": 11,
+  "sequential_execution_counts": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "error_outputs": 0,
+  "html_tables": 10,
+  "html_images": 3,
+  "embedded_base64_image_count": 3,
+  "current_figure_output_hashes_verified": true,
+  "critical_scope_risk_and_source_SHA_table_text_present": true,
+  "source_attribution_scope": "HKUST(GZ), original scenarios1-120, CC BY-NC-SA4.0, Team87 visible in all3 parent-reviewed figure PNGs",
+  "html_external_script_urls": [
+    "https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js",
+    "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS_CHTML-full,Safe"
+  ],
+  "html_browser_preview_passed": false,
+  "limitation": "Whole-page HTML visual/browser rendering not checked; external MathJax/require.js references retained by nbconvert. No raw market parsing, new fit, or policy choice."
+}
