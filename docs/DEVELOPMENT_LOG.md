@@ -212,3 +212,70 @@ receipts, own-horizon P10/volatility/tail metrics, paired financial comparisons
 and visually checked attributed figures. The updated executed notebook is a
 research explanation. No new final scenarios, final-policy approval, submission
 paper, CMT upload or modifications to V1 source/report/output were produced.
+
+
+## 2026-10-18 — New-admission risk, repeated complete fits and forecast assumptions
+
+The three follow-ups were specified separately before their numerical access.
+The incremental study reads only locked old traces and keeps all24 added market
+IDs under the old second outer fit's40/25/35 target. Relative to same-target
+annual/pending B, all24 have higher MDD,18 higher G and22 lower fees; events
+are3 versus1. Mean MDD is27.97% versus24.92% and empirical fractional-tail
+CVaR90 is47.69% versus43.51%. Primary-only events35/112 have matching
+crossing-year end weights but different wealth and whole-history peaks. All72
+three-arm histories reconcile; no peak reset or skipped initial fee was found.
+The identity relating wealth/peak ratios to current drawdown is bookkeeping,
+not a causal attribution or a cash-weight repair claim. The archive passes
+20,172 consistency checks and a byte-exact read-only rerun.
+
+The stability study completes all125 jobs in five fixed repeats,25 outer fits,
+with unchanged joint Q1, both selectors and the original9-price family. Outer
+training n96 and dynamic-inner n72 never vary. Primary automatic counts are
+0,48,120,72,48 of the same original120 per repeat; eventsNULL,8,12,7,3.
+Canonical counts are0,24,48,48,48. All25 final C labels areBalanced. Primary
+admits12 fits, rejects7 at inner eligibility and6 at final top-E feasibility;
+canonical admits7. Common168 scenario-repeat financial records are exact;
+added120 records have14 events and reuse92 original market IDs. Initial
+admission A(S,C) precedes evaluation returns and applies uniformly to each
+fit's24 held-out paths. No look-ahead path screening,600 independent samples,
+customer-population coverage, binomial fit confidence interval or best-seed
+selection is inferred. Of12 primary admitted fits,8 have zero selected-training
+event slack and4 have one event. This is in-sample integer feasibility only.
+
+The independent stability audit passes1,801,082 checks and independently
+replays1656 actual plus2208 inner saved accounts,115920 annual decisions and
+316 active prespecified Q states. A further17 Q points are pending skips.
+The 2624 actual raw-menu static fits provide2,256,640 joint candidate/profile
+mask cells; c505_inner4 has no selected gamma and therefore no unsupported
+final raw menu. All125 jobs are complete. The audit does not rerun global menu
+search or unrecorded nine-price training state trees, and no new full isolated
+numeric replay is claimed. Read-only summaries reconcile3095 saved cells;
+all five new plots were rendered and actually viewed.
+
+The fixed lag-state ridge comparator uses train-only calendar centering,
+96x29 residual channel scales and penalty1 without a search. Original-path
+averaged standardized MSE falls0.938926% for the next-year three-real-asset
+vector and0.109113% for remaining-period averages. Inflation is separate.
+The independent augmented-least-squares audit passes423182 checks. Equal-fold
+OOF mean-bias cancellation and finite empirical interval coverage are not
+conditional calibration evidence. This mean predictor supplies neither joint
+suffix distributions nor verified action/tail probabilities and was not
+inserted into trading. Independent claim review corrected a scale-description
+error before the focused notebook was executed.
+
+The new companion notebooks/admission_stability_forecasts.ipynb executes all
+five code cells successfully; its HTML embeds the inspected plots. The old
+notebook and V1 source/report/output remain unchanged. The in-app browser's
+local-file security restriction prevents a rendered HTML browser check; no
+workaround was attempted. Actual PNG inspection and execution are the verified
+scope.540 tests pass. Current judgments retain the learned controllers as
+research comparators. A separately reviewed simplification diagnostic is being
+designed after these results; it is not an already approved final Q2 strategy.
+No new final evaluation, submission paper, final-policy approval or CMT upload
+was produced.
+
+The phase Git-index receipt confirms168 exact source/input/output files. This
+is not a fresh-clone or full numerical replay. Seven frozen forecast CSVs
+retain their original CRLF endings; staged diff-check notices are limited to
+those line endings, with no trailing spaces/tabs or source/Markdown/SVG issue.
+The checkpoint checks94 saved snapshots and698 distinct hashed files.
