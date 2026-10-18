@@ -1,0 +1,112 @@
+{
+  "version": "benefit-cost-final-design-independent-review-v1",
+  "written_utc": "2026-10-18T08:14:13.179894+00:00",
+  "status": "Prospective design recommendation only; no new numerical experiment or final policy approval",
+  "scope": "A minimal, implementable benefit-cost execution family for current client C (original H=30,L=.40), preserving existing initial/pending/fee accounting and fixed development partitions. No frozen source or artifact is modified.",
+  "evidence_scope": {
+    "new_market_data_loaded": false,
+    "final_scenarios_121_180_read": false,
+    "new_market_fits_or_simulations_run": false,
+    "basis": "Read-only review of existing mathematical, forecast and diagnostic judgments plus execution source; algebra below is our own. Prior development results inform this design, so a later run is additional development, not fresh confirmation."
+  },
+  "concrete_recommendation": {
+    "primary": "Prespecify one_year_net_growth_with_full_H_risk_veto as the primary complete controller before any new outer outcomes are read.",
+    "sensitivity": "Prespecify remaining_H_trade_once_hold_net_growth_with_full_H_risk_veto as one separately reported sensitivity architecture. It does not become a fallback if the primary is rejected.",
+    "candidate_count": 2,
+    "selection": "No eta, beta, margin, confidence level, seed search, drift band or architecture choice from outer outcomes. Each fixed architecture has one controller; training feasibility is an admission test, not a search over a price family.",
+    "why_primary": "The implemented decision persists until the next annual review. Its one-year trade-versus-hold wealth contrast therefore matches exactly the interval during which this action is committed, needs no invented future trading continuation and has an exact current-cost decomposition. The full-H objective and risk are still evaluated on the complete executed policy. This choice is methodological rather than a prediction of which backtest will win.",
+    "primary_limit": "One-year gating is myopic: it ignores the value of changing next year holdings and can reject a trade whose cost is recovered over several years. Mandatory inception removes only the first-purchase version of that problem, not subsequent restoration myopia.",
+    "why_sensitivity": "Remaining-original-H buy-and-hold lookahead exposes fee amortization using the same supplied joint paths and original client horizon; it introduces no chosen intermediate k-year window. Its continuation is intentionally different from annual replanning, so it is a receding-horizon surrogate, not the predicted value of the implemented adaptive policy.",
+    "if_parent_prefers_long_horizon": "A remaining-H primary can instead be justified prospectively by fee-amortization priority, but the primary must be fixed in the protocol before new outer results. This review recommends the one-year primary and does not authorize choosing whichever later passes."
+  },
+  "precise_estimands": {
+    "decision_state": "Before return year t (one-based), actual nominal holdings x>=(0,0,0), V=sum(x)>0, u=x/V, actual CPI, real peak, running original-path MDD and absorbing breach b contain only observations through t-1. The approved target w is fixed by this job own Q1 cache, not by a parent/outer target.",
+    "current_execution": "Call execute_target(x,w,c) exactly once to obtain z=(V-C)w, exact nonnegative fee C, and moved wealth; rho=C/V. Reuse these same z,C for economic estimation, risk branches and actual execution if chosen. No fee recomputation from a drift proxy.",
+    "gross_forecast": "For each original training path j, retain its simultaneous three-asset gross returns g[j,s,a]=1+r[j,s,a]. One-year q[j,a]=g[j,t,a]; remaining-H q[j,a]=product from s=t through original H of g[j,s,a]. Use equal weight on original training paths, never pool or shuffle different assets or calendar years.",
+    "gross_benefit": "Bhat_t=(1/n)*sum_j log((w dot q[j])/(u dot q[j])). This is expected gross paired log-growth improvement under the declared empirical calendar law, not mean arithmetic profit and not a realized trading success probability.",
+    "log_cost": "chat_t=-log1p(-rho)>=0, a deterministic current execution cost in the same log-wealth units.",
+    "net_benefit": "Deltahat_t=Bhat_t-chat_t=(1/n)*sum_j log((z dot q[j])/(x dot q[j])). These two forms must agree numerically. The direct z/x ratio already includes the fee; subtracting chat again is forbidden.",
+    "growth_gate": "At an active post-inception decision, restore only if Deltahat_t>1e-12. This numerical tolerance is the existing numerical convention, not a risk preference, economic margin or statistical confidence bound.",
+    "fee_once": "The remaining-H forecast restores once now and holds each branch forever afterward through original H; its branch forecast has no later transfer fees. Actual later trades, if any, are charged when the causal controller subsequently chooses them.",
+    "inflation": "The same forecast cumulative inflation cancels in each paired terminal log-growth ratio. It remains indispensable for forecast and actual real-wealth MDD and inherited peak accounting.",
+    "annualization": "Do not compare gross total-log benefit to an annualized fee or divide only one side by remaining years. Dividing both benefit and log cost by the same positive horizon preserves the gate; the optimization/reporting G remains total original-H real log growth divided by original H=30."
+  },
+  "risk_direction_veto": {
+    "recommendation": "Use the same full-original-H trade-once-then-hold risk-direction veto for both architectures. It adds no numerical growth-risk exchange price, but it is still an explicit qualitative design choice, not an elicited preference or free safety theorem.",
+    "construction": "For the same current actual state and the same full training suffix j,t:H, compare hold x forever and restore z now then hold forever. Starting from actual CPI/real peak/running MDD/b, advance every annual endpoint using each suffix ordered joint returns and inflation. No branch resets wealth to100, peak, past MDD, horizon or loss budget. Current execution fee is included only in z, once. Keep the existing annual-endpoint risk measurement convention.",
+    "event": "Let bad[a,j] be the resulting original-history everbreach indicator, using the existing event MDD-L>1e-12. Compute integer k_hold=sum_j bad[hold,j] and k_restore=sum_j bad[restore,j].",
+    "gate": "At active post-inception decisions, allow an optional restore only when k_restore<=k_hold AND the selected benefit-horizon Deltahat>1e-12. Integer count comparison has no additional tolerance. Both predicates must be true; lower predicted risk does not override negative estimated net growth. Inception instead uses the separate deployment-level economic test and the mandatory action contract.",
+    "when_rejected": "Hold current actual assets for this decision. A growth-positive but vetoed action and a risk-reducing but growth-negative action remain holds. Evaluate the resulting full controller; if its complete-policy risk evidence fails, its admission is Review. Do not silently restore annually or use an infinite risk price to rescue feasibility.",
+    "why_original_H": "One-year risk direction alone could ignore later crossing induced by current drift/restoration. The guard compares the original client risk event, even when the economic benefit uses one year. It does not grant a new10% allowance every year.",
+    "limits": "This is an empirical unconditional calendar-fan direction screen, not a conditional law, risk-budget recursion, bound on true risk, guarantee of nonincreasing realized risk, or a guarantee relative to annual B. Equal bad counts can hide worse severity; continue reporting MDD, excess, tail and recovery diagnostics. Repeated adaptive use does not inherit a rollout improvement theorem.",
+    "complexity": "Both controllers share the same two buy-and-hold branch suffix trajectories at a state. One-year versus remaining-H changes only the terminal growth endpoint, not the risk guard or another search family."
+  },
+  "initial_pending_and_client_contract": {
+    "inception": "Separate deployment eligibility from the action after deployment. Before predicting any held-out path, this job prices the target from the common initial x=(0,0,100),V100,CPI1,real peak100,prior MDD0 using only its own training calendar law and its architecture economic horizon. Require initial Deltahat>1e-12 for deployment; otherwise this job is Review. If eligible and later complete-policy admission passes, t=1 executes the approved target mandatorily and charges its exact fee. The initial action is not subject to the full-H risk-direction veto against all bills.",
+    "active": "At later t, choose only hold or restore to the same approved target; do not update the target or add another forecast-model fit inside a path.",
+    "pending": "If an actual original-path exceedance has already occurred, future actions hold existing positions under the frozen no-response pending convention. Returns and inflation continue, historical risk and horizon are preserved, and no artificial human resolution is assumed.",
+    "review": "A pre-execution Q1 or whole-policy admission Review has no automatically implemented strategy returns. Preserve its availability/status and NULL financial outputs rather than fill annual B or all-bill outcomes. Post-breach pending on an already auto-admitted path is different and remains fully accounted.",
+    "normative": "G=expected annualized log real wealth is a stated modeling objective; alpha=.10 is a normative service benchmark. Neither is questionnaire-estimated, and no eta is described as customer risk preference.",
+    "scope": "The current execution experiment concerns C at H30/L.40 and its supported Balanced target. It does not approve all client horizons or justify bypassing liquidity-floor Q1 rules.",
+    "initial_risk_exception": "Q1 establishes the approved initial risk-bearing allocation, and the whole-controller training cap plus same-U inner gate assess original-H risk. Applying a nonworsening risk veto against all bills would impose an additional riskless-baseline suitability constraint that can mechanically prevent the intended initial risk allocation. Later risk-direction veto is an explicit conservative rule for restoring an already approved allocation, not a theorem that initial and later actions are equivalent.",
+    "initial_report": "Record deployment-level initial gross benefit, exact log cost, net benefit and initial_eligibility separately. The actual action reason is mandatory_initial_restore_after_economic_eligibility. Do not say its risk-direction veto passed, or that mandatory means economic eligibility was skipped. This initial eligibility is fit-level and common to all future held-out paths, so it must not depend on their future rows."
+  },
+  "forecast_assumptions_and_old_method_distinctions": {
+    "calendar_law": "Evaluate each active state against only this job training paths same calendar t or t:H suffixes. All original path weights remain1/n. Do not use the current held-out actual future, parent target, outer target, or a new random forecast fan.",
+    "conditioning_limit": "Actual holdings/peak reflect past observed information, but the training suffix distribution is not conditioned on that state. Earlier diagnostic lag effects and near80% marginal intervals do not validate state-conditional log-advantage, MDD or tail forecasts. This modeling limitation is disclosed, not cured by using more fan rows.",
+    "no_ridge_replacement": "The fixed lambda1 prediction diagnostic showed modest next-year vector MSE change and essentially no remaining-H improvement. It does not identify a calibrated joint suffix law or justify grafting a point predictor onto old risk fans.",
+    "not_old_eta_zero": "Old eta=0 chooses a net action-then-B continuation growth comparison. The proposed one-year or action-then-hold estimand has a different declared continuation and exact current-fee decomposition; a renamed zero-price B rollout is not the proposed new model.",
+    "not_old_pareto": "Old restore-unless-hold-dominates can restore for risk reduction despite negative expected net growth. New optional restores must always pass positive net growth as well as direction veto. The old pathwise fixed-fan improvement statement does not transfer to these new branches or to held-out markets.",
+    "old_B_fee_warning": "For current-action-then-B branches, the current fee can change later risk triggers, positions and future fees. Their Q log difference already includes those effects and costs, so subtracting another current fee is wrong. A simple current-fee offset after deleting a fee from that B rollout need not leave its continuation unchanged.",
+    "no_confidence_knob": "Do not introduce a t-bound/bootstrap margin or call per-action confidence95% from these adaptive states. State/target selection, repeated years and shared training defeat that naive pointwise interpretation, and a new margin would reopen an unsupported parameter search."
+  },
+  "complete_learning_and_admission_plan": {
+    "partitions_and_cache": "Reuse exactly the frozen5 whole-path repeats,25 outer fits and125 job contexts from refit_stability_v1; reuse each matching static Q1 bundle only after context/seed/objective/menu/target identity and source/input hashes pass. Inner n72 jobs use their own targets and training calendar law; parent refit n96 uses its own. Reuse is a component cache, not new independent evidence.",
+    "per_architecture_training": "First require supported Balanced Q1 and initial economic eligibility under the own job training law; failure is Review. Otherwise simulate its single complete causal controller on its job training IDs from original100 over30years, including mandatory initial fee, all subsequent gate decisions and absorbing pending. Compute k_policy and the same-ID hypothetical annual Bpending k_B under the same own target. Feasible iff k_policy<=min(k_B,floor(.10*n)) with the established numerical boundary convention.",
+    "B_role": "B is a risk reference only. It is absent from the optional-trade controller family because compulsory annual restoration would not satisfy the estimated-benefit gate. Thus a training feasible set can really be empty, unlike the simple diagnostic family which mechanically contained B.",
+    "inner": "For each architecture separately, a supported Balanced inner job whose controller passes training feasibility predicts its held-out24IDs; other jobs contribute status/NULL, not fabricated returns. Pool its positive auto inner held-out set U only. Its n_U must be>0; require k_policy(U)<=floor(.10*n_U) and k_policy(U)<=k_B(U). B(U) must be computed on exactly these same IDs under each appropriate own inner target.",
+    "outer_admission": "Q1 case priority is preserved: Review and outside-Balanced cannot be overwritten by Q2. If supported, require the architecture inner gate and then final own-n96 training feasibility; failure is Review. The final actual gate is one pre-future decision for all24held-out paths in that fit, never one future-informed scenario decision.",
+    "no_architecture_selection": "Report both architecture pipelines in all25outer fits, but only the prospectively named primary is the main recommendation. Do not pick among them using outer growth, admission counts, few favorable seeds or old final121–180. A rejected primary stays Review; a sensitivity result is not a post hoc fallback.",
+    "if_later_one_family_is_required": "Any proposal to select the horizon from training is a different complete learner and must be specified before execution, nested inside each inner training job, and assessed as such. This review recommends avoiding that extra layer.",
+    "reporting": "Retain all statuses and denominators; report each repeat original120 separately, per-fit24, parameter/target/admission stability, and new-vs-old financial differences only on identical repeat/fold/original-ID common-auto sets. Five repeated OOF appearances of one original path are dependent. Zero-auto risk isNULL; no600-IID confidence calculation or coverage guarantee.",
+    "full120_deployment": "A later full120 deployment fit needs its own prospectively fixed complete context, inner folds, own Q1 targets/forecast law and identity-checked component caches. A cached n96 outer bundle is not a full120 final fit. Reusing an older joint full120 static bundle is valid only if all frozen context/seed/objective/liquidity/menu/target identities match; a deployment fit on already reused120 paths is not independent validation. No full120 cache content is read or approved by this review."
+  },
+  "prospective_checks_before_any_numerical_run": [
+    "Source and protocol freeze; retain the two prior architectures and previous failures as archived development, not renamed benchmarks.",
+    "Pure synthetic exact-cost tests: gross-cost equals direct post/hold ratio; fee charged once; same current state; negative gross cannot become a trade; no-trade to an unchanged target; nonzero exact fee versus c*TV distinction.",
+    "Synthetic horizon tests: final-year benefit estimands coincide; a deterministic two-year amortization case can pass remaining-H and fail one-year; do not assert one horizon dominates.",
+    "Synthetic risk tests: original peak/MDD/CPI and prior breach preserved; future annual endpoints carry full-history event; positive benefit with larger k_restore is vetoed; risk-reducing negative-net restore is held; pending never resumes.",
+    "Initial deployment tests: same initial state and train-only law for all future clients; economic nonpositive maps Review; positive initial economics does not need all-bills risk-direction nonworsening; admitted t1 still executes exactly once and pays its fee; a later veto cannot be silently disabled by calling it initial.",
+    "Causality tests: mutate future actual rows while holding through-t-1 state and training inputs fixed; same decision diagnostics at t. Check own inner target/cache and training-only fan identities.",
+    "Complete orchestration tests: supported/Review/outside cases, no feasible controller, n_U=0 NULL, same-U B counts, gate failure before final admission, no annual B fallback and all24per-fit same admission.",
+    "Export per-decision Bhat/chat/Delta/direct residual, both growth endpoints, full-H branch integer risk counts, action/reason, mandatory/pending flags and actual fee. Summaries must distinguish hypothetical local counterfactual diagnostics from actual complete-policy performance.",
+    "On held-out active states, optionally compare estimated paired next-year Delta with the realized same-state trade-versus-hold next-year counterfactual, grouped by original path before averaging; this is diagnostic, not a per-trade confidence certificate. The forecast uses no held-out future when acting.",
+    "Independent scalar accounting audit and isolated same-source closure reproduction before interpreting financial results; reproduction is not new market validation."
+  ],
+  "stopping_and_failure_principle": "A useful outcome is an auditable, interpretable main controller plus honest Review when risk evidence is inadequate. Do not relax alpha, reverse a veto, add a favorable price, grow the horizon family or change seeds until coverage rises. If the proposed primary has little/no automatic coverage, explain the feasible-growth-versus-risk conflict and current data/forecast limits rather than declare a different winner from outer results.",
+  "source_sha256_at_review": {
+    "docs/cost_gate_design_review.json": "30c8ad2d1f06645b44fc31de47dc79cd3c6ee2a47c2e5fe529b35a7f086c54be",
+    "docs/fan_rollout_mathematical_review.json": "499754a2265573b9753568acbff06618cc969d79e9c0a5dee81d9247d9a3d046",
+    "docs/objective_risk_decision.json": "0ad119355fb399c9ca52b47742ec581b1d1448b414cc5361594c4efec342a473",
+    "docs/forecast_assumption_diagnostic_judgment.json": "a32d02356bfbb1b85881e405a41da8841dc6643c87e1b196a3980405b2740f5c",
+    "docs/simple_execution_independent_judgment.json": "5891c678584239e9dba07790cb7f40dfaa1b858743280b016df4acd9681113d5",
+    "docs/simple_execution_comparison_protocol.json": "f4c399807679ef18119b56af28358b7a1b35d2acf0bdaf32c4b0de03d233d9db",
+    "research/experimental_execution/fan_rollout.py": "d195d721c895700925e9b24c91640c59737fe4eb542272376d2de78ce62fe1ba",
+    "research/experimental_execution/risk_priced_fan_rollout.py": "2a935cfe1d039f6a020e104fe92aa659bb92aac2a0b3bed2ef767437015ba472",
+    "research/experimental_execution/pathwise_fan_rollout.py": "1970d04e4af3fbf7ab474857e2beb970f7fbb2a0e100bad8bf2c176a45e6ba79",
+    "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a"
+  },
+  "source_sha256_at_end": {
+    "docs/cost_gate_design_review.json": "30c8ad2d1f06645b44fc31de47dc79cd3c6ee2a47c2e5fe529b35a7f086c54be",
+    "docs/fan_rollout_mathematical_review.json": "499754a2265573b9753568acbff06618cc969d79e9c0a5dee81d9247d9a3d046",
+    "docs/objective_risk_decision.json": "0ad119355fb399c9ca52b47742ec581b1d1448b414cc5361594c4efec342a473",
+    "docs/forecast_assumption_diagnostic_judgment.json": "a32d02356bfbb1b85881e405a41da8841dc6643c87e1b196a3980405b2740f5c",
+    "docs/simple_execution_independent_judgment.json": "5891c678584239e9dba07790cb7f40dfaa1b858743280b016df4acd9681113d5",
+    "docs/simple_execution_comparison_protocol.json": "f4c399807679ef18119b56af28358b7a1b35d2acf0bdaf32c4b0de03d233d9db",
+    "research/experimental_execution/fan_rollout.py": "d195d721c895700925e9b24c91640c59737fe4eb542272376d2de78ce62fe1ba",
+    "research/experimental_execution/risk_priced_fan_rollout.py": "2a935cfe1d039f6a020e104fe92aa659bb92aac2a0b3bed2ef767437015ba472",
+    "research/experimental_execution/pathwise_fan_rollout.py": "1970d04e4af3fbf7ab474857e2beb970f7fbb2a0e100bad8bf2c176a45e6ba79",
+    "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a"
+  },
+  "pre_freeze_design_update": "Parent agreed prospectively to the recommended one-year primary and remaining-H sensitivity, with a deployment-level positive initial economic estimate; this update precedes notification/freeze of this new review and any new market computation."
+}
