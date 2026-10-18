@@ -1,0 +1,13 @@
+context,context_id,scope,policy,training_n,evaluation_n,q1_effective_assignment,case_status,initial_admitted,selected_beta,selected_candidate_order,execution_status,execution_reason
+full_development,0,full_development,joint_canonical_learner,120,120,Balanced,balanced_case,True,0.075,4.0,automated,
+full_development,0,full_development,joint_tie_set_refit_learner,120,120,Balanced,balanced_case,True,0.075,4.0,automated,
+outer_fold_1,1,outer_oof,joint_canonical_learner,96,24,Balanced,balanced_case,True,0.1,5.0,automated,
+outer_fold_1,1,outer_oof,joint_tie_set_refit_learner,96,24,Balanced,balanced_case,True,0.1,5.0,automated,
+outer_fold_2,2,outer_oof,joint_canonical_learner,96,24,Balanced,balanced_case,False,0.05,,execution_review,no_admissible_training_price
+outer_fold_2,2,outer_oof,joint_tie_set_refit_learner,96,24,Balanced,balanced_case,True,0.075,4.0,automated,
+outer_fold_3,3,outer_oof,joint_canonical_learner,96,24,Balanced,balanced_case,False,,,execution_review,no_eligible_inner_beta
+outer_fold_3,3,outer_oof,joint_tie_set_refit_learner,96,24,Balanced,balanced_case,False,,,execution_review,no_top_inner_beta
+outer_fold_4,4,outer_oof,joint_canonical_learner,96,24,Balanced,balanced_case,False,0.05,,execution_review,no_admissible_training_price
+outer_fold_4,4,outer_oof,joint_tie_set_refit_learner,96,24,Balanced,balanced_case,False,,,execution_review,no_refit_feasible_beta_in_top_E
+outer_fold_5,5,outer_oof,joint_canonical_learner,96,24,Balanced,balanced_case,True,0.075,4.0,automated,
+outer_fold_5,5,outer_oof,joint_tie_set_refit_learner,96,24,Balanced,balanced_case,True,0.075,4.0,automated,

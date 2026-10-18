@@ -1,0 +1,31 @@
+context,context_id,scope,client,horizon,loss_tolerance,liquidity,static_gamma,raw_assignment,effective_assignment,candidate_local_index,candidate_original232_index,target_weights,q1_review_kind,q1_review_reasons,floor,risk_feasible_n,liquidity_feasible_n,joint_feasible_n,menu_joint_feasible_n,training_n,training_screen_gamma
+full_development,0,full_development,A,5,0.1,high,0.075,Review,Review,,,,no_risk_feasible_candidates,"[""no_risk_feasible_candidates""]",0.3,0,92,0,0,120,0.075
+full_development,0,full_development,B,15,0.25,medium,0.075,Conservative,Conservative,71.0,101.0,"[0.25, 0.3, 0.45]",,[],0.1,52,154,52,1,120,0.075
+full_development,0,full_development,C,30,0.4,low,0.075,Balanced,Balanced,117.0,155.0,"[0.45, 0.05, 0.5]",,[],0.0,93,172,93,2,120,0.075
+full_development,0,full_development,D,25,0.15,medium,0.075,Review,Review,,,,no_risk_feasible_candidates,"[""no_risk_feasible_candidates""]",0.1,0,154,0,0,120,0.075
+full_development,0,full_development,E,6,0.35,high,0.075,Growth,Growth,151.0,197.0,"[0.65, 0.05, 0.3]",,[],0.3,157,92,92,3,120,0.075
+outer_fold_1,1,outer_oof,A,5,0.1,high,0.075,Review,Review,,,,no_risk_feasible_candidates,"[""no_risk_feasible_candidates""]",0.3,0,92,0,0,96,0.075
+outer_fold_1,1,outer_oof,B,15,0.25,medium,0.075,Conservative,Conservative,71.0,101.0,"[0.25, 0.3, 0.45]",,[],0.1,52,154,52,1,96,0.075
+outer_fold_1,1,outer_oof,C,30,0.4,low,0.075,Balanced,Balanced,110.0,146.0,"[0.4, 0.25, 0.35]",,[],0.0,89,172,89,2,96,0.075
+outer_fold_1,1,outer_oof,D,25,0.15,medium,0.075,Review,Review,,,,no_risk_feasible_candidates,"[""no_risk_feasible_candidates""]",0.1,0,154,0,0,96,0.075
+outer_fold_1,1,outer_oof,E,6,0.35,high,0.075,Growth,Growth,151.0,197.0,"[0.65, 0.05, 0.3]",,[],0.3,154,92,92,3,96,0.075
+outer_fold_2,2,outer_oof,A,5,0.1,high,0.075,Review,Review,,,,no_risk_feasible_candidates,"[""no_risk_feasible_candidates""]",0.3,0,92,0,0,96,0.075
+outer_fold_2,2,outer_oof,B,15,0.25,medium,0.075,Conservative,Conservative,70.0,100.0,"[0.25, 0.25, 0.5]",,[],0.1,36,154,36,1,96,0.075
+outer_fold_2,2,outer_oof,C,30,0.4,low,0.075,Balanced,Balanced,110.0,146.0,"[0.4, 0.25, 0.35]",,[],0.0,89,172,89,2,96,0.075
+outer_fold_2,2,outer_oof,D,25,0.15,medium,0.075,Review,Review,,,,no_risk_feasible_candidates,"[""no_risk_feasible_candidates""]",0.1,0,154,0,0,96,0.075
+outer_fold_2,2,outer_oof,E,6,0.35,high,0.075,Growth,Growth,151.0,197.0,"[0.65, 0.05, 0.3]",,[],0.3,153,92,92,3,96,0.075
+outer_fold_3,3,outer_oof,A,5,0.1,high,0.075,Review,Review,,,,no_risk_feasible_candidates,"[""no_risk_feasible_candidates""]",0.3,0,92,0,0,96,0.075
+outer_fold_3,3,outer_oof,B,15,0.25,medium,0.075,Conservative,Conservative,71.0,101.0,"[0.25, 0.3, 0.45]",,[],0.1,55,154,55,1,96,0.075
+outer_fold_3,3,outer_oof,C,30,0.4,low,0.075,Balanced,Balanced,119.0,157.0,"[0.45, 0.15, 0.4]",,[],0.0,109,172,109,2,96,0.075
+outer_fold_3,3,outer_oof,D,25,0.15,medium,0.075,Review,Review,,,,no_risk_feasible_candidates,"[""no_risk_feasible_candidates""]",0.1,0,154,0,0,96,0.075
+outer_fold_3,3,outer_oof,E,6,0.35,high,0.075,Growth,Growth,151.0,197.0,"[0.65, 0.05, 0.3]",,[],0.3,154,92,92,3,96,0.075
+outer_fold_4,4,outer_oof,A,5,0.1,high,0.075,Review,Review,,,,no_risk_feasible_candidates,"[""no_risk_feasible_candidates""]",0.3,0,92,0,0,96,0.075
+outer_fold_4,4,outer_oof,B,15,0.25,medium,0.075,Conservative,Conservative,71.0,101.0,"[0.25, 0.3, 0.45]",,[],0.1,42,154,42,1,96,0.075
+outer_fold_4,4,outer_oof,C,30,0.4,low,0.075,Balanced,Balanced,119.0,157.0,"[0.45, 0.15, 0.4]",,[],0.0,94,172,94,2,96,0.075
+outer_fold_4,4,outer_oof,D,25,0.15,medium,0.075,Review,Review,,,,no_risk_feasible_candidates,"[""no_risk_feasible_candidates""]",0.1,0,154,0,0,96,0.075
+outer_fold_4,4,outer_oof,E,6,0.35,high,0.075,Growth,Growth,151.0,197.0,"[0.65, 0.05, 0.3]",,[],0.3,154,92,92,3,96,0.075
+outer_fold_5,5,outer_oof,A,5,0.1,high,0.075,Review,Review,,,,no_risk_feasible_candidates,"[""no_risk_feasible_candidates""]",0.3,0,92,0,0,96,0.075
+outer_fold_5,5,outer_oof,B,15,0.25,medium,0.075,Conservative,Conservative,71.0,101.0,"[0.25, 0.3, 0.45]",,[],0.1,52,154,52,1,96,0.075
+outer_fold_5,5,outer_oof,C,30,0.4,low,0.075,Balanced,Balanced,110.0,146.0,"[0.4, 0.25, 0.35]",,[],0.0,92,172,92,2,96,0.075
+outer_fold_5,5,outer_oof,D,25,0.15,medium,0.075,Review,Review,,,,no_risk_feasible_candidates,"[""no_risk_feasible_candidates""]",0.1,0,154,0,0,96,0.075
+outer_fold_5,5,outer_oof,E,6,0.35,high,0.075,Growth,Growth,151.0,197.0,"[0.65, 0.05, 0.3]",,[],0.3,160,92,92,3,96,0.075

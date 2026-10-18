@@ -1,0 +1,19 @@
+stage,context,context_id,comparison_id,training_n,evaluation_n,static_gamma,q1_effective_assignment,target_weights,selected_beta,selected_candidate_order,execution_status,execution_reason,top_inner_beta_set_E,top_inner_auto_path_n,refit_attempted_betas,final_training_breach_cap,unit
+new_target_floor_30_10_0,full_development,0,new_canonical,120,120,0.075,Balanced,"[0.45, 0.05, 0.5]",0.075,4.0,automated,,"[0.075, 0.1]",120.0,[],9.0,one_completed_training_refit_not_a_customer
+new_target_floor_30_10_0,full_development,0,new_tie_set_refit,120,120,0.075,Balanced,"[0.45, 0.05, 0.5]",0.075,4.0,automated,,"[0.075, 0.1]",120.0,[0.075],9.0,one_completed_training_refit_not_a_customer
+new_target_floor_30_10_0,outer_fold_1,1,new_canonical,96,24,0.075,Balanced,"[0.4, 0.25, 0.35]",0.1,5.0,automated,,[0.1],96.0,[],7.0,one_completed_training_refit_not_a_customer
+new_target_floor_30_10_0,outer_fold_1,1,new_tie_set_refit,96,24,0.075,Balanced,"[0.4, 0.25, 0.35]",0.1,5.0,automated,,[0.1],96.0,[0.1],7.0,one_completed_training_refit_not_a_customer
+new_target_floor_30_10_0,outer_fold_2,2,new_canonical,96,24,0.075,Balanced,"[0.4, 0.25, 0.35]",0.05,,execution_review,no_admissible_training_price,"[0.05, 0.075, 0.1]",96.0,[],4.0,one_completed_training_refit_not_a_customer
+new_target_floor_30_10_0,outer_fold_2,2,new_tie_set_refit,96,24,0.075,Balanced,"[0.4, 0.25, 0.35]",0.075,4.0,automated,,"[0.05, 0.075, 0.1]",96.0,"[0.05, 0.075]",6.0,one_completed_training_refit_not_a_customer
+new_target_floor_30_10_0,outer_fold_3,3,new_canonical,96,24,0.075,Balanced,"[0.45, 0.15, 0.4]",,,execution_review,no_eligible_inner_beta,[],,[],,one_completed_training_refit_not_a_customer
+new_target_floor_30_10_0,outer_fold_3,3,new_tie_set_refit,96,24,0.075,Balanced,"[0.45, 0.15, 0.4]",,,execution_review,no_top_inner_beta,[],,[],,one_completed_training_refit_not_a_customer
+new_target_floor_30_10_0,outer_fold_4,4,new_canonical,96,24,0.075,Balanced,"[0.45, 0.15, 0.4]",0.05,,execution_review,no_admissible_training_price,[0.05],72.0,[],4.0,one_completed_training_refit_not_a_customer
+new_target_floor_30_10_0,outer_fold_4,4,new_tie_set_refit,96,24,0.075,Balanced,"[0.45, 0.15, 0.4]",,,execution_review,no_refit_feasible_beta_in_top_E,[0.05],72.0,[0.05],,one_completed_training_refit_not_a_customer
+new_target_floor_30_10_0,outer_fold_5,5,new_canonical,96,24,0.075,Balanced,"[0.4, 0.25, 0.35]",0.075,4.0,automated,,"[0.075, 0.1]",96.0,[],6.0,one_completed_training_refit_not_a_customer
+new_target_floor_30_10_0,outer_fold_5,5,new_tie_set_refit,96,24,0.075,Balanced,"[0.4, 0.25, 0.35]",0.075,4.0,automated,,"[0.075, 0.1]",96.0,[0.075],6.0,one_completed_training_refit_not_a_customer
+old_floor0_complete_process,full_development,0,old_floor0_learner,120,120,0.075,Balanced,"[0.45, 0.05, 0.5]",0.075,4.0,automated,,,120.0,,9.0,one_completed_training_refit_not_a_customer
+old_floor0_complete_process,outer_fold_1,1,old_floor0_learner,96,24,0.075,Balanced,"[0.4, 0.25, 0.35]",0.1,5.0,automated,,,96.0,,7.0,one_completed_training_refit_not_a_customer
+old_floor0_complete_process,outer_fold_2,2,old_floor0_learner,96,24,0.075,Balanced,"[0.4, 0.25, 0.35]",0.05,,execution_review,no_admissible_training_price,,96.0,,4.0,one_completed_training_refit_not_a_customer
+old_floor0_complete_process,outer_fold_3,3,old_floor0_learner,96,24,0.075,Balanced,"[0.45, 0.15, 0.4]",,,execution_review,no_eligible_inner_beta,,,,,one_completed_training_refit_not_a_customer
+old_floor0_complete_process,outer_fold_4,4,old_floor0_learner,96,24,0.075,Balanced,"[0.45, 0.15, 0.4]",0.05,,execution_review,no_admissible_training_price,,72.0,,4.0,one_completed_training_refit_not_a_customer
+old_floor0_complete_process,outer_fold_5,5,old_floor0_learner,96,24,0.075,Balanced,"[0.4, 0.25, 0.35]",0.075,4.0,automated,,,96.0,,6.0,one_completed_training_refit_not_a_customer

@@ -1,7 +1,8 @@
+{"status": "complete", "active_states": 79, "branches": 158, "output": "new"}
 {"stage": "bootstrap_complete", "case": "alpha_10__risk_only", "automatic_frequency": {"A": 1.0, "B": 0.6666666666666666}}
 {"stage": "validation", "case": "alpha_10__risk_only", "fold_assignments": [{"A": "Conservative", "B": "Review"}, {"A": "Review", "B": "Review"}, {"A": "Review", "B": "Review"}, {"A": "Review", "B": "Review"}, {"A": "Review", "B": "Review"}]}
 {"stage": "validation", "case": "alpha_10__risk_only", "fold_assignments": [{"A": "Review", "B": "Review"}, {"A": "Review", "B": "Review"}, {"A": "Review", "B": "Review"}, {"A": "Review", "B": "Review"}, {"A": "Review", "B": "Review"}]}
 ----------------------------------------------------------------------
-Ran 401 tests in 6.107s
+Ran 496 tests in 8.419s
 
 OK

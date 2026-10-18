@@ -1,0 +1,103 @@
+{
+  "task_case_counts": {
+    "balanced_case": 30
+  },
+  "contexts": {
+    "full_development": {
+      "selected_beta": 0.075,
+      "execution_status": "automated",
+      "execution_reason": null
+    },
+    "outer_fold_1": {
+      "selected_beta": 0.1,
+      "execution_status": "automated",
+      "execution_reason": null
+    },
+    "outer_fold_2": {
+      "selected_beta": 0.05,
+      "execution_status": "execution_review",
+      "execution_reason": "no_admissible_training_price"
+    },
+    "outer_fold_3": {
+      "selected_beta": null,
+      "execution_status": "execution_review",
+      "execution_reason": "no_eligible_inner_beta"
+    },
+    "outer_fold_4": {
+      "selected_beta": 0.05,
+      "execution_status": "execution_review",
+      "execution_reason": "no_admissible_training_price"
+    },
+    "outer_fold_5": {
+      "selected_beta": 0.075,
+      "execution_status": "automated",
+      "execution_reason": null
+    }
+  },
+  "behavior_equivalent_beta_groups": {
+    "full_development": [
+      [
+        "0.0",
+        "0.025",
+        "0.05"
+      ],
+      [
+        "0.075",
+        "0.1"
+      ]
+    ],
+    "outer_fold_1": [
+      [
+        "0.0",
+        "0.025"
+      ]
+    ],
+    "outer_fold_2": [
+      [
+        "0.0",
+        "0.025"
+      ],
+      [
+        "0.05",
+        "0.075",
+        "0.1"
+      ]
+    ],
+    "outer_fold_3": [
+      [
+        "0.0",
+        "0.025"
+      ],
+      [
+        "0.075",
+        "0.1"
+      ]
+    ],
+    "outer_fold_4": [
+      [
+        "0.0",
+        "0.025"
+      ],
+      [
+        "0.075",
+        "0.1"
+      ]
+    ],
+    "outer_fold_5": [
+      [
+        "0.075",
+        "0.1"
+      ]
+    ]
+  },
+  "task_betas_with_multiple_growth_tied_prices": 29,
+  "fixed_annual_cross_pairs_with_order_interaction": 5,
+  "interpretation": [
+    "Beta maps to integer count platforms and then to finite feasible/selected-controller classes. A canonical smallest tied beta does not identify a continuous risk budget or client preference.",
+    "Eta is a finite technical candidate label. Training objective ties and recorded outcome equivalence need not identify a unique eta; even a unique finite training winner is not a true KKT/customer parameter.",
+    "At a fixed state, observed action inequalities generally constrain eta to an interval; this script does not reconstruct such intervals because unselected training states/Q are absent and state paths depend on eta.",
+    "The selected beta is not guaranteed to admit a price after static target and training fan are refitted. That is a declared Review outcome, not a code fallback failure.",
+    "Common-ID dynamic event flips combine changed target, fan and endogenous states; the exact arithmetic ledger is descriptive, not separately identified causal effects.",
+    "No new dynamic outcome or rejected outer financial result is computed. No beta, eta, tie, target, coverage or liquidity rule is changed."
+  ]
+}

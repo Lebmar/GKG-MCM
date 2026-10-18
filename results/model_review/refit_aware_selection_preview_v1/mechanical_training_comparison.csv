@@ -1,0 +1,7 @@
+context,job_id,n_training,assignment,static_gamma,target_weights,eligible_betas,top_E,old_selected_beta,old_selected_order,old_training_status,preview_selected_beta,preview_selected_order,preview_training_status,preview_reason,mechanical_training_admission_changed,outer_financial_outcomes_evaluated,OOF_coverage_improvement_estimated
+full_development,c0_refit,120,Balanced,0.075,"[0.45, 0.05, 0.5]","[0.075, 0.1]","[0.075, 0.1]",0.075,4.0,automated,0.075,4.0,automated,,False,False,False
+outer_fold_1,c1_refit,96,Balanced,0.075,"[0.4, 0.25, 0.35]","[0.05, 0.075, 0.1]",[0.1],0.1,5.0,automated,0.1,5.0,automated,,False,False,False
+outer_fold_2,c2_refit,96,Balanced,0.075,"[0.4, 0.25, 0.35]","[0.05, 0.075, 0.1]","[0.05, 0.075, 0.1]",0.05,,execution_review,0.075,4.0,automated,,True,False,False
+outer_fold_3,c3_refit,96,Balanced,0.075,"[0.45, 0.15, 0.4]",[],[],,,execution_review,,,execution_review,no_top_inner_beta,False,False,False
+outer_fold_4,c4_refit,96,Balanced,0.075,"[0.45, 0.15, 0.4]",[0.05],[0.05],0.05,,execution_review,,,execution_review,no_refit_feasible_beta_in_top_E,False,False,False
+outer_fold_5,c5_refit,96,Balanced,0.075,"[0.4, 0.25, 0.35]","[0.025, 0.05, 0.075, 0.1]","[0.075, 0.1]",0.075,4.0,automated,0.075,4.0,automated,,False,False,False

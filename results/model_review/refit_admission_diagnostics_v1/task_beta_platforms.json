@@ -1,0 +1,3794 @@
+{
+  "c0_inner1": {
+    "raw_floor_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          2
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          4
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          6
+        ],
+        "betas": [
+          0.075
+        ]
+      },
+      {
+        "values": [
+          9
+        ],
+        "betas": [
+          0.1
+        ]
+      }
+    ],
+    "effective_cap_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          2
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          4
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          6
+        ],
+        "betas": [
+          0.075
+        ]
+      },
+      {
+        "values": [
+          7
+        ],
+        "betas": [
+          0.1
+        ]
+      }
+    ],
+    "feasible_set_classes": [
+      {
+        "values": [
+          []
+        ],
+        "betas": [
+          0.0,
+          0.025,
+          0.05
+        ]
+      },
+      {
+        "values": [
+          [
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "selected_order_classes": [
+      {
+        "values": [
+          null,
+          "execution_review"
+        ],
+        "betas": [
+          0.0,
+          0.025,
+          0.05
+        ]
+      },
+      {
+        "values": [
+          5,
+          "automated"
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ]
+  },
+  "c0_inner2": {
+    "raw_floor_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          2
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          4
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          6
+        ],
+        "betas": [
+          0.075
+        ]
+      },
+      {
+        "values": [
+          9
+        ],
+        "betas": [
+          0.1
+        ]
+      }
+    ],
+    "effective_cap_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          2
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          4
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          6
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "feasible_set_classes": [
+      {
+        "values": [
+          []
+        ],
+        "betas": [
+          0.0,
+          0.025,
+          0.05
+        ]
+      },
+      {
+        "values": [
+          [
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "selected_order_classes": [
+      {
+        "values": [
+          null,
+          "execution_review"
+        ],
+        "betas": [
+          0.0,
+          0.025,
+          0.05
+        ]
+      },
+      {
+        "values": [
+          4,
+          "automated"
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ]
+  },
+  "c0_inner3": {
+    "raw_floor_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          2
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          4
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          6
+        ],
+        "betas": [
+          0.075
+        ]
+      },
+      {
+        "values": [
+          9
+        ],
+        "betas": [
+          0.1
+        ]
+      }
+    ],
+    "effective_cap_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          2
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          4
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          6
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "feasible_set_classes": [
+      {
+        "values": [
+          []
+        ],
+        "betas": [
+          0.0,
+          0.025,
+          0.05
+        ]
+      },
+      {
+        "values": [
+          [
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "selected_order_classes": [
+      {
+        "values": [
+          null,
+          "execution_review"
+        ],
+        "betas": [
+          0.0,
+          0.025,
+          0.05
+        ]
+      },
+      {
+        "values": [
+          4,
+          "automated"
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ]
+  },
+  "c0_inner4": {
+    "raw_floor_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          2
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          4
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          6
+        ],
+        "betas": [
+          0.075
+        ]
+      },
+      {
+        "values": [
+          9
+        ],
+        "betas": [
+          0.1
+        ]
+      }
+    ],
+    "effective_cap_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          2
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          4
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          6
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "feasible_set_classes": [
+      {
+        "values": [
+          []
+        ],
+        "betas": [
+          0.0,
+          0.025,
+          0.05
+        ]
+      },
+      {
+        "values": [
+          [
+            4
+          ]
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "selected_order_classes": [
+      {
+        "values": [
+          null,
+          "execution_review"
+        ],
+        "betas": [
+          0.0,
+          0.025,
+          0.05
+        ]
+      },
+      {
+        "values": [
+          4,
+          "automated"
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ]
+  },
+  "c0_refit": {
+    "raw_floor_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          3
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          6
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          9
+        ],
+        "betas": [
+          0.075
+        ]
+      },
+      {
+        "values": [
+          12
+        ],
+        "betas": [
+          0.1
+        ]
+      }
+    ],
+    "effective_cap_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          3
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          6
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          9
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "feasible_set_classes": [
+      {
+        "values": [
+          []
+        ],
+        "betas": [
+          0.0,
+          0.025,
+          0.05
+        ]
+      },
+      {
+        "values": [
+          [
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "selected_order_classes": [
+      {
+        "values": [
+          null,
+          "execution_review"
+        ],
+        "betas": [
+          0.0,
+          0.025,
+          0.05
+        ]
+      },
+      {
+        "values": [
+          4,
+          "automated"
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ]
+  },
+  "c1_inner1": {
+    "raw_floor_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          1
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          3
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          5
+        ],
+        "betas": [
+          0.075
+        ]
+      },
+      {
+        "values": [
+          7
+        ],
+        "betas": [
+          0.1
+        ]
+      }
+    ],
+    "effective_cap_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          1
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          3
+        ],
+        "betas": [
+          0.05,
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "feasible_set_classes": [
+      {
+        "values": [
+          []
+        ],
+        "betas": [
+          0.0,
+          0.025
+        ]
+      },
+      {
+        "values": [
+          [
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "betas": [
+          0.05,
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "selected_order_classes": [
+      {
+        "values": [
+          null,
+          "execution_review"
+        ],
+        "betas": [
+          0.0,
+          0.025
+        ]
+      },
+      {
+        "values": [
+          4,
+          "automated"
+        ],
+        "betas": [
+          0.05,
+          0.075,
+          0.1
+        ]
+      }
+    ]
+  },
+  "c1_inner2": {
+    "raw_floor_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          1
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          3
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          5
+        ],
+        "betas": [
+          0.075
+        ]
+      },
+      {
+        "values": [
+          7
+        ],
+        "betas": [
+          0.1
+        ]
+      }
+    ],
+    "effective_cap_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          1
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          3
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          5
+        ],
+        "betas": [
+          0.075
+        ]
+      },
+      {
+        "values": [
+          7
+        ],
+        "betas": [
+          0.1
+        ]
+      }
+    ],
+    "feasible_set_classes": [
+      {
+        "values": [
+          []
+        ],
+        "betas": [
+          0.0,
+          0.025,
+          0.05,
+          0.075
+        ]
+      },
+      {
+        "values": [
+          [
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "betas": [
+          0.1
+        ]
+      }
+    ],
+    "selected_order_classes": [
+      {
+        "values": [
+          null,
+          "execution_review"
+        ],
+        "betas": [
+          0.0,
+          0.025,
+          0.05,
+          0.075
+        ]
+      },
+      {
+        "values": [
+          4,
+          "automated"
+        ],
+        "betas": [
+          0.1
+        ]
+      }
+    ]
+  },
+  "c1_inner3": {
+    "raw_floor_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          1
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          3
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          5
+        ],
+        "betas": [
+          0.075
+        ]
+      },
+      {
+        "values": [
+          7
+        ],
+        "betas": [
+          0.1
+        ]
+      }
+    ],
+    "effective_cap_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          1
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          3
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          5
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "feasible_set_classes": [
+      {
+        "values": [
+          []
+        ],
+        "betas": [
+          0.0,
+          0.025,
+          0.05
+        ]
+      },
+      {
+        "values": [
+          [
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "selected_order_classes": [
+      {
+        "values": [
+          null,
+          "execution_review"
+        ],
+        "betas": [
+          0.0,
+          0.025,
+          0.05
+        ]
+      },
+      {
+        "values": [
+          5,
+          "automated"
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ]
+  },
+  "c1_inner4": {
+    "raw_floor_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          1
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          3
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          5
+        ],
+        "betas": [
+          0.075
+        ]
+      },
+      {
+        "values": [
+          7
+        ],
+        "betas": [
+          0.1
+        ]
+      }
+    ],
+    "effective_cap_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          1
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          2
+        ],
+        "betas": [
+          0.05,
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "feasible_set_classes": [
+      {
+        "values": [
+          []
+        ],
+        "betas": [
+          0.0,
+          0.025
+        ]
+      },
+      {
+        "values": [
+          [
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "betas": [
+          0.05,
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "selected_order_classes": [
+      {
+        "values": [
+          null,
+          "execution_review"
+        ],
+        "betas": [
+          0.0,
+          0.025
+        ]
+      },
+      {
+        "values": [
+          5,
+          "automated"
+        ],
+        "betas": [
+          0.05,
+          0.075,
+          0.1
+        ]
+      }
+    ]
+  },
+  "c1_refit": {
+    "raw_floor_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          2
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          4
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          7
+        ],
+        "betas": [
+          0.075
+        ]
+      },
+      {
+        "values": [
+          9
+        ],
+        "betas": [
+          0.1
+        ]
+      }
+    ],
+    "effective_cap_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          2
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          4
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          7
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "feasible_set_classes": [
+      {
+        "values": [
+          []
+        ],
+        "betas": [
+          0.0,
+          0.025,
+          0.05
+        ]
+      },
+      {
+        "values": [
+          [
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "selected_order_classes": [
+      {
+        "values": [
+          null,
+          "execution_review"
+        ],
+        "betas": [
+          0.0,
+          0.025,
+          0.05
+        ]
+      },
+      {
+        "values": [
+          5,
+          "automated"
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ]
+  },
+  "c2_inner1": {
+    "raw_floor_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          1
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          3
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          5
+        ],
+        "betas": [
+          0.075
+        ]
+      },
+      {
+        "values": [
+          7
+        ],
+        "betas": [
+          0.1
+        ]
+      }
+    ],
+    "effective_cap_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          1
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          3
+        ],
+        "betas": [
+          0.05,
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "feasible_set_classes": [
+      {
+        "values": [
+          []
+        ],
+        "betas": [
+          0.0,
+          0.025
+        ]
+      },
+      {
+        "values": [
+          [
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "betas": [
+          0.05,
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "selected_order_classes": [
+      {
+        "values": [
+          null,
+          "execution_review"
+        ],
+        "betas": [
+          0.0,
+          0.025
+        ]
+      },
+      {
+        "values": [
+          5,
+          "automated"
+        ],
+        "betas": [
+          0.05,
+          0.075,
+          0.1
+        ]
+      }
+    ]
+  },
+  "c2_inner2": {
+    "raw_floor_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          1
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          3
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          5
+        ],
+        "betas": [
+          0.075
+        ]
+      },
+      {
+        "values": [
+          7
+        ],
+        "betas": [
+          0.1
+        ]
+      }
+    ],
+    "effective_cap_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          1
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          3
+        ],
+        "betas": [
+          0.05,
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "feasible_set_classes": [
+      {
+        "values": [
+          []
+        ],
+        "betas": [
+          0.0,
+          0.025
+        ]
+      },
+      {
+        "values": [
+          [
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "betas": [
+          0.05,
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "selected_order_classes": [
+      {
+        "values": [
+          null,
+          "execution_review"
+        ],
+        "betas": [
+          0.0,
+          0.025
+        ]
+      },
+      {
+        "values": [
+          4,
+          "automated"
+        ],
+        "betas": [
+          0.05,
+          0.075,
+          0.1
+        ]
+      }
+    ]
+  },
+  "c2_inner3": {
+    "raw_floor_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          1
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          3
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          5
+        ],
+        "betas": [
+          0.075
+        ]
+      },
+      {
+        "values": [
+          7
+        ],
+        "betas": [
+          0.1
+        ]
+      }
+    ],
+    "effective_cap_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          1
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          3
+        ],
+        "betas": [
+          0.05,
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "feasible_set_classes": [
+      {
+        "values": [
+          []
+        ],
+        "betas": [
+          0.0,
+          0.025
+        ]
+      },
+      {
+        "values": [
+          [
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "betas": [
+          0.05,
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "selected_order_classes": [
+      {
+        "values": [
+          null,
+          "execution_review"
+        ],
+        "betas": [
+          0.0,
+          0.025
+        ]
+      },
+      {
+        "values": [
+          4,
+          "automated"
+        ],
+        "betas": [
+          0.05,
+          0.075,
+          0.1
+        ]
+      }
+    ]
+  },
+  "c2_inner4": {
+    "raw_floor_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          1
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          3
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          5
+        ],
+        "betas": [
+          0.075
+        ]
+      },
+      {
+        "values": [
+          7
+        ],
+        "betas": [
+          0.1
+        ]
+      }
+    ],
+    "effective_cap_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          1
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          2
+        ],
+        "betas": [
+          0.05,
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "feasible_set_classes": [
+      {
+        "values": [
+          []
+        ],
+        "betas": [
+          0.0,
+          0.025
+        ]
+      },
+      {
+        "values": [
+          [
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "betas": [
+          0.05,
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "selected_order_classes": [
+      {
+        "values": [
+          null,
+          "execution_review"
+        ],
+        "betas": [
+          0.0,
+          0.025
+        ]
+      },
+      {
+        "values": [
+          5,
+          "automated"
+        ],
+        "betas": [
+          0.05,
+          0.075,
+          0.1
+        ]
+      }
+    ]
+  },
+  "c2_refit": {
+    "raw_floor_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          2
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          4
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          7
+        ],
+        "betas": [
+          0.075
+        ]
+      },
+      {
+        "values": [
+          9
+        ],
+        "betas": [
+          0.1
+        ]
+      }
+    ],
+    "effective_cap_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          2
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          4
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          6
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "feasible_set_classes": [
+      {
+        "values": [
+          []
+        ],
+        "betas": [
+          0.0,
+          0.025,
+          0.05
+        ]
+      },
+      {
+        "values": [
+          [
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "selected_order_classes": [
+      {
+        "values": [
+          null,
+          "execution_review"
+        ],
+        "betas": [
+          0.0,
+          0.025,
+          0.05
+        ]
+      },
+      {
+        "values": [
+          4,
+          "automated"
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ]
+  },
+  "c3_inner1": {
+    "raw_floor_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          1
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          3
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          5
+        ],
+        "betas": [
+          0.075
+        ]
+      },
+      {
+        "values": [
+          7
+        ],
+        "betas": [
+          0.1
+        ]
+      }
+    ],
+    "effective_cap_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          1
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          3
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          5
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "feasible_set_classes": [
+      {
+        "values": [
+          []
+        ],
+        "betas": [
+          0.0,
+          0.025
+        ]
+      },
+      {
+        "values": [
+          [
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "betas": [
+          0.05,
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "selected_order_classes": [
+      {
+        "values": [
+          null,
+          "execution_review"
+        ],
+        "betas": [
+          0.0,
+          0.025
+        ]
+      },
+      {
+        "values": [
+          4,
+          "automated"
+        ],
+        "betas": [
+          0.05,
+          0.075,
+          0.1
+        ]
+      }
+    ]
+  },
+  "c3_inner2": {
+    "raw_floor_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          1
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          3
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          5
+        ],
+        "betas": [
+          0.075
+        ]
+      },
+      {
+        "values": [
+          7
+        ],
+        "betas": [
+          0.1
+        ]
+      }
+    ],
+    "effective_cap_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          1
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          3
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          5
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "feasible_set_classes": [
+      {
+        "values": [
+          []
+        ],
+        "betas": [
+          0.0,
+          0.025,
+          0.05
+        ]
+      },
+      {
+        "values": [
+          [
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "selected_order_classes": [
+      {
+        "values": [
+          null,
+          "execution_review"
+        ],
+        "betas": [
+          0.0,
+          0.025,
+          0.05
+        ]
+      },
+      {
+        "values": [
+          4,
+          "automated"
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ]
+  },
+  "c3_inner3": {
+    "raw_floor_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          1
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          3
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          5
+        ],
+        "betas": [
+          0.075
+        ]
+      },
+      {
+        "values": [
+          7
+        ],
+        "betas": [
+          0.1
+        ]
+      }
+    ],
+    "effective_cap_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          1
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          3
+        ],
+        "betas": [
+          0.05,
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "feasible_set_classes": [
+      {
+        "values": [
+          []
+        ],
+        "betas": [
+          0.0,
+          0.025
+        ]
+      },
+      {
+        "values": [
+          [
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "betas": [
+          0.05,
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "selected_order_classes": [
+      {
+        "values": [
+          null,
+          "execution_review"
+        ],
+        "betas": [
+          0.0,
+          0.025
+        ]
+      },
+      {
+        "values": [
+          5,
+          "automated"
+        ],
+        "betas": [
+          0.05,
+          0.075,
+          0.1
+        ]
+      }
+    ]
+  },
+  "c3_inner4": {
+    "raw_floor_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          1
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          3
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          5
+        ],
+        "betas": [
+          0.075
+        ]
+      },
+      {
+        "values": [
+          7
+        ],
+        "betas": [
+          0.1
+        ]
+      }
+    ],
+    "effective_cap_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          1
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          3
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          4
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "feasible_set_classes": [
+      {
+        "values": [
+          []
+        ],
+        "betas": [
+          0.0,
+          0.025,
+          0.05
+        ]
+      },
+      {
+        "values": [
+          [
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "selected_order_classes": [
+      {
+        "values": [
+          null,
+          "execution_review"
+        ],
+        "betas": [
+          0.0,
+          0.025,
+          0.05
+        ]
+      },
+      {
+        "values": [
+          4,
+          "automated"
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ]
+  },
+  "c3_refit": {
+    "raw_floor_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          2
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          4
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          7
+        ],
+        "betas": [
+          0.075
+        ]
+      },
+      {
+        "values": [
+          9
+        ],
+        "betas": [
+          0.1
+        ]
+      }
+    ],
+    "effective_cap_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          2
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          4
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          6
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "feasible_set_classes": [
+      {
+        "values": [
+          []
+        ],
+        "betas": [
+          0.0,
+          0.025
+        ]
+      },
+      {
+        "values": [
+          [
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          [
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "selected_order_classes": [
+      {
+        "values": [
+          null,
+          "execution_review"
+        ],
+        "betas": [
+          0.0,
+          0.025
+        ]
+      },
+      {
+        "values": [
+          5,
+          "automated"
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          4,
+          "automated"
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ]
+  },
+  "c4_inner1": {
+    "raw_floor_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          1
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          3
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          5
+        ],
+        "betas": [
+          0.075
+        ]
+      },
+      {
+        "values": [
+          7
+        ],
+        "betas": [
+          0.1
+        ]
+      }
+    ],
+    "effective_cap_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          1
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          2
+        ],
+        "betas": [
+          0.05,
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "feasible_set_classes": [
+      {
+        "values": [
+          []
+        ],
+        "betas": [
+          0.0,
+          0.025
+        ]
+      },
+      {
+        "values": [
+          [
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "betas": [
+          0.05,
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "selected_order_classes": [
+      {
+        "values": [
+          null,
+          "execution_review"
+        ],
+        "betas": [
+          0.0,
+          0.025
+        ]
+      },
+      {
+        "values": [
+          4,
+          "automated"
+        ],
+        "betas": [
+          0.05,
+          0.075,
+          0.1
+        ]
+      }
+    ]
+  },
+  "c4_inner2": {
+    "raw_floor_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          1
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          3
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          5
+        ],
+        "betas": [
+          0.075
+        ]
+      },
+      {
+        "values": [
+          7
+        ],
+        "betas": [
+          0.1
+        ]
+      }
+    ],
+    "effective_cap_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          1
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          3
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          5
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "feasible_set_classes": [
+      {
+        "values": [
+          []
+        ],
+        "betas": [
+          0.0,
+          0.025,
+          0.05
+        ]
+      },
+      {
+        "values": [
+          [
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "selected_order_classes": [
+      {
+        "values": [
+          null,
+          "execution_review"
+        ],
+        "betas": [
+          0.0,
+          0.025,
+          0.05
+        ]
+      },
+      {
+        "values": [
+          4,
+          "automated"
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ]
+  },
+  "c4_inner3": {
+    "raw_floor_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          1
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          3
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          5
+        ],
+        "betas": [
+          0.075
+        ]
+      },
+      {
+        "values": [
+          7
+        ],
+        "betas": [
+          0.1
+        ]
+      }
+    ],
+    "effective_cap_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          1
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          3
+        ],
+        "betas": [
+          0.05,
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "feasible_set_classes": [
+      {
+        "values": [
+          []
+        ],
+        "betas": [
+          0.0,
+          0.025
+        ]
+      },
+      {
+        "values": [
+          [
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "betas": [
+          0.05,
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "selected_order_classes": [
+      {
+        "values": [
+          null,
+          "execution_review"
+        ],
+        "betas": [
+          0.0,
+          0.025
+        ]
+      },
+      {
+        "values": [
+          4,
+          "automated"
+        ],
+        "betas": [
+          0.05,
+          0.075,
+          0.1
+        ]
+      }
+    ]
+  },
+  "c4_inner4": {
+    "raw_floor_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          1
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          3
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          5
+        ],
+        "betas": [
+          0.075
+        ]
+      },
+      {
+        "values": [
+          7
+        ],
+        "betas": [
+          0.1
+        ]
+      }
+    ],
+    "effective_cap_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          1
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          3
+        ],
+        "betas": [
+          0.05,
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "feasible_set_classes": [
+      {
+        "values": [
+          []
+        ],
+        "betas": [
+          0.0,
+          0.025
+        ]
+      },
+      {
+        "values": [
+          [
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "betas": [
+          0.05,
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "selected_order_classes": [
+      {
+        "values": [
+          null,
+          "execution_review"
+        ],
+        "betas": [
+          0.0,
+          0.025
+        ]
+      },
+      {
+        "values": [
+          4,
+          "automated"
+        ],
+        "betas": [
+          0.05,
+          0.075,
+          0.1
+        ]
+      }
+    ]
+  },
+  "c4_refit": {
+    "raw_floor_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          2
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          4
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          7
+        ],
+        "betas": [
+          0.075
+        ]
+      },
+      {
+        "values": [
+          9
+        ],
+        "betas": [
+          0.1
+        ]
+      }
+    ],
+    "effective_cap_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          2
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          4
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          7
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "feasible_set_classes": [
+      {
+        "values": [
+          []
+        ],
+        "betas": [
+          0.0,
+          0.025,
+          0.05
+        ]
+      },
+      {
+        "values": [
+          [
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "selected_order_classes": [
+      {
+        "values": [
+          null,
+          "execution_review"
+        ],
+        "betas": [
+          0.0,
+          0.025,
+          0.05
+        ]
+      },
+      {
+        "values": [
+          4,
+          "automated"
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ]
+  },
+  "c5_inner1": {
+    "raw_floor_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          1
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          3
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          5
+        ],
+        "betas": [
+          0.075
+        ]
+      },
+      {
+        "values": [
+          7
+        ],
+        "betas": [
+          0.1
+        ]
+      }
+    ],
+    "effective_cap_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          1
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          3
+        ],
+        "betas": [
+          0.05,
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "feasible_set_classes": [
+      {
+        "values": [
+          []
+        ],
+        "betas": [
+          0.0,
+          0.025
+        ]
+      },
+      {
+        "values": [
+          [
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "betas": [
+          0.05,
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "selected_order_classes": [
+      {
+        "values": [
+          null,
+          "execution_review"
+        ],
+        "betas": [
+          0.0,
+          0.025
+        ]
+      },
+      {
+        "values": [
+          5,
+          "automated"
+        ],
+        "betas": [
+          0.05,
+          0.075,
+          0.1
+        ]
+      }
+    ]
+  },
+  "c5_inner2": {
+    "raw_floor_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          1
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          3
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          5
+        ],
+        "betas": [
+          0.075
+        ]
+      },
+      {
+        "values": [
+          7
+        ],
+        "betas": [
+          0.1
+        ]
+      }
+    ],
+    "effective_cap_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          1
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          2
+        ],
+        "betas": [
+          0.05,
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "feasible_set_classes": [
+      {
+        "values": [
+          []
+        ],
+        "betas": [
+          0.0,
+          0.025
+        ]
+      },
+      {
+        "values": [
+          [
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "betas": [
+          0.05,
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "selected_order_classes": [
+      {
+        "values": [
+          null,
+          "execution_review"
+        ],
+        "betas": [
+          0.0,
+          0.025
+        ]
+      },
+      {
+        "values": [
+          5,
+          "automated"
+        ],
+        "betas": [
+          0.05,
+          0.075,
+          0.1
+        ]
+      }
+    ]
+  },
+  "c5_inner3": {
+    "raw_floor_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          1
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          3
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          5
+        ],
+        "betas": [
+          0.075
+        ]
+      },
+      {
+        "values": [
+          7
+        ],
+        "betas": [
+          0.1
+        ]
+      }
+    ],
+    "effective_cap_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          1
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          3
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          5
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "feasible_set_classes": [
+      {
+        "values": [
+          []
+        ],
+        "betas": [
+          0.0,
+          0.025,
+          0.05
+        ]
+      },
+      {
+        "values": [
+          [
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "selected_order_classes": [
+      {
+        "values": [
+          null,
+          "execution_review"
+        ],
+        "betas": [
+          0.0,
+          0.025,
+          0.05
+        ]
+      },
+      {
+        "values": [
+          4,
+          "automated"
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ]
+  },
+  "c5_inner4": {
+    "raw_floor_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          1
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          3
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          5
+        ],
+        "betas": [
+          0.075
+        ]
+      },
+      {
+        "values": [
+          7
+        ],
+        "betas": [
+          0.1
+        ]
+      }
+    ],
+    "effective_cap_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          1
+        ],
+        "betas": [
+          0.025,
+          0.05,
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "feasible_set_classes": [
+      {
+        "values": [
+          []
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          [
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "betas": [
+          0.025,
+          0.05,
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "selected_order_classes": [
+      {
+        "values": [
+          null,
+          "execution_review"
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          5,
+          "automated"
+        ],
+        "betas": [
+          0.025,
+          0.05,
+          0.075,
+          0.1
+        ]
+      }
+    ]
+  },
+  "c5_refit": {
+    "raw_floor_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          2
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          4
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          7
+        ],
+        "betas": [
+          0.075
+        ]
+      },
+      {
+        "values": [
+          9
+        ],
+        "betas": [
+          0.1
+        ]
+      }
+    ],
+    "effective_cap_classes": [
+      {
+        "values": [
+          0
+        ],
+        "betas": [
+          0.0
+        ]
+      },
+      {
+        "values": [
+          2
+        ],
+        "betas": [
+          0.025
+        ]
+      },
+      {
+        "values": [
+          4
+        ],
+        "betas": [
+          0.05
+        ]
+      },
+      {
+        "values": [
+          6
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "feasible_set_classes": [
+      {
+        "values": [
+          []
+        ],
+        "betas": [
+          0.0,
+          0.025,
+          0.05
+        ]
+      },
+      {
+        "values": [
+          [
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ],
+    "selected_order_classes": [
+      {
+        "values": [
+          null,
+          "execution_review"
+        ],
+        "betas": [
+          0.0,
+          0.025,
+          0.05
+        ]
+      },
+      {
+        "values": [
+          4,
+          "automated"
+        ],
+        "betas": [
+          0.075,
+          0.1
+        ]
+      }
+    ]
+  }
+}

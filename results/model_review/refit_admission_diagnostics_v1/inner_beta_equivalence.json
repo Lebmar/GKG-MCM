@@ -1,0 +1,818 @@
+{
+  "full_development": {
+    "selected_beta": 0.075,
+    "selected_controller_vector_classes": [
+      {
+        "class_id": 1,
+        "members": [
+          "0.0",
+          "0.025",
+          "0.05"
+        ],
+        "saved_vector_sha256": "4357ebfe58a2d639b4b4dfaa5db3de7f0ae6d50446d15f92e689698f72253c28"
+      },
+      {
+        "class_id": 2,
+        "members": [
+          "0.075",
+          "0.1"
+        ],
+        "saved_vector_sha256": "6471ae0ae1e2480a90b74ad9f27f74855d6f8760e5fad81dd4042e9dbeca277d"
+      }
+    ],
+    "recorded_financial_vector_classes": [
+      {
+        "class_id": 1,
+        "members": [
+          "0.0",
+          "0.025",
+          "0.05"
+        ],
+        "saved_vector_sha256": "a85a802f89f95eecd5975537b165259717d97a0da6661071a91fb67507c2eb3d"
+      },
+      {
+        "class_id": 2,
+        "members": [
+          "0.075",
+          "0.1"
+        ],
+        "saved_vector_sha256": "c589d6ee39d71bb2c084598379962daf56fe94e9b7ff02a31c84186379a60861"
+      }
+    ],
+    "saved_beta_summaries": [
+      {
+        "context": "full_development",
+        "training_beta": 0.0,
+        "original_n": 120,
+        "balanced_case_n": 120,
+        "risk_review_n": 0,
+        "not_balanced_case_n": 0,
+        "case_auto_n": 0,
+        "case_execReview_n": 120,
+        "breach_count": null,
+        "conditional_breach_probability": null,
+        "conditional_mean_log_growth": null,
+        "auto_inner_folds": 0,
+        "eligible": false,
+        "reason": "no_inner_auto_evidence"
+      },
+      {
+        "context": "full_development",
+        "training_beta": 0.025,
+        "original_n": 120,
+        "balanced_case_n": 120,
+        "risk_review_n": 0,
+        "not_balanced_case_n": 0,
+        "case_auto_n": 0,
+        "case_execReview_n": 120,
+        "breach_count": null,
+        "conditional_breach_probability": null,
+        "conditional_mean_log_growth": null,
+        "auto_inner_folds": 0,
+        "eligible": false,
+        "reason": "no_inner_auto_evidence"
+      },
+      {
+        "context": "full_development",
+        "training_beta": 0.05,
+        "original_n": 120,
+        "balanced_case_n": 120,
+        "risk_review_n": 0,
+        "not_balanced_case_n": 0,
+        "case_auto_n": 0,
+        "case_execReview_n": 120,
+        "breach_count": null,
+        "conditional_breach_probability": null,
+        "conditional_mean_log_growth": null,
+        "auto_inner_folds": 0,
+        "eligible": false,
+        "reason": "no_inner_auto_evidence"
+      },
+      {
+        "context": "full_development",
+        "training_beta": 0.075,
+        "original_n": 120,
+        "balanced_case_n": 120,
+        "risk_review_n": 0,
+        "not_balanced_case_n": 0,
+        "case_auto_n": 120,
+        "case_execReview_n": 0,
+        "breach_count": 10.0,
+        "conditional_breach_probability": 0.08333333333333333,
+        "conditional_mean_log_growth": 0.04305197168129989,
+        "auto_inner_folds": 4,
+        "eligible": true,
+        "reason": "passed_empirical_inner_screen"
+      },
+      {
+        "context": "full_development",
+        "training_beta": 0.1,
+        "original_n": 120,
+        "balanced_case_n": 120,
+        "risk_review_n": 0,
+        "not_balanced_case_n": 0,
+        "case_auto_n": 120,
+        "case_execReview_n": 0,
+        "breach_count": 10.0,
+        "conditional_breach_probability": 0.08333333333333333,
+        "conditional_mean_log_growth": 0.04305197168129989,
+        "auto_inner_folds": 4,
+        "eligible": true,
+        "reason": "passed_empirical_inner_screen"
+      }
+    ],
+    "interpretation": "Same selected-order vector within fixed jobs implies the same frozen deterministic selected controllers. Financial-vector equality alone is weaker. Classes are repeated-development observations, not uniquely identified service parameters."
+  },
+  "outer_fold_1": {
+    "selected_beta": 0.1,
+    "selected_controller_vector_classes": [
+      {
+        "class_id": 1,
+        "members": [
+          "0.0",
+          "0.025"
+        ],
+        "saved_vector_sha256": "ccee799e1a2bc92fe394a9caafc0f5a0fb966d669a9e60192c65c48e840d9ed0"
+      },
+      {
+        "class_id": 2,
+        "members": [
+          "0.05"
+        ],
+        "saved_vector_sha256": "89a4b0e71704007efb376ababa27e99e2182aed289d6acafca7360c48a75fed9"
+      },
+      {
+        "class_id": 3,
+        "members": [
+          "0.075"
+        ],
+        "saved_vector_sha256": "921957153df1dd8df732858c4114261c72b223d1e5a236c74717b8a7f24a8ea3"
+      },
+      {
+        "class_id": 4,
+        "members": [
+          "0.1"
+        ],
+        "saved_vector_sha256": "682fbe7da41e94405c6146a0c68de5c03803c9bf1e978a118c04f34946f5f5e5"
+      }
+    ],
+    "recorded_financial_vector_classes": [
+      {
+        "class_id": 1,
+        "members": [
+          "0.0",
+          "0.025"
+        ],
+        "saved_vector_sha256": "425196e8f84e3f1397a5344eeb98eeb1fdb5b9cfd4a6f2357e7a4a560faba856"
+      },
+      {
+        "class_id": 2,
+        "members": [
+          "0.05"
+        ],
+        "saved_vector_sha256": "3963bbb079598ce6b5ebf2ff6e297889027cb9236a7ce3cfe5db94ac0395e115"
+      },
+      {
+        "class_id": 3,
+        "members": [
+          "0.075"
+        ],
+        "saved_vector_sha256": "9d4aa2176f206583d7fa03a0ce504a4a7350d94c4861ed96ad60c29b25cbc2d2"
+      },
+      {
+        "class_id": 4,
+        "members": [
+          "0.1"
+        ],
+        "saved_vector_sha256": "31fd80434fef7d3350068fc1726f35fd7478c43a532dd5a9a80f0b17ab9e5891"
+      }
+    ],
+    "saved_beta_summaries": [
+      {
+        "context": "outer_fold_1",
+        "training_beta": 0.0,
+        "original_n": 96,
+        "balanced_case_n": 96,
+        "risk_review_n": 0,
+        "not_balanced_case_n": 0,
+        "case_auto_n": 0,
+        "case_execReview_n": 96,
+        "breach_count": null,
+        "conditional_breach_probability": null,
+        "conditional_mean_log_growth": null,
+        "auto_inner_folds": 0,
+        "eligible": false,
+        "reason": "no_inner_auto_evidence"
+      },
+      {
+        "context": "outer_fold_1",
+        "training_beta": 0.025,
+        "original_n": 96,
+        "balanced_case_n": 96,
+        "risk_review_n": 0,
+        "not_balanced_case_n": 0,
+        "case_auto_n": 0,
+        "case_execReview_n": 96,
+        "breach_count": null,
+        "conditional_breach_probability": null,
+        "conditional_mean_log_growth": null,
+        "auto_inner_folds": 0,
+        "eligible": false,
+        "reason": "no_inner_auto_evidence"
+      },
+      {
+        "context": "outer_fold_1",
+        "training_beta": 0.05,
+        "original_n": 96,
+        "balanced_case_n": 96,
+        "risk_review_n": 0,
+        "not_balanced_case_n": 0,
+        "case_auto_n": 48,
+        "case_execReview_n": 48,
+        "breach_count": 4.0,
+        "conditional_breach_probability": 0.08333333333333333,
+        "conditional_mean_log_growth": 0.03823485206588254,
+        "auto_inner_folds": 2,
+        "eligible": true,
+        "reason": "passed_empirical_inner_screen"
+      },
+      {
+        "context": "outer_fold_1",
+        "training_beta": 0.075,
+        "original_n": 96,
+        "balanced_case_n": 96,
+        "risk_review_n": 0,
+        "not_balanced_case_n": 0,
+        "case_auto_n": 72,
+        "case_execReview_n": 24,
+        "breach_count": 5.0,
+        "conditional_breach_probability": 0.06944444444444445,
+        "conditional_mean_log_growth": 0.04043279012444841,
+        "auto_inner_folds": 3,
+        "eligible": true,
+        "reason": "passed_empirical_inner_screen"
+      },
+      {
+        "context": "outer_fold_1",
+        "training_beta": 0.1,
+        "original_n": 96,
+        "balanced_case_n": 96,
+        "risk_review_n": 0,
+        "not_balanced_case_n": 0,
+        "case_auto_n": 96,
+        "case_execReview_n": 0,
+        "breach_count": 7.0,
+        "conditional_breach_probability": 0.07291666666666667,
+        "conditional_mean_log_growth": 0.04114321468239745,
+        "auto_inner_folds": 4,
+        "eligible": true,
+        "reason": "passed_empirical_inner_screen"
+      }
+    ],
+    "interpretation": "Same selected-order vector within fixed jobs implies the same frozen deterministic selected controllers. Financial-vector equality alone is weaker. Classes are repeated-development observations, not uniquely identified service parameters."
+  },
+  "outer_fold_2": {
+    "selected_beta": 0.05,
+    "selected_controller_vector_classes": [
+      {
+        "class_id": 1,
+        "members": [
+          "0.0",
+          "0.025"
+        ],
+        "saved_vector_sha256": "f1b66647966324ae68048d96910170805a539ac6b666f79cd8794a3dc85cc428"
+      },
+      {
+        "class_id": 2,
+        "members": [
+          "0.05",
+          "0.075",
+          "0.1"
+        ],
+        "saved_vector_sha256": "21ece927b8ad766ccbc9454baeaa81aaa69aa221b69b6daccf0f6d8082e448fb"
+      }
+    ],
+    "recorded_financial_vector_classes": [
+      {
+        "class_id": 1,
+        "members": [
+          "0.0",
+          "0.025"
+        ],
+        "saved_vector_sha256": "e15bb9bbbab9534ea551a9810a32025d0d891f1ad08a623eda6e986e3ee788ce"
+      },
+      {
+        "class_id": 2,
+        "members": [
+          "0.05",
+          "0.075",
+          "0.1"
+        ],
+        "saved_vector_sha256": "6d2281db5d1b61f21ce67c267e549b867d95e67568e88f83971e425322f9c4ad"
+      }
+    ],
+    "saved_beta_summaries": [
+      {
+        "context": "outer_fold_2",
+        "training_beta": 0.0,
+        "original_n": 96,
+        "balanced_case_n": 96,
+        "risk_review_n": 0,
+        "not_balanced_case_n": 0,
+        "case_auto_n": 0,
+        "case_execReview_n": 96,
+        "breach_count": null,
+        "conditional_breach_probability": null,
+        "conditional_mean_log_growth": null,
+        "auto_inner_folds": 0,
+        "eligible": false,
+        "reason": "no_inner_auto_evidence"
+      },
+      {
+        "context": "outer_fold_2",
+        "training_beta": 0.025,
+        "original_n": 96,
+        "balanced_case_n": 96,
+        "risk_review_n": 0,
+        "not_balanced_case_n": 0,
+        "case_auto_n": 0,
+        "case_execReview_n": 96,
+        "breach_count": null,
+        "conditional_breach_probability": null,
+        "conditional_mean_log_growth": null,
+        "auto_inner_folds": 0,
+        "eligible": false,
+        "reason": "no_inner_auto_evidence"
+      },
+      {
+        "context": "outer_fold_2",
+        "training_beta": 0.05,
+        "original_n": 96,
+        "balanced_case_n": 96,
+        "risk_review_n": 0,
+        "not_balanced_case_n": 0,
+        "case_auto_n": 96,
+        "case_execReview_n": 0,
+        "breach_count": 6.0,
+        "conditional_breach_probability": 0.0625,
+        "conditional_mean_log_growth": 0.042891281681374877,
+        "auto_inner_folds": 4,
+        "eligible": true,
+        "reason": "passed_empirical_inner_screen"
+      },
+      {
+        "context": "outer_fold_2",
+        "training_beta": 0.075,
+        "original_n": 96,
+        "balanced_case_n": 96,
+        "risk_review_n": 0,
+        "not_balanced_case_n": 0,
+        "case_auto_n": 96,
+        "case_execReview_n": 0,
+        "breach_count": 6.0,
+        "conditional_breach_probability": 0.0625,
+        "conditional_mean_log_growth": 0.042891281681374877,
+        "auto_inner_folds": 4,
+        "eligible": true,
+        "reason": "passed_empirical_inner_screen"
+      },
+      {
+        "context": "outer_fold_2",
+        "training_beta": 0.1,
+        "original_n": 96,
+        "balanced_case_n": 96,
+        "risk_review_n": 0,
+        "not_balanced_case_n": 0,
+        "case_auto_n": 96,
+        "case_execReview_n": 0,
+        "breach_count": 6.0,
+        "conditional_breach_probability": 0.0625,
+        "conditional_mean_log_growth": 0.042891281681374877,
+        "auto_inner_folds": 4,
+        "eligible": true,
+        "reason": "passed_empirical_inner_screen"
+      }
+    ],
+    "interpretation": "Same selected-order vector within fixed jobs implies the same frozen deterministic selected controllers. Financial-vector equality alone is weaker. Classes are repeated-development observations, not uniquely identified service parameters."
+  },
+  "outer_fold_3": {
+    "selected_beta": null,
+    "selected_controller_vector_classes": [
+      {
+        "class_id": 1,
+        "members": [
+          "0.0",
+          "0.025"
+        ],
+        "saved_vector_sha256": "e934d6662e11cf82debdfe1329a8c3580af62ee53ab576c8c9d8a623697c6dc3"
+      },
+      {
+        "class_id": 2,
+        "members": [
+          "0.05"
+        ],
+        "saved_vector_sha256": "d88088b64e614255f7ac270b0398b1ced0a84ab3d2f78e051874ca52178a4264"
+      },
+      {
+        "class_id": 3,
+        "members": [
+          "0.075",
+          "0.1"
+        ],
+        "saved_vector_sha256": "bbcdab915716f666a8e36103c7e72dd661717dc43dbb9b82a311b61e93a0df0d"
+      }
+    ],
+    "recorded_financial_vector_classes": [
+      {
+        "class_id": 1,
+        "members": [
+          "0.0",
+          "0.025"
+        ],
+        "saved_vector_sha256": "ab42a60f8480fbeb5f9da17124290ccaa396919f031f9cefcbd7085528cbc2d4"
+      },
+      {
+        "class_id": 2,
+        "members": [
+          "0.05"
+        ],
+        "saved_vector_sha256": "ba0934a6f966e74ff7e07616d741660ced2dc6521dd8c8af40e99a3a35562cdd"
+      },
+      {
+        "class_id": 3,
+        "members": [
+          "0.075",
+          "0.1"
+        ],
+        "saved_vector_sha256": "afb28076582e3e987aa932cb67a88cd8ae75544fd0696a6395f0916602600a79"
+      }
+    ],
+    "saved_beta_summaries": [
+      {
+        "context": "outer_fold_3",
+        "training_beta": 0.0,
+        "original_n": 96,
+        "balanced_case_n": 96,
+        "risk_review_n": 0,
+        "not_balanced_case_n": 0,
+        "case_auto_n": 0,
+        "case_execReview_n": 96,
+        "breach_count": null,
+        "conditional_breach_probability": null,
+        "conditional_mean_log_growth": null,
+        "auto_inner_folds": 0,
+        "eligible": false,
+        "reason": "no_inner_auto_evidence"
+      },
+      {
+        "context": "outer_fold_3",
+        "training_beta": 0.025,
+        "original_n": 96,
+        "balanced_case_n": 96,
+        "risk_review_n": 0,
+        "not_balanced_case_n": 0,
+        "case_auto_n": 0,
+        "case_execReview_n": 96,
+        "breach_count": null,
+        "conditional_breach_probability": null,
+        "conditional_mean_log_growth": null,
+        "auto_inner_folds": 0,
+        "eligible": false,
+        "reason": "no_inner_auto_evidence"
+      },
+      {
+        "context": "outer_fold_3",
+        "training_beta": 0.05,
+        "original_n": 96,
+        "balanced_case_n": 96,
+        "risk_review_n": 0,
+        "not_balanced_case_n": 0,
+        "case_auto_n": 48,
+        "case_execReview_n": 48,
+        "breach_count": 5.0,
+        "conditional_breach_probability": 0.10416666666666667,
+        "conditional_mean_log_growth": 0.04202091651353896,
+        "auto_inner_folds": 2,
+        "eligible": false,
+        "reason": "inner_conditional_risk_exceeds_reference"
+      },
+      {
+        "context": "outer_fold_3",
+        "training_beta": 0.075,
+        "original_n": 96,
+        "balanced_case_n": 96,
+        "risk_review_n": 0,
+        "not_balanced_case_n": 0,
+        "case_auto_n": 96,
+        "case_execReview_n": 0,
+        "breach_count": 11.0,
+        "conditional_breach_probability": 0.11458333333333333,
+        "conditional_mean_log_growth": 0.04358028263791691,
+        "auto_inner_folds": 4,
+        "eligible": false,
+        "reason": "inner_conditional_risk_exceeds_reference"
+      },
+      {
+        "context": "outer_fold_3",
+        "training_beta": 0.1,
+        "original_n": 96,
+        "balanced_case_n": 96,
+        "risk_review_n": 0,
+        "not_balanced_case_n": 0,
+        "case_auto_n": 96,
+        "case_execReview_n": 0,
+        "breach_count": 11.0,
+        "conditional_breach_probability": 0.11458333333333333,
+        "conditional_mean_log_growth": 0.04358028263791691,
+        "auto_inner_folds": 4,
+        "eligible": false,
+        "reason": "inner_conditional_risk_exceeds_reference"
+      }
+    ],
+    "interpretation": "Same selected-order vector within fixed jobs implies the same frozen deterministic selected controllers. Financial-vector equality alone is weaker. Classes are repeated-development observations, not uniquely identified service parameters."
+  },
+  "outer_fold_4": {
+    "selected_beta": 0.05,
+    "selected_controller_vector_classes": [
+      {
+        "class_id": 1,
+        "members": [
+          "0.0",
+          "0.025"
+        ],
+        "saved_vector_sha256": "7216301c2109313c18100e1ce8bbc55ee2575a76712d41ae3c8c07cf00dc4565"
+      },
+      {
+        "class_id": 2,
+        "members": [
+          "0.05"
+        ],
+        "saved_vector_sha256": "9c35836f13d3bfd6563d2a526eb942240bc3fdcfee3e53ee2660420d527e2a17"
+      },
+      {
+        "class_id": 3,
+        "members": [
+          "0.075",
+          "0.1"
+        ],
+        "saved_vector_sha256": "5fbac1867ca297429713903d52a4c1fdb9ea6954393d08c169218df3e8ae7cc6"
+      }
+    ],
+    "recorded_financial_vector_classes": [
+      {
+        "class_id": 1,
+        "members": [
+          "0.0",
+          "0.025"
+        ],
+        "saved_vector_sha256": "49ef6e994c3596beb712814d98358df746ee52a2cf43c5fffa041feec8f802f4"
+      },
+      {
+        "class_id": 2,
+        "members": [
+          "0.05"
+        ],
+        "saved_vector_sha256": "cd64d4ad21352fa184f9b5a1d8211502e54c2126a0dff147a03c88c37f7caadb"
+      },
+      {
+        "class_id": 3,
+        "members": [
+          "0.075",
+          "0.1"
+        ],
+        "saved_vector_sha256": "2a9b6fc5a6966157855f8143ea4ab3b23d4ced046f352c3a0651e5ca324e9390"
+      }
+    ],
+    "saved_beta_summaries": [
+      {
+        "context": "outer_fold_4",
+        "training_beta": 0.0,
+        "original_n": 96,
+        "balanced_case_n": 96,
+        "risk_review_n": 0,
+        "not_balanced_case_n": 0,
+        "case_auto_n": 0,
+        "case_execReview_n": 96,
+        "breach_count": null,
+        "conditional_breach_probability": null,
+        "conditional_mean_log_growth": null,
+        "auto_inner_folds": 0,
+        "eligible": false,
+        "reason": "no_inner_auto_evidence"
+      },
+      {
+        "context": "outer_fold_4",
+        "training_beta": 0.025,
+        "original_n": 96,
+        "balanced_case_n": 96,
+        "risk_review_n": 0,
+        "not_balanced_case_n": 0,
+        "case_auto_n": 0,
+        "case_execReview_n": 96,
+        "breach_count": null,
+        "conditional_breach_probability": null,
+        "conditional_mean_log_growth": null,
+        "auto_inner_folds": 0,
+        "eligible": false,
+        "reason": "no_inner_auto_evidence"
+      },
+      {
+        "context": "outer_fold_4",
+        "training_beta": 0.05,
+        "original_n": 96,
+        "balanced_case_n": 96,
+        "risk_review_n": 0,
+        "not_balanced_case_n": 0,
+        "case_auto_n": 72,
+        "case_execReview_n": 24,
+        "breach_count": 7.0,
+        "conditional_breach_probability": 0.09722222222222222,
+        "conditional_mean_log_growth": 0.044134262244956424,
+        "auto_inner_folds": 3,
+        "eligible": true,
+        "reason": "passed_empirical_inner_screen"
+      },
+      {
+        "context": "outer_fold_4",
+        "training_beta": 0.075,
+        "original_n": 96,
+        "balanced_case_n": 96,
+        "risk_review_n": 0,
+        "not_balanced_case_n": 0,
+        "case_auto_n": 96,
+        "case_execReview_n": 0,
+        "breach_count": 12.0,
+        "conditional_breach_probability": 0.125,
+        "conditional_mean_log_growth": 0.043087662037528035,
+        "auto_inner_folds": 4,
+        "eligible": false,
+        "reason": "inner_conditional_risk_exceeds_reference"
+      },
+      {
+        "context": "outer_fold_4",
+        "training_beta": 0.1,
+        "original_n": 96,
+        "balanced_case_n": 96,
+        "risk_review_n": 0,
+        "not_balanced_case_n": 0,
+        "case_auto_n": 96,
+        "case_execReview_n": 0,
+        "breach_count": 12.0,
+        "conditional_breach_probability": 0.125,
+        "conditional_mean_log_growth": 0.043087662037528035,
+        "auto_inner_folds": 4,
+        "eligible": false,
+        "reason": "inner_conditional_risk_exceeds_reference"
+      }
+    ],
+    "interpretation": "Same selected-order vector within fixed jobs implies the same frozen deterministic selected controllers. Financial-vector equality alone is weaker. Classes are repeated-development observations, not uniquely identified service parameters."
+  },
+  "outer_fold_5": {
+    "selected_beta": 0.075,
+    "selected_controller_vector_classes": [
+      {
+        "class_id": 1,
+        "members": [
+          "0.0"
+        ],
+        "saved_vector_sha256": "acf3873c3134d4c1475f17cf21693f509729ddcfd42205969f3c927b25f74ca2"
+      },
+      {
+        "class_id": 2,
+        "members": [
+          "0.025"
+        ],
+        "saved_vector_sha256": "0ef8237ca48834e2474684921cbd53fa3eddba63976e7fff6eff6f518ef587ac"
+      },
+      {
+        "class_id": 3,
+        "members": [
+          "0.05"
+        ],
+        "saved_vector_sha256": "9f7120a60ff09ecd94bca78e97e759bd4fd0dd19b66677d91ebf270ee348fd1d"
+      },
+      {
+        "class_id": 4,
+        "members": [
+          "0.075",
+          "0.1"
+        ],
+        "saved_vector_sha256": "64f331877562fbdebad3cab0c111d2c8a775884cb4fccac02dbdba0ca023f182"
+      }
+    ],
+    "recorded_financial_vector_classes": [
+      {
+        "class_id": 1,
+        "members": [
+          "0.0"
+        ],
+        "saved_vector_sha256": "5fa41d10424c0f1b652b45daa31b72b90ccbfc84b723dc6a058b3122fc198a98"
+      },
+      {
+        "class_id": 2,
+        "members": [
+          "0.025"
+        ],
+        "saved_vector_sha256": "ab77ae46c03071e37798a84814e800d57ca25f860b6ddddbb0ea88731ae506be"
+      },
+      {
+        "class_id": 3,
+        "members": [
+          "0.05"
+        ],
+        "saved_vector_sha256": "a32438bf572f9444e62ce9e11ec3aa7e41e90954869d8eb8855846ed1cec8e33"
+      },
+      {
+        "class_id": 4,
+        "members": [
+          "0.075",
+          "0.1"
+        ],
+        "saved_vector_sha256": "20207a463fc391b9020548b1d26c29063203b2182f6de7417b95167d3b2f0edd"
+      }
+    ],
+    "saved_beta_summaries": [
+      {
+        "context": "outer_fold_5",
+        "training_beta": 0.0,
+        "original_n": 96,
+        "balanced_case_n": 96,
+        "risk_review_n": 0,
+        "not_balanced_case_n": 0,
+        "case_auto_n": 0,
+        "case_execReview_n": 96,
+        "breach_count": null,
+        "conditional_breach_probability": null,
+        "conditional_mean_log_growth": null,
+        "auto_inner_folds": 0,
+        "eligible": false,
+        "reason": "no_inner_auto_evidence"
+      },
+      {
+        "context": "outer_fold_5",
+        "training_beta": 0.025,
+        "original_n": 96,
+        "balanced_case_n": 96,
+        "risk_review_n": 0,
+        "not_balanced_case_n": 0,
+        "case_auto_n": 24,
+        "case_execReview_n": 72,
+        "breach_count": 1.0,
+        "conditional_breach_probability": 0.041666666666666664,
+        "conditional_mean_log_growth": 0.0443313139358093,
+        "auto_inner_folds": 1,
+        "eligible": true,
+        "reason": "passed_empirical_inner_screen"
+      },
+      {
+        "context": "outer_fold_5",
+        "training_beta": 0.05,
+        "original_n": 96,
+        "balanced_case_n": 96,
+        "risk_review_n": 0,
+        "not_balanced_case_n": 0,
+        "case_auto_n": 72,
+        "case_execReview_n": 24,
+        "breach_count": 7.0,
+        "conditional_breach_probability": 0.09722222222222222,
+        "conditional_mean_log_growth": 0.040010741496880615,
+        "auto_inner_folds": 3,
+        "eligible": true,
+        "reason": "passed_empirical_inner_screen"
+      },
+      {
+        "context": "outer_fold_5",
+        "training_beta": 0.075,
+        "original_n": 96,
+        "balanced_case_n": 96,
+        "risk_review_n": 0,
+        "not_balanced_case_n": 0,
+        "case_auto_n": 96,
+        "case_execReview_n": 0,
+        "breach_count": 9.0,
+        "conditional_breach_probability": 0.09375,
+        "conditional_mean_log_growth": 0.04004547950082718,
+        "auto_inner_folds": 4,
+        "eligible": true,
+        "reason": "passed_empirical_inner_screen"
+      },
+      {
+        "context": "outer_fold_5",
+        "training_beta": 0.1,
+        "original_n": 96,
+        "balanced_case_n": 96,
+        "risk_review_n": 0,
+        "not_balanced_case_n": 0,
+        "case_auto_n": 96,
+        "case_execReview_n": 0,
+        "breach_count": 9.0,
+        "conditional_breach_probability": 0.09375,
+        "conditional_mean_log_growth": 0.04004547950082718,
+        "auto_inner_folds": 4,
+        "eligible": true,
+        "reason": "passed_empirical_inner_screen"
+      }
+    ],
+    "interpretation": "Same selected-order vector within fixed jobs implies the same frozen deterministic selected controllers. Financial-vector equality alone is weaker. Classes are repeated-development observations, not uniquely identified service parameters."
+  }
+}

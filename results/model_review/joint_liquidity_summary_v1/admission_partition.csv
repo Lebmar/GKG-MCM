@@ -1,0 +1,5 @@
+admission_group,original_n,unit,primary_observed_n,primary_breach_count,primary_conditional_breach_probability,primary_mean_log_growth,canonical_observed_n,canonical_breach_count,canonical_conditional_breach_probability,canonical_mean_log_growth,pending_reference_available_n,pending_reference_breach_count,equal_reference_available_n,equal_reference_breach_count
+both_auto,48,market_scenario_paths_for_given_C,48,2.0,0.041666666666666664,0.044548181682151404,48,2.0,0.041666666666666664,0.044548181682151404,48,1.0,48,1.0
+primary_only_auto,24,market_scenario_paths_for_given_C,24,3.0,0.125,0.03731392322402291,0,,,,24,1.0,24,1.0
+canonical_only_auto,0,market_scenario_paths_for_given_C,0,,,,0,,,,0,,0,
+neither_auto,48,market_scenario_paths_for_given_C,0,,,,0,,,,48,7.0,48,4.0

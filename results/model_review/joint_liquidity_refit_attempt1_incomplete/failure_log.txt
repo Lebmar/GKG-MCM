@@ -1,0 +1,15 @@
+{"job_id": "c0_inner1", "seconds": 9.202799874999982, "case_status": "balanced_case", "gamma": 0.1, "training_n": 90, "evaluation_n": 30}
+{"job_id": "c0_inner2", "seconds": 9.199439291999624, "case_status": "balanced_case", "gamma": 0.075, "training_n": 90, "evaluation_n": 30}
+{"job_id": "c0_inner3", "seconds": 9.251026166999509, "case_status": "balanced_case", "gamma": 0.075, "training_n": 90, "evaluation_n": 30}
+{"job_id": "c0_inner4", "seconds": 9.525205625000126, "case_status": "balanced_case", "gamma": 0.075, "training_n": 90, "evaluation_n": 30}
+Traceback (most recent call last):
+  File "/Users/lebmar/Documents/ChatGPT/GKG数模/scripts/run_joint_liquidity_refit.py", line 471, in <module>
+    if __name__=="__main__": main()
+                             ^^^^^^
+  File "/Users/lebmar/Documents/ChatGPT/GKG数模/scripts/run_joint_liquidity_refit.py", line 419, in main
+    assignments,paths=q1_records(bundle,legacy["clients"],strictmetrics,eval_ids,cid,context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/lebmar/Documents/ChatGPT/GKG数模/scripts/run_joint_liquidity_refit.py", line 288, in q1_records
+    assignments.append(dict(context=context, context_id=cid, scope=scope, client=name,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: dict() got multiple values for keyword argument 'floor'

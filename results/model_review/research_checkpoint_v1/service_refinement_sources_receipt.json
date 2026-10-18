@@ -1,0 +1,545 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "mechanism",
+      "title": "参数并列与重拟合失效的不同原因",
+      "assumptions": [
+        "原始开发情景1–120；整路径外折；已重复使用的数据。"
+      ],
+      "queries": [
+        {
+          "id": "mechanism-saved",
+          "source": {
+            "label": "参数并列与重拟合失效的不同原因",
+            "files": [
+              {
+                "label": "results/model_review/refit_admission_diagnostics_v1/findings.json"
+              },
+              {
+                "label": "results/model_review/refit_admission_diagnostics_v1/inner_refit_beta_comparison.csv"
+              },
+              {
+                "label": "docs/coverage_admission_policy_review.json"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "参数身份",
+                "definition": "β/η是有限技术筛选或控制器候选；内层目标并列不识别客户风险厌恶。"
+              },
+              {
+                "label": "旧外折4",
+                "definition": "较大β新增一内折5/24次超限；共同三折仍7/72；不是同一分母上的风险变化。"
+              }
+            ],
+            "filters": [
+              "只读取已保存研究产物，不重新拟合或载入市场收益"
+            ],
+            "caveats": [
+              "所有评估来自已重复使用的开发情景1–120；没有新的盲测。",
+              "AI协助的独立算法审计与同源复现不等于外部人类同行审稿或未来风险保证。"
+            ]
+          },
+          "sourceRoles": [
+            {
+              "kind": "file",
+              "label": "results/model_review/refit_admission_diagnostics_v1/findings.json",
+              "role": "保存的方法、结果或核查证据"
+            },
+            {
+              "kind": "file",
+              "label": "results/model_review/refit_admission_diagnostics_v1/inner_refit_beta_comparison.csv",
+              "role": "保存的方法、结果或核查证据"
+            },
+            {
+              "kind": "file",
+              "label": "docs/coverage_admission_policy_review.json",
+              "role": "保存的方法、结果或核查证据"
+            }
+          ],
+          "reportingPeriod": "2026-10-17至18执行阶段开发研究",
+          "columns": [
+            "旧训练环境",
+            "内层自动路径",
+            "内层超限",
+            "并列β",
+            "旧选β",
+            "重拟合允许超限",
+            "九价最小超限"
+          ],
+          "rows": [
+            {
+              "旧训练环境": "外折2",
+              "内层自动路径": 96,
+              "内层超限": 6,
+              "并列β": "0.05 / 0.075 / 0.10",
+              "旧选β": 0.05,
+              "重拟合允许超限": 4,
+              "九价最小超限": 6
+            },
+            {
+              "旧训练环境": "外折4",
+              "内层自动路径": 72,
+              "内层超限": 7,
+              "并列β": "仅0.05位于目标最优集合",
+              "旧选β": 0.05,
+              "重拟合允许超限": 4,
+              "九价最小超限": 7
+            }
+          ],
+          "methods": [
+            {
+              "language": "python",
+              "code": "# Saved descriptive training ledger only; no rejected outer financial outcome or refit rescue."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "liquidity",
+      "title": "30/10/0规范约定进入每层完整菜单拟合",
+      "assumptions": [
+        "原始开发情景1–120；整路径外折；已重复使用的数据。"
+      ],
+      "queries": [
+        {
+          "id": "liquidity-saved",
+          "source": {
+            "label": "30/10/0规范约定进入每层完整菜单拟合",
+            "files": [
+              {
+                "label": "docs/liquidity_policy_refinement_review.json"
+              },
+              {
+                "label": "docs/joint_liquidity_refit_protocol.json"
+              },
+              {
+                "label": "results/model_review/joint_liquidity_refit_v1/q1_context_assignments.csv"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "下限",
+                "definition": "High30%、Medium10%、Low不额外加下限；规范选择，非问卷数据唯一识别，非漂移后余额或提款保证。"
+              },
+              {
+                "label": "产品身份",
+                "definition": "表为一个full120描述性拟合；E的H6-Balanced不继承C的H30动态证据。"
+              }
+            ],
+            "filters": [
+              "只读取已保存研究产物，不重新拟合或载入市场收益"
+            ],
+            "caveats": [
+              "所有评估来自已重复使用的开发情景1–120；没有新的盲测。",
+              "AI协助的独立算法审计与同源复现不等于外部人类同行审稿或未来风险保证。"
+            ]
+          },
+          "sourceRoles": [
+            {
+              "kind": "file",
+              "label": "docs/liquidity_policy_refinement_review.json",
+              "role": "保存的方法、结果或核查证据"
+            },
+            {
+              "kind": "file",
+              "label": "docs/joint_liquidity_refit_protocol.json",
+              "role": "保存的方法、结果或核查证据"
+            },
+            {
+              "kind": "file",
+              "label": "results/model_review/joint_liquidity_refit_v1/q1_context_assignments.csv",
+              "role": "保存的方法、结果或核查证据"
+            }
+          ],
+          "reportingPeriod": "2026-10-17至18执行阶段开发研究",
+          "columns": [
+            "画像",
+            "期限_年",
+            "回撤限_pct",
+            "流动性",
+            "目标票据下限_pct",
+            "有效分配",
+            "权重",
+            "复核原因"
+          ],
+          "rows": [
+            {
+              "画像": "A",
+              "期限_年": 5,
+              "回撤限_pct": 10.0,
+              "流动性": "high",
+              "目标票据下限_pct": 30.0,
+              "有效分配": "Review",
+              "权重": null,
+              "复核原因": "no_risk_feasible_candidates"
+            },
+            {
+              "画像": "B",
+              "期限_年": 15,
+              "回撤限_pct": 25.0,
+              "流动性": "medium",
+              "目标票据下限_pct": 10.0,
+              "有效分配": "Conservative",
+              "权重": "[0.25, 0.3, 0.45]",
+              "复核原因": null
+            },
+            {
+              "画像": "C",
+              "期限_年": 30,
+              "回撤限_pct": 40.0,
+              "流动性": "low",
+              "目标票据下限_pct": 0.0,
+              "有效分配": "Balanced",
+              "权重": "[0.45, 0.05, 0.5]",
+              "复核原因": null
+            },
+            {
+              "画像": "D",
+              "期限_年": 25,
+              "回撤限_pct": 15.0,
+              "流动性": "medium",
+              "目标票据下限_pct": 10.0,
+              "有效分配": "Review",
+              "权重": null,
+              "复核原因": "no_risk_feasible_candidates"
+            },
+            {
+              "画像": "E",
+              "期限_年": 6,
+              "回撤限_pct": 35.0,
+              "流动性": "high",
+              "目标票据下限_pct": 30.0,
+              "有效分配": "Growth",
+              "权重": "[0.65, 0.05, 0.3]",
+              "复核原因": null
+            }
+          ],
+          "methods": [
+            {
+              "language": "python",
+              "code": "# All static subfolds jointly refit with reserve constraints; not a postfilter of an old menu."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "joint",
+      "title": "固定两种末端规则的完整嵌套评估",
+      "assumptions": [
+        "原始开发情景1–120；整路径外折；已重复使用的数据。"
+      ],
+      "queries": [
+        {
+          "id": "joint-saved",
+          "source": {
+            "label": "固定两种末端规则的完整嵌套评估",
+            "files": [
+              {
+                "label": "results/model_review/joint_liquidity_refit_v1/summary.csv"
+              },
+              {
+                "label": "results/model_review/joint_liquidity_refit_v1/context_selections.json"
+              },
+              {
+                "label": "results/model_review/joint_liquidity_refit_v1/paired_summary.csv"
+              },
+              {
+                "label": "results/model_review/joint_liquidity_refit_v1/independent_audit.json"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "自动准入",
+                "definition": "同一C画像的训练fit准入指示；路径加权比例不是客户总体覆盖率，五个训练集重叠。"
+              },
+              {
+                "label": "保留集合",
+                "definition": "仅保留内层风险合格、自动路径最多及全局增长并列集合，再选最小重拟合可行β；不在全部合格β中回退。"
+              },
+              {
+                "label": "参照",
+                "definition": "年度等待与三等分均为假想金融参照，不计作自动服务，拒绝路径不补收益。"
+              }
+            ],
+            "filters": [
+              "只读取已保存研究产物，不重新拟合或载入市场收益"
+            ],
+            "caveats": [
+              "所有评估来自已重复使用的开发情景1–120；没有新的盲测。",
+              "AI协助的独立算法审计与同源复现不等于外部人类同行审稿或未来风险保证。"
+            ]
+          },
+          "sourceRoles": [
+            {
+              "kind": "file",
+              "label": "results/model_review/joint_liquidity_refit_v1/summary.csv",
+              "role": "保存的方法、结果或核查证据"
+            },
+            {
+              "kind": "file",
+              "label": "results/model_review/joint_liquidity_refit_v1/context_selections.json",
+              "role": "保存的方法、结果或核查证据"
+            },
+            {
+              "kind": "file",
+              "label": "results/model_review/joint_liquidity_refit_v1/paired_summary.csv",
+              "role": "保存的方法、结果或核查证据"
+            },
+            {
+              "kind": "file",
+              "label": "results/model_review/joint_liquidity_refit_v1/independent_audit.json",
+              "role": "保存的方法、结果或核查证据"
+            }
+          ],
+          "reportingPeriod": "2026-10-17至18执行阶段开发研究",
+          "columns": [
+            "方法",
+            "原始市场路径",
+            "自动路径",
+            "执行复核路径",
+            "Q1复核路径",
+            "非Balanced路径",
+            "参照有结果路径",
+            "有结果路径超限",
+            "条件超限_pct",
+            "平均年化log增长_pct"
+          ],
+          "rows": [
+            {
+              "方法": "joint_canonical_learner",
+              "原始市场路径": 120,
+              "自动路径": 48,
+              "执行复核路径": 72,
+              "Q1复核路径": 0,
+              "非Balanced路径": 0,
+              "参照有结果路径": null,
+              "有结果路径超限": 2,
+              "条件超限_pct": 4.16666666666666,
+              "平均年化log增长_pct": 4.45481816821514
+            },
+            {
+              "方法": "joint_tie_set_refit_learner",
+              "原始市场路径": 120,
+              "自动路径": 72,
+              "执行复核路径": 48,
+              "Q1复核路径": 0,
+              "非Balanced路径": 0,
+              "参照有结果路径": null,
+              "有结果路径超限": 5,
+              "条件超限_pct": 6.94444444444444,
+              "平均年化log增长_pct": 4.213676219610861
+            },
+            {
+              "方法": "annual_then_pending",
+              "原始市场路径": 120,
+              "自动路径": null,
+              "执行复核路径": null,
+              "Q1复核路径": 0,
+              "非Balanced路径": 0,
+              "参照有结果路径": 120,
+              "有结果路径超限": 9,
+              "条件超限_pct": 7.5,
+              "平均年化log增长_pct": 3.90804588574566
+            },
+            {
+              "方法": "equal_thirds_annual",
+              "原始市场路径": 120,
+              "自动路径": null,
+              "执行复核路径": null,
+              "Q1复核路径": 0,
+              "非Balanced路径": 0,
+              "参照有结果路径": 120,
+              "有结果路径超限": 6,
+              "条件超限_pct": 5.0,
+              "平均年化log增长_pct": 3.4812847988894196
+            }
+          ],
+          "methods": [
+            {
+              "language": "python",
+              "code": "rows=read_csv('joint_liquidity_refit_v1/summary.csv').query(\"scope=='outer_oof'\")\n# Both selectors and primary were fixed before this run; no outcome-based winner selection."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fixed-state",
+      "title": "固定状态局部预测诊断及其证据边界",
+      "assumptions": [
+        "原始开发情景1–120；整路径外折；已重复使用的数据。"
+      ],
+      "queries": [
+        {
+          "id": "fixed-state-saved",
+          "source": {
+            "label": "固定状态局部预测诊断及其证据边界",
+            "files": [
+              {
+                "label": "docs/fixed_state_forecast_diagnostic_protocol.json"
+              },
+              {
+                "label": "results/model_review/fixed_state_forecast_diagnostic_v1/state_comparisons.csv"
+              },
+              {
+                "label": "results/model_review/fixed_state_forecast_diagnostic_v1/independent_audit.json"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "反事实",
+                "definition": "同一当前状态、现在hold或restore、两支后续均接原年度等待参照；不是学习器自适应续策。"
+              },
+              {
+                "label": "外折六点",
+                "definition": "非随机、仅两fit；六点风险事件预测差和实现差均0，η局部消去；方向不一致不能直接证明条件概率失准。"
+              }
+            ],
+            "filters": [
+              "只读取已保存研究产物，不重新拟合或载入市场收益"
+            ],
+            "caveats": [
+              "所有评估来自已重复使用的开发情景1–120；没有新的盲测。",
+              "AI协助的独立算法审计与同源复现不等于外部人类同行审稿或未来风险保证。"
+            ]
+          },
+          "sourceRoles": [
+            {
+              "kind": "file",
+              "label": "docs/fixed_state_forecast_diagnostic_protocol.json",
+              "role": "保存的方法、结果或核查证据"
+            },
+            {
+              "kind": "file",
+              "label": "results/model_review/fixed_state_forecast_diagnostic_v1/state_comparisons.csv",
+              "role": "保存的方法、结果或核查证据"
+            },
+            {
+              "kind": "file",
+              "label": "results/model_review/fixed_state_forecast_diagnostic_v1/independent_audit.json",
+              "role": "保存的方法、结果或核查证据"
+            }
+          ],
+          "reportingPeriod": "2026-10-17至18执行阶段开发研究",
+          "columns": [
+            "范围",
+            "固定有效状态",
+            "增长方向一致",
+            "风险定价动作一致"
+          ],
+          "rows": [
+            {
+              "范围": "full_development_descriptive",
+              "固定有效状态": 3,
+              "增长方向一致": 1,
+              "风险定价动作一致": 1
+            },
+            {
+              "范围": "outer_oof",
+              "固定有效状态": 6,
+              "增长方向一致": 2,
+              "风险定价动作一致": 2
+            },
+            {
+              "范围": "inner_validation",
+              "固定有效状态": 70,
+              "增长方向一致": 40,
+              "风险定价动作一致": 39
+            }
+          ],
+          "methods": [
+            {
+              "language": "python",
+              "code": "# One realized suffix per fixed state; no population forecast-accuracy estimate, confidence interval, or new policy."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "checks",
+      "title": "可复查的计算证据",
+      "assumptions": [
+        "原始开发情景1–120；整路径外折；已重复使用的数据。"
+      ],
+      "queries": [
+        {
+          "id": "checks-saved",
+          "source": {
+            "label": "可复查的计算证据",
+            "files": [
+              {
+                "label": "results/model_review/research_checkpoint_v1/verification.json"
+              },
+              {
+                "label": "results/model_review/joint_liquidity_reproduction_v1/manifest.json"
+              },
+              {
+                "label": "results/model_review/joint_liquidity_refit_v1/independent_audit.json"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "同源复现",
+                "definition": "临时副本只允许解析1–120；确定性产物逐字节或具名数组精确比较，运行时间元数据另列。"
+              }
+            ],
+            "filters": [
+              "只读取已保存研究产物，不重新拟合或载入市场收益"
+            ],
+            "caveats": [
+              "所有评估来自已重复使用的开发情景1–120；没有新的盲测。",
+              "AI协助的独立算法审计与同源复现不等于外部人类同行审稿或未来风险保证。"
+            ]
+          },
+          "sourceRoles": [
+            {
+              "kind": "file",
+              "label": "results/model_review/research_checkpoint_v1/verification.json",
+              "role": "保存的方法、结果或核查证据"
+            },
+            {
+              "kind": "file",
+              "label": "results/model_review/joint_liquidity_reproduction_v1/manifest.json",
+              "role": "保存的方法、结果或核查证据"
+            },
+            {
+              "kind": "file",
+              "label": "results/model_review/joint_liquidity_refit_v1/independent_audit.json",
+              "role": "保存的方法、结果或核查证据"
+            }
+          ],
+          "reportingPeriod": "2026-10-17至18执行阶段开发研究",
+          "columns": [
+            "测试通过数",
+            "已核不同文件",
+            "已执行笔记代码单元",
+            "联合阶段任务数",
+            "同源隔离复现",
+            "独立审计"
+          ],
+          "rows": [
+            {
+              "测试通过数": 496,
+              "已核不同文件": 592,
+              "已执行笔记代码单元": 30,
+              "联合阶段任务数": 30,
+              "同源隔离复现": "passed",
+              "独立审计": "passed"
+            }
+          ],
+          "methods": [
+            {
+              "language": "python",
+              "code": "# No model fit, market CSV read, policy selection, or final evaluation in this Sources builder."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

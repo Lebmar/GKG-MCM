@@ -1,0 +1,3745 @@
+{
+  "scope": "Same-ID/same-fold common automatic OOF paths; read saved arrays, no simulator or forecast called.",
+  "comparisons": [
+    {
+      "comparison": "new_methods_common_auto",
+      "left": "new_tie_set_refit",
+      "right": "new_canonical",
+      "common_paths": 48,
+      "all_named_arrays_exact": true,
+      "groups": [
+        {
+          "comparison": "new_methods_common_auto",
+          "outer_fold": 1,
+          "scenario_ids": [
+            1,
+            9,
+            13,
+            18,
+            26,
+            31,
+            34,
+            42,
+            44,
+            50,
+            51,
+            65,
+            66,
+            69,
+            73,
+            77,
+            78,
+            79,
+            84,
+            101,
+            109,
+            111,
+            113,
+            118
+          ],
+          "paths": 24,
+          "left_group": "c1__joint_tie_set_refit_learner",
+          "right_group": "c1__joint_canonical_learner",
+          "named_array_sets_equal": true,
+          "left_only_arrays": [],
+          "right_only_arrays": [],
+          "arrays_compared": 48,
+          "all_named_arrays_exact": true,
+          "arrays": [
+            {
+              "name": "actions",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "<U7",
+              "right_dtype": "<U7",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": null
+            },
+            {
+              "name": "added_severity",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "annual_prices",
+              "left_shape": [
+                1
+              ],
+              "right_shape": [
+                1
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "available_followup",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "int64",
+              "right_dtype": "int64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "cpi",
+              "left_shape": [
+                24,
+                31
+              ],
+              "right_shape": [
+                24,
+                31
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "current_drawdown",
+              "left_shape": [
+                24,
+                31
+              ],
+              "right_shape": [
+                24,
+                31
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "drawdown_at_trigger",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "end_weights",
+              "left_shape": [
+                24,
+                30,
+                3
+              ],
+              "right_shape": [
+                24,
+                30,
+                3
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "end_year_tv_drift",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "ever_breached",
+              "left_shape": [
+                24,
+                31
+              ],
+              "right_shape": [
+                24,
+                31
+              ],
+              "left_dtype": "bool",
+              "right_dtype": "bool",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": null
+            },
+            {
+              "name": "fee_fraction",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "fees",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "first_crossing",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "int64",
+              "right_dtype": "int64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "forecast_n",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "int64",
+              "right_dtype": "int64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "gate_reason",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "<U48",
+              "right_dtype": "<U48",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": null
+            },
+            {
+              "name": "holdings",
+              "left_shape": [
+                24,
+                31,
+                3
+              ],
+              "right_shape": [
+                24,
+                31,
+                3
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "loss_tolerances",
+              "left_shape": [
+                1
+              ],
+              "right_shape": [
+                1
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "moved",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "moved_fraction",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "nominal_wealth",
+              "left_shape": [
+                24,
+                31
+              ],
+              "right_shape": [
+                24,
+                31
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "observed_followup",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "int64",
+              "right_dtype": "int64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "peak_at_trigger",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "pending_at_decision",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "bool",
+              "right_dtype": "bool",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": null
+            },
+            {
+              "name": "posttrade_holdings",
+              "left_shape": [
+                24,
+                30,
+                3
+              ],
+              "right_shape": [
+                24,
+                30,
+                3
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "predicted_breach_count_delta_restore",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "int64",
+              "right_dtype": "int64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "predicted_growth_advantage_restore",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "predicted_score",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "pretrade_tv_drift",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "pretrade_wealth",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "qbad_hold_count",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "int64",
+              "right_dtype": "int64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "qbad_restore_count",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "int64",
+              "right_dtype": "int64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "qg_hold",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "qg_restore",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "real_peak",
+              "left_shape": [
+                24,
+                31
+              ],
+              "right_shape": [
+                24,
+                31
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "real_wealth",
+              "left_shape": [
+                24,
+                31
+              ],
+              "right_shape": [
+                24,
+                31
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "real_wealth_at_trigger",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "recovered",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "bool",
+              "right_dtype": "bool",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": null
+            },
+            {
+              "name": "recovery_endpoint",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "int64",
+              "right_dtype": "int64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "recovery_time",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "int64",
+              "right_dtype": "int64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "restoration_predicted_growth_sacrifice",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "bool",
+              "right_dtype": "bool",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": null
+            },
+            {
+              "name": "right_censored",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "bool",
+              "right_dtype": "bool",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": null
+            },
+            {
+              "name": "running_mdd",
+              "left_shape": [
+                24,
+                31
+              ],
+              "right_shape": [
+                24,
+                31
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "target_execution",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "bool",
+              "right_dtype": "bool",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": null
+            },
+            {
+              "name": "targets",
+              "left_shape": [
+                3
+              ],
+              "right_shape": [
+                3
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "terminal_excess",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "trades",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "bool",
+              "right_dtype": "bool",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": null
+            },
+            {
+              "name": "triggered",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "bool",
+              "right_dtype": "bool",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": null
+            },
+            {
+              "name": "weights",
+              "left_shape": [
+                24,
+                31,
+                3
+              ],
+              "right_shape": [
+                24,
+                31,
+                3
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            }
+          ]
+        },
+        {
+          "comparison": "new_methods_common_auto",
+          "outer_fold": 5,
+          "scenario_ids": [
+            4,
+            5,
+            6,
+            11,
+            14,
+            21,
+            22,
+            37,
+            41,
+            43,
+            52,
+            56,
+            60,
+            72,
+            80,
+            85,
+            86,
+            87,
+            88,
+            90,
+            92,
+            100,
+            104,
+            119
+          ],
+          "paths": 24,
+          "left_group": "c5__joint_tie_set_refit_learner",
+          "right_group": "c5__joint_canonical_learner",
+          "named_array_sets_equal": true,
+          "left_only_arrays": [],
+          "right_only_arrays": [],
+          "arrays_compared": 48,
+          "all_named_arrays_exact": true,
+          "arrays": [
+            {
+              "name": "actions",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "<U7",
+              "right_dtype": "<U7",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": null
+            },
+            {
+              "name": "added_severity",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "annual_prices",
+              "left_shape": [
+                1
+              ],
+              "right_shape": [
+                1
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "available_followup",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "int64",
+              "right_dtype": "int64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "cpi",
+              "left_shape": [
+                24,
+                31
+              ],
+              "right_shape": [
+                24,
+                31
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "current_drawdown",
+              "left_shape": [
+                24,
+                31
+              ],
+              "right_shape": [
+                24,
+                31
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "drawdown_at_trigger",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "end_weights",
+              "left_shape": [
+                24,
+                30,
+                3
+              ],
+              "right_shape": [
+                24,
+                30,
+                3
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "end_year_tv_drift",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "ever_breached",
+              "left_shape": [
+                24,
+                31
+              ],
+              "right_shape": [
+                24,
+                31
+              ],
+              "left_dtype": "bool",
+              "right_dtype": "bool",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": null
+            },
+            {
+              "name": "fee_fraction",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "fees",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "first_crossing",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "int64",
+              "right_dtype": "int64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "forecast_n",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "int64",
+              "right_dtype": "int64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "gate_reason",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "<U48",
+              "right_dtype": "<U48",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": null
+            },
+            {
+              "name": "holdings",
+              "left_shape": [
+                24,
+                31,
+                3
+              ],
+              "right_shape": [
+                24,
+                31,
+                3
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "loss_tolerances",
+              "left_shape": [
+                1
+              ],
+              "right_shape": [
+                1
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "moved",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "moved_fraction",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "nominal_wealth",
+              "left_shape": [
+                24,
+                31
+              ],
+              "right_shape": [
+                24,
+                31
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "observed_followup",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "int64",
+              "right_dtype": "int64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "peak_at_trigger",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "pending_at_decision",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "bool",
+              "right_dtype": "bool",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": null
+            },
+            {
+              "name": "posttrade_holdings",
+              "left_shape": [
+                24,
+                30,
+                3
+              ],
+              "right_shape": [
+                24,
+                30,
+                3
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "predicted_breach_count_delta_restore",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "int64",
+              "right_dtype": "int64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "predicted_growth_advantage_restore",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "predicted_score",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "pretrade_tv_drift",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "pretrade_wealth",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "qbad_hold_count",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "int64",
+              "right_dtype": "int64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "qbad_restore_count",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "int64",
+              "right_dtype": "int64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "qg_hold",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "qg_restore",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "real_peak",
+              "left_shape": [
+                24,
+                31
+              ],
+              "right_shape": [
+                24,
+                31
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "real_wealth",
+              "left_shape": [
+                24,
+                31
+              ],
+              "right_shape": [
+                24,
+                31
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "real_wealth_at_trigger",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "recovered",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "bool",
+              "right_dtype": "bool",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": null
+            },
+            {
+              "name": "recovery_endpoint",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "int64",
+              "right_dtype": "int64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "recovery_time",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "int64",
+              "right_dtype": "int64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "restoration_predicted_growth_sacrifice",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "bool",
+              "right_dtype": "bool",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": null
+            },
+            {
+              "name": "right_censored",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "bool",
+              "right_dtype": "bool",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": null
+            },
+            {
+              "name": "running_mdd",
+              "left_shape": [
+                24,
+                31
+              ],
+              "right_shape": [
+                24,
+                31
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "target_execution",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "bool",
+              "right_dtype": "bool",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": null
+            },
+            {
+              "name": "targets",
+              "left_shape": [
+                3
+              ],
+              "right_shape": [
+                3
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "terminal_excess",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "trades",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "bool",
+              "right_dtype": "bool",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": null
+            },
+            {
+              "name": "triggered",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "bool",
+              "right_dtype": "bool",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": null
+            },
+            {
+              "name": "weights",
+              "left_shape": [
+                24,
+                31,
+                3
+              ],
+              "right_shape": [
+                24,
+                31,
+                3
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "comparison": "new_canonical_old_floor0_common_auto",
+      "left": "new_canonical",
+      "right": "old_floor0_learner",
+      "common_paths": 48,
+      "all_named_arrays_exact": true,
+      "groups": [
+        {
+          "comparison": "new_canonical_old_floor0_common_auto",
+          "outer_fold": 1,
+          "scenario_ids": [
+            1,
+            9,
+            13,
+            18,
+            26,
+            31,
+            34,
+            42,
+            44,
+            50,
+            51,
+            65,
+            66,
+            69,
+            73,
+            77,
+            78,
+            79,
+            84,
+            101,
+            109,
+            111,
+            113,
+            118
+          ],
+          "paths": 24,
+          "left_group": "c1__joint_canonical_learner",
+          "right_group": "c1__nested_dynamic_learner",
+          "named_array_sets_equal": true,
+          "left_only_arrays": [],
+          "right_only_arrays": [],
+          "arrays_compared": 48,
+          "all_named_arrays_exact": true,
+          "arrays": [
+            {
+              "name": "actions",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "<U7",
+              "right_dtype": "<U7",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": null
+            },
+            {
+              "name": "added_severity",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "annual_prices",
+              "left_shape": [
+                1
+              ],
+              "right_shape": [
+                1
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "available_followup",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "int64",
+              "right_dtype": "int64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "cpi",
+              "left_shape": [
+                24,
+                31
+              ],
+              "right_shape": [
+                24,
+                31
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "current_drawdown",
+              "left_shape": [
+                24,
+                31
+              ],
+              "right_shape": [
+                24,
+                31
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "drawdown_at_trigger",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "end_weights",
+              "left_shape": [
+                24,
+                30,
+                3
+              ],
+              "right_shape": [
+                24,
+                30,
+                3
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "end_year_tv_drift",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "ever_breached",
+              "left_shape": [
+                24,
+                31
+              ],
+              "right_shape": [
+                24,
+                31
+              ],
+              "left_dtype": "bool",
+              "right_dtype": "bool",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": null
+            },
+            {
+              "name": "fee_fraction",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "fees",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "first_crossing",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "int64",
+              "right_dtype": "int64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "forecast_n",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "int64",
+              "right_dtype": "int64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "gate_reason",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "<U48",
+              "right_dtype": "<U48",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": null
+            },
+            {
+              "name": "holdings",
+              "left_shape": [
+                24,
+                31,
+                3
+              ],
+              "right_shape": [
+                24,
+                31,
+                3
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "loss_tolerances",
+              "left_shape": [
+                1
+              ],
+              "right_shape": [
+                1
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "moved",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "moved_fraction",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "nominal_wealth",
+              "left_shape": [
+                24,
+                31
+              ],
+              "right_shape": [
+                24,
+                31
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "observed_followup",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "int64",
+              "right_dtype": "int64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "peak_at_trigger",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "pending_at_decision",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "bool",
+              "right_dtype": "bool",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": null
+            },
+            {
+              "name": "posttrade_holdings",
+              "left_shape": [
+                24,
+                30,
+                3
+              ],
+              "right_shape": [
+                24,
+                30,
+                3
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "predicted_breach_count_delta_restore",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "int64",
+              "right_dtype": "int64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "predicted_growth_advantage_restore",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "predicted_score",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "pretrade_tv_drift",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "pretrade_wealth",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "qbad_hold_count",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "int64",
+              "right_dtype": "int64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "qbad_restore_count",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "int64",
+              "right_dtype": "int64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "qg_hold",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "qg_restore",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "real_peak",
+              "left_shape": [
+                24,
+                31
+              ],
+              "right_shape": [
+                24,
+                31
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "real_wealth",
+              "left_shape": [
+                24,
+                31
+              ],
+              "right_shape": [
+                24,
+                31
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "real_wealth_at_trigger",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "recovered",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "bool",
+              "right_dtype": "bool",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": null
+            },
+            {
+              "name": "recovery_endpoint",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "int64",
+              "right_dtype": "int64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "recovery_time",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "int64",
+              "right_dtype": "int64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "restoration_predicted_growth_sacrifice",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "bool",
+              "right_dtype": "bool",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": null
+            },
+            {
+              "name": "right_censored",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "bool",
+              "right_dtype": "bool",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": null
+            },
+            {
+              "name": "running_mdd",
+              "left_shape": [
+                24,
+                31
+              ],
+              "right_shape": [
+                24,
+                31
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "target_execution",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "bool",
+              "right_dtype": "bool",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": null
+            },
+            {
+              "name": "targets",
+              "left_shape": [
+                3
+              ],
+              "right_shape": [
+                3
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "terminal_excess",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "trades",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "bool",
+              "right_dtype": "bool",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": null
+            },
+            {
+              "name": "triggered",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "bool",
+              "right_dtype": "bool",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": null
+            },
+            {
+              "name": "weights",
+              "left_shape": [
+                24,
+                31,
+                3
+              ],
+              "right_shape": [
+                24,
+                31,
+                3
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            }
+          ]
+        },
+        {
+          "comparison": "new_canonical_old_floor0_common_auto",
+          "outer_fold": 5,
+          "scenario_ids": [
+            4,
+            5,
+            6,
+            11,
+            14,
+            21,
+            22,
+            37,
+            41,
+            43,
+            52,
+            56,
+            60,
+            72,
+            80,
+            85,
+            86,
+            87,
+            88,
+            90,
+            92,
+            100,
+            104,
+            119
+          ],
+          "paths": 24,
+          "left_group": "c5__joint_canonical_learner",
+          "right_group": "c5__nested_dynamic_learner",
+          "named_array_sets_equal": true,
+          "left_only_arrays": [],
+          "right_only_arrays": [],
+          "arrays_compared": 48,
+          "all_named_arrays_exact": true,
+          "arrays": [
+            {
+              "name": "actions",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "<U7",
+              "right_dtype": "<U7",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": null
+            },
+            {
+              "name": "added_severity",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "annual_prices",
+              "left_shape": [
+                1
+              ],
+              "right_shape": [
+                1
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "available_followup",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "int64",
+              "right_dtype": "int64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "cpi",
+              "left_shape": [
+                24,
+                31
+              ],
+              "right_shape": [
+                24,
+                31
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "current_drawdown",
+              "left_shape": [
+                24,
+                31
+              ],
+              "right_shape": [
+                24,
+                31
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "drawdown_at_trigger",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "end_weights",
+              "left_shape": [
+                24,
+                30,
+                3
+              ],
+              "right_shape": [
+                24,
+                30,
+                3
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "end_year_tv_drift",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "ever_breached",
+              "left_shape": [
+                24,
+                31
+              ],
+              "right_shape": [
+                24,
+                31
+              ],
+              "left_dtype": "bool",
+              "right_dtype": "bool",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": null
+            },
+            {
+              "name": "fee_fraction",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "fees",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "first_crossing",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "int64",
+              "right_dtype": "int64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "forecast_n",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "int64",
+              "right_dtype": "int64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "gate_reason",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "<U48",
+              "right_dtype": "<U48",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": null
+            },
+            {
+              "name": "holdings",
+              "left_shape": [
+                24,
+                31,
+                3
+              ],
+              "right_shape": [
+                24,
+                31,
+                3
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "loss_tolerances",
+              "left_shape": [
+                1
+              ],
+              "right_shape": [
+                1
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "moved",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "moved_fraction",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "nominal_wealth",
+              "left_shape": [
+                24,
+                31
+              ],
+              "right_shape": [
+                24,
+                31
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "observed_followup",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "int64",
+              "right_dtype": "int64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "peak_at_trigger",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "pending_at_decision",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "bool",
+              "right_dtype": "bool",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": null
+            },
+            {
+              "name": "posttrade_holdings",
+              "left_shape": [
+                24,
+                30,
+                3
+              ],
+              "right_shape": [
+                24,
+                30,
+                3
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "predicted_breach_count_delta_restore",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "int64",
+              "right_dtype": "int64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "predicted_growth_advantage_restore",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "predicted_score",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "pretrade_tv_drift",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "pretrade_wealth",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "qbad_hold_count",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "int64",
+              "right_dtype": "int64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "qbad_restore_count",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "int64",
+              "right_dtype": "int64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "qg_hold",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "qg_restore",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "real_peak",
+              "left_shape": [
+                24,
+                31
+              ],
+              "right_shape": [
+                24,
+                31
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "real_wealth",
+              "left_shape": [
+                24,
+                31
+              ],
+              "right_shape": [
+                24,
+                31
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "real_wealth_at_trigger",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "recovered",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "bool",
+              "right_dtype": "bool",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": null
+            },
+            {
+              "name": "recovery_endpoint",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "int64",
+              "right_dtype": "int64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "recovery_time",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "int64",
+              "right_dtype": "int64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "restoration_predicted_growth_sacrifice",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "bool",
+              "right_dtype": "bool",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": null
+            },
+            {
+              "name": "right_censored",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "bool",
+              "right_dtype": "bool",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": null
+            },
+            {
+              "name": "running_mdd",
+              "left_shape": [
+                24,
+                31
+              ],
+              "right_shape": [
+                24,
+                31
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "target_execution",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "bool",
+              "right_dtype": "bool",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": null
+            },
+            {
+              "name": "targets",
+              "left_shape": [
+                3
+              ],
+              "right_shape": [
+                3
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "terminal_excess",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            },
+            {
+              "name": "trades",
+              "left_shape": [
+                24,
+                30
+              ],
+              "right_shape": [
+                24,
+                30
+              ],
+              "left_dtype": "bool",
+              "right_dtype": "bool",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": null
+            },
+            {
+              "name": "triggered",
+              "left_shape": [
+                24
+              ],
+              "right_shape": [
+                24
+              ],
+              "left_dtype": "bool",
+              "right_dtype": "bool",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": false,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": null
+            },
+            {
+              "name": "weights",
+              "left_shape": [
+                24,
+                31,
+                3
+              ],
+              "right_shape": [
+                24,
+                31,
+                3
+              ],
+              "left_dtype": "float64",
+              "right_dtype": "float64",
+              "same_shape": true,
+              "same_dtype": true,
+              "equal_nan_applied": true,
+              "exact_values_equal": true,
+              "different_cells": 0,
+              "max_abs_finite_error": 0.0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "common_paths": 48,
+  "comparison_path_rows": 96,
+  "unique_scenario_ids_across_comparisons": 48,
+  "numeric_max_abs_error": 0.0,
+  "different_cells": 0,
+  "all_named_arrays_exactly_equal": true,
+  "states_and_actions_exactly_equal": true,
+  "Q_arrays_included": true,
+  "comparison_rows_not_independent_samples": true,
+  "not_a_claim_about_unobserved_actions_on_Review_paths": true
+}

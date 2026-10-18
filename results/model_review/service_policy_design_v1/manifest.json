@@ -1,0 +1,71 @@
+{
+  "completed_utc": "2026-10-18T02:51:07.067025+00:00",
+  "status": "complete_pure_governance_prototype_not_jointly_validated",
+  "sources": {
+    "docs/service_policy_refinement_contract.json": "cc379f88b88d70433a0cda382a577ede621dc1f85d5f0a78c319900af1f79818",
+    "docs/liquidity_policy_refinement_review.json": "0fca66a7765b6d2305ffeb2a04c60ccd53c63c7c48fefa28bcdc551624737886",
+    "scripts/build_service_policy_examples.py": "186c2ef7cfccb53d9932a4806c860867efd389abc52ae4c137dc185e074ec15d",
+    "research/experimental_execution/service_governance.py": "0600c38d751febb693311a6d57f1c19dcbea3006ecf8fc5e7b0e9dfaeb50f63f",
+    "tests/test_service_governance.py": "c17de781b7d1e510865e00ad7d264c3f62e7c567806a42f362a0b12329c4b233"
+  },
+  "sources_at_end": {
+    "docs/service_policy_refinement_contract.json": "cc379f88b88d70433a0cda382a577ede621dc1f85d5f0a78c319900af1f79818",
+    "docs/liquidity_policy_refinement_review.json": "0fca66a7765b6d2305ffeb2a04c60ccd53c63c7c48fefa28bcdc551624737886",
+    "scripts/build_service_policy_examples.py": "186c2ef7cfccb53d9932a4806c860867efd389abc52ae4c137dc185e074ec15d",
+    "research/experimental_execution/service_governance.py": "0600c38d751febb693311a6d57f1c19dcbea3006ecf8fc5e7b0e9dfaeb50f63f",
+    "tests/test_service_governance.py": "c17de781b7d1e510865e00ad7d264c3f62e7c567806a42f362a0b12329c4b233"
+  },
+  "input_sha256": {
+    "docs/problem_A.pdf": "2ac9412ed68349d36a3fbd2c6cddc5789a81dab8acbfa08c63a3bdb34d2aa2dd",
+    "docs/liquidity_policy_refinement_review.json": "0fca66a7765b6d2305ffeb2a04c60ccd53c63c7c48fefa28bcdc551624737886",
+    "docs/liquidity_service_design.json": "049938f609d704a1fe5dde682deaf9645101cfb66a7d813e96d31b9c22f0c218",
+    "docs/positive_asset_specification_protocol.json": "ff23c3fcdad54d83a2896a11459db1cec3e4f48fe6352d994139e4c9ff79475c",
+    "results/model_review/positive_asset_specification_v1/manifest.json": "da65841decff7d50ec7baa8fe80c4e6593112ea0c7d083affe2a0dd68f2f306e",
+    "results/model_review/positive_asset_specification_v1/nested_context_refits.json": "d13450e05051c02d2bf54a4edfc77ef01d880cee0c78238cc3d7204a6ab27aa1"
+  },
+  "input_sha256_at_end": {
+    "docs/problem_A.pdf": "2ac9412ed68349d36a3fbd2c6cddc5789a81dab8acbfa08c63a3bdb34d2aa2dd",
+    "docs/liquidity_policy_refinement_review.json": "0fca66a7765b6d2305ffeb2a04c60ccd53c63c7c48fefa28bcdc551624737886",
+    "docs/liquidity_service_design.json": "049938f609d704a1fe5dde682deaf9645101cfb66a7d813e96d31b9c22f0c218",
+    "docs/positive_asset_specification_protocol.json": "ff23c3fcdad54d83a2896a11459db1cec3e4f48fe6352d994139e4c9ff79475c",
+    "results/model_review/positive_asset_specification_v1/manifest.json": "da65841decff7d50ec7baa8fe80c4e6593112ea0c7d083affe2a0dd68f2f306e",
+    "results/model_review/positive_asset_specification_v1/nested_context_refits.json": "d13450e05051c02d2bf54a4edfc77ef01d880cee0c78238cc3d7204a6ab27aa1"
+  },
+  "outputs_sha256": {
+    "source_catalogue_and_training_candidates.json": "59b78721891e5412959ae498251bd94a34fcabd20c1a7910d288073401fa6dfa",
+    "profile_proposals.json": "59d20ca01694ba01388a5b439e7b674cedb5cff72f66e02deba56313026cad40",
+    "profile_proposals.csv": "741208a16b3b0007ce111972be62e8b78eb628dcc619adf06de27f414d1a04cf",
+    "training_candidate_screen.csv": "4534a96583d54fe2368d4a03622d367618092e6a3e5516c6ee2a2cc7ab5151c3",
+    "coverage_and_units.json": "19d3e957a8efd86b0af917427d1a328fa4cc5937d1a7c3c6687586a61062afd0",
+    "runtime_examples.json": "166277f0a5655e762284fc8bd32d94a964402d1f246a347a6a921f3d8f739de9",
+    "interpretation.json": "0237365d1e4179fc5da5c5368c7305cb012ddd42fa9311d7c2bdd8e0ab9d2499"
+  },
+  "checks": {
+    "saved_training_pairs_read": 15,
+    "policy_cases": 2,
+    "example_profile_rows": 10,
+    "conditional_primary_assignments_recomputed": {
+      "A": "Review",
+      "B": "Conservative",
+      "C": "Balanced",
+      "D": "Review",
+      "E": "Balanced"
+    },
+    "new_formally_admitted_examples": 0,
+    "financial_results_generated": false,
+    "drift_only_not_a_review_gate": true,
+    "history_preserved": true,
+    "coverage_units_separated": true
+  },
+  "new_market_data_loaded": false,
+  "final_scenarios_loaded": false,
+  "new_fit_forecast_or_simulation": false,
+  "old_archives_modified": false,
+  "limitations": [
+    "Conditional training-catalogue examples only; not new joint validation or a final service.",
+    "Pure receipt matching cannot authenticate evidence; caller must verify hashes/audit and substantive scope.",
+    "Fit-lineage matching prevents cross-fit receipt reuse; it is not a demand for independent new-market evaluation of each final refit or a risk certificate.",
+    "Normative reserve convention is not a live cash floor, liability model or uniquely identified preference.",
+    "No market path, return forecast, financial fallback, adviser response or emergency liquidation is produced."
+  ]
+}

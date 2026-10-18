@@ -1,0 +1,92 @@
+{
+  "version": "refit-admission-descriptive-diagnostics-v1",
+  "declared_utc": "2026-10-18T02:31:59.391506+00:00",
+  "status": "Declared before numerical diagnostic execution; reused development evidence only. Not a new policy or parameter choice.",
+  "scope": {
+    "allowed_scenario_ids": [
+      1,
+      120
+    ],
+    "inclusive": true,
+    "raw_market_csv_loaded": false,
+    "final_scenarios_loaded": false,
+    "new_dynamic_simulation": false,
+    "new_fitting": false,
+    "rejected_outer_financial_outcomes_computed": false,
+    "original_stage": "nested_dynamic_calibration_v1",
+    "all_training_jobs": 30,
+    "betas": [
+      0,
+      0.025,
+      0.05,
+      0.075,
+      0.1
+    ],
+    "price_family": "the saved nine candidates; risk_first is a label, not an infinite fitted eta",
+    "focus_contexts": [
+      "outer_fold_2",
+      "outer_fold_4"
+    ]
+  },
+  "diagnostics": [
+    {
+      "id": "task_beta_ledger",
+      "definition": "For every job and beta: n, original target/gamma/case, reference annual kB, floor(beta*n+1e-12), min(kB,floor), saved dynamic minK, count gap, feasible orders, selected order and all feasible growth ties in one global1e-12 band. Reconcile with saved full training path records. Group raw floors, effective caps, feasible sets and chosen orders separately; do not invert an observed rejection into a proposed beta."
+    },
+    {
+      "id": "inner_beta_equivalence",
+      "definition": "For each context, group beta values by the complete saved per-original-validation-path vector of job/case/status/admission/selected order. Same vector identifies the same already frozen selected deterministic controllers, because target/fan are beta-independent within each job. Separately group complete saved financial metrics; equal aggregate means alone are insufficient. Record empirical eligibility, coverage and canonical smallest-beta choice; no population identifiability claim."
+    },
+    {
+      "id": "nominal_price_distinguishability",
+      "definition": "Within each training job compare the nine saved candidate path outcome vectors and per-beta objective ties. If full saved metric vectors coincide, call only recorded-outcome equivalence; unselected training action traces and Q states were not retained, so do not infer identical actions or identify a continuous eta. Different outputs distinguish grid candidates on this training support only. Risk-first remains a separate lexicographic label."
+    },
+    {
+      "id": "inner_to_refit_ledger",
+      "definition": "All24 inner/refit pairs: preserve ID sets, size, static gamma, Q1 assignment, target weights/IDs and target L1 change. For each beta compare cap/minK/gap and selected order. Algebraic gap change=minK change-cap change is not a causal attribution; the minimizing price can also change."
+    },
+    {
+      "id": "dynamic_training_count_decomposition",
+      "definition": "At each fixed nominal candidate order, using saved training outcomes only: k_refit-k_inner=(refit events on retained IDs - inner events on retained IDs)+refit events on newly added IDs, with upward/downward event flips and all ID witnesses. Inner T is subset of refit S. The controller is endogenous to both target and training fan; common market path does not mean common state/policy. No new outcome for rejected outer paths."
+    },
+    {
+      "id": "fixed_annual_target_cross",
+      "definition": "Use only frozen H30 annual-policy MDD cache. For each inner/refit target pair compute four k(T,target_inner),k(T,target_refit),k(S,target_inner),k(S,target_refit) and their retained/added counts. Report target-first and addition-first algebraic decompositions and their interaction; these are fixed-annual-cache contrasts, not attribution of dynamic controller risk."
+    }
+  ],
+  "outputs": [
+    "task_beta_mechanisms.csv",
+    "task_beta_platforms.json",
+    "inner_beta_equivalence.json",
+    "price_outcome_equivalence.json",
+    "inner_refit_changes.csv",
+    "inner_refit_beta_comparison.csv",
+    "dynamic_training_count_decomposition.csv",
+    "decomposition_witnesses.json",
+    "fixed_annual_target_cross.csv",
+    "focus_contexts.json",
+    "findings.json",
+    "manifest.json"
+  ],
+  "boundaries": [
+    "No parameter, tie, admission, coverage or liquidity rule will be changed here.",
+    "Integer counts, target identity and same-ID membership will be exact; the existing growth tie guard is1e-12 and event definition MDD-L>1e-12.",
+    "The repeated development data and overlapping folds do not supply independent distributional calibration.",
+    "Static risk-only/Q2 Balanced-only case distinctions remain as saved.",
+    "No source/result under the old stage, src, report or output will be modified.",
+    "Input and diagnostic-source SHA recorded before and after; diagnose only if frozen parent/audit/cache identities match."
+  ],
+  "frozen_input_sha256": {
+    "docs/nested_dynamic_calibration_protocol.json": "bdd065bed90856eddd7d18061f3fc1e6cc852e5730fa122be5b1f587391a266c",
+    "results/model_review/nested_dynamic_calibration_v1/manifest.json": "ace4e900da9311dc1d8750b21a9ef572a75fc28126cbe90ef0a80106daca8fd9",
+    "results/model_review/nested_dynamic_calibration_v1/independent_audit.json": "831012267f0cec785e07f1e3164ae46b1f0bbaa9dfeacfb276460a0ed77fcf8e",
+    "results/model_review/nested_dynamic_calibration_v1/static_refits.json": "931c8d8a12d3f638bb1d75c711a3be7c31218692f5140ecbd3572b369e62278b",
+    "results/model_review/nested_dynamic_calibration_v1/training_candidate_paths.csv": "ef61f2ad2ea966739000ac3743f299b1b56cd40b78fff79d8a6465851207c092",
+    "results/model_review/nested_dynamic_calibration_v1/training_candidate_summary.csv": "05da8fd64ae5bdcda7ddb224a030afba5649c4b341dbb1850c2549aa1526b046",
+    "results/model_review/nested_dynamic_calibration_v1/inner_validation_paths.csv": "b4ec9ff862b4300fe3160d70893ce125018150fcc8110e8383c6bc897b8abe46",
+    "results/model_review/nested_dynamic_calibration_v1/beta_summaries.csv": "76826d3cd7e5b4ad1e374d7451cbe5f0027aba7cfb566d586e966efc89fb76e2",
+    "results/model_review/nested_dynamic_calibration_v1/context_selections.json": "9b78c88c83ed8c78bf37cdb40bc5851a23c4e9fcdd284d23def29796f630e515",
+    "results/model_review/risk_menu_v1/cache/step_0500__cost_002500.npz": "558b547574265a6fce5befa6803a55b9d7cbd8cc01a66603d38e080c880d97bb",
+    "results/model_review/risk_menu_v1/cache/step_0500__cost_002500.json": "225a36e8585bf6c5f310979193264a84c88ce98170d60c0d04665abb6bc6b804"
+  }
+}

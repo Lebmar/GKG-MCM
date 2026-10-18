@@ -1,0 +1,111 @@
+{
+  "scope": "synthetic governance states, not observed returns, population facts or financial results",
+  "cases": {
+    "actual_drift_only_notice": {
+      "request_review": false,
+      "review_reason_codes": [],
+      "notices": [
+        "bill_share_below_target",
+        "bill_share_below_policy_target_floor"
+      ],
+      "target_bill_floor": 0.3,
+      "target_bill_weight": 0.5,
+      "actual_bill_weight": 0.25,
+      "observed_policy_floor_gap": 0.04999999999999999,
+      "freeze_unapproved_new_targets": false,
+      "decision_action": null,
+      "existing_controller_disposition": "unchanged_by_drift_notice",
+      "emergency_liability_action": null,
+      "history": {
+        "original_horizon": 6,
+        "elapsed": 2,
+        "holdings": [
+          65,
+          10,
+          25
+        ],
+        "cpi": 1,
+        "real_peak": 110,
+        "running_mdd": 0.2,
+        "ever_breached": false
+      },
+      "history_reset": false,
+      "live_cash_floor_guaranteed": false
+    },
+    "known_need_change_no_invented_investment_action": {
+      "request_review": true,
+      "review_reason_codes": [
+        "known_liquidity_need_changed"
+      ],
+      "notices": [
+        "bill_share_below_target",
+        "bill_share_below_policy_target_floor"
+      ],
+      "target_bill_floor": 0.3,
+      "target_bill_weight": 0.5,
+      "actual_bill_weight": 0.25,
+      "observed_policy_floor_gap": 0.04999999999999999,
+      "freeze_unapproved_new_targets": true,
+      "decision_action": null,
+      "existing_controller_disposition": "caller_manages_authorized_pending_policy",
+      "emergency_liability_action": null,
+      "history": {
+        "original_horizon": 6,
+        "elapsed": 2,
+        "holdings": [
+          65,
+          10,
+          25
+        ],
+        "cpi": 1,
+        "real_peak": 110,
+        "running_mdd": 0.2,
+        "ever_breached": false
+      },
+      "history_reset": false,
+      "live_cash_floor_guaranteed": false
+    },
+    "existing_pending_no_risk_reset_or_automatic_reentry": {
+      "request_review": true,
+      "review_reason_codes": [
+        "review_already_pending_no_automatic_reentry"
+      ],
+      "notices": [],
+      "target_bill_floor": 0.3,
+      "target_bill_weight": 0.5,
+      "actual_bill_weight": 0.7,
+      "observed_policy_floor_gap": 0.0,
+      "freeze_unapproved_new_targets": true,
+      "decision_action": null,
+      "existing_controller_disposition": "caller_manages_authorized_pending_policy",
+      "emergency_liability_action": null,
+      "history": {
+        "original_horizon": 6,
+        "elapsed": 2,
+        "holdings": [
+          65,
+          10,
+          25
+        ],
+        "cpi": 1,
+        "real_peak": 110,
+        "running_mdd": 0.42,
+        "ever_breached": true
+      },
+      "history_reset": false,
+      "live_cash_floor_guaranteed": false
+    },
+    "reject_incompatible_new_target_without_modifying_weights": {
+      "target_reserve_compatible": false,
+      "target_bill_floor": 0.3,
+      "target_weights": [
+        0.7,
+        0.1,
+        0.2
+      ],
+      "reason_code": "reject_target_below_ordinal_reserve_convention",
+      "risk_or_execution_approved": false,
+      "decision_action": null
+    }
+  }
+}

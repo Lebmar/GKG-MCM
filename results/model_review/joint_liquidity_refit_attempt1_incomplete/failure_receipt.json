@@ -1,0 +1,16 @@
+{
+  "status": "incomplete_code_error",
+  "recorded_utc": "2026-10-18T03:06:51.931713+00:00",
+  "completed_jobs": 4,
+  "stopped_job": "c0_refit",
+  "error": "q1_records: duplicate floor keyword passed into dict constructor",
+  "correction": "Use an explicit dictionary merge for the matching floor diagnostic. Add realistic duplicate-key Q1 fixture before rerunning. No parameters, IDs, selection, floors or financial kernels change.",
+  "interpretation": "No complete study summary or deployable result. Descriptive full training data were processed before the export error; the rerun is not first data exposure. No outcome-dependent policy change.",
+  "outputs_sha256": {
+    "failure_log.txt": "6d4714c34f6101c8ad6f29b2e4ed83b75dbf847878fab65a7e29482d9dcf41b8",
+    "run_source.py.txt": "b479596b16c75c6b6b944a11b912533b439dd121ec69ca35d9762cd79a04eb7b",
+    "protocol_snapshot.json": "4d7dbbd245fcdcfce4ace925a9059322a1a4985e3960ddad5050c5547b3fbaf3",
+    "progress.json": "910ce78c6468748e92b336c2cbd3c60ca76b1c3fc1b2790ded4b9697c97ac608"
+  },
+  "final_scenarios_loaded": false
+}

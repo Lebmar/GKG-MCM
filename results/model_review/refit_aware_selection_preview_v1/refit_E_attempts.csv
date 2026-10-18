@@ -1,0 +1,7 @@
+context,job_id,beta,n_training,reference_kB,cap,feasible_orders,selected_order,maximum_eligible_mean_log_growth,execution_status
+full_development,c0_refit,0.075,120,9,9,"[4, 5, 6, 7, 8]",4.0,0.04357928389877332,automated
+outer_fold_1,c1_refit,0.1,96,7,7,"[5, 6, 7, 8]",5.0,0.04140344504564731,automated
+outer_fold_2,c2_refit,0.05,96,6,4,[],,,execution_review
+outer_fold_2,c2_refit,0.075,96,6,6,"[4, 5, 6, 7, 8]",4.0,0.044475133015390696,automated
+outer_fold_4,c4_refit,0.05,96,7,4,[],,,execution_review
+outer_fold_5,c5_refit,0.075,96,6,6,"[4, 5, 6, 7, 8]",4.0,0.04186466818574794,automated

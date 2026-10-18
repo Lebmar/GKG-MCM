@@ -1,0 +1,25 @@
+context,inner_job,refit_job,inner_n,refit_n,inner_gamma,refit_gamma,inner_assignment,refit_assignment,inner_case,refit_case,inner_target,refit_target,inner_weights,refit_weights,same_target,target_L1,retained_n,added_n,removed_n,same_training_fan,controller_identity_preserved
+full_development,c0_inner1,c0_refit,90,120,0.1,0.075,Balanced,Balanced,balanced_case,balanced_case,157,155,"[0.45, 0.15, 0.4]","[0.45, 0.05, 0.5]",False,0.19999999999999996,90,30,0,False,False
+full_development,c0_inner2,c0_refit,90,120,0.075,0.075,Balanced,Balanced,balanced_case,balanced_case,146,155,"[0.4, 0.25, 0.35]","[0.45, 0.05, 0.5]",False,0.4,90,30,0,False,False
+full_development,c0_inner3,c0_refit,90,120,0.075,0.075,Balanced,Balanced,balanced_case,balanced_case,145,155,"[0.4, 0.2, 0.4]","[0.45, 0.05, 0.5]",False,0.3,90,30,0,False,False
+full_development,c0_inner4,c0_refit,90,120,0.075,0.075,Balanced,Balanced,balanced_case,balanced_case,157,155,"[0.45, 0.15, 0.4]","[0.45, 0.05, 0.5]",False,0.19999999999999996,90,30,0,False,False
+outer_fold_1,c1_inner1,c1_refit,72,96,0.05,0.075,Balanced,Balanced,balanced_case,balanced_case,133,146,"[0.35, 0.3, 0.35]","[0.4, 0.25, 0.35]",False,0.10000000000000003,72,24,0,False,False
+outer_fold_1,c1_inner2,c1_refit,72,96,0.1,0.075,Balanced,Balanced,balanced_case,balanced_case,157,146,"[0.45, 0.15, 0.4]","[0.4, 0.25, 0.35]",False,0.20000000000000004,72,24,0,False,False
+outer_fold_1,c1_inner3,c1_refit,72,96,0.075,0.075,Balanced,Balanced,balanced_case,balanced_case,145,146,"[0.4, 0.2, 0.4]","[0.4, 0.25, 0.35]",False,0.10000000000000003,72,24,0,False,False
+outer_fold_1,c1_inner4,c1_refit,72,96,0.05,0.075,Balanced,Balanced,balanced_case,balanced_case,143,146,"[0.4, 0.1, 0.5]","[0.4, 0.25, 0.35]",False,0.30000000000000004,72,24,0,False,False
+outer_fold_2,c2_inner1,c2_refit,72,96,0.05,0.075,Balanced,Balanced,balanced_case,balanced_case,146,146,"[0.4, 0.25, 0.35]","[0.4, 0.25, 0.35]",True,0.0,72,24,0,False,False
+outer_fold_2,c2_inner2,c2_refit,72,96,0.05,0.075,Balanced,Balanced,balanced_case,balanced_case,143,146,"[0.4, 0.1, 0.5]","[0.4, 0.25, 0.35]",False,0.30000000000000004,72,24,0,False,False
+outer_fold_2,c2_inner3,c2_refit,72,96,0.05,0.075,Balanced,Balanced,balanced_case,balanced_case,143,146,"[0.4, 0.1, 0.5]","[0.4, 0.25, 0.35]",False,0.30000000000000004,72,24,0,False,False
+outer_fold_2,c2_inner4,c2_refit,72,96,0.05,0.075,Balanced,Balanced,balanced_case,balanced_case,143,146,"[0.4, 0.1, 0.5]","[0.4, 0.25, 0.35]",False,0.30000000000000004,72,24,0,False,False
+outer_fold_3,c3_inner1,c3_refit,72,96,0.075,0.075,Balanced,Balanced,balanced_case,balanced_case,157,157,"[0.45, 0.15, 0.4]","[0.45, 0.15, 0.4]",True,0.0,72,24,0,False,False
+outer_fold_3,c3_inner2,c3_refit,72,96,0.075,0.075,Balanced,Balanced,balanced_case,balanced_case,157,157,"[0.45, 0.15, 0.4]","[0.45, 0.15, 0.4]",True,0.0,72,24,0,False,False
+outer_fold_3,c3_inner3,c3_refit,72,96,0.05,0.075,Balanced,Balanced,balanced_case,balanced_case,155,157,"[0.45, 0.05, 0.5]","[0.45, 0.15, 0.4]",False,0.19999999999999996,72,24,0,False,False
+outer_fold_3,c3_inner4,c3_refit,72,96,0.075,0.075,Balanced,Balanced,balanced_case,balanced_case,157,157,"[0.45, 0.15, 0.4]","[0.45, 0.15, 0.4]",True,0.0,72,24,0,False,False
+outer_fold_4,c4_inner1,c4_refit,72,96,0.05,0.075,Balanced,Balanced,balanced_case,balanced_case,143,157,"[0.4, 0.1, 0.5]","[0.45, 0.15, 0.4]",False,0.19999999999999996,72,24,0,False,False
+outer_fold_4,c4_inner2,c4_refit,72,96,0.075,0.075,Balanced,Balanced,balanced_case,balanced_case,167,157,"[0.5, 0.05, 0.45]","[0.45, 0.15, 0.4]",False,0.19999999999999996,72,24,0,False,False
+outer_fold_4,c4_inner3,c4_refit,72,96,0.05,0.075,Balanced,Balanced,balanced_case,balanced_case,145,157,"[0.4, 0.2, 0.4]","[0.45, 0.15, 0.4]",False,0.1,72,24,0,False,False
+outer_fold_4,c4_inner4,c4_refit,72,96,0.05,0.075,Balanced,Balanced,balanced_case,balanced_case,145,157,"[0.4, 0.2, 0.4]","[0.45, 0.15, 0.4]",False,0.1,72,24,0,False,False
+outer_fold_5,c5_inner1,c5_refit,72,96,0.05,0.075,Balanced,Balanced,balanced_case,balanced_case,147,146,"[0.4, 0.3, 0.3]","[0.4, 0.25, 0.35]",False,0.09999999999999998,72,24,0,False,False
+outer_fold_5,c5_inner2,c5_refit,72,96,0.05,0.075,Balanced,Balanced,balanced_case,balanced_case,143,146,"[0.4, 0.1, 0.5]","[0.4, 0.25, 0.35]",False,0.30000000000000004,72,24,0,False,False
+outer_fold_5,c5_inner3,c5_refit,72,96,0.075,0.075,Balanced,Balanced,balanced_case,balanced_case,146,146,"[0.4, 0.25, 0.35]","[0.4, 0.25, 0.35]",True,0.0,72,24,0,False,False
+outer_fold_5,c5_inner4,c5_refit,72,96,0.025,0.075,Balanced,Balanced,balanced_case,balanced_case,131,146,"[0.35, 0.2, 0.45]","[0.4, 0.25, 0.35]",False,0.20000000000000007,72,24,0,False,False

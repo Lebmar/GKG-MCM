@@ -1,0 +1,58 @@
+{
+  "status": "passed",
+  "completed_utc": "2026-10-18T02:50:17.599357+00:00",
+  "contract_sha256": "d139340300c65bd28f3869bce061b120e1925cb95cfb0660151a2e95905e8d50",
+  "source_evidence_sha256_start": {
+    "scripts/preview_refit_aware_selection.py": "e9e8e879bb0d2c74c586c5a079b07acc7c75937686d5bd4558a7ad5194536735",
+    "research/experimental_execution/refit_aware_selection.py": "12d90c14e1208143014a4d0f9d8eadd69960bd966308f24d5d13f7873866d7c6",
+    "research/experimental_execution/nested_dynamic_selection.py": "a293daf2383477e4b33fffd5dacad04ab8fbc71dc92edab2c9f9ff492a28aa20",
+    "tests/test_refit_aware_selection.py": "aa67e9188916e68b4ff8562b80c1ffc2f0dc33488ed346e1464d54801d7c7300",
+    "docs/refit_aware_selection_contract.json": "d139340300c65bd28f3869bce061b120e1925cb95cfb0660151a2e95905e8d50",
+    "docs/nested_dynamic_calibration_protocol.json": "bdd065bed90856eddd7d18061f3fc1e6cc852e5730fa122be5b1f587391a266c",
+    "results/model_review/nested_dynamic_calibration_v1/manifest.json": "ace4e900da9311dc1d8750b21a9ef572a75fc28126cbe90ef0a80106daca8fd9",
+    "results/model_review/nested_dynamic_calibration_v1/beta_summaries.csv": "76826d3cd7e5b4ad1e374d7451cbe5f0027aba7cfb566d586e966efc89fb76e2",
+    "results/model_review/nested_dynamic_calibration_v1/inner_validation_paths.csv": "b4ec9ff862b4300fe3160d70893ce125018150fcc8110e8383c6bc897b8abe46",
+    "results/model_review/nested_dynamic_calibration_v1/static_refits.json": "931c8d8a12d3f638bb1d75c711a3be7c31218692f5140ecbd3572b369e62278b",
+    "results/model_review/nested_dynamic_calibration_v1/training_candidate_summary.csv": "05da8fd64ae5bdcda7ddb224a030afba5649c4b341dbb1850c2549aa1526b046",
+    "results/model_review/nested_dynamic_calibration_v1/training_candidate_paths.csv": "ef61f2ad2ea966739000ac3743f299b1b56cd40b78fff79d8a6465851207c092",
+    "results/model_review/nested_dynamic_calibration_v1/context_selections.json": "9b78c88c83ed8c78bf37cdb40bc5851a23c4e9fcdd284d23def29796f630e515"
+  },
+  "source_evidence_sha256_end": {
+    "scripts/preview_refit_aware_selection.py": "e9e8e879bb0d2c74c586c5a079b07acc7c75937686d5bd4558a7ad5194536735",
+    "research/experimental_execution/refit_aware_selection.py": "12d90c14e1208143014a4d0f9d8eadd69960bd966308f24d5d13f7873866d7c6",
+    "research/experimental_execution/nested_dynamic_selection.py": "a293daf2383477e4b33fffd5dacad04ab8fbc71dc92edab2c9f9ff492a28aa20",
+    "tests/test_refit_aware_selection.py": "aa67e9188916e68b4ff8562b80c1ffc2f0dc33488ed346e1464d54801d7c7300",
+    "docs/refit_aware_selection_contract.json": "d139340300c65bd28f3869bce061b120e1925cb95cfb0660151a2e95905e8d50",
+    "docs/nested_dynamic_calibration_protocol.json": "bdd065bed90856eddd7d18061f3fc1e6cc852e5730fa122be5b1f587391a266c",
+    "results/model_review/nested_dynamic_calibration_v1/manifest.json": "ace4e900da9311dc1d8750b21a9ef572a75fc28126cbe90ef0a80106daca8fd9",
+    "results/model_review/nested_dynamic_calibration_v1/beta_summaries.csv": "76826d3cd7e5b4ad1e374d7451cbe5f0027aba7cfb566d586e966efc89fb76e2",
+    "results/model_review/nested_dynamic_calibration_v1/inner_validation_paths.csv": "b4ec9ff862b4300fe3160d70893ce125018150fcc8110e8383c6bc897b8abe46",
+    "results/model_review/nested_dynamic_calibration_v1/static_refits.json": "931c8d8a12d3f638bb1d75c711a3be7c31218692f5140ecbd3572b369e62278b",
+    "results/model_review/nested_dynamic_calibration_v1/training_candidate_summary.csv": "05da8fd64ae5bdcda7ddb224a030afba5649c4b341dbb1850c2549aa1526b046",
+    "results/model_review/nested_dynamic_calibration_v1/training_candidate_paths.csv": "ef61f2ad2ea966739000ac3743f299b1b56cd40b78fff79d8a6465851207c092",
+    "results/model_review/nested_dynamic_calibration_v1/context_selections.json": "9b78c88c83ed8c78bf37cdb40bc5851a23c4e9fcdd284d23def29796f630e515"
+  },
+  "outputs_sha256": {
+    "per_context_selection.json": "c283f8a54140befc3eb30a7f7d18c21fcd4de0386b741f11060490584871294f",
+    "inner_sets_and_behavior_classes.json": "6f53451324305d3c53172c3b0079aa3ee0a3e9b97751e0a1900181543ec8210b",
+    "refit_E_attempts.csv": "c915184bf688ec755ec15b3f13c25ff5ccb0fcfc4222475448128f97a071135c",
+    "mechanical_training_comparison.csv": "76281e6ec406c89724c04bf2cec2bc9e3b2bb4974929b52f2dd0c1d7bde6c9f7"
+  },
+  "contexts": 6,
+  "refit_E_attempts": 6,
+  "new_simulation": false,
+  "new_fitting": false,
+  "raw_market_data_loaded": false,
+  "market_arrays_loaded": false,
+  "outer_financial_data_read": false,
+  "final_scenarios_loaded": false,
+  "previous_stage_or_tie_modified": false,
+  "new_learner_definition": true,
+  "limitations": [
+    "Six-fit mechanical training preview only; not new learner OOF coverage/risk or market performance.",
+    "Original eligible set, top inner-evidence set E and per-path selected-controller behavior classes remain distinct.",
+    "Every attempted beta belongs to E and <=alpha; original price risk cap, fee, target and training evidence unchanged.",
+    "No rejected path investment outcomes are generated, and no annual reference becomes a service fallback.",
+    "A future full learner evaluation would require a separately frozen protocol; this preview never relabels old OOF."
+  ]
+}

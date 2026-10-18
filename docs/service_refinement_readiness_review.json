@@ -1,0 +1,549 @@
+{
+  "version": "service-refinement-readiness-review-v1",
+  "created_utc": "2026-10-18T03:20:04.700Z",
+  "status": "本轮研究规则及其联合开发验证已闭环；尚未执行本轮primary的最终情景评价，旧V1 final曾暴露；不是最终提交稿或真实服务认证。",
+  "scope": {
+    "new_market_fit": false,
+    "new_simulation": false,
+    "new_final_evaluation": false,
+    "raw_final_scenarios_read": false,
+    "read_new_numeric_outputs_only_after_manifest_and_independent_audit_passed": true,
+    "frozen_files_modified": false,
+    "new_file_only": "docs/service_refinement_readiness_review.json",
+    "paper_written": false,
+    "source_reading": "逐页读取三页题面；只读冻结crosswalk、规范/协议、算法及已通过审计的保存产物。"
+  },
+  "source_priority": {
+    "problem": "题面是交付要求的依据；本清单不改题面。",
+    "old_crosswalk": "docs/problem_A_deliverable_crosswalk.json保留历史状态；其中流动性尚未操作化、Balanced-only尚待执行等历史缺口已由本轮新协议及验证部分补上，不能反向修改旧记录。",
+    "older_liquidity_design": "docs/liquidity_service_design.json曾把部署层额外事实当竞赛层必要输入；后续docs/liquidity_policy_refinement_review.json明确纠正：竞赛短问卷是完整toy输入，不因题面未给金额/日期令所有五例自动Review。",
+    "new_authoritative_numeric_stage": "docs/joint_liquidity_refit_protocol.json与其冻结source/manifest定义本轮实际学习器；旧固定目录postfilter示例不代表新联合重拟结果。",
+    "no_snapshot_of_live_editorial_work": "不锁定正在更新的notebook、README、checkpoint或下游后处理产物。"
+  },
+  "authoritative_policy_identity": {
+    "scope": "本阶段已经有明确、可重建的权威数值规则。治理原型是说明与身份检查层，不能再用其旧proposal函数重新排序并替换实际静态输出。",
+    "actual_rule_id": "joint_liquidity_refit_v1__static_joint_30_10_0__Q2_top_E_refit_aware_fixed_target",
+    "protocol": {
+      "path": "docs/joint_liquidity_refit_protocol.json",
+      "sha256": "1e92a4f7b374bd7437315c89e513a830f12211b54cb08d3c4341dffdc9f1e3f6"
+    },
+    "Q1": {
+      "rule_id": "joint_strict172_gamma_calibrated_raw_menu_with_original_admission_v1",
+      "adapter_path": "research/experimental_execution/joint_liquidity_static.py",
+      "adapter_sha256": "f12fc90a78594f91a11c46a4ca7306237024404098df467e9dc66e110ee78c10",
+      "menu_source_path": "research/safeinvest_research/selection.py",
+      "menu_source_sha256": "ea4aeeca113f73c04d56fa48498f34fc41af39730bb046b97548233dc0f26e3a",
+      "menu_objective": "五profile的联合风险/流动性可行oracle及共同菜单：原覆盖率、最大增长遗憾、平均增长遗憾与全局容差/规范索引顺序。每个静态子折及refit都重新拟合。",
+      "assignment_order": "可行共同产品中先保留G>=global_max_G−1e−12，然后精确最小(excess,CVaR90,candidate_index)；不另用旧governance.propose_assignment的逐层严重度容差带重排。",
+      "gamma_and_admission": "原四静态子折、五profile原始OOF目标及gamma候选、路径池化、最后零inner-auto证据准入保护均保留。"
+    },
+    "Q2": {
+      "rule_id": "joint_tie_set_refit_learner",
+      "selector_path": "research/experimental_execution/refit_aware_selection.py",
+      "selector_sha256": "12d90c14e1208143014a4d0f9d8eadd69960bd966308f24d5d13f7873866d7c6",
+      "execution_kernel_path": "research/experimental_execution/risk_priced_fan_rollout.py",
+      "execution_kernel_sha256": "2a935cfe1d039f6a020e104fe92aa659bb92aac2a0b3bed2ef767437015ba472",
+      "selection": "仅Balanced case；inner eligible→最大auto路径数→单次全局G带得到全部E；只在E内按beta升序取第一个refit训练可准入者，再沿原九价训练增长/price-order选择。全部失败则executionReview。",
+      "actual_gate": "初配mandatory；之后比较两动作接同own-b参考B的训练calendar fan，总净log增长差减originalH*eta*事件概率差，严格大于1e−12才restore；risk-first为独立整数风险优先候选；实际b=1后pending hold。"
+    },
+    "governance_fingerprint": {
+      "field": "liquidity_policy_fingerprint",
+      "meaning": "contest_ordinal_target_reserve_v1规范来源参考及目标reserve说明；不是完整Q1 proposal排序或Q2 admission receipt的替代。",
+      "important_difference": "service_governance.propose_assignment的G/excess/CVaR逐层全局带+标签顺序，与实际冻结fit_menu的G带后精确excess/CVaR/candidateID顺序不完全相同。此为接口身份/解释边界，不是本次数值结果错误。",
+      "final_wiring_acceptance": "以后服务接线直接调用实际static过程并保存actual_rule_id/source/protocol/fit lineage；不得为生成proposal再调旧governance函数重排。真实whole-service receipt实例及认证仍未完成。"
+    }
+  },
+  "answers_to_user_questions": [
+    {
+      "id": "PARAMETER_NONUNIQUENESS",
+      "readiness": "已给出可执行的有限候选解释与集合选择；未证明统计学结构不可识别。",
+      "distinctions": [
+        "beta可因整数cap、相同训练入选价格或同inner结果而落在有限平台；同一个最高目标值可有多个beta，最小值tie只是规范选择，不是估计出唯一真实参数。",
+        "E只含inner风险eligible中覆盖精确最大且G在单次全局1e−12带内的全部beta；E不是所有eligible，也不等于逐路径控制器行为等价类。",
+        "记录的财务指标相同不保证动作树或所有未来状态相同；同nominal eta也不保证目标/fan/状态变化后的控制器相同。",
+        "eta是技术执行候选的风险价格，gamma/beta是不同层训练screen，alpha=.1是服务参考；均不是短问卷识别的真实风险厌恶、真实KKT乘子或概率保证。",
+        "有限经验目标有并列或行为平台，不能推出不同参数在所有可观测分布下统计不可识别。尚未建立似然、识别映射、信息量、置信区间或统一的结构参数估计问题。"
+      ],
+      "implemented_response": "保留最高inner目标集合E，再以当前refit训练证据在E内确定准入；不从外折收益选beta，不把E外较好者作为fallback。",
+      "remaining": "讨论时可解释‘参数不唯一但决策仍可确定’，不应宣称已估出唯一客户偏好或证明全局不可识别。",
+      "evidence": [
+        "docs/refit_aware_selection_contract.json",
+        "research/experimental_execution/refit_aware_selection.py",
+        "results/model_review/joint_liquidity_refit_v1/context_selections.json"
+      ]
+    },
+    {
+      "id": "REFIT_FAILURE_MECHANISMS",
+      "readiness": "已分开机械准入、证据与规范原因；未识别各变化因素的唯一因果贡献。",
+      "taxonomy": [
+        {
+          "reason": "numerical_or_export_failure",
+          "meaning": "首轮导出重复floor关键字的TypeError是实现故障，不是风险不适配或‘无解’；失败archive和修复回归保留。"
+        },
+        {
+          "reason": "Q1_calibration_unsupported",
+          "meaning": "无eligible静态gamma，rawfit=NULL。"
+        },
+        {
+          "reason": "Q1_no_inner_auto_evidence",
+          "meaning": "refit原始推荐存在，但该profile在所选gamma内层没有自动证据，effectiveReview。"
+        },
+        {
+          "reason": "Q1_risk_or_liquidity_or_intersection",
+          "meaning": "分别记录全172的risk/liquidity/joint候选数及menujoint数；不把相容性失败一律叫风险失败。"
+        },
+        {
+          "reason": "not_balanced_case",
+          "meaning": "有效Q1是Conservative/Growth，属于Q2范围之外，不是riskReview或executionReview；Q2金融NULL。"
+        },
+        {
+          "reason": "no_inner_eligible_beta_or_empty_E",
+          "meaning": "完整inner过程没有支持的自动子组风险/覆盖/增长证据，不能把零auto当零风险。"
+        },
+        {
+          "reason": "selected_beta_refit_has_no_admissible_price",
+          "meaning": "现S目标与训练fan/状态下九个完整控制器都未通过该beta具体cap；不是数值求解器失败。"
+        },
+        {
+          "reason": "all_E_refit_fail",
+          "meaning": "E内每一个beta均不支持现S训练准入，保留Review；不能借E外beta救覆盖。"
+        }
+      ],
+      "observed_new_stage": {
+        "outer2": {
+          "E": [
+            0.05,
+            0.075,
+            0.1
+          ],
+          "canonical_beta": 0.05,
+          "canonical_specific_cap": 4,
+          "canonical_status": "execution_review",
+          "primary_attempts": [
+            {
+              "beta": 0.05,
+              "specific_cap": 4,
+              "selected_order": null
+            },
+            {
+              "beta": 0.075,
+              "specific_cap": 6,
+              "selected_order": 4
+            }
+          ],
+          "interpretation": "不改变alpha或cap公式；换到E内另一beta会改变本次具体预算，不能说具体cap完全未变。"
+        },
+        "outer3": {
+          "E": [],
+          "primary_status": "execution_review",
+          "reason": "no_top_inner_beta"
+        },
+        "outer4": {
+          "E": [
+            0.05
+          ],
+          "primary_status": "execution_review",
+          "reason": "no_refit_feasible_beta_in_top_E",
+          "outside_E_rescue_permitted": false
+        }
+      },
+      "causal_boundary": "四inner→refit同时改变训练身份/分布、静态gamma/共同目标、fan和随之而来的状态与控制器；整数floor只是其中一个机械因素。保存的匹配ID/名义价格分解及固定年度目标交叉诊断不是动态控制器的单因素因果实验。",
+      "evidence": [
+        "results/model_review/refit_admission_diagnostics_v1/",
+        "results/model_review/joint_liquidity_refit_v1/context_selections.json",
+        "results/model_review/joint_liquidity_refit_v1/fit_admission.csv",
+        "results/model_review/joint_liquidity_refit_attempt1_incomplete/failure_receipt.json"
+      ]
+    },
+    {
+      "id": "COVERAGE_AND_LIQUIDITY",
+      "readiness": "已在竞赛短问卷层落为一个完整联合规范和明确覆盖分母；不等于真实流动性识别或人群覆盖。",
+      "contest_rule": {
+        "High": 0.3,
+        "Medium": 0.1,
+        "Low": "不施加额外类别floor；仍受strict172三资产正权重规格约束。",
+        "unit": "获配目标中票据代理的财富份额",
+        "effect": "在每个inner/refit的风险可行集、oracle、菜单和适配里共同生效，非旧菜单末端筛选。",
+        "not_inferred": "这些数值是公开规范惯例，不是提款额/时点、客户授权、数据估计出的需求或最优三元组。",
+        "unrun_alternative": "50/20/0仅设计敏感性；不能声称本轮已验证对该惯例稳健。"
+      },
+      "coverage_units": [
+        {
+          "unit": "illustrative_questionnaire_cases",
+          "denominator": "题例A–E共5个，非客户人口样本",
+          "meaning": "Q1最终标签表，不能用推荐数/5估计人群覆盖。"
+        },
+        {
+          "unit": "training_refit_runs",
+          "denominator": "五个相互重叠outer训练fit；full120另作描述",
+          "observed_primary_auto_fits": 3,
+          "observed_canonical_auto_fits": 2,
+          "meaning": "3/5与2/5是已完成任务的C自动准入计数，不是独立成功概率。"
+        },
+        {
+          "unit": "market_scenario_paths",
+          "denominator": "本例C的outer120原身份，按case与auto分层",
+          "primary_auto": 72,
+          "primary_execution_review": 48,
+          "canonical_auto": 48,
+          "canonical_execution_review": 72,
+          "meaning": "72/120与48/120是该客户模型在市场路径池上的自动服务权重，不能解释成60%/40%客户。"
+        },
+        {
+          "unit": "decision_periods",
+          "denominator": "获准路径各自H次年度决策，含初配",
+          "meaning": "trade_fraction是正资金转移占全部H次年度决策期的比例（含初配，pending期仍留在分母），区别于初始准入或目标身份更新。"
+        }
+      ],
+      "partition": "originalN=BalancedCaseN+Q1ReviewN+notBalancedN；BalancedCaseN=autoN+executionReviewN。所有未获Q2自动服务的金融值NULL；参考策略可用性另列。",
+      "deployment_boundary": "真实金额、日期、外部储备、等待/变现条件仍未知。它们不被虚构来完成竞赛，也不作为额外缺失项令五例一律Review；真实部署必须另核实。目标floor不保证漂移后的实际bill份额、未知年内流动性或任何固定购买力义务。",
+      "drift_and_pending": "实际bill份额低于目标惯例只notice；不因漂移自动强制交易/Review。需求或模型适用性改变可请求review，不能重置H/CPI/peak/MDD/b；已breach后的pendinghold只是无人回应代理，仍有市场暴露。",
+      "evidence": [
+        "docs/liquidity_policy_refinement_review.json",
+        "docs/service_policy_refinement_contract.json",
+        "docs/joint_liquidity_refit_protocol.json",
+        "results/model_review/joint_liquidity_refit_v1/q1_context_assignments.csv",
+        "results/model_review/joint_liquidity_refit_v1/fit_admission.csv"
+      ]
+    }
+  ],
+  "observed_stage_closure": {
+    "manifest_path": "results/model_review/joint_liquidity_refit_v1/manifest.json",
+    "manifest_sha256": "28819dca54041e22ae53ac924b71e023c005f96cd73ca66d102b3a1ac20a4c99",
+    "independent_audit_path": "results/model_review/joint_liquidity_refit_v1/independent_audit.json",
+    "independent_audit_sha256": "16339e76e41e07b6f37fbd0c88baff3ffe77d245e77258ef9bc8060fd79b3a15",
+    "audit_status": "passed",
+    "checks_passed": 538236,
+    "selected_actual_accounts": 840,
+    "selected_inner_accounts": 600,
+    "active_scalar_Q_subset": 91,
+    "pending_Q_skips": 2,
+    "guarded_development_ids": "1..120 only",
+    "hash_verification": {
+      "status": "passed",
+      "manifest_dependency_hash_counts": {
+        "sources": 27,
+        "input_sha256": 20,
+        "outputs_sha256": 19
+      },
+      "audit_checks": 538236
+    },
+    "scope": "全部172联合mask/oracle及保存选择算术；own-H Q1 cached评价；全部已选actual/inner物理重放；预声明Q子集。不重跑静态global搜索或未保存九价training state树，不构成概率认证。",
+    "primary_declared_before_these_outputs": "joint_tie_set_refit_learner",
+    "outer_observation": {
+      "primary": {
+        "original_n": 120,
+        "balanced_case_n": 120,
+        "automatic_n": 72,
+        "execution_review_n": 48,
+        "breach_count": 5,
+        "conditional_risk_denominator": 72
+      },
+      "canonical": {
+        "original_n": 120,
+        "balanced_case_n": 120,
+        "automatic_n": 48,
+        "execution_review_n": 72,
+        "breach_count": 2,
+        "conditional_risk_denominator": 48
+      },
+      "added_group": {
+        "context": "outer_fold_2",
+        "automatic_n": 24,
+        "breach_count": 3
+      },
+      "interpretation": "共同auto48路径两方法保存的金融结果相同；新primary另服务24路径。5/72与2/48的不同自动子组不能直接当同一人口风险升降，也没有给旧Review组补投资收益。"
+    },
+    "not_a_new_blind_test": "开发路径已多次用于设计；旧V1最终60情景曾暴露。外折重拟与独立算术审计不能恢复未见样本身份。"
+  },
+  "current_Q1_full120_conditional_explanations": [
+    {
+      "profile": "A",
+      "H": 5,
+      "L": 0.1,
+      "liquidity": "High",
+      "target_floor": 0.3,
+      "assignment": "Review",
+      "reason": "在本fit选定gamma=.075、strict172有限族和自身H5/L.10下无风险可行候选；不是因没有题面外提款日期。不能扩为服务alpha=.1或所有可能组合均不可行。"
+    },
+    {
+      "profile": "B",
+      "H": 15,
+      "L": 0.25,
+      "liquidity": "Medium",
+      "target_floor": 0.1,
+      "assignment": "Conservative",
+      "target_equity_bond_bill": [
+        0.25,
+        0.3,
+        0.45
+      ],
+      "reason": "按自身H15/L.25有模型支持且45%目标bill满足10%类别惯例；仍为条件建议。"
+    },
+    {
+      "profile": "C",
+      "H": 30,
+      "L": 0.4,
+      "liquidity": "Low",
+      "target_floor": 0,
+      "assignment": "Balanced",
+      "target_equity_bond_bill": [
+        0.45,
+        0.05,
+        0.5
+      ],
+      "reason": "按自身H30/L.40有Q1支持，Low不加类别floor；Q2还需该训练fit执行准入，不能只凭Balanced标签承诺自动服务。"
+    },
+    {
+      "profile": "D",
+      "H": 25,
+      "L": 0.15,
+      "liquidity": "Medium",
+      "target_floor": 0.1,
+      "assignment": "Review",
+      "reason": "在本fit选定gamma=.075、strict172有限族和自身H25/L.15下无风险可行候选；长H不消除较紧L。不能称所有市场组合/alpha=.1下不可服务。"
+    },
+    {
+      "profile": "E",
+      "H": 6,
+      "L": 0.35,
+      "liquidity": "High",
+      "target_floor": 0.3,
+      "assignment": "Growth",
+      "target_equity_bond_bill": [
+        0.65,
+        0.05,
+        0.3
+      ],
+      "reason": "新联合拟合的Growth已持30%目标bill，满足High惯例，并按自身H6评分。旧固定目录postfilter的E=Balanced只是旧示例，不能用于本轮结论；票据代理仍有购买力风险。"
+    }
+  ],
+  "deliverable_readiness": [
+    {
+      "id": "COMMON_ACCOUNTING_AND_CAUSALITY",
+      "status": "implemented_audited_research",
+      "provided": "100 bills初始、initial fee/每期exact一次费、真实CPI/净实际wealth、年度非预见动作、own-b/peak历史与pending已审；无提款/终端清算。",
+      "remaining": "最终讲解要明确initial mandatory例外、训练fan不是实际未来/真实条件法则、年度端点观测范围。",
+      "evidence": [
+        "src/safeinvest/core.py",
+        "results/model_review/joint_liquidity_refit_v1/independent_audit.json"
+      ]
+    },
+    {
+      "id": "Q1_GROWTH_AND_ORDINARY_RISK",
+      "status": "pure_postprocessing_provided_final_presentation_pending",
+      "provided": "own-H路径含log_growth/cagr/volatility/terminal_real/mdd；稳定下游q1_own_horizon_annual_summary已提供meanG、medianCAGR、P10CAGR、median volatility等。",
+      "remaining": "最终展示把普通年度实际收益波动和极端损失并列解释；不需重新拟合来补这些指标。",
+      "no_new_fit_needed": true,
+      "evidence": [
+        "results/model_review/joint_liquidity_summary_v1/q1_own_horizon_annual_summary.csv",
+        "results/model_review/joint_liquidity_summary_v1/manifest.json"
+      ]
+    },
+    {
+      "id": "Q1_TAIL_AND_PURCHASING_POWER",
+      "status": "pure_postprocessing_provided_final_presentation_pending",
+      "provided": "费用后实际MDD越大代表损失越大；稳定own-H后处理表已提供P90MDD、fractional CVaR90和mean excess，连同普通波动与P10CAGR。",
+      "remaining": "最终材料按A–E原H解释；Review保留NULL，不能拿C-H30动态结果替代E-H6；尾部指标不是客户L保证。",
+      "no_new_fit_needed": true,
+      "evidence": [
+        "results/model_review/joint_liquidity_summary_v1/q1_own_horizon_annual_summary.csv",
+        "results/model_review/joint_liquidity_summary_v1/manifest.json"
+      ]
+    },
+    {
+      "id": "Q1_THREE_PRODUCTS_AND_A_TO_E",
+      "status": "new_joint_catalogue_assignments_and_reasons_present",
+      "provided": "full菜单C/B/G为25/30/45、45/5/50、65/5/30；六final context均A/DReview、BConservative、CBalanced、EGrowth。30个profile-fit记录和1200own-H路径已保存。",
+      "remaining": "最终材料用本轮conditional解释，区分full目录与外折学习规则；菜单仅有限族支持、非连续全局最优；不把所有Review叫不可服务。"
+    },
+    {
+      "id": "Q2_BALANCED_CASE_AND_ADMISSION",
+      "status": "implemented_with_full_denominators",
+      "provided": "每个inner/refit的effective Q1标签先判case；本轮C均Balanced；金融NULL/Review/outside及参考可用性分开。",
+      "remaining": "真实服务receipt尚未接线，研究automated标签不等于真实部署审批；不把分母为0当0风险。"
+    },
+    {
+      "id": "Q2_BENEFIT_COST_AND_BEHAVIOR_LOGIC",
+      "status": "rule_traces_and_Q_evidence_present",
+      "provided": "冻结NO-UPDATE九价控制器、当前hold/restore、同目标未来B、一次收费、originalH风险价、pending后hold；已保存actual/inner state与gate理由、Q子集独立审计。",
+      "remaining": "尚需面向用户的清晰流程说明，公开‘benefit’为净风险定价目标；降风险可使负原始增长差被接受，eta不代表客户已表达的风险偏好。"
+    },
+    {
+      "id": "Q2_EQUAL_THIRDS_BASELINE",
+      "status": "implemented_and_audited",
+      "provided": "exact thirds每次annual restore、含initial cost、不因breach停机；同H30原场景。B为单独target匹配参考。",
+      "remaining": "比较时保留假想参考标记和共同auto子组；不得把B当无逐笔benefit gate的自动fallback。"
+    },
+    {
+      "id": "Q2_REQUIRED_MEDIAN_P10_P90_AND_TRADING",
+      "status": "summary_and_ordinary_volatility_postprocessing_provided",
+      "provided": "冻结summary已有median_cagr,p10_cagr,median_mdd,p90_mdd,cvar90_mdd,mean_trade_fraction；稳定下游c_scope_summary另展示median_volatility。median取标准中位数，P10/P90用inverted_cdf。",
+      "remaining": "最终展示按full描述/outer探索/auto子组分清单位；trade_fraction分母为全部H次年度决策期，含初配和pending期。不可平均折分位数。",
+      "evidence": [
+        "results/model_review/joint_liquidity_refit_v1/summary.csv",
+        "results/model_review/joint_liquidity_summary_v1/c_scope_summary.csv",
+        "results/model_review/joint_liquidity_summary_v1/manifest.json"
+      ],
+      "new_fit_needed_for_metrics": false
+    },
+    {
+      "id": "Q2_SEVERE_LOSS_EPISODE",
+      "status": "not_yet_completed_for_new_joint_primary",
+      "provided": "新已选trace支持财富峰谷/费用/动作/首次breach分析；旧episode只是历史候选。",
+      "remaining": "须预先声明新primary严重情景的选择口径或解释固定旧例的用途，再从保存trace后处理；不挑有利案例，不回头调整策略。"
+    },
+    {
+      "id": "Q2_WEIGHT_UPDATES_ADD_VALUE",
+      "status": "fixed_target_choice_declared_new_joint_increment_not_tested",
+      "provided": "本轮事前限定NO-UPDATE九价族；旧bounded18族在旧菜单上有增量研究。",
+      "remaining": "最终可说明当前选择固定目标且不启用自动权重更新；不能把旧菜单下NO-UPDATE入选当新30/10/0菜单下更新无价值的验证。若要对当前新菜单作增量实证，需另冻完整同边界对照；本清单不启动。"
+    },
+    {
+      "id": "Q2_CUSTOMER_EXPLANATION_LE50_WORDS",
+      "status": "historical_candidate_only_final_alignment_pending",
+      "provided": "旧开发episode有41-word candidate，旧V1另有历史解释。",
+      "remaining": "新primary需<=50英文词、明确human adviser及L非保证、准确说明pending仍有风险；不能把‘request your review’含混为人工服务已发生。可写新独立文案，不修改冻结episode。"
+    },
+    {
+      "id": "Q3_ASSUMPTION_OR_COST_STRESS",
+      "status": "historical_diagnostics_exist_not_current_primary_closed",
+      "provided": "旧known-cost及calendar/temporal诊断已审；本轮明确fan与数值/规范边界。",
+      "remaining": "旧压力针对旧选定controller/menu；新target/选择器不能自动继承。最终主推荐若要声称cost/assumption下是否改变，需严格核对相同规则的现有证据或另冻必要检查。固定参数不等于风险/动作不变。"
+    },
+    {
+      "id": "Q3_REVIEW_AND_PENDING",
+      "status": "financial_trigger_implemented_other_channels_design",
+      "provided": "年度D−L>1e−12首次crossing后下一decision hold，历史b/peak/CPI/H不重置；无人工回应代理。目标bill漂移仅notice。",
+      "remaining": "输入失败/模型失效/真实需求改变的渠道、真实人工响应、重入/紧急流动性处理主要是服务契约设计；不能把一个金融crossing触发等同完整人审系统或减少已发生首次超限。"
+    },
+    {
+      "id": "CONCLUSION_AND_FINAL_EVALUATION",
+      "status": "new_research_primary_defined_final_contest_conclusion_pending",
+      "provided": "本轮研究primary已在新输出前指定，具有可重建产品/适配/执行规则。",
+      "remaining": "最终是否采纳及规范解释仍供用户决定；未执行新primary的121–180评价。旧final暴露须披露，即使以后按题面评价，也不能叫fresh blind样本。本轮不读/评估121–180。"
+    },
+    {
+      "id": "ENGLISH_REPORT_AND_ZIP",
+      "status": "not_started_for_this_refined_model",
+      "provided": "代码、协议、已审研究结果可作为后续材料。",
+      "remaining": "新版<=10 A4页/字体>=11pt英文报告、作者姓名、AI段落、正确归属/许可、补充代码ZIP<=50MB和提交检查尚未完成；旧V1论文/ZIP不能直接作为新模型交付。本轮按授权范围不写论文。"
+    }
+  ],
+  "next_decision_checklist": [
+    {
+      "priority": 1,
+      "decision": "向用户确认本轮规范解释与研究primary是否作为下一版主推荐",
+      "acceptance": "明确30/10/0是竞赛规范、实际权威Q1/Q2规则及Review边界；不按新outer输赢再选floor或替换primary。"
+    },
+    {
+      "priority": 2,
+      "decision": "完成仅后处理的题目指标与解释展示",
+      "acceptance": "整合已生成C和Q1 own-H指标表及波动/尾部展示；补A–E文字解释、行为流程、严重情景、<=50词解释，保留NULL/分母和单位。"
+    },
+    {
+      "priority": 3,
+      "decision": "核对是否需要当前新primary的Q3敏感性或target-update增量",
+      "acceptance": "先确认旧证据是否相同target/menu/learner；若不同不得沿用稳健性结论，新研究另冻范围，不能在此清单内补跑。"
+    },
+    {
+      "priority": 4,
+      "decision": "完成数值复现与规范身份说明",
+      "acceptance": "独立审计已passed；同源隔离replay由root独立wrapper处理，未完成前不在本清单预支byte-exact声明；接线使用actual_rule_id而非旧proposal重排。"
+    },
+    {
+      "priority": 5,
+      "decision": "最终评价与提交另阶段处理",
+      "acceptance": "先冻结最终完整规则与披露旧final暴露；由用户决定下一阶段按题面做评价/论文/ZIP，本次设计核查不执行。"
+    }
+  ],
+  "acceptance_limits": [
+    "本轮有数值规则和联合流程验证，不应再笼统说‘流动性完全未处理’；也不能说真实流动性或客户偏好已被识别。",
+    "研究自动准入增加同时改变已服务子组；公开新增组的观察事件，不能把Review当0损失来优化表现。",
+    "独立实现算术审计、固定候选内校准和同源复现各有价值，均不把重复开发数据变成概率认证或fresh holdout。",
+    "所有新市场结果只在通过主manifest及独立audit后读取；未拟合/模拟/读取final，未更改任何冻结文件。"
+  ],
+  "provenance": {
+    "relative_paths_root": "/Users/lebmar/Documents/ChatGPT/GKG数模",
+    "sources_and_evidence_at_start": {
+      "docs/problem_A.pdf": "2ac9412ed68349d36a3fbd2c6cddc5789a81dab8acbfa08c63a3bdb34d2aa2dd",
+      "docs/problem_A_deliverable_crosswalk.json": "1c476d8d2117d8dcad2d16d2bd686fe13aab91c2f37069392af7d21a2dc3bf65",
+      "docs/joint_liquidity_refit_protocol.json": "1e92a4f7b374bd7437315c89e513a830f12211b54cb08d3c4341dffdc9f1e3f6",
+      "docs/refit_aware_selection_contract.json": "d139340300c65bd28f3869bce061b120e1925cb95cfb0660151a2e95905e8d50",
+      "docs/service_policy_refinement_contract.json": "cc379f88b88d70433a0cda382a577ede621dc1f85d5f0a78c319900af1f79818",
+      "docs/liquidity_policy_refinement_review.json": "0fca66a7765b6d2305ffeb2a04c60ccd53c63c7c48fefa28bcdc551624737886",
+      "docs/liquidity_service_design.json": "049938f609d704a1fe5dde682deaf9645101cfb66a7d813e96d31b9c22f0c218",
+      "docs/service_governance_independent_review.json": "bdb0c164d0ef1e1e3531962566850e0cc0dcdb81436e4801c24ac464f6434fa1",
+      "docs/dynamic_calibration_next_stage.json": "c7322f82c78dfbb08f618583e851a503d07d3d4d576e7fd7fc0eba45ea2f1113",
+      "scripts/run_joint_liquidity_refit.py": "d6c6dfa2b18fd4b0fcfc9ec97b6a822c87f50ea1f42b2ee763d06a394e8641fe",
+      "research/experimental_execution/joint_liquidity_static.py": "f12fc90a78594f91a11c46a4ca7306237024404098df467e9dc66e110ee78c10",
+      "research/experimental_execution/service_governance.py": "0600c38d751febb693311a6d57f1c19dcbea3006ecf8fc5e7b0e9dfaeb50f63f",
+      "results/model_review/joint_liquidity_refit_v1/manifest.json": "28819dca54041e22ae53ac924b71e023c005f96cd73ca66d102b3a1ac20a4c99",
+      "results/model_review/joint_liquidity_refit_v1/independent_audit.json": "16339e76e41e07b6f37fbd0c88baff3ffe77d245e77258ef9bc8060fd79b3a15",
+      "results/model_review/joint_liquidity_refit_v1/summary.csv": "9ac9994acaea95c2dd4e40caee3f6856325e315283d8ba7cf9c3843e02e23eb3",
+      "results/model_review/joint_liquidity_refit_v1/q1_context_assignments.csv": "931ee3905c6ec5438f19c1821077a5f5f7ae18f0bc44421eab56edb04b83b79e",
+      "results/model_review/joint_liquidity_refit_v1/q1_summary.csv": "8c9dac47358906c3251ab5bce26255db246dcb702a8c486f40e0048f87890601",
+      "results/model_review/joint_liquidity_refit_v1/fit_admission.csv": "0952a06a58d17369bd463f4f766a9cbddb9494f4c974891509efb2b1a8a50e59",
+      "results/model_review/joint_liquidity_refit_v1/context_selections.json": "9620df702547f68f7c0d304e664d5bb433500c08138a492a4bdba9fae2d4321b",
+      "results/model_review/joint_liquidity_refit_v1/paired_summary.csv": "d61d70e85a21d1b52d1161042b365a06435c54ed66ff3bea7580f0b00392c633",
+      "results/model_review/joint_liquidity_refit_v1/client_paths.csv": "821447bb511aef53fb7743d7ddcf763d7f3acf007993b52ce26897c1a59d4c2e",
+      "results/model_review/joint_liquidity_refit_attempt1_incomplete/failure_receipt.json": "a4244d1106fba6cd7fc35425b784a43bec350c6ffb99ac9505a81d2fc5d4e967",
+      "research/experimental_execution/nested_dynamic_selection.py": "a293daf2383477e4b33fffd5dacad04ab8fbc71dc92edab2c9f9ff492a28aa20",
+      "research/safeinvest_research/selection.py": "ea4aeeca113f73c04d56fa48498f34fc41af39730bb046b97548233dc0f26e3a",
+      "research/safeinvest_research/metrics.py": "7ec8e4821ce284351a3d8ed7071c687fdf7d6e4cfd225f72cad1d09d623eb008",
+      "research/experimental_execution/refit_aware_selection.py": "12d90c14e1208143014a4d0f9d8eadd69960bd966308f24d5d13f7873866d7c6",
+      "research/experimental_execution/risk_priced_fan_rollout.py": "2a935cfe1d039f6a020e104fe92aa659bb92aac2a0b3bed2ef767437015ba472",
+      "docs/review_pending_design_contract.json": "27516c993a31ea5eec2fa80559f2caddf3a9ce72cb08e7e0bf4d058160109200",
+      "results/model_review/joint_liquidity_summary_v1/manifest.json": "1d174fa266ee34a19545ada22fdd72dee1b8dc072c962bd9ce82a0d4fee97be1",
+      "results/model_review/joint_liquidity_summary_v1/c_scope_summary.csv": "0e9453de6ef1fe034020b8fe058aebeb519fd64e14e3b24670096bcaf7088904",
+      "results/model_review/joint_liquidity_summary_v1/q1_own_horizon_annual_summary.csv": "994dbb5f54f34405662ed7debe707d44ebc1674193900443ff1a3fed70f0de92"
+    },
+    "sources_and_evidence_at_end": {
+      "docs/problem_A.pdf": "2ac9412ed68349d36a3fbd2c6cddc5789a81dab8acbfa08c63a3bdb34d2aa2dd",
+      "docs/problem_A_deliverable_crosswalk.json": "1c476d8d2117d8dcad2d16d2bd686fe13aab91c2f37069392af7d21a2dc3bf65",
+      "docs/joint_liquidity_refit_protocol.json": "1e92a4f7b374bd7437315c89e513a830f12211b54cb08d3c4341dffdc9f1e3f6",
+      "docs/refit_aware_selection_contract.json": "d139340300c65bd28f3869bce061b120e1925cb95cfb0660151a2e95905e8d50",
+      "docs/service_policy_refinement_contract.json": "cc379f88b88d70433a0cda382a577ede621dc1f85d5f0a78c319900af1f79818",
+      "docs/liquidity_policy_refinement_review.json": "0fca66a7765b6d2305ffeb2a04c60ccd53c63c7c48fefa28bcdc551624737886",
+      "docs/liquidity_service_design.json": "049938f609d704a1fe5dde682deaf9645101cfb66a7d813e96d31b9c22f0c218",
+      "docs/service_governance_independent_review.json": "bdb0c164d0ef1e1e3531962566850e0cc0dcdb81436e4801c24ac464f6434fa1",
+      "docs/dynamic_calibration_next_stage.json": "c7322f82c78dfbb08f618583e851a503d07d3d4d576e7fd7fc0eba45ea2f1113",
+      "scripts/run_joint_liquidity_refit.py": "d6c6dfa2b18fd4b0fcfc9ec97b6a822c87f50ea1f42b2ee763d06a394e8641fe",
+      "research/experimental_execution/joint_liquidity_static.py": "f12fc90a78594f91a11c46a4ca7306237024404098df467e9dc66e110ee78c10",
+      "research/experimental_execution/service_governance.py": "0600c38d751febb693311a6d57f1c19dcbea3006ecf8fc5e7b0e9dfaeb50f63f",
+      "results/model_review/joint_liquidity_refit_v1/manifest.json": "28819dca54041e22ae53ac924b71e023c005f96cd73ca66d102b3a1ac20a4c99",
+      "results/model_review/joint_liquidity_refit_v1/independent_audit.json": "16339e76e41e07b6f37fbd0c88baff3ffe77d245e77258ef9bc8060fd79b3a15",
+      "results/model_review/joint_liquidity_refit_v1/summary.csv": "9ac9994acaea95c2dd4e40caee3f6856325e315283d8ba7cf9c3843e02e23eb3",
+      "results/model_review/joint_liquidity_refit_v1/q1_context_assignments.csv": "931ee3905c6ec5438f19c1821077a5f5f7ae18f0bc44421eab56edb04b83b79e",
+      "results/model_review/joint_liquidity_refit_v1/q1_summary.csv": "8c9dac47358906c3251ab5bce26255db246dcb702a8c486f40e0048f87890601",
+      "results/model_review/joint_liquidity_refit_v1/fit_admission.csv": "0952a06a58d17369bd463f4f766a9cbddb9494f4c974891509efb2b1a8a50e59",
+      "results/model_review/joint_liquidity_refit_v1/context_selections.json": "9620df702547f68f7c0d304e664d5bb433500c08138a492a4bdba9fae2d4321b",
+      "results/model_review/joint_liquidity_refit_v1/paired_summary.csv": "d61d70e85a21d1b52d1161042b365a06435c54ed66ff3bea7580f0b00392c633",
+      "results/model_review/joint_liquidity_refit_v1/client_paths.csv": "821447bb511aef53fb7743d7ddcf763d7f3acf007993b52ce26897c1a59d4c2e",
+      "results/model_review/joint_liquidity_refit_attempt1_incomplete/failure_receipt.json": "a4244d1106fba6cd7fc35425b784a43bec350c6ffb99ac9505a81d2fc5d4e967",
+      "research/experimental_execution/nested_dynamic_selection.py": "a293daf2383477e4b33fffd5dacad04ab8fbc71dc92edab2c9f9ff492a28aa20",
+      "research/safeinvest_research/selection.py": "ea4aeeca113f73c04d56fa48498f34fc41af39730bb046b97548233dc0f26e3a",
+      "research/safeinvest_research/metrics.py": "7ec8e4821ce284351a3d8ed7071c687fdf7d6e4cfd225f72cad1d09d623eb008",
+      "research/experimental_execution/refit_aware_selection.py": "12d90c14e1208143014a4d0f9d8eadd69960bd966308f24d5d13f7873866d7c6",
+      "research/experimental_execution/risk_priced_fan_rollout.py": "2a935cfe1d039f6a020e104fe92aa659bb92aac2a0b3bed2ef767437015ba472",
+      "docs/review_pending_design_contract.json": "27516c993a31ea5eec2fa80559f2caddf3a9ce72cb08e7e0bf4d058160109200",
+      "results/model_review/joint_liquidity_summary_v1/manifest.json": "1d174fa266ee34a19545ada22fdd72dee1b8dc072c962bd9ce82a0d4fee97be1",
+      "results/model_review/joint_liquidity_summary_v1/c_scope_summary.csv": "0e9453de6ef1fe034020b8fe058aebeb519fd64e14e3b24670096bcaf7088904",
+      "results/model_review/joint_liquidity_summary_v1/q1_own_horizon_annual_summary.csv": "994dbb5f54f34405662ed7debe707d44ebc1674193900443ff1a3fed70f0de92"
+    },
+    "all_read_only_dependencies_unchanged": true,
+    "main_stage_hash_check": "27 sources +20 inputs +19 declared outputs SHA independently matched before report authoring",
+    "downstream_metrics_completion": {
+      "status": "provided_read_only_verified_after_owner_declared_stable",
+      "manifest": "results/model_review/joint_liquidity_summary_v1/manifest.json",
+      "manifest_sha256": "1d174fa266ee34a19545ada22fdd72dee1b8dc072c962bd9ce82a0d4fee97be1",
+      "c_table": "results/model_review/joint_liquidity_summary_v1/c_scope_summary.csv",
+      "q1_table": "results/model_review/joint_liquidity_summary_v1/q1_own_horizon_annual_summary.csv",
+      "declared_output_digests_verified": 13,
+      "new_fit_or_simulation": false,
+      "remaining": "最终展示整合与独立说明文字；不修改冻结上游summary。"
+    },
+    "live_editorial_artifacts_locked": false,
+    "stable_downstream_metrics_locked": true
+  }
+}

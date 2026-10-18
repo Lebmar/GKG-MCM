@@ -1,0 +1,7 @@
+context,n,beta,cap,minimum_count,status
+full_development,120,0.075,9.0,8,automated
+outer_fold_1,96,0.1,7.0,7,automated
+outer_fold_2,96,0.05,4.0,6,execution_review
+outer_fold_3,96,,,4,execution_review
+outer_fold_4,96,0.05,4.0,7,execution_review
+outer_fold_5,96,0.075,6.0,6,automated

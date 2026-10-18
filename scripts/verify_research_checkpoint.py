@@ -27,12 +27,14 @@ HASH_KEYS = {
     "input_artifact_sha256_start", "input_artifact_sha256_end", "artifacts_at_start", "artifacts_at_end",
     "closure_sha256", "source_input_artifact_sha256_start", "source_input_artifact_sha256_end",
     "sources_and_artifacts_at_start", "sources_and_artifacts_at_end",
-    "evidence_sha256",
+    "evidence_sha256", "source_evidence_sha256_start", "source_evidence_sha256_end", "sources_sha256_at_start",
+    "frozen_input_sha256", "execution_sources_sha256",
     "outputs", "outputs_sha256", "output_artifact_sha256", "output_file_sha256_after_write",
 }
 PAIRS = [
     ("sources", "sources_at_end"), ("sources_at_start", "sources_at_end"),
     ("sources_sha256", "sources_sha256_at_end"),
+    ("sources_sha256_at_start", "sources_sha256_at_end"),
     ("source_sha256_start", "source_sha256_end"),
     ("source_sha256_at_start", "source_sha256_at_end"),
     ("frozen_input_hashes", "frozen_input_hashes_at_end"),
@@ -47,7 +49,18 @@ PAIRS = [
     ("artifacts_at_start", "artifacts_at_end"),
     ("source_input_artifact_sha256_start", "source_input_artifact_sha256_end"),
     ("sources_and_artifacts_at_start", "sources_and_artifacts_at_end"),
+    ("source_evidence_sha256_start", "source_evidence_sha256_end"),
 ]
+
+
+def evidence_records(value):
+    if isinstance(value, dict):
+        yield value
+        for child in value.values():
+            yield from evidence_records(child)
+    elif isinstance(value, list):
+        for child in value:
+            yield from evidence_records(child)
 
 
 def main():
@@ -55,7 +68,16 @@ def main():
     paths += list((ROOT / "results/model_review").rglob("independent_audit.json"))
     paths += list((ROOT / "research/figures").rglob("manifest.json"))
     paths += [p for p in [ROOT / "docs/nested_dynamic_stage_review.json",
-                          ROOT / "docs/liquidity_service_design.json"] if p.is_file()]
+                          ROOT / "docs/liquidity_service_design.json",
+                          ROOT / "docs/coverage_admission_policy_review.json",
+                          ROOT / "docs/service_refinement_readiness_review.json",
+                          ROOT / "docs/liquidity_policy_refinement_review.json",
+                          ROOT / "docs/service_governance_independent_review.json",
+                          ROOT / "docs/service_policy_refinement_contract.json",
+                          ROOT / "docs/refit_aware_selection_contract.json",
+                          ROOT / "docs/joint_liquidity_refit_protocol.json",
+                          ROOT / "docs/fixed_state_forecast_diagnostic_protocol.json",
+                          ROOT / "results/model_review/joint_liquidity_refit_attempt1_incomplete/failure_receipt.json"] if p.is_file()]
     paths = sorted(set(p for p in paths if "cache" not in p.parts and p != OUT))
     digests, checks, snapshots = {}, 0, {}
 
@@ -72,25 +94,26 @@ def main():
         if path.name == "independent_audit.json":
             assert item.get("status") == "passed" or item.get("passed") is True, path
             checks += 1
-        for before, after in PAIRS:
-            if before in item and after in item:
-                assert item[before] == item[after], (path, before, after)
-                checks += 1
         assert not item.get("final_scenarios_loaded", False), path
         assert not item.get("final_scenarios_read", False), path
-        for key in HASH_KEYS:
-            values = item.get(key)
-            if not isinstance(values, dict):
-                continue
-            for relative, expected in values.items():
-                if not isinstance(expected, str) or not re.fullmatch(r"[0-9a-f]{64}", expected):
+        for record in evidence_records(item):
+            for before, after in PAIRS:
+                if before in record and after in record:
+                    assert record[before] == record[after], (path, before, after)
+                    checks += 1
+            for key in HASH_KEYS:
+                values = record.get(key)
+                if not isinstance(values, dict):
                     continue
-                candidates = [ROOT / relative, path.parent / relative]
-                if key.startswith("output"):
-                    candidates.reverse()
-                actual = next((candidate for candidate in candidates if candidate.is_file()), None)
-                assert actual is not None, (path, key, relative)
-                assert sha(actual) == expected, (path, key, relative)
+                for relative, expected in values.items():
+                    if not isinstance(expected, str) or not re.fullmatch(r"[0-9a-f]{64}", expected):
+                        continue
+                    candidates = [ROOT / relative, path.parent / relative]
+                    if key.startswith("output"):
+                        candidates.reverse()
+                    actual = next((candidate for candidate in candidates if candidate.is_file()), None)
+                    assert actual is not None, (path, key, relative)
+                    assert sha(actual) == expected, (path, key, relative)
         snapshots[str(path.relative_to(ROOT))] = sha(path)
 
     test_log = ROOT / "tmp/research_checkpoint_tests.log"

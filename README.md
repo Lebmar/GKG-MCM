@@ -7,7 +7,9 @@ Author: **Chengxuan YUAN**.
 are an archived, auditable prototype; they are not the accepted final competition
 model or a submission recommendation. Work has returned to the objective,
 parameter meanings, assumptions, internal validation and decision rules.
-See `docs/model_foundation_review.json`. No report is being regenerated in this
+See `docs/model_foundation_review.json`; the latest parameter/refit, coverage and
+joint-liquidity judgments are in notebook sections10.12–10.15 and
+`docs/service_refinement_readiness_review.json`. No report is being regenerated in this
 phase. The old evaluation scenarios have already been seen and cannot be
 represented as a new blind test for subsequent changes.
 
@@ -96,7 +98,7 @@ the default-cost selected controllers frozen; it is recorded separately under
 `results/model_review/selected_controller_cost_stress_v1/`. None is a final
 service recommendation or submission report.
 
-The next study nests the entire fixed-target dynamic learner, including the
+The first complete-process study nests the entire fixed-target dynamic learner, including the
 static menu and gamma selection, within four inner folds per outer training
 set. Thirty fixed training tasks evaluate five dynamic training budgets and
 the same nine-price family; outer paths select neither budgets nor prices.
@@ -108,19 +110,77 @@ The protocol and results are in `docs/nested_dynamic_calibration_protocol.json`
 and `results/model_review/nested_dynamic_calibration_v1/`; readable comparisons
 and selection stability are under
 `results/model_review/nested_dynamic_calibration_summary_v1/`.
-The pooled outer learner serves 48/120 paths and refers 72 for execution review,
-with 2 breaches among the 48 served. On those same 48 paths each reference has
+For the same client C, two of five overlapping outer training fits admit automatic
+execution, corresponding to 48/120 evaluation market paths; three abstain,
+leaving 72 financial NULLs. This is not 40% customer-population coverage.
+There are 2 breaches among the 48 observed automatic paths. On those same 48 paths each reference has
 1 breach. Growth and fees improve relative to same-target annual/pending,
 while drawdown rises; reduced coverage must not be presented as universal risk
-improvement. The full120 descriptive fit serves all paths, so parameter and
+improvement. The full 120 descriptive fit serves all paths, so parameter and
 coverage stability remain open. See `docs/nested_dynamic_stage_review.json`.
 
-Liquidity is still a separate service-design issue. The design record
+The historical risk-only study did not incorporate liquidity. Its design record
 `docs/liquidity_service_design.json` distinguishes ordinal questionnaire labels,
 customer facts that are missing, and normative reserve assumptions. It does
 not invent withdrawal amounts or turn a target bill share into a guarantee of
 cash availability. No new liquidity gate or reserve floor was inserted into
 the dynamic experiment.
+
+The current refinement distinguishes finite technical-parameter decision ties
+from statistical identification or elicited customer preferences. The saved
+training-only ledger under `results/model_review/refit_admission_diagnostics_v1/`
+explains why inner eligibility can disappear after a target, training fan and
+sample are refitted. The second outer fit has objective-tied beta values;
+the fourth changes the admitted validation cohort. The old results remain
+unchanged, including all rejected-path NULLs.
+
+A separately frozen joint-suitability prototype uses normative target-bill
+floors High 30%, Medium 10%, Low0 in **every** static inner menu/oracle and refit.
+The short questionnaire is sufficient for that stated convention; a real
+service would separately clarify cash amounts and dates. These floors are
+neither data-identified needs nor live-balance or withdrawal guarantees.
+`docs/liquidity_policy_refinement_review.json` corrects the earlier overbroad
+missing-information design. The pure `service_governance.py` prototype checks
+versioned evidence/fit lineage and preserves historical risk state; a version
+fingerprint alone is not a completed governance admission receipt.
+
+The two final selectors in `docs/joint_liquidity_refit_protocol.json` share all
+30 training tasks and inner evidence. The original canonical minimum-beta rule
+is compared with a predeclared primary retaining the top inner objective tie
+set and choosing its smallest refit-feasible beta. It never uses a beta outside
+that set, relaxes the original risk cap, or imputes reference returns. Outputs
+are in `results/model_review/joint_liquidity_refit_v1/`; read-only comparisons
+are in `results/model_review/joint_liquidity_summary_v1/`. Only original C,
+H30/L40%, receives Q2 dynamic evaluation; the other profiles retain their own
+Q1 horizons. The first implementation attempt stopped on a Q1 diagnostic-export
+dictionary error; its source, protocol and failure log are preserved under
+`results/model_review/joint_liquidity_refit_attempt1_incomplete/`. The rerun
+repairs that export and its realistic diagnostic fixtures, with no economic or
+selection-rule change. This is not first exposure to the data.
+
+In the joint stage, the canonical selector admits two of five overlapping
+outer fits (48/120 evaluation paths,2 events); the retained-set selector admits
+three (72/120,5 events). Their shared 48 paths have exactly equal saved states
+and actions; the newly admitted 24 have 3 events. This is an admission change,
+not an investment improvement on the common subgroup. On its own 72 common
+paths, the primary has 5 events versus 2 for the annual/pending reference;
+higher mean growth and lower trading/fees coexist with higher mean drawdown.
+The full 120 fit is descriptive. Full-fit products are 25/30/45 Conservative,
+45/5/50 Balanced and 65/5/30 Growth (equity/bond/bills); E remains Growth after
+joint refitting rather than the Balanced assignment obtained by postfiltering
+the old fixed catalogue. A/D Review is relative to the selected gamma=.075,
+strict172 and own horizons/loss limits, not an impossibility theorem.
+
+The fixed-state diagnostic under
+`results/model_review/fixed_state_forecast_diagnostic_v1/` separately compares
+hold/restore now followed by the same annual/pending continuation. Its six
+outer states are nonrandom points from two fits, not a probability-calibration
+test or population accuracy estimate. No new prediction model is selected.
+The new joint stage has its own guarded, isolated replay:
+
+```sh
+python scripts/reproduce_joint_liquidity_stage.py --output results/model_review/joint_liquidity_reproduction_new
+```
 
 To replay the seven execution studies without overwriting their evidence:
 
@@ -173,20 +233,25 @@ audits; they do not replace the primary procedure. The research preserves full
 path folds, records referrals as null outcomes, and distinguishes empirical
 calibration, numerical correctness and statistical evidence.
 
-The latest checkpoint passes **353 tests** and checks 46 saved manifests/audits
-against 407 distinct source, input, result and execution-evidence files. All 73
-saved artifacts from seven execution studies also reproduce byte for byte in
-an isolated copy, without changing the frozen archives. A second replay using
-only Git-tracked files from a fresh clone passes the same tests and matches
-all 73 outputs; its context records the tested financial-source revision. See
-`results/model_review/research_checkpoint_v1/verification.json`; these are
-computational checks, not independent market observations or risk guarantees.
+The latest checkpoint passes **496 tests** and checks 74 saved manifests/audits
+against 592 distinct source, input, result and execution-evidence files. The
+new joint stage passes 538,236 independent selection/accounting checks and its
+30-task isolated replay matches 18 deterministic output files byte for byte;
+progress differs only in declared runtime fields. The first implementation
+attempt's export failure is explicitly preserved. These are computational
+checks, not independent market observations or risk guarantees.
+
+The historical seven-study reproduction matches all 73 saved outputs. Its
+tracked-files-only clone at financial-source revision 1f7018e passed 353 tests
+and matched those 73 outputs; that old receipt does not claim to test the newer
+joint stage. Current evidence is indexed in
+`results/model_review/research_checkpoint_v1/verification.json`.
 AI assistance, including separately implemented numerical audits, is disclosed
 in `docs/DATA_NOTICE.md`.
 
-The next-stage proposal is `docs/dynamic_calibration_next_stage.json`. It has
-been reviewed but not executed: calibrate the complete learning procedure in
-inner whole-path folds, refitting its product menu as well as its controller.
+The historical next-stage proposal `docs/dynamic_calibration_next_stage.json`
+was implemented in the complete-process stage above: calibrate the complete
+learning procedure in inner whole-path folds, refitting its menu and controller.
 The proposed primary family keeps nine fixed-target price candidates; the
 18-controller update family would be a separately declared incremental study.
 More cautious admission may lead to more Review cases and still cannot turn

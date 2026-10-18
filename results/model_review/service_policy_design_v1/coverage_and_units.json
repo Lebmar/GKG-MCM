@@ -1,0 +1,83 @@
+{
+  "profile_examples": [
+    {
+      "policy_case": "reference_reserve_primary_prototype",
+      "example_profile_n": 5,
+      "conditional_proposal_n": 3,
+      "conditional_proposal_share_of_five_examples": 0.6,
+      "proposal_review_reasons": {
+        "risk_review": 2
+      },
+      "formal_service_coverage": {
+        "unit": "illustrative_profile_cases",
+        "original_n": 5,
+        "case_n": 5,
+        "automated_n": 0,
+        "outside_case_n": 0,
+        "case_review_n": 5,
+        "auto_over_original": 0.0,
+        "auto_given_case": 0.0,
+        "customer_population_coverage_estimated": false,
+        "financial_outcome": null
+      },
+      "formal_service_review_reasons": {
+        "risk_review": 2,
+        "model_review": 3
+      },
+      "customer_population_coverage_estimated": false
+    },
+    {
+      "policy_case": "larger_reserve_norm_sensitivity",
+      "example_profile_n": 5,
+      "conditional_proposal_n": 3,
+      "conditional_proposal_share_of_five_examples": 0.6,
+      "proposal_review_reasons": {
+        "risk_review": 2
+      },
+      "formal_service_coverage": {
+        "unit": "illustrative_profile_cases",
+        "original_n": 5,
+        "case_n": 5,
+        "automated_n": 0,
+        "outside_case_n": 0,
+        "case_review_n": 5,
+        "auto_over_original": 0.0,
+        "auto_given_case": 0.0,
+        "customer_population_coverage_estimated": false,
+        "financial_outcome": null
+      },
+      "formal_service_review_reasons": {
+        "risk_review": 2,
+        "model_review": 3
+      },
+      "customer_population_coverage_estimated": false
+    }
+  ],
+  "unit_arithmetic_only_not_new_experiment": {
+    "two_of_five_training_refits": {
+      "unit": "training_refit_runs",
+      "original_n": 5,
+      "case_n": 5,
+      "automated_n": 2,
+      "outside_case_n": 0,
+      "case_review_n": 3,
+      "auto_over_original": 0.4,
+      "auto_given_case": 0.4,
+      "customer_population_coverage_estimated": false,
+      "financial_outcome": null
+    },
+    "forty_eight_of_120_market_paths": {
+      "unit": "market_scenario_paths",
+      "original_n": 120,
+      "case_n": 120,
+      "automated_n": 48,
+      "outside_case_n": 0,
+      "case_review_n": 72,
+      "auto_over_original": 0.4,
+      "auto_given_case": 0.4,
+      "customer_population_coverage_estimated": false,
+      "financial_outcome": null
+    }
+  },
+  "interpretation": "The two displayed .4 ratios have distinct units. Neither estimates customer-population coverage; actual profile examples are five fictional questionnaire cases, not 120 customers."
+}

@@ -140,3 +140,75 @@ facts and normative alternatives without inventing withdrawals or adopting a
 cash floor in this study. The stage review records remaining service-design
 and prediction questions. No final policy, new final evaluation, submission
 paper or CMT upload was produced; V1 source/report/output remain intact.
+
+
+## 2026-10-18 — Parameter/refit mechanisms, service units and joint liquidity
+
+The old complete-process study remains frozen. A training-only descriptive
+ledger separates finite beta/controller decision platforms from statistical
+identification or elicited customer preferences. Outer 2's .05/.075/.10 inner
+outcomes are identical; the minimum-beta tie selects .05, whose full 96 training
+cap 4 lies below all nine controllers' minimum 6 events. The unrounded 4.8 is
+also insufficient. Outer 4 instead changes its admitted validation cohort:
+common 7/72 plus newly included 5/24. Outer 3 has no eligible inner beta. Exact
+shared/added-event bookkeeping is not a causal decomposition of target, fan
+and endogenous-state effects.
+
+Coverage is now reported in separate units: representative questionnaire cases,
+completed training-fit admission indicators, market-path-weighted admission,
+conditional market risk and within-horizon trading. The five overlapping
+training fits do not identify customer-population coverage or independent
+future deployment success probability. Non-admitted financial outcomes stay
+NULL, including zero-auto conditional risk. Annual and equal-thirds references
+are hypothetical comparisons, never a customer fallback.
+
+A new short-questionnaire convention sets target bill floors High 30%,
+Medium 10%, Low no additional floor. These are stated normative choices, not
+identified cash needs, drifted live balances or withdrawal guarantees. The
+competition's given questionnaire is sufficient for that explicit convention;
+extra real-deployment facts must not make all provided examples automatically
+unanswerable. The pure governance prototype validates versioned scope and
+fit lineage, distinguishes notices from actions, and retains historical peaks,
+CPI, full horizon and absorbing breach state. Its proposal ranking is a
+separate prototype; the numerical stage's actual static source/protocol is the
+authoritative rule, and a reserve-version reference alone is not a complete
+service-admission receipt or completed human review.
+
+The new joint stage refits the floor-constrained menu/oracle at every static
+subfold in all 30 tasks. Canonical and retained-top-inner-set/refit-aware final
+selectors share all training and inner evidence. Primary retains only the
+original risk-eligible maximum-admission/global-growth-tied beta set and takes
+its smallest refit-feasible beta under the unchanged 9-price cap. It does not
+search all eligible betas, relax alpha or choose a method from OOF outcomes.
+The first implementation attempt stopped at Q1 diagnostic export because
+`floor` was supplied twice to a dictionary constructor. Its source, protocol,
+progress and failure log are preserved separately. A dictionary-merge repair
+and realistic diagnostic fixtures preceded the same-rule rerun; the data had
+already been processed and the rerun is not first exposure.
+
+Both methods admit the full 120 descriptive fit. Outer canonical admits two
+fits/48 paths with 2 events; primary admits three/72 with 5 events, keeping 48
+NULLs. Shared 48 states/actions/financials are exactly equal; the added 24 have3
+events. On primary's 72, the annual/pending reference has 2 events; primary
+mean annual log growth is higher by .00378616, mean MDD by .0240213, nominal fees
+lower by .348468 per initial 100, and trade share lower by .746759. These tradeoffs
+are reported together;5/72 is not a fixed-policy certificate or a per-fit10%
+promise. Full-fit products are 25/30/45,45/5/50,65/5/30; E remains Growth at H6,
+with no inheritance of C-H30 dynamic evidence. A/D have no strict172 risk
+candidate under this selected gamma=.075 and their own H/L, a scoped empirical
+statement rather than impossibility at every service reference or portfolio.
+
+An independent audit passes 538,236 checks, including 541,800 joint feasibility
+cells, Q1 own-H records, both selectors and their complete attempts, 1440 saved
+strategy paths and 91 active Q states. Same-source isolated replay completes
+all 30 tasks;18 outputs are byte-exact and progress differs only in explicit
+runtime metadata. A separate fixed-state diagnostic replays 158 branches at 79
+active predetermined states. Its six outer points provide no conditional
+probability calibration or population forecast-accuracy estimate; current-action
+then B remains distinct from learned adaptive continuation.
+
+496 tests pass. Read-only summaries add admission partitions, matching state
+receipts, own-horizon P10/volatility/tail metrics, paired financial comparisons
+and visually checked attributed figures. The updated executed notebook is a
+research explanation. No new final scenarios, final-policy approval, submission
+paper, CMT upload or modifications to V1 source/report/output were produced.
