@@ -1,0 +1,23 @@
+{
+  "version": "constrained-fan-independent-audit-plan-v1",
+  "declared_utc": "2026-10-18T08:34:20.307161+00:00",
+  "purpose": "Bounded independent physical accounting, constrained action algebra, complete admission/gates, and deterministic Q spot-checks. Not a confidence certificate or additional market sample.",
+  "scope": {
+    "data": "Explicit1-120 allow_final=False, full chronological joint paths only",
+    "all_saved_accounts": "Every actual and inner selected learner/reference trace independently replayed from fixed saved actions using existing separate100-step fee bisection and raw returns/CPI; compare complete wealth/peak/MDD/absorbing/pending/fees/trades and row metrics.",
+    "all_saved_model_decisions": "Every active model decision recomputed from saved mean netQ and integer Qbad using separately written feasible-set/min-violation action rule; check flags and risk_cost_justification=>strictkR<kH. Qs already contain costs, no extra fee subtraction.",
+    "forecast_slots": "For every saved selected model tracegroup, choose minimum original scenario ID and original year2(t=1). Additionally choose originalyears16,30 for final refit groups c101_refit,c202_refit,c303_refit,c404_refit,c505_refit,c0_refit. Preserve pending/unavailable slots as skipped without substitution. Recompute each slot full own-training fan with independent scalar action-then-B branch implementation from frozen earlier auditor.",
+    "initial_Q": "Every saved group minimum original SID at initialyear1, but identical initial state/target/trainID/horizon may be cached once; include bothbranchfees via independentfan.",
+    "complete_training_tables": "All10080 training path rows check availability/NULL/account identities; independently aggregate all130 summaries and kcap/eligibility. Do not claim full independent policy replay of unrecorded training trees.",
+    "full120": "If admitted, training rows and in-sample client rows must agree pathwise; full static outerIDs[] distinct from dynamic eval120. Exclude full120 from OOF evidence.",
+    "all_admission": "Every own-U gate, same-ID B count, Q1 priority, final eligibility, all24 uniform initial decisions, exactwholeIDpartitions, candidate/target cache identities and original status/NULL semantics."
+  },
+  "independence": "New controller/runner not imported; guarded loader permitted. Existing independent scalar fan and fee accounting helpers permitted and hashed. Reusing an independently validated unchanged fan implementation supports implementation checks but does not validate forecast assumptions.",
+  "budget_minutes": 20,
+  "failure_rule": "Preserve failures and scope. No adaptive sample substitution or shrinking after outcomes; no successful receipt if incomplete.",
+  "limitations": [
+    "Training metric rows and gates all reconciled; unrecorded full training policy trees not all independently regenerated",
+    "Only deterministic forecast subset independently recomputed, not every adaptively chosen Q",
+    "Independent automated audit is not human review, true-risk certification, or fresh holdout evidence"
+  ]
+}
