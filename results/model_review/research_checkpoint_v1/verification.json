@@ -1,15 +1,18 @@
 {
-  "completed_utc": "2026-10-17T15:25:49.952004+00:00",
+  "completed_utc": "2026-10-18T02:13:29.013126+00:00",
   "status": "passed",
   "scope": "Saved-file fingerprints, completed test log and executed research notebook; no model fit or market return parsing",
-  "hash_comparisons_and_consistency_checks": 2747,
-  "distinct_hashed_files": 407,
-  "saved_snapshots_checked": 46,
+  "hash_comparisons_and_consistency_checks": 3214,
+  "distinct_hashed_files": 466,
+  "saved_snapshots_checked": 53,
   "snapshots_sha256": {
+    "docs/liquidity_service_design.json": "049938f609d704a1fe5dde682deaf9645101cfb66a7d813e96d31b9c22f0c218",
+    "docs/nested_dynamic_stage_review.json": "e4010e6bb152fba5439dadf04a6874f354161e485d6e6aaee70e0ce8dd54c0b0",
     "research/figures/development_structure/manifest.json": "8dcf529e5dac971e6b8c9de97e29f8dcefb494adacbd250d8af19675122dd05b",
     "research/figures/execution/manifest.json": "6a8f8f62d392de03953a56c87f7168baacd3aec2461679ba042a26085d01944a",
     "research/figures/execution_stage/manifest.json": "97058189adbdb9917d13739525137df58528ce5b45acf6949b15e2065af3f849",
     "research/figures/nested_calibration/manifest.json": "48a98517ecefe507b3e311720c14a6b777c46119b242fcbdf111a403baff1176",
+    "research/figures/nested_dynamic_calibration/manifest.json": "3d02b15ec03a8ce93699ce86e253ed38be7ebe1758d553fc19210bfd60ce83c9",
     "research/figures/q2_execution_development_v2/manifest.json": "f3c085898fff26c696c7b903fbbb5c969d18aec86d8909b61bb7d21a72acf9d2",
     "research/figures/risk_menu/manifest.json": "d4e23a460b377e2ec49c826f01db8f92e611b92cccf8226c3d4729d22890031e",
     "research/figures/selected_controller_cost_stress/manifest.json": "ff55b85bedfb6647554b494fb33aff35c52dd21e23417149e504d869563a98d5",
@@ -22,6 +25,10 @@
     "results/model_review/fee_checkpoint_v1/manifest.json": "f0b2a6ebce95a97f3261851b075f9576727c12d8a222cf406df82c085318baa8",
     "results/model_review/finite_horizon_execution_v1/manifest.json": "a8c6264155fd6a9773505e43c3116a5cddd92d25caa420ed9f366393a28e4530",
     "results/model_review/fixed_execution_ablation_v1/manifest.json": "1531280102843358192b6d501d4cca73c6bc5f3750c398cc5c71829809bb6c08",
+    "results/model_review/nested_dynamic_calibration_summary_v1/manifest.json": "800e55474c60b0d81a677ccf3a9b24b1c31110811dd66dcc1a55c0401ca4557e",
+    "results/model_review/nested_dynamic_calibration_v1/independent_audit.json": "831012267f0cec785e07f1e3164ae46b1f0bbaa9dfeacfb276460a0ed77fcf8e",
+    "results/model_review/nested_dynamic_calibration_v1/manifest.json": "ace4e900da9311dc1d8750b21a9ef572a75fc28126cbe90ef0a80106daca8fd9",
+    "results/model_review/nested_dynamic_reproduction_v1/manifest.json": "aaad237b3b48a0279201757b93ff29288d74a0affdd6d6f416ec867ee628f541",
     "results/model_review/nested_static_calibration_v1/independent_audit.json": "8a5434ce49682aaa7f80a0fd273e0d0031e3576b12203cba2d214410d54a27a6",
     "results/model_review/nested_static_calibration_v1/manifest.json": "f8e232c1f229f8a273739673743a8d351abb7ba5de28955e3f79ebd0f72e4390",
     "results/model_review/pathwise_cost_stress_v1/independent_audit.json": "df25cf755b2122c588e59231fcbf7e51a10ec8a77a010c796a9f3bb9c240178c",
@@ -54,18 +61,18 @@
     "results/model_review/temporal_order_v1/manifest.json": "b60345b971e4ef0c38c5c9c1446276991dbee3ac6b51a581ba85f88a79f01b19"
   },
   "unit_tests": {
-    "passed": 353,
-    "seconds": 2.558,
+    "passed": 401,
+    "seconds": 6.107,
     "command": "PYTHONPATH=src:research .venv/bin/python -m unittest discover -s tests -q",
     "log_path": "results/model_review/research_checkpoint_v1/unit_tests.txt",
-    "log_sha256": "2150d56554d580391bf7e6c6ba15c25a382f0c11e91a184101a395a7031149e8",
+    "log_sha256": "0330aa27b0f914f5b1f06a4a3e43ec7c6656bfa39f0ef22de85ce97a56f9768a",
     "result": "OK"
   },
   "notebook": {
     "path": "notebooks/risk_menu_development.ipynb",
-    "executed_code_cells": 26,
-    "sha256": "2ba7ac9e550a40daeae8c3e72350f357e51303bd1db4abc1631fa1d280a0d7dd",
-    "reading_copy_sha256": "17b4824d080843ebd1e9cdcf92e68974168b636dec488aa4a224d7d6200fc076"
+    "executed_code_cells": 27,
+    "sha256": "405c5f481e428c67a7b84dd3b4c473264d59c3703ee90a859b05e93dd0814647",
+    "reading_copy_sha256": "4f80d812d74b34ebb09d87f0ac147a5268a47360f0c879aea852219826daaaa9"
   },
   "legacy": {
     "baseline_revision": "7bca10b",

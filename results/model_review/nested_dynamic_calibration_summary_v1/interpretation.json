@@ -1,0 +1,119 @@
+{
+  "purpose": "Descriptive extraction, not a new policy selector.",
+  "service_vs_reference": "Only learner automated rows count as customer automatic service. All reference outcomes remain hypothetical financial results.",
+  "original_denominator": 120,
+  "conditional_denominator": "Observed learner auto_n or reference_available_n as labelled; NULL if zero.",
+  "served_subgroup_finding": "On the common 48 automatically served paths, saved new and legacy priced financial outcomes are exactly equal. The smaller new total observed breach count is accompanied by withheld automatic service; it is not evidence of improved trading behavior for that same subgroup.",
+  "saved_actual_behavior_on_common_served_subgroup": {
+    "scope": "Only the new automatically served OOF subgroup; both inputs are saved actual traces, no simulator called.",
+    "common_served_paths": 48,
+    "numeric_max_abs_error": 0.0,
+    "flag_cell_differences": 0,
+    "all_compared_saved_numeric_states_and_actions_exactly_equal": true,
+    "groups": [
+      {
+        "context": "outer_fold_1",
+        "scenario_ids": [
+          1,
+          9,
+          13,
+          18,
+          26,
+          31,
+          34,
+          42,
+          44,
+          50,
+          51,
+          65,
+          66,
+          69,
+          73,
+          77,
+          78,
+          79,
+          84,
+          101,
+          109,
+          111,
+          113,
+          118
+        ],
+        "paths": 24,
+        "numeric_max_abs_error": 0.0,
+        "numeric_arrays_exactly_equal": true,
+        "different_flag_cells": {
+          "actions": 0,
+          "trades": 0,
+          "pending_at_decision": 0,
+          "target_execution": 0,
+          "ever_breached": 0,
+          "first_crossing": 0
+        }
+      },
+      {
+        "context": "outer_fold_5",
+        "scenario_ids": [
+          4,
+          5,
+          6,
+          11,
+          14,
+          21,
+          22,
+          37,
+          41,
+          43,
+          52,
+          56,
+          60,
+          72,
+          80,
+          85,
+          86,
+          87,
+          88,
+          90,
+          92,
+          100,
+          104,
+          119
+        ],
+        "paths": 24,
+        "numeric_max_abs_error": 0.0,
+        "numeric_arrays_exactly_equal": true,
+        "different_flag_cells": {
+          "actions": 0,
+          "trades": 0,
+          "pending_at_decision": 0,
+          "target_execution": 0,
+          "ever_breached": 0,
+          "first_crossing": 0
+        }
+      }
+    ]
+  },
+  "paired_denominator": "New learner automatic service intersected with comparator financial availability on the same originalscenario and outer fold; common_service_auto applies only to both learners.",
+  "summary_metadata": {
+    "scenario_axis": 0,
+    "growth_definition": "log(real_terminal/100)/H",
+    "median_method": "numpy.median; mean of the two middle values for even sample sizes",
+    "p10_p90_method": "inverted_cdf; empirical CDF generalized inverse",
+    "cvar90_definition": "average of the worst 10% probability mass, including fractional boundary atoms",
+    "numerical_boundary_tolerance": 1e-12,
+    "risk_event": "MDD - L > 1e-12; smaller differences treated as numerical equality"
+  },
+  "limits": [
+    "Reused development; not a fresh blind evaluation or fixed-policy risk certificate.",
+    "OOF folds learn different menus/gammas/betas/prices; overlapping training folds do not justify naive pooled binomial certification.",
+    "New and legacy raw conditional metrics may describe different automatically served subsets. Coverage is shown alongside risk; only common-evaluable pairs share the same IDs.",
+    "Reference assigned_paths means hypothetical financial availability, never automatic customer service; case_auto_n/case_execReview_n stay NULL.",
+    "New complete procedure reselects Q1 menu/assignment as well as execution calibration. Differences from legacy are not a pure one-parameter causal effect.",
+    "A zero automatic-service denominator gives NULL risk/growth, not zero risk. Observed breaches per original120 do not impute outcomes for Review or outside-Balanced cases.",
+    "Risk-only questionnaire process still has an unresolved liquidity service rule; no final service adoption or final policy selection is made.",
+    "Nine-price fixed-target family only; no18-controller extension or target update is evaluated here.",
+    "Service alpha=.10 is a public policy reference; static gamma and dynamic beta are technical screens, not identified questionnaire preferences."
+  ],
+  "final_scenarios_loaded": false,
+  "policy_selected_from_this_comparison": false
+}

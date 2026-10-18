@@ -1,0 +1,479 @@
+{
+  "version": "minimal-liquidity-service-design-v1",
+  "created_utc": "2026-10-18T01:48:31.729772+00:00",
+  "status": "独立设计提案；未采纳最终流动性政策，未修改当前动态校准流程。只有旧结果只读摘录，没有新fit、市场回放或最终集读取。",
+  "scope": {
+    "Q1": "使问卷流动性标签实际进入透明的输入核实和适配流程，同时明确数据不能识别的部分。",
+    "current_dynamic_experiment": "当前root/core的primary仍为原定9价、Balanced-only研究；本提案不把流动性尚未核实的研究候选偷偷改成完整自动服务，也不新增18价、现金下限或提款路径。",
+    "final_recommendation_complete": false
+  },
+  "problem_facts": {
+    "primary_source": "docs/problem_A.pdf",
+    "pages": [
+      1,
+      2
+    ],
+    "customer_inputs": "只给期限H、最大暂时购买力损失容忍L、High/Medium/Low流动性标签。L不是保证上限。",
+    "market": "共同情景从100 bills开始，无后续存款或提款；一年一次决策；三资产共同转移费用。",
+    "not_provided": [
+      "本账户潜在支出金额或占比",
+      "支出日期、频率与可接受等待时间",
+      "账户外可用储备、已承诺收入或负债",
+      "可接受的变现损失与是否允许卖出风险资产",
+      "资产特定成交量、结算延迟、锁定期限或年内交易机会"
+    ]
+  },
+  "identification_boundary": {
+    "ordinal_only": "High > Medium > Low只给相对排序，不能唯一推出30%/10%/0%、年支出q或一至两年储备。",
+    "no_withdrawals_is_experiment_condition": "无提款是题面共同评价条件，不是客户声明未来没有用钱需要；不能借共同条件忽略Q1第三个问卷字段。",
+    "low_is_not_zero_need": "Low不等于提款额为零、没有应急需要或现金下限已核实。",
+    "three_positive_assets": "strict172中每资产至少5%来自既有5pp网格上的严格正权重实现；它既不是客户现金下限，也不是连续正权重条件唯一推导的数字。",
+    "marketability_vs_purchasing_power": "数据没有资产特定变现机制；票据是储备代理，不是已校准的可提款服务或无购买力损失资产。既有发展诊断中票据年度实际亏损频率约31.92%，仅作路径描述。",
+    "portfolio_share_vs_liability": "固定票据权重是当时组合财富的比例，不能代替某日固定金额的支出覆盖。"
+  },
+  "recommended_main_handling": {
+    "name": "分层适配与缺失事实核询；不从序数标签硬拟现金百分比",
+    "why": "这是最少新增数值偏好和最少改变当前实验范围的处理。它让流动性直接影响是否完成自动准入，而不是将risk-only输出重新命名为完整适配。",
+    "record_fields": [
+      "questionnaire_H",
+      "questionnaire_L",
+      "liquidity_label",
+      "risk_assignment",
+      "risk_review_reason",
+      "liquidity_status",
+      "liquidity_review_reason",
+      "service_assignment",
+      "service_status",
+      "research_candidate_assignment"
+    ],
+    "liquidity_status_values": [
+      "unverified",
+      "confirmed_compatible_with_annual_no_withdrawal_model",
+      "requires_liquidity_review"
+    ],
+    "flow": [
+      "校验H、L、流动性标签是否完整且一致；保留原始回答。风险/期限模块独立输出risk_assignment或risk_review。",
+      "根据标签提示核实事实：High优先确认最近可能使用时间、需要金额及外部储备；Medium确认计划支出及可接受变现损失；Low确认是否确实没有本账户需承担的显著近期义务。标签决定核询重点，不凭空提供答案。",
+      "若必要金额、时间或可及性事实未知，liquidity_status=unverified；先请求补充信息。在事实仍不足以判断时转human/input review，不能标成已通过流动性。",
+      "若确认存在需在下一年度决策前满足、又未由已知外部储备覆盖的支出，或允许的变现损失/等待与本模型冲突，liquidity_status=requires_liquidity_review。没有日期时不能把High自动等同为一年内提款。",
+      "只有已核实事实与模型范围相容，且风险适配本身通过，才可讨论完成服务准入；这不等于未来损失概率得到保证。",
+      "提供的五个示例没有上述补充事实，因此保存risk-based候选及liquidity_unverified。若必须在现有信息上给最终服务动作，则请求人审/核询，而不是声称B/C/E已获得完整自动批准。"
+    ],
+    "logic": {
+      "risk_assignment": "三产品之一或risk_review；仍按各客户真实H与L评价。",
+      "liquidity_gate": "未核实的必要事实不能被一个市场收益高分覆盖。",
+      "service_assignment": "仅在risk_pass且liquidity_confirmed时继承risk_assignment；否则Review或waiting_for_input。",
+      "reason_separation": "风险不支持、输入缺失、流动性冲突、非Balanced case、执行校准不支持是不同原因，不能合并成unsafe。",
+      "data_handling": "Review/waiting保留原始客户和场景身份，金融结果NULL；不填零收益、不暗配全票据第四产品。"
+    },
+    "consequence_for_Q2": "当前Balanced-only动态研究在risk-based适配条件下成立；它不能自行补全流动性事实。若以后正式引入流动性准入，Balanced case须按最终effective服务标签重判，不能强行把C留在Balanced来维持Q2样本。"
+  },
+  "explicit_alternative_service_policies": [
+    {
+      "id": "ordinal_target_floor",
+      "status": "若竞赛需要仅凭三项短问卷输出数值配置，这是可以事前选择的规范性操作化替代，不是识别结果；本文件不采纳为当前主策略。",
+      "rule": "只在通过客户H/L风险筛查的共同三产品中，再要求目标票据权重 >= f(liquidity_label)；在可行共同产品中使用既定分配规则。无合格产品则Review；不新增个人特制第四产品。",
+      "already_declared_sensitivity_cases": [
+        {
+          "id": "risk_only",
+          "high": 0.0,
+          "medium": 0.0,
+          "low": 0.0
+        },
+        {
+          "id": "reference_reserve",
+          "high": 0.3,
+          "medium": 0.1,
+          "low": 0.0
+        },
+        {
+          "id": "larger_reserve",
+          "high": 0.5,
+          "medium": 0.2,
+          "low": 0.0
+        }
+      ],
+      "interpretation": "fHigh>=fMedium>=fLow是服务端的序数储备惯例；这些具体数值是公开、可修改的规范选择，不能称客户已同意或由数据估计。Low=0仅指不施加额外类别下限。",
+      "do_not_optimize": "不能按旧OOF增长、超限数或希望E落入某产品来挑三元组。先选规范与范围，再比较敏感性。",
+      "target_not_live_reserve": "目标下限只限制目标组成；hold后实际票据权重可漂移，不保证任何时点的现金覆盖。",
+      "validation_requirement": "若选作最终主规则，必须在每个训练/内层context内完整重做受约束共同菜单、适配与后续Balanced-only动态校准。仅在旧risk-only菜单末端加一个floor不能称新整体流程已验证。"
+    },
+    {
+      "id": "confirmed_obligation_reserve",
+      "status": "需客户事实；此时才比任意标签百分比更有经济含义。",
+      "rule": "从客户确认的金额、日期、外部储备与可接受等待/损失形成明确义务，再决定需要单独留存的金额或拒绝当前服务。",
+      "no_default_liability": "不把High=每年15%或Medium=每年5%等假设伪装成真实回答；不默认客户有独立应急金。",
+      "contest_boundary": "共同主评估仍无提款；任何带实际支付的补充模型必须另列假设/用途，不能替换题面共同路径或直接沿用原无提款MDD定义。",
+      "existing_example_only": "旧development_structure仅给过假设q、K=1/2、年末支付的储备示例；q/K/支付时点/覆盖分位均是额外假设，不推荐给A--E。"
+    },
+    {
+      "id": "hard_actual_bill_floor",
+      "status": "更强的执行规则，当前不推荐直接添加。",
+      "rule": "若确实希望实际账面票据比例每次决策后>=f，需要对真实holdings、单次费用和动作可行性施加约束。",
+      "new_work_required": "这会改变hold/restore动作集、成本门控和pending动作；必须事前定义强制补足是否允许、如何与Review和历史风险并存并重新验证。年度观察无法保证未知年内时点的下限。",
+      "not_a_proxy_for_absolute_need": "即使满足当前财富比例下限，也不证明覆盖固定金额的真实义务。"
+    }
+  ],
+  "profiles_qualitative": [
+    {
+      "profile": "A",
+      "H": 5,
+      "L": 0.1,
+      "liquidity": "High",
+      "archived_strict_risk_only_candidate": "Review",
+      "main_handling": "严格低损失容忍已有风险Review；High还要求优先确认近期资金义务。不能因为持更多票据就宣布10%购买力回撤已获保证。",
+      "ordinal_floor_effect": "高类别下限会收窄可选集，但不能保证解除风险Review；不以现金下限重命名为安全。"
+    },
+    {
+      "profile": "B",
+      "H": 15,
+      "L": 0.25,
+      "liquidity": "Medium",
+      "archived_strict_risk_only_candidate": "Conservative",
+      "main_handling": "保留Conservative为风险/期限研究候选，核实计划支出、时间和外部储备后才能完整准入；15年期限不证明短期没有义务。",
+      "ordinal_floor_effect": "旧严格full菜单Conservative票据45%，对10%或20%目标下限不构成直接冲突；这只是现有描述性菜单事实，不保证新全流程会保持原权重/分配。"
+    },
+    {
+      "profile": "C",
+      "H": 30,
+      "L": 0.4,
+      "liquidity": "Low",
+      "archived_strict_risk_only_candidate": "Balanced",
+      "main_handling": "长期、较高L与Low支持研究Balanced case，但Low仍需确认，不推出真实支出为零。新动态风险校准与流动性核实分别记录。",
+      "ordinal_floor_effect": "两个既有类别三元组对Low不加额外floor；共同菜单仍可能因其他客户要求而改变，不能断言C或其Balanced执行器必然不变。"
+    },
+    {
+      "profile": "D",
+      "H": 25,
+      "L": 0.15,
+      "liquidity": "Medium",
+      "archived_strict_risk_only_candidate": "Review",
+      "main_handling": "长H不能抵消较紧L下的风险不支持；同时核实中等流动性义务，区分两种Review原因。",
+      "ordinal_floor_effect": "类别下限并不构成放宽风险标准的理由，也不证明全票据能防购买力亏损。"
+    },
+    {
+      "profile": "E",
+      "H": 6,
+      "L": 0.35,
+      "liquidity": "High",
+      "archived_strict_risk_only_candidate": "Growth",
+      "main_handling": "能容忍较大暂时亏损不等于能长期锁住这笔钱。High是必须单独处理的约束，不应仅依L给Growth并结束适配。",
+      "ordinal_floor_effect": "旧严格full Growth票据20%不满足30%或50%的High目标floor；可能需选另一共同产品或Review，但必须按H6重新检查风险与整体程序，不能直接把Growth加现金后称同一已验证产品。"
+    }
+  ],
+  "user_facts_vs_normative_choices": {
+    "require_customer_facts": [
+      "可能从本账户使用的金额或购买力占比及其不确定范围",
+      "最早和后续使用时间、是否可等到下一年度复核",
+      "是否有确实可用且没有重复计入的账户外储备",
+      "可接受的变现损失/等待以及卖出风险资产的限制",
+      "这些信息发生变化时如何通知"
+    ],
+    "can_be_proposed_autonomously_as_transparent_policy": [
+      "缺失必要信息时转输入核询/人审，保留原因和NULL",
+      "High/Medium/Low核询重点及解释文字",
+      "是否选用某个事前声明、单调的目标floor三元组做敏感性；不能称偏好识别",
+      "单独报告risk/liquidity/execution资格以及Balanced case分母",
+      "冻结训练/验证边界、费用与真实权重口径、保存来源hash"
+    ],
+    "not_inferable_or_authorized_by_this_design": [
+      "替客户填写提款金额/日期或外部储备",
+      "把Low说成零流动性需要",
+      "把5%网格点改称现金安全下限",
+      "按OOF输赢挑floor、改alpha/gamma或重分配客户",
+      "把尚未审核的动态结果称最终可部署建议"
+    ]
+  },
+  "existing_reserve_sensitivity": {
+    "source_family": "旧232候选包含零权重，固定技术screen gamma/alpha=.10，年度恢复，三种floor各自完整重选菜单。不是当前strict172、嵌套gamma或新动态风险校准。",
+    "source_files": [
+      "results/model_review/risk_menu_v1/full_development_menus.json",
+      "results/model_review/risk_menu_v1/validation_oof_summary.csv"
+    ],
+    "read_only_rows": [
+      {
+        "case": "alpha_10__risk_only",
+        "declared_bill_target_floors": {
+          "high": 0.0,
+          "medium": 0.0,
+          "low": 0.0
+        },
+        "full120_training_assignments": {
+          "A": "Review",
+          "B": "Conservative",
+          "C": "Balanced",
+          "D": "Review",
+          "E": "Growth"
+        },
+        "full120_training_menu": [
+          {
+            "name": "Conservative",
+            "weights": [
+              0.3,
+              0.2,
+              0.5
+            ]
+          },
+          {
+            "name": "Balanced",
+            "weights": [
+              0.5,
+              0.0,
+              0.5
+            ]
+          },
+          {
+            "name": "Growth",
+            "weights": [
+              0.75,
+              0.0,
+              0.25
+            ]
+          }
+        ],
+        "saved_oof_by_profile": [
+          {
+            "profile": "A",
+            "original_N": 120,
+            "auto_N": 0,
+            "review_N": 120,
+            "breach_count": null,
+            "mean_annual_log_growth": null
+          },
+          {
+            "profile": "B",
+            "original_N": 120,
+            "auto_N": 120,
+            "review_N": 0,
+            "breach_count": 12,
+            "mean_annual_log_growth": 0.03087964746507601
+          },
+          {
+            "profile": "C",
+            "original_N": 120,
+            "auto_N": 120,
+            "review_N": 0,
+            "breach_count": 13,
+            "mean_annual_log_growth": 0.04092074361872964
+          },
+          {
+            "profile": "D",
+            "original_N": 120,
+            "auto_N": 0,
+            "review_N": 120,
+            "breach_count": null,
+            "mean_annual_log_growth": null
+          },
+          {
+            "profile": "E",
+            "original_N": 120,
+            "auto_N": 120,
+            "review_N": 0,
+            "breach_count": 11,
+            "mean_annual_log_growth": 0.046413422430820285
+          }
+        ]
+      },
+      {
+        "case": "alpha_10__reference_reserve",
+        "declared_bill_target_floors": {
+          "high": 0.3,
+          "medium": 0.1,
+          "low": 0.0
+        },
+        "full120_training_assignments": {
+          "A": "Review",
+          "B": "Conservative",
+          "C": "Balanced",
+          "D": "Review",
+          "E": "Growth"
+        },
+        "full120_training_menu": [
+          {
+            "name": "Conservative",
+            "weights": [
+              0.3,
+              0.2,
+              0.5
+            ]
+          },
+          {
+            "name": "Balanced",
+            "weights": [
+              0.5,
+              0.0,
+              0.5
+            ]
+          },
+          {
+            "name": "Growth",
+            "weights": [
+              0.7,
+              0.0,
+              0.3
+            ]
+          }
+        ],
+        "saved_oof_by_profile": [
+          {
+            "profile": "A",
+            "original_N": 120,
+            "auto_N": 0,
+            "review_N": 120,
+            "breach_count": null,
+            "mean_annual_log_growth": null
+          },
+          {
+            "profile": "B",
+            "original_N": 120,
+            "auto_N": 120,
+            "review_N": 0,
+            "breach_count": 12,
+            "mean_annual_log_growth": 0.03087964746507601
+          },
+          {
+            "profile": "C",
+            "original_N": 120,
+            "auto_N": 120,
+            "review_N": 0,
+            "breach_count": 13,
+            "mean_annual_log_growth": 0.04092074361872964
+          },
+          {
+            "profile": "D",
+            "original_N": 120,
+            "auto_N": 0,
+            "review_N": 120,
+            "breach_count": null,
+            "mean_annual_log_growth": null
+          },
+          {
+            "profile": "E",
+            "original_N": 120,
+            "auto_N": 120,
+            "review_N": 0,
+            "breach_count": 8,
+            "mean_annual_log_growth": 0.04576924458261715
+          }
+        ]
+      },
+      {
+        "case": "alpha_10__larger_reserve",
+        "declared_bill_target_floors": {
+          "high": 0.5,
+          "medium": 0.2,
+          "low": 0.0
+        },
+        "full120_training_assignments": {
+          "A": "Review",
+          "B": "Conservative",
+          "C": "Balanced",
+          "D": "Review",
+          "E": "Balanced"
+        },
+        "full120_training_menu": [
+          {
+            "name": "Conservative",
+            "weights": [
+              0.3,
+              0.2,
+              0.5
+            ]
+          },
+          {
+            "name": "Balanced",
+            "weights": [
+              0.5,
+              0.0,
+              0.5
+            ]
+          },
+          {
+            "name": "Growth",
+            "weights": [
+              1.0,
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "saved_oof_by_profile": [
+          {
+            "profile": "A",
+            "original_N": 120,
+            "auto_N": 0,
+            "review_N": 120,
+            "breach_count": null,
+            "mean_annual_log_growth": null
+          },
+          {
+            "profile": "B",
+            "original_N": 120,
+            "auto_N": 120,
+            "review_N": 0,
+            "breach_count": 12,
+            "mean_annual_log_growth": 0.03087964746507601
+          },
+          {
+            "profile": "C",
+            "original_N": 120,
+            "auto_N": 120,
+            "review_N": 0,
+            "breach_count": 13,
+            "mean_annual_log_growth": 0.04092074361872964
+          },
+          {
+            "profile": "D",
+            "original_N": 120,
+            "auto_N": 0,
+            "review_N": 120,
+            "breach_count": null,
+            "mean_annual_log_growth": null
+          },
+          {
+            "profile": "E",
+            "original_N": 120,
+            "auto_N": 120,
+            "review_N": 0,
+            "breach_count": 4,
+            "mean_annual_log_growth": 0.03745157174864207
+          }
+        ]
+      }
+    ],
+    "limited_observation": "旧full拟合B/C保持角色、E在较大储备政策转为Balanced；E旧OOF超限数11/8/4来自不同重拟菜单，不能当floor的独立因果效果、偏好概率或选择最优floor的依据。",
+    "no_transfer": "不得把这组旧结果直接写成当前strict172或新动态流程的liquidity验证。"
+  },
+  "pending_review_boundary": {
+    "before_investment": "等待必要信息时暂停自动初次购买，不生成假投资业绩；与题面从bills开始的研究会计区别记录，不把未投资当成收益为零的推荐。",
+    "existing_investment": "冻结新自主目标变更并请求人审可作为服务暂停；实际hold不等于立即可用现金，也不能保证即将到期义务。",
+    "no_silent_cash_conversion": "不凭未知需求强行清仓、自动变成全票据或绕过成本/风险/授权规则。若已确认紧急未覆盖支出，必须另定可执行的应对，而不能把原违约后永久hold代理当成流动性保障。"
+  },
+  "next_steps_without_market_run": [
+    "根节点审阅本提案，确定最终Q1到底采用核询/Review主处理，还是明确声明的ordinal-floor服务惯例；不能同时把两者都称已采用主策略。",
+    "当前9价Balanced-only动态阶段按既定risk-only范围完成，不加入本文件未冻结的新规则。新结果稳定后单列liquidity未核实状态与原/条件分母。",
+    "若以后采用numeric floor，先写新统一协议；区分固定旧菜单事后筛查与重拟整个菜单/适配/执行learner，按同样内外层边界评价，不接触最终收益。",
+    "最终A--E表同时显示H/L、流动性使用方式、risk候选、liquidity状态和最终服务动作；尚缺事实不得用自动推荐完整的措辞。"
+  ],
+  "provenance": {
+    "docs/problem_A.pdf": "2ac9412ed68349d36a3fbd2c6cddc5789a81dab8acbfa08c63a3bdb34d2aa2dd",
+    "docs/risk_menu_development_protocol.json": "6a57f3dc3f5a5850af2d8a1b2db597997edbd6054e61443d7ebfeb3fd8e37d51",
+    "docs/research_menu_method_review.json": "00a3b582dcc12811e6f274ba168909feb551703751aaf5155319b8f9d6f2ab15",
+    "docs/review_pending_design_contract.json": "27516c993a31ea5eec2fa80559f2caddf3a9ce72cb08e7e0bf4d058160109200",
+    "docs/positive_asset_specification_protocol.json": "ff23c3fcdad54d83a2896a11459db1cec3e4f48fe6352d994139e4c9ff79475c",
+    "docs/problem_A_deliverable_crosswalk.json": "1c476d8d2117d8dcad2d16d2bd686fe13aab91c2f37069392af7d21a2dc3bf65",
+    "results/model_review/development_structure.json": "a1ade88c6d2252c7d6ca52d7931a4071866dc943053163ada67f50e296948e5f",
+    "results/model_review/risk_menu_v1/full_development_menus.json": "f2c91f807fa1191d58a886777e42d16688b19799c277058491d6b6f83c60608f",
+    "results/model_review/risk_menu_v1/validation_oof_summary.csv": "98fe1168b31eccfb880d37e9e4b1eb144f0531b549da74cb5a60d082d7d16e52",
+    "results/model_review/positive_asset_specification_v1/nested_context_refits.json": "d13450e05051c02d2bf54a4edfc77ef01d880cee0c78238cc3d7204a6ab27aa1"
+  },
+  "checks": {
+    "new_market_scenarios_read": false,
+    "final_scenarios_loaded": false,
+    "new_model_fit_or_simulation": false,
+    "old_files_modified": false,
+    "only_new_design_written": true,
+    "all_five_profiles_covered": true,
+    "numerical_liquidity_floor_adopted_here": false
+  }
+}

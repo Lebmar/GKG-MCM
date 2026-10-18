@@ -1,0 +1,389 @@
+{
+  "version": "2026-10-18-nested-dynamic-stage-independent-review-v1",
+  "created_utc": "2026-10-18T02:08:29.475727+00:00",
+  "status": "冻结研究结果的反方解释与下一步建议；不是最终策略采纳、统计认证或新执行协议",
+  "new_market_runs": false,
+  "raw_market_data_read_for_this_review": false,
+  "final_scenarios_read": false,
+  "modified_frozen_artifacts": false,
+  "evidence_sha256": {
+    "docs/nested_dynamic_calibration_protocol.json": "bdd065bed90856eddd7d18061f3fc1e6cc852e5730fa122be5b1f587391a266c",
+    "scripts/run_nested_dynamic_calibration.py": "7487f461f65e980304e15524478b599317bab9ee142a2f9b98a9cef054ab24d4",
+    "research/experimental_execution/nested_static_adapter.py": "9401e5b7454b9b0b88b28060baefeb3920dab9fd3e3c31870d00977e5ca84d6f",
+    "research/experimental_execution/nested_dynamic_selection.py": "a293daf2383477e4b33fffd5dacad04ab8fbc71dc92edab2c9f9ff492a28aa20",
+    "scripts/audit_nested_dynamic_calibration.py": "1a8ee80918eddacb9b186b5e60b3a66ce67c9d413034e2774d9dd6f00a9aecad",
+    "results/model_review/nested_dynamic_calibration_v1/manifest.json": "ace4e900da9311dc1d8750b21a9ef572a75fc28126cbe90ef0a80106daca8fd9",
+    "results/model_review/nested_dynamic_calibration_v1/independent_audit.json": "831012267f0cec785e07f1e3164ae46b1f0bbaa9dfeacfb276460a0ed77fcf8e",
+    "results/model_review/nested_dynamic_calibration_v1/context_selections.json": "9b78c88c83ed8c78bf37cdb40bc5851a23c4e9fcdd284d23def29796f630e515",
+    "results/model_review/nested_dynamic_calibration_v1/client_paths.csv": "dd62f2edd9c9f95fb264f5e31e41c531661e75c4c017f3f9f8acb3530acb525e",
+    "results/model_review/nested_dynamic_calibration_v1/beta_summaries.csv": "76826d3cd7e5b4ad1e374d7451cbe5f0027aba7cfb566d586e966efc89fb76e2",
+    "results/model_review/nested_dynamic_calibration_v1/paired_summary.csv": "7104fa19f2df31ad15371ad63448c9c6460494ef2e65f403754682ca1322f2f1",
+    "docs/problem_A_deliverable_crosswalk.json": "1c476d8d2117d8dcad2d16d2bd686fe13aab91c2f37069392af7d21a2dc3bf65",
+    "results/model_review/nested_dynamic_calibration_v1/inner_validation_paths.csv": "b4ec9ff862b4300fe3160d70893ce125018150fcc8110e8383c6bc897b8abe46",
+    "results/model_review/nested_dynamic_calibration_summary_v1/manifest.json": "800e55474c60b0d81a677ccf3a9b24b1c31110811dd66dcc1a55c0401ca4557e",
+    "results/model_review/nested_dynamic_calibration_summary_v1/stability_diagnostics.json": "866fa13728bfa5ea8507c46341c0d185a4a56c0b2a91af39b3df927fe3e0cd92",
+    "results/model_review/nested_dynamic_calibration_summary_v1/interpretation.json": "d09a3f879ab2113d9e2178b631a7cc308e4473b1d840a1552a4e540eb0f35ba1",
+    "results/model_review/nested_dynamic_calibration_v1/actual_traces.npz": "999d097ef4b00a42721fd9a8731b8471737bef1f26388d5d7b92c3d53eedb363",
+    "results/model_review/risk_priced_fan_execution_v1/actual_traces.npz": "4e5547b1e563b9562396fc6663ccbaaf7d7ca1a955d44a5337329784a676e5c1"
+  },
+  "research_decision": "当前完整流程是能够拒绝自动执行的候选原型。它补齐了菜单/静态gamma/训练fan/技术价格/动态beta的训练内隔离，但不能因为自动子群2/48=4.17%就宣布风险稳定胜出或最终采用。",
+  "scope": {
+    "profile": "仅原客户C，H30/L.40；各训练子集Q1有效标签为Balanced时进入Q2，其它客户不因本轮结果重新准入",
+    "family": "strict172产品学习器 + 旧9价NO-UPDATE控制器；没有运行18更新族",
+    "data": "仅完整开发路径1--120；历史反复开发和旧V1最终结果暴露不能抹去",
+    "references": "同目标annual-until-own-breach-then-pending与精确thirds alwaysannual均是假想比较器，不是自动fallback；thirds同时改变目标，不能当纯执行消融"
+  },
+  "key_facts": {
+    "outer_oof": {
+      "original_n": 120,
+      "balanced_case_n": 120,
+      "case_auto_n": 48,
+      "case_execReview_n": 72,
+      "risk_review_n": 0,
+      "not_balanced_case_n": 0,
+      "automatic_coverage": 0.4,
+      "automatic_breach_count": 2,
+      "conditional_breach_fraction": 0.041666666666666664,
+      "event_count_per_original_identity": 0.016666666666666666,
+      "event_count_per_original_identity_is_not_service_risk": "2/120只表示原身份中的已观测自动超限数，72条未自动服务的金融成果为NULL，不是零损失或已知安全。"
+    },
+    "three_review_contexts": [
+      {
+        "context": "outer_fold_2",
+        "selected_beta": 0.05,
+        "reason": "no_admissible_training_price",
+        "outer_paths_with_NULL_financial_outcomes": 24,
+        "training_n": 96,
+        "training_cap": 4,
+        "minimum_nine_price_training_breach_count": 6
+      },
+      {
+        "context": "outer_fold_3",
+        "selected_beta": null,
+        "reason": "no_eligible_inner_beta",
+        "outer_paths_with_NULL_financial_outcomes": 24,
+        "training_n": 96,
+        "training_cap": null,
+        "minimum_nine_price_training_breach_count": null
+      },
+      {
+        "context": "outer_fold_4",
+        "selected_beta": 0.05,
+        "reason": "no_admissible_training_price",
+        "outer_paths_with_NULL_financial_outcomes": 24,
+        "training_n": 96,
+        "training_cap": 4,
+        "minimum_nine_price_training_breach_count": 7
+      }
+    ],
+    "fold3_inner_details": "beta0/.025没有自动验证成果；.05为5/48超限，.075与.10均11/96，均未通过事前经验服务筛选；因此selected_beta=NULL。零覆盖没有被记为零风险。",
+    "common_48": {
+      "nested_dynamic_learner": {
+        "n": 48,
+        "breach_count": 2,
+        "conditional_breach_fraction": 0.041666666666666664,
+        "mean_annual_log_growth": 0.044548181682151404,
+        "median_cagr": 0.04313877841202065,
+        "mean_mdd": 0.2406748608342182,
+        "median_mdd": 0.2457832097240957,
+        "p90_mdd_inverted_cdf": 0.3560657421624176,
+        "mean_nominal_fees": 0.678551243347073,
+        "mean_trade_fraction_including_initial_allocation": 0.2513888888888889
+      },
+      "annual_then_pending": {
+        "n": 48,
+        "breach_count": 1,
+        "conditional_breach_fraction": 0.020833333333333332,
+        "mean_annual_log_growth": 0.040955865960879634,
+        "median_cagr": 0.039724116276733404,
+        "mean_mdd": 0.2199181069912052,
+        "median_mdd": 0.20991652888139162,
+        "p90_mdd_inverted_cdf": 0.3496422764129173,
+        "mean_nominal_fees": 1.0350393486013583,
+        "mean_trade_fraction_including_initial_allocation": 0.9840277777777778
+      },
+      "equal_thirds_annual": {
+        "n": 48,
+        "breach_count": 1,
+        "conditional_breach_fraction": 0.020833333333333332,
+        "mean_annual_log_growth": 0.036913723042085504,
+        "median_cagr": 0.03517640850889245,
+        "mean_mdd": 0.20334323085717254,
+        "median_mdd": 0.18308924496114226,
+        "p90_mdd_inverted_cdf": 0.3351856936310742,
+        "mean_nominal_fees": 0.9474168876598701,
+        "mean_trade_fraction_including_initial_allocation": 1.0
+      }
+    },
+    "paired_common48_delta_vs_same_target_B": {
+      "mean_annual_log_growth": 0.00359231572127177,
+      "mean_mdd": 0.02075675384301301,
+      "mean_nominal_fees": -0.3564881052542853,
+      "mean_trade_fraction": -0.732638888888889,
+      "extra_breach_count": 1
+    },
+    "full120_descriptive": {
+      "selected_beta": 0.075,
+      "selected_annual_price": 0.03,
+      "automatic_n": 120,
+      "breach_count": 9,
+      "empirical_fraction": 0.075,
+      "interpretation": "完整120重拟合与训练收益描述；不与48条OOF子群视为同一评价分母，不替代外层验证或证明部署覆盖稳定。"
+    },
+    "independent_numeric_audit": {
+      "status": "passed",
+      "checks_passed": 445295,
+      "actual_arm_paths": 648,
+      "inner_validation_arm_paths": 600,
+      "q_subset_audited": 79,
+      "pending_q_skips": 2,
+      "unavailable_final_Q_jobs": 3,
+      "maximum_nominal_wealth_error": 3.637978807091713e-12,
+      "maximum_mdd_error": 9.992007221626409e-16,
+      "maximum_Q_log_error": 6.661338147750939e-16,
+      "boundary": "审计实现数值/记录一致性；未再次全局搜索菜单或重演未保存的全9训练state树，不认证现实风险。"
+    }
+  },
+  "supported_statements": [
+    "完整学习流程按冻结的路径身份分离：各动态内折重新拟合strict菜单、静态gamma与准入；价格只用该训练子集，beta只用完整内层验证轨迹，最终外折只评估训练选定规则或NULL。",
+    "本轮外层自动覆盖40%；三折按预声明规则拒绝自动执行，且拒绝原因不同：两折是重拟合无合格价格，一折是内层无合格beta。",
+    "在同一48条自动服务路径上，平均年化log增长更高、名义费用和交易比例更低，同时平均MDD更高、超限2次而参照各1次；属于增长/费用与风险的实证权衡。",
+    "beta通过内层筛选后不保证最终训练重拟合仍有可行控制器；当前两个上下文如实出现这种情况。",
+    "数值审计通过支持冻结实现及保存选择证据的一致性，不能替代规范性服务选择、独立市场验证或本人审阅。",
+    "对旧price learner而言，共同48条保存的真实轨迹和结果完全相同；本轮观测差异主要体现在准入覆盖与完整流程验证，而非该共同子群的交易行为优势。"
+  ],
+  "unsupported_statements": [
+    "不能将2/48与B的9/120直接比较后说风险下降；匹配48条上B仅1次。不能说客户风险已从11.67%降至1.67%或把72条Review当零损失。",
+    "不能因为2/48<.10宣布真实风险被保证、稳定校准成功或得到二项置信认证；五折学习器不同、训练重叠且开发数据已反复使用。",
+    "不能把full120全覆盖9/120作为OOF三折拒绝服务已经解决的证据，也不能宣称新流程可稳定服务所有Balanced客户。",
+    "不能把meanG的提高写成median CAGR同幅提高、保证回报提高，或把名义费用总额差当终值复利成本差。",
+    "不能声称技术eta是客户偏好或精确chance约束影子价，beta是条件风险预算，或重复fan gate是30年精确DP/全局最优。",
+    "不能把通过旧成本压力的其它冻结执行器或不同覆盖集合的结论直接继承到新学习器；不同实验不能拼接有利结论。",
+    "不能把AI辅助独立审计称外部专家/人类审核已完成，不能宣称新版论文、最终评价或提交ZIP已完成。"
+  ],
+  "do_not_tune_from_this_OOF": [
+    "不因本轮覆盖低或超限变化追加eta/beta细网格、提高alpha/L、改静态gamma规则、调人工触发阈值或重抽分折",
+    "不启用未声明18族来补失败，不把annual参考偷偷加为自动fallback，不选OOF表现更好但未训练选中的控制器",
+    "不按本轮48条服务子群倒推最小证据数、阈值或客户重新分类；若服务政策本身改变，需公开动机并另定新协议，保留本轮结果"
+  ],
+  "next_priorities": [
+    {
+      "priority": 1,
+      "task": "先审定服务目标及准入治理",
+      "concrete_actions": [
+        "明确alpha=.10是规范性政策而非问卷或题面识别的概率保证；L=.40仍是整期限购买力MDD事件阈值。",
+        "讨论并固定增长、风险严重度与自动覆盖的优先序：是否接受相同客户集合内多1次超限来换增长/少交易；是否允许40%自动覆盖；Review后的真实服务和损失不可凭空补零。",
+        "补问卷流动性如何实际作用、输入/模型故障何时转人工、真实人工响应/重入的操作定义；strict每资产5%不是流动性识别。"
+      ],
+      "acceptance": "形成一份独立规范性决策记录，清楚说明可接受的交易/风险/覆盖权衡和未知资料；不得用本轮表现最好的口径当政策依据。",
+      "new_market_run_needed": false
+    },
+    {
+      "priority": 2,
+      "task": "先用保存表定位拟合到重拟合的准入变化",
+      "concrete_actions": [
+        "独立提取30任务在各beta的整数cap、九价最小k及可行集合、静态标签与目标、自动折数；原始n、训练n与floor预算并列。",
+        "特别核对outer2在96训练cap4而九价最小k6，outer4 cap4而最小k7，及outer3无合格beta；不要把这三个机制混称预测失败或抽样噪声已经解释清楚。",
+        "比较72/90内层训练与96/120重拟合的已保存选择证据，披露分辨率及学习目标变化；只做描述性归因，不将小样本稳定性假设说成已证明。"
+      ],
+      "acceptance": "列出全部上下文而非只挑成功折，保留零覆盖和NULL；不重拟合、不新增参数、不据表调整cap。",
+      "new_market_run_needed": false
+    },
+    {
+      "priority": 3,
+      "task": "对已识别的无条件calendar fan假设做一个有限、事前列明的诊断",
+      "concrete_actions": [
+        "先写诊断协议，固定已有实际活跃state身份、年份、两个current动作及同一后续B；允许用既有预声明Q子集或完整既有state集，选一种后不按表现替换。",
+        "在冻结state上比较fan所估两动作增长/曾超限差，与该验证路径实际后缀下各自的current-action-then-B反事实结果；保留joint资产与通胀及原历史peak/MDD/H/费用。",
+        "这只诊断既有surrogate在实现路径上的排序/误差和重混局限，不能把单条后缀当真实条件概率，也不能把同路径重叠的多次决策当独立样本。",
+        "先以现有H2合成反例说明条件信息被忽略的机制；若未来考虑修预测法，先明确统计假设与对照，不能同时扩展目标/价格/预算并按同一OOF挑赢家。"
+      ],
+      "acceptance": "诊断指标、所有身份、skip规则和依赖边界先锁定；不改变当前policy，不承诺诊断能证实或否定IID、修复风险或提高覆盖。",
+      "new_market_run_needed": "可能需要仅已保存开发路径的反事实诊断重放，尚未执行；不涉及新策略选择或final121--180"
+    },
+    {
+      "priority": 4,
+      "task": "规范性规则确定后再决定是否冻结完整候选并补同版本Q3",
+      "concrete_actions": [
+        "若仍考虑采用此完整学习器，明确冻结static/gamma/case/beta/price/admission/费用/pending的整条流程，并公布full与OOF覆盖差异。",
+        "新候选如需成本或假设压力，另先列明固定选择还是随已知成本重拟合，所有预列压力全报；不能继承旧执行器的压力证据或按压力最优结果选成本。",
+        "没有可支持的自动候选时允许诚实结论与人审，不为了完整交付制造无验证自动fallback。"
+      ],
+      "acceptance": "一套规则与其同版本证据可追溯；不因新压力或评价结果调整既定模型。",
+      "new_market_run_needed": "此处仅提出条件步骤；尚未启动"
+    },
+    {
+      "priority": 5,
+      "task": "最终采纳后才完成受限评价和报告",
+      "concrete_actions": [
+        "题面121--180评价前冻结全部最终规则；披露旧V1最终结果已暴露，不能把新模型再评价叫fresh blind test，不能据该结果继续调参。",
+        "真正确认性风险证据需新而未参与设计的外部完整情景与事前规则；没有则如实说明，不用bootstrap/新随机分折冒充。",
+        "新版英文报告、AI用途、数据归属、<=10页/字体与<=50MB代码ZIP同版本核对，参赛者本人检查后再提交。"
+      ],
+      "acceptance": "研究原型、最终采纳、评价、论文和提交状态逐项区分；不许保证安全、复现以外的统计结论或竞赛获奖。",
+      "new_market_run_needed": "仅在未来明确最终采纳并冻结完整规则后按题意进行；本文件不启动新评价或替代执行协议，用户现有授权保持不变。"
+    }
+  ],
+  "ai_and_human_review_boundary": "本记录与独立数值审计均由AI辅助完成，是可供参赛者检查的研究证据；未声称用户本人或外部人类专家已审阅/批准。模拟pending不代表真实已联系顾问。",
+  "next_experiment_executed": false,
+  "final_policy_selected": false,
+  "git_operations_performed": false,
+  "identifiability_addendum": {
+    "scope": "只读逐情景辨识诊断；不改变冻结选择、并列规则、参数、模型或OOF结果。",
+    "context": "outer_fold_2",
+    "compared_betas": [
+      0.05,
+      0.075,
+      0.1
+    ],
+    "inner_oof_original_n_per_beta": 96,
+    "automatic_n_per_beta": 96,
+    "breach_count_per_beta": 6,
+    "mean_annual_log_growth_per_beta": 0.04289128168137483,
+    "per_scenario_check": [
+      {
+        "against_beta": 0.075,
+        "matched_original_paths": 96,
+        "all_non_beta_saved_columns_equal": true,
+        "compared_columns": [
+          "job_id",
+          "context",
+          "context_id",
+          "dynamic_inner_fold",
+          "client",
+          "horizon",
+          "loss_tolerance",
+          "q1_effective_assignment",
+          "case_status",
+          "static_gamma",
+          "candidate_local_index",
+          "candidate_original232_index",
+          "q1_candidate_local_index",
+          "q1_candidate_original232_index",
+          "selection_training_n",
+          "selected_candidate_order",
+          "scope",
+          "hypothetical_reference",
+          "execution_status",
+          "execution_reason",
+          "scenario_id",
+          "assigned",
+          "log_growth",
+          "cagr",
+          "mdd",
+          "volatility",
+          "terminal_real",
+          "nominal_fees",
+          "nominal_moved",
+          "trade_fraction",
+          "target_execution_fraction",
+          "terminal_equity",
+          "terminal_bond",
+          "terminal_bill",
+          "breach",
+          "excess",
+          "first_crossing"
+        ]
+      },
+      {
+        "against_beta": 0.1,
+        "matched_original_paths": 96,
+        "all_non_beta_saved_columns_equal": true,
+        "compared_columns": [
+          "job_id",
+          "context",
+          "context_id",
+          "dynamic_inner_fold",
+          "client",
+          "horizon",
+          "loss_tolerance",
+          "q1_effective_assignment",
+          "case_status",
+          "static_gamma",
+          "candidate_local_index",
+          "candidate_original232_index",
+          "q1_candidate_local_index",
+          "q1_candidate_original232_index",
+          "selection_training_n",
+          "selected_candidate_order",
+          "scope",
+          "hypothetical_reference",
+          "execution_status",
+          "execution_reason",
+          "scenario_id",
+          "assigned",
+          "log_growth",
+          "cagr",
+          "mdd",
+          "volatility",
+          "terminal_real",
+          "nominal_fees",
+          "nominal_moved",
+          "trade_fraction",
+          "target_execution_fraction",
+          "terminal_equity",
+          "terminal_bond",
+          "terminal_bill",
+          "breach",
+          "excess",
+          "first_crossing"
+        ]
+      }
+    ],
+    "same_fields_interpretation": "三个beta不仅汇总相同，每个原情景的financial outcomes、service status、Q1目标/标签、static gamma、所选price order及全部其它保存列都完全相同；仅training_beta字段不同。",
+    "declared_selection": "覆盖与增长都完全并列，故原先规定的小beta规则选择.05。这是技术并列惯例，不是数据唯一识别.05。",
+    "refit_interaction": {
+      "refit_training_n": 96,
+      "selected_beta": 0.05,
+      "integer_training_cap": 4,
+      "minimum_nine_price_training_breach_count": 6,
+      "result": "no_admissible_training_price，24条外层路径为execution_review/金融NULL"
+    },
+    "interpretation": "这里暴露的是技术并列惯例与重拟合可行集合的交互，不能解释为内层证据证明.075/.10较差或不可用；也不能因这一事后诊断改为选较大beta以挽救本折覆盖。最终T96上更大beta的训练可行性不等于其未知外层表现或真实安全。",
+    "other_fold_boundaries": [
+      "outer_fold_4的.05与.075/.10内层结果不同：.05为7/72并通过，高beta为12/96并失败，不能套用第二折的完全并列说明。",
+      "outer_fold_3有自动结果的beta均未过内层风险筛选，较小beta无自动证据；它是无合格beta，而非并列选择造成的重拟合拒绝。"
+    ],
+    "prohibited_reaction": "本阶段不改tie规则、beta网格、训练cap或服务alpha；不补跑未选controller的OOF来挑赢家。任何未来技术惯例讨论须保留现有结果、单独先定协议并披露重复开发限制。"
+  },
+  "legacy_common_served_behavior_addendum": {
+    "evidence_receipt": "results/model_review/nested_dynamic_calibration_summary_v1/manifest.json",
+    "receipt_field": "checks.legacy_common_served_behavior_receipt",
+    "detail_field": "stability_diagnostics.json / saved_actual_behavior_on_common_served_subgroup",
+    "independent_read_only_confirmation": "本审查另直接比较两份保存actual NPZ的outer1/5，不调用simulator。",
+    "common_served_paths": 48,
+    "outer_contexts": [
+      "outer_fold_1",
+      "outer_fold_5"
+    ],
+    "independently_compared_numeric_arrays": [
+      "holdings",
+      "posttrade_holdings",
+      "nominal_wealth",
+      "real_wealth",
+      "cpi",
+      "real_peak",
+      "current_drawdown",
+      "running_mdd",
+      "fees",
+      "moved"
+    ],
+    "independently_compared_action_flag_arrays": [
+      "actions",
+      "trades",
+      "pending_at_decision",
+      "target_execution",
+      "ever_breached",
+      "first_crossing"
+    ],
+    "all_compared_arrays_exactly_equal": true,
+    "maximum_numeric_error": 0.0,
+    "different_action_flag_cells": 0,
+    "legacy_and_new_common_breach_count": 2,
+    "interpretation": "当前新流程与旧price learner在同48个自动服务路径上的保存真实state、动作和金融结果完全相同；总超限从旧14/120变成新2/48伴随自动服务覆盖由120降至48，不能归因为同子群动作被改进或风险被降低。新流程改变了训练校准/准入决策并补完整验证隔离，不能把这种程序改进说成该已服务子群的额外收益。",
+    "comparator_boundary": "本review前述meanG/费用/交易益处和MDD代价均相对同48条上的同目标B参考；不是相对旧price learner的改善。这里只比较保存的48条身份，不推断未自动服务72条的客户结果或未来路径。",
+    "not_same_as_counterfactual_exclusion": "拒绝来自冻结训练/内验证规则，不是按这些外层已实现收益逐条删亏损路径；但开发数据反复使用及服务子群变化仍必须披露。",
+    "unchanged_research_decision": "不修改beta并列规则、price族、alpha、admission或OOF，不用较大beta补覆盖，不追加未选外层结果来挑赢家。"
+  },
+  "review_finalization": "2026-10-18：完整逐路径beta辨识诊断及最终稳定衍生收据已纳入；本文件随后冻结，不改主stage、旧archive、audit或选择规则。"
+}

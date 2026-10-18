@@ -1,0 +1,26 @@
+{
+  "full_development": {
+    "refit_all_fields_exact": true,
+    "gamma": 0.075
+  },
+  "outer_fold_1": {
+    "refit_all_fields_exact": true,
+    "gamma": 0.075
+  },
+  "outer_fold_2": {
+    "refit_all_fields_exact": true,
+    "gamma": 0.075
+  },
+  "outer_fold_3": {
+    "refit_all_fields_exact": true,
+    "gamma": 0.075
+  },
+  "outer_fold_4": {
+    "refit_all_fields_exact": true,
+    "gamma": 0.075
+  },
+  "outer_fold_5": {
+    "refit_all_fields_exact": true,
+    "gamma": 0.075
+  }
+}

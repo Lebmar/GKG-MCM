@@ -1,0 +1,169 @@
+{
+  "completed_utc": "2026-10-18T02:10:00.845783+00:00",
+  "status": "complete_audited_saved_artifact_extraction",
+  "sources": {
+    "scripts/summarize_nested_dynamic_calibration.py": "bbe297426c408b60df0638d308dea62beae0ddaadfe301f979825b31149e8a74",
+    "research/safeinvest_research/metrics.py": "7ec8e4821ce284351a3d8ed7071c687fdf7d6e4cfd225f72cad1d09d623eb008"
+  },
+  "sources_at_end": {
+    "scripts/summarize_nested_dynamic_calibration.py": "bbe297426c408b60df0638d308dea62beae0ddaadfe301f979825b31149e8a74",
+    "research/safeinvest_research/metrics.py": "7ec8e4821ce284351a3d8ed7071c687fdf7d6e4cfd225f72cad1d09d623eb008"
+  },
+  "input_sha256": {
+    "results/model_review/nested_dynamic_calibration_v1/manifest.json": "ace4e900da9311dc1d8750b21a9ef572a75fc28126cbe90ef0a80106daca8fd9",
+    "results/model_review/nested_dynamic_calibration_v1/independent_audit.json": "831012267f0cec785e07f1e3164ae46b1f0bbaa9dfeacfb276460a0ed77fcf8e",
+    "results/model_review/nested_dynamic_calibration_v1/client_paths.csv": "dd62f2edd9c9f95fb264f5e31e41c531661e75c4c017f3f9f8acb3530acb525e",
+    "results/model_review/nested_dynamic_calibration_v1/summary.csv": "00f0ae8ca6ac0502bc9447511dd1849e152ab1b77e95f453376e4b0402566d52",
+    "results/model_review/nested_dynamic_calibration_v1/context_selections.json": "9b78c88c83ed8c78bf37cdb40bc5851a23c4e9fcdd284d23def29796f630e515",
+    "results/model_review/nested_dynamic_calibration_v1/beta_summaries.csv": "76826d3cd7e5b4ad1e374d7451cbe5f0027aba7cfb566d586e966efc89fb76e2",
+    "results/model_review/nested_dynamic_calibration_v1/trace_groups.json": "852ec21bb1848186a38a5b067772c023713e6cc7a493b45a27ad2dc21e21f86e",
+    "results/model_review/nested_dynamic_calibration_v1/actual_traces.npz": "999d097ef4b00a42721fd9a8731b8471737bef1f26388d5d7b92c3d53eedb363",
+    "results/model_review/q2_execution_development_v2/manifest.json": "67f01b04c31ac9cf1e49e5324a06d37ce8a226750e043aa8bc5327908b0a6b5b",
+    "results/model_review/q2_execution_development_v2/oof_paths.csv": "1f70a9e73be9266ce9e4d416499b881e37477d09edff35c51b080be0760b45a9",
+    "results/model_review/q2_execution_development_v2/summary.csv": "21dc2328224d6d80f0b2aad0479fe8384c35ef00611864284b65c0361d44454d",
+    "results/model_review/risk_priced_fan_execution_v1/manifest.json": "a3e5dc61ba2a5b9df1e0b3976f69f25fc5823a7d5f52d1dba344eadd7b0bc321",
+    "results/model_review/risk_priced_fan_execution_v1/actual_traces.npz": "4e5547b1e563b9562396fc6663ccbaaf7d7ca1a955d44a5337329784a676e5c1",
+    "docs/nested_dynamic_calibration_protocol.json": "bdd065bed90856eddd7d18061f3fc1e6cc852e5730fa122be5b1f587391a266c"
+  },
+  "input_sha256_at_end": {
+    "results/model_review/nested_dynamic_calibration_v1/manifest.json": "ace4e900da9311dc1d8750b21a9ef572a75fc28126cbe90ef0a80106daca8fd9",
+    "results/model_review/nested_dynamic_calibration_v1/independent_audit.json": "831012267f0cec785e07f1e3164ae46b1f0bbaa9dfeacfb276460a0ed77fcf8e",
+    "results/model_review/nested_dynamic_calibration_v1/client_paths.csv": "dd62f2edd9c9f95fb264f5e31e41c531661e75c4c017f3f9f8acb3530acb525e",
+    "results/model_review/nested_dynamic_calibration_v1/summary.csv": "00f0ae8ca6ac0502bc9447511dd1849e152ab1b77e95f453376e4b0402566d52",
+    "results/model_review/nested_dynamic_calibration_v1/context_selections.json": "9b78c88c83ed8c78bf37cdb40bc5851a23c4e9fcdd284d23def29796f630e515",
+    "results/model_review/nested_dynamic_calibration_v1/beta_summaries.csv": "76826d3cd7e5b4ad1e374d7451cbe5f0027aba7cfb566d586e966efc89fb76e2",
+    "results/model_review/nested_dynamic_calibration_v1/trace_groups.json": "852ec21bb1848186a38a5b067772c023713e6cc7a493b45a27ad2dc21e21f86e",
+    "results/model_review/nested_dynamic_calibration_v1/actual_traces.npz": "999d097ef4b00a42721fd9a8731b8471737bef1f26388d5d7b92c3d53eedb363",
+    "results/model_review/q2_execution_development_v2/manifest.json": "67f01b04c31ac9cf1e49e5324a06d37ce8a226750e043aa8bc5327908b0a6b5b",
+    "results/model_review/q2_execution_development_v2/oof_paths.csv": "1f70a9e73be9266ce9e4d416499b881e37477d09edff35c51b080be0760b45a9",
+    "results/model_review/q2_execution_development_v2/summary.csv": "21dc2328224d6d80f0b2aad0479fe8384c35ef00611864284b65c0361d44454d",
+    "results/model_review/risk_priced_fan_execution_v1/manifest.json": "a3e5dc61ba2a5b9df1e0b3976f69f25fc5823a7d5f52d1dba344eadd7b0bc321",
+    "results/model_review/risk_priced_fan_execution_v1/actual_traces.npz": "4e5547b1e563b9562396fc6663ccbaaf7d7ca1a955d44a5337329784a676e5c1",
+    "docs/nested_dynamic_calibration_protocol.json": "bdd065bed90856eddd7d18061f3fc1e6cc852e5730fa122be5b1f587391a266c"
+  },
+  "outputs_sha256": {
+    "oof_comparison_paths.csv": "197ed46943fd7808ae228d0c0600fda6312eaf4c859e728f12cd9f981d16e0fc",
+    "oof_comparison_summary.csv": "3e9e6217719e77545ad15f7c616963e2ca7adb8b3e6efd7e6a186bc68451c713",
+    "new_scope_summary.csv": "c5580ec28707ab291fe0aec18a93f3ff0102a9ee84230cb69b49c6c2f4f7b100",
+    "common_evaluable_pairs.csv": "3fb4aa70c8b2304f6d8edd1eb14a8d24027b1b7f9ab689da2af86b4ceaf22e66",
+    "common_evaluable_summary.csv": "cbfb80fa93119153ec47fbb8478766364360e992b97ef1cbc328b3d2c5475cda",
+    "context_selections.csv": "ead06992e154c262cb623b754f14bc33e086728dcf4f1ab502a56b0aabdc1789",
+    "inner_beta_evidence.csv": "4c07431281d1673d23f66f349265d6a67af96038df23c10c14e13c2c533a454c",
+    "stability_diagnostics.json": "866fa13728bfa5ea8507c46341c0d185a4a56c0b2a91af39b3df927fe3e0cd92",
+    "interpretation.json": "d09a3f879ab2113d9e2178b631a7cc308e4473b1d840a1552a4e540eb0f35ba1"
+  },
+  "checks": {
+    "recomputed_saved_summary_max_abs_error": 1.1102230246251565e-16,
+    "actual_trace_receipt": {
+      "available_oof_paths_checked": 288,
+      "max_abs_error": 2.2737367544323206e-13
+    },
+    "legacy_common_served_behavior_receipt": {
+      "scope": "Only the new automatically served OOF subgroup; both inputs are saved actual traces, no simulator called.",
+      "common_served_paths": 48,
+      "numeric_max_abs_error": 0.0,
+      "flag_cell_differences": 0,
+      "all_compared_saved_numeric_states_and_actions_exactly_equal": true,
+      "groups": [
+        {
+          "context": "outer_fold_1",
+          "scenario_ids": [
+            1,
+            9,
+            13,
+            18,
+            26,
+            31,
+            34,
+            42,
+            44,
+            50,
+            51,
+            65,
+            66,
+            69,
+            73,
+            77,
+            78,
+            79,
+            84,
+            101,
+            109,
+            111,
+            113,
+            118
+          ],
+          "paths": 24,
+          "numeric_max_abs_error": 0.0,
+          "numeric_arrays_exactly_equal": true,
+          "different_flag_cells": {
+            "actions": 0,
+            "trades": 0,
+            "pending_at_decision": 0,
+            "target_execution": 0,
+            "ever_breached": 0,
+            "first_crossing": 0
+          }
+        },
+        {
+          "context": "outer_fold_5",
+          "scenario_ids": [
+            4,
+            5,
+            6,
+            11,
+            14,
+            21,
+            22,
+            37,
+            41,
+            43,
+            52,
+            56,
+            60,
+            72,
+            80,
+            85,
+            86,
+            87,
+            88,
+            90,
+            92,
+            100,
+            104,
+            119
+          ],
+          "paths": 24,
+          "numeric_max_abs_error": 0.0,
+          "numeric_arrays_exactly_equal": true,
+          "different_flag_cells": {
+            "actions": 0,
+            "trades": 0,
+            "pending_at_decision": 0,
+            "target_execution": 0,
+            "ever_breached": 0,
+            "first_crossing": 0
+          }
+        }
+      ]
+    },
+    "all_policy_groups_original120_and_same_oof_fold_mapping": true,
+    "service_and_reference_denominators_separated": true,
+    "Review_and_outside_case_financial_NULL_preserved": true,
+    "common_evaluable_original_pair_count_per_comparator": 120
+  },
+  "final_scenarios_loaded": false,
+  "raw_market_loaded": false,
+  "new_fit_forecast_execution_or_winner_selection": false,
+  "limitations": [
+    "Reused development; not a fresh blind evaluation or fixed-policy risk certificate.",
+    "OOF folds learn different menus/gammas/betas/prices; overlapping training folds do not justify naive pooled binomial certification.",
+    "New and legacy raw conditional metrics may describe different automatically served subsets. Coverage is shown alongside risk; only common-evaluable pairs share the same IDs.",
+    "Reference assigned_paths means hypothetical financial availability, never automatic customer service; case_auto_n/case_execReview_n stay NULL.",
+    "New complete procedure reselects Q1 menu/assignment as well as execution calibration. Differences from legacy are not a pure one-parameter causal effect.",
+    "A zero automatic-service denominator gives NULL risk/growth, not zero risk. Observed breaches per original120 do not impute outcomes for Review or outside-Balanced cases.",
+    "Risk-only questionnaire process still has an unresolved liquidity service rule; no final service adoption or final policy selection is made.",
+    "Nine-price fixed-target family only; no18-controller extension or target update is evaluated here.",
+    "Service alpha=.10 is a public policy reference; static gamma and dynamic beta are technical screens, not identified questionnaire preferences."
+  ]
+}

@@ -101,3 +101,42 @@ was removed. Later notebook scope clarifications and the direct dependency
 version record do not alter those frozen financial sources. The current
 checkpoint checks 46 saved snapshots and 407 distinct files. This extra
 checkout test supplies reproducibility evidence, not a second market sample.
+
+## 2026-10-18 — Complete-process dynamic calibration
+
+The next-stage proposal was implemented as a separate prospective protocol and
+30 fixed tasks on development scenarios 1–120. Every dynamic inner training
+set reselects the strict172 static menu and gamma before learning the nine-price
+fixed-target controller. Beta is selected on whole inner validation paths;
+only an effective Balanced case enters Q2, with no financial imputation or
+hidden annual fallback for Review. The old six static refits reproduce exactly.
+
+The pooled outer learner automatically executes 48/120 paths and records 72
+execution Reviews. Its 2/48 exceedances must be read with that 40% coverage.
+On the same 48 paths, the pending and exact-thirds references each have one
+exceedance. Compared with pending, mean annual log growth increases by about
+0.359 percentage points, mean MDD increases by 2.076 points, and fees/trading
+fall. The served subgroup has the same financial results as the old price
+learner. The full 120 descriptive fit remains fully automatic; this does not
+replace the outer evidence or establish stable coverage.
+
+Outer folds 2/4 choose beta .05 but have no admissible price on final refitting;
+fold 3 has no eligible inner beta. In fold 2, .05/.075/.10 have identical saved
+inner outcomes, so the smaller-beta tie convention is not unique empirical
+identification. These findings are retained without changing the grid, alpha,
+tie rule or Review outcomes after seeing OOF results.
+
+401 unit tests pass. An AI-assisted independent implementation passes 445,295
+selection/accounting checks, replays all 1,248 selected actual/inner accounts,
+and verifies 79 prespecified Q states. The same-source isolated replay completes
+all 30 tasks: 15 output artifacts are byte-exact; progress differs only in
+declared runtime fields. Source/input/original-output fingerprints remain
+unchanged. These are computational checks, not new market samples or external
+human peer review.
+
+The executed development notebook and new figures explain coverage and matched
+financial comparisons. A separate liquidity design lists missing customer
+facts and normative alternatives without inventing withdrawals or adopting a
+cash floor in this study. The stage review records remaining service-design
+and prediction questions. No final policy, new final evaluation, submission
+paper or CMT upload was produced; V1 source/report/output remain intact.

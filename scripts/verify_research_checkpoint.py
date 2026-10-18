@@ -25,6 +25,9 @@ HASH_KEYS = {
     "source_artifact_sha256_start", "source_artifact_sha256_end",
     "evidence_sha256_start", "evidence_sha256_end",
     "input_artifact_sha256_start", "input_artifact_sha256_end", "artifacts_at_start", "artifacts_at_end",
+    "closure_sha256", "source_input_artifact_sha256_start", "source_input_artifact_sha256_end",
+    "sources_and_artifacts_at_start", "sources_and_artifacts_at_end",
+    "evidence_sha256",
     "outputs", "outputs_sha256", "output_artifact_sha256", "output_file_sha256_after_write",
 }
 PAIRS = [
@@ -42,6 +45,8 @@ PAIRS = [
     ("inputs_sha256", "inputs_sha256_at_end"),
     ("input_artifact_sha256_start", "input_artifact_sha256_end"),
     ("artifacts_at_start", "artifacts_at_end"),
+    ("source_input_artifact_sha256_start", "source_input_artifact_sha256_end"),
+    ("sources_and_artifacts_at_start", "sources_and_artifacts_at_end"),
 ]
 
 
@@ -49,6 +54,8 @@ def main():
     paths = list((ROOT / "results/model_review").rglob("*manifest*.json"))
     paths += list((ROOT / "results/model_review").rglob("independent_audit.json"))
     paths += list((ROOT / "research/figures").rglob("manifest.json"))
+    paths += [p for p in [ROOT / "docs/nested_dynamic_stage_review.json",
+                          ROOT / "docs/liquidity_service_design.json"] if p.is_file()]
     paths = sorted(set(p for p in paths if "cache" not in p.parts and p != OUT))
     digests, checks, snapshots = {}, 0, {}
 

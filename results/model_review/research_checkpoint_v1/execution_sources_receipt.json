@@ -471,7 +471,7 @@
               "role": "保存的方法、结果或核查证据"
             }
           ],
-          "reportingPeriod": "2026-10-17执行阶段开发研究",
+          "reportingPeriod": "2026-10-17至18执行阶段开发研究",
           "columns": [
             "策略",
             "原路径数",
@@ -599,7 +599,7 @@
               "role": "保存的方法、结果或核查证据"
             }
           ],
-          "reportingPeriod": "2026-10-17执行阶段开发研究",
+          "reportingPeriod": "2026-10-17至18执行阶段开发研究",
           "columns": [
             "费率_pct",
             "策略",
@@ -896,7 +896,7 @@
               "role": "保存的方法、结果或核查证据"
             }
           ],
-          "reportingPeriod": "2026-10-17执行阶段开发研究",
+          "reportingPeriod": "2026-10-17至18执行阶段开发研究",
           "columns": [
             "通过测试数",
             "已核来源快照数",
@@ -908,11 +908,11 @@
           ],
           "rows": [
             {
-              "通过测试数": 353,
-              "已核来源快照数": 46,
-              "不同文件数": 407,
+              "通过测试数": 401,
+              "已核来源快照数": 53,
+              "不同文件数": 466,
               "隔离复现实验数": 7,
-              "已执行代码单元数": 26,
+              "已执行代码单元数": 27,
               "仅Git文件的新克隆复现实验数": 7,
               "新克隆逐字节匹配产物数": 73
             }
@@ -921,6 +921,218 @@
             {
               "language": "python",
               "code": "assert verification['status'] ==reproduction['status'] =='passed'\n# source-file checks, test cases and numeric replay are not additional market samples"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nested-dynamic",
+      "title": "完整动态校准：覆盖率与条件风险",
+      "assumptions": [
+        "原始开发情景1–120；整路径外折；已重复使用的数据。"
+      ],
+      "queries": [
+        {
+          "id": "nested-dynamic-saved",
+          "source": {
+            "label": "完整动态校准：覆盖率与条件风险",
+            "files": [
+              {
+                "label": "docs/nested_dynamic_calibration_protocol.json"
+              },
+              {
+                "label": "results/model_review/nested_dynamic_calibration_v1/summary.csv"
+              },
+              {
+                "label": "results/model_review/nested_dynamic_calibration_v1/context_selections.json"
+              },
+              {
+                "label": "results/model_review/nested_dynamic_calibration_v1/independent_audit.json"
+              },
+              {
+                "label": "results/model_review/nested_dynamic_calibration_summary_v1/stability_diagnostics.json"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "分母",
+                "definition": "原120保留；Balanced案例=自动执行+执行复核。参照财务可用不等于自动服务，NULL不填零。"
+              },
+              {
+                "label": "条件结果",
+                "definition": "金融分布仅使用有结果路径；不同覆盖集合的条件分布不能直接作全人群优劣比较。"
+              }
+            ],
+            "filters": [
+              "只读取已保存研究产物，不重新拟合或载入市场收益"
+            ],
+            "caveats": [
+              "OOF由不同训练折学得，不能作单一固定策略的风险证书。",
+              "V1已看过121–180结果；本轮没有新的盲测集。",
+              "所有新实验均未成为最终参赛模型；没有上传CMT。",
+              "静态gamma、动态beta和价格均在训练层选择；原年度及三等分参照不能作为复核路径的隐含回退。",
+              "内层校准通过不等于未来风险保证；局部预测仍使用无条件日历后缀扇。",
+              "流动性仍是独立的未完成服务判断。 "
+            ]
+          },
+          "sourceRoles": [
+            {
+              "kind": "file",
+              "label": "docs/nested_dynamic_calibration_protocol.json",
+              "role": "保存的方法、结果或核查证据"
+            },
+            {
+              "kind": "file",
+              "label": "results/model_review/nested_dynamic_calibration_v1/summary.csv",
+              "role": "保存的方法、结果或核查证据"
+            },
+            {
+              "kind": "file",
+              "label": "results/model_review/nested_dynamic_calibration_v1/context_selections.json",
+              "role": "保存的方法、结果或核查证据"
+            },
+            {
+              "kind": "file",
+              "label": "results/model_review/nested_dynamic_calibration_v1/independent_audit.json",
+              "role": "保存的方法、结果或核查证据"
+            },
+            {
+              "kind": "file",
+              "label": "results/model_review/nested_dynamic_calibration_summary_v1/stability_diagnostics.json",
+              "role": "保存的方法、结果或核查证据"
+            }
+          ],
+          "reportingPeriod": "2026-10-17至18执行阶段开发研究",
+          "columns": [
+            "策略",
+            "原路径数",
+            "Balanced案例数",
+            "自动执行数",
+            "执行复核数",
+            "假想参照财务可用数",
+            "有金融结果数",
+            "超限数",
+            "有结果路径条件超限_pct",
+            "中位实际CAGR_pct",
+            "P90实际回撤_pct"
+          ],
+          "rows": [
+            {
+              "策略": "nested_dynamic_learner",
+              "原路径数": 120,
+              "Balanced案例数": 120,
+              "自动执行数": 48,
+              "执行复核数": 72,
+              "假想参照财务可用数": null,
+              "有金融结果数": 48,
+              "超限数": 2,
+              "有结果路径条件超限_pct": 4.16666666666666,
+              "中位实际CAGR_pct": 4.3138778412020695,
+              "P90实际回撤_pct": 35.60657421624176
+            },
+            {
+              "策略": "annual_then_pending",
+              "原路径数": 120,
+              "Balanced案例数": 120,
+              "自动执行数": null,
+              "执行复核数": null,
+              "假想参照财务可用数": 120,
+              "有金融结果数": 120,
+              "超限数": 9,
+              "有结果路径条件超限_pct": 7.5,
+              "中位实际CAGR_pct": 4.0488312269725,
+              "P90实际回撤_pct": 38.19662536820991
+            },
+            {
+              "策略": "equal_thirds_annual",
+              "原路径数": 120,
+              "Balanced案例数": 120,
+              "自动执行数": null,
+              "执行复核数": null,
+              "假想参照财务可用数": 120,
+              "有金融结果数": 120,
+              "超限数": 6,
+              "有结果路径条件超限_pct": 5.0,
+              "中位实际CAGR_pct": 3.5763509313868096,
+              "P90实际回撤_pct": 34.698414283459414
+            }
+          ],
+          "methods": [
+            {
+              "language": "python",
+              "code": "saved=read_csv('nested_dynamic_calibration_v1/summary.csv').query(\"scope == 'outer_oof'\")\n# 30 fixed tasks; all learning nested; no final scenarios, no imputation or new selection"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nested-replay",
+      "title": "嵌套校准的隔离复现",
+      "assumptions": [
+        "原始开发情景1–120；整路径外折；已重复使用的数据。"
+      ],
+      "queries": [
+        {
+          "id": "nested-replay-saved",
+          "source": {
+            "label": "嵌套校准的隔离复现",
+            "files": [
+              {
+                "label": "scripts/reproduce_nested_dynamic_stage.py"
+              },
+              {
+                "label": "results/model_review/nested_dynamic_reproduction_v1/manifest.json"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "复现边界",
+                "definition": "同代码隔离执行；时间元数据按明示规则比较，不增加市场样本。"
+              }
+            ],
+            "filters": [
+              "只读取已保存研究产物，不重新拟合或载入市场收益"
+            ],
+            "caveats": [
+              "OOF由不同训练折学得，不能作单一固定策略的风险证书。",
+              "V1已看过121–180结果；本轮没有新的盲测集。",
+              "所有新实验均未成为最终参赛模型；没有上传CMT。",
+              "完整CSV只按字节复制以保持源指纹；受守护解析器不载入121–180。"
+            ]
+          },
+          "sourceRoles": [
+            {
+              "kind": "file",
+              "label": "scripts/reproduce_nested_dynamic_stage.py",
+              "role": "保存的方法、结果或核查证据"
+            },
+            {
+              "kind": "file",
+              "label": "results/model_review/nested_dynamic_reproduction_v1/manifest.json",
+              "role": "保存的方法、结果或核查证据"
+            }
+          ],
+          "reportingPeriod": "2026-10-17至18执行阶段开发研究",
+          "columns": [
+            "状态",
+            "训练任务数",
+            "数据范围",
+            "性质"
+          ],
+          "rows": [
+            {
+              "状态": "passed",
+              "训练任务数": 30,
+              "数据范围": "只解析原情景1–120",
+              "性质": "同源复现，另有独立算法审计"
+            }
+          ],
+          "methods": [
+            {
+              "language": "python",
+              "code": "assert replay['status'] == 'passed'\n# see receipt for byte/array/semantic comparison scope"
             }
           ]
         }

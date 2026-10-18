@@ -2,6 +2,6 @@
 {"stage": "validation", "case": "alpha_10__risk_only", "fold_assignments": [{"A": "Conservative", "B": "Review"}, {"A": "Review", "B": "Review"}, {"A": "Review", "B": "Review"}, {"A": "Review", "B": "Review"}, {"A": "Review", "B": "Review"}]}
 {"stage": "validation", "case": "alpha_10__risk_only", "fold_assignments": [{"A": "Review", "B": "Review"}, {"A": "Review", "B": "Review"}, {"A": "Review", "B": "Review"}, {"A": "Review", "B": "Review"}, {"A": "Review", "B": "Review"}]}
 ----------------------------------------------------------------------
-Ran 353 tests in 2.558s
+Ran 401 tests in 6.107s
 
 OK

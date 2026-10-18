@@ -96,6 +96,32 @@ the default-cost selected controllers frozen; it is recorded separately under
 `results/model_review/selected_controller_cost_stress_v1/`. None is a final
 service recommendation or submission report.
 
+The next study nests the entire fixed-target dynamic learner, including the
+static menu and gamma selection, within four inner folds per outer training
+set. Thirty fixed training tasks evaluate five dynamic training budgets and
+the same nine-price family; outer paths select neither budgets nor prices.
+It preserves risk Review, outside-Balanced cases and execution Review separately,
+with NULL financial results and the original 120-path denominator. Same-target
+annual/pending and exact-thirds annual policies remain hypothetical references;
+they never become a hidden fallback for rejected customer paths.
+The protocol and results are in `docs/nested_dynamic_calibration_protocol.json`
+and `results/model_review/nested_dynamic_calibration_v1/`; readable comparisons
+and selection stability are under
+`results/model_review/nested_dynamic_calibration_summary_v1/`.
+The pooled outer learner serves 48/120 paths and refers 72 for execution review,
+with 2 breaches among the 48 served. On those same 48 paths each reference has
+1 breach. Growth and fees improve relative to same-target annual/pending,
+while drawdown rises; reduced coverage must not be presented as universal risk
+improvement. The full120 descriptive fit serves all paths, so parameter and
+coverage stability remain open. See `docs/nested_dynamic_stage_review.json`.
+
+Liquidity is still a separate service-design issue. The design record
+`docs/liquidity_service_design.json` distinguishes ordinal questionnaire labels,
+customer facts that are missing, and normative reserve assumptions. It does
+not invent withdrawal amounts or turn a target bill share into a guarantee of
+cash availability. No new liquidity gate or reserve floor was inserted into
+the dynamic experiment.
+
 To replay the seven execution studies without overwriting their evidence:
 
 ```sh
@@ -114,6 +140,17 @@ and audit timestamps are part of downstream hash contracts; do not rerun all
 stages consecutively over the original archives. A fresh receipt needs a new
 output directory. Same-source reproduction is distinct from the separately
 implemented accounting audits and from statistical validation.
+
+The newer 30-task stage has its own isolated reproduction command:
+
+```sh
+python scripts/reproduce_nested_dynamic_stage.py --output results/model_review/nested_dynamic_reproduction_new
+```
+
+This command records its explicit file closure and guarded loader calls. It
+compares deterministic artifacts byte-for-byte, NPZ arrays exactly, and timing
+metadata using the documented normalization. It does not overwrite the study
+or replay the earlier seven stages.
 
 Earlier source stages are indexed in their manifests: static menus and
 bootstrap (`run_risk_menu_research.py`, `analyze_risk_menu_diagnostics.py`),

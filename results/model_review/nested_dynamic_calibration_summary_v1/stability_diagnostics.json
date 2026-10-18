@@ -1,0 +1,183 @@
+{
+  "scope": "One full120 descriptive fit and five overlapping96-train outer fits; not six independent replications.",
+  "selected_beta_counts_all_contexts": {
+    "0.075": 2,
+    "0.1": 1,
+    "0.05": 2,
+    "NULL": 1
+  },
+  "selected_beta_counts_outer_contexts": {
+    "0.1": 1,
+    "0.05": 2,
+    "NULL": 1,
+    "0.075": 1
+  },
+  "outer_service_status_counts": {
+    "automated": 2,
+    "execution_review": 3
+  },
+  "outer_Q1_effective_assignment_counts": {
+    "Balanced": 5
+  },
+  "outer_review_reason_counts": {
+    "NULL": 2,
+    "no_admissible_training_price": 2,
+    "no_eligible_inner_beta": 1
+  },
+  "outer_selected_beta_distinct_including_NULL": 4,
+  "outer_service_status_distinct": 2,
+  "selected_inner_auto_n_by_context": {
+    "full_development": 120.0,
+    "outer_fold_1": 96.0,
+    "outer_fold_2": 96.0,
+    "outer_fold_3": null,
+    "outer_fold_4": 72.0,
+    "outer_fold_5": 96.0
+  },
+  "selected_inner_auto_folds_by_context": {
+    "full_development": 4.0,
+    "outer_fold_1": 4.0,
+    "outer_fold_2": 4.0,
+    "outer_fold_3": null,
+    "outer_fold_4": 3.0,
+    "outer_fold_5": 4.0
+  },
+  "interpretation": "Report beta, Q1 case and Review/coverage instability jointly. A smaller observed conditional loss rate on fewer served paths is not by itself an improved service. NULL beta or zero auto evidence is not beta0 or zero risk.",
+  "parameters": "service_alpha=.10 is the declared service reference; static gamma and dynamic beta are distinct technical training screens, not elicited customer risk probabilities.",
+  "full120_training_refit_in_sample": {
+    "original_n": 120,
+    "balanced_case_n": 120,
+    "case_auto_n": 120,
+    "case_execReview_n": 0,
+    "risk_review_n": 0,
+    "not_balanced_case_n": 0,
+    "breach_count": 9,
+    "conditional_breach_probability": 0.075
+  },
+  "outer_oof_complete_procedure": {
+    "original_n": 120,
+    "balanced_case_n": 120,
+    "case_auto_n": 48,
+    "case_execReview_n": 72,
+    "risk_review_n": 0,
+    "not_balanced_case_n": 0,
+    "breach_count": 2,
+    "conditional_breach_probability": 0.041666666666666664
+  },
+  "legacy_price_common_served_comparison": {
+    "comparator_id": "legacy_risk_priced",
+    "original_pairs": 120,
+    "new_service_auto_n": 48,
+    "comparator_financial_available_n": 120,
+    "comparator_is_service_learner": true,
+    "common_evaluable_n": 48,
+    "common_service_auto_n": 48.0,
+    "new_common_breach_count": 2,
+    "comparator_common_breach_count": 2,
+    "new_common_breach_probability": 0.041666666666666664,
+    "comparator_common_breach_probability": 0.041666666666666664,
+    "new_common_mean_log_growth": 0.044548181682151404,
+    "comparator_common_mean_log_growth": 0.044548181682151404,
+    "new_common_p90_mdd": 0.3560657421624176,
+    "comparator_common_p90_mdd": 0.3560657421624176,
+    "new_common_cvar90_mdd": 0.41318636907695216,
+    "comparator_common_cvar90_mdd": 0.41318636907695216,
+    "common_saved_outcomes_exactly_equal": true,
+    "mean_delta_log_growth": 0.0,
+    "mean_delta_cagr": 0.0,
+    "mean_delta_mdd": 0.0,
+    "mean_delta_nominal_fees": 0.0,
+    "mean_delta_trade_fraction": 0.0,
+    "mean_delta_breach": 0.0
+  },
+  "saved_actual_behavior_on_common_served_subgroup": {
+    "scope": "Only the new automatically served OOF subgroup; both inputs are saved actual traces, no simulator called.",
+    "common_served_paths": 48,
+    "numeric_max_abs_error": 0.0,
+    "flag_cell_differences": 0,
+    "all_compared_saved_numeric_states_and_actions_exactly_equal": true,
+    "groups": [
+      {
+        "context": "outer_fold_1",
+        "scenario_ids": [
+          1,
+          9,
+          13,
+          18,
+          26,
+          31,
+          34,
+          42,
+          44,
+          50,
+          51,
+          65,
+          66,
+          69,
+          73,
+          77,
+          78,
+          79,
+          84,
+          101,
+          109,
+          111,
+          113,
+          118
+        ],
+        "paths": 24,
+        "numeric_max_abs_error": 0.0,
+        "numeric_arrays_exactly_equal": true,
+        "different_flag_cells": {
+          "actions": 0,
+          "trades": 0,
+          "pending_at_decision": 0,
+          "target_execution": 0,
+          "ever_breached": 0,
+          "first_crossing": 0
+        }
+      },
+      {
+        "context": "outer_fold_5",
+        "scenario_ids": [
+          4,
+          5,
+          6,
+          11,
+          14,
+          21,
+          22,
+          37,
+          41,
+          43,
+          52,
+          56,
+          60,
+          72,
+          80,
+          85,
+          86,
+          87,
+          88,
+          90,
+          92,
+          100,
+          104,
+          119
+        ],
+        "paths": 24,
+        "numeric_max_abs_error": 0.0,
+        "numeric_arrays_exactly_equal": true,
+        "different_flag_cells": {
+          "actions": 0,
+          "trades": 0,
+          "pending_at_decision": 0,
+          "target_execution": 0,
+          "ever_breached": 0,
+          "first_crossing": 0
+        }
+      }
+    ]
+  },
+  "served_subgroup_interpretation": "On the common 48 automatically served paths, saved new and legacy priced financial outcomes are exactly equal. The smaller new total observed breach count is accompanied by withheld automatic service; it is not evidence of improved trading behavior for that same subgroup."
+}

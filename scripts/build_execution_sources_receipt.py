@@ -19,7 +19,7 @@ def item(identity, title, files, rows, definitions, methods, caveats):
                 "filters": ["只读取已保存研究产物，不重新拟合或载入市场收益"],
                 "caveats": caveats},
                 "sourceRoles": [{"kind": "file", "label": path, "role": "保存的方法、结果或核查证据"} for path in files],
-                "reportingPeriod": "2026-10-17执行阶段开发研究",
+                "reportingPeriod": "2026-10-17至18执行阶段开发研究",
                 "columns": list(rows[0]) if rows else [], "rows": rows,
                 "methods": [{"language": "python", "code": methods}]}]}
 
@@ -81,6 +81,45 @@ def main():
                       [{"label": "同源隔离复现", "definition": "原归档前后不变；七runner在临时副本重跑，输出逐字节或NPZ逐数组精确一致。"}],
                       "assert verification['status'] ==reproduction['status'] =='passed'\n# source-file checks, test cases and numeric replay are not additional market samples",
                       caveats + ["独立数值算法由AI协助另写，不是外部人类同行审稿。", "测试、数百万次机械检查与同源复现均不能保证未来风险。 "]))
+    nested_root = BASE / "nested_dynamic_calibration_v1"
+    if nested_root.exists():
+        assert json.loads((nested_root / "independent_audit.json").read_text())["status"] == "passed"
+        nested = pd.read_csv(nested_root / "summary.csv").query("scope == 'outer_oof'")
+        def integer_or_null(value): return None if pd.isna(value) else int(value)
+        def percent_or_null(value): return None if pd.isna(value) else float(100 * value)
+        rows = [{"策略": r.policy, "原路径数": int(r.original_n),
+                 "Balanced案例数": int(r.balanced_case_n),
+                 "自动执行数": integer_or_null(r.case_auto_n),
+                 "执行复核数": integer_or_null(r.case_execReview_n),
+                 "假想参照财务可用数": integer_or_null(r.reference_available_n),
+                 "有金融结果数": int(r.assigned_paths),
+                 "超限数": integer_or_null(r.breach_count),
+                 "有结果路径条件超限_pct": percent_or_null(r.conditional_breach_probability),
+                 "中位实际CAGR_pct": percent_or_null(r.median_cagr),
+                 "P90实际回撤_pct": percent_or_null(r.p90_mdd)} for r in nested.itertuples()]
+        items.append(item("nested-dynamic", "完整动态校准：覆盖率与条件风险",
+            ["docs/nested_dynamic_calibration_protocol.json",
+             "results/model_review/nested_dynamic_calibration_v1/summary.csv",
+             "results/model_review/nested_dynamic_calibration_v1/context_selections.json",
+             "results/model_review/nested_dynamic_calibration_v1/independent_audit.json",
+             "results/model_review/nested_dynamic_calibration_summary_v1/stability_diagnostics.json"], rows,
+            [{"label": "分母", "definition": "原120保留；Balanced案例=自动执行+执行复核。参照财务可用不等于自动服务，NULL不填零。"},
+             {"label": "条件结果", "definition": "金融分布仅使用有结果路径；不同覆盖集合的条件分布不能直接作全人群优劣比较。"}],
+            "saved=read_csv('nested_dynamic_calibration_v1/summary.csv').query(\"scope == 'outer_oof'\")\n# 30 fixed tasks; all learning nested; no final scenarios, no imputation or new selection",
+            caveats + ["静态gamma、动态beta和价格均在训练层选择；原年度及三等分参照不能作为复核路径的隐含回退。",
+                       "内层校准通过不等于未来风险保证；局部预测仍使用无条件日历后缀扇。", "流动性仍是独立的未完成服务判断。 "]))
+        replay_path = BASE / "nested_dynamic_reproduction_v1/manifest.json"
+        if replay_path.exists():
+            replay = json.loads(replay_path.read_text())
+            assert replay["status"] == "passed"
+            items.append(item("nested-replay", "嵌套校准的隔离复现",
+                ["scripts/reproduce_nested_dynamic_stage.py",
+                 "results/model_review/nested_dynamic_reproduction_v1/manifest.json"],
+                [{"状态": replay["status"], "训练任务数": 30,
+                  "数据范围": "只解析原情景1–120", "性质": "同源复现，另有独立算法审计"}],
+                [{"label": "复现边界", "definition": "同代码隔离执行；时间元数据按明示规则比较，不增加市场样本。"}],
+                "assert replay['status'] == 'passed'\n# see receipt for byte/array/semantic comparison scope",
+                caveats + ["完整CSV只按字节复制以保持源指纹；受守护解析器不载入121–180。"] ))
     original = json.loads((BASE / "research_checkpoint_v1/sources_receipt.json").read_text())
     OUT.write_text(json.dumps({"schemaVersion": 1, "items": original["items"] + items}, ensure_ascii=False, indent=2, allow_nan=False) + "\n")
     print(str(OUT.relative_to(ROOT)))

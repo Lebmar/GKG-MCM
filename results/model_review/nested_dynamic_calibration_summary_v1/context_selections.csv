@@ -1,0 +1,7 @@
+context,q1_effective_assignment,case_status,service_alpha,static_training_gamma,selected_dynamic_training_beta,selected_price_order,selected_price_kind,selected_annual_eta,execution_status,execution_reason,original_training_n,evaluation_n,selected_inner_auto_n,selected_inner_auto_folds,selected_inner_conditional_breach_probability,refit_training_breach_cap,refit_training_reference_breach_count,refit_admissible_price_count,refit_min_candidate_breach_count,balanced_target_equity,balanced_target_bond,balanced_target_bill
+full_development,Balanced,balanced_case,0.1,0.075,0.075,4.0,finite,0.03,automated,,120,120,120.0,4.0,0.0833333333333333,9.0,9.0,5.0,8.0,0.45,0.05,0.5
+outer_fold_1,Balanced,balanced_case,0.1,0.075,0.1,5.0,finite,0.1,automated,,96,24,96.0,4.0,0.0729166666666666,7.0,7.0,4.0,7.0,0.4,0.25,0.35
+outer_fold_2,Balanced,balanced_case,0.1,0.075,0.05,,,,execution_review,no_admissible_training_price,96,24,96.0,4.0,0.0625,4.0,6.0,0.0,6.0,0.4,0.25,0.35
+outer_fold_3,Balanced,balanced_case,0.1,0.075,,,,,execution_review,no_eligible_inner_beta,96,24,,,,,,,,0.45,0.15,0.4
+outer_fold_4,Balanced,balanced_case,0.1,0.075,0.05,,,,execution_review,no_admissible_training_price,96,24,72.0,3.0,0.0972222222222222,4.0,7.0,0.0,7.0,0.45,0.15,0.4
+outer_fold_5,Balanced,balanced_case,0.1,0.075,0.075,4.0,finite,0.03,automated,,96,24,96.0,4.0,0.09375,6.0,6.0,5.0,6.0,0.4,0.25,0.35
