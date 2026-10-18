@@ -449,3 +449,72 @@ Its sole new Git-style exceptions are446 Matplotlib SVG path line-end spaces
 across three frozen figures. The builder strips EOF whitespace only; the
 already-hashed figures and executed notebook are preserved, with a separately
 fingerprinted explanatory note. All non-SVG staged files pass diff checks.
+
+
+## 2026-10-18 evening — Fixed-state forecast diagnosis and overnight handoff
+
+The user requested the last work session of the day. This bounded session
+adds diagnosis only: no new controller, price/target/beta/alpha selection,
+changed admission, paper rewrite or final-scenario evaluation.
+
+An openly post-hoc ledger organizes previously observed audited results into
+720 identity rows:120 full-training versus selected-beta inner records and600
+repeated outer records. The original selected full controller has9 events;
+8 remain in the inner procedure,98 leaves, and35/112 enter, yielding10.
+Same-own-inner-target B has8 events and neither model event is offset by a
+B-only event. The changing targets and training fans confound attribution to
+eta or prediction. Outer model-only events are52 in repeat2 and112 in both
+repeats4/5; repeated112 is not independent market evidence. All504 outer
+non-common automatic records preserve NULL model financials and differences.
+Root separately checks the original source-table event sets and ledger NULLs.
+No influential scenario is deleted. An early ledger script draft had a
+repeated keyword before output creation; its post-hoc review records the fix.
+
+A new finite witness diagnostic freezes the exact13 originally automated fits
+including those later rejected, each original audit scenario at years2/16/30.
+The39 slots involve only8 original marketIDs. Source review and22 synthetic
+checks precede numerical execution. The first root freeze attempt incorrectly
+listed a nonexistent namespace-package initializer and aborted before protocol
+mutation or market execution. The draft was committed as52d002f; the corrected
+ready source freeze is6f12f49/protocol622cefcdaeabc7bdbaf0c54e02ce629bebe861448677aaeeec52549a21786066.
+This history is preserved rather than retroactively calling the draft ready.
+
+All39slots remain:35 active and4 pending skips without replacement. Each active
+state retains original holdings/CPI/peak/MDD/H/target/eta and its exact original
+training fan. All3432 paired fan-member outcomes and all3432 fixed-state N-1
+deletions are saved. Three of32 active OOF witnesses have at least one action
+flip:21/3072 deletions; the360 full-training deletions and3 actual self deletions
+have none. Two OOF sensitive states are terminal-year near-break-even growth
+comparisons with zero paired risk-probability change. The other is a year16
+risk/growth comparison. These local deletions are not a full learner refit,
+LOOCV or proof that resubstitution optimism is absent.
+
+Saved adaptive continuation is compared only with the same actually chosen
+current action followed by B on the identical realized suffix and inherited
+state. Total remaining net real log-growth gaps have17 positive,7 negative
+and11 zero values; MDD gaps16 positive,2 negative and17 zero. All35 terminal
+event flags agree in this selected inventory. All11 active year30 controls
+have zero continuation gaps because no future decision remains. These are
+pathwise descriptive differences, not unchosen-action adaptive Q, conditional
+calibration or a policy-improvement theorem. Witnesses exclude35/52/98/112,
+so they do not identify those admission-failure causes.
+
+A separately implemented independent audit uses its own scalar fan, explicit
+member slicing and100-step fee reference. It passes245925 checks, all3432
+members/deletions,1106 current-action/B suffix periods and553 saved adaptive
+suffix periods, with maximum numeric absolute error4.55e-13. Source/input/output
+hashes agree at start and end. Audit is computational AI-assisted review,
+not external human peer review or new market evidence.747 tests pass in
+152.217s. All numerical work parses only original development IDs1–120;
+legacy src/report/output remain unchanged from7bca10b.
+
+Current full-development C remains executionReview with financial outputsNULL.
+The next-session handoff prioritizes exact first-divergence reconstruction for
+the named failure IDs, a clear separation of training/inner/outer estimands,
+and reconciliation with the original deliverables before final model closure.
+There is no automatic fallback, outlier deletion or forced-admission search.
+
+Final evening checkpoint passes151 saved snapshots and898 distinct hashed
+files, including the completed747-test log and executed earlier companions.
+The new evidence is additive; existing frozen sources/results and all
+previous numeric/visual archives retain their original hashes.

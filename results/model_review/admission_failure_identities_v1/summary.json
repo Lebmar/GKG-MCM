@@ -1,0 +1,1782 @@
+{
+  "post_hoc": true,
+  "purpose": "Existing-result identity diagnosis, not new validation or model selection",
+  "selected_beta": 0.075,
+  "unchanged_full_eta": 0.03,
+  "full_model_source": "training_candidate_paths.csv:c0_refit/original_selected_candidate_order",
+  "full_model_training_breach_IDs": [
+    5,
+    19,
+    29,
+    38,
+    63,
+    94,
+    95,
+    98,
+    110
+  ],
+  "full_model_to_inner": {
+    "n": 120,
+    "left_events": 9,
+    "right_events": 10,
+    "cells": {
+      "both_breach": {
+        "n": 8,
+        "scenario_ids": [
+          5,
+          19,
+          29,
+          38,
+          63,
+          94,
+          95,
+          110
+        ]
+      },
+      "full_only": {
+        "n": 1,
+        "scenario_ids": [
+          98
+        ]
+      },
+      "inner_only": {
+        "n": 2,
+        "scenario_ids": [
+          35,
+          112
+        ]
+      },
+      "neither_breach": {
+        "n": 109,
+        "scenario_ids": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          30,
+          31,
+          32,
+          33,
+          34,
+          36,
+          37,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          96,
+          97,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          111,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120
+        ]
+      }
+    }
+  },
+  "full_B_to_inner": {
+    "n": 120,
+    "left_events": 9,
+    "right_events": 8,
+    "cells": {
+      "both_breach": {
+        "n": 8,
+        "scenario_ids": [
+          5,
+          19,
+          29,
+          38,
+          63,
+          94,
+          95,
+          110
+        ]
+      },
+      "full_only": {
+        "n": 1,
+        "scenario_ids": [
+          98
+        ]
+      },
+      "inner_only": {
+        "n": 0,
+        "scenario_ids": []
+      },
+      "neither_breach": {
+        "n": 111,
+        "scenario_ids": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          96,
+          97,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120
+        ]
+      }
+    }
+  },
+  "full_model_vs_B": {
+    "n": 120,
+    "left_events": 9,
+    "right_events": 9,
+    "cells": {
+      "both_breach": {
+        "n": 9,
+        "scenario_ids": [
+          5,
+          19,
+          29,
+          38,
+          63,
+          94,
+          95,
+          98,
+          110
+        ]
+      },
+      "model_only": {
+        "n": 0,
+        "scenario_ids": []
+      },
+      "B_only": {
+        "n": 0,
+        "scenario_ids": []
+      },
+      "neither_breach": {
+        "n": 111,
+        "scenario_ids": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          96,
+          97,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120
+        ]
+      }
+    }
+  },
+  "inner_model_vs_B": {
+    "n": 120,
+    "left_events": 10,
+    "right_events": 8,
+    "cells": {
+      "both_breach": {
+        "n": 8,
+        "scenario_ids": [
+          5,
+          19,
+          29,
+          38,
+          63,
+          94,
+          95,
+          110
+        ]
+      },
+      "model_only": {
+        "n": 2,
+        "scenario_ids": [
+          35,
+          112
+        ]
+      },
+      "B_only": {
+        "n": 0,
+        "scenario_ids": []
+      },
+      "neither_breach": {
+        "n": 110,
+        "scenario_ids": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          30,
+          31,
+          32,
+          33,
+          34,
+          36,
+          37,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          111,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120
+        ]
+      }
+    }
+  },
+  "inner_component_groups": [
+    {
+      "job_id": "c0_inner1",
+      "n": 30,
+      "target": "[0.45,0.15,0.4]",
+      "eta_orders": [
+        5
+      ],
+      "training_fan_n": 90
+    },
+    {
+      "job_id": "c0_inner2",
+      "n": 30,
+      "target": "[0.4,0.25,0.35]",
+      "eta_orders": [
+        4
+      ],
+      "training_fan_n": 90
+    },
+    {
+      "job_id": "c0_inner3",
+      "n": 30,
+      "target": "[0.4,0.2,0.4]",
+      "eta_orders": [
+        4
+      ],
+      "training_fan_n": 90
+    },
+    {
+      "job_id": "c0_inner4",
+      "n": 30,
+      "target": "[0.45,0.15,0.4]",
+      "eta_orders": [
+        4
+      ],
+      "training_fan_n": 90
+    }
+  ],
+  "outer_by_repeat": [
+    {
+      "group": 1,
+      "original_n": 120,
+      "common_auto_n": 0,
+      "paired_events": {
+        "n": 0,
+        "left_events": null,
+        "right_events": null,
+        "cells": {
+          "both_breach": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "model_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "B_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "neither_breach": {
+            "n": 0,
+            "scenario_ids": []
+          }
+        }
+      },
+      "conditional_model_risk": null,
+      "conditional_B_risk": null
+    },
+    {
+      "group": 2,
+      "original_n": 120,
+      "common_auto_n": 24,
+      "paired_events": {
+        "n": 24,
+        "left_events": 5,
+        "right_events": 4,
+        "cells": {
+          "both_breach": {
+            "n": 4,
+            "scenario_ids": [
+              5,
+              29,
+              94,
+              110
+            ]
+          },
+          "model_only": {
+            "n": 1,
+            "scenario_ids": [
+              52
+            ]
+          },
+          "B_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "neither_breach": {
+            "n": 19,
+            "scenario_ids": [
+              3,
+              6,
+              7,
+              14,
+              18,
+              27,
+              32,
+              41,
+              45,
+              46,
+              49,
+              54,
+              67,
+              70,
+              81,
+              83,
+              85,
+              104,
+              106
+            ]
+          }
+        }
+      },
+      "conditional_model_risk": 0.20833333333333334,
+      "conditional_B_risk": 0.16666666666666666
+    },
+    {
+      "group": 3,
+      "original_n": 120,
+      "common_auto_n": 0,
+      "paired_events": {
+        "n": 0,
+        "left_events": null,
+        "right_events": null,
+        "cells": {
+          "both_breach": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "model_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "B_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "neither_breach": {
+            "n": 0,
+            "scenario_ids": []
+          }
+        }
+      },
+      "conditional_model_risk": null,
+      "conditional_B_risk": null
+    },
+    {
+      "group": 4,
+      "original_n": 120,
+      "common_auto_n": 24,
+      "paired_events": {
+        "n": 24,
+        "left_events": 1,
+        "right_events": 0,
+        "cells": {
+          "both_breach": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "model_only": {
+            "n": 1,
+            "scenario_ids": [
+              112
+            ]
+          },
+          "B_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "neither_breach": {
+            "n": 23,
+            "scenario_ids": [
+              9,
+              11,
+              23,
+              31,
+              35,
+              39,
+              42,
+              44,
+              49,
+              53,
+              60,
+              73,
+              77,
+              80,
+              81,
+              82,
+              89,
+              90,
+              93,
+              99,
+              102,
+              114,
+              119
+            ]
+          }
+        }
+      },
+      "conditional_model_risk": 0.041666666666666664,
+      "conditional_B_risk": 0.0
+    },
+    {
+      "group": 5,
+      "original_n": 120,
+      "common_auto_n": 48,
+      "paired_events": {
+        "n": 48,
+        "left_events": 3,
+        "right_events": 2,
+        "cells": {
+          "both_breach": {
+            "n": 2,
+            "scenario_ids": [
+              63,
+              95
+            ]
+          },
+          "model_only": {
+            "n": 1,
+            "scenario_ids": [
+              112
+            ]
+          },
+          "B_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "neither_breach": {
+            "n": 45,
+            "scenario_ids": [
+              7,
+              12,
+              14,
+              20,
+              35,
+              54,
+              64,
+              67,
+              68,
+              70,
+              76,
+              81,
+              83,
+              91,
+              100,
+              101,
+              105,
+              107,
+              108,
+              111,
+              119,
+              2,
+              6,
+              16,
+              21,
+              30,
+              34,
+              41,
+              46,
+              52,
+              57,
+              59,
+              60,
+              62,
+              74,
+              77,
+              78,
+              82,
+              86,
+              88,
+              89,
+              96,
+              99,
+              102,
+              113
+            ]
+          }
+        }
+      },
+      "conditional_model_risk": 0.0625,
+      "conditional_B_risk": 0.041666666666666664
+    }
+  ],
+  "outer_by_fit": [
+    {
+      "group": "stability_r1_outer1",
+      "original_n": 24,
+      "common_auto_n": 0,
+      "paired_events": {
+        "n": 0,
+        "left_events": null,
+        "right_events": null,
+        "cells": {
+          "both_breach": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "model_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "B_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "neither_breach": {
+            "n": 0,
+            "scenario_ids": []
+          }
+        }
+      },
+      "conditional_model_risk": null,
+      "conditional_B_risk": null
+    },
+    {
+      "group": "stability_r1_outer2",
+      "original_n": 24,
+      "common_auto_n": 0,
+      "paired_events": {
+        "n": 0,
+        "left_events": null,
+        "right_events": null,
+        "cells": {
+          "both_breach": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "model_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "B_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "neither_breach": {
+            "n": 0,
+            "scenario_ids": []
+          }
+        }
+      },
+      "conditional_model_risk": null,
+      "conditional_B_risk": null
+    },
+    {
+      "group": "stability_r1_outer3",
+      "original_n": 24,
+      "common_auto_n": 0,
+      "paired_events": {
+        "n": 0,
+        "left_events": null,
+        "right_events": null,
+        "cells": {
+          "both_breach": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "model_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "B_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "neither_breach": {
+            "n": 0,
+            "scenario_ids": []
+          }
+        }
+      },
+      "conditional_model_risk": null,
+      "conditional_B_risk": null
+    },
+    {
+      "group": "stability_r1_outer4",
+      "original_n": 24,
+      "common_auto_n": 0,
+      "paired_events": {
+        "n": 0,
+        "left_events": null,
+        "right_events": null,
+        "cells": {
+          "both_breach": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "model_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "B_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "neither_breach": {
+            "n": 0,
+            "scenario_ids": []
+          }
+        }
+      },
+      "conditional_model_risk": null,
+      "conditional_B_risk": null
+    },
+    {
+      "group": "stability_r1_outer5",
+      "original_n": 24,
+      "common_auto_n": 0,
+      "paired_events": {
+        "n": 0,
+        "left_events": null,
+        "right_events": null,
+        "cells": {
+          "both_breach": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "model_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "B_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "neither_breach": {
+            "n": 0,
+            "scenario_ids": []
+          }
+        }
+      },
+      "conditional_model_risk": null,
+      "conditional_B_risk": null
+    },
+    {
+      "group": "stability_r2_outer1",
+      "original_n": 24,
+      "common_auto_n": 0,
+      "paired_events": {
+        "n": 0,
+        "left_events": null,
+        "right_events": null,
+        "cells": {
+          "both_breach": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "model_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "B_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "neither_breach": {
+            "n": 0,
+            "scenario_ids": []
+          }
+        }
+      },
+      "conditional_model_risk": null,
+      "conditional_B_risk": null
+    },
+    {
+      "group": "stability_r2_outer2",
+      "original_n": 24,
+      "common_auto_n": 24,
+      "paired_events": {
+        "n": 24,
+        "left_events": 5,
+        "right_events": 4,
+        "cells": {
+          "both_breach": {
+            "n": 4,
+            "scenario_ids": [
+              5,
+              29,
+              94,
+              110
+            ]
+          },
+          "model_only": {
+            "n": 1,
+            "scenario_ids": [
+              52
+            ]
+          },
+          "B_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "neither_breach": {
+            "n": 19,
+            "scenario_ids": [
+              3,
+              6,
+              7,
+              14,
+              18,
+              27,
+              32,
+              41,
+              45,
+              46,
+              49,
+              54,
+              67,
+              70,
+              81,
+              83,
+              85,
+              104,
+              106
+            ]
+          }
+        }
+      },
+      "conditional_model_risk": 0.20833333333333334,
+      "conditional_B_risk": 0.16666666666666666
+    },
+    {
+      "group": "stability_r2_outer3",
+      "original_n": 24,
+      "common_auto_n": 0,
+      "paired_events": {
+        "n": 0,
+        "left_events": null,
+        "right_events": null,
+        "cells": {
+          "both_breach": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "model_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "B_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "neither_breach": {
+            "n": 0,
+            "scenario_ids": []
+          }
+        }
+      },
+      "conditional_model_risk": null,
+      "conditional_B_risk": null
+    },
+    {
+      "group": "stability_r2_outer4",
+      "original_n": 24,
+      "common_auto_n": 0,
+      "paired_events": {
+        "n": 0,
+        "left_events": null,
+        "right_events": null,
+        "cells": {
+          "both_breach": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "model_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "B_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "neither_breach": {
+            "n": 0,
+            "scenario_ids": []
+          }
+        }
+      },
+      "conditional_model_risk": null,
+      "conditional_B_risk": null
+    },
+    {
+      "group": "stability_r2_outer5",
+      "original_n": 24,
+      "common_auto_n": 0,
+      "paired_events": {
+        "n": 0,
+        "left_events": null,
+        "right_events": null,
+        "cells": {
+          "both_breach": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "model_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "B_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "neither_breach": {
+            "n": 0,
+            "scenario_ids": []
+          }
+        }
+      },
+      "conditional_model_risk": null,
+      "conditional_B_risk": null
+    },
+    {
+      "group": "stability_r3_outer1",
+      "original_n": 24,
+      "common_auto_n": 0,
+      "paired_events": {
+        "n": 0,
+        "left_events": null,
+        "right_events": null,
+        "cells": {
+          "both_breach": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "model_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "B_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "neither_breach": {
+            "n": 0,
+            "scenario_ids": []
+          }
+        }
+      },
+      "conditional_model_risk": null,
+      "conditional_B_risk": null
+    },
+    {
+      "group": "stability_r3_outer2",
+      "original_n": 24,
+      "common_auto_n": 0,
+      "paired_events": {
+        "n": 0,
+        "left_events": null,
+        "right_events": null,
+        "cells": {
+          "both_breach": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "model_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "B_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "neither_breach": {
+            "n": 0,
+            "scenario_ids": []
+          }
+        }
+      },
+      "conditional_model_risk": null,
+      "conditional_B_risk": null
+    },
+    {
+      "group": "stability_r3_outer3",
+      "original_n": 24,
+      "common_auto_n": 0,
+      "paired_events": {
+        "n": 0,
+        "left_events": null,
+        "right_events": null,
+        "cells": {
+          "both_breach": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "model_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "B_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "neither_breach": {
+            "n": 0,
+            "scenario_ids": []
+          }
+        }
+      },
+      "conditional_model_risk": null,
+      "conditional_B_risk": null
+    },
+    {
+      "group": "stability_r3_outer4",
+      "original_n": 24,
+      "common_auto_n": 0,
+      "paired_events": {
+        "n": 0,
+        "left_events": null,
+        "right_events": null,
+        "cells": {
+          "both_breach": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "model_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "B_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "neither_breach": {
+            "n": 0,
+            "scenario_ids": []
+          }
+        }
+      },
+      "conditional_model_risk": null,
+      "conditional_B_risk": null
+    },
+    {
+      "group": "stability_r3_outer5",
+      "original_n": 24,
+      "common_auto_n": 0,
+      "paired_events": {
+        "n": 0,
+        "left_events": null,
+        "right_events": null,
+        "cells": {
+          "both_breach": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "model_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "B_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "neither_breach": {
+            "n": 0,
+            "scenario_ids": []
+          }
+        }
+      },
+      "conditional_model_risk": null,
+      "conditional_B_risk": null
+    },
+    {
+      "group": "stability_r4_outer1",
+      "original_n": 24,
+      "common_auto_n": 0,
+      "paired_events": {
+        "n": 0,
+        "left_events": null,
+        "right_events": null,
+        "cells": {
+          "both_breach": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "model_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "B_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "neither_breach": {
+            "n": 0,
+            "scenario_ids": []
+          }
+        }
+      },
+      "conditional_model_risk": null,
+      "conditional_B_risk": null
+    },
+    {
+      "group": "stability_r4_outer2",
+      "original_n": 24,
+      "common_auto_n": 0,
+      "paired_events": {
+        "n": 0,
+        "left_events": null,
+        "right_events": null,
+        "cells": {
+          "both_breach": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "model_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "B_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "neither_breach": {
+            "n": 0,
+            "scenario_ids": []
+          }
+        }
+      },
+      "conditional_model_risk": null,
+      "conditional_B_risk": null
+    },
+    {
+      "group": "stability_r4_outer3",
+      "original_n": 24,
+      "common_auto_n": 0,
+      "paired_events": {
+        "n": 0,
+        "left_events": null,
+        "right_events": null,
+        "cells": {
+          "both_breach": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "model_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "B_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "neither_breach": {
+            "n": 0,
+            "scenario_ids": []
+          }
+        }
+      },
+      "conditional_model_risk": null,
+      "conditional_B_risk": null
+    },
+    {
+      "group": "stability_r4_outer4",
+      "original_n": 24,
+      "common_auto_n": 0,
+      "paired_events": {
+        "n": 0,
+        "left_events": null,
+        "right_events": null,
+        "cells": {
+          "both_breach": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "model_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "B_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "neither_breach": {
+            "n": 0,
+            "scenario_ids": []
+          }
+        }
+      },
+      "conditional_model_risk": null,
+      "conditional_B_risk": null
+    },
+    {
+      "group": "stability_r4_outer5",
+      "original_n": 24,
+      "common_auto_n": 24,
+      "paired_events": {
+        "n": 24,
+        "left_events": 1,
+        "right_events": 0,
+        "cells": {
+          "both_breach": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "model_only": {
+            "n": 1,
+            "scenario_ids": [
+              112
+            ]
+          },
+          "B_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "neither_breach": {
+            "n": 23,
+            "scenario_ids": [
+              9,
+              11,
+              23,
+              31,
+              35,
+              39,
+              42,
+              44,
+              49,
+              53,
+              60,
+              73,
+              77,
+              80,
+              81,
+              82,
+              89,
+              90,
+              93,
+              99,
+              102,
+              114,
+              119
+            ]
+          }
+        }
+      },
+      "conditional_model_risk": 0.041666666666666664,
+      "conditional_B_risk": 0.0
+    },
+    {
+      "group": "stability_r5_outer1",
+      "original_n": 24,
+      "common_auto_n": 0,
+      "paired_events": {
+        "n": 0,
+        "left_events": null,
+        "right_events": null,
+        "cells": {
+          "both_breach": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "model_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "B_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "neither_breach": {
+            "n": 0,
+            "scenario_ids": []
+          }
+        }
+      },
+      "conditional_model_risk": null,
+      "conditional_B_risk": null
+    },
+    {
+      "group": "stability_r5_outer2",
+      "original_n": 24,
+      "common_auto_n": 24,
+      "paired_events": {
+        "n": 24,
+        "left_events": 3,
+        "right_events": 2,
+        "cells": {
+          "both_breach": {
+            "n": 2,
+            "scenario_ids": [
+              63,
+              95
+            ]
+          },
+          "model_only": {
+            "n": 1,
+            "scenario_ids": [
+              112
+            ]
+          },
+          "B_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "neither_breach": {
+            "n": 21,
+            "scenario_ids": [
+              7,
+              12,
+              14,
+              20,
+              35,
+              54,
+              64,
+              67,
+              68,
+              70,
+              76,
+              81,
+              83,
+              91,
+              100,
+              101,
+              105,
+              107,
+              108,
+              111,
+              119
+            ]
+          }
+        }
+      },
+      "conditional_model_risk": 0.125,
+      "conditional_B_risk": 0.08333333333333333
+    },
+    {
+      "group": "stability_r5_outer3",
+      "original_n": 24,
+      "common_auto_n": 0,
+      "paired_events": {
+        "n": 0,
+        "left_events": null,
+        "right_events": null,
+        "cells": {
+          "both_breach": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "model_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "B_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "neither_breach": {
+            "n": 0,
+            "scenario_ids": []
+          }
+        }
+      },
+      "conditional_model_risk": null,
+      "conditional_B_risk": null
+    },
+    {
+      "group": "stability_r5_outer4",
+      "original_n": 24,
+      "common_auto_n": 0,
+      "paired_events": {
+        "n": 0,
+        "left_events": null,
+        "right_events": null,
+        "cells": {
+          "both_breach": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "model_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "B_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "neither_breach": {
+            "n": 0,
+            "scenario_ids": []
+          }
+        }
+      },
+      "conditional_model_risk": null,
+      "conditional_B_risk": null
+    },
+    {
+      "group": "stability_r5_outer5",
+      "original_n": 24,
+      "common_auto_n": 24,
+      "paired_events": {
+        "n": 24,
+        "left_events": 0,
+        "right_events": 0,
+        "cells": {
+          "both_breach": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "model_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "B_only": {
+            "n": 0,
+            "scenario_ids": []
+          },
+          "neither_breach": {
+            "n": 24,
+            "scenario_ids": [
+              2,
+              6,
+              16,
+              21,
+              30,
+              34,
+              41,
+              46,
+              52,
+              57,
+              59,
+              60,
+              62,
+              74,
+              77,
+              78,
+              82,
+              86,
+              88,
+              89,
+              96,
+              99,
+              102,
+              113
+            ]
+          }
+        }
+      },
+      "conditional_model_risk": 0.0,
+      "conditional_B_risk": 0.0
+    }
+  ],
+  "outer_model_only_occurrences": [
+    {
+      "repeat_id": 2,
+      "context": "stability_r2_outer2",
+      "scenario_id": 52
+    },
+    {
+      "repeat_id": 4,
+      "context": "stability_r4_outer5",
+      "scenario_id": 112
+    },
+    {
+      "repeat_id": 5,
+      "context": "stability_r5_outer2",
+      "scenario_id": 112
+    }
+  ],
+  "outer_B_only_occurrences": [],
+  "limits": [
+    "Same original120IDs, but full-training fixed policy and4inner learned policies differ in targets, fans and sometimeseta;9vs10is not a validation error of one fixed model.",
+    "Inner10vsB8is an actual paired two-event difference on these stored paths, not just a changed denominator; it is not a statistical population-risk proof.",
+    "Outer groups condition on training-fit admission; reference outcomes outside common-auto are hypothetical, model financials remainNULL.",
+    "Repeated original IDs across fits are dependent. Influential IDs are descriptive evidence, never grounds to delete outliers or change gates.",
+    "No raw returns, fits, new policies, predictive calibration test or causal attribution to target versus fan versus action rule is performed."
+  ],
+  "outer_model_only_distinct_original_IDs": [
+    52,
+    112
+  ]
+}

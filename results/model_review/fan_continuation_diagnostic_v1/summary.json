@@ -1,0 +1,368 @@
+{
+  "slots": 39,
+  "fits": 13,
+  "distinct_original_market_ids": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    9,
+    13
+  ],
+  "distinct_original_market_n": 8,
+  "guard_admitted_slots": 12,
+  "active_slots": 35,
+  "active_distinct_original_market_ids": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    9,
+    13
+  ],
+  "active_distinct_original_market_n": 8,
+  "year30_active_control_count": 11,
+  "pending_slots": 4,
+  "branch_member_records": 3432,
+  "deletion_records": 3432,
+  "groups": [
+    {
+      "scope": "full_training_in_sample",
+      "final_guard_admitted": null,
+      "slots": 3,
+      "active_slots": 3,
+      "pending_slots": 0,
+      "fits": 1,
+      "distinct_original_market_ids": [
+        1
+      ],
+      "active_distinct_original_market_ids": [
+        1
+      ],
+      "active_distinct_original_market_n": 1,
+      "year30_active_control_count": 1,
+      "deletion_records": 360,
+      "deletion_action_flips": 0,
+      "slots_with_any_deletion_flip": 0,
+      "self_deletion_records": 3,
+      "self_deletion_action_flips": 0,
+      "continuation_log_gap": {
+        "n": 3,
+        "minimum": -0.043389027016766786,
+        "median": -0.027035129931105073,
+        "maximum": 0.0,
+        "mean": -0.02347471898262395
+      },
+      "continuation_mdd_gap": {
+        "n": 3,
+        "minimum": 0.0,
+        "median": 0.0,
+        "maximum": 0.009243773410188338,
+        "mean": 0.0030812578033961127
+      },
+      "continuation_fee_gap": {
+        "n": 3,
+        "minimum": -0.3369638650531216,
+        "median": -0.2530409203854641,
+        "maximum": 0.0,
+        "mean": -0.1966682618128619
+      },
+      "continuation_event_gap": {
+        "n": 3,
+        "minimum": 0.0,
+        "median": 0.0,
+        "maximum": 0.0,
+        "mean": 0.0
+      },
+      "future_action_mismatches": 25
+    },
+    {
+      "scope": "full_training_in_sample",
+      "final_guard_admitted": false,
+      "slots": 3,
+      "active_slots": 3,
+      "pending_slots": 0,
+      "fits": 1,
+      "distinct_original_market_ids": [
+        1
+      ],
+      "active_distinct_original_market_ids": [
+        1
+      ],
+      "active_distinct_original_market_n": 1,
+      "year30_active_control_count": 1,
+      "deletion_records": 360,
+      "deletion_action_flips": 0,
+      "slots_with_any_deletion_flip": 0,
+      "self_deletion_records": 3,
+      "self_deletion_action_flips": 0,
+      "continuation_log_gap": {
+        "n": 3,
+        "minimum": -0.043389027016766786,
+        "median": -0.027035129931105073,
+        "maximum": 0.0,
+        "mean": -0.02347471898262395
+      },
+      "continuation_mdd_gap": {
+        "n": 3,
+        "minimum": 0.0,
+        "median": 0.0,
+        "maximum": 0.009243773410188338,
+        "mean": 0.0030812578033961127
+      },
+      "continuation_fee_gap": {
+        "n": 3,
+        "minimum": -0.3369638650531216,
+        "median": -0.2530409203854641,
+        "maximum": 0.0,
+        "mean": -0.1966682618128619
+      },
+      "continuation_event_gap": {
+        "n": 3,
+        "minimum": 0.0,
+        "median": 0.0,
+        "maximum": 0.0,
+        "mean": 0.0
+      },
+      "future_action_mismatches": 25
+    },
+    {
+      "scope": "full_training_in_sample",
+      "final_guard_admitted": true,
+      "slots": 0,
+      "active_slots": 0,
+      "pending_slots": 0,
+      "fits": 0,
+      "distinct_original_market_ids": [],
+      "active_distinct_original_market_ids": [],
+      "active_distinct_original_market_n": 0,
+      "year30_active_control_count": 0,
+      "deletion_records": 0,
+      "deletion_action_flips": 0,
+      "slots_with_any_deletion_flip": 0,
+      "self_deletion_records": 0,
+      "self_deletion_action_flips": 0,
+      "continuation_log_gap": {
+        "n": 0,
+        "minimum": null,
+        "median": null,
+        "maximum": null,
+        "mean": null
+      },
+      "continuation_mdd_gap": {
+        "n": 0,
+        "minimum": null,
+        "median": null,
+        "maximum": null,
+        "mean": null
+      },
+      "continuation_fee_gap": {
+        "n": 0,
+        "minimum": null,
+        "median": null,
+        "maximum": null,
+        "mean": null
+      },
+      "continuation_event_gap": {
+        "n": 0,
+        "minimum": null,
+        "median": null,
+        "maximum": null,
+        "mean": null
+      },
+      "future_action_mismatches": 0
+    },
+    {
+      "scope": "outer_oof",
+      "final_guard_admitted": null,
+      "slots": 36,
+      "active_slots": 32,
+      "pending_slots": 4,
+      "fits": 12,
+      "distinct_original_market_ids": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        9,
+        13
+      ],
+      "active_distinct_original_market_ids": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        9,
+        13
+      ],
+      "active_distinct_original_market_n": 8,
+      "year30_active_control_count": 10,
+      "deletion_records": 3072,
+      "deletion_action_flips": 21,
+      "slots_with_any_deletion_flip": 3,
+      "self_deletion_records": 0,
+      "self_deletion_action_flips": 0,
+      "continuation_log_gap": {
+        "n": 32,
+        "minimum": -0.04517928941383446,
+        "median": 0.009476848348817013,
+        "maximum": 0.2221685103785631,
+        "mean": 0.048782815239191056
+      },
+      "continuation_mdd_gap": {
+        "n": 32,
+        "minimum": -0.004508267058514925,
+        "median": 0.0,
+        "maximum": 0.13262587683338545,
+        "mean": 0.013676925810958883
+      },
+      "continuation_fee_gap": {
+        "n": 32,
+        "minimum": -0.7330062136603204,
+        "median": -0.19118981700567725,
+        "maximum": 0.06188466121125158,
+        "mean": -0.22566258183820587
+      },
+      "continuation_event_gap": {
+        "n": 32,
+        "minimum": 0.0,
+        "median": 0.0,
+        "maximum": 0.0,
+        "mean": 0.0
+      },
+      "future_action_mismatches": 332
+    },
+    {
+      "scope": "outer_oof",
+      "final_guard_admitted": false,
+      "slots": 24,
+      "active_slots": 20,
+      "pending_slots": 4,
+      "fits": 8,
+      "distinct_original_market_ids": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        13
+      ],
+      "active_distinct_original_market_ids": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        13
+      ],
+      "active_distinct_original_market_n": 6,
+      "year30_active_control_count": 6,
+      "deletion_records": 1920,
+      "deletion_action_flips": 9,
+      "slots_with_any_deletion_flip": 2,
+      "self_deletion_records": 0,
+      "self_deletion_action_flips": 0,
+      "continuation_log_gap": {
+        "n": 20,
+        "minimum": -0.04517928941383446,
+        "median": 0.0,
+        "maximum": 0.2221685103785631,
+        "mean": 0.039007310846278245
+      },
+      "continuation_mdd_gap": {
+        "n": 20,
+        "minimum": -0.004508267058514925,
+        "median": 0.0,
+        "maximum": 0.13262587683338545,
+        "mean": 0.01517474685041052
+      },
+      "continuation_fee_gap": {
+        "n": 20,
+        "minimum": -0.7330062136603204,
+        "median": -0.12173417223528396,
+        "maximum": 0.06188466121125158,
+        "mean": -0.2030731063081586
+      },
+      "continuation_event_gap": {
+        "n": 20,
+        "minimum": 0.0,
+        "median": 0.0,
+        "maximum": 0.0,
+        "mean": 0.0
+      },
+      "future_action_mismatches": 193
+    },
+    {
+      "scope": "outer_oof",
+      "final_guard_admitted": true,
+      "slots": 12,
+      "active_slots": 12,
+      "pending_slots": 0,
+      "fits": 4,
+      "distinct_original_market_ids": [
+        2,
+        3,
+        7,
+        9
+      ],
+      "active_distinct_original_market_ids": [
+        2,
+        3,
+        7,
+        9
+      ],
+      "active_distinct_original_market_n": 4,
+      "year30_active_control_count": 4,
+      "deletion_records": 1152,
+      "deletion_action_flips": 12,
+      "slots_with_any_deletion_flip": 1,
+      "self_deletion_records": 0,
+      "self_deletion_action_flips": 0,
+      "continuation_log_gap": {
+        "n": 12,
+        "minimum": 0.0,
+        "median": 0.03752976882974074,
+        "maximum": 0.22076035930173976,
+        "mean": 0.0650753225607124
+      },
+      "continuation_mdd_gap": {
+        "n": 12,
+        "minimum": 0.0,
+        "median": 0.004208289241112384,
+        "maximum": 0.07322586167518219,
+        "mean": 0.011180557411872821
+      },
+      "continuation_fee_gap": {
+        "n": 12,
+        "minimum": -0.5869960888462058,
+        "median": -0.3041846443395108,
+        "maximum": 0.0,
+        "mean": -0.26331170772161805
+      },
+      "continuation_event_gap": {
+        "n": 12,
+        "minimum": 0.0,
+        "median": 0.0,
+        "maximum": 0.0,
+        "mean": 0.0
+      },
+      "future_action_mismatches": 139
+    }
+  ],
+  "interpretation": [
+    "39 predeclared archived witness slots from13 fits and8 distinct original markets, not39 independent trials.",
+    "Only3 full-training slots can contain their actual market suffix. Their fixed-state self deletions are not refits or learner LOOCV.",
+    "OOF actual market IDs are absent from their own training fan. Full-training self inclusion remains resubstitution, not independent validation.",
+    "Deletion records share states and original paths; no confidence interval or probability calibration is inferred.",
+    "Continuation gaps compare identical current action then B to saved future adaptive decisions; unchosen-action adaptive Q is unavailable.",
+    "Fees already enter net Q. No action, price, beta, target or admission is altered; current full-client Review remains."
+  ]
+}

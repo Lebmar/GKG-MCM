@@ -14,7 +14,7 @@ are an archived, auditable prototype; they are not the accepted final competitio
 model or a submission recommendation. Work has returned to the objective,
 parameter meanings, assumptions, internal validation and decision rules.
 See `docs/model_foundation_review.json`; parameter/refit, coverage and
-joint-liquidity history is in notebook sections10.12–10.15. The newest
+joint-liquidity history is in notebook sections10.12–10.15. The earlier
 [executed research companion](notebooks/admission_stability_forecasts.ipynb)
 and [reading copy](notebooks/admission_stability_forecasts.html) examine the
 risk cost of new admission, complete-refit stability and prediction assumptions.
@@ -30,6 +30,27 @@ customer suitability, selective rebalancing and bounded target updates. It does
 not assume that a more complicated policy improves investment outcomes.
 
 ## Current development research
+
+The final evening session localizes the admission differences by original
+market ID: full-training9 to inner10 consists of8 shared events, ID98 leaving,
+and IDs35/112 entering. On the same inner paths B has8 events, with the two
+model-only events35/112. Targets and training fans also change, so this is
+not an isolated test of eta. The [720-row identity ledger](results/model_review/admission_failure_identities_v1/)
+preserves all120 full/inner and600 repeated outer records, including504
+non-common automatic records with NULL model financials and differences.
+
+A separately frozen fixed-state diagnostic checks39 original witness slots
+from13 archived fits and8 distinct markets. Of35 active states,3 have at least
+one action flip after deleting a single fan member;21 of3072 OOF deletions
+flip, while3 full-training self deletions do not. Two sensitive states are in
+year30 and involve near-break-even net growth rather than future continuation.
+Same-current-action B and saved adaptive continuations differ in growth/MDD,
+but none of these35 witnesses changes its terminal breach flag. All3432 fan
+members/deletions and relevant account states pass245925 independent arithmetic
+checks. These witnesses exclude the failure IDs and are neither learner LOOCV,
+conditional calibration nor an explanation of those failures. Current C stays
+Review. See the [diagnostic judgment](docs/fan_continuation_diagnostic_judgment.json)
+and [next-session handoff](docs/overnight_handoff_2026_10_18.json).
 
 The benefit-cost investigation retained two failed simplifications openly.
 Strictly positive predicted financial-growth trading produced31/120 complete
@@ -337,9 +358,10 @@ audits; they do not replace the primary procedure. The research preserves full
 path folds, records referrals as null outcomes, and distinguishes empirical
 calibration, numerical correctness and statistical evidence.
 
-The latest checkpoint passes **725 tests** and checks 143 saved manifests,
-audits and receipts against 877 distinct source, input, result and execution
-evidence files. The phase Git-index proof binds172 frozen package files. The
+The latest checkpoint passes **747 tests** and checks 151 saved manifests,
+audits and receipts against 898 distinct source, input, result and execution
+evidence files. The preceding benefit-cost phase's Git-index proof binds172
+frozen package files. The
 previous joint stage passes 538,236 independent selection/accounting checks and its
 30-task isolated replay matches 18 deterministic output files byte for byte;
 progress differs only in declared runtime fields. The first implementation
