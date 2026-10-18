@@ -1,0 +1,467 @@
+{
+  "version": "fan-continuation-independent-audit-plan-v1",
+  "declared_utc": "2026-10-18T14:22:25.841667+00:00",
+  "status": "prospective fixed-scope plan; implementation may finish after producer freeze; no new numerical outputs inspected",
+  "purpose": "Diagnose finite empirical-fan decision fragility at fixed archived states and the action-then-B continuation approximation; no policy/refit/admission changes or probability-calibration claim",
+  "pre_execution_reads": {
+    "source_and_existing_metadata_only": true,
+    "new_numeric_result_tables_read": false,
+    "old_NPZ_arrays_parsed": false,
+    "raw_market_rows_parsed": false,
+    "final_scenarios_read": false
+  },
+  "inventory": {
+    "fit_rule": "Exactly all13 original_execution_status==automated fits in fixed admission.json, including fits later refused by final guard; no new fit or original rejected-fit rescue",
+    "state_rule": "Each original saved q_subset_scenario_id and original q_subset_years[2,16,30]; original chronological state before that year;39slots exactly",
+    "slots": [
+      {
+        "context": "stability_r2_outer2",
+        "context_id": 202,
+        "repeat_id": 2,
+        "source": "repeat",
+        "group": "c202__joint_tie_set_refit_learner",
+        "scenario_id": 3,
+        "original_year": 2,
+        "final_guard_admitted": true
+      },
+      {
+        "context": "stability_r2_outer2",
+        "context_id": 202,
+        "repeat_id": 2,
+        "source": "repeat",
+        "group": "c202__joint_tie_set_refit_learner",
+        "scenario_id": 3,
+        "original_year": 16,
+        "final_guard_admitted": true
+      },
+      {
+        "context": "stability_r2_outer2",
+        "context_id": 202,
+        "repeat_id": 2,
+        "source": "repeat",
+        "group": "c202__joint_tie_set_refit_learner",
+        "scenario_id": 3,
+        "original_year": 30,
+        "final_guard_admitted": true
+      },
+      {
+        "context": "stability_r2_outer5",
+        "context_id": 205,
+        "repeat_id": 2,
+        "source": "repeat",
+        "group": "c205__joint_tie_set_refit_learner",
+        "scenario_id": 13,
+        "original_year": 2,
+        "final_guard_admitted": false
+      },
+      {
+        "context": "stability_r2_outer5",
+        "context_id": 205,
+        "repeat_id": 2,
+        "source": "repeat",
+        "group": "c205__joint_tie_set_refit_learner",
+        "scenario_id": 13,
+        "original_year": 16,
+        "final_guard_admitted": false
+      },
+      {
+        "context": "stability_r2_outer5",
+        "context_id": 205,
+        "repeat_id": 2,
+        "source": "repeat",
+        "group": "c205__joint_tie_set_refit_learner",
+        "scenario_id": 13,
+        "original_year": 30,
+        "final_guard_admitted": false
+      },
+      {
+        "context": "stability_r3_outer1",
+        "context_id": 301,
+        "repeat_id": 3,
+        "source": "repeat",
+        "group": "c301__joint_tie_set_refit_learner",
+        "scenario_id": 2,
+        "original_year": 2,
+        "final_guard_admitted": false
+      },
+      {
+        "context": "stability_r3_outer1",
+        "context_id": 301,
+        "repeat_id": 3,
+        "source": "repeat",
+        "group": "c301__joint_tie_set_refit_learner",
+        "scenario_id": 2,
+        "original_year": 16,
+        "final_guard_admitted": false
+      },
+      {
+        "context": "stability_r3_outer1",
+        "context_id": 301,
+        "repeat_id": 3,
+        "source": "repeat",
+        "group": "c301__joint_tie_set_refit_learner",
+        "scenario_id": 2,
+        "original_year": 30,
+        "final_guard_admitted": false
+      },
+      {
+        "context": "stability_r3_outer2",
+        "context_id": 302,
+        "repeat_id": 3,
+        "source": "repeat",
+        "group": "c302__joint_tie_set_refit_learner",
+        "scenario_id": 1,
+        "original_year": 2,
+        "final_guard_admitted": false
+      },
+      {
+        "context": "stability_r3_outer2",
+        "context_id": 302,
+        "repeat_id": 3,
+        "source": "repeat",
+        "group": "c302__joint_tie_set_refit_learner",
+        "scenario_id": 1,
+        "original_year": 16,
+        "final_guard_admitted": false
+      },
+      {
+        "context": "stability_r3_outer2",
+        "context_id": 302,
+        "repeat_id": 3,
+        "source": "repeat",
+        "group": "c302__joint_tie_set_refit_learner",
+        "scenario_id": 1,
+        "original_year": 30,
+        "final_guard_admitted": false
+      },
+      {
+        "context": "stability_r3_outer3",
+        "context_id": 303,
+        "repeat_id": 3,
+        "source": "repeat",
+        "group": "c303__joint_tie_set_refit_learner",
+        "scenario_id": 6,
+        "original_year": 2,
+        "final_guard_admitted": false
+      },
+      {
+        "context": "stability_r3_outer3",
+        "context_id": 303,
+        "repeat_id": 3,
+        "source": "repeat",
+        "group": "c303__joint_tie_set_refit_learner",
+        "scenario_id": 6,
+        "original_year": 16,
+        "final_guard_admitted": false
+      },
+      {
+        "context": "stability_r3_outer3",
+        "context_id": 303,
+        "repeat_id": 3,
+        "source": "repeat",
+        "group": "c303__joint_tie_set_refit_learner",
+        "scenario_id": 6,
+        "original_year": 30,
+        "final_guard_admitted": false
+      },
+      {
+        "context": "stability_r3_outer4",
+        "context_id": 304,
+        "repeat_id": 3,
+        "source": "repeat",
+        "group": "c304__joint_tie_set_refit_learner",
+        "scenario_id": 3,
+        "original_year": 2,
+        "final_guard_admitted": false
+      },
+      {
+        "context": "stability_r3_outer4",
+        "context_id": 304,
+        "repeat_id": 3,
+        "source": "repeat",
+        "group": "c304__joint_tie_set_refit_learner",
+        "scenario_id": 3,
+        "original_year": 16,
+        "final_guard_admitted": false
+      },
+      {
+        "context": "stability_r3_outer4",
+        "context_id": 304,
+        "repeat_id": 3,
+        "source": "repeat",
+        "group": "c304__joint_tie_set_refit_learner",
+        "scenario_id": 3,
+        "original_year": 30,
+        "final_guard_admitted": false
+      },
+      {
+        "context": "stability_r3_outer5",
+        "context_id": 305,
+        "repeat_id": 3,
+        "source": "repeat",
+        "group": "c305__joint_tie_set_refit_learner",
+        "scenario_id": 5,
+        "original_year": 2,
+        "final_guard_admitted": false
+      },
+      {
+        "context": "stability_r3_outer5",
+        "context_id": 305,
+        "repeat_id": 3,
+        "source": "repeat",
+        "group": "c305__joint_tie_set_refit_learner",
+        "scenario_id": 5,
+        "original_year": 16,
+        "final_guard_admitted": false
+      },
+      {
+        "context": "stability_r3_outer5",
+        "context_id": 305,
+        "repeat_id": 3,
+        "source": "repeat",
+        "group": "c305__joint_tie_set_refit_learner",
+        "scenario_id": 5,
+        "original_year": 30,
+        "final_guard_admitted": false
+      },
+      {
+        "context": "stability_r4_outer2",
+        "context_id": 402,
+        "repeat_id": 4,
+        "source": "repeat",
+        "group": "c402__joint_tie_set_refit_learner",
+        "scenario_id": 1,
+        "original_year": 2,
+        "final_guard_admitted": false
+      },
+      {
+        "context": "stability_r4_outer2",
+        "context_id": 402,
+        "repeat_id": 4,
+        "source": "repeat",
+        "group": "c402__joint_tie_set_refit_learner",
+        "scenario_id": 1,
+        "original_year": 16,
+        "final_guard_admitted": false
+      },
+      {
+        "context": "stability_r4_outer2",
+        "context_id": 402,
+        "repeat_id": 4,
+        "source": "repeat",
+        "group": "c402__joint_tie_set_refit_learner",
+        "scenario_id": 1,
+        "original_year": 30,
+        "final_guard_admitted": false
+      },
+      {
+        "context": "stability_r4_outer3",
+        "context_id": 403,
+        "repeat_id": 4,
+        "source": "repeat",
+        "group": "c403__joint_tie_set_refit_learner",
+        "scenario_id": 5,
+        "original_year": 2,
+        "final_guard_admitted": false
+      },
+      {
+        "context": "stability_r4_outer3",
+        "context_id": 403,
+        "repeat_id": 4,
+        "source": "repeat",
+        "group": "c403__joint_tie_set_refit_learner",
+        "scenario_id": 5,
+        "original_year": 16,
+        "final_guard_admitted": false
+      },
+      {
+        "context": "stability_r4_outer3",
+        "context_id": 403,
+        "repeat_id": 4,
+        "source": "repeat",
+        "group": "c403__joint_tie_set_refit_learner",
+        "scenario_id": 5,
+        "original_year": 30,
+        "final_guard_admitted": false
+      },
+      {
+        "context": "stability_r4_outer5",
+        "context_id": 405,
+        "repeat_id": 4,
+        "source": "repeat",
+        "group": "c405__joint_tie_set_refit_learner",
+        "scenario_id": 9,
+        "original_year": 2,
+        "final_guard_admitted": true
+      },
+      {
+        "context": "stability_r4_outer5",
+        "context_id": 405,
+        "repeat_id": 4,
+        "source": "repeat",
+        "group": "c405__joint_tie_set_refit_learner",
+        "scenario_id": 9,
+        "original_year": 16,
+        "final_guard_admitted": true
+      },
+      {
+        "context": "stability_r4_outer5",
+        "context_id": 405,
+        "repeat_id": 4,
+        "source": "repeat",
+        "group": "c405__joint_tie_set_refit_learner",
+        "scenario_id": 9,
+        "original_year": 30,
+        "final_guard_admitted": true
+      },
+      {
+        "context": "stability_r5_outer2",
+        "context_id": 502,
+        "repeat_id": 5,
+        "source": "repeat",
+        "group": "c502__joint_tie_set_refit_learner",
+        "scenario_id": 7,
+        "original_year": 2,
+        "final_guard_admitted": true
+      },
+      {
+        "context": "stability_r5_outer2",
+        "context_id": 502,
+        "repeat_id": 5,
+        "source": "repeat",
+        "group": "c502__joint_tie_set_refit_learner",
+        "scenario_id": 7,
+        "original_year": 16,
+        "final_guard_admitted": true
+      },
+      {
+        "context": "stability_r5_outer2",
+        "context_id": 502,
+        "repeat_id": 5,
+        "source": "repeat",
+        "group": "c502__joint_tie_set_refit_learner",
+        "scenario_id": 7,
+        "original_year": 30,
+        "final_guard_admitted": true
+      },
+      {
+        "context": "stability_r5_outer5",
+        "context_id": 505,
+        "repeat_id": 5,
+        "source": "repeat",
+        "group": "c505__joint_tie_set_refit_learner",
+        "scenario_id": 2,
+        "original_year": 2,
+        "final_guard_admitted": true
+      },
+      {
+        "context": "stability_r5_outer5",
+        "context_id": 505,
+        "repeat_id": 5,
+        "source": "repeat",
+        "group": "c505__joint_tie_set_refit_learner",
+        "scenario_id": 2,
+        "original_year": 16,
+        "final_guard_admitted": true
+      },
+      {
+        "context": "stability_r5_outer5",
+        "context_id": 505,
+        "repeat_id": 5,
+        "source": "repeat",
+        "group": "c505__joint_tie_set_refit_learner",
+        "scenario_id": 2,
+        "original_year": 30,
+        "final_guard_admitted": true
+      },
+      {
+        "context": "full_development",
+        "context_id": 0,
+        "repeat_id": 0,
+        "source": "full",
+        "group": "c0__joint_tie_set_refit_learner",
+        "scenario_id": 1,
+        "original_year": 2,
+        "final_guard_admitted": false
+      },
+      {
+        "context": "full_development",
+        "context_id": 0,
+        "repeat_id": 0,
+        "source": "full",
+        "group": "c0__joint_tie_set_refit_learner",
+        "scenario_id": 1,
+        "original_year": 16,
+        "final_guard_admitted": false
+      },
+      {
+        "context": "full_development",
+        "context_id": 0,
+        "repeat_id": 0,
+        "source": "full",
+        "group": "c0__joint_tie_set_refit_learner",
+        "scenario_id": 1,
+        "original_year": 30,
+        "final_guard_admitted": false
+      }
+    ],
+    "pending_rule": "Already-breached/pending slot retained with explicit skip and NULL diagnostics; no replacement scenario/year",
+    "ordering": "Validate complete exact state/trainingID keys and own membership; keep chronological year order and original joint path suffixes; CSV row order is not a different market experiment"
+  },
+  "numerical_scope": {
+    "fan": "For every active slot reconstruct both current hold/paidrestore branches then branch-own annual target B until original-H breach, then absorbinghold. Same current wealth/holdings/CPI/historicalpeak/MDD/originalH30/L.4/fee.0025 and exact own trainingIDs. Audit all branch member logs/observed event booleans and aggregate Q/counts against frozen old scalar_fan; audit any persisted branch physical fields independently via separate100step fee bisection",
+    "deletions": "Delete each original training member once at the SAME archived state, target,eta,H. Compute means using explicit retained-array slices and counts from retained booleans; denominator N-1. Reconstruct finite score DeltaQg-H*eta*DeltaK/(N-1), or risk_first exact count/growth ordering. Check all deletion recommendations/flips/inventories; no refit, resampling, target/parameter change or omitted difficult members",
+    "original_decisions": "Reconstruct full-fan net score with ORIGINALH30 (not remainingH), check saved Q/count/score/action and own controller identity. Q already includes fees; never subtract twice. Initialallocation is outside fixed years; pending skip remains absent",
+    "actual_suffix": "At each active archived state independently execute actual original scenario suffix with currenthold or currentpaidrestore then branch-own B/absorbinghold; audit logs, events, original-H MDD/peak/CPI/fees/action timelines. Reconstruct saved adaptive suffix with its fixed originally executed actions from identical current state; compare to stored old arrays. Only chosen-first-action B vs adaptive isolates continuation mismatch under the same fixed market suffix; do not invent an alternate-first-action adaptive policy",
+    "differences_and_summary": "Recompute every reported subtraction/rate/flip count and summary from independently checked states/members/deletions. Keep total-log versus annualized units separate; preserve empty denominators/NULL, scope/finalguard labels and39-slot counts. Never sum overlapping Q gaps as realized loss"
+  },
+  "integrity": {
+    "before_market_parse": "Require frozen ready protocol, complete producer manifest, all frozen current input/source/output hashes and parent passed-audit manifest bindings; reject existing successful/failure receipt before raw load",
+    "data": "Only explicit guarded scenarios1..120 allow_finalFalse, verify chronological arrays digest against frozen parent; do not parse121..180",
+    "independence": "Auditor imports no new producer or new fan simulator. Previously frozen independent scalar_fan/accounting helpers permitted and hashed; their reuse is not calibration validation",
+    "start_end": "Hash protocol, ownsource/tests/plan, all producer sources/inputs/outputs, referenced parent manifests/audits/NPZ and helper sources before and after; exact equality",
+    "failure": "Preserve failure receipt/log and scope. No successful receipt if incomplete or discrepant; no adaptive slot replacement or scope shrink. No overwrite of old sources/results"
+  },
+  "outputs": {
+    "receipt": "results/model_review/fan_continuation_diagnostic_v1/independent_audit.json",
+    "required_top_fields": [
+      "status",
+      "parent_manifest_sha256",
+      "protocol_sha256",
+      "audit_plan_sha256",
+      "auditor_sha256",
+      "sources_and_artifacts_at_start",
+      "sources_and_artifacts_at_end",
+      "checks_passed",
+      "maximum_numeric_absolute_error",
+      "state_inventory",
+      "scope_limits"
+    ]
+  },
+  "budget_minutes": 20,
+  "limitations": [
+    "Fixed-state delete-one diagnostics measure local dependence on a finite empirical fan, not cross-fit stability or sampling confidence",
+    "Actual suffix comparisons use realized future only as a post-hoc diagnostic, never as a deployable forecast or policy selector",
+    "B continuation differs from the actually replanned policy; neither comparison validates the unconditional calendar conditional law",
+    "39states/13fits share original paths and overlap in time; noIID confidence interval, added customers, or fresh blind market evidence",
+    "All old originally automated controls remain archived development evidence; finalguard-refused fits are not newly served financial outcomes"
+  ],
+  "metadata_and_independent_helper_sha256": {
+    "results/model_review/global_policy_admission_v1/admission.json": "d3b30953e461fb1781108e3df9e9c885f5b28e10e185567f58cbeac15eddd1a3",
+    "results/model_review/global_policy_admission_v1/manifest.json": "5b6449d949999458abe5ea6b8f47a74139ae0bf1699883bf5c8da7646c31c749",
+    "results/model_review/global_policy_admission_v1/independent_audit.json": "9f85f41112ac59a42f721c84808704cae980ca9cba61d63458ffe2018c77d8b0",
+    "results/model_review/joint_liquidity_refit_v1/trace_groups.json": "47b931c0e2509ecc5dfc2d47f1d87dfa0bb22fd2651e794509593098f4c21b8a",
+    "results/model_review/joint_liquidity_refit_v1/context_selections.json": "9620df702547f68f7c0d304e664d5bb433500c08138a492a4bdba9fae2d4321b",
+    "results/model_review/joint_liquidity_refit_v1/manifest.json": "28819dca54041e22ae53ac924b71e023c005f96cd73ca66d102b3a1ac20a4c99",
+    "results/model_review/joint_liquidity_refit_v1/independent_audit.json": "16339e76e41e07b6f37fbd0c88baff3ffe77d245e77258ef9bc8060fd79b3a15",
+    "results/model_review/refit_stability_v1/trace_groups.json": "d218fdcf9e4390cb31f753d3836fa81b9049d7fba540921d5268a2933e679d97",
+    "results/model_review/refit_stability_v1/context_selections.json": "3e9ff0e536857b2d4366d5368ad5c22f42a00402335f3e7426872ff6e693c13b",
+    "results/model_review/refit_stability_v1/manifest.json": "035bfa20b4e659e88ff48b56ffdc21a6563db32a0490d2ec8a6852154018e5a5",
+    "results/model_review/refit_stability_v1/independent_audit.json": "7725716ddbfb2da1071027936fc90374668f99161e6e15b57fd3f80b90a9e712",
+    "docs/refit_stability_protocol.json": "8e9ab035073b91e4004c76c41296c56665d2199620e92d8cc0eb4eaca7a4efae",
+    "docs/joint_liquidity_refit_protocol.json": "1e92a4f7b374bd7437315c89e513a830f12211b54cb08d3c4341dffdc9f1e3f6",
+    "scripts/audit_fan_rollout_execution.py": "9f9d4a274e3be531040193e1654ec6bdf74733ad5204937b8a8d8195d02940fb",
+    "scripts/audit_review_pending_execution.py": "9c208ce69a03f1a13460908ec04b39a8dc232eacbb8882b5bdef3aafae60a264",
+    "scripts/audit_simple_execution_comparison.py": "1a2e2ddb59f6f725cd3996513e67434c15c011346c19946ffdd98709dd45f248"
+  }
+}
