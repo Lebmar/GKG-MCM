@@ -7,22 +7,20 @@
 \usepackage{amsmath,amssymb}
 \usepackage{booktabs,tabularx,array,makecell}
 \usepackage{graphicx}
-\usepackage[svgnames]{xcolor}
 \usepackage{hyperref}
 \usepackage{caption}
 \usepackage{float}
 \usepackage{enumitem}
 \usepackage{titlesec}
 \usepackage{fancyhdr}
-\hypersetup{colorlinks=true,linkcolor=navy,urlcolor=navy,citecolor=navy}
-\definecolor{navy}{HTML}{1F4E79}
-\definecolor{orange}{HTML}{C55A11}
-\definecolor{green}{HTML}{548235}
+\hypersetup{hidelinks}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{2.5pt}
 \setlength{\tabcolsep}{3pt}
-\titleformat{\section}{\large\bfseries\color{navy}}{\thesection}{0.6em}{}
-\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.5em}{}
+\titleformat{\section}{\large\bfseries}{\thesection.}{0.6em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection.}{0.5em}{}
+\titlespacing*{\section}{0pt}{9pt plus 2pt}{4pt}
+\titlespacing*{\subsection}{0pt}{7pt plus 2pt}{3pt}
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[L]{\small Team Lebmar (87) --- SafeInvest}
@@ -30,7 +28,7 @@
 \fancyfoot[C]{\small\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
 
-\captionsetup{font=small,labelfont=bf}
+\captionsetup{font=small,labelfont=bf,labelsep=period}
 \title{\vspace{-8mm}\textbf{SafeInvest: Cost-Aware Robo-Advice with Explicit Risk Limits and Human Review}}
 \author{\textbf{Team Lebmar (87)}\\ Chengxuan YUAN}
 \date{October 2026}
@@ -561,10 +559,14 @@ statement are distributed for noncommercial use under CC BY-NC-SA 4.0; attributi
 and share-alike conditions are retained. No new blanket open-source licence is
 granted to the participant's original code.
 
-\paragraph{References.}
-[1] HKUST(GZ), \emph{2026 MCM Senior Group Problem A: SafeInvest: Building a
-Trustworthy Robo-Advisor}, 2026.\quad
-[2] Ò.~Jordà, M.~Schularick and A.~M.~Taylor, \emph{Macrohistory Database},
+\begin{thebibliography}{9}
+\setlength{\itemsep}{1pt}
+\bibitem{problem}
+HKUST(GZ), \emph{2026 MCM Senior Group Problem A: SafeInvest: Building a
+Trustworthy Robo-Advisor}, 2026.
+\bibitem{jst}
+Ò.~Jordà, M.~Schularick and A.~M.~Taylor, \emph{Macrohistory Database},
 Release 6.
+\end{thebibliography}
 
 \end{document}
