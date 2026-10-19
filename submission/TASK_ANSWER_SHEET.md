@@ -113,6 +113,28 @@ This is a trade-off table, not a dominance claim: B's Conservative lowers breach
 and MDD versus equal thirds; C's Balanced buys growth with worse tails, which is
 why the Q2 guard matters; E's Growth buys median growth with a negative P10.
 
+### 1.5 Development 5×3 product screen
+
+The exact 15-cell table is in
+[Q1_PRODUCT_COMPARISON.md](Q1_PRODUCT_COMPARISON.md), with the one-page decision
+flow in [Q1_ONBOARDING_FLOW.md](Q1_ONBOARDING_FLOW.md). The compact matrix below
+uses the **development 1–120** selection screen; each cell is
+`median CAGR / P10; median MDD / P90; breaches/120`.
+
+| Profile | Conservative 25/30/45 | Balanced 45/5/50 | Growth 65/5/30 | Assignment |
+| --- | --- | --- | --- | --- |
+| A (H5, L10%, high) | 3.17 / −1.59; 5.56 / 14.90; 34 | 4.36 / −1.85; 8.59 / 20.53; 49 | 5.10 / −2.73; 11.94 / 27.46; 66 | **Review** |
+| B (H15, L25%, medium) | **3.04 / 0.10; 13.25 / 24.22; 9** | 4.08 / 0.10; 17.35 / 32.65; 27 | 5.26 / 0.02; 23.18 / 42.07; 49 | **Conservative** |
+| C (H30, L40%, low) | 2.97 / 1.02; 17.37 / 31.74; 1 | **4.03 / 1.44; 22.60 / 38.04; 9** | 5.12 / 1.48; 32.26 / 48.84; 35 | **Balanced** |
+| D (H25, L15%, medium) | 3.19 / 0.90; 16.71 / 29.37; 67 | 4.31 / 1.34; 20.90 / 35.91; 92 | 5.33 / 1.41; 29.18 / 47.90; 104 | **Review** |
+| E (H6, L35%, high) | 2.99 / −1.74; 8.08 / 18.35; 0 | 3.75 / −2.33; 10.29 / 23.11; 2 | **5.00 / −3.69; 13.89 / 31.18; 6** | **Growth** |
+
+All selected B/C/E rows pass the declared 10% training screen (9/120, 9/120,
+6/120). A/D have no risk-feasible product. The final selected-product table in
+§1.3 is the evaluation table; the final 5×3 descriptive table is retained in the
+comparison file but was not used to change any assignment. The final drift is
+adverse and disclosed: B 11/60, C 8/60, E 5/60, E P10 −1.58%.
+
 ## 2. Q2 — Balanced policy vs the equal-weight baseline
 
 ### 2.1 Frozen policy
@@ -242,6 +264,9 @@ customer/adviser; do not assume an adviser response, recovery reset or liquidati
 | Final object specification | [object_specification.json](../results/mitigation_locked_final_evaluation_v1/object_specification.json) |
 | Final audit | [independent_audit.json](../results/mitigation_locked_final_evaluation_v1/independent_audit.json) |
 | Severe case | [severe_example.json](../results/mitigation_locked_final_evaluation_v1/severe_example.json) |
+| Q1 5×3 product screen | [Q1_PRODUCT_COMPARISON.md](Q1_PRODUCT_COMPARISON.md) and [manifest](../results/q1_product_comparison_v1/manifest.json) |
+| Q1 one-page onboarding flow | [Q1_ONBOARDING_FLOW.md](Q1_ONBOARDING_FLOW.md) |
+| V2b report draft | [main.pdf](../report/v2b_submission/main.pdf) and [main.tex](../report/v2b_submission/main.tex) |
 | Q1 menu/feasibility | [q1_context_assignments.csv](../results/model_review/joint_liquidity_refit_v1/q1_context_assignments.csv) |
 | Q3 stress summary | [summary.csv.gz](../results/state_budget_mitigation_stress_v1/summary.csv.gz) |
 | Customer text | [mitigation_customer_explanation_contract.json](../docs/mitigation_customer_explanation_contract.json) |

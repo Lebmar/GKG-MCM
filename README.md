@@ -7,7 +7,12 @@ Author: **Chengxuan YUAN**.
 are in [TASK_ANSWER_SHEET.md](submission/TASK_ANSWER_SHEET.md), the Q3 sensitivity
 note in [Q3_SENSITIVITY.md](submission/Q3_SENSITIVITY.md), and the authoritative
 vs superseded document map in [AUTHORITATIVE_INDEX.md](docs/AUTHORITATIVE_INDEX.md).
-Read the latter before quoting an older report or registry.
+Read the latter before quoting an older report or registry. The one-page
+onboarding flow and 5×3 product screen are in
+[Q1_ONBOARDING_FLOW.md](submission/Q1_ONBOARDING_FLOW.md) and
+[Q1_PRODUCT_COMPARISON.md](submission/Q1_PRODUCT_COMPARISON.md); the V2b report
+draft is [main.pdf](report/v2b_submission/main.pdf) with
+[LaTeX source](report/v2b_submission/main.tex).
 
 **Current technical version: the simpler V2b mitigation model is locked, and its
 separate nonblind final evaluation, independent audit and isolated replay are complete.**
@@ -68,11 +73,11 @@ canonical array fingerprints. The final-table adapter and the fixed
 their full evidence gates.
 
 The final closure package is
-[Team87_Lebmar_Technical_Source_v3.zip](dist/Team87_Lebmar_Technical_Source_v3.zip):
-it keeps the V2 compact core unchanged and adds the closure documents (answer
-sheet, Q3 note, authoritative index and package README), still far below the
-50 MB CMT limit. The source-only ZIP is a technical artifact; paper and CMT
-delivery remain separate.
+[Team87_Lebmar_Technical_Source_v4.zip](dist/Team87_Lebmar_Technical_Source_v4.zip):
+it keeps the V2 compact core unchanged and adds the Q1 5×3 screen, the one-page
+onboarding flow, the answer sheet, the Q3 note, the report draft/source and the
+authoritative index, still far below the 50 MB CMT limit. The report is uploaded
+separately; the ZIP is the supplementary/source package.
 
 Earlier authoritative registry/final records below are retained historical
 evidence and are superseded for the new V2b evaluation only.

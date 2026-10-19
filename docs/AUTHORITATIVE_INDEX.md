@@ -20,14 +20,18 @@ Last updated: 2026-10-19 (submission closure). Current branch:
 | Requirements/evidence closure | [technical_evidence_closure_2026_10_19.json](technical_evidence_closure_2026_10_19.json) |
 | Last-mile diagnostics and verification | [technical_last_mile_completion_2026_10_19.json](technical_last_mile_completion_2026_10_19.json) |
 | Task-facing answer sheet | [TASK_ANSWER_SHEET.md](../submission/TASK_ANSWER_SHEET.md) |
+| Q1 5×3 product screen | [Q1_PRODUCT_COMPARISON.md](../submission/Q1_PRODUCT_COMPARISON.md) and [results/q1_product_comparison_v1/](../results/q1_product_comparison_v1/) |
+| Q1 one-page onboarding flow | [Q1_ONBOARDING_FLOW.md](../submission/Q1_ONBOARDING_FLOW.md) |
+| V2b report draft | [main.pdf](../report/v2b_submission/main.pdf) and [main.tex](../report/v2b_submission/main.tex) |
 | Q3 sensitivity note | [Q3_SENSITIVITY.md](../submission/Q3_SENSITIVITY.md) |
 | Compact final reproduction guide | [FINAL_REPRODUCTION.md](../submission/FINAL_REPRODUCTION.md) |
 | Data provenance/licence | [DATA_NOTICE.md](DATA_NOTICE.md) |
 | AI assistance record | [AI_USE.md](../submission/AI_USE.md) |
 
-The final submission ZIP is [Team87_Lebmar_Technical_Source_v3.zip](../dist/Team87_Lebmar_Technical_Source_v3.zip)
-after the closure build. It keeps the V2 core unchanged and adds only the closure
-documents (answer sheet, Q3 note, this index and a package README).
+The final submission ZIP is [Team87_Lebmar_Technical_Source_v4.zip](../dist/Team87_Lebmar_Technical_Source_v4.zip)
+after the closure build. It keeps the V2 core unchanged and adds the Q1 5×3 screen,
+the one-page onboarding flow, the answer sheet, the Q3 note, the report draft/source,
+this index and a package README.
 
 ## Superseded or historical material — do not use for final claims
 

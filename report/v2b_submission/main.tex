@@ -1,0 +1,393 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2.0cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs,tabularx,array,makecell}
+\usepackage{graphicx}
+\usepackage[svgnames]{xcolor}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\hypersetup{colorlinks=true,linkcolor=navy,urlcolor=navy,citecolor=navy}
+\definecolor{navy}{HTML}{1F4E79}
+\definecolor{orange}{HTML}{C55A11}
+\definecolor{green}{HTML}{548235}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2.5pt}
+\setlength{\tabcolsep}{3pt}
+\titleformat{\section}{\large\bfseries\color{navy}}{\thesection}{0.6em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.5em}{}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Team Lebmar (87) --- SafeInvest}
+\fancyhead[R]{\small 2026 HKUST(GZ) MCM Problem A}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\title{\vspace{-8mm}\textbf{SafeInvest: Cost-Aware Robo-Advice with Explicit Risk Limits and Human Review}}
+\author{\textbf{Team Lebmar (87)}\\ Chengxuan YUAN}
+\date{October 2026}
+
+\begin{document}
+\maketitle
+\vspace{-6mm}
+
+\begin{abstract}
+\noindent
+We build a transparent, cost-aware robo-advisory process for the SafeInvest synthetic
+scenario set. For suitability, we use real purchasing-power growth, ordinary
+return volatility, maximum real drawdown and a CVaR tail measure. A five-profile
+by three-product training screen assigns Profile A to human review, B to
+Conservative, C to Balanced, D to human review and E to Growth. For the Balanced
+customer we build V2b, an annual exact-fee policy that holds, restores, makes a
+bounded protective trade, or enters an absorbing human-review/hold state. Against
+the required one-third equal-weight baseline on the 60 final scenarios, V2b lowers
+median real CAGR from 3.38\% to 2.35\% and P10 growth from 1.47\% to 0.87\%, but
+lowers median real MDD from 22.29\% to 20.02\%, P90 MDD from 39.36\% to 28.69\% and
+breaches from 6/60 to 2/60; it trades in 21.22\% of decision periods versus 100\%
+for the baseline. A transaction-fee stress (0--1\%) leaves the main recommendation
+unchanged on development data; a pooled-support change forces an initial Review,
+and +2 percentage points of inflation raises breaches to 21/120. The result is a
+risk--growth--service trade-off with an explicit human-review safeguard, not a
+demonstration of fully autonomous 30-year advice.
+\end{abstract}
+
+\section{Data, accounting and evaluation split}
+
+The supplied file contains 180 independent synthetic scenarios, each with 30
+annual periods of nominal equity, bond and bill returns and inflation. Returns and
+inflation are decimals; real wealth is nominal wealth divided by cumulative CPI.
+The data are synthetic and based on historical U.S. series; they are not
+historical observations or forecasts.
+
+Every account starts with 100 units in bills and has no later deposits or
+withdrawals. Portfolios are long-only and fully invested. A trade charges 0.25\%
+of each destination amount moved, counted once, deducted before that period's
+returns; the initial allocation is charged the same way. There are no taxes,
+other fees or terminal liquidation costs. A decision for period $t$ uses only
+observations through $t-1$ of the same scenario.
+
+Original scenarios 1--120 are used for development and adjustment; scenarios
+121--180 are the final evaluation set. The final 60 were exposed earlier in the
+project, so the final comparison is a fixed-policy, \emph{nonblind} repetition,
+not a fresh blind sample. We made no parameter, target or admission change after
+the final run. This disclosure is material for interpreting every final number.
+
+\section{Question 1: suitability, products and profiles}
+
+\subsection{Measures}
+Growth is the net real annualised log growth
+$G_H=[\ln(V_H/\mathrm{CPI}_H)-\ln(100)]/H$, with CAGR $=\exp(G_H)-1$.
+Ordinary fluctuation is the sample standard deviation of annual net real returns.
+Large loss is the maximum real drawdown from the complete original peak, using
+annual endpoints; it is positive and increasing in loss. Tail severity is the
+empirical CVaR90 of the MDD distribution (and P90 MDD). All measures use
+purchasing power, not nominal wealth. Annual endpoints do not observe intrayear
+highs or lows. The questionnaire loss tolerance $L$ is a response and a review
+trigger, never a guaranteed portfolio limit.
+
+\subsection{Products}
+\begin{table}[H]
+\centering
+\caption{The three named products. Bill floors are target conventions for the
+liquidity need, not live cash reserves.}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Product & Equity & Bond & Bill \\
+\midrule
+Conservative & 25\% & 30\% & 45\% \\
+Balanced & 45\% & 5\% & 50\% \\
+Growth & 65\% & 5\% & 30\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+The target bill floor by liquidity is 30\% for High, 10\% for Medium and 0\% for
+Low. A target floor is not a withdrawal guarantee or a persistent live-cash
+balance.
+
+\subsection{Onboarding rule}
+Figure~\ref{fig:flow} gives the one-page decision flow. In words:
+(1) take $H$, $L$ and liquidity; a missing or materially changed cash need is a
+review trigger; (2) fix the three products and bill floors; (3) for each profile's
+own horizon, evaluate each product on 1--120 with exact fees and annual target
+restoration; retain a product only if its empirical $\mathrm{MDD}>L$ frequency is
+at most 10\% and its target bill meets the liquidity floor; pool the profile
+evidence into a common menu; (4) if no product is feasible, output Review; (5)
+among feasible products retain training growth within $10^{-12}$ of the global
+maximum, then minimise expected loss excess, then CVaR90, then the declared
+candidate index; (6) assign the product. The 10\% is a declared service
+reference, not a contest mandate or a calibrated probability.
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=0.93\textwidth]{figures/q1_onboarding_flow_cropped.pdf}
+\caption{One-page onboarding decision flow and development decision trace. The
+flow is a finite-menu rule; it is not a claim of global optimality. The 10\%
+screen is an empirical training reference.}
+\label{fig:flow}
+\end{figure}
+
+\subsection{The 5$\times$3 development screen}
+Table~\ref{tab:fivebythree} is the 15-cell development screen. Each cell reports
+median CAGR / P10 CAGR; median MDD / P90 MDD; and breaches out of 120. The bold
+cell is the frozen assignment. All selected B/C/E products pass the declared 10\%
+training screen (B 9/120, C 9/120, E 6/120). A and D have no risk-feasible product:
+A's alternatives breach in 34--66 and D's in 67--104 of 120 paths, so the
+liquidity floor alone cannot justify an allocation.
+
+\begin{table}[H]
+\centering
+\caption{Development 1--120 static product screen, 5 profiles $\times$ 3 products.
+Each cell: median CAGR / P10; median MDD / P90; breaches/120. Bold = frozen
+assignment. This is a product screen, not the Q2 guarded service.}
+\label{tab:fivebythree}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Profile & Conservative 25/30/45 & Balanced 45/5/50 & Growth 65/5/30 \\
+\midrule
+A (H5, L10\%, high) & \makecell[l]{3.17 / $-$1.59\\5.56 / 14.90\\34/120} & \makecell[l]{4.36 / $-$1.85\\8.59 / 20.53\\49/120} & \makecell[l]{5.10 / $-$2.73\\11.94 / 27.46\\66/120} \\
+B (H15, L25\%, medium) & \textbf{\makecell[l]{3.04 / 0.10\\13.25 / 24.22\\9/120}} & \makecell[l]{4.08 / 0.10\\17.35 / 32.65\\27/120} & \makecell[l]{5.26 / 0.02\\23.18 / 42.07\\49/120} \\
+C (H30, L40\%, low) & \makecell[l]{2.97 / 1.02\\17.37 / 31.74\\1/120} & \textbf{\makecell[l]{4.03 / 1.44\\22.60 / 38.04\\9/120}} & \makecell[l]{5.12 / 1.48\\32.26 / 48.84\\35/120} \\
+D (H25, L15\%, medium) & \makecell[l]{3.19 / 0.90\\16.71 / 29.37\\67/120} & \makecell[l]{4.31 / 1.34\\20.90 / 35.91\\92/120} & \makecell[l]{5.33 / 1.41\\29.18 / 47.90\\104/120} \\
+E (H6, L35\%, high) & \makecell[l]{2.99 / $-$1.74\\8.08 / 18.35\\0/120} & \makecell[l]{3.75 / $-$2.33\\10.29 / 23.11\\2/120} & \textbf{\makecell[l]{5.00 / $-$3.69\\13.89 / 31.18\\6/120}} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Final assignments and own-horizon evidence}
+Table~\ref{tab:profiles} evaluates the frozen assignments on final 121--180. A and
+D remain Review with all financial fields NULL; they are not replaced by bills,
+the baseline or a zero-risk portfolio. B/C/E use each profile's own horizon and
+loss tolerance.
+
+\begin{table}[H]
+\centering
+\caption{Final 121--180 own-horizon results for the frozen assignments. A/D are
+unfunded Review (NULL), not zero-risk investments.}
+\label{tab:profiles}
+\begin{tabular}{@{}llrrrrrr@{}}
+\toprule
+Profile & Assignment & Target & Med. CAGR & P10 & Med. MDD & P90 & Breaches \\
+\midrule
+A & Review & --- & NULL & NULL & NULL & NULL & NULL \\
+B & Conservative & 25/30/45 & 3.21\% & 0.35\% & 14.09\% & 29.53\% & 11/60 \\
+C & Balanced & 45/5/50 & 3.56\% & 1.48\% & 27.49\% & 43.54\% & 8/60 \\
+D & Review & --- & NULL & NULL & NULL & NULL & NULL \\
+E & Growth & 65/5/30 & 4.51\% & $-$1.58\% & 14.17\% & 31.34\% & 5/60 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Briefly: A has a 5-year horizon, a 10\% loss tolerance and high liquidity; no
+product passes the risk screen, so Review is the honest output. B is
+Conservative: the 15-year/25\%/medium profile retains the lowest MDD and breach
+frequency among its three products, and its development Conservative row passes
+the 10\% screen at 9/120. C is Balanced: it buys growth over Conservative, passes
+the development screen at 9/120, and the Q2 guard is the execution safeguard.
+D is Review: at 25 years, 15\% loss tolerance and medium liquidity, every product
+breaches 67--104 of 120 development paths. E is the most debated assignment:
+Growth has the highest median CAGR (4.51\%) and a 30\% bill floor, but its final
+P10 is $-$1.58\% and it breaches 5/60; the rule selects the highest-growth product
+that passes the declared 10\% MDD screen, not the product with the best lower
+growth tail. This is a growth-for-tail trade-off, not a guarantee.
+
+\paragraph{Adverse tails must remain visible.}
+On final data, the static B/C frequencies are 18.3\% and 13.3\%, above the 10\%
+training reference; E's P10 is negative. The 10\% reference is a declared service
+convention, not a contest mandate; Q1 products are static annual references, not
+the Q2 guarded service. C's V2b guard reduces final breaches to 2/60. We do not
+retroactively change the assignments to make the final table look better.
+
+\section{Question 2: the Balanced policy}
+
+\subsection{Rule}
+For Profile C (Balanced, $H=30$, $L=40\%$, low liquidity) the strategic target is
+45\% equity, 5\% bond and 50\% bills. Fees are exactly 0.25\% of each amount
+moved once, post-dollar and before returns; the initial allocation is charged.
+At each annual decision the policy can hold, restore the target, make a temporary
+protective exposure proposal, make one first mitigation, or enter human review.
+It does not change the strategic target: a protective proposal temporarily shifts
+actual holdings toward bills within the fixed target, and a review/hold freezes
+new automatic trades. Growth trades require a strictly positive fee-net paired
+predicted log advantage.
+When holding fails the one-year support floor, a protective trade may sacrifice
+predicted growth only if the modeled worst next-real-wealth outcome improves after
+exact costs; these are labelled risk-reduction trades with a growth cost. After
+review the policy holds the existing holdings, continues market exposure and
+charges no new automatic trades. The strategic target is not persistently
+relearned. A V3 target-update ablation was not selected because it had mixed
+growth/risk effects and higher fees; this is a development judgment, not proof
+that target updates never help.
+
+\subsection{Baseline and metrics}
+The required baseline is one-third equity, one-third bond and one-third bills,
+restored at every review, with the same 0.25\% fee. We compare median CAGR,
+median MDD, P10 CAGR, P90 MDD, breaches, trade fraction and mean nominal fees.
+P10/P90 use the empirical inverse CDF; medians use the ordinary median. MDD uses
+annual endpoints from the original peak and does not measure intrayear losses.
+
+\begin{table}[H]
+\centering
+\caption{Final 121--180 comparison. The equal-weight baseline is the required
+one-third annual-restoration rule. Trade fraction counts periods with actual
+destination movement; mean fees are nominal units per initial 100.}
+\label{tab:q2}
+\begin{tabular}{@{}lrrrrrrr@{}}
+\toprule
+Strategy & Med. CAGR & Med. MDD & P10 & P90 & Breaches & Trade & Fees \\
+\midrule
+V2b & 2.35\% & 20.02\% & 0.87\% & 28.69\% & 2/60 & 21.22\% & 0.353 \\
+Same-target B & 3.56\% & 27.49\% & 1.50\% & 43.54\% & 8/60 & 94.56\% & 1.018 \\
+Same-target annual & 3.56\% & 27.49\% & 1.48\% & 43.54\% & 8/60 & 100\% & 1.067 \\
+Equal thirds & 3.38\% & 22.29\% & 1.47\% & 39.36\% & 6/60 & 100\% & 0.979 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+V2b has the lowest tail risk and fees, but it also has lower median growth and
+lower P10 growth than the equal-weight baseline. It is not an all-metric
+dominance claim. Against equal thirds, the median MDD falls by 2.27 percentage
+points, P90 MDD by 10.68 points, breaches from 6 to 2, fees to about 36\% and
+trading from 100\% to 21.22\%; median CAGR falls by 1.03 points and P10 by 0.60
+points. The policy therefore buys drawdown and fee control with growth.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/q2_tradeoff_severe.pdf}
+\caption{Left: final risk--growth trade-off. Right: real drawdown path of the
+preselected severe synthetic case ID 161. V2b reduces the drawdown relative to
+same-target B and equal thirds but still crosses the 40\% limit.}
+\label{fig:q2}
+\end{figure}
+
+\subsection{Trade frequency}
+There are 382 trade periods out of 1,800 decision periods: $382/1800=21.22\%$,
+including the mandatory initial allocation. Excluding the initial allocation,
+$322/1740=18.51\%$. Ordinary autonomous service is a different metric:
+350/1,800 $=19.44\%$ of account-years. All 60 paths enter human review by decision
+year 7 (54 in year 7); the app is a bounded assisted service, not a 30-year
+autonomous trader.
+
+\subsection{Severe case and customer explanation}
+The preselected severe case is synthetic ID 161, chosen by maximum main full-horizon
+MDD with smallest-ID tie-break. V2b has MDD 47.68\%, CAGR $-$0.17\%, first crossing
+at year 14, 20\% trade fraction and 0.236 nominal fees. Same-target B has 55.56\%,
+$-$0.26\%, year 12 and 40\% trade; equal thirds has 54.84\%, $+$0.32\%, year 12
+and 100\% trade. V2b lowers drawdown versus both references but still breaches, and
+its growth in this path is worse than equal thirds. The two final breaches are IDs
+132 and 161, at endpoints 23 and 14; both occur after the first referral. A one-year
+supported action is not a recursive or real-market safety guarantee.
+
+The customer-facing explanation is 41 words:
+\begin{quote}
+Your portfolio's risk buffer no longer supports our usual trading options. We make
+a protective trade only if the modeled worst outcome improves after costs, then
+pause automated trading for human review. Existing holdings remain invested and
+may continue losing value.
+\end{quote}
+It identifies the protective trade, the review request and the continued market
+exposure. It does not promise recovery or an adviser response.
+
+\subsection{Do automated weight updates add value?}
+They add \emph{risk-control} value, not growth value. The evidence supports
+temporary protective/review updates but not persistent strategic target updates.
+The final policy is deliberately conservative: 19.44\% ordinary service, 2/60
+breaches and all 60 paths referred by year 7. We do not describe this as a
+successful 30-year autonomous robo-advisor.
+
+\section{Question 3: reliability and safeguards}
+
+\subsection{Transaction-fee stress}
+We test known fees 0\%, 0.125\%, 0.25\%, 0.5\% and 1\% on the frozen V2b arm
+over development 1--120. All actors know the same fee; there is no refit or new
+selection. The main recommendation does not change: breaches stay 0/120 and
+median CAGR moves from 2.865\% to 2.802\%; P90 MDD stays near 28.98\%. Trading
+and fees move modestly. This is a cost-magnitude test, not a test of fee
+misestimation, refitting or real-market safety.
+
+\begin{table}[H]
+\centering
+\caption{Development 1--120 stress tests. Pooled support and +2pp inflation are
+assumption changes; the final 121--180 sample is not used here.}
+\label{tab:q3}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{3.1cm}>{\raggedright\arraybackslash}p{7.8cm}@{\hspace{3mm}}>{\raggedright\arraybackslash}p{3.6cm}@{}}
+\toprule
+Setting & V2b result & Main recommendation \\
+\midrule
+Fee 0--1\% & 0/120 breaches; median CAGR 2.80--2.86\%; P90 MDD $\approx$28.98\% & unchanged \\
+\addlinespace
+Pooled support & 0 funded; initial Review; financial NULL & changes to Review \\
+Inflation +2pp & 21/120 breaches; median CAGR 0.75\%; P10 $-$1.16\%; P90 MDD 43.54\% & suspend/review \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Important limitation and trigger}
+The one-year support/forecast condition is empirical and finite. It is not a
+conditional return distribution, a calibrated loss probability, an intrayear
+stop-loss or a future guarantee. The final 121--180 sample was exposed earlier;
+it is not fresh blind validation. This is the main limitation.
+
+The primary review trigger is a funded support-family failure or no feasible
+supported action. A protective trade is allowed only if the modeled worst
+next-real-wealth outcome improves after exact costs; then the account enters
+absorbing human review. An annual real MDD above the customer's $L$ also triggers
+review. Model/input-integrity failure or a material questionnaire/cash-needs
+change triggers pre-investment review. While pending, the app holds existing
+holdings, makes no new automatic trades, continues actual market exposure, CPI,
+original peak/MDD and financial history, and notifies the customer and adviser.
+It does not assume an adviser response, a recovery reset or a liquidation.
+
+\section{Conclusion}
+
+The three products are Conservative 25/30/45, Balanced 45/5/50 and Growth 65/5/30.
+The onboarding rule assigns A Review, B Conservative, C Balanced, D Review and E
+Growth. For the Balanced customer, the V2b policy uses protective/review updates
+but does not enable persistent strategic target updates. The main safeguard is
+the absorbing human review/hold after funded-support failure or MDD above $L$:
+no new automatic trades while pending; existing holdings remain exposed.
+
+The final evidence is a trade-off, not a universal winner. V2b lowers P90 MDD,
+breaches and fees relative to equal weights, but also lowers median and P10
+growth, and ordinary autonomous service is only 19.44\% of account-years. The
+final 121--180 sample was previously exposed; no claim of fresh blind validation
+or 30-year autonomy is made. Within those limits, the result is a coherent,
+explainable and risk-aware assisted service.
+
+\paragraph{Reproducibility.}
+The fixed-table adapter reproduces all 14 final objects, 840 path rows and 505
+saved array fields from the supplied data; the repository's full test suite has
+1,534 passing tests. These checks establish implementation and reproduction
+integrity; they do not establish predictive validity or a fresh blind test.
+
+\section*{Use of AI tools}
+AI assistants including OpenAI Codex and DeepSeek were used for problem
+interpretation, method discussion, code drafting and debugging, synthetic
+testing, numerical review and English editing. Automated numerical audits and
+independent-agent reviews were used as checks, not as external human peer review.
+All AI-generated content, code, calculations and references were reviewed by the
+participant; Chengxuan YUAN, Team Lebmar (87), remains responsible for the
+submitted work and its disclosures.
+
+\section*{Data attribution}
+The SafeInvest Synthetic Dataset is based on selected United States series from
+the Jordà--Schularick--Taylor Macrohistory Database, Release 6. It does not
+reproduce historical observations and is not a forecast. The dataset and problem
+statement are distributed for noncommercial use under CC BY-NC-SA 4.0; attribution
+and share-alike conditions are retained. No new blanket open-source licence is
+granted to the participant's original code.
+
+\begin{thebibliography}{9}
+\bibitem{problem}
+HKUST(GZ), \emph{2026 MCM Senior Group Problem A: SafeInvest: Building a Trustworthy Robo-Advisor}, 2026.
+\bibitem{jst}
+Ò. Jordà, M. Schularick and A. M. Taylor, \emph{Macrohistory Database}, Release 6.
+\end{thebibliography}
+
+\end{document}

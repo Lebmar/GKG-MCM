@@ -1,0 +1,82 @@
+{
+  "version": "q1-product-5x3-comparison-v1",
+  "status": "complete",
+  "scope": "Descriptive static Q1 product comparison; assignments fixed by the frozen V2b registry.",
+  "development_ids": [
+    1,
+    120
+  ],
+  "final_ids": [
+    121,
+    180
+  ],
+  "profiles": {
+    "A": {
+      "horizon": 5,
+      "loss": 0.1,
+      "liquidity": "high",
+      "assignment": "Review"
+    },
+    "B": {
+      "horizon": 15,
+      "loss": 0.25,
+      "liquidity": "medium",
+      "assignment": "Conservative"
+    },
+    "C": {
+      "horizon": 30,
+      "loss": 0.4,
+      "liquidity": "low",
+      "assignment": "Balanced"
+    },
+    "D": {
+      "horizon": 25,
+      "loss": 0.15,
+      "liquidity": "medium",
+      "assignment": "Review"
+    },
+    "E": {
+      "horizon": 6,
+      "loss": 0.35,
+      "liquidity": "high",
+      "assignment": "Growth"
+    }
+  },
+  "products": {
+    "Conservative": [
+      0.25,
+      0.3,
+      0.45
+    ],
+    "Balanced": [
+      0.45,
+      0.05,
+      0.5
+    ],
+    "Growth": [
+      0.65,
+      0.05,
+      0.3
+    ]
+  },
+  "new_fits": 0,
+  "new_selections": 0,
+  "assignments_changed": false,
+  "final_5x3_used_for_selection": false,
+  "final_5x3_read_scope": "Post-freeze descriptive check only; not used to change any assignment.",
+  "validation": {
+    "checks": 30,
+    "max_abs_error": 1.6653345369377348e-16,
+    "all_checked": true
+  },
+  "source_files": {
+    "scripts/build_q1_product_comparison.py": "3f1a46756b5febd7a91a51281b9f065c18383d5eb0d8859e3b2f7455d0ac89c9",
+    "data/SafeInvest_Synthetic_Data.csv": "def0177704bf6cb98cec6da325b34208750d988f6ad97ec4a706a0d39e6f82c0",
+    "research/experimental_execution/review_pending.py": "9038d420c9ea48df068c58a6abee3f993ac414f85dd0290cb56e3d703aae3894",
+    "research/safeinvest_research/metrics.py": "7ec8e4821ce284351a3d8ed7071c687fdf7d6e4cfd225f72cad1d09d623eb008"
+  },
+  "outputs": {
+    "development_5x3.csv": "698a90d617ccb83fc7279519074463450ec096f1b079ce0e0a56c5d0efcb4174",
+    "final_5x3.csv": "886d12f7215867058f8e9b75c63770334764a49e53d5d914770e2894b21bfff9"
+  }
+}
