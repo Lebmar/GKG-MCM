@@ -1,0 +1,8 @@
+{
+  "version": "independent-support-failure-audit-activation-v1",
+  "execution_ready": true,
+  "released_utc": "2026-10-19T09:55:09.298362+00:00",
+  "protocol_sha256": "c08dc5f18e88248194022af72f1e103aae9e053cc7e0571435687bfc73b56c7c",
+  "source_freeze_sha256": "d158bf7bb949e921ef3ac8c3e96c083b665ae99bc84e79a53a880af0f998ff8c",
+  "root_review": "Reviewed independent scalar full-history metric reconstruction, fee formula, explicit outer-role mapping, complete population checks and pre-parse gates; 9 synthetic tests passed. Producer numbers already available; this is implementation verification, not a new blind policy evaluation."
+}

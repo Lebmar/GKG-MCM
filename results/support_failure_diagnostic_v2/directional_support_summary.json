@@ -1,0 +1,520 @@
+[
+  {
+    "setting_id": "base",
+    "cohort": "outer_OOF",
+    "original_n": 120,
+    "financial_n": 120,
+    "account_periods": 3600,
+    "initial_review_n": 0,
+    "phases": [
+      {
+        "phase": "ordinary",
+        "periods": 1034,
+        "distinct_original_ids": 120,
+        "directional_miss_periods": 10,
+        "budget_failure_periods": 7,
+        "negative_real_bill_periods": 324,
+        "supported_safe_actual_budget_failures": 7
+      },
+      {
+        "phase": "guard_mitigation",
+        "periods": 109,
+        "distinct_original_ids": 109,
+        "directional_miss_periods": 1,
+        "budget_failure_periods": 1,
+        "negative_real_bill_periods": 33,
+        "supported_safe_actual_budget_failures": 0
+      },
+      {
+        "phase": "prior_pending",
+        "periods": 2457,
+        "distinct_original_ids": 109,
+        "directional_miss_periods": 22,
+        "budget_failure_periods": 10,
+        "negative_real_bill_periods": 792,
+        "supported_safe_actual_budget_failures": 0
+      }
+    ]
+  },
+  {
+    "setting_id": "base",
+    "cohort": "full_resubstitution",
+    "original_n": 120,
+    "financial_n": 120,
+    "account_periods": 3600,
+    "initial_review_n": 0,
+    "phases": [
+      {
+        "phase": "ordinary",
+        "periods": 697,
+        "distinct_original_ids": 120,
+        "directional_miss_periods": 0,
+        "budget_failure_periods": 0,
+        "negative_real_bill_periods": 222,
+        "supported_safe_actual_budget_failures": 0
+      },
+      {
+        "phase": "guard_mitigation",
+        "periods": 120,
+        "distinct_original_ids": 120,
+        "directional_miss_periods": 0,
+        "budget_failure_periods": 0,
+        "negative_real_bill_periods": 39,
+        "supported_safe_actual_budget_failures": 0
+      },
+      {
+        "phase": "prior_pending",
+        "periods": 2783,
+        "distinct_original_ids": 120,
+        "directional_miss_periods": 0,
+        "budget_failure_periods": 12,
+        "negative_real_bill_periods": 888,
+        "supported_safe_actual_budget_failures": 0
+      }
+    ]
+  },
+  {
+    "setting_id": "fee_0000",
+    "cohort": "outer_OOF",
+    "original_n": 120,
+    "financial_n": 120,
+    "account_periods": 3600,
+    "initial_review_n": 0,
+    "phases": [
+      {
+        "phase": "ordinary",
+        "periods": 1038,
+        "distinct_original_ids": 120,
+        "directional_miss_periods": 10,
+        "budget_failure_periods": 7,
+        "negative_real_bill_periods": 325,
+        "supported_safe_actual_budget_failures": 7
+      },
+      {
+        "phase": "guard_mitigation",
+        "periods": 109,
+        "distinct_original_ids": 109,
+        "directional_miss_periods": 1,
+        "budget_failure_periods": 1,
+        "negative_real_bill_periods": 32,
+        "supported_safe_actual_budget_failures": 0
+      },
+      {
+        "phase": "prior_pending",
+        "periods": 2453,
+        "distinct_original_ids": 109,
+        "directional_miss_periods": 21,
+        "budget_failure_periods": 10,
+        "negative_real_bill_periods": 792,
+        "supported_safe_actual_budget_failures": 0
+      }
+    ]
+  },
+  {
+    "setting_id": "fee_0000",
+    "cohort": "full_resubstitution",
+    "original_n": 120,
+    "financial_n": 120,
+    "account_periods": 3600,
+    "initial_review_n": 0,
+    "phases": [
+      {
+        "phase": "ordinary",
+        "periods": 698,
+        "distinct_original_ids": 120,
+        "directional_miss_periods": 0,
+        "budget_failure_periods": 0,
+        "negative_real_bill_periods": 223,
+        "supported_safe_actual_budget_failures": 0
+      },
+      {
+        "phase": "guard_mitigation",
+        "periods": 120,
+        "distinct_original_ids": 120,
+        "directional_miss_periods": 0,
+        "budget_failure_periods": 0,
+        "negative_real_bill_periods": 38,
+        "supported_safe_actual_budget_failures": 0
+      },
+      {
+        "phase": "prior_pending",
+        "periods": 2782,
+        "distinct_original_ids": 120,
+        "directional_miss_periods": 0,
+        "budget_failure_periods": 12,
+        "negative_real_bill_periods": 888,
+        "supported_safe_actual_budget_failures": 0
+      }
+    ]
+  },
+  {
+    "setting_id": "fee_00125",
+    "cohort": "outer_OOF",
+    "original_n": 120,
+    "financial_n": 120,
+    "account_periods": 3600,
+    "initial_review_n": 0,
+    "phases": [
+      {
+        "phase": "ordinary",
+        "periods": 1035,
+        "distinct_original_ids": 120,
+        "directional_miss_periods": 10,
+        "budget_failure_periods": 7,
+        "negative_real_bill_periods": 324,
+        "supported_safe_actual_budget_failures": 7
+      },
+      {
+        "phase": "guard_mitigation",
+        "periods": 109,
+        "distinct_original_ids": 109,
+        "directional_miss_periods": 1,
+        "budget_failure_periods": 1,
+        "negative_real_bill_periods": 33,
+        "supported_safe_actual_budget_failures": 0
+      },
+      {
+        "phase": "prior_pending",
+        "periods": 2456,
+        "distinct_original_ids": 109,
+        "directional_miss_periods": 21,
+        "budget_failure_periods": 10,
+        "negative_real_bill_periods": 792,
+        "supported_safe_actual_budget_failures": 0
+      }
+    ]
+  },
+  {
+    "setting_id": "fee_00125",
+    "cohort": "full_resubstitution",
+    "original_n": 120,
+    "financial_n": 120,
+    "account_periods": 3600,
+    "initial_review_n": 0,
+    "phases": [
+      {
+        "phase": "ordinary",
+        "periods": 697,
+        "distinct_original_ids": 120,
+        "directional_miss_periods": 0,
+        "budget_failure_periods": 0,
+        "negative_real_bill_periods": 222,
+        "supported_safe_actual_budget_failures": 0
+      },
+      {
+        "phase": "guard_mitigation",
+        "periods": 120,
+        "distinct_original_ids": 120,
+        "directional_miss_periods": 0,
+        "budget_failure_periods": 0,
+        "negative_real_bill_periods": 39,
+        "supported_safe_actual_budget_failures": 0
+      },
+      {
+        "phase": "prior_pending",
+        "periods": 2783,
+        "distinct_original_ids": 120,
+        "directional_miss_periods": 0,
+        "budget_failure_periods": 12,
+        "negative_real_bill_periods": 888,
+        "supported_safe_actual_budget_failures": 0
+      }
+    ]
+  },
+  {
+    "setting_id": "fee_005",
+    "cohort": "outer_OOF",
+    "original_n": 120,
+    "financial_n": 120,
+    "account_periods": 3600,
+    "initial_review_n": 0,
+    "phases": [
+      {
+        "phase": "ordinary",
+        "periods": 1022,
+        "distinct_original_ids": 120,
+        "directional_miss_periods": 10,
+        "budget_failure_periods": 7,
+        "negative_real_bill_periods": 319,
+        "supported_safe_actual_budget_failures": 7
+      },
+      {
+        "phase": "guard_mitigation",
+        "periods": 110,
+        "distinct_original_ids": 110,
+        "directional_miss_periods": 0,
+        "budget_failure_periods": 0,
+        "negative_real_bill_periods": 32,
+        "supported_safe_actual_budget_failures": 0
+      },
+      {
+        "phase": "prior_pending",
+        "periods": 2468,
+        "distinct_original_ids": 110,
+        "directional_miss_periods": 23,
+        "budget_failure_periods": 11,
+        "negative_real_bill_periods": 798,
+        "supported_safe_actual_budget_failures": 0
+      }
+    ]
+  },
+  {
+    "setting_id": "fee_005",
+    "cohort": "full_resubstitution",
+    "original_n": 120,
+    "financial_n": 120,
+    "account_periods": 3600,
+    "initial_review_n": 0,
+    "phases": [
+      {
+        "phase": "ordinary",
+        "periods": 697,
+        "distinct_original_ids": 120,
+        "directional_miss_periods": 0,
+        "budget_failure_periods": 0,
+        "negative_real_bill_periods": 222,
+        "supported_safe_actual_budget_failures": 0
+      },
+      {
+        "phase": "guard_mitigation",
+        "periods": 120,
+        "distinct_original_ids": 120,
+        "directional_miss_periods": 0,
+        "budget_failure_periods": 0,
+        "negative_real_bill_periods": 39,
+        "supported_safe_actual_budget_failures": 0
+      },
+      {
+        "phase": "prior_pending",
+        "periods": 2783,
+        "distinct_original_ids": 120,
+        "directional_miss_periods": 0,
+        "budget_failure_periods": 12,
+        "negative_real_bill_periods": 888,
+        "supported_safe_actual_budget_failures": 0
+      }
+    ]
+  },
+  {
+    "setting_id": "fee_01",
+    "cohort": "outer_OOF",
+    "original_n": 120,
+    "financial_n": 120,
+    "account_periods": 3600,
+    "initial_review_n": 0,
+    "phases": [
+      {
+        "phase": "ordinary",
+        "periods": 1019,
+        "distinct_original_ids": 120,
+        "directional_miss_periods": 10,
+        "budget_failure_periods": 7,
+        "negative_real_bill_periods": 318,
+        "supported_safe_actual_budget_failures": 7
+      },
+      {
+        "phase": "guard_mitigation",
+        "periods": 110,
+        "distinct_original_ids": 110,
+        "directional_miss_periods": 0,
+        "budget_failure_periods": 0,
+        "negative_real_bill_periods": 32,
+        "supported_safe_actual_budget_failures": 0
+      },
+      {
+        "phase": "prior_pending",
+        "periods": 2471,
+        "distinct_original_ids": 110,
+        "directional_miss_periods": 23,
+        "budget_failure_periods": 11,
+        "negative_real_bill_periods": 799,
+        "supported_safe_actual_budget_failures": 0
+      }
+    ]
+  },
+  {
+    "setting_id": "fee_01",
+    "cohort": "full_resubstitution",
+    "original_n": 120,
+    "financial_n": 120,
+    "account_periods": 3600,
+    "initial_review_n": 0,
+    "phases": [
+      {
+        "phase": "ordinary",
+        "periods": 695,
+        "distinct_original_ids": 120,
+        "directional_miss_periods": 0,
+        "budget_failure_periods": 0,
+        "negative_real_bill_periods": 221,
+        "supported_safe_actual_budget_failures": 0
+      },
+      {
+        "phase": "guard_mitigation",
+        "periods": 120,
+        "distinct_original_ids": 120,
+        "directional_miss_periods": 0,
+        "budget_failure_periods": 0,
+        "negative_real_bill_periods": 40,
+        "supported_safe_actual_budget_failures": 0
+      },
+      {
+        "phase": "prior_pending",
+        "periods": 2785,
+        "distinct_original_ids": 120,
+        "directional_miss_periods": 0,
+        "budget_failure_periods": 12,
+        "negative_real_bill_periods": 888,
+        "supported_safe_actual_budget_failures": 0
+      }
+    ]
+  },
+  {
+    "setting_id": "pooled_support",
+    "cohort": "outer_OOF",
+    "original_n": 120,
+    "financial_n": 0,
+    "account_periods": 0,
+    "initial_review_n": 120,
+    "phases": [
+      {
+        "phase": "ordinary",
+        "periods": 0,
+        "distinct_original_ids": 0,
+        "directional_miss_periods": 0,
+        "budget_failure_periods": 0,
+        "negative_real_bill_periods": 0,
+        "supported_safe_actual_budget_failures": 0
+      },
+      {
+        "phase": "guard_mitigation",
+        "periods": 0,
+        "distinct_original_ids": 0,
+        "directional_miss_periods": 0,
+        "budget_failure_periods": 0,
+        "negative_real_bill_periods": 0,
+        "supported_safe_actual_budget_failures": 0
+      },
+      {
+        "phase": "prior_pending",
+        "periods": 0,
+        "distinct_original_ids": 0,
+        "directional_miss_periods": 0,
+        "budget_failure_periods": 0,
+        "negative_real_bill_periods": 0,
+        "supported_safe_actual_budget_failures": 0
+      }
+    ]
+  },
+  {
+    "setting_id": "pooled_support",
+    "cohort": "full_resubstitution",
+    "original_n": 120,
+    "financial_n": 0,
+    "account_periods": 0,
+    "initial_review_n": 120,
+    "phases": [
+      {
+        "phase": "ordinary",
+        "periods": 0,
+        "distinct_original_ids": 0,
+        "directional_miss_periods": 0,
+        "budget_failure_periods": 0,
+        "negative_real_bill_periods": 0,
+        "supported_safe_actual_budget_failures": 0
+      },
+      {
+        "phase": "guard_mitigation",
+        "periods": 0,
+        "distinct_original_ids": 0,
+        "directional_miss_periods": 0,
+        "budget_failure_periods": 0,
+        "negative_real_bill_periods": 0,
+        "supported_safe_actual_budget_failures": 0
+      },
+      {
+        "phase": "prior_pending",
+        "periods": 0,
+        "distinct_original_ids": 0,
+        "directional_miss_periods": 0,
+        "budget_failure_periods": 0,
+        "negative_real_bill_periods": 0,
+        "supported_safe_actual_budget_failures": 0
+      }
+    ]
+  },
+  {
+    "setting_id": "actual_inflation_plus_02",
+    "cohort": "outer_OOF",
+    "original_n": 120,
+    "financial_n": 120,
+    "account_periods": 3600,
+    "initial_review_n": 0,
+    "phases": [
+      {
+        "phase": "ordinary",
+        "periods": 939,
+        "distinct_original_ids": 120,
+        "directional_miss_periods": 12,
+        "budget_failure_periods": 10,
+        "negative_real_bill_periods": 506,
+        "supported_safe_actual_budget_failures": 10
+      },
+      {
+        "phase": "guard_mitigation",
+        "periods": 112,
+        "distinct_original_ids": 112,
+        "directional_miss_periods": 2,
+        "budget_failure_periods": 3,
+        "negative_real_bill_periods": 63,
+        "supported_safe_actual_budget_failures": 0
+      },
+      {
+        "phase": "prior_pending",
+        "periods": 2549,
+        "distinct_original_ids": 112,
+        "directional_miss_periods": 43,
+        "budget_failure_periods": 168,
+        "negative_real_bill_periods": 1360,
+        "supported_safe_actual_budget_failures": 0
+      }
+    ]
+  },
+  {
+    "setting_id": "actual_inflation_plus_02",
+    "cohort": "full_resubstitution",
+    "original_n": 120,
+    "financial_n": 120,
+    "account_periods": 3600,
+    "initial_review_n": 0,
+    "phases": [
+      {
+        "phase": "ordinary",
+        "periods": 674,
+        "distinct_original_ids": 120,
+        "directional_miss_periods": 7,
+        "budget_failure_periods": 5,
+        "negative_real_bill_periods": 364,
+        "supported_safe_actual_budget_failures": 5
+      },
+      {
+        "phase": "guard_mitigation",
+        "periods": 120,
+        "distinct_original_ids": 120,
+        "directional_miss_periods": 2,
+        "budget_failure_periods": 3,
+        "negative_real_bill_periods": 74,
+        "supported_safe_actual_budget_failures": 0
+      },
+      {
+        "phase": "prior_pending",
+        "periods": 2806,
+        "distinct_original_ids": 120,
+        "directional_miss_periods": 44,
+        "budget_failure_periods": 150,
+        "negative_real_bill_periods": 1491,
+        "supported_safe_actual_budget_failures": 0
+      }
+    ]
+  }
+]

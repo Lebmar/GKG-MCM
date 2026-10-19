@@ -1,0 +1,6 @@
+budget_floor,calendar_violating_training_rows,calendar_year1_min,calendar_year1_slack,cohort,context_id,cost_rate,evaluated_original_n,financial_available,full_target_fee,job_id,original_floor,pooled_min,pooled_slack,pooled_violating_training_rows,rho,setting_id,status,support_mode,target,training_n
+80.0,0,86.79572000973968,6.795720009739682,outer_OOF,1,0.0025,24,True,0.16223636590540375,c1_refit,60.0,70.16419777043363,-9.835802229566369,11,0.5,base,funded,calendar,"[0.4,0.25,0.35]",96
+80.0,0,86.79572000973968,6.795720009739682,outer_OOF,2,0.0025,24,True,0.16223636590540375,c2_refit,60.0,70.16419777043363,-9.835802229566369,11,0.5,base,funded,calendar,"[0.4,0.25,0.35]",96
+80.0,0,85.13179435486589,5.131794354865889,outer_OOF,3,0.0025,24,True,0.14977533699450823,c3_refit,60.0,70.4059788272645,-9.594021172735495,14,0.5,base,funded,calendar,"[0.45,0.15,0.4]",96
+80.0,0,85.13179435486589,5.131794354865889,outer_OOF,4,0.0025,24,True,0.14977533699450823,c4_refit,60.0,70.4059788272645,-9.594021172735495,10,0.5,base,funded,calendar,"[0.45,0.15,0.4]",96
+80.0,0,86.79572000973968,6.795720009739682,outer_OOF,5,0.0025,24,True,0.16223636590540375,c5_refit,60.0,72.04699128266921,-7.953008717330789,10,0.5,base,funded,calendar,"[0.4,0.25,0.35]",96

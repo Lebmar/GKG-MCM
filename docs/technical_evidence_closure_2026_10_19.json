@@ -1,0 +1,772 @@
+{
+  "version": "technical-problem-A-evidence-closure-2026-10-19-v1",
+  "completed_utc": "2026-10-19T09:37:07.837543+00:00",
+  "status": "Read-only requirements/evidence closure review complete; frozen model and all old evidence unchanged",
+  "review_scope": {
+    "original_problem_read": "LocalPDF text extracted in memory with pypdf; all3pages read, no layout rendering or original file alteration.",
+    "raw_market_csv_read": false,
+    "new_models_or_simulations": 0,
+    "new_parameter_choices": 0,
+    "existing_final_summary_read": true,
+    "existing_small_summaries_checked": true,
+    "paper_or_report_written": false,
+    "old_files_or_README_or_ZIP_modified": false,
+    "other_agents_scope_not_duplicated": "No support/forecast mechanism diagnostics or large-sample recalculation."
+  },
+  "central_judgment": "All expressly requested functional/numerical answer objects exist, including three portfolios and all five clients with permitted A/DReview. This does not close the untouched-final experimental-design limitation, identify customer economic risk/liquidity preferences, or establish a continuing autonomous service. A truthful contest answer must preserve these substantive limitations and the negative outcomes.",
+  "immediate_material_findings": [
+    {
+      "id": "NONBLIND_FINAL",
+      "severity": "substantive_validation_gap",
+      "finding": "Earlier121-180 exposure preceded adaptive redevelopment. Fixed latest execution/no further adjustment is real, but an untouched final policy test was not preserved.",
+      "repair": "Disclosure is necessary but cannot repair independence. No use of seen final results to select another parameter/model."
+    },
+    {
+      "id": "PENDING_OPERATING_LIMIT",
+      "severity": "material_service_limitation_not_missing_literal_Q3_answer",
+      "finding": "All60 final clients enterReview byyear7; only350/1800ordinary service periods. No adviser response modeled; two eventual breaches occur long after referral.",
+      "repair": "State actual pending hold and absent human SLA/decision/cost honestly; a real restart/response model would be separate new research, not an assumed improvement."
+    },
+    {
+      "id": "SUITABILITY_AND_CASH_ASSUMPTIONS",
+      "severity": "economic_identification_limit",
+      "finding": "A/DReview is explicitly allowed. Gamma/alpha/rho and bill floors are technical/normative;172-family failure and targetfloors do not prove global impossibility or funded cash liabilities.",
+      "repair": "Keep per-profile ownH negative evidence, explain numeric conventions and finite family, and request missing economic needs in a real onboarding process rather than fabricate them."
+    }
+  ],
+  "status_taxonomy": "Implemented status concerns literal task objects. Conditional claims, real-service limitations and evaluation independence are separate axes; no score or percent-complete masks them.",
+  "crosswalk": [
+    {
+      "id": "COMMON_ACCOUNT_AND_FEES",
+      "problem_page": 2,
+      "requirement_anchor": "100 units in bills; long-only and fully invested; charge0.25% once before returns",
+      "status": "implemented_and_independently_audited",
+      "implemented": "Initial100 bills, no later cash flows; exact self-financing post-dollar execution, positive moved-to holdings charged once; inception charged, no terminal liquidation, taxes or extra fee invented.",
+      "evidence": [
+        "src/safeinvest/core.py:execute_target",
+        "research/experimental_execution/state_budget_execution.py",
+        "results/mitigation_locked_final_evaluation_v1/independent_audit.json",
+        "results/state_budget_mitigation_stress_audit_v1/manifest.json"
+      ],
+      "can_say": "Ledger and locked simulations honor the stated annual account/cost conventions.",
+      "cannot_say": "Numerical ledger correctness proves an economically appropriate strategy or includes human-review costs.",
+      "substantive_remainder": "No detected functional implementation gap. Human-review and opportunity costs are deliberately outside the supplied fee model and cannot be credited as zero in a real-service claim."
+    },
+    {
+      "id": "COMMON_INFORMATION_SET",
+      "problem_page": 2,
+      "requirement_anchor": "period t may use only observations through period t-1",
+      "status": "implemented_with_validation_exposure_limit",
+      "implemented": "Each actual action uses the observed prefix/current account state and own-training calendar joint support. Candidate menus and parameters are frozen; actual future and actual ID do not enter action ranking.",
+      "evidence": [
+        "research/experimental_execution/state_budget_execution.py",
+        "research/experimental_execution/state_budget_mitigation.py",
+        "results/mitigation_locked_final_evaluation_v1/independent_audit.json",
+        "docs/mitigation_main_model_registry.json:prior_final_exposure"
+      ],
+      "can_say": "The saved policy respects mechanical per-path timing and source/input separation.",
+      "cannot_say": "The analyst or whole research process was blind to121-180; runtime no-lookahead repairs earlier adaptive exposure.",
+      "substantive_remainder": "Historical evaluation exposure remains a substantive research-design limitation, separately listed under FINAL_SPLIT."
+    },
+    {
+      "id": "Q1_GROWTH_ORDINARY_AND_LARGE_LOSS",
+      "problem_page": 2,
+      "requirement_anchor": "growth and risk; ordinary fluctuations versus unusually large purchasing-power loss",
+      "status": "implemented_with_explicit_measure_conventions",
+      "implemented": "Real wealth is nominal wealth/cumulative CPI. Annual log growth and CAGR measure growth; sample volatility of annual net real returns is ordinary fluctuation; original-history maximum real relative drawdown is large loss, increasing with loss. P90/CVaR and D_H>L describe tails.",
+      "evidence": [
+        "research/safeinvest_research/metrics.py:path_metrics,summarize_paths,discrete_cvar",
+        "results/mitigation_locked_final_evaluation_v1/summary.csv.gz"
+      ],
+      "can_say": "Growth and loss include fees/inflation over each originalH; MDD is nonnegative and larger is worse.",
+      "cannot_say": "Annual endpoint MDD measures intrayear minima, or volatility alone establishes catastrophic-loss safety.",
+      "substantive_remainder": "Annual data cannot resolve intrayear drawdowns. Definitions are chosen modeling conventions, not uniquely required measures."
+    },
+    {
+      "id": "Q1_THREE_PRODUCTS",
+      "problem_page": 2,
+      "requirement_anchor": "allocations or allocation rules for Conservative, Balanced, Growth",
+      "status": "implemented",
+      "implemented": "Asset order equity/bond/bill: Conservative25/30/45, Balanced45/5/50, Growth65/5/30. All remain long-only/full investment among the original three asset classes.",
+      "evidence": [
+        "docs/mitigation_main_model_registry.json:Q1/portfolios",
+        "research/safeinvest_research/selection.py:fit_menu",
+        "research/experimental_execution/joint_liquidity_static.py"
+      ],
+      "can_say": "Three concrete portfolios are defined. Review is a suitability outcome rather than a fourth investment product.",
+      "cannot_say": "Names establish a universal risk ranking across everyH, or current weights are a unique continuous/population optimum.",
+      "substantive_remainder": "Menu/grid choice and reference-horizon label ordering are modeling choices. The fixed candidate family is not all possible long-only allocations."
+    },
+    {
+      "id": "Q1_FIVE_CLIENTS_AND_OWN_H",
+      "problem_page": 2,
+      "requirement_anchor": "recommend one of three portfolios or request human review; apply A-E",
+      "status": "implemented_with_allowed_referrals",
+      "implemented": "Transparent whole-scenario risk/liquidity screen and menu growth/regret procedure, plus post-refit service evidence, yields A Review/B Conservative/C Balanced/D Review/E Growth using H5/15/30/25/6 and L.10/.25/.40/.15/.35.",
+      "evidence": [
+        "docs/mitigation_main_model_registry.json:Q1",
+        "research/experimental_execution/joint_liquidity_static.py:fit_gamma,calibrate_liquidity_static",
+        "docs/q1_stability_diagnostic_judgment.json",
+        "results/mitigation_locked_final_evaluation_v1/summary.csv.gz"
+      ],
+      "can_say": "A and D human review explicitly satisfies an allowed Q1 answer; their financial results are unavailable, not zero. B/C/E trade growth against tail loss at their own horizons.",
+      "cannot_say": "Every profile must be forcibly assigned; A/D are financially impossible under all strategies; B/C/E final realized tails prove admission quality.",
+      "substantive_remainder": "Two of five exemplars are not served automatically. A/D failure concerns the declared172 candidate family/screen, not a global impossibility theorem. Static finalB/C empirical event rates exceed.10 and E has negative P10CAGR; these adverse findings must accompany assignments."
+    },
+    {
+      "id": "Q1_LIQUIDITY",
+      "problem_page": 1,
+      "requirement_anchor": "liquidity need High/Medium/Low",
+      "status": "implemented_as_normative_proxy_with_unidentified_economic_need",
+      "implemented": "High targetbill floor.30, Medium.10, Low0 jointly enter each static training fit; current portfolios satisfy relevant target floors. Supplied problem has no later deposits or withdrawals.",
+      "evidence": [
+        "docs/mitigation_main_model_registry.json:Q1/liquidity_target_floors",
+        "research/experimental_execution/joint_liquidity_static.py:LIQUIDITY_FLOORS",
+        "results/liquidity_capacity_diagnostic_v1/independent_audit.json"
+      ],
+      "can_say": "The questionnaire affects selection through a disclosed target liquidity proxy.",
+      "cannot_say": "These percentages were elicited/identified from spending needs, preserve a live cash ratio after drift, meet unknown withdrawals, or make bills purchasing-power safe.",
+      "substantive_remainder": "No cash amount, due date, reserve-duration or trading-liquidity data identify actual liquidity adequacy. This is an economic operational limitation, not a failure to simulate nonexistent mandatory withdrawals."
+    },
+    {
+      "id": "Q2_ACTION_AND_COST_BENEFIT",
+      "problem_page": 2,
+      "requirement_anchor": "keep, rebalance, change target, or human review; estimated benefit justifies cost",
+      "status": "implemented_under_explicit_risk_first_benefit_interpretation",
+      "implemented": "Hold plus13 finite primary actions, four temporary cash tilts with exact-fee partial segments; when hold is feasible, trade only for strict positive forecast net log advantage. When hold fails, prioritize supported after-fee floor repair. First no-feasible primary event permits one9-point strict worst-supported-next-real-wealth improvement, then Review.",
+      "evidence": [
+        "docs/mitigation_main_model_registry.json:Q2",
+        "research/experimental_execution/state_budget_execution.py",
+        "research/experimental_execution/state_budget_mitigation.py",
+        "docs/state_budget_mitigation_requirements_review.json",
+        "results/mitigation_locked_final_evaluation_v1/independent_audit.json"
+      ],
+      "can_say": "Growth benefit is forecast and already net of the exact current fee. Protection may sacrifice growth for a stated net supported-risk benefit. Persistent target change is optional and is not implemented.",
+      "cannot_say": "Every protective trade has positive expected financial return, improves every support row, restores the floor, or solves a continuous globally optimal strategy.",
+      "substantive_remainder": "The problem does not define a monetary price for safety. Risk-first protection is defensible only with an explicit prospective normative benefit definition and disclosed growth sacrifice; it is not an empirically elicited willingness-to-pay."
+    },
+    {
+      "id": "Q2_BUDGET_VERSUS_FUTURE_RISK",
+      "problem_page": 2,
+      "requirement_anchor": "automated, explainable, risk-aware policy; loss tolerance is not guaranteed",
+      "status": "limited_conditional_guarantee_plus_empirical_evaluation",
+      "implemented": "F=(1-L)P, F_rho=R-rho(R-F); exact-fee next real wealth is constrained above F_rho for all declared calendar joint-support rows. Original CPI/peak/MDD/H are preserved, with no reset at trade/review. Full paths are then evaluated.",
+      "evidence": [
+        "docs/state_budget_design_review.json:exact_next_year_constraint,budget_release_ratio",
+        "research/experimental_execution/state_budget_execution.py",
+        "docs/mitigation_nominal_risk_resolution_note.json"
+      ],
+      "can_say": "For an unbreached consistent state, a feasible selected primary action controls the next annual endpoint under support membership. Observed fullH outcomes are separately reported.",
+      "cannot_say": "Empirical support is true future support; one-step feasibility implies recursive existence, full30-year/intrayear protection, or certified population event probability<=.10.",
+      "substantive_remainder": "Future support/recursive viability and real-market calibration are not established. Finite menu failure is not all-portfolio impossibility; LP evidence is numerical support-bound analysis only."
+    },
+    {
+      "id": "Q2_REQUIRED_BASELINE",
+      "problem_page": 2,
+      "requirement_anchor": "one-third in each asset restored at every review with stated cost",
+      "status": "implemented_and_evaluated",
+      "implemented": "Exact-thirds annual baseline is retained for all original final60 IDs and development IDs with exact inception/review charges, full originalH and no loss-trigger stop; additional same-target annual and annual-then-pending B show governance differences.",
+      "evidence": [
+        "results/mitigation_locked_final_evaluation_v1/summary.csv.gz:object_id=exact_thirds_annual",
+        "results/mitigation_locked_final_evaluation_v1/independent_audit.json",
+        "results/state_budget_mitigation_v1/summary.csv.gz"
+      ],
+      "can_say": "The mandatory baseline is present and fee-comparable; all reference outcomes remain visible.",
+      "cannot_say": "One favorable extra comparator replaces thirds, or different governance branches uniquely isolate a single causal mechanism.",
+      "substantive_remainder": "No detected missing comparator. Whole-policy contrasts mix exposure changes, trade costs and earlier Review; a clean isolated update effect is not identified by these contrasts alone."
+    },
+    {
+      "id": "Q2_REQUIRED_METRICS_AND_SCENARIOS",
+      "problem_page": 2,
+      "requirement_anchor": "median growth/loss;10th percentile growth;90th percentile large loss",
+      "status": "implemented_and_evaluated",
+      "implemented": "All final60 original IDs and all required main/reference outputs are retained. MedianCAGR/medianMDD/P10CAGR/P90MDD, volatility, CVaR, events, fees, trades and ordinary service are saved; development full120 and ID-once outerOOF remain separate.",
+      "evidence": [
+        "results/mitigation_locked_final_evaluation_v1/summary.csv.gz",
+        "results/mitigation_locked_final_evaluation_v1/manifest.json",
+        "results/state_budget_mitigation_v1/summary.csv.gz",
+        "research/safeinvest_research/metrics.py:SUMMARY_METADATA"
+      ],
+      "can_say": "Separate development and final tables jointly cover supplied scenarios without mixing resubstitution, OOF and final meanings. InitialReview finance staysNULL, funded histories continue throughH.",
+      "cannot_say": "OOF/repeats/final are all independent evidence, repeated120 paths formN600, or unavailable finance is zero risk.",
+      "substantive_remainder": "No missing prescribed numerical metric. Final interpretability is constrained by nonblind exposure and the pending model, not missing arithmetic."
+    },
+    {
+      "id": "Q2_SEVERE_AND_TRADE_FREQUENCY",
+      "problem_page": 2,
+      "requirement_anchor": "one severe-loss scenario; percentage of review periods trading",
+      "status": "implemented_and_evaluated",
+      "implemented": "Prespecified maximum fullH mainMDD (exact tie lowest originalID) selects scenario161. All reference traces and cost/action categories are retained. Actual traded periods use all originalH decisions including inception/pending; ordinary service is separately reported.",
+      "evidence": [
+        "results/mitigation_locked_final_evaluation_v1/severe_example.json",
+        "results/mitigation_locked_final_evaluation_v1/summary.csv.gz",
+        "docs/mitigation_locked_final_interpretation_timing_addendum.json"
+      ],
+      "can_say": "Severe161 mainMDD=.47680088076968674; mean trade fraction=.21222222222222223 (382/1800), ordinary service350/1800, not the same quantity.",
+      "cannot_say": "A severe case establishes population causal mechanism, or low transaction cost proves efficient sustained service.",
+      "substantive_remainder": "No missing severe example/frequency. Pending/human-response cost is not included in the transaction fee metric."
+    },
+    {
+      "id": "Q2_VALUE_OF_AUTOMATED_UPDATES",
+      "problem_page": 2,
+      "requirement_anchor": "Decide whether automated weight updates add value",
+      "status": "answerable_only_as_conditional_complete_policy_tradeoff",
+      "implemented": "Fixed strategic Balanced target, selective tactical protective/growth trades, followed by explicit referral. Against all three references the locked main reduces median/tail drawdown and fees but also reduces median/P10growth and service continuity.",
+      "evidence": [
+        "docs/mitigation_technical_completion_judgment.json:judgments,recommendation",
+        "results/mitigation_locked_final_evaluation_v1/summary.csv.gz",
+        "results/mitigation_locked_final_evaluation_v1/comparisons.json"
+      ],
+      "can_say": "The adopted design offers a disclosed risk/return/service tradeoff; retain strategic target and allow selective cost-justified tactical actions with review. There is no general all-metric improvement.",
+      "cannot_say": "Persistent learned target updates were implemented/proved useful; every customer values the sacrifice; reduced risk is uniquely caused by adaptive weights rather than the complete governance continuation.",
+      "substantive_remainder": "A customer utility or business valuation of lost growth and human-review delay is unidentified. The complete policy supports a conditional recommendation; an isolated update effect and general30-year autonomous superiority remain unestablished."
+    },
+    {
+      "id": "Q2_CUSTOMER_EXPLANATION",
+      "problem_page": 2,
+      "requirement_anchor": "one explanation no more than50words",
+      "status": "implemented_as_technical_product_text",
+      "implemented": "Existing41-word customer explanation discloses conditional protective action, paused automation, human review and continued investment/loss risk.",
+      "evidence": [
+        "docs/mitigation_customer_explanation_contract.json:customer_text,word_count_whitespace"
+      ],
+      "can_say": "The customer-facing text meets the explicit word limit and avoids a safety promise.",
+      "cannot_say": "The paragraph demonstrates tested user comprehension or actual human intervention.",
+      "substantive_remainder": "No missing technical text; later report must actually include it. This review does not write that report."
+    },
+    {
+      "id": "Q3_ASSUMPTION_COST_AND_RECOMMENDATION_CHANGE",
+      "problem_page": 2,
+      "requirement_anchor": "test important assumption or cost rate; state whether recommendation changes",
+      "status": "implemented_with_adverse_stress_and_fixed_selection_limits",
+      "implemented": "Seven predeclared fixed-selected stresses include cost0/.00125/.0025/.005/.01, pooled support and actualinflation+2pp with unchanged training fan;6 own-context tuples/targets fixed. Calendar-to-pooled same rule refuses initial investment; persistent inflation shock gives21/120OOF events.",
+      "evidence": [
+        "results/state_budget_mitigation_stress_v1/summary.csv.gz",
+        "results/state_budget_mitigation_stress_audit_v1/manifest.json",
+        "docs/mitigation_technical_completion_judgment.json:stress_recommendation_change"
+      ],
+      "can_say": "Recommendation is conditional on support/inflation assumptions; pooled support causes preinvestmentReview, and unreliable assumptions call for suspension of new autonomous recommendations pending separately validated recalibration.",
+      "cannot_say": "Known fee levels test fee misestimation; fixedselected stresses establish full refit robustness; pooledReview is zero risk; an unmodeled administrative suspension improves simulated returns.",
+      "substantive_remainder": "The model is fragile to important support/inflation assumptions. The safeguard wording is explicit, but real deployment detection thresholds and subsequent validated recalibration are not an implemented operational service."
+    },
+    {
+      "id": "Q3_REVIEW_TRIGGER_AND_PENDING",
+      "problem_page": 2,
+      "requirement_anchor": "limitation; human review/suspension condition; while review pending",
+      "status": "literal_requirement_implemented_with_material_operational_gap",
+      "implemented": "Initial support failure or unsuitable profile→Review with financialNULL. First funded no-feasible primary action→one optional strict net worst-support improvement then absorbing Review; pending holds actual exposures, continuing CPI/peak/MDD/originalH. No human response is simulated.",
+      "evidence": [
+        "docs/mitigation_main_model_registry.json:Q2/pending,known_limits",
+        "docs/mitigation_locked_final_interpretation_timing_addendum.json",
+        "research/experimental_execution/state_budget_mitigation.py"
+      ],
+      "can_say": "A concrete pending behavior and review condition are supplied exactly as Q3 asks; all funded losses remain in evaluation.",
+      "cannot_say": "Human advisers actually respond, pending becomes safe/cash, or initial100% coverage equals sustained automation.",
+      "substantive_remainder": "All final60 refer by year7 and average ordinary service is only5.8333/30years. No response SLA, explicit adviser decision, restart rule or total review cost exists. This does not make the requested pending answer missing, but prevents claiming a complete continuously autonomous30-year service."
+    },
+    {
+      "id": "CONCLUSION_CONTENT",
+      "problem_page": 2,
+      "requirement_anchor": "three portfolios; A-E; automated Balanced updates; main safeguard; own horizons",
+      "status": "technical_decisions_available_report_not_written",
+      "implemented": "Locked registry, conditional complete-policy recommendation, A-E assignments and one-time protective/referral safeguard supply the technical ingredients.",
+      "evidence": [
+        "docs/mitigation_main_model_registry.json",
+        "docs/mitigation_technical_completion_judgment.json",
+        "docs/mitigation_customer_explanation_contract.json"
+      ],
+      "can_say": "Technical answer ingredients are fixed and can be summarized faithfully later.",
+      "cannot_say": "The conclusion/report is already submitted or all customers obtain suitable automatic service.",
+      "substantive_remainder": "Contest prose and participant review are delivery work still to do; this JSON is not a paper/conclusion draft."
+    },
+    {
+      "id": "FINAL_SPLIT",
+      "problem_page": 2,
+      "requirement_anchor": "develop1-120; final121-180 without further adjustment",
+      "status": "mechanically_fixed_evaluation_but_substantive_nonblind_limitation",
+      "implemented": "New V2b registry/source/release fixed ownfull120 target45/5/50,rho.5uniform before one new121-180 execution; no fit/selection/parameter change in that producer, and no changes after its outcome. Old final archives and engineering incident remain intact.",
+      "evidence": [
+        "docs/mitigation_main_model_registry.json:prior_final_exposure,final_evaluation_contract",
+        "results/mitigation_locked_final_evaluation_v1/manifest.json",
+        "results/mitigation_locked_final_evaluation_v1/independent_audit.json",
+        "docs/mitigation_final_precommit_incident.json"
+      ],
+      "can_say": "The latest evaluation obeys locked-policy runtime mechanics and no further adjustment after that run; it is explicitly previously_exposed_nonblind.",
+      "cannot_say": "The project preserved an untouched final holdout throughout model development, or disclosure/audit/replay restores independence.",
+      "substantive_remainder": "Earlier versions exposed121-180 before adaptive redevelopment. This irreversibly limits the clean-development/final-evaluation separation intended by the task. It must be disclosed as a substantive validation shortcoming, not merely an editorial footnote. New genuinely untouched evaluation data would be needed for fresh confirmation."
+    },
+    {
+      "id": "INSTRUCTIONS_AND_DELIVERY",
+      "problem_page": 3,
+      "requirement_anchor": "English report<=10A4pages >=11pt; AI disclosure; ZIP<=50MB; attribution",
+      "status": "technical_package_ready_report_and_submission_pending",
+      "implemented": "Current source archive V2 is3135797bytes, retains attribution/license and fixed-model reproduction; AI-assisted calculations/source have separate-agent reviews, audits and replay. No report regeneration or CMT upload occurred.",
+      "evidence": [
+        "docs/current_technical_delivery_2026_10_19.json",
+        "results/technical_delivery_addendum_v1/verification.json"
+      ],
+      "can_say": "The technical package is below the required size and reproducible for frozen objects.",
+      "cannot_say": "External human peer review, participant verification, originality/plagiarism clearance, report formatting or CMT submission is already complete.",
+      "substantive_remainder": "English report, page/font check, participant/source/AI disclosure verification and leader upload/save remain explicit delivery obligations. Numerical engineering checks cannot replace participant responsibility."
+    }
+  ],
+  "parameter_contract": [
+    {
+      "symbol": "H,L,liquidity",
+      "kind": "provided questionnaire",
+      "values": {
+        "A": 5,
+        "B": 15,
+        "C": 30,
+        "D": 25,
+        "E": 6
+      },
+      "meaning": "H is customer horizon;L is largest tolerated temporary purchasing-power loss, not guaranteed limit or event probability. Liquidity is categorical, without supplied cash-flow schedule.",
+      "evidence": [
+        "docs/problem_A.pdf:p1,p2"
+      ]
+    },
+    {
+      "symbol": "gamma",
+      "value": 0.075,
+      "kind": "data-selected finite technical empirical training screen",
+      "meaning": "fit_gamma calls fit_menu(alpha=gamma), so training fraction of D_H>L must not exceedgamma; it is not a risk-aversion coefficient multiplying variance/loss.",
+      "basis": "Nested training-only finite gamma comparison using growth/coverage/regret and post-refit service evidence; all30 saved within-fit objective bands singleton, selected gamma varies across fits.",
+      "limit": "A unique finite-grid optimum does not identify psychological preference, continuous optimum or future frequency.",
+      "evidence": [
+        "research/experimental_execution/joint_liquidity_static.py:fit_gamma",
+        "research/safeinvest_research/selection.py:fit_menu",
+        "docs/q1_stability_diagnostic_judgment.json:gamma_conclusion"
+      ],
+      "exact_role_formula": "p_hat_i,T(w)=|T|^(-1) sum_s 1[D_Hi,s(w)-L_i>1e-12]; training feasible requires p_hat_i,T(w)<=gamma+1e-12 and w_bill>=floor(liquidity_i)-1e-12. This is not E[g]-gamma*risk.",
+      "code_location": "research/experimental_execution/joint_liquidity_static.py:fit_gamma calls fit_menu(...,alpha=gamma); research/safeinvest_research/selection.py:fit_menu computes empirical_risk and permitted mask."
+    },
+    {
+      "symbol": "alpha",
+      "value": 0.1,
+      "kind": "normative empirical service frequency reference",
+      "meaning": "Inner complete-policy eligibility requires an empirical event-count cap and same-funded-B meanMDD/CVaR conditions; distinct fromL andgamma.",
+      "basis": "Declared convention and comparability, not demanded by problem/questionnaire.",
+      "limit": "No valid actual future population certificate; posthoc idealized fixed-IID2/60 upper=.10123589492416163>.10 even before actual exposure problems.",
+      "evidence": [
+        "research/experimental_execution/state_budget_selection.py",
+        "docs/mitigation_nominal_risk_resolution_note.json"
+      ]
+    },
+    {
+      "symbol": "rho",
+      "value": 0.5,
+      "kind": "selected headroom release budget",
+      "meaning": "F_rho=R-rho*(R-(1-L)P), preserving half current loss headroom in next-year support test.",
+      "basis": "Six declared rho.5/.75/1 crossed uniform/ensemble_min candidates, owntraining inner complete-policy comparison.",
+      "limit": "Not client psychological risk aversion, probability threshold, tail-confidence level or recursive guarantee.",
+      "evidence": [
+        "docs/state_budget_design_review.json:budget_release_ratio",
+        "docs/mitigation_main_model_registry.json:Q2"
+      ]
+    },
+    {
+      "symbol": "billfloor",
+      "values": {
+        "high": 0.3,
+        "medium": 0.1,
+        "low": 0
+      },
+      "kind": "normative target liquidity proxy",
+      "meaning": "Constrains desired static allocation, not all later drifted holdings.",
+      "basis": "Monotone categorical interpretation declared before joint liquidity fits; data contain no expenditure target to estimate actual reserve need.",
+      "limit": "No uniquely justified numeric floor, withdrawal guarantee or real safe asset.",
+      "evidence": [
+        "research/experimental_execution/joint_liquidity_static.py",
+        "docs/mitigation_main_model_registry.json:Q1"
+      ]
+    },
+    {
+      "symbol": "forecast/support",
+      "values": {
+        "selected_growth": "uniform",
+        "primary_support": "calendar owntraining joint rows"
+      },
+      "kind": "modeling distributional assumption",
+      "meaning": "Growth is uniform mean of one-year support net log returns; safety uses every joint row, not forecast probability trimming.",
+      "basis": "Joint asset/inflation preservation and low-capacity transparent design; calendar indexing is a substantive assumption.",
+      "limit": "Uniform weights are not calibrated true probabilities; supported min is not true future bound. Pooled support and inflation stresses are unfavorable.",
+      "evidence": [
+        "research/experimental_execution/state_budget_execution.py",
+        "docs/mitigation_technical_completion_judgment.json:judgments"
+      ]
+    },
+    {
+      "symbol": "finite_action_family/tolerance",
+      "values": {
+        "primary_points": 13,
+        "first_mitigation_points": 9,
+        "numeric_relative_tolerance": 1e-12
+      },
+      "kind": "declared engineering and approximation conventions",
+      "meaning": "Finite exact-fee candidate actions and deterministic ties; relative tolerance is numerical equality, not extra risk budget.",
+      "basis": "Prospective small economically interpretable menu plus independent action/ledger audits.",
+      "limit": "No continuous optimum or universal feasible-action claim;8-region LP saved numerical witness is diagnostic, not an exact theorem of all-state safety.",
+      "evidence": [
+        "docs/mitigation_main_model_registry.json:Q2",
+        "results/guard_physical_feasibility_v1/independent_witness_audit.json"
+      ]
+    }
+  ],
+  "q1_applications": [
+    {
+      "profile": "A",
+      "H": 5,
+      "L": 0.1,
+      "liquidity": "high",
+      "assignment": "Review",
+      "target": null,
+      "brief_technical_reason": "Short5-year horizon,10%real temporary-loss response and high liquidity: declared learner does not approve a product; use human review rather than force an allocation.",
+      "final_ownH_summary": {
+        "financial_n": 0.0,
+        "breach_count": null,
+        "median_cagr": null,
+        "p10_cagr": null,
+        "median_mdd": null,
+        "p90_mdd": null
+      },
+      "mandatory_comparability": "Each profile ownH; reference finance never substitutes for Review finance."
+    },
+    {
+      "profile": "B",
+      "H": 15,
+      "L": 0.25,
+      "liquidity": "medium",
+      "assignment": "Conservative",
+      "target": [
+        0.25,
+        0.3,
+        0.45
+      ],
+      "brief_technical_reason": "15-year/.25 loss/medium liquidity: Conservative target is the learner-selected feasible menu choice. Lower growth accompanies lower tail risk versus thirds; final11/60 crossings remain visible.",
+      "final_ownH_summary": {
+        "financial_n": 60.0,
+        "breach_count": 11.0,
+        "median_cagr": 0.03210568247124884,
+        "p10_cagr": 0.0034533036487742596,
+        "median_mdd": 0.14087761097307516,
+        "p90_mdd": 0.2953033468700483
+      },
+      "mandatory_comparability": "Each profile ownH; reference finance never substitutes for Review finance."
+    },
+    {
+      "profile": "C",
+      "H": 30,
+      "L": 0.4,
+      "liquidity": "low",
+      "assignment": "Balanced",
+      "target": [
+        0.45,
+        0.05,
+        0.5
+      ],
+      "brief_technical_reason": "30-year/.40 loss/low liquidity: Balanced assigned. Static product evaluation is distinct from V2b guarded execution; static final8/60 crossings and worse tails than thirds remain visible.",
+      "final_ownH_summary": {
+        "financial_n": 60.0,
+        "breach_count": 8.0,
+        "median_cagr": 0.03561646587310585,
+        "p10_cagr": 0.014829895574796569,
+        "median_mdd": 0.27485208380291437,
+        "p90_mdd": 0.4354161503465501
+      },
+      "mandatory_comparability": "Each profile ownH; reference finance never substitutes for Review finance."
+    },
+    {
+      "profile": "D",
+      "H": 25,
+      "L": 0.15,
+      "liquidity": "medium",
+      "assignment": "Review",
+      "target": null,
+      "brief_technical_reason": "25-year/.15 loss/medium liquidity: declared learner does not approve a product. Long horizon alone does not justify ignoring a tight purchasing-power loss response.",
+      "final_ownH_summary": {
+        "financial_n": 0.0,
+        "breach_count": null,
+        "median_cagr": null,
+        "p10_cagr": null,
+        "median_mdd": null,
+        "p90_mdd": null
+      },
+      "mandatory_comparability": "Each profile ownH; reference finance never substitutes for Review finance."
+    },
+    {
+      "profile": "E",
+      "H": 6,
+      "L": 0.35,
+      "liquidity": "high",
+      "assignment": "Growth",
+      "target": [
+        0.65,
+        0.05,
+        0.3
+      ],
+      "brief_technical_reason": "6-year/.35 loss/high liquidity: Growth target meets targetbill floor. Higher growth accompanies worse short-horizon tails and negative finalP10CAGR; no automatic real-cash-reserve guarantee.",
+      "final_ownH_summary": {
+        "financial_n": 60.0,
+        "breach_count": 5.0,
+        "median_cagr": 0.04514872699475683,
+        "p10_cagr": -0.015799721224558305,
+        "median_mdd": 0.14169015606909915,
+        "p90_mdd": 0.31338133694796716
+      },
+      "mandatory_comparability": "Each profile ownH; reference finance never substitutes for Review finance."
+    }
+  ],
+  "checked_numeric_evidence": {
+    "units": "Returns, MDD and frequencies are decimals; nominal fees are nominal units per initial100 across originalH, not an annual percentage. Financial unavailable remainsNULL.",
+    "final_source": "results/mitigation_locked_final_evaluation_v1/summary.csv.gz",
+    "Q2_rows": {
+      "mitigation_main": {
+        "original_n": 60.0,
+        "financial_n": 60.0,
+        "horizon": 30.0,
+        "L": 0.4,
+        "breach_count": 2.0,
+        "median_cagr": 0.023456969155278853,
+        "p10_cagr": 0.008740689875747292,
+        "median_mdd": 0.20017513630585676,
+        "p90_mdd": 0.2868946788338361,
+        "mean_nominal_fees": 0.353286079844228,
+        "mean_trade_fraction": 0.21222222222222223,
+        "mean_automatic_fraction": 0.1944444444444444,
+        "funded_support_review_n": 60.0
+      },
+      "same_target_B": {
+        "original_n": 60.0,
+        "financial_n": 60.0,
+        "horizon": 30.0,
+        "L": 0.4,
+        "breach_count": 8.0,
+        "median_cagr": 0.03561646587310585,
+        "p10_cagr": 0.014955366136428944,
+        "median_mdd": 0.27485208380291437,
+        "p90_mdd": 0.4354161503465501,
+        "mean_nominal_fees": 1.0175608057534467,
+        "mean_trade_fraction": 0.9455555555555556,
+        "mean_automatic_fraction": 0.9455555555555556,
+        "funded_support_review_n": 0.0
+      },
+      "same_target_annual": {
+        "original_n": 60.0,
+        "financial_n": 60.0,
+        "horizon": 30.0,
+        "L": 0.4,
+        "breach_count": 8.0,
+        "median_cagr": 0.03561646587310585,
+        "p10_cagr": 0.014829895574796569,
+        "median_mdd": 0.27485208380291437,
+        "p90_mdd": 0.4354161503465501,
+        "mean_nominal_fees": 1.0669435058009846,
+        "mean_trade_fraction": 1.0,
+        "mean_automatic_fraction": 1.0,
+        "funded_support_review_n": 0.0
+      },
+      "exact_thirds_annual": {
+        "original_n": 60.0,
+        "financial_n": 60.0,
+        "horizon": 30.0,
+        "L": 0.4,
+        "breach_count": 6.0,
+        "median_cagr": 0.033760821101778485,
+        "p10_cagr": 0.014663935536116971,
+        "median_mdd": 0.22290196072900592,
+        "p90_mdd": 0.39357270764304797,
+        "mean_nominal_fees": 0.9787498107143866,
+        "mean_trade_fraction": 1.0,
+        "mean_automatic_fraction": 1.0,
+        "funded_support_review_n": 0.0
+      }
+    },
+    "final_service": {
+      "source": "docs/mitigation_locked_final_interpretation_timing_addendum.json",
+      "all_final_original_ids": 60,
+      "first_guard_year_counts": {
+        "4": 1,
+        "5": 2,
+        "6": 3,
+        "7": 54
+      },
+      "ordinary_periods": 350,
+      "original_periods": 1800,
+      "ordinary_fraction": 0.19444444444444445,
+      "mean_ordinary_years": 5.833333333333333,
+      "late_breaches": [
+        {
+          "scenario_id": 132,
+          "first_guard_decision_year": 7,
+          "first_breach_endpoint": 23
+        },
+        {
+          "scenario_id": 161,
+          "first_guard_decision_year": 7,
+          "first_breach_endpoint": 14
+        }
+      ]
+    },
+    "severe": {
+      "source": "results/mitigation_locked_final_evaluation_v1/severe_example.json",
+      "scenario_id": 161,
+      "main_mdd": 0.47680088076968674,
+      "selection": "max fullH main MDD then min exact-tied originalID"
+    },
+    "development_OOF": {
+      "source": "results/state_budget_mitigation_v1/summary.csv.gz",
+      "selector": {
+        "scope": "outer_selected",
+        "policy": "state_budget_learner"
+      },
+      "original_n": 120,
+      "financial_n": 120,
+      "breach_count": 0,
+      "support_review_n": 109,
+      "mean_automatic_fraction": 0.28722222222222216,
+      "not_independent_of_prior_adaptive_research": true
+    },
+    "stress": {
+      "source": "results/state_budget_mitigation_stress_v1/summary.csv.gz",
+      "cohort": "outer_OOF",
+      "policy": "state_budget_learner",
+      "actual_inflation_plus_02": {
+        "financial_n": 120,
+        "breach_count": 21
+      },
+      "pooled_support": {
+        "financial_n": 0,
+        "initial_execution_review_n": 120,
+        "breach_count": null
+      }
+    },
+    "customer_text_words": 41,
+    "cross_checks": [
+      "All14 final rows x13 selected financial/count fields agree with current technicaljudgment within1e-14;NULL exact.",
+      "Final14 objectIDs unique. A-E assignments and selectedQ2tuple agree with registry.",
+      "Current final service350/1800 equals recorded fraction within1e-15.",
+      "Dev0/120events+109referrals and shock21/120/pooled120Review verified from savedCSV rowselectors.",
+      "SevereID and41-word limit verified from primary savedobjects.",
+      "No new action ranking, fit, simulation or large-sample recomputation."
+    ]
+  },
+  "remaining_decisions_and_work": [
+    {
+      "priority": 1,
+      "kind": "participant_adoption_judgment",
+      "work": "Confirm willingness to present a risk-reducing but growth-sacrificing assisted service, whose automation usually ends early; do not label this a30-year fully autonomous success.",
+      "model_change_authorized_by_this_document": false
+    },
+    {
+      "priority": 2,
+      "kind": "technical_explanation_closure",
+      "work": "Make risk-first benefit/cost, gamma training-screen role, alpha normative frequency, rho buffer and target-only liquidity meanings explicit, retaining Q1B/C/E adverse tails and A/DReview.",
+      "model_change_required": false
+    },
+    {
+      "priority": 3,
+      "kind": "operational_future_research",
+      "work": "A real adviser SLA/decision/restart process and actual cash liabilities are not modeled. Specify missing inputs/governance; any performance model of them needs a new protocol and separate evaluation, not retroactive credit.",
+      "model_change_required_for_real_operating_claim": true
+    },
+    {
+      "priority": 4,
+      "kind": "irreversible_evaluation_limit",
+      "work": "Preserve historical exposure disclosure; only genuinely untouched external scenarios could support fresh confirmation. Do not retune on the observed final60.",
+      "model_change_forbidden_by_current_lock": true
+    },
+    {
+      "priority": 5,
+      "kind": "contest_delivery",
+      "work": "Later concise English<=10A4pages/>=11pt report, required customer explanation,participant/AI/data-license checks and CMTupload/save. These are not completed by this JSON.",
+      "paper_written_here": false
+    }
+  ],
+  "not_required_by_problem": [
+    "Automatic assignment of every A-E profile;humanReview is explicitly allowed.",
+    "A guaranteed portfolio loss limit from questionnaireL.",
+    "The numericgamma=.075/alpha=.10/rho=.5 or billfloor30/10/0.",
+    "Persistent strategic target changes or uninterrupted30-year automatic service for every admitted account.",
+    "Unknown withdrawal schedules, continuous cash reserve, assumed real risk-free bills, or simulated human intervention.",
+    "Universal financial outperformance. Historical exposure still prevents an untouched-final claim; disclosure is not a substitute validation experiment."
+  ],
+  "source_sha256": {
+    "docs/problem_A.pdf": "2ac9412ed68349d36a3fbd2c6cddc5789a81dab8acbfa08c63a3bdb34d2aa2dd",
+    "docs/mitigation_main_model_registry.json": "49059e6e2ef5138a1d8edd284a3353d5c412d2f54f518010c3ddfdaa561c6603",
+    "docs/mitigation_technical_completion_judgment.json": "d18978dccceaf3bdfcb1e20983e07ab392a4277e29b670a1f788dc6dc369f8a9",
+    "docs/technical_rebuild_requirements_review.json": "8368ce603ab5cd08fceace6ef41f24301db759902b634e02d2e155e154e0803d",
+    "docs/mitigation_locked_final_requirements_review.json": "ede7d30e7bdc624624a2985936412b5dd98f209d018ab02e497e95172a5ed60b",
+    "docs/state_budget_mitigation_requirements_review.json": "6128318f0ab3b518a351cdf5f138c6ca90490909ba77e38cae135c3ce0944d0c",
+    "docs/state_budget_cushion_requirements_review.json": "9d907b6a7393efabfefcca2af8321d0a954fe659bada7f848fb24856769d5a6b",
+    "docs/state_budget_design_review.json": "3a0b3db7552167d68772bd96aff8c448c29ef12af3de774cedd377d95cd7a92e",
+    "docs/mitigation_customer_explanation_contract.json": "64bd3e148a9f4d7207f6e7aac95c9e2ca23adaef86112f9368b59585d84478a9",
+    "docs/mitigation_nominal_risk_resolution_note.json": "0f9a8ee52b06a01ff66daad27744709cb724bb46c047abf486eb3ef8fbb9a19a",
+    "docs/q1_stability_diagnostic_judgment.json": "f8310dd5bd1d67b49550b9ca4faa8897922a0a3eadae912cbaa4e2216fb7112e",
+    "docs/mitigation_locked_final_interpretation_timing_addendum.json": "daa6fa86d0d07d5c7d4dab49601ca520c69cbca857df2ddc49df6cf899958361",
+    "docs/mitigation_final_precommit_incident.json": "09b827d8267a7db44de7ac6b356d2b9e3d412f4e82d0e703d0fe3ed2672c0d57",
+    "docs/current_technical_delivery_2026_10_19.json": "e25e9dcb9c31ee6bbc47ae20705fd510210b8d3593abb62b367c3d51585b069b",
+    "research/experimental_execution/joint_liquidity_static.py": "f12fc90a78594f91a11c46a4ca7306237024404098df467e9dc66e110ee78c10",
+    "research/experimental_execution/nested_static_adapter.py": "9401e5b7454b9b0b88b28060baefeb3920dab9fd3e3c31870d00977e5ca84d6f",
+    "research/safeinvest_research/selection.py": "ea4aeeca113f73c04d56fa48498f34fc41af39730bb046b97548233dc0f26e3a",
+    "research/safeinvest_research/metrics.py": "7ec8e4821ce284351a3d8ed7071c687fdf7d6e4cfd225f72cad1d09d623eb008",
+    "research/experimental_execution/state_budget_execution.py": "8480dc1c2d54175a9fafed2471991a0ea8fc6a4519a24140044d056dbafafb1f",
+    "research/experimental_execution/state_budget_mitigation.py": "fe3904062f92a42f7fc37d664b53ee3ec6d336b2498448c1a707cb2edfda89ff",
+    "research/experimental_execution/state_budget_selection.py": "682b88b9a4c35a6823d35d9170df6d006a6cd63ce37baae28cef8cdc053aaa9f",
+    "research/experimental_execution/review_pending.py": "9038d420c9ea48df068c58a6abee3f993ac414f85dd0290cb56e3d703aae3894",
+    "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a",
+    "results/mitigation_locked_final_evaluation_v1/manifest.json": "7401ad59279c694fc4077ab42af1af42e707b258156bca5a7ec110467e407f07",
+    "results/mitigation_locked_final_evaluation_v1/independent_audit.json": "7929ea36e23c9b357a568b8d0f06cd7f90024a61aae0222c11c532cc1bcf65c8",
+    "results/mitigation_locked_final_evaluation_v1/summary.csv.gz": "c050b0fac11437dfb7c8879f58db7f65de94346521362b5828ac998f6c42d6bc",
+    "results/mitigation_locked_final_evaluation_v1/severe_example.json": "f7b8ecbbf0ef2880067542dd6ce231d6fb95172a473032426e514b7faf233edf",
+    "results/state_budget_mitigation_v1/manifest.json": "e97ef1326ffe1cb1e48f660ff1fd1e71cee2a0f1a26931ce84ac98ec03431f7d",
+    "results/state_budget_mitigation_v1/independent_audit.json": "fc20019f75510f4bf33aebfc2764210fd35acb374e3eae49a461356375517c57",
+    "results/state_budget_mitigation_v1/summary.csv.gz": "ce6419a64ef1706445acf51262c7dfbaad5b6563dc8f776e7624fd8731df96a2",
+    "results/state_budget_mitigation_stress_v1/summary.csv.gz": "b80f2d4fcc863e2b448000a57b2530aa62e9cbe8187b39af77a89cd072287649",
+    "results/state_budget_mitigation_stress_audit_v1/manifest.json": "7bec6516345313dc9e6b9227cc3b7a283f5baa09564ec0418fa835537c812824",
+    "results/q1_stability_diagnostic_v1/independent_cache_audit.json": "f3cd42571fdf26eec691c5b37460f0b71939bfc84209e490a9b7b563a816e434",
+    "results/guard_physical_feasibility_v1/independent_witness_audit.json": "e465ef101db5627f2404e1565444cd57708e02c8441b48288aac2bc52970bdff",
+    "results/mitigation_locked_final_reproduction_v1/manifest.json": "109e4c8e1a18dfebe9e0da282faea15f664f36d577fafdf7371dda288a1ce0a1",
+    "results/technical_completion_checkpoint_v2/verification.json": "a00d813b70eaddceb13083d9b24161754332bf44e63584c70927c9ec4edd7b22",
+    "results/technical_delivery_addendum_v1/verification.json": "deea49069502e1eac1cd211eecad7e8226612a9b95bc3ccb134177f06792504f"
+  },
+  "sources_unchanged_at_end": {
+    "docs/problem_A.pdf": "2ac9412ed68349d36a3fbd2c6cddc5789a81dab8acbfa08c63a3bdb34d2aa2dd",
+    "docs/mitigation_main_model_registry.json": "49059e6e2ef5138a1d8edd284a3353d5c412d2f54f518010c3ddfdaa561c6603",
+    "docs/mitigation_technical_completion_judgment.json": "d18978dccceaf3bdfcb1e20983e07ab392a4277e29b670a1f788dc6dc369f8a9",
+    "docs/technical_rebuild_requirements_review.json": "8368ce603ab5cd08fceace6ef41f24301db759902b634e02d2e155e154e0803d",
+    "docs/mitigation_locked_final_requirements_review.json": "ede7d30e7bdc624624a2985936412b5dd98f209d018ab02e497e95172a5ed60b",
+    "docs/state_budget_mitigation_requirements_review.json": "6128318f0ab3b518a351cdf5f138c6ca90490909ba77e38cae135c3ce0944d0c",
+    "docs/state_budget_cushion_requirements_review.json": "9d907b6a7393efabfefcca2af8321d0a954fe659bada7f848fb24856769d5a6b",
+    "docs/state_budget_design_review.json": "3a0b3db7552167d68772bd96aff8c448c29ef12af3de774cedd377d95cd7a92e",
+    "docs/mitigation_customer_explanation_contract.json": "64bd3e148a9f4d7207f6e7aac95c9e2ca23adaef86112f9368b59585d84478a9",
+    "docs/mitigation_nominal_risk_resolution_note.json": "0f9a8ee52b06a01ff66daad27744709cb724bb46c047abf486eb3ef8fbb9a19a",
+    "docs/q1_stability_diagnostic_judgment.json": "f8310dd5bd1d67b49550b9ca4faa8897922a0a3eadae912cbaa4e2216fb7112e",
+    "docs/mitigation_locked_final_interpretation_timing_addendum.json": "daa6fa86d0d07d5c7d4dab49601ca520c69cbca857df2ddc49df6cf899958361",
+    "docs/mitigation_final_precommit_incident.json": "09b827d8267a7db44de7ac6b356d2b9e3d412f4e82d0e703d0fe3ed2672c0d57",
+    "docs/current_technical_delivery_2026_10_19.json": "e25e9dcb9c31ee6bbc47ae20705fd510210b8d3593abb62b367c3d51585b069b",
+    "research/experimental_execution/joint_liquidity_static.py": "f12fc90a78594f91a11c46a4ca7306237024404098df467e9dc66e110ee78c10",
+    "research/experimental_execution/nested_static_adapter.py": "9401e5b7454b9b0b88b28060baefeb3920dab9fd3e3c31870d00977e5ca84d6f",
+    "research/safeinvest_research/selection.py": "ea4aeeca113f73c04d56fa48498f34fc41af39730bb046b97548233dc0f26e3a",
+    "research/safeinvest_research/metrics.py": "7ec8e4821ce284351a3d8ed7071c687fdf7d6e4cfd225f72cad1d09d623eb008",
+    "research/experimental_execution/state_budget_execution.py": "8480dc1c2d54175a9fafed2471991a0ea8fc6a4519a24140044d056dbafafb1f",
+    "research/experimental_execution/state_budget_mitigation.py": "fe3904062f92a42f7fc37d664b53ee3ec6d336b2498448c1a707cb2edfda89ff",
+    "research/experimental_execution/state_budget_selection.py": "682b88b9a4c35a6823d35d9170df6d006a6cd63ce37baae28cef8cdc053aaa9f",
+    "research/experimental_execution/review_pending.py": "9038d420c9ea48df068c58a6abee3f993ac414f85dd0290cb56e3d703aae3894",
+    "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a",
+    "results/mitigation_locked_final_evaluation_v1/manifest.json": "7401ad59279c694fc4077ab42af1af42e707b258156bca5a7ec110467e407f07",
+    "results/mitigation_locked_final_evaluation_v1/independent_audit.json": "7929ea36e23c9b357a568b8d0f06cd7f90024a61aae0222c11c532cc1bcf65c8",
+    "results/mitigation_locked_final_evaluation_v1/summary.csv.gz": "c050b0fac11437dfb7c8879f58db7f65de94346521362b5828ac998f6c42d6bc",
+    "results/mitigation_locked_final_evaluation_v1/severe_example.json": "f7b8ecbbf0ef2880067542dd6ce231d6fb95172a473032426e514b7faf233edf",
+    "results/state_budget_mitigation_v1/manifest.json": "e97ef1326ffe1cb1e48f660ff1fd1e71cee2a0f1a26931ce84ac98ec03431f7d",
+    "results/state_budget_mitigation_v1/independent_audit.json": "fc20019f75510f4bf33aebfc2764210fd35acb374e3eae49a461356375517c57",
+    "results/state_budget_mitigation_v1/summary.csv.gz": "ce6419a64ef1706445acf51262c7dfbaad5b6563dc8f776e7624fd8731df96a2",
+    "results/state_budget_mitigation_stress_v1/summary.csv.gz": "b80f2d4fcc863e2b448000a57b2530aa62e9cbe8187b39af77a89cd072287649",
+    "results/state_budget_mitigation_stress_audit_v1/manifest.json": "7bec6516345313dc9e6b9227cc3b7a283f5baa09564ec0418fa835537c812824",
+    "results/q1_stability_diagnostic_v1/independent_cache_audit.json": "f3cd42571fdf26eec691c5b37460f0b71939bfc84209e490a9b7b563a816e434",
+    "results/guard_physical_feasibility_v1/independent_witness_audit.json": "e465ef101db5627f2404e1565444cd57708e02c8441b48288aac2bc52970bdff",
+    "results/mitigation_locked_final_reproduction_v1/manifest.json": "109e4c8e1a18dfebe9e0da282faea15f664f36d577fafdf7371dda288a1ce0a1",
+    "results/technical_completion_checkpoint_v2/verification.json": "a00d813b70eaddceb13083d9b24161754332bf44e63584c70927c9ec4edd7b22",
+    "results/technical_delivery_addendum_v1/verification.json": "deea49069502e1eac1cd211eecad7e8226612a9b95bc3ccb134177f06792504f"
+  }
+}

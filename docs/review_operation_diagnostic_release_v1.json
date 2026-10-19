@@ -1,0 +1,11 @@
+{
+  "version": "review-operation-development-diagnostic-release-v1",
+  "execution_ready": true,
+  "released_utc": "2026-10-19T09:42:06.164546+00:00",
+  "protocol_sha256": "14e164558b357a5b738ca3c349daac0b026670d3c72e857e65c93e1c8fa68662",
+  "source_freeze_sha256": "55d28b423494dbb884653e59d8acabe9b1e7c22f35851919d29b202bbe44fea8",
+  "independent_source_review_sha256": "98c8a65e49297d83805629ac3f75f8deb2b776be53605e642a7e399c76f83921",
+  "root_synthetic_tests": "11 unittest tests passed before activation",
+  "authorization": "Root design/source review under existing user-authorized technical work; development1-120 saved arrays only. No main change/reselection/new final.",
+  "review_fee_risk_convention": "Hypothetical additional fee event at annual boundary, including immediate drawdown; original peak retained. This is explicitly separate from unchanged original annual-only outcomes."
+}

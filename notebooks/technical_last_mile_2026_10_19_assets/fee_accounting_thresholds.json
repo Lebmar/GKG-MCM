@@ -1,0 +1,17 @@
+[
+  {
+    "reference": "same_target_B",
+    "mean_nominal_fee_equalizing_q": 0.0023687437282602377,
+    "meaning": "Unknown one-time proportional service debit; average cumulative nominal fee accounting only, not risk-protection value or service-price estimate."
+  },
+  {
+    "reference": "same_target_annual",
+    "mean_nominal_fee_equalizing_q": 0.0025091568741934856,
+    "meaning": "Unknown one-time proportional service debit; average cumulative nominal fee accounting only, not risk-protection value or service-price estimate."
+  },
+  {
+    "reference": "exact_thirds_annual",
+    "mean_nominal_fee_equalizing_q": 0.0016546417338800519,
+    "meaning": "Unknown one-time proportional service debit; average cumulative nominal fee accounting only, not risk-protection value or service-price estimate."
+  }
+]

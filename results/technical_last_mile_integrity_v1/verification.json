@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "completed_utc": "2026-10-19T10:05:59.026772+00:00",
+  "base_commit": "f5a157e911d6a52befe56df3e0e9f0be0e9b807f",
+  "baseline_sha256": "245be8ef9c8427701efa23e0235f43bf196bf262b093bd8ca1b9aa16954787e4",
+  "all_original_tracked_files_checked": 2834,
+  "changed_original_files": [],
+  "scope": "All original tracked model/code/report/result/ZIP bytes remain unchanged. New additive diagnostic artifacts are bound by their producer/audit/review manifests."
+}

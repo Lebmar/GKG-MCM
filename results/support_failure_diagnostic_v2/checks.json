@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "scalar_checks": 565618,
+  "maximum_absolute_difference": 2.2737367544323206e-13,
+  "context_setting_rows": 42,
+  "initial_year_rows": 180,
+  "initial_training_member_rows": 18000,
+  "support_period_rows": 43200,
+  "paired_path_rows": 960,
+  "paired_endpoint_rows": 29760,
+  "source_used": "Saved arrays only; no raw CSV or policy calls"
+}

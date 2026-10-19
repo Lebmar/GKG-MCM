@@ -1,0 +1,24 @@
+{
+  "version": "support-failure-root-source-review-v1",
+  "status": "passed_with_scope_caveats",
+  "reviewed_utc": "2026-10-19T09:46:37.507458+00:00",
+  "protocol_sha256": "7e438a524320cbbadd61d1519b7d554e3525edcd8ae144c487008b6ed60de672",
+  "source_sha256": {
+    "research/diagnostics/support_failure.py": "9323c384135111a94c72eee26cd9dd2c83751b46ebc0148e9c03f43d3443d487",
+    "scripts/diagnose_support_failure.py": "fa969e8e8e0ae542dd60c1ef47796ec956018f28f71adf8937628176f8e18962",
+    "tests/test_support_failure.py": "b49c6b0ef67c48886fa8211b70cf309e86d73ddaf7feaf0af0a125c6b7701e07"
+  },
+  "root_focused_tests": "17 unittest tests passed before activation",
+  "review": [
+    "No data loader, policy calls, refitting, selection or final numerical input. Saved-only parents verified before NPZ parse.",
+    "Four corners recompute original100/CPI1 history and strict events. MDD telescopes are order dependent accounting, not unique causal shares.",
+    "Exact initial fulltarget fee and calendar-subset-of-pooled logic valid. Fulltarget infeasibility is not global impossibility.",
+    "Direction minimum is a portfolio projection, not joint support coverage; pending is offline only.",
+    "Real-dollar asset and nominal/inflation P&L identities checked algebraically; fees included once."
+  ],
+  "limitations": [
+    "Adaptive prior-exposed development context remains. No new independent validation.",
+    "Full120 resubstitution remains separate from outer OOF.",
+    "Annual negative controls require unchanged nominal accounts; any failed assertion preserves failed attempt."
+  ]
+}

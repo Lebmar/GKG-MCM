@@ -1,0 +1,9 @@
+{
+  "guard_accounts": 109,
+  "no_guard_accounts": 11,
+  "higher_terminal_equity_n": 98,
+  "mean_guard_equity": 0.10608800118412609,
+  "mean_terminal_equity": 0.32496240837070905,
+  "post_guard_periods": 2457,
+  "original_account_periods": 3600
+}

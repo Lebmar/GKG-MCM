@@ -1,0 +1,42 @@
+{
+  "version": "support-failure-diagnostic-source-freeze-v2",
+  "execution_ready": true,
+  "created_utc": "2026-10-19T09:51:46.253718+00:00",
+  "protocol_sha256": "6cb09f213fd1009d2f22640b5a85a240fc42d07c0f51fa0b5e647e066eaf8612",
+  "source_sha256": {
+    "research/diagnostics/support_failure.py": "9323c384135111a94c72eee26cd9dd2c83751b46ebc0148e9c03f43d3443d487",
+    "scripts/diagnose_support_failure_v2.py": "8c109181a146aa2fe0c2cbd73260f65003126a012d22d973dcb1f74ecf586f50",
+    "tests/test_support_failure_v2.py": "126cba56823dbd70a77b3587fc466804330ad727c6d1afef2b443691cc4a8249"
+  },
+  "input_sha256": {
+    "results/state_budget_mitigation_v1/manifest.json": "e97ef1326ffe1cb1e48f660ff1fd1e71cee2a0f1a26931ce84ac98ec03431f7d",
+    "results/state_budget_mitigation_v1/independent_audit.json": "fc20019f75510f4bf33aebfc2764210fd35acb374e3eae49a461356375517c57",
+    "results/state_budget_mitigation_v1/path_metrics.csv.gz": "9da6396dd3f256da1aa4d6de8a318e6f0dfabc037e64c6b5786fbb28ee88b168",
+    "results/state_budget_mitigation_v1/traces.npz": "c7ad7b70d3dbe3cf2e5647dc5acfbb020e1105b5da5ee43e6aa1c9a913b0422a",
+    "results/state_budget_mitigation_v1/initial_witnesses.json": "fdc46f2d02a6a3e909b96d6c2f58a7d46c7549c7a81c1fcffd26829262ab8d3d",
+    "results/state_budget_mitigation_v1/trace_groups.json": "3cf4f14f1b860a7e32ee132472427774077fe2e29ea1e2b8e82b3ec5a63d3315",
+    "results/state_budget_mitigation_v1/summary.csv.gz": "ce6419a64ef1706445acf51262c7dfbaad5b6563dc8f776e7624fd8731df96a2",
+    "results/state_budget_mitigation_v1/selections.json": "ea4670df1f817086fd157afd014b1c1bcbdfefd7d6159b54c0d7d281c79e7fc9",
+    "results/state_budget_mitigation_stress_v1/manifest.json": "890fce0b4e87d487273f90a61826aa716698c783583899ec497f1d586605a7bd",
+    "results/state_budget_mitigation_stress_audit_v1/manifest.json": "7bec6516345313dc9e6b9227cc3b7a283f5baa09564ec0418fa835537c812824",
+    "results/state_budget_mitigation_stress_v1/path_metrics.csv.gz": "b82f5abaaa2a377f2623832bb10fe620285016b68816eccebdf1c514aca85f25",
+    "results/state_budget_mitigation_stress_v1/traces.npz": "e5f8f0050bcb95ad211932ec851159798ee41d12b845e9543c3ef382730390d8",
+    "results/state_budget_mitigation_stress_v1/cohort_comparisons.json": "98e408458f5e8645e0eceedbe63bed9a33bf354c61882d134b3952118fd6a50f",
+    "results/state_budget_mitigation_stress_v1/initial_witnesses.json": "62aa2faa7f7f75eff78d256a948abceb2c3f123446cb137d9eeeadb4d21a31d1",
+    "results/state_budget_mitigation_stress_v1/base_reproduction_receipt.json": "7b94dd693a32ccf4fb0f34272f036f8eb1657268af3f97632323c5a73d9996dc",
+    "results/state_budget_mitigation_stress_v1/trace_groups.json": "f278d163d0f17b505b30dd47c84b89a217cd48dce527b394f71413bf1643a9bd",
+    "results/state_budget_mitigation_stress_v1/summary.csv.gz": "b80f2d4fcc863e2b448000a57b2530aa62e9cbe8187b39af77a89cd072287649",
+    "docs/state_budget_mitigation_stress_protocol.json": "f8825f4a4090f6731860aa4f794a16594fbd636a174e2a6649d2e743020919da",
+    "docs/state_budget_mitigation_analysis_protocol.json": "443287b99e947894892ad0a08ffafef1158b472ff1f8c8b4c8dc83539ea37ade",
+    "scripts/diagnose_support_failure.py": "fa969e8e8e0ae542dd60c1ef47796ec956018f28f71adf8937628176f8e18962",
+    "tests/test_support_failure.py": "b49c6b0ef67c48886fa8211b70cf309e86d73ddaf7feaf0af0a125c6b7701e07",
+    "docs/support_failure_diagnostic_protocol_v1.json": "7e438a524320cbbadd61d1519b7d554e3525edcd8ae144c487008b6ed60de672",
+    "docs/support_failure_diagnostic_source_freeze_v1.json": "b1826a67c50a035d5ad0f5cb187da7f2391a4c3e63945441a5014579dd767ddb",
+    "docs/support_failure_diagnostic_activation_v1.json": "d000880de6be99dc4a4500a77c5027944a73f0274a79e53b4f0d6d8f231c89c5",
+    "results/support_failure_diagnostic_v1/manifest.json": "a2f8bada943150e4632e641bbcf6d3f572ecf5a9b9b5fa1f02cccca2925390cd",
+    "results/support_failure_diagnostic_v1/failure.txt": "28490dc9c8dad4f75baf618676766b6c72c02f867e7910f105bcc3075678f41a",
+    "tmp/support_failure_diagnostic_first.log": "c26a7b7cf48a3b80c80f7a54792dc1b4d45604aceee675465d621cb268a3585d"
+  },
+  "root_review": "V1 math/source review remains applicable. Exact diff checked: only precise five outer-selected job filter and version paths/gates. New distractor regression tests passed before retry; unchanged pure kernel.",
+  "tests": "17 original tests and 19 V2 tests, the latter includes 17 inherited plus2 new metadata tests; no claim of36 distinct tests."
+}

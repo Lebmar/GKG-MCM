@@ -1,0 +1,35 @@
+{
+  "original_n": 120,
+  "guard_n": 109,
+  "no_guard_n": 11,
+  "within_H_review_debits": 109,
+  "phase_summary": {
+    "before_guard": {
+      "periods": 704,
+      "mean_equity_weight": 0.37683586210416015,
+      "nominal_fees": 37.54594074472672,
+      "total_log_growth": 19.62902222299929
+    },
+    "guard_year": {
+      "periods": 109,
+      "mean_equity_weight": 0.10608800118412606,
+      "nominal_fees": 16.13356989059972,
+      "total_log_growth": 1.5279346263119
+    },
+    "after_guard": {
+      "periods": 2457,
+      "mean_equity_weight": 0.21695627879119858,
+      "nominal_fees": 0.0,
+      "total_log_growth": 67.38946610521428
+    },
+    "no_guard": {
+      "periods": 330,
+      "mean_equity_weight": 0.3844278356195602,
+      "nominal_fees": 33.9030356117347,
+      "total_log_growth": 16.0120308978442
+    }
+  },
+  "cost_assumption": "Unknown one-time fee scenarios only. Proportional asset debit after trigger-year market at endpoint tau, before decision tau+1, only tau<H. No service benefit assumed; original peak/CPI retained.",
+  "mdd_caution": "Full-H risk is recalculated with original history; segment maxima are never added or treated as causal risk contributions.",
+  "reference_caution": "Eight predeclared simple low-exposure references, not risk-matched/certified/selected products. All120 OOF IDs retained. Adaptive development diagnostic, no independent new sample."
+}

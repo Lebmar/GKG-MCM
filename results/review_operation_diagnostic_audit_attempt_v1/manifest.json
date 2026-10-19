@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "started_utc": "2026-10-19T09:52:10.190339+00:00",
+  "raw_market_parser_called": false,
+  "final_scenarios_loaded": false,
+  "completed_utc": "2026-10-19T09:52:11.513639+00:00",
+  "receipt_sha256": "5ecb8d888870d878552146856008914651fdedf8bca2c915749c2aa13127a535"
+}

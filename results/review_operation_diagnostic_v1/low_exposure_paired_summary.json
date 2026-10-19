@@ -1,0 +1,578 @@
+[
+  {
+    "policy": "a0.25_annual",
+    "reference": "main",
+    "paired_n": 120,
+    "event_partition": {
+      "neither": 120,
+      "static_only": 0,
+      "reference_only": 0,
+      "both": 0
+    },
+    "mean_differences": {
+      "log_growth": -0.009729241930245979,
+      "cagr": -0.010077467236685896,
+      "mdd": -0.05103549641798875,
+      "nominal_fees": -0.43991057792983607,
+      "trade_fraction": 0.7577777777777778
+    }
+  },
+  {
+    "policy": "a0.25_annual",
+    "reference": "same_target_B",
+    "paired_n": 120,
+    "event_partition": {
+      "neither": 111,
+      "static_only": 0,
+      "reference_only": 9,
+      "both": 0
+    },
+    "mean_differences": {
+      "log_growth": -0.01976568582871107,
+      "cagr": -0.02050536842570049,
+      "mdd": -0.10312743708119922,
+      "nominal_fees": -0.7815816564697944,
+      "trade_fraction": 0.026944444444444444
+    }
+  },
+  {
+    "policy": "a0.25_annual",
+    "reference": "same_target_annual",
+    "paired_n": 120,
+    "event_partition": {
+      "neither": 111,
+      "static_only": 0,
+      "reference_only": 9,
+      "both": 0
+    },
+    "mean_differences": {
+      "log_growth": -0.019573865376735392,
+      "cagr": -0.02030289762267346,
+      "mdd": -0.10319542873678206,
+      "nominal_fees": -0.8018350551130649,
+      "trade_fraction": 0.0
+    }
+  },
+  {
+    "policy": "a0.25_annual",
+    "reference": "exact_thirds_annual",
+    "paired_n": 120,
+    "event_partition": {
+      "neither": 114,
+      "static_only": 0,
+      "reference_only": 6,
+      "both": 0
+    },
+    "mean_differences": {
+      "log_growth": -0.01549807496014865,
+      "cagr": -0.016031057770496206,
+      "mdd": -0.08092656638081967,
+      "nominal_fees": -0.6785785347320898,
+      "trade_fraction": 0.0
+    }
+  },
+  {
+    "policy": "a0.25_hold",
+    "reference": "main",
+    "paired_n": 120,
+    "event_partition": {
+      "neither": 117,
+      "static_only": 3,
+      "reference_only": 0,
+      "both": 0
+    },
+    "mean_differences": {
+      "log_growth": -0.0015088501564688138,
+      "cagr": -0.0015494407359997085,
+      "mdd": -0.007753991485506492,
+      "nominal_fees": -0.6904950732728151,
+      "trade_fraction": -0.20888888888888887
+    }
+  },
+  {
+    "policy": "a0.25_hold",
+    "reference": "same_target_B",
+    "paired_n": 120,
+    "event_partition": {
+      "neither": 109,
+      "static_only": 2,
+      "reference_only": 8,
+      "both": 1
+    },
+    "mean_differences": {
+      "log_growth": -0.011545294054933904,
+      "cagr": -0.011977341925014307,
+      "mdd": -0.05984593214871695,
+      "nominal_fees": -1.0321661518127734,
+      "trade_fraction": -0.9397222222222222
+    }
+  },
+  {
+    "policy": "a0.25_hold",
+    "reference": "same_target_annual",
+    "paired_n": 120,
+    "event_partition": {
+      "neither": 109,
+      "static_only": 2,
+      "reference_only": 8,
+      "both": 1
+    },
+    "mean_differences": {
+      "log_growth": -0.01135347360295823,
+      "cagr": -0.011774871121987274,
+      "mdd": -0.0599139238042998,
+      "nominal_fees": -1.0524195504560439,
+      "trade_fraction": -0.9666666666666667
+    }
+  },
+  {
+    "policy": "a0.25_hold",
+    "reference": "exact_thirds_annual",
+    "paired_n": 120,
+    "event_partition": {
+      "neither": 112,
+      "static_only": 2,
+      "reference_only": 5,
+      "both": 1
+    },
+    "mean_differences": {
+      "log_growth": -0.007277683186371485,
+      "cagr": -0.007503031269810021,
+      "mdd": -0.03764506144833743,
+      "nominal_fees": -0.9291630300750688,
+      "trade_fraction": -0.9666666666666667
+    }
+  },
+  {
+    "policy": "a0.5_annual",
+    "reference": "main",
+    "paired_n": 120,
+    "event_partition": {
+      "neither": 120,
+      "static_only": 0,
+      "reference_only": 0,
+      "both": 0
+    },
+    "mean_differences": {
+      "log_growth": -0.0028072236818035613,
+      "cagr": -0.0029633913944463832,
+      "mdd": -0.02547654487554258,
+      "nominal_fees": -0.15544838325150015,
+      "trade_fraction": 0.7577777777777778
+    }
+  },
+  {
+    "policy": "a0.5_annual",
+    "reference": "same_target_B",
+    "paired_n": 120,
+    "event_partition": {
+      "neither": 111,
+      "static_only": 0,
+      "reference_only": 9,
+      "both": 0
+    },
+    "mean_differences": {
+      "log_growth": -0.01284366758026865,
+      "cagr": -0.01339129258346098,
+      "mdd": -0.07756848553875305,
+      "nominal_fees": -0.4971194617914584,
+      "trade_fraction": 0.026944444444444444
+    }
+  },
+  {
+    "policy": "a0.5_annual",
+    "reference": "same_target_annual",
+    "paired_n": 120,
+    "event_partition": {
+      "neither": 111,
+      "static_only": 0,
+      "reference_only": 9,
+      "both": 0
+    },
+    "mean_differences": {
+      "log_growth": -0.012651847128292978,
+      "cagr": -0.01318882178043395,
+      "mdd": -0.07763647719433589,
+      "nominal_fees": -0.517372860434729,
+      "trade_fraction": 0.0
+    }
+  },
+  {
+    "policy": "a0.5_annual",
+    "reference": "exact_thirds_annual",
+    "paired_n": 120,
+    "event_partition": {
+      "neither": 114,
+      "static_only": 0,
+      "reference_only": 6,
+      "both": 0
+    },
+    "mean_differences": {
+      "log_growth": -0.008576056711706232,
+      "cagr": -0.008916981928256695,
+      "mdd": -0.05536761483837351,
+      "nominal_fees": -0.394116340053754,
+      "trade_fraction": 0.0
+    }
+  },
+  {
+    "policy": "a0.5_hold",
+    "reference": "main",
+    "paired_n": 120,
+    "event_partition": {
+      "neither": 113,
+      "static_only": 7,
+      "reference_only": 0,
+      "both": 0
+    },
+    "mean_differences": {
+      "log_growth": 0.007162302087655834,
+      "cagr": 0.007521684478089794,
+      "mdd": 0.04574417848773873,
+      "nominal_fees": -0.6511666124149996,
+      "trade_fraction": -0.20888888888888887
+    }
+  },
+  {
+    "policy": "a0.5_hold",
+    "reference": "same_target_B",
+    "paired_n": 120,
+    "event_partition": {
+      "neither": 105,
+      "static_only": 6,
+      "reference_only": 8,
+      "both": 1
+    },
+    "mean_differences": {
+      "log_growth": -0.0028741418108092563,
+      "cagr": -0.0029062167109248026,
+      "mdd": -0.006347762175471733,
+      "nominal_fees": -0.9928376909549578,
+      "trade_fraction": -0.9397222222222222
+    }
+  },
+  {
+    "policy": "a0.5_hold",
+    "reference": "same_target_annual",
+    "paired_n": 120,
+    "event_partition": {
+      "neither": 105,
+      "static_only": 6,
+      "reference_only": 8,
+      "both": 1
+    },
+    "mean_differences": {
+      "log_growth": -0.002682321358833582,
+      "cagr": -0.002703745907897771,
+      "mdd": -0.006415753831054579,
+      "nominal_fees": -1.0130910895982284,
+      "trade_fraction": -0.9666666666666667
+    }
+  },
+  {
+    "policy": "a0.5_hold",
+    "reference": "exact_thirds_annual",
+    "paired_n": 120,
+    "event_partition": {
+      "neither": 108,
+      "static_only": 6,
+      "reference_only": 5,
+      "both": 1
+    },
+    "mean_differences": {
+      "log_growth": 0.001393469057753162,
+      "cagr": 0.0015680939442794814,
+      "mdd": 0.015853108524907795,
+      "nominal_fees": -0.8898345692172535,
+      "trade_fraction": -0.9666666666666667
+    }
+  },
+  {
+    "policy": "a0.75_annual",
+    "reference": "main",
+    "paired_n": 120,
+    "event_partition": {
+      "neither": 118,
+      "static_only": 2,
+      "reference_only": 0,
+      "both": 0
+    },
+    "mean_differences": {
+      "log_growth": 0.003715530757259733,
+      "cagr": 0.0038048182152549616,
+      "mdd": 0.0106036653109611,
+      "nominal_fees": 0.11609025650756646,
+      "trade_fraction": 0.7577777777777778
+    }
+  },
+  {
+    "policy": "a0.75_annual",
+    "reference": "same_target_B",
+    "paired_n": 120,
+    "event_partition": {
+      "neither": 111,
+      "static_only": 0,
+      "reference_only": 7,
+      "both": 2
+    },
+    "mean_differences": {
+      "log_growth": -0.0063209131412053565,
+      "cagr": -0.006623082973759635,
+      "mdd": -0.04148827535224937,
+      "nominal_fees": -0.22558082203239183,
+      "trade_fraction": 0.026944444444444444
+    }
+  },
+  {
+    "policy": "a0.75_annual",
+    "reference": "same_target_annual",
+    "paired_n": 120,
+    "event_partition": {
+      "neither": 111,
+      "static_only": 0,
+      "reference_only": 7,
+      "both": 2
+    },
+    "mean_differences": {
+      "log_growth": -0.006129092689229682,
+      "cagr": -0.006420612170732603,
+      "mdd": -0.04155626700783221,
+      "nominal_fees": -0.24583422067566232,
+      "trade_fraction": 0.0
+    }
+  },
+  {
+    "policy": "a0.75_annual",
+    "reference": "exact_thirds_annual",
+    "paired_n": 120,
+    "event_partition": {
+      "neither": 114,
+      "static_only": 0,
+      "reference_only": 4,
+      "both": 2
+    },
+    "mean_differences": {
+      "log_growth": -0.0020533022726429385,
+      "cagr": -0.002148772318555351,
+      "mdd": -0.019287404651869837,
+      "nominal_fees": -0.12257770029468738,
+      "trade_fraction": 0.0
+    }
+  },
+  {
+    "policy": "a0.75_hold",
+    "reference": "main",
+    "paired_n": 120,
+    "event_partition": {
+      "neither": 104,
+      "static_only": 16,
+      "reference_only": 0,
+      "both": 0
+    },
+    "mean_differences": {
+      "log_growth": 0.013436693000323092,
+      "cagr": 0.014145314937330924,
+      "mdd": 0.08891228363505131,
+      "nominal_fees": -0.6118691327793502,
+      "trade_fraction": -0.20888888888888887
+    }
+  },
+  {
+    "policy": "a0.75_hold",
+    "reference": "same_target_B",
+    "paired_n": 120,
+    "event_partition": {
+      "neither": 100,
+      "static_only": 11,
+      "reference_only": 4,
+      "both": 5
+    },
+    "mean_differences": {
+      "log_growth": 0.003400249101858002,
+      "cagr": 0.0037174137483163266,
+      "mdd": 0.03682034297184086,
+      "nominal_fees": -0.9535402113193084,
+      "trade_fraction": -0.9397222222222222
+    }
+  },
+  {
+    "policy": "a0.75_hold",
+    "reference": "same_target_annual",
+    "paired_n": 120,
+    "event_partition": {
+      "neither": 100,
+      "static_only": 11,
+      "reference_only": 4,
+      "both": 5
+    },
+    "mean_differences": {
+      "log_growth": 0.003592069553833676,
+      "cagr": 0.003919884551343358,
+      "mdd": 0.03675235131625801,
+      "nominal_fees": -0.9737936099625789,
+      "trade_fraction": -0.9666666666666667
+    }
+  },
+  {
+    "policy": "a0.75_hold",
+    "reference": "exact_thirds_annual",
+    "paired_n": 120,
+    "event_partition": {
+      "neither": 103,
+      "static_only": 11,
+      "reference_only": 1,
+      "both": 5
+    },
+    "mean_differences": {
+      "log_growth": 0.00766785997042042,
+      "cagr": 0.00819172440352061,
+      "mdd": 0.05902121367222038,
+      "nominal_fees": -0.8505370895816039,
+      "trade_fraction": -0.9666666666666667
+    }
+  },
+  {
+    "policy": "a1.0_annual",
+    "reference": "main",
+    "paired_n": 120,
+    "event_partition": {
+      "neither": 111,
+      "static_only": 9,
+      "reference_only": 0,
+      "both": 0
+    },
+    "mean_differences": {
+      "log_growth": 0.009844623446489417,
+      "cagr": 0.010225430385987565,
+      "mdd": 0.052159932318793296,
+      "nominal_fees": 0.36192447718322873,
+      "trade_fraction": 0.7577777777777778
+    }
+  },
+  {
+    "policy": "a1.0_annual",
+    "reference": "same_target_B",
+    "paired_n": 120,
+    "event_partition": {
+      "neither": 111,
+      "static_only": 0,
+      "reference_only": 0,
+      "both": 9
+    },
+    "mean_differences": {
+      "log_growth": -0.00019182045197567403,
+      "cagr": -0.00020247080302703002,
+      "mdd": 6.799165558282935e-05,
+      "nominal_fees": 0.02025339864327043,
+      "trade_fraction": 0.026944444444444444
+    }
+  },
+  {
+    "policy": "a1.0_annual",
+    "reference": "same_target_annual",
+    "paired_n": 120,
+    "event_partition": {
+      "neither": 111,
+      "static_only": 0,
+      "reference_only": 0,
+      "both": 9
+    },
+    "mean_differences": {
+      "log_growth": 7.58941520739853e-20,
+      "cagr": 1.8503717077085942e-18,
+      "mdd": -1.572815951552305e-17,
+      "nominal_fees": -5.2735593669694933e-17,
+      "trade_fraction": 0.0
+    }
+  },
+  {
+    "policy": "a1.0_annual",
+    "reference": "exact_thirds_annual",
+    "paired_n": 120,
+    "event_partition": {
+      "neither": 110,
+      "static_only": 4,
+      "reference_only": 1,
+      "both": 5
+    },
+    "mean_differences": {
+      "log_growth": 0.004075790416586744,
+      "cagr": 0.0042718398521772545,
+      "mdd": 0.022268862355962357,
+      "nominal_fees": 0.12325652038097487,
+      "trade_fraction": 0.0
+    }
+  },
+  {
+    "policy": "a1.0_hold",
+    "reference": "main",
+    "paired_n": 120,
+    "event_partition": {
+      "neither": 91,
+      "static_only": 29,
+      "reference_only": 0,
+      "both": 0
+    },
+    "mean_differences": {
+      "log_growth": 0.018397299772695688,
+      "cagr": 0.01941737230119458,
+      "mdd": 0.12537788921788148,
+      "nominal_fees": -0.5726025977177973,
+      "trade_fraction": -0.20888888888888887
+    }
+  },
+  {
+    "policy": "a1.0_hold",
+    "reference": "same_target_B",
+    "paired_n": 120,
+    "event_partition": {
+      "neither": 89,
+      "static_only": 22,
+      "reference_only": 2,
+      "both": 7
+    },
+    "mean_differences": {
+      "log_growth": 0.008360855874230601,
+      "cagr": 0.008989471112179981,
+      "mdd": 0.07328594855467102,
+      "nominal_fees": -0.9142736762577556,
+      "trade_fraction": -0.9397222222222222
+    }
+  },
+  {
+    "policy": "a1.0_hold",
+    "reference": "same_target_annual",
+    "paired_n": 120,
+    "event_partition": {
+      "neither": 89,
+      "static_only": 22,
+      "reference_only": 2,
+      "both": 7
+    },
+    "mean_differences": {
+      "log_growth": 0.008552676326206274,
+      "cagr": 0.009191941915207013,
+      "mdd": 0.07321795689908818,
+      "nominal_fees": -0.9345270749010262,
+      "trade_fraction": -0.9666666666666667
+    }
+  },
+  {
+    "policy": "a1.0_hold",
+    "reference": "exact_thirds_annual",
+    "paired_n": 120,
+    "event_partition": {
+      "neither": 91,
+      "static_only": 23,
+      "reference_only": 0,
+      "both": 6
+    },
+    "mean_differences": {
+      "log_growth": 0.01262846674279302,
+      "cagr": 0.013463781767384265,
+      "mdd": 0.09548681925505055,
+      "nominal_fees": -0.8112705545200513,
+      "trade_fraction": -0.9666666666666667
+    }
+  }
+]

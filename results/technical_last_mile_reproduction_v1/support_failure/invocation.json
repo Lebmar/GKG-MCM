@@ -1,0 +1,7 @@
+{
+  "workspace": "/Users/lebmar/Documents/ChatGPT/GKG数模/results/technical_last_mile_reproduction_v1/workspaces/support_failure-95q_qv7a",
+  "python": "/Users/lebmar/Documents/ChatGPT/GKG数模/.venv/bin/python",
+  "script": "scripts/diagnose_support_failure_v2.py",
+  "flag": "--execute",
+  "expected_output_seeded": false
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "job_id": "c1_refit",
+    "fields": 35,
+    "maximum_absolute_difference": 7.958078640513122e-13,
+    "absolute_tolerance": 1e-09,
+    "relative_tolerance": 5e-12
+  },
+  {
+    "job_id": "c2_refit",
+    "fields": 35,
+    "maximum_absolute_difference": 4.547473508864641e-13,
+    "absolute_tolerance": 1e-09,
+    "relative_tolerance": 5e-12
+  },
+  {
+    "job_id": "c3_refit",
+    "fields": 35,
+    "maximum_absolute_difference": 9.094947017729282e-13,
+    "absolute_tolerance": 1e-09,
+    "relative_tolerance": 5e-12
+  },
+  {
+    "job_id": "c4_refit",
+    "fields": 35,
+    "maximum_absolute_difference": 2.2737367544323206e-12,
+    "absolute_tolerance": 1e-09,
+    "relative_tolerance": 5e-12
+  },
+  {
+    "job_id": "c5_refit",
+    "fields": 35,
+    "maximum_absolute_difference": 6.821210263296962e-13,
+    "absolute_tolerance": 1e-09,
+    "relative_tolerance": 5e-12
+  }
+]

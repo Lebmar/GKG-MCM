@@ -1,0 +1,7 @@
+{
+  "workspace": "/Users/lebmar/Documents/ChatGPT/GKG数模/results/technical_last_mile_reproduction_v1/workspaces/review_operation-20yy0hzb",
+  "python": "/Users/lebmar/Documents/ChatGPT/GKG数模/.venv/bin/python",
+  "script": "scripts/diagnose_review_operation.py",
+  "flag": "--run",
+  "expected_output_seeded": false
+}

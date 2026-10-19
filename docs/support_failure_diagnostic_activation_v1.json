@@ -1,0 +1,9 @@
+{
+  "version": "support-failure-diagnostic-activation-v1",
+  "execution_ready": true,
+  "released_utc": "2026-10-19T09:46:37.507939+00:00",
+  "protocol_sha256": "7e438a524320cbbadd61d1519b7d554e3525edcd8ae144c487008b6ed60de672",
+  "source_freeze_sha256": "b1826a67c50a035d5ad0f5cb187da7f2391a4c3e63945441a5014579dd767ddb",
+  "source_review_sha256": "471d155b41805cd55f0fd1e3959e6b01a646fd74435bf3ec8e14443ad07eb029",
+  "authorization": "Existing user-authorized additive technical diagnostic; saved development arrays only. No new policy selection or final analysis."
+}

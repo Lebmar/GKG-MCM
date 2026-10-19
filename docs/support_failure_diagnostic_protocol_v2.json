@@ -1,0 +1,568 @@
+{
+  "version": "saved-support-and-inflation-failure-diagnostic-v2",
+  "status": "Prospective metadata-only adapter correction before new derived results; mathematical definitions unchanged",
+  "execution_ready": false,
+  "activation": "Separate source freeze and activation required before saved numerical diagnostic",
+  "development_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120
+  ],
+  "allow_final": false,
+  "raw_csv_open": false,
+  "new_policy_runs": 0,
+  "new_fits": 0,
+  "new_selections": 0,
+  "settings": [
+    "base",
+    "fee_0000",
+    "fee_00125",
+    "fee_005",
+    "fee_01",
+    "pooled_support",
+    "actual_inflation_plus_02"
+  ],
+  "cohorts": [
+    "outer_OOF",
+    "full_resubstitution"
+  ],
+  "policies": [
+    "state_budget_learner",
+    "same_target_B",
+    "same_target_annual",
+    "exact_thirds_annual"
+  ],
+  "parents": {
+    "canonical": "results/state_budget_mitigation_v1",
+    "canonical_audit": "results/state_budget_mitigation_v1/independent_audit.json",
+    "stress": "results/state_budget_mitigation_stress_v1",
+    "stress_audit": "results/state_budget_mitigation_stress_audit_v1/manifest.json"
+  },
+  "prior_work_not_relabelled": [
+    "Existing V2b analysis already reports active-action directional support misses and forecast diagnostics. This new analysis adds fixed-stress matching, initial calendar-versus-pooled support origin, complete pending exposure and four-corner purchasing-power valuation.",
+    "Existing guard LP diagnoses a different finite-menu versus wider-portfolio question. Initial pooled rejection will not be called full-simplex impossibility.",
+    "Earlier forecast/scaling/fan diagnostics are retained; no new calibration or independent-market claim."
+  ],
+  "files": {
+    "kernel": "research/diagnostics/support_failure.py",
+    "runner": "scripts/diagnose_support_failure_v2.py",
+    "tests": "tests/test_support_failure_v2.py",
+    "protocol": "docs/support_failure_diagnostic_protocol_v2.json",
+    "source_freeze": "docs/support_failure_diagnostic_source_freeze_v2.json",
+    "activation": "docs/support_failure_diagnostic_activation_v2.json",
+    "output": "results/support_failure_diagnostic_v2"
+  },
+  "gates": [
+    "Protocol remains execution_readyFalse. New source freeze and independent activation must each be ready and bind exact protocol/source-freeze SHA before numerical saved-array parsing.",
+    "Verify every declared canonical and stress output byteSHA, complete/passed development-only parent/audit identity, and audit binding to each parent manifest. Frozen new input closure contains only needed saved artifacts/docs/source, not raw CSV. Historical raw-file hash is provenance only; raw CSV is never opened.",
+    "Reject existing output directory; preserve incomplete/failed receipt and traceback; rehash all frozen and consumed artifacts at end."
+  ],
+  "identity_reconstruction": [
+    "Five canonical exact-thirds annual outer groups cover original IDs1–120 exactly once. Require strictly positive three-asset postholdings. Nominal gross=next holdings/postholdings; inflation gross=nextCPI/currentCPI. No raw market parser.",
+    "Cross-check each funded selected group realized real gross and own-training real gross (H,N,3) against the reconstructed development table and its exact original own-training IDs.",
+    "All6 refit contexts retained: five own96/24 outer folds and one full120 resubstitution. Full is reported separately, never mixed as another120 independent validation paths."
+  ],
+  "initial_support": {
+    "coverage": "All6contexts and all7settings,42 context-setting rows. Every context training row/year retained at base fee in member table, plus all30 peryear summaries. Duplicate training rows across contexts are not independent initial evidence.",
+    "full_target_only": "At time0, x=(0,0,100), target w is the original own-fit target, rho is the unchanged selected release. Exact y=100*w/(1+c*(1-w_bill)); fee=100-sum(y), paid once.",
+    "floor": "F=(1-L)*100; B=max(F,100-rho*(100-F)); compare same y and same B with current-calendar year1 training support and all30-year joint training rows.",
+    "inclusion": "Calendar year1 is a subset of pooled joint support; min_pool<=min_calendar for the same y. Initial rejection is the stricter support condition of this fixed policy, not a statement that every portfolio must fail.",
+    "members": "Preserve trainingID/year and joint3asset real-gross row. Report peryear/fullpool minimum, all min ties, violating row counts, and bill realgross<1 counts. Never combine independent asset minima into a synthetic joint row."
+  },
+  "directional_support": {
+    "coverage": "All funded main groups for all7settings and both cohorts; initialReview remains in complete path inventory but has zero account-period records.",
+    "minimum": "For each saved posttrade nominal holdings y and current CPI C, m_cal=min training_calendar_gross dot y/C and m_pool=min all_training_year_jointgross dot y/C. Actual next real wealth is saved physical endpoint.",
+    "miss": "actual_next < declared_support_directional_min -1e-12*current_real_wealth. This is a directional lower-bound failure for one saved allocation, not exact joint-support membership or a coverage probability.",
+    "phases": "Separate active ordinary primary-safe, current guard/mitigation, and prior-pending. Pending values are offline diagnostics, not forecasts made or constraints promised by the policy.",
+    "risk": "Keep original F and recompute normative budget for explanatory output; saved budget/certificate fields are compared only when gate_evaluated. Record original ever_breached/firstcrossing and firstguard, with complete original H and peak.",
+    "bill_and_accounting": "Report actual/training negative bill real gross. Verify exact one-step purchasing-power P&L both as -fee/Cpre + sum(y/Cpre*(greal-1)) and as (sum(y*r_nom)-fee-Vpre*pi)/Cnext. Perperiod accounting is not a unique MDD cause."
+  },
+  "inflation_four_corners": {
+    "match": "For each of4policies, each originalID and each cohort, pair base and actual_inflation_plus_02 saved nominal paths/CPI. No outcome-based case filtering. Preserve NULL if a physical path is unavailable.",
+    "corners": {
+      "BB": "V_base/CPI_base",
+      "BS": "V_base/CPI_shift",
+      "SB": "V_shift/CPI_base",
+      "SS": "V_shift/CPI_shift"
+    },
+    "peaks": "Every corner starts at originaltime0 wealth100/CPI1 and recomputes full running peak and MDD. No reuse of suffix peaks or old MDD under a new numeraire.",
+    "log_identity": "log(R_SS/R_BB)=log(V_shift/V_base)-log(CPI_shift/CPI_base), exact at every endpoint. Nominal-path difference includes all decision/fee/holdings feedback, not only nominal-market effects.",
+    "MDD": "Report both telescopes: (MDD_BS-MDD_BB)+(MDD_SS-MDD_BS); (MDD_SB-MDD_BB)+(MDD_SS-MDD_SB). Interaction=MDD_SS-MDD_SB-MDD_BS+MDD_BB. No unique causal shares or percentage allocation.",
+    "control": "For same_target_annual and exact_thirds_annual the original nominal path/fee/postholding arrays should match across the actual-inflation-only shift. Test and retain any failure; do not silently repair.",
+    "stress": "pi_shift=pi_base+0.02 at every actual year, not greal minus0.02 or CPI multiplied by1.02. Own training support remains unchanged."
+  },
+  "outputs": [
+    "manifest.json",
+    "path_inventory.csv.gz",
+    "initial_support_contexts.csv.gz",
+    "initial_support_by_year.csv.gz",
+    "initial_support_members.csv.gz",
+    "directional_support_periods.csv.gz",
+    "directional_support_summary.json",
+    "inflation_four_corner_paths.csv.gz",
+    "inflation_four_corner_endpoints.csv.gz",
+    "inflation_four_corner_summary.json",
+    "checks.json"
+  ],
+  "tolerances": {
+    "saved_gross_reconstruction_atol": 3e-11,
+    "physical_accounting_atol": 3e-10,
+    "physical_accounting_rtol": 5e-13,
+    "directional_miss_relative": 1e-12,
+    "original_breach": "MDD-L>1e-12, unchanged",
+    "initial_support_relative": 1e-12
+  },
+  "reporting": [
+    "Complete originalID/cohort/setting pairing and ReviewNULL. No pooling five folds/full or repeated settings as independent observations.",
+    "Firstcross/guard and bill losses are descriptive mechanisms/accounting, not proof of real-world causation, conditional calibration or a future probability bound.",
+    "No model/parameter/forecast/support/menu selection, original source/result/final/gate/ZIP edits, paper writing, raw CSV or final-market reads."
+  ],
+  "output_schema": {
+    "path_inventory.csv.gz": {
+      "primary_key": [
+        "setting_id",
+        "cohort",
+        "policy",
+        "scenario_id"
+      ],
+      "columns": "Exact passthrough of all columns from audited stress path_metrics.csv.gz; all6720 original rows, financialNULL unchanged."
+    },
+    "initial_support_contexts.csv.gz": {
+      "primary_key": [
+        "setting_id",
+        "job_id"
+      ],
+      "columns": [
+        "setting_id",
+        "cohort",
+        "context_id",
+        "job_id",
+        "training_n",
+        "evaluated_original_n",
+        "target",
+        "rho",
+        "cost_rate",
+        "support_mode",
+        "status",
+        "financial_available",
+        "full_target_fee",
+        "original_floor",
+        "budget_floor",
+        "calendar_year1_min",
+        "pooled_min",
+        "calendar_year1_slack",
+        "pooled_slack",
+        "pooled_violating_training_rows",
+        "calendar_violating_training_rows"
+      ],
+      "expected_rows": 42
+    },
+    "initial_support_by_year.csv.gz": {
+      "primary_key": [
+        "job_id",
+        "training_year"
+      ],
+      "columns": [
+        "job_id",
+        "cohort",
+        "training_year",
+        "training_n",
+        "min_full_target_next_real",
+        "budget_floor",
+        "min_slack",
+        "violating_rows",
+        "minimum_member_original_ids",
+        "negative_real_bill_rows",
+        "min_real_bill_gross"
+      ],
+      "expected_rows": 180
+    },
+    "initial_support_members.csv.gz": {
+      "primary_key": [
+        "job_id",
+        "training_id",
+        "training_year"
+      ],
+      "columns": [
+        "job_id",
+        "cohort",
+        "training_id",
+        "training_year",
+        "equity_real_gross",
+        "bond_real_gross",
+        "bill_real_gross",
+        "full_target_next_real",
+        "slack",
+        "budget_floor",
+        "negative_real_bill"
+      ],
+      "expected_rows": 18000
+    },
+    "directional_support_periods.csv.gz": {
+      "primary_key": [
+        "setting_id",
+        "cohort",
+        "job_id",
+        "scenario_id",
+        "year"
+      ],
+      "columns": [
+        "setting_id",
+        "cohort",
+        "job_id",
+        "scenario_id",
+        "year",
+        "gate_evaluated",
+        "ordinary_service",
+        "current_guard",
+        "prior_pending",
+        "support_feasible",
+        "decision_source",
+        "current_real",
+        "original_peak",
+        "offline_original_floor",
+        "offline_budget_floor",
+        "calendar_directional_min",
+        "pooled_directional_min",
+        "declared_directional_min",
+        "actual_next_real",
+        "calendar_worst_training_id",
+        "pooled_worst_training_id",
+        "pooled_worst_training_year",
+        "directional_miss",
+        "budget_failure",
+        "actual_bill_real_gross",
+        "actual_bill_negative_real",
+        "fee_nominal",
+        "fee_current_real",
+        "equity_real_PnL",
+        "bond_real_PnL",
+        "bill_real_PnL",
+        "nominal_asset_gain_at_next_CPI",
+        "nominal_fee_at_next_CPI",
+        "inflation_erosion",
+        "real_wealth_change",
+        "first_guard_year",
+        "first_crossing"
+      ],
+      "rows": "Every funded main-account originalyear; initialReview has no account-period row and remains complete in path_inventory."
+    },
+    "inflation_four_corner_paths.csv.gz": {
+      "primary_key": [
+        "cohort",
+        "policy",
+        "job_id",
+        "scenario_id"
+      ],
+      "columns": [
+        "cohort",
+        "policy",
+        "job_id",
+        "scenario_id",
+        "base_financial",
+        "shift_financial",
+        "terminal_log_nominal_component",
+        "terminal_log_CPI_component",
+        "BB_mdd",
+        "BB_first_crossing",
+        "BB_breach",
+        "BB_log_growth",
+        "BB_cagr",
+        "BS_mdd",
+        "BS_first_crossing",
+        "BS_breach",
+        "BS_log_growth",
+        "BS_cagr",
+        "SB_mdd",
+        "SB_first_crossing",
+        "SB_breach",
+        "SB_log_growth",
+        "SB_cagr",
+        "SS_mdd",
+        "SS_first_crossing",
+        "SS_breach",
+        "SS_log_growth",
+        "SS_cagr",
+        "MDD_CPI_first",
+        "MDD_nominal_after_CPI",
+        "MDD_nominal_first",
+        "MDD_CPI_after_nominal",
+        "MDD_interaction",
+        "MDD_total"
+      ],
+      "expected_rows": 960,
+      "nonfinancial": "All defined financial columns remainNULL; no synthetic path fill."
+    },
+    "inflation_four_corner_endpoints.csv.gz": {
+      "primary_key": [
+        "cohort",
+        "policy",
+        "job_id",
+        "scenario_id",
+        "endpoint"
+      ],
+      "columns": [
+        "cohort",
+        "policy",
+        "job_id",
+        "scenario_id",
+        "endpoint",
+        "log_nominal_path_component",
+        "log_CPI_component",
+        "BB_real",
+        "BB_peak",
+        "BB_running_mdd",
+        "BS_real",
+        "BS_peak",
+        "BS_running_mdd",
+        "SB_real",
+        "SB_peak",
+        "SB_running_mdd",
+        "SS_real",
+        "SS_peak",
+        "SS_running_mdd"
+      ],
+      "rows": "31 endpoints per matched funded path; all originaltime0 included."
+    },
+    "directional_support_summary.json": {
+      "primary_key": [
+        "setting_id",
+        "cohort"
+      ],
+      "entries": 14,
+      "fields": [
+        "setting_id",
+        "cohort",
+        "original_n",
+        "financial_n",
+        "account_periods",
+        "initial_review_n",
+        "phases"
+      ],
+      "phases": [
+        "ordinary",
+        "guard_mitigation",
+        "prior_pending"
+      ],
+      "phase_fields": [
+        "phase",
+        "periods",
+        "distinct_original_ids",
+        "directional_miss_periods",
+        "budget_failure_periods",
+        "negative_real_bill_periods",
+        "supported_safe_actual_budget_failures"
+      ]
+    },
+    "inflation_four_corner_summary.json": {
+      "primary_key": [
+        "cohort",
+        "policy"
+      ],
+      "entries": 8,
+      "fields": [
+        "cohort",
+        "policy",
+        "original_n",
+        "paired_financial_n",
+        "corners",
+        "ordered_MDD_means",
+        "event_quadrants"
+      ],
+      "corners": {
+        "keys": [
+          "BB",
+          "BS",
+          "SB",
+          "SS"
+        ],
+        "fields": [
+          "breach_count",
+          "mean_mdd",
+          "median_cagr"
+        ]
+      },
+      "ordered_MDD_means": [
+        "MDD_CPI_first",
+        "MDD_nominal_after_CPI",
+        "MDD_nominal_first",
+        "MDD_CPI_after_nominal",
+        "MDD_interaction",
+        "MDD_total"
+      ],
+      "event_quadrants": "All16 boolean4corner event patterns, including empty originalIDs lists."
+    },
+    "checks.json": {
+      "fields": [
+        "status",
+        "scalar_checks",
+        "maximum_absolute_difference",
+        "context_setting_rows",
+        "initial_year_rows",
+        "initial_training_member_rows",
+        "support_period_rows",
+        "paired_path_rows",
+        "paired_endpoint_rows",
+        "source_used"
+      ]
+    },
+    "manifest.json": {
+      "fields": [
+        "status",
+        "phase",
+        "started_utc",
+        "completed_utc",
+        "protocol_sha256",
+        "source_freeze_sha256",
+        "activation_sha256",
+        "sources_and_inputs_at_start",
+        "sources_and_inputs_at_end",
+        "outputs_sha256",
+        "raw_csv_opened",
+        "raw_market_values_parsed",
+        "final_scenarios_loaded",
+        "new_policy_runs",
+        "new_fits",
+        "new_selections",
+        "new_physical_policy_runs"
+      ]
+    }
+  },
+  "historical_failure": {
+    "attempt": "results/support_failure_diagnostic_v1",
+    "source": "scripts/diagnose_support_failure.py",
+    "protocol": "docs/support_failure_diagnostic_protocol_v1.json",
+    "log": "tmp/support_failure_diagnostic_first.log",
+    "error": "Reference filter selected inner-job exact-thirds groups in addition to five outer refit groups. Failed hard5-group check; no derived numerical outputs produced.",
+    "phase": "Both NPZ archives opened after CSVinventory parsing; failure in reference metadata selection before first numerical array extraction.",
+    "correction": "Only choose reference/exact_thirds groups whose job_id is one of the exact five outer_selected refit jobs c1_refit..c5_refit. Full and all inner references excluded by role, not outcomes.",
+    "unchanged": "No original scenario dropped, no group-count relaxation, no policy/parameter/financial formula changed; v1 source/protocol/failure remain immutable.",
+    "sha256": {
+      "scripts/diagnose_support_failure.py": "fa969e8e8e0ae542dd60c1ef47796ec956018f28f71adf8937628176f8e18962",
+      "tests/test_support_failure.py": "b49c6b0ef67c48886fa8211b70cf309e86d73ddaf7feaf0af0a125c6b7701e07",
+      "docs/support_failure_diagnostic_protocol_v1.json": "7e438a524320cbbadd61d1519b7d554e3525edcd8ae144c487008b6ed60de672",
+      "docs/support_failure_diagnostic_source_freeze_v1.json": "b1826a67c50a035d5ad0f5cb187da7f2391a4c3e63945441a5014579dd767ddb",
+      "docs/support_failure_diagnostic_activation_v1.json": "d000880de6be99dc4a4500a77c5027944a73f0274a79e53b4f0d6d8f231c89c5",
+      "results/support_failure_diagnostic_v1/manifest.json": "a2f8bada943150e4632e641bbcf6d3f572ecf5a9b9b5fa1f02cccca2925390cd",
+      "results/support_failure_diagnostic_v1/failure.txt": "28490dc9c8dad4f75baf618676766b6c72c02f867e7910f105bcc3075678f41a",
+      "tmp/support_failure_diagnostic_first.log": "c26a7b7cf48a3b80c80f7a54792dc1b4d45604aceee675465d621cb268a3585d"
+    }
+  }
+}

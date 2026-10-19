@@ -1,0 +1,8 @@
+{
+  "version": "support-failure-diagnostic-activation-v2",
+  "execution_ready": true,
+  "released_utc": "2026-10-19T09:51:46.253756+00:00",
+  "protocol_sha256": "6cb09f213fd1009d2f22640b5a85a240fc42d07c0f51fa0b5e647e066eaf8612",
+  "source_freeze_sha256": "8fe895a1628c4c3b9735a7993b457bbc481ccbe675fa18acbd311b20d8acf6c2",
+  "authorization": "Root authorizes saved-only diagnostic V2 after correcting metadata cohort mapping, retaining failedV1. No statistical/model definition or final changes."
+}

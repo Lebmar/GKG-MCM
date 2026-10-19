@@ -1,0 +1,146 @@
+{
+  "version": "technical-last-mile-completion-2026-10-19-v1",
+  "completed_utc": "2026-10-19T10:14:46.208097+00:00",
+  "status": "Completed additive technical diagnostics; ready for participant discussion. No paper or CMT submission.",
+  "model_version": "V2b unchanged",
+  "model_changed": false,
+  "new_fits": 0,
+  "new_parameter_selections": 0,
+  "new_final_evaluations": 0,
+  "final_validity": "Previously exposed nonblind final remains a material validation limitation. Added development evidence does not repair it.",
+  "development_scope": "Original1-120 once across five own-fit OOF folds; full120 resubstitution separately retained, never pooled as extra observations.",
+  "findings": {
+    "review_exposure": {
+      "guard_accounts": 109,
+      "no_guard_accounts": 11,
+      "higher_terminal_equity_n": 98,
+      "mean_guard_equity": 0.10608800118412609,
+      "mean_terminal_equity": 0.32496240837070905,
+      "post_guard_periods": 2457,
+      "original_account_periods": 3600
+    },
+    "static_reference_tradeoff": {
+      "main_OOF": {
+        "mean_log_growth": 0.029044014958991577,
+        "median_cagr": 0.028466916504451434,
+        "p10_cagr": 0.007613564618832003,
+        "mean_mdd": 0.19029881191469014,
+        "p90_mdd": 0.289787346311035,
+        "mean_nominal_fees": 0.7298545520588429,
+        "breach_count": 0,
+        "n": 120
+      },
+      "a0_5_annual_hypothetical_reference": {
+        "mean_log_growth": 0.026236791277188014,
+        "median_cagr": 0.026609358162647978,
+        "p10_cagr": 0.009121984994888699,
+        "mean_mdd": 0.1648222670391476,
+        "p90_mdd": 0.2603458077080695,
+        "mean_nominal_fees": 0.5744061688073427,
+        "breach_count": 0,
+        "n": 120
+      },
+      "interpretation": "Both empirical zero-events; lower-exposure annual reference has lower average/tail drawdown and lower growth. Eight references retained, no winner chosen or new admission certified."
+    },
+    "review_cost": {
+      "q0_0025": {
+        "mean_log_growth": 0.028968225738498544,
+        "median_cagr": 0.02838110719713116,
+        "p10_cagr": 0.0075294951941000665,
+        "mean_mdd": 0.1906659861494786,
+        "p90_mdd": 0.289787346311035,
+        "mean_nominal_fees": 1.0904582282434594,
+        "breach_count": 0,
+        "n": 120
+      },
+      "q0_01": {
+        "mean_log_growth": 0.028739713123427227,
+        "median_cagr": 0.02812242628087802,
+        "p10_cagr": 0.0072760593315146505,
+        "mean_mdd": 0.191817504492735,
+        "p90_mdd": 0.2911622180340918,
+        "mean_nominal_fees": 2.1722692567973088,
+        "breach_count": 0,
+        "n": 120
+      },
+      "interpretation": "Unknown one-off asset-proportional service-charge scenarios, not prices. No adviser benefit assumed. Preserve original pre-debit peak and include the added same-boundary fee event in scenario MDD."
+    },
+    "inflation_mechanism": {
+      "original_n": 120,
+      "BS_SS_same_event_ids": [
+        1,
+        5,
+        19,
+        32,
+        33,
+        36,
+        52,
+        60,
+        61,
+        71,
+        91,
+        94,
+        95,
+        98,
+        100,
+        102,
+        107,
+        109,
+        110,
+        112,
+        114
+      ],
+      "first_crossing_n": 21,
+      "prior_pending_n": 21,
+      "negative_real_bill_n": 21,
+      "directional_miss_n": 6,
+      "positive_nominal_asset_gain_n": 14,
+      "mean_annual_log_CPI_component": -0.01929508053041001,
+      "mean_annual_log_nominal_path_component": -0.0005705415219189006,
+      "mean_thirty_year_CPI_ratio": 1.7840062251257067,
+      "interpretation": "Saved-path cross valuation and accounting under a constructed inflation stress, not unique real-world causal attribution. First-crossing-only quantities condition on21 events."
+    },
+    "initial_support": "For fixed own-fit full targets and fee, calendar-year1 minimum exceeds initial real budget80 while pooled minimum is below it in all five OOF contexts. Joint support inclusion explains tighter refusal; this is not global portfolio impossibility.",
+    "parameter_roles": "gamma=.075 is a Q1 empirical training breach-frequency screen, alpha=.10 a normative service-frequency convention, rho=.5 the one-step headroom release fraction. None identifies customer psychological risk aversion."
+  },
+  "verification": {
+    "review_operation_independent_checks": 1357099,
+    "support_failure_independent_checks": 3410006,
+    "original_tracked_files_unchanged": 2834,
+    "isolated_replay_artifacts": 24,
+    "isolated_replay_raw_byte_equal_artifacts": 15,
+    "isolated_replay_gzip_mtime_only_artifacts": 9,
+    "isolated_replay_NPZ_fields_exact": 1575,
+    "isolated_replay_NPZ_scalars_exact": 1032600,
+    "standalone_figures_inspected": 4,
+    "browser_actual_widths": [
+      1440,
+      500
+    ],
+    "focused_test_runs": "11 operation +17 support V1 +19 support V2 (17 repeated logical cases plus2 new metadata regressions) +15 operation audit +9 support audit +9 isolated replay. These are focused runs, not a new complete-suite run."
+  },
+  "failed_attempt_retained": "results/support_failure_diagnostic_v1/; metadata filter mixed inner references. V2 exact outer-role filter and regression fixture corrected it without changing statistics or overwriting the failure.",
+  "artifacts_sha256": {
+    "docs/mitigation_main_model_registry.json": "49059e6e2ef5138a1d8edd284a3353d5c412d2f54f518010c3ddfdaa561c6603",
+    "docs/technical_evidence_closure_2026_10_19.json": "7e90b125e99f8a22e564e81dca033efa47d6fad00c63695bfe58284813a92e4c",
+    "results/review_operation_diagnostic_v1/manifest.json": "5996bf80d27b89b135c6c3887f33440e1356e4a691916aefb74d54a134dc380d",
+    "results/review_operation_diagnostic_v1/independent_audit.json": "5ecb8d888870d878552146856008914651fdedf8bca2c915749c2aa13127a535",
+    "results/support_failure_diagnostic_v2/manifest.json": "e42454d5902171385bd50feddec3a0beae9a7c9ecbf5610b1c3389e28d245aed",
+    "results/support_failure_diagnostic_v2/independent_audit.json": "4824553424575b21d2362f8e5838a6870653fd133f52f935194b081aed025378",
+    "results/technical_last_mile_reproduction_v1/manifest.json": "8034c1e1343396149c504d98c97c22c607efb1e838ba848ab9a1891bd4893a78",
+    "notebooks/technical_last_mile_2026_10_19.html": "c857552787045b856ae1b6c71861d08d46b8adb8968b0bd6ef2a11435e9ebea5",
+    "scripts/build_technical_last_mile_companion.py": "16a5959dcfd08a26dc72dd5e88cbe64498dd8a97028e8f19d45dcc7ceab7f525",
+    "docs/technical_last_mile_companion_independent_review_v1.json": "197d7b52d2e04aafed3e9bf343b55a2adcbc1e689e740d38d94eba39eecb649f",
+    "results/technical_last_mile_presentation_qa_v1/qa.json": "5eb6d087379ab6aab10ba8ec7681d4f0f827c629d50ab16b3e563c68f21710e1",
+    "results/technical_last_mile_integrity_v1/verification.json": "2afceb57c69616932b15a32da9d06b8952c7e6e83fd414ca26704fe3ea653877",
+    "submission/LAST_MILE_DIAGNOSTICS.md": "8463376ad5df555e71a783b1bd73bc9b3e9a5a3e2daceab6a2027530c4f19dc7",
+    "dist/Team87_Lebmar_Technical_Source_v2.zip": "78b710d75f9cba9497ac6059995ac874dfa30a949b06a8072088235cd3f2d4dc"
+  },
+  "remaining": [
+    "Participant discussion of the growth/risk/service tradeoff and the residual assumptions.",
+    "Write and check the English competition paper later as requested, with AI/source disclosure.",
+    "Assemble the final source/supplement package including the new diagnostic material; original compactV2 archive remains unchanged.",
+    "Leader uploads and saves report/source in CMT before the deadline."
+  ],
+  "stopping_judgment": "No further parameter search or new model family is warranted in this bounded stage. Long pending holds, unknown human intervention and previously exposed final data remain explicit scientific/operational limits."
+}

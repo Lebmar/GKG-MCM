@@ -1,0 +1,24 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "executable": "/Users/lebmar/Documents/ChatGPT/GKG\u6570\u6a21/.venv/bin/python",
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "module_origins": {
+    "diagnostics": [
+      "/Users/lebmar/Documents/ChatGPT/GKG\u6570\u6a21/results/technical_last_mile_reproduction_v1/workspaces/review_operation-20yy0hzb/research/diagnostics",
+      "/Users/lebmar/Documents/ChatGPT/GKG\u6570\u6a21/results/technical_last_mile_reproduction_v1/workspaces/review_operation-20yy0hzb/research/diagnostics"
+    ],
+    "safeinvest": [
+      "/Users/lebmar/Documents/ChatGPT/GKG\u6570\u6a21/results/technical_last_mile_reproduction_v1/workspaces/review_operation-20yy0hzb/src/safeinvest/__init__.py"
+    ],
+    "safeinvest.core": [
+      "/Users/lebmar/Documents/ChatGPT/GKG\u6570\u6a21/results/technical_last_mile_reproduction_v1/workspaces/review_operation-20yy0hzb/src/safeinvest/core.py"
+    ],
+    "diagnostics.review_operation": [
+      "/Users/lebmar/Documents/ChatGPT/GKG\u6570\u6a21/results/technical_last_mile_reproduction_v1/workspaces/review_operation-20yy0hzb/research/diagnostics/review_operation.py"
+    ]
+  },
+  "raw_loader_module_imported": false,
+  "raw_CSV_may_be_byte_hashed": true,
+  "new_main_model_runs": 0
+}

@@ -1,0 +1,2187 @@
+[
+  {
+    "cohort": "outer_OOF",
+    "policy": "state_budget_learner",
+    "original_n": 120,
+    "paired_financial_n": 120,
+    "corners": {
+      "BB": {
+        "breach_count": 0,
+        "mean_mdd": 0.19029881191469014,
+        "median_cagr": 0.028466916504451413
+      },
+      "BS": {
+        "breach_count": 21,
+        "mean_mdd": 0.2775161915736714,
+        "median_cagr": 0.00872074694705037
+      },
+      "SB": {
+        "breach_count": 0,
+        "mean_mdd": 0.18635290367977794,
+        "median_cagr": 0.02716038721329291
+      },
+      "SS": {
+        "breach_count": 21,
+        "mean_mdd": 0.2765478864526264,
+        "median_cagr": 0.007450638348143848
+      }
+    },
+    "ordered_MDD_means": {
+      "MDD_CPI_first": 0.08721737965898126,
+      "MDD_nominal_after_CPI": -0.0009683051210450526,
+      "MDD_nominal_first": -0.00394590823491225,
+      "MDD_CPI_after_nominal": 0.09019498277284847,
+      "MDD_interaction": 0.002977603113867197,
+      "MDD_total": 0.08624907453793622
+    },
+    "event_quadrants": [
+      {
+        "BB_breach": false,
+        "BS_breach": false,
+        "SB_breach": false,
+        "SS_breach": false,
+        "original_ids": [
+          9,
+          13,
+          18,
+          26,
+          31,
+          34,
+          42,
+          44,
+          50,
+          51,
+          65,
+          66,
+          69,
+          73,
+          77,
+          78,
+          79,
+          84,
+          101,
+          111,
+          113,
+          118,
+          3,
+          15,
+          27,
+          30,
+          35,
+          38,
+          40,
+          48,
+          53,
+          54,
+          59,
+          62,
+          74,
+          75,
+          76,
+          96,
+          99,
+          117,
+          120,
+          8,
+          10,
+          16,
+          20,
+          24,
+          28,
+          29,
+          46,
+          55,
+          57,
+          67,
+          68,
+          89,
+          93,
+          106,
+          108,
+          116,
+          2,
+          7,
+          12,
+          17,
+          23,
+          25,
+          39,
+          45,
+          47,
+          49,
+          58,
+          63,
+          64,
+          70,
+          81,
+          82,
+          83,
+          97,
+          103,
+          105,
+          115,
+          4,
+          6,
+          11,
+          14,
+          21,
+          22,
+          37,
+          41,
+          43,
+          56,
+          72,
+          80,
+          85,
+          86,
+          87,
+          88,
+          90,
+          92,
+          104,
+          119
+        ]
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": false,
+        "SB_breach": false,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": false,
+        "SB_breach": true,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": false,
+        "SB_breach": true,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": true,
+        "SB_breach": false,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": true,
+        "SB_breach": false,
+        "SS_breach": true,
+        "original_ids": [
+          1,
+          109,
+          33,
+          61,
+          102,
+          107,
+          112,
+          19,
+          32,
+          36,
+          71,
+          91,
+          98,
+          110,
+          94,
+          95,
+          114,
+          5,
+          52,
+          60,
+          100
+        ]
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": true,
+        "SB_breach": true,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": true,
+        "SB_breach": true,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": false,
+        "SB_breach": false,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": false,
+        "SB_breach": false,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": false,
+        "SB_breach": true,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": false,
+        "SB_breach": true,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": true,
+        "SB_breach": false,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": true,
+        "SB_breach": false,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": true,
+        "SB_breach": true,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": true,
+        "SB_breach": true,
+        "SS_breach": true,
+        "original_ids": []
+      }
+    ]
+  },
+  {
+    "cohort": "outer_OOF",
+    "policy": "same_target_B",
+    "original_n": 120,
+    "paired_financial_n": 120,
+    "corners": {
+      "BB": {
+        "breach_count": 9,
+        "mean_mdd": 0.24239075257790063,
+        "median_cagr": 0.04048831226972502
+      },
+      "BS": {
+        "breach_count": 29,
+        "mean_mdd": 0.30707652718121686,
+        "median_cagr": 0.02061330399593697
+      },
+      "SB": {
+        "breach_count": 9,
+        "mean_mdd": 0.24164398553215818,
+        "median_cagr": 0.040586432844931936
+      },
+      "SS": {
+        "breach_count": 29,
+        "mean_mdd": 0.3067902782010281,
+        "median_cagr": 0.020708825249599563
+      }
+    },
+    "ordered_MDD_means": {
+      "MDD_CPI_first": 0.06468577460331619,
+      "MDD_nominal_after_CPI": -0.0002862489801887062,
+      "MDD_nominal_first": -0.0007467670457424395,
+      "MDD_CPI_after_nominal": 0.06514629266886991,
+      "MDD_interaction": 0.0004605180655537333,
+      "MDD_total": 0.0643995256231275
+    },
+    "event_quadrants": [
+      {
+        "BB_breach": false,
+        "BS_breach": false,
+        "SB_breach": false,
+        "SS_breach": false,
+        "original_ids": [
+          1,
+          9,
+          13,
+          18,
+          26,
+          31,
+          34,
+          44,
+          50,
+          51,
+          65,
+          66,
+          69,
+          73,
+          77,
+          78,
+          79,
+          84,
+          101,
+          111,
+          113,
+          118,
+          3,
+          15,
+          27,
+          30,
+          40,
+          48,
+          53,
+          54,
+          59,
+          61,
+          74,
+          75,
+          76,
+          96,
+          99,
+          107,
+          117,
+          120,
+          8,
+          10,
+          16,
+          24,
+          28,
+          32,
+          36,
+          46,
+          55,
+          57,
+          67,
+          68,
+          89,
+          93,
+          108,
+          116,
+          2,
+          7,
+          12,
+          17,
+          23,
+          45,
+          47,
+          49,
+          64,
+          70,
+          81,
+          82,
+          97,
+          103,
+          105,
+          115,
+          4,
+          6,
+          11,
+          14,
+          21,
+          22,
+          37,
+          41,
+          43,
+          56,
+          72,
+          85,
+          86,
+          87,
+          88,
+          90,
+          92,
+          104,
+          119
+        ]
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": false,
+        "SB_breach": false,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": false,
+        "SB_breach": true,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": false,
+        "SB_breach": true,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": true,
+        "SB_breach": false,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": true,
+        "SB_breach": false,
+        "SS_breach": true,
+        "original_ids": [
+          42,
+          109,
+          33,
+          35,
+          62,
+          102,
+          112,
+          20,
+          71,
+          91,
+          106,
+          25,
+          39,
+          58,
+          83,
+          114,
+          52,
+          60,
+          80,
+          100
+        ]
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": true,
+        "SB_breach": true,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": true,
+        "SB_breach": true,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": false,
+        "SB_breach": false,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": false,
+        "SB_breach": false,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": false,
+        "SB_breach": true,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": false,
+        "SB_breach": true,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": true,
+        "SB_breach": false,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": true,
+        "SB_breach": false,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": true,
+        "SB_breach": true,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": true,
+        "SB_breach": true,
+        "SS_breach": true,
+        "original_ids": [
+          38,
+          19,
+          29,
+          98,
+          110,
+          63,
+          94,
+          95,
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "cohort": "outer_OOF",
+    "policy": "same_target_annual",
+    "original_n": 120,
+    "paired_financial_n": 120,
+    "corners": {
+      "BB": {
+        "breach_count": 9,
+        "mean_mdd": 0.24245874423348346,
+        "median_cagr": 0.039968314240992356
+      },
+      "BS": {
+        "breach_count": 29,
+        "mean_mdd": 0.30677336644665143,
+        "median_cagr": 0.019914623458283678
+      },
+      "SB": {
+        "breach_count": 9,
+        "mean_mdd": 0.24245874423348346,
+        "median_cagr": 0.039968314240992356
+      },
+      "SS": {
+        "breach_count": 29,
+        "mean_mdd": 0.30677336644665143,
+        "median_cagr": 0.019914623458283678
+      }
+    },
+    "ordered_MDD_means": {
+      "MDD_CPI_first": 0.06431462221316793,
+      "MDD_nominal_after_CPI": 0.0,
+      "MDD_nominal_first": 0.0,
+      "MDD_CPI_after_nominal": 0.06431462221316793,
+      "MDD_interaction": 0.0,
+      "MDD_total": 0.06431462221316793
+    },
+    "event_quadrants": [
+      {
+        "BB_breach": false,
+        "BS_breach": false,
+        "SB_breach": false,
+        "SS_breach": false,
+        "original_ids": [
+          1,
+          9,
+          13,
+          18,
+          26,
+          31,
+          34,
+          44,
+          50,
+          51,
+          65,
+          66,
+          69,
+          73,
+          77,
+          78,
+          79,
+          84,
+          101,
+          111,
+          113,
+          118,
+          3,
+          15,
+          27,
+          30,
+          40,
+          48,
+          53,
+          54,
+          59,
+          61,
+          74,
+          75,
+          76,
+          96,
+          99,
+          107,
+          117,
+          120,
+          8,
+          10,
+          16,
+          24,
+          28,
+          32,
+          36,
+          46,
+          55,
+          57,
+          67,
+          68,
+          89,
+          93,
+          108,
+          116,
+          2,
+          7,
+          12,
+          17,
+          23,
+          45,
+          47,
+          49,
+          64,
+          70,
+          81,
+          82,
+          97,
+          103,
+          105,
+          115,
+          4,
+          6,
+          11,
+          14,
+          21,
+          22,
+          37,
+          41,
+          43,
+          56,
+          72,
+          85,
+          86,
+          87,
+          88,
+          90,
+          92,
+          104,
+          119
+        ]
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": false,
+        "SB_breach": false,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": false,
+        "SB_breach": true,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": false,
+        "SB_breach": true,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": true,
+        "SB_breach": false,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": true,
+        "SB_breach": false,
+        "SS_breach": true,
+        "original_ids": [
+          42,
+          109,
+          33,
+          35,
+          62,
+          102,
+          112,
+          20,
+          71,
+          91,
+          106,
+          25,
+          39,
+          58,
+          83,
+          114,
+          52,
+          60,
+          80,
+          100
+        ]
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": true,
+        "SB_breach": true,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": true,
+        "SB_breach": true,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": false,
+        "SB_breach": false,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": false,
+        "SB_breach": false,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": false,
+        "SB_breach": true,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": false,
+        "SB_breach": true,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": true,
+        "SB_breach": false,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": true,
+        "SB_breach": false,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": true,
+        "SB_breach": true,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": true,
+        "SB_breach": true,
+        "SS_breach": true,
+        "original_ids": [
+          38,
+          19,
+          29,
+          98,
+          110,
+          63,
+          94,
+          95,
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "cohort": "outer_OOF",
+    "policy": "exact_thirds_annual",
+    "original_n": 120,
+    "paired_financial_n": 120,
+    "corners": {
+      "BB": {
+        "breach_count": 6,
+        "mean_mdd": 0.22018988187752112,
+        "median_cagr": 0.03576350931386815
+      },
+      "BS": {
+        "breach_count": 28,
+        "mean_mdd": 0.2882107679559482,
+        "median_cagr": 0.016087835620438487
+      },
+      "SB": {
+        "breach_count": 6,
+        "mean_mdd": 0.22018988187752112,
+        "median_cagr": 0.03576350931386815
+      },
+      "SS": {
+        "breach_count": 28,
+        "mean_mdd": 0.2882107679559482,
+        "median_cagr": 0.016087835620438487
+      }
+    },
+    "ordered_MDD_means": {
+      "MDD_CPI_first": 0.06802088607842713,
+      "MDD_nominal_after_CPI": 0.0,
+      "MDD_nominal_first": 0.0,
+      "MDD_CPI_after_nominal": 0.06802088607842713,
+      "MDD_interaction": 0.0,
+      "MDD_total": 0.06802088607842713
+    },
+    "event_quadrants": [
+      {
+        "BB_breach": false,
+        "BS_breach": false,
+        "SB_breach": false,
+        "SS_breach": false,
+        "original_ids": [
+          9,
+          13,
+          18,
+          26,
+          31,
+          34,
+          44,
+          50,
+          51,
+          65,
+          66,
+          69,
+          73,
+          77,
+          78,
+          79,
+          84,
+          101,
+          111,
+          113,
+          118,
+          3,
+          15,
+          27,
+          30,
+          40,
+          48,
+          53,
+          54,
+          59,
+          61,
+          74,
+          75,
+          76,
+          96,
+          99,
+          107,
+          117,
+          120,
+          8,
+          10,
+          16,
+          20,
+          24,
+          28,
+          32,
+          46,
+          55,
+          57,
+          67,
+          68,
+          89,
+          93,
+          108,
+          116,
+          2,
+          7,
+          12,
+          17,
+          23,
+          25,
+          45,
+          47,
+          49,
+          58,
+          64,
+          70,
+          81,
+          82,
+          97,
+          103,
+          105,
+          115,
+          4,
+          6,
+          11,
+          14,
+          21,
+          37,
+          41,
+          43,
+          56,
+          72,
+          80,
+          85,
+          86,
+          87,
+          88,
+          90,
+          92,
+          104,
+          119
+        ]
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": false,
+        "SB_breach": false,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": false,
+        "SB_breach": true,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": false,
+        "SB_breach": true,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": true,
+        "SB_breach": false,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": true,
+        "SB_breach": false,
+        "SS_breach": true,
+        "original_ids": [
+          1,
+          42,
+          109,
+          33,
+          35,
+          62,
+          102,
+          112,
+          36,
+          71,
+          98,
+          106,
+          39,
+          63,
+          83,
+          94,
+          95,
+          114,
+          22,
+          52,
+          60,
+          100
+        ]
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": true,
+        "SB_breach": true,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": true,
+        "SB_breach": true,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": false,
+        "SB_breach": false,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": false,
+        "SB_breach": false,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": false,
+        "SB_breach": true,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": false,
+        "SB_breach": true,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": true,
+        "SB_breach": false,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": true,
+        "SB_breach": false,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": true,
+        "SB_breach": true,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": true,
+        "SB_breach": true,
+        "SS_breach": true,
+        "original_ids": [
+          38,
+          19,
+          29,
+          91,
+          110,
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "cohort": "full_resubstitution",
+    "policy": "state_budget_learner",
+    "original_n": 120,
+    "paired_financial_n": 120,
+    "corners": {
+      "BB": {
+        "breach_count": 0,
+        "mean_mdd": 0.18455712628036233,
+        "median_cagr": 0.027495611690489186
+      },
+      "BS": {
+        "breach_count": 22,
+        "mean_mdd": 0.2750911583260656,
+        "median_cagr": 0.007786950373325052
+      },
+      "SB": {
+        "breach_count": 1,
+        "mean_mdd": 0.18314673447733984,
+        "median_cagr": 0.027035460607173153
+      },
+      "SS": {
+        "breach_count": 21,
+        "mean_mdd": 0.2744526816857197,
+        "median_cagr": 0.007355856438668122
+      }
+    },
+    "ordered_MDD_means": {
+      "MDD_CPI_first": 0.09053403204570332,
+      "MDD_nominal_after_CPI": -0.000638476640345978,
+      "MDD_nominal_first": -0.0014103918030224825,
+      "MDD_CPI_after_nominal": 0.09130594720837984,
+      "MDD_interaction": 0.0007719151626765045,
+      "MDD_total": 0.08989555540535735
+    },
+    "event_quadrants": [
+      {
+        "BB_breach": false,
+        "BS_breach": false,
+        "SB_breach": false,
+        "SS_breach": false,
+        "original_ids": [
+          2,
+          3,
+          4,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          34,
+          35,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          62,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          92,
+          93,
+          96,
+          97,
+          99,
+          101,
+          103,
+          104,
+          105,
+          106,
+          108,
+          111,
+          113,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120
+        ]
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": false,
+        "SB_breach": false,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": false,
+        "SB_breach": true,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": false,
+        "SB_breach": true,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": true,
+        "SB_breach": false,
+        "SS_breach": false,
+        "original_ids": [
+          71
+        ]
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": true,
+        "SB_breach": false,
+        "SS_breach": true,
+        "original_ids": [
+          1,
+          5,
+          19,
+          32,
+          33,
+          36,
+          52,
+          60,
+          61,
+          63,
+          91,
+          94,
+          95,
+          98,
+          100,
+          107,
+          109,
+          110,
+          112,
+          114
+        ]
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": true,
+        "SB_breach": true,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": true,
+        "SB_breach": true,
+        "SS_breach": true,
+        "original_ids": [
+          102
+        ]
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": false,
+        "SB_breach": false,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": false,
+        "SB_breach": false,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": false,
+        "SB_breach": true,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": false,
+        "SB_breach": true,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": true,
+        "SB_breach": false,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": true,
+        "SB_breach": false,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": true,
+        "SB_breach": true,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": true,
+        "SB_breach": true,
+        "SS_breach": true,
+        "original_ids": []
+      }
+    ]
+  },
+  {
+    "cohort": "full_resubstitution",
+    "policy": "same_target_B",
+    "original_n": 120,
+    "paired_financial_n": 120,
+    "corners": {
+      "BB": {
+        "breach_count": 9,
+        "mean_mdd": 0.24565032526177752,
+        "median_cagr": 0.040828511034425294
+      },
+      "BS": {
+        "breach_count": 27,
+        "mean_mdd": 0.30955488255238706,
+        "median_cagr": 0.021003252370391114
+      },
+      "SB": {
+        "breach_count": 10,
+        "mean_mdd": 0.24538397681682936,
+        "median_cagr": 0.041422337578768315
+      },
+      "SS": {
+        "breach_count": 27,
+        "mean_mdd": 0.3096649834300834,
+        "median_cagr": 0.02158563453913375
+      }
+    },
+    "ordered_MDD_means": {
+      "MDD_CPI_first": 0.06390455729060954,
+      "MDD_nominal_after_CPI": 0.00011010087769634062,
+      "MDD_nominal_first": -0.0002663484449481714,
+      "MDD_CPI_after_nominal": 0.06428100661325405,
+      "MDD_interaction": 0.000376449322644512,
+      "MDD_total": 0.06401465816830589
+    },
+    "event_quadrants": [
+      {
+        "BB_breach": false,
+        "BS_breach": false,
+        "SB_breach": false,
+        "SS_breach": false,
+        "original_ids": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          20,
+          21,
+          22,
+          23,
+          24,
+          26,
+          27,
+          28,
+          30,
+          31,
+          32,
+          34,
+          36,
+          37,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          53,
+          54,
+          55,
+          56,
+          57,
+          59,
+          61,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          81,
+          82,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          92,
+          93,
+          96,
+          97,
+          99,
+          101,
+          103,
+          104,
+          105,
+          107,
+          108,
+          111,
+          113,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120
+        ]
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": false,
+        "SB_breach": false,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": false,
+        "SB_breach": true,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": false,
+        "SB_breach": true,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": true,
+        "SB_breach": false,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": true,
+        "SB_breach": false,
+        "SS_breach": true,
+        "original_ids": [
+          25,
+          33,
+          35,
+          39,
+          52,
+          60,
+          62,
+          71,
+          80,
+          83,
+          91,
+          100,
+          102,
+          106,
+          109,
+          112,
+          114
+        ]
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": true,
+        "SB_breach": true,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": true,
+        "SB_breach": true,
+        "SS_breach": true,
+        "original_ids": [
+          58
+        ]
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": false,
+        "SB_breach": false,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": false,
+        "SB_breach": false,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": false,
+        "SB_breach": true,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": false,
+        "SB_breach": true,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": true,
+        "SB_breach": false,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": true,
+        "SB_breach": false,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": true,
+        "SB_breach": true,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": true,
+        "SB_breach": true,
+        "SS_breach": true,
+        "original_ids": [
+          5,
+          19,
+          29,
+          38,
+          63,
+          94,
+          95,
+          98,
+          110
+        ]
+      }
+    ]
+  },
+  {
+    "cohort": "full_resubstitution",
+    "policy": "same_target_annual",
+    "original_n": 120,
+    "paired_financial_n": 120,
+    "corners": {
+      "BB": {
+        "breach_count": 9,
+        "mean_mdd": 0.246226800727784,
+        "median_cagr": 0.04025153845091388
+      },
+      "BS": {
+        "breach_count": 27,
+        "mean_mdd": 0.30962594471319194,
+        "median_cagr": 0.020435397380950772
+      },
+      "SB": {
+        "breach_count": 9,
+        "mean_mdd": 0.246226800727784,
+        "median_cagr": 0.04025153845091388
+      },
+      "SS": {
+        "breach_count": 27,
+        "mean_mdd": 0.30962594471319194,
+        "median_cagr": 0.020435397380950772
+      }
+    },
+    "ordered_MDD_means": {
+      "MDD_CPI_first": 0.06339914398540795,
+      "MDD_nominal_after_CPI": 0.0,
+      "MDD_nominal_first": 0.0,
+      "MDD_CPI_after_nominal": 0.06339914398540795,
+      "MDD_interaction": 0.0,
+      "MDD_total": 0.06339914398540795
+    },
+    "event_quadrants": [
+      {
+        "BB_breach": false,
+        "BS_breach": false,
+        "SB_breach": false,
+        "SS_breach": false,
+        "original_ids": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          20,
+          21,
+          22,
+          23,
+          24,
+          26,
+          27,
+          28,
+          30,
+          31,
+          32,
+          34,
+          36,
+          37,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          53,
+          54,
+          55,
+          56,
+          57,
+          59,
+          61,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          81,
+          82,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          92,
+          93,
+          96,
+          97,
+          99,
+          101,
+          103,
+          104,
+          105,
+          107,
+          108,
+          111,
+          113,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120
+        ]
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": false,
+        "SB_breach": false,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": false,
+        "SB_breach": true,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": false,
+        "SB_breach": true,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": true,
+        "SB_breach": false,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": true,
+        "SB_breach": false,
+        "SS_breach": true,
+        "original_ids": [
+          25,
+          33,
+          35,
+          39,
+          52,
+          58,
+          60,
+          62,
+          71,
+          80,
+          83,
+          91,
+          100,
+          102,
+          106,
+          109,
+          112,
+          114
+        ]
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": true,
+        "SB_breach": true,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": true,
+        "SB_breach": true,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": false,
+        "SB_breach": false,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": false,
+        "SB_breach": false,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": false,
+        "SB_breach": true,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": false,
+        "SB_breach": true,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": true,
+        "SB_breach": false,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": true,
+        "SB_breach": false,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": true,
+        "SB_breach": true,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": true,
+        "SB_breach": true,
+        "SS_breach": true,
+        "original_ids": [
+          5,
+          19,
+          29,
+          38,
+          63,
+          94,
+          95,
+          98,
+          110
+        ]
+      }
+    ]
+  },
+  {
+    "cohort": "full_resubstitution",
+    "policy": "exact_thirds_annual",
+    "original_n": 120,
+    "paired_financial_n": 120,
+    "corners": {
+      "BB": {
+        "breach_count": 6,
+        "mean_mdd": 0.22018988187752112,
+        "median_cagr": 0.03576350931386815
+      },
+      "BS": {
+        "breach_count": 28,
+        "mean_mdd": 0.2882107679559482,
+        "median_cagr": 0.016087835620438487
+      },
+      "SB": {
+        "breach_count": 6,
+        "mean_mdd": 0.22018988187752112,
+        "median_cagr": 0.03576350931386815
+      },
+      "SS": {
+        "breach_count": 28,
+        "mean_mdd": 0.2882107679559482,
+        "median_cagr": 0.016087835620438487
+      }
+    },
+    "ordered_MDD_means": {
+      "MDD_CPI_first": 0.06802088607842713,
+      "MDD_nominal_after_CPI": 0.0,
+      "MDD_nominal_first": 0.0,
+      "MDD_CPI_after_nominal": 0.06802088607842713,
+      "MDD_interaction": 0.0,
+      "MDD_total": 0.06802088607842713
+    },
+    "event_quadrants": [
+      {
+        "BB_breach": false,
+        "BS_breach": false,
+        "SB_breach": false,
+        "SS_breach": false,
+        "original_ids": [
+          2,
+          3,
+          4,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          20,
+          21,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          30,
+          31,
+          32,
+          34,
+          37,
+          40,
+          41,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          61,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          92,
+          93,
+          96,
+          97,
+          99,
+          101,
+          103,
+          104,
+          105,
+          107,
+          108,
+          111,
+          113,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120
+        ]
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": false,
+        "SB_breach": false,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": false,
+        "SB_breach": true,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": false,
+        "SB_breach": true,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": true,
+        "SB_breach": false,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": true,
+        "SB_breach": false,
+        "SS_breach": true,
+        "original_ids": [
+          1,
+          22,
+          33,
+          35,
+          36,
+          39,
+          42,
+          52,
+          60,
+          62,
+          63,
+          71,
+          83,
+          94,
+          95,
+          98,
+          100,
+          102,
+          106,
+          109,
+          112,
+          114
+        ]
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": true,
+        "SB_breach": true,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": false,
+        "BS_breach": true,
+        "SB_breach": true,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": false,
+        "SB_breach": false,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": false,
+        "SB_breach": false,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": false,
+        "SB_breach": true,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": false,
+        "SB_breach": true,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": true,
+        "SB_breach": false,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": true,
+        "SB_breach": false,
+        "SS_breach": true,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": true,
+        "SB_breach": true,
+        "SS_breach": false,
+        "original_ids": []
+      },
+      {
+        "BB_breach": true,
+        "BS_breach": true,
+        "SB_breach": true,
+        "SS_breach": true,
+        "original_ids": [
+          5,
+          19,
+          29,
+          38,
+          91,
+          110
+        ]
+      }
+    ]
+  }
+]

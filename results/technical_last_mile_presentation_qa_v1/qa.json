@@ -1,0 +1,99 @@
+{
+  "status": "passed",
+  "completed_utc": "2026-10-19T10:03:44.453298+00:00",
+  "page_sha256": "c857552787045b856ae1b6c71861d08d46b8adb8968b0bd6ef2a11435e9ebea5",
+  "probe_sha256": "deb81acdac8374394400bb3f35250b42b2cd0cf5fe7e82fbe5b1e9e11ddae777",
+  "browser": "Local Google Chrome headless CLI, temporary separate profiles",
+  "scope": "First1600px viewport; standalone4PNGs separately inspected. Probe copy adds only a final metrics pre/script outside viewport; no claim every lower-page row screenshot inspected.",
+  "views": {
+    "wide": {
+      "innerWidth": 1440,
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "images": [
+        {
+          "complete": true,
+          "width": 3047
+        },
+        {
+          "complete": true,
+          "width": 2605
+        },
+        {
+          "complete": true,
+          "width": 3045
+        },
+        {
+          "complete": true,
+          "width": 2607
+        }
+      ],
+      "tables": [
+        {
+          "client": 1160,
+          "scroll": 1160
+        },
+        {
+          "client": 1160,
+          "scroll": 1160
+        },
+        {
+          "client": 1160,
+          "scroll": 1160
+        }
+      ],
+      "screenshot_sha256": "aecd12e1a9a7a98a808196930cad65214d47b5a021b5c1e7b2d21c8287c9f521"
+    },
+    "narrow": {
+      "innerWidth": 500,
+      "clientWidth": 500,
+      "scrollWidth": 500,
+      "images": [
+        {
+          "complete": true,
+          "width": 3047
+        },
+        {
+          "complete": true,
+          "width": 2605
+        },
+        {
+          "complete": true,
+          "width": 3045
+        },
+        {
+          "complete": true,
+          "width": 2607
+        }
+      ],
+      "tables": [
+        {
+          "client": 452,
+          "scroll": 918
+        },
+        {
+          "client": 452,
+          "scroll": 604
+        },
+        {
+          "client": 452,
+          "scroll": 514
+        }
+      ],
+      "screenshot_sha256": "50d66a80edba7b0a45a674e4ba8e37305e07ddba9ea999ee233a70ea8ec886c4"
+    }
+  },
+  "visual_inspected_utc": "2026-10-19T10:05:57.696497+00:00",
+  "actual_view_image": true,
+  "standalone_png_all4_inspected": true,
+  "local_links_checked": 15,
+  "external_resource_count": 0,
+  "wide_and_narrow_viewports_inspected": true,
+  "table_scrolling": "Narrow tables scroll inside their wrappers; document scrollWidth equals clientWidth. Scientific figure PNG/SVG can be opened at full size.",
+  "figure_sha256": {
+    "03_inflation_four_corners.png": "51f458a8361110d6bce844fcb5399aea3cc7b562034b59410609bf25a6ed2cc6",
+    "04_support_initial_slack.png": "d20469560d5c89fa418068ddff41a0f3d52c7de9c1c0081c8b696cdf6ec85955",
+    "02_fixed_reference_tradeoffs.png": "4b022ac7d049aa1780a1f95732ad691668b825cece0dcc2e6732a4aea3126537",
+    "01_review_exposure.png": "a145c359baf3a6fb963b3adce5f9400414b8a88df30f3a9d984c4692920ab4f2"
+  }
+}

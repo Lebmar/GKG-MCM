@@ -1,0 +1,133 @@
+{
+  "version": "review-operation-development-diagnostic-independent-source-review-v1",
+  "completed_utc": "2026-10-19T09:41:22.989448+00:00",
+  "status": "source_only_review_passed_no_material_blocker",
+  "review_scope": {
+    "source_and_protocol_only": true,
+    "tests_source_inspected": 11,
+    "tests_run_by_this_reviewer": 0,
+    "actual_diagnostic_run_by_this_reviewer": false,
+    "actual_saved_NPZ_or_financial_CSV_read": false,
+    "raw_market_or_final_values_read": false,
+    "new_policy_or_parameter_chosen": false,
+    "old_sources_or_results_modified": false
+  },
+  "reviewed_preexecution_protocol_sha256": "14e164558b357a5b738ca3c349daac0b026670d3c72e857e65c93e1c8fa68662",
+  "reviewed_source_freeze_sha256": "55d28b423494dbb884653e59d8acabe9b1e7c22f35851919d29b202bbe44fea8",
+  "execution_authorization": "This source review does not activate execution. Protocol/source snapshot remainprepared; root must separately create the exact release required by preflight before saved numerical parsing.",
+  "findings": [
+    {
+      "item": "Fixed all-eight exposure references",
+      "judgment": "No blocker",
+      "evidence": [
+        "research/diagnostics/review_operation.py:16-18,138-175",
+        "scripts/diagnose_review_operation.py:run low-exposure nested loops",
+        "docs/review_operation_diagnostic_protocol_v1.json:low_exposure"
+      ],
+      "reason": "All four declared fractions .25/.5/.75/1 cross hold/annual, with destination a*ownfold target+(1-a)*bill. All eight fullH paths and all main/B/annual/thirds pairings are retained; no ranking, bestwinner or new admission. Hypothetical references are explicitly not new suitable products or risk-matched alternatives."
+    },
+    {
+      "item": "Development identities and ownfold target",
+      "judgment": "No blocker",
+      "evidence": [
+        "scripts/diagnose_review_operation.py:preflight,input_closure,run",
+        "docs/review_operation_diagnostic_protocol_v1.json:inventory,information_set"
+      ],
+      "reason": "Frozen inventory is five24-ID outer-selected groups, unique1-120 once, each own96 disjoint training. Runner checks five groups and ID partition, uses g.target, obtains same-job same-ID references, and excludes full120 resubstitution. This reviewer checked inventorymetadata only, not actualfinancial arms."
+    },
+    {
+      "item": "Market reconstruction and exact transaction accounting",
+      "judgment": "No blocker",
+      "evidence": [
+        "research/diagnostics/review_operation.py:33-62,138-189",
+        "tests/test_review_operation.py:test_independent_annual_reconstructs_every_old_field_on_constructed_market"
+      ],
+      "reason": "Joint nominalgross=reference endholdings/posttradeholdings preserves asset/inflation alignment; positive thirds holds allow reconstruction. Main after-action realgross is crosschecked. Fixed references call the unchanged exactfee purchase solver once per prescribed action; hold charges inception only, annual restores eachperiod. a1annual must match every saved original reference field, shapes/dtypes exact, discrete exact and floats/NaN masks within prospectively fixed tolerances. This is an independent forward loop with shared frozen fee kernel, not a claim of a wholly independent numerical solver."
+    },
+    {
+      "item": "Review expense timing, proportions and original history",
+      "judgment": "No blocker; extra risk boundary must remain explicit",
+      "evidence": [
+        "research/diagnostics/review_operation.py:108-135",
+        "scripts/diagnose_review_operation.py:review fee loop",
+        "docs/review_operation_diagnostic_protocol_v1.json:review_cost"
+      ],
+      "reason": "For0<tau<H only, hypothetical expense q*V_tau is charged proportionally after trigger-year market endpointtau and before decisiontau+1. Pendinghold has zero later trades, so all later wealth scales by1-q. No between-asset transfer/purchase occurs in this expense debit, hence no extra kappa charge is invented. Original predebit P_tau and runningMDD_tau remain in history, even when endpointtau is a new peak. q0 copies originalwealth/peak/MDD bitexact; missing/final-yearguard has no withinH debit."
+    },
+    {
+      "item": "Expense-case MDD differs from old annual-only observation boundary",
+      "judgment": "Disclosed correctly, not a hidden main-model change",
+      "evidence": [
+        "research/diagnostics/review_operation.py:118-127",
+        "scripts/diagnose_review_operation.py:metrics.update(mdd=cost.running_mdd[-1],breach=cost.breach)",
+        "docs/review_operation_diagnostic_protocol_v1.json:review_cost/continuation,risk"
+      ],
+      "reason": "Post-debit wealth replaces the endpoint displayed in the sensitivity trace, while retained predebitpeak records an additional feeevent at that same boundary. Therefore maximum.accumulate(postdebit wealth) alone would lose a trigger-year peak. The runner correctly overrides financial() MDD andbreach with debit_review_cost runningMDD, so reported risk includes both the prior annualendpoint and immediate service-expense event. This is a declared hypothetical cost-inclusive boundary, not new daily observations, an intrayear original-model estimate or a revised frozen main metric."
+    },
+    {
+      "item": "Phase growth decomposition and nonadditive risk",
+      "judgment": "No blocker",
+      "evidence": [
+        "research/diagnostics/review_operation.py:65-105",
+        "docs/review_operation_diagnostic_protocol_v1.json:accounting"
+      ],
+      "reason": "Annual loggain=log(1-fee/V)+log(postweights dotrealgross), and real-dollar gain=minus realfee+sum post_i*(realgross_i-1)/CPI_t. Before/guard/after/no-guard partition every originalyear, include emptyphases, and sum unannualized loggrowth and fees, not CAGRs. Phase means use their period denominator; whole-cohort totals use account-period counts. Original-peak currentDD and runningMDD start/end remain descriptive; segment maxima are not added or called causal contributions."
+    },
+    {
+      "item": "Review-cost break-even",
+      "judgment": "No blocker under absorbinghold assumption",
+      "evidence": [
+        "research/diagnostics/review_operation.py:130-135",
+        "docs/review_operation_diagnostic_protocol_v1.json:review_cost/break_even"
+      ],
+      "reason": "Same-ID terminalqcrit=1-Rref_H/Rmain_H follows exact proportional continuation under no futuretrade. Max nominalcost=qcrit*V_tau only for applicable and nonnegativecapacity. Negative signedcapacity is retained and positivecapacity isNULL, never advertised as affordable review. Threshold is a terminal-growth algebra comparison, not a customer value estimate or human-service benefit."
+    },
+    {
+      "item": "Preparse gate and failed attempt integrity",
+      "judgment": "No blocker",
+      "evidence": [
+        "scripts/diagnose_review_operation.py:input_closure,preflight,run",
+        "tests/test_review_operation.py:test_missing_activation_blocks_npz_before_attempt_creation"
+      ],
+      "reason": "Exact sourcefreeze/protocol and independentaudit parent/complete originaloutputs are byteverified before np.load. Preparation protocol must remainreadyFalse/allowfinalFalse; separate releaseTrue binds exact protocol+freeze. Root only then parses the frozen developmentarchive. Source/input hashes and activation digests rechecked at end. Fresh output refused ifexists; any in-runfailure preserves manifest/traceback/artifacts and no automaticretry. No rawloader, learner, fitting or finalsourcearray path exists."
+    }
+  ],
+  "expected_scope_counts_from_design": {
+    "original_accounts": 120,
+    "annual_rows": 3600,
+    "phase_rows": 480,
+    "review_cost_rows": 600,
+    "review_break_even_rows": 360,
+    "static_references": 8,
+    "static_account_rows": 960,
+    "paired_comparisons": 32,
+    "paired_rows": 3840,
+    "actual_counts_not_observed_in_this_review": true
+  },
+  "interpretation_limits": [
+    "This late exploratory saved-development diagnostic cannot become independent confirmation or tune the frozen model from favorable references.",
+    "Expensefractions and endpoint timing are hypothetical sensitivity inputs, not measured advisory fees. No response SLA, human decision, service restart or additional human benefit is modeled.",
+    "The eight fixed lower-exposure references are not certified suitable replacements; include all of them without selecting a winner.",
+    "Growth/fees admit additive accounting identities; MDD and the effect of pending are path-dependent and are not uniquely causal decompositions.",
+    "Cost-case boundary retains pre-debit originalpeak plus immediate feeevent; distinguish its risk measurement from original annualendpoint-only results.",
+    "No numerical output, new data or model execution was reviewed here; actual identities and rowcounts remain for later execution/audit."
+  ],
+  "source_sha256": {
+    "research/diagnostics/review_operation.py": "f7a473b02fb4f4410a306fdc9abb5a78b6ede80084d3b7c942b6ffcc463c4394",
+    "scripts/diagnose_review_operation.py": "bd191dcffa561834089c9415cd981b1cdb06655210c6d6785f9aa184fb699d8b",
+    "tests/test_review_operation.py": "c2a1d660242694fc3e7ec234a86727f4f2754669548892f7bf01e2d33253ae9f",
+    "docs/review_operation_diagnostic_protocol_v1.json": "14e164558b357a5b738ca3c349daac0b026670d3c72e857e65c93e1c8fa68662",
+    "docs/review_operation_diagnostic_source_freeze_v1.json": "55d28b423494dbb884653e59d8acabe9b1e7c22f35851919d29b202bbe44fea8",
+    "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a",
+    "src/safeinvest/__init__.py": "dcef1e2e1f0f7cd5426988f0f27408eebb9ded3fb32c961f8f23e2edfb6e4ad2"
+  },
+  "sources_unchanged_at_end": {
+    "research/diagnostics/review_operation.py": "f7a473b02fb4f4410a306fdc9abb5a78b6ede80084d3b7c942b6ffcc463c4394",
+    "scripts/diagnose_review_operation.py": "bd191dcffa561834089c9415cd981b1cdb06655210c6d6785f9aa184fb699d8b",
+    "tests/test_review_operation.py": "c2a1d660242694fc3e7ec234a86727f4f2754669548892f7bf01e2d33253ae9f",
+    "docs/review_operation_diagnostic_protocol_v1.json": "14e164558b357a5b738ca3c349daac0b026670d3c72e857e65c93e1c8fa68662",
+    "docs/review_operation_diagnostic_source_freeze_v1.json": "55d28b423494dbb884653e59d8acabe9b1e7c22f35851919d29b202bbe44fea8",
+    "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a",
+    "src/safeinvest/__init__.py": "dcef1e2e1f0f7cd5426988f0f27408eebb9ded3fb32c961f8f23e2edfb6e4ad2"
+  }
+}

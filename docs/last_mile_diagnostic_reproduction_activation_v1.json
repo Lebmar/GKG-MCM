@@ -1,0 +1,7 @@
+{
+  "version": "last-mile-diagnostic-reproduction-activation-v1",
+  "execution_ready": true,
+  "released_utc": "2026-10-19T10:12:12.766128+00:00",
+  "protocol_sha256": "33b92e0a0f0cd978e4e8be7d830f404eb3ef57c153e4df15aa2bfa8eef18820c",
+  "source_freeze_sha256": "09028060937183935cb919b44d60cd64e247522cd2ee1e76a23013d27ca6ff28"
+}

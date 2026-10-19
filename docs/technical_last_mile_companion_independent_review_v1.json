@@ -1,0 +1,224 @@
+{
+  "version": "technical-last-mile-companion-independent-numeric-wording-review-v1",
+  "completed_utc": "2026-10-19T10:04:45.298850+00:00",
+  "status": "passed_after_one_wording_correction",
+  "reviewed_builder": {
+    "path": "scripts/build_technical_last_mile_companion.py",
+    "sha256": "16a5959dcfd08a26dc72dd5e88cbe64498dd8a97028e8f19d45dcc7ceab7f525"
+  },
+  "reviewed_page": {
+    "path": "notebooks/technical_last_mile_2026_10_19.html",
+    "sha256": "c857552787045b856ae1b6c71861d08d46b8adb8968b0bd6ef2a11435e9ebea5"
+  },
+  "reviewed_build_manifest": {
+    "path": "notebooks/technical_last_mile_2026_10_19_assets/build_manifest.json",
+    "sha256": "f1aaba93b143fe46d987e5b6d221d4632f1197da74e03618435c15be2ea03fd4"
+  },
+  "scope": {
+    "existing_development_results_only": true,
+    "original_OOF_ids": "1-120 once, five ownfold targets/selections",
+    "new_models_or_simulations": 0,
+    "new_fits_or_selections": 0,
+    "final_market_values_read": false,
+    "whole_numeric_audits_repeated": false,
+    "HTML_tables_parsed_and_checked": true,
+    "browser_rendering_performed_by_this_reviewer": false,
+    "PNG_visual_review_performed_by_this_reviewer": false,
+    "root_handles_current_visual_and_browser_QA": true,
+    "old_report_README_ZIP_modified_by_this_reviewer": false
+  },
+  "initial_snapshot_reviewed_then_corrected": {
+    "builder_sha256": "a74cbb8dcfd605384753f4cb1bd4c04f7796de0fcdcfcabe35a0f93b23447a90",
+    "page_sha256": "e3e54486a9fb1dc54470976ad95960fc822a24f129380af3c54d63b255cab579",
+    "historical_hashes_are_not_requirements_on_current_paths": true
+  },
+  "resolved_finding": {
+    "problem": "Initial text/axis called the post-decision holdings for all109 referredaccounts post-protective-trade holdings. Only108 had a trade; scenario5 held.",
+    "resolution": "Root changed axis and body to post-referral-decision, and body states108protectivetrades+1hold. This reviewer did not alter builder/page.",
+    "current_version_verified": true,
+    "model_or_numeric_change": false
+  },
+  "checks": [
+    {
+      "item": "Twelve complete fixed references and units",
+      "status": "passed",
+      "evidence": [
+        "notebooks/technical_last_mile_2026_10_19_assets/all12_reference_metrics.csv",
+        "results/review_operation_diagnostic_v1/independent_audit.json"
+      ],
+      "checked": "12rows x7 numericalfields (84cells) match the independently reconstructed17summaries; all8static references and4original strategies retained, exact120IDs perpolicy. All12HTML rows/percent and4decimal fee formatting match CSV. S1..S8 map in sorteddeclaredpolicy order; A andS7 same physicalpolicy, omitted duplicatepoint only but both table/CSV rows retained.",
+      "interpretation": "CVaR90 is meanworst10% of fullH MDD, not a percentile or growthtail. Meanannual loggrowth differs from medianCAGR. Fees are cumulative undiscounted nominalunits for initial100, not an annualfee percentage. No winner/admission or strict riskmatching inferred."
+    },
+    {
+      "item": "Paired exposure versus phase-average exposure",
+      "status": "passed_after_wording_fix",
+      "evidence": [
+        "notebooks/technical_last_mile_2026_10_19_assets/01_review_exposure_data.csv",
+        "notebooks/technical_last_mile_2026_10_19_assets/phase_exposure_source.csv",
+        "notebooks/technical_last_mile_2026_10_19_assets/exposure_interpretation.json",
+        "results/review_operation_diagnostic_v1/annual_phases.csv.gz",
+        "results/review_operation_diagnostic_v1/traces.npz"
+      ],
+      "checked": "All120exposureCSV IDs checked against audited sourcearrays;109guardaccounts paired post-decision share→originalterminal share: means.10608800118412609→.32496240837070905,98higher,11noguard. All4phase counts andweights match source annualrows;2457postguard/3600total periods. Guard109rows have108trades and1holdID5.",
+      "interpretation": "10.61%→32.50% is a withinaccount109-pair comparison, distinct from path-year phase means (e.g.postguard about21.70%). Neither is unique causal attribution or evidence that humanreview/returns occurred."
+    },
+    {
+      "item": "Five unknown review expense scenarios",
+      "status": "passed",
+      "evidence": [
+        "notebooks/technical_last_mile_2026_10_19_assets/all5_review_cost_summary.csv",
+        "notebooks/technical_last_mile_2026_10_19_assets/fee_accounting_thresholds.json",
+        "results/review_operation_diagnostic_v1/independent_audit.json"
+      ],
+      "checked": "All5rows x9 relevant numericfields agree with independent audit; q.0025 mean totalnominalfee1.0904582282434594 versus same-targetannual1.0917790292420717. All3 averagefee-equalizing qthresholds independently recomputed from meanunknownserviceexpense capacity across original120IDs.",
+      "interpretation": "Expense q is hypothetical once-per-applicablereferral currentassets proportion, not a measuredquote or riskbenefit price. Retain pre-debit originalpeak plus immediateexpense observation at the same annualboundary; this riskbasis difference from old annualendpoint-only results is expressly disclosed. Terminalvalue break-even is distinct from cumulativefee-accounting comparison."
+    },
+    {
+      "item": "Inflation four corners and selected first-crossing quantities",
+      "status": "passed",
+      "evidence": [
+        "notebooks/technical_last_mile_2026_10_19_assets/03_inflation_four_corners_data.csv",
+        "notebooks/technical_last_mile_2026_10_19_assets/inflation_all120_path_source.csv",
+        "notebooks/technical_last_mile_2026_10_19_assets/inflation_first_crossings_source.csv",
+        "notebooks/technical_last_mile_2026_10_19_assets/inflation_mechanism_interpretation.json",
+        "notebooks/technical_last_mile_2026_10_19_assets/inflation_log_components_source.csv",
+        "results/support_failure_diagnostic_v2/inflation_four_corner_paths.csv.gz",
+        "results/support_failure_diagnostic_v2/directional_support_periods.csv.gz",
+        "results/support_failure_diagnostic_v2/independent_audit.json"
+      ],
+      "checked": "All120mainOOF fourcorner IDs retained. Fourcorner table means/median/events and itsHTML formatting match source. BS andSS share exactly21eventIDs. All21firstcrossing rows are priorpending andnegative realbill;6directionalmisses and14positive nominalassetgains verified. Annualizedlog components -.01929508053041001(CPI) and-.0005705415219189006(nominalpathfeedback) agree with exactterminalidentity; arithmetic mean30-yearCPIratio1.7840062251257067 checked.",
+      "interpretation": "Crosscorner valuations are not executable strategies. Fulloriginalpeak/MDD recomputed percorner; MDD does not have unique order-independent causalshares. Nominalpath feedback includesactions/fees/holdings. Counts6/21 and14/21 condition on firstcrossing events;15non-directional-miss observations do not prove jointsupport membership, anddirectionalmiss frequency is not probabilitycoverage. Page explicitly retains directional-vs-joint and noncausal boundaries."
+    },
+    {
+      "item": "Initial support comparison",
+      "status": "passed",
+      "evidence": [
+        "notebooks/technical_last_mile_2026_10_19_assets/04_support_initial_slack_data.csv",
+        "results/support_failure_diagnostic_v2/initial_support_contexts.csv.gz"
+      ],
+      "checked": "All5base outerfold initialslack rows match exactsource fields; calendar/pool use identical ownfoldtarget, initialfee andrho. No fullrefit result pooled into page plots.",
+      "interpretation": "Calendar year1 subset of alltrainingyears makes directional pooledminimum no greater. Fixedtarget refusal is not a claim of fullsimplex inability or universally unsafe bills."
+    },
+    {
+      "item": "Parameters, suitability and validation boundaries",
+      "status": "passed",
+      "evidence": [
+        "notebooks/technical_last_mile_2026_10_19.html",
+        "docs/technical_evidence_closure_2026_10_19.json"
+      ],
+      "checked": "Gamma.075 explicitly called Q1trainingempiricalexceedance screen, alpha.10 empiricalservice convention, rho.5 one-step headroomrelease. Numericliquidityfloors are not identifiedcash liabilities. A/DReview is explicitly allowed; oldfinalexposure and longpending limits stated.",
+      "interpretation": "The page makes no claim of newblind evaluation, customerpsychological identification, future10%certificate, continuous30-year autonomy, certifiednewproduct or externalhumanpeerreview."
+    }
+  ],
+  "source_and_artifact_sha256_at_start": {
+    "results/review_operation_diagnostic_v1/traces.npz": "7c0138154a162c45ecfc54b2eba29b7001072501e9406aa9063490a7fc2fd918",
+    "results/review_operation_diagnostic_v1/annual_reproduction_checks.json": "30bf47c92588e20ed75021123b9f24b62161abeda55890e189ee72219a5692f0",
+    "results/review_operation_diagnostic_v1/financial_summary.csv.gz": "f14c85d5457b73d340b73b20f77525907bbfea690d1e681be1d00f9197d16976",
+    "results/review_operation_diagnostic_v1/low_exposure_paths.csv.gz": "b3f0ab0ff8745317d77fbaf93bbdd06dd38e4effca04f9fc7b7c0bbfa21d04a3",
+    "results/review_operation_diagnostic_v1/account_phases.csv.gz": "01462e795eb3b649a00294e9dd978026c3c95070e2c3ed541936bd45d4dc56fe",
+    "results/review_operation_diagnostic_v1/low_exposure_paired_paths.csv.gz": "d000b8d628ff132b8d2df065314b4eee131de35127538f4d35c20133ef46f75a",
+    "results/review_operation_diagnostic_v1/operation_summary.json": "88d786a116b47d244292e8ce02fd818ca1a282941a724b461d561221ad6c89ef",
+    "results/review_operation_diagnostic_v1/review_cost_break_even.csv.gz": "311c871007825a364d51d713669dd108a54b33a77218be025b11a60726745bc5",
+    "results/review_operation_diagnostic_v1/baseline_paths.csv.gz": "6d9ef2970d8ed673a5a0f5febdb3fd75e646d217953fd2c19225baded342eb67",
+    "results/review_operation_diagnostic_v1/original_accounts.csv.gz": "6c3b521ddd2a930889aae0e9d19cbcacdd4b99fb8b42dcb99426c2209722fdff",
+    "results/review_operation_diagnostic_v1/annual_phases.csv.gz": "a89ef78d756be65929f81be2aa722bcf377093c6f1cceb3743ea7cfeb43af579",
+    "results/review_operation_diagnostic_v1/trace_groups.json": "ed9bf0da2918ca34b7b2efe7b62161d7985e9b48708d50d76238815c872148e6",
+    "results/review_operation_diagnostic_v1/low_exposure_paired_summary.json": "17deb3f6fa5c3215e56350e3ad83f0e2231fb397af3700fb96c8dc87a7c2d061",
+    "results/review_operation_diagnostic_v1/review_cost_paths.csv.gz": "9255d7c9ab0be5294483ad88b3be8098a7b8d952bf3a91fa8b2ae9a02558630e",
+    "results/review_operation_diagnostic_v1/manifest.json": "5996bf80d27b89b135c6c3887f33440e1356e4a691916aefb74d54a134dc380d",
+    "results/review_operation_diagnostic_v1/independent_audit.json": "5ecb8d888870d878552146856008914651fdedf8bca2c915749c2aa13127a535",
+    "results/support_failure_diagnostic_v2/inflation_four_corner_paths.csv.gz": "865bf19709cdb6cffb1f09af51a4fb9b508fd88f931d459cbea784ddd177bc62",
+    "results/support_failure_diagnostic_v2/directional_support_periods.csv.gz": "085f3c4db3c0f646541c0058f459c0d0b3d041b776f0602ad99c82308a28ab73",
+    "results/support_failure_diagnostic_v2/initial_support_by_year.csv.gz": "94a91077aec608ce8f6c514a127f8ff4a468854cbdbf448fca7d7508f78a4a32",
+    "results/support_failure_diagnostic_v2/checks.json": "469d67311802bb7a930f281ac7e8ac66087e2f035ae1eb14d970f8918f9eaa60",
+    "results/support_failure_diagnostic_v2/directional_support_summary.json": "f050480657ac2b91a08c347474ccaeffe5aed47998571987987e86a48df7d105",
+    "results/support_failure_diagnostic_v2/initial_support_contexts.csv.gz": "d286d186fc4b1c11e5cf0e2d6d4993d482a734c0265ac6ff5af7faffcac8a794",
+    "results/support_failure_diagnostic_v2/inflation_four_corner_summary.json": "404f4d961e7338a6be828fde06533a349b818f1a51bef79fc76d1c063e2e1875",
+    "results/support_failure_diagnostic_v2/path_inventory.csv.gz": "736735cfdc1cdd78221ea904577c2d0ea82dfe5f41cca6823aed3b9b6ecf4b03",
+    "results/support_failure_diagnostic_v2/initial_support_members.csv.gz": "2e430eb4214fd6da457920f6caef91c942f001d694981a2e2e74a035b2951c01",
+    "results/support_failure_diagnostic_v2/inflation_four_corner_endpoints.csv.gz": "df88b8bf18aaef505ef8a752229ce81319355e5745a605a8e227375b1b46515c",
+    "results/support_failure_diagnostic_v2/manifest.json": "e42454d5902171385bd50feddec3a0beae9a7c9ecbf5610b1c3389e28d245aed",
+    "results/support_failure_diagnostic_v2/independent_audit.json": "4824553424575b21d2362f8e5838a6870653fd133f52f935194b081aed025378",
+    "docs/technical_evidence_closure_2026_10_19.json": "7e90b125e99f8a22e564e81dca033efa47d6fad00c63695bfe58284813a92e4c",
+    "notebooks/technical_last_mile_2026_10_19_assets/01_review_exposure_data.csv": "ce5496ef44a5fca64e074001d1af5c59c8c7d426f1b913e2f4eccefcf8bffc4d",
+    "notebooks/technical_last_mile_2026_10_19_assets/03_inflation_four_corners.png": "51f458a8361110d6bce844fcb5399aea3cc7b562034b59410609bf25a6ed2cc6",
+    "notebooks/technical_last_mile_2026_10_19_assets/exposure_interpretation.json": "2ba27561e4ec81a32e884c4e88bf5d82a8db2fde2ad1d41e4bdec960bcf34d29",
+    "notebooks/technical_last_mile_2026_10_19_assets/04_support_initial_slack.svg": "9ceac02d939ac772789d31a99c1be5b3195728e41102513bcdf23c2cf5694e64",
+    "notebooks/technical_last_mile_2026_10_19_assets/inflation_mechanism_interpretation.json": "762ecbef4c00aff35a266c5968059f9e7ec701981fee37a5ceb0658b34d04829",
+    "notebooks/technical_last_mile_2026_10_19_assets/04_support_initial_slack.png": "d20469560d5c89fa418068ddff41a0f3d52c7de9c1c0081c8b696cdf6ec85955",
+    "notebooks/technical_last_mile_2026_10_19_assets/02_fixed_reference_tradeoffs_data.csv": "a0b94c5c9960c4f2d50fa9f01616dd1cb7c5ff9b0d74e208021bee1110dc3f8b",
+    "notebooks/technical_last_mile_2026_10_19_assets/phase_exposure_source.csv": "83e72102bf1c51bf59547187c8122bb978aab0a7833ef5eadd46c575d67cf7a2",
+    "notebooks/technical_last_mile_2026_10_19_assets/03_inflation_four_corners.svg": "d4694e845d7cee99c75acb1399c2c2b646af896d4a75b61681ddf08f35fec7ce",
+    "notebooks/technical_last_mile_2026_10_19_assets/03_inflation_four_corners_data.csv": "f877aadafabbe59dee33cd9e341e542874fd6bcbea86aeb23445b3dbcf5663dc",
+    "notebooks/technical_last_mile_2026_10_19_assets/01_review_exposure.svg": "41ade0ed694706e2017ea32d8ef250f870a02e9a1fb706e9ff333940282fd208",
+    "notebooks/technical_last_mile_2026_10_19_assets/04_support_initial_slack_data.csv": "fe210ef22359c0163e5f8123236b3b473ce70db211ccad632cbf1db11223df47",
+    "notebooks/technical_last_mile_2026_10_19_assets/all5_review_cost_summary.csv": "efca80c5c45c819958259269eb67fa8c5b1ed18954c7839faa6bfac4f39c3a5d",
+    "notebooks/technical_last_mile_2026_10_19_assets/inflation_all120_path_source.csv": "a3be702e34cab9b81e5a349ff4c908e5a4612297064083258707eb274ee4ed57",
+    "notebooks/technical_last_mile_2026_10_19_assets/all12_reference_metrics.csv": "a0b94c5c9960c4f2d50fa9f01616dd1cb7c5ff9b0d74e208021bee1110dc3f8b",
+    "notebooks/technical_last_mile_2026_10_19_assets/02_fixed_reference_tradeoffs.svg": "d6e7426ed6d3d7f2993614dcfa2cd6158598468816ad7fa88e7bf9cceb802fd6",
+    "notebooks/technical_last_mile_2026_10_19_assets/inflation_first_crossings_source.csv": "c12d038e474a80631a70f33ce57e94ec7a3d4c3ec9e16a1c084b41e4f0ef2409",
+    "notebooks/technical_last_mile_2026_10_19_assets/02_fixed_reference_tradeoffs.png": "4b022ac7d049aa1780a1f95732ad691668b825cece0dcc2e6732a4aea3126537",
+    "notebooks/technical_last_mile_2026_10_19_assets/fee_accounting_thresholds.json": "219c7594c0a7d8caf0f03de3d31cebef8deb36a61b1f80dab105476ab9efc6c8",
+    "notebooks/technical_last_mile_2026_10_19_assets/inflation_log_components_source.csv": "01c4b2316b0617bf7cd9ce8762208a6de6b4e787fcc169335ccd1ba5a9acc4e3",
+    "notebooks/technical_last_mile_2026_10_19_assets/01_review_exposure.png": "a145c359baf3a6fb963b3adce5f9400414b8a88df30f3a9d984c4692920ab4f2",
+    "scripts/build_technical_last_mile_companion.py": "16a5959dcfd08a26dc72dd5e88cbe64498dd8a97028e8f19d45dcc7ceab7f525",
+    "notebooks/technical_last_mile_2026_10_19.html": "c857552787045b856ae1b6c71861d08d46b8adb8968b0bd6ef2a11435e9ebea5",
+    "notebooks/technical_last_mile_2026_10_19_assets/build_manifest.json": "f1aaba93b143fe46d987e5b6d221d4632f1197da74e03618435c15be2ea03fd4"
+  },
+  "source_and_artifact_sha256_at_end": {
+    "results/review_operation_diagnostic_v1/traces.npz": "7c0138154a162c45ecfc54b2eba29b7001072501e9406aa9063490a7fc2fd918",
+    "results/review_operation_diagnostic_v1/annual_reproduction_checks.json": "30bf47c92588e20ed75021123b9f24b62161abeda55890e189ee72219a5692f0",
+    "results/review_operation_diagnostic_v1/financial_summary.csv.gz": "f14c85d5457b73d340b73b20f77525907bbfea690d1e681be1d00f9197d16976",
+    "results/review_operation_diagnostic_v1/low_exposure_paths.csv.gz": "b3f0ab0ff8745317d77fbaf93bbdd06dd38e4effca04f9fc7b7c0bbfa21d04a3",
+    "results/review_operation_diagnostic_v1/account_phases.csv.gz": "01462e795eb3b649a00294e9dd978026c3c95070e2c3ed541936bd45d4dc56fe",
+    "results/review_operation_diagnostic_v1/low_exposure_paired_paths.csv.gz": "d000b8d628ff132b8d2df065314b4eee131de35127538f4d35c20133ef46f75a",
+    "results/review_operation_diagnostic_v1/operation_summary.json": "88d786a116b47d244292e8ce02fd818ca1a282941a724b461d561221ad6c89ef",
+    "results/review_operation_diagnostic_v1/review_cost_break_even.csv.gz": "311c871007825a364d51d713669dd108a54b33a77218be025b11a60726745bc5",
+    "results/review_operation_diagnostic_v1/baseline_paths.csv.gz": "6d9ef2970d8ed673a5a0f5febdb3fd75e646d217953fd2c19225baded342eb67",
+    "results/review_operation_diagnostic_v1/original_accounts.csv.gz": "6c3b521ddd2a930889aae0e9d19cbcacdd4b99fb8b42dcb99426c2209722fdff",
+    "results/review_operation_diagnostic_v1/annual_phases.csv.gz": "a89ef78d756be65929f81be2aa722bcf377093c6f1cceb3743ea7cfeb43af579",
+    "results/review_operation_diagnostic_v1/trace_groups.json": "ed9bf0da2918ca34b7b2efe7b62161d7985e9b48708d50d76238815c872148e6",
+    "results/review_operation_diagnostic_v1/low_exposure_paired_summary.json": "17deb3f6fa5c3215e56350e3ad83f0e2231fb397af3700fb96c8dc87a7c2d061",
+    "results/review_operation_diagnostic_v1/review_cost_paths.csv.gz": "9255d7c9ab0be5294483ad88b3be8098a7b8d952bf3a91fa8b2ae9a02558630e",
+    "results/review_operation_diagnostic_v1/manifest.json": "5996bf80d27b89b135c6c3887f33440e1356e4a691916aefb74d54a134dc380d",
+    "results/review_operation_diagnostic_v1/independent_audit.json": "5ecb8d888870d878552146856008914651fdedf8bca2c915749c2aa13127a535",
+    "results/support_failure_diagnostic_v2/inflation_four_corner_paths.csv.gz": "865bf19709cdb6cffb1f09af51a4fb9b508fd88f931d459cbea784ddd177bc62",
+    "results/support_failure_diagnostic_v2/directional_support_periods.csv.gz": "085f3c4db3c0f646541c0058f459c0d0b3d041b776f0602ad99c82308a28ab73",
+    "results/support_failure_diagnostic_v2/initial_support_by_year.csv.gz": "94a91077aec608ce8f6c514a127f8ff4a468854cbdbf448fca7d7508f78a4a32",
+    "results/support_failure_diagnostic_v2/checks.json": "469d67311802bb7a930f281ac7e8ac66087e2f035ae1eb14d970f8918f9eaa60",
+    "results/support_failure_diagnostic_v2/directional_support_summary.json": "f050480657ac2b91a08c347474ccaeffe5aed47998571987987e86a48df7d105",
+    "results/support_failure_diagnostic_v2/initial_support_contexts.csv.gz": "d286d186fc4b1c11e5cf0e2d6d4993d482a734c0265ac6ff5af7faffcac8a794",
+    "results/support_failure_diagnostic_v2/inflation_four_corner_summary.json": "404f4d961e7338a6be828fde06533a349b818f1a51bef79fc76d1c063e2e1875",
+    "results/support_failure_diagnostic_v2/path_inventory.csv.gz": "736735cfdc1cdd78221ea904577c2d0ea82dfe5f41cca6823aed3b9b6ecf4b03",
+    "results/support_failure_diagnostic_v2/initial_support_members.csv.gz": "2e430eb4214fd6da457920f6caef91c942f001d694981a2e2e74a035b2951c01",
+    "results/support_failure_diagnostic_v2/inflation_four_corner_endpoints.csv.gz": "df88b8bf18aaef505ef8a752229ce81319355e5745a605a8e227375b1b46515c",
+    "results/support_failure_diagnostic_v2/manifest.json": "e42454d5902171385bd50feddec3a0beae9a7c9ecbf5610b1c3389e28d245aed",
+    "results/support_failure_diagnostic_v2/independent_audit.json": "4824553424575b21d2362f8e5838a6870653fd133f52f935194b081aed025378",
+    "docs/technical_evidence_closure_2026_10_19.json": "7e90b125e99f8a22e564e81dca033efa47d6fad00c63695bfe58284813a92e4c",
+    "notebooks/technical_last_mile_2026_10_19_assets/01_review_exposure_data.csv": "ce5496ef44a5fca64e074001d1af5c59c8c7d426f1b913e2f4eccefcf8bffc4d",
+    "notebooks/technical_last_mile_2026_10_19_assets/03_inflation_four_corners.png": "51f458a8361110d6bce844fcb5399aea3cc7b562034b59410609bf25a6ed2cc6",
+    "notebooks/technical_last_mile_2026_10_19_assets/exposure_interpretation.json": "2ba27561e4ec81a32e884c4e88bf5d82a8db2fde2ad1d41e4bdec960bcf34d29",
+    "notebooks/technical_last_mile_2026_10_19_assets/04_support_initial_slack.svg": "9ceac02d939ac772789d31a99c1be5b3195728e41102513bcdf23c2cf5694e64",
+    "notebooks/technical_last_mile_2026_10_19_assets/inflation_mechanism_interpretation.json": "762ecbef4c00aff35a266c5968059f9e7ec701981fee37a5ceb0658b34d04829",
+    "notebooks/technical_last_mile_2026_10_19_assets/04_support_initial_slack.png": "d20469560d5c89fa418068ddff41a0f3d52c7de9c1c0081c8b696cdf6ec85955",
+    "notebooks/technical_last_mile_2026_10_19_assets/02_fixed_reference_tradeoffs_data.csv": "a0b94c5c9960c4f2d50fa9f01616dd1cb7c5ff9b0d74e208021bee1110dc3f8b",
+    "notebooks/technical_last_mile_2026_10_19_assets/phase_exposure_source.csv": "83e72102bf1c51bf59547187c8122bb978aab0a7833ef5eadd46c575d67cf7a2",
+    "notebooks/technical_last_mile_2026_10_19_assets/03_inflation_four_corners.svg": "d4694e845d7cee99c75acb1399c2c2b646af896d4a75b61681ddf08f35fec7ce",
+    "notebooks/technical_last_mile_2026_10_19_assets/03_inflation_four_corners_data.csv": "f877aadafabbe59dee33cd9e341e542874fd6bcbea86aeb23445b3dbcf5663dc",
+    "notebooks/technical_last_mile_2026_10_19_assets/01_review_exposure.svg": "41ade0ed694706e2017ea32d8ef250f870a02e9a1fb706e9ff333940282fd208",
+    "notebooks/technical_last_mile_2026_10_19_assets/04_support_initial_slack_data.csv": "fe210ef22359c0163e5f8123236b3b473ce70db211ccad632cbf1db11223df47",
+    "notebooks/technical_last_mile_2026_10_19_assets/all5_review_cost_summary.csv": "efca80c5c45c819958259269eb67fa8c5b1ed18954c7839faa6bfac4f39c3a5d",
+    "notebooks/technical_last_mile_2026_10_19_assets/inflation_all120_path_source.csv": "a3be702e34cab9b81e5a349ff4c908e5a4612297064083258707eb274ee4ed57",
+    "notebooks/technical_last_mile_2026_10_19_assets/all12_reference_metrics.csv": "a0b94c5c9960c4f2d50fa9f01616dd1cb7c5ff9b0d74e208021bee1110dc3f8b",
+    "notebooks/technical_last_mile_2026_10_19_assets/02_fixed_reference_tradeoffs.svg": "d6e7426ed6d3d7f2993614dcfa2cd6158598468816ad7fa88e7bf9cceb802fd6",
+    "notebooks/technical_last_mile_2026_10_19_assets/inflation_first_crossings_source.csv": "c12d038e474a80631a70f33ce57e94ec7a3d4c3ec9e16a1c084b41e4f0ef2409",
+    "notebooks/technical_last_mile_2026_10_19_assets/02_fixed_reference_tradeoffs.png": "4b022ac7d049aa1780a1f95732ad691668b825cece0dcc2e6732a4aea3126537",
+    "notebooks/technical_last_mile_2026_10_19_assets/fee_accounting_thresholds.json": "219c7594c0a7d8caf0f03de3d31cebef8deb36a61b1f80dab105476ab9efc6c8",
+    "notebooks/technical_last_mile_2026_10_19_assets/inflation_log_components_source.csv": "01c4b2316b0617bf7cd9ce8762208a6de6b4e787fcc169335ccd1ba5a9acc4e3",
+    "notebooks/technical_last_mile_2026_10_19_assets/01_review_exposure.png": "a145c359baf3a6fb963b3adce5f9400414b8a88df30f3a9d984c4692920ab4f2",
+    "scripts/build_technical_last_mile_companion.py": "16a5959dcfd08a26dc72dd5e88cbe64498dd8a97028e8f19d45dcc7ceab7f525",
+    "notebooks/technical_last_mile_2026_10_19.html": "c857552787045b856ae1b6c71861d08d46b8adb8968b0bd6ef2a11435e9ebea5",
+    "notebooks/technical_last_mile_2026_10_19_assets/build_manifest.json": "f1aaba93b143fe46d987e5b6d221d4632f1197da74e03618435c15be2ea03fd4"
+  },
+  "remaining": "No material numeric/wording blocker after correction. Root still owns actualcurrentPNG/browser render QA. This receipt is an independent saved-data presentation check, not a new experiment or a paper."
+}

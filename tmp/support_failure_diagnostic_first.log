@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/Users/lebmar/Documents/ChatGPT/GKG数模/scripts/diagnose_support_failure.py", line 303, in <module>
+    if args.execute:run()
+                    ^^^^^
+  File "/Users/lebmar/Documents/ChatGPT/GKG数模/scripts/diagnose_support_failure.py", line 275, in run
+    gross,cpig,selected,training=reconstruct(cz,cg,check)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/lebmar/Documents/ChatGPT/GKG数模/scripts/diagnose_support_failure.py", line 108, in reconstruct
+    if len(refs)!=5:raise ValueError('All five original OOF thirds groups required')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: All five original OOF thirds groups required
