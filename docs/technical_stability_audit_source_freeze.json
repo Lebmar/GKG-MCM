@@ -1,0 +1,24 @@
+{
+  "version": "technical-stability-audit-source-freeze-v1",
+  "execution_ready": true,
+  "frozen_utc": "2026-10-19T06:46:18.565734+00:00",
+  "plan_sha256": "6a1c060490f5dd44917b5832a0ff63b45211cfbf0daba1cd5b363aaccdb549e2",
+  "source_sha256": {
+    "scripts/audit_technical_stability.py": "18945bce3047815915d49556bb3cd5c23a3a31ac7a3e251c1be16cf40e708839",
+    "tests/test_technical_stability_audit.py": "304481d069c58a34161071123e46ea6563b630e6da9d233822bf99ce97703578",
+    "scripts/audit_state_budget_rebuild.py": "8451a30832cf7aae27e008aae13e8107372095fd65e1f29d597fab304cb6167e",
+    "scripts/audit_state_budget_mitigation.py": "b477c4d0d4ef0be6c690df1da5f9a89ba2715ce2fe16ac5ec72cef6ab7df80f0",
+    "src/safeinvest/data.py": "70e511fd05c6e23fd6b8a72f1dc165426fc77a5eb4dbd8a3c13b839bb305a75f",
+    "src/safeinvest/__init__.py": "dcef1e2e1f0f7cd5426988f0f27408eebb9ded3fb32c961f8f23e2edfb6e4ad2"
+  },
+  "input_sha256": {
+    "data/SafeInvest_Synthetic_Data.csv": "def0177704bf6cb98cec6da325b34208750d988f6ad97ec4a706a0d39e6f82c0",
+    "docs/refit_stability_protocol.json": "8e9ab035073b91e4004c76c41296c56665d2199620e92d8cc0eb4eaca7a4efae",
+    "results/model_review/refit_stability_v1/static_refits.json.gz": "1621772a0a0d0dfb822692a21ff5b8fd15b90b0977c9ba6f78f9bfd10bf87fa7",
+    "docs/technical_stability_audit_plan.json": "6a1c060490f5dd44917b5832a0ff63b45211cfbf0daba1cd5b363aaccdb549e2",
+    "results/state_budget_stability_v1/manifest.json": "0667dc83edd3c7723f84e8db872efe095a4852111beb00ffdf19f6dba1c39d66",
+    "results/state_budget_mitigation_stability_v1/manifest.json": "6290ad6ef867d6b4f5a20162d2d50008655b3d3c26087611633b30f7d0ad635c"
+  },
+  "synthetic_tests": 8,
+  "market_or_saved_numeric_access_during_freeze": false
+}
