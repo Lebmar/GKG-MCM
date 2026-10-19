@@ -3,6 +3,50 @@
 2026 HKUST(GZ) MCM Senior Group Problem A. Team **Lebmar**, number **87**.
 Author: **Chengxuan YUAN**.
 
+## Overview
+
+A transparent, cost-aware robo-advisory pipeline built on the SafeInvest synthetic
+scenario set: three risk-profiled products, an auditable onboarding rule, and an
+annual decision policy (V2b) that trades only when the fee-net benefit is strictly
+positive and escalates to human review when support or drawdown limits fail.
+Every reported number is frozen before evaluation, independently audited, and
+reproducible byte-for-byte from the submitted package.
+
+- **Final report**: [report/v2b_submission/main.pdf](report/v2b_submission/main.pdf) (9 pages, A4)
+- **Answer sheet**: [submission/TASK_ANSWER_SHEET.md](submission/TASK_ANSWER_SHEET.md) — every task question mapped to evidence
+- **Quick reproduction**: `python scripts/submission_final_adapter.py --reproduce-fixed-nonblind-final --output <dir>` (see package README in [dist/](dist/))
+- **Evidence map**: [docs/AUTHORITATIVE_INDEX.md](docs/AUTHORITATIVE_INDEX.md) — authoritative vs superseded documents
+- **Submission package**: [dist/Team87_Lebmar_Technical_Source_v6.zip](dist/) (supplementary material, < 50 MB, SHA-256 manifest included)
+
+## Results at a glance
+
+| Q2 fixed object (60 final scenarios, H=30) | Median real CAGR | Median real MDD | P90 real MDD | Breaches | Trade periods |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| V2b (protective trade + review) | 2.35% | 20.02% | 28.69% | 2/60 | 21.22% |
+| Equal-thirds baseline (required) | 3.38% | 22.29% | 39.36% | 6/60 | 100% |
+
+## Repository layout
+
+~~~text
+src/ research/     model and execution kernels (frozen)
+scripts/ tests/    producers, audits, replays; 1,545 passing tests
+docs/              protocols, freezes, judgments (authoritative index inside)
+results/           evaluation outputs, audits, reproduction receipts
+report/            LaTeX report and figures
+submission/        answer sheet and task-facing notes
+dist/              CMT supplementary packages (v6 is current)
+~~~
+
+## License
+
+Code: MIT (see [LICENSE](LICENSE)). The SafeInvest synthetic data and problem
+statement remain under CC BY-NC-SA 4.0 by their authors; see
+[docs/DATA_NOTICE.md](docs/DATA_NOTICE.md). No rights to the data are claimed.
+
+---
+
+## Detailed record
+
 **Submission closure (2026-10-19):** the task-facing numbers and metric definitions
 are in [TASK_ANSWER_SHEET.md](submission/TASK_ANSWER_SHEET.md), the Q3 sensitivity
 note in [Q3_SENSITIVITY.md](submission/Q3_SENSITIVITY.md), and the authoritative
