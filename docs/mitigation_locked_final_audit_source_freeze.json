@@ -1,0 +1,21 @@
+{
+  "version": "mitigation-locked-final-audit-source-freeze-v1",
+  "execution_ready": true,
+  "created_utc": "2026-10-19T07:33:04.874111+00:00",
+  "plan_sha256": "8158112d0c2e6e3ee1e00767379d0cd174c2fea89b996e9dfd71f94cc9301904",
+  "source_sha256": {
+    "scripts/audit_mitigation_locked_final_evaluation.py": "c0c2461301a122eabae193d6d6b681d92f0a01629adc15ce6bd7f681768ea516",
+    "tests/test_audit_mitigation_locked_final_evaluation.py": "01c9082e3071d9b42426ef15fe779f45724db7001a0bf547feecd22b12321aab",
+    "docs/mitigation_locked_final_audit_plan.json": "8158112d0c2e6e3ee1e00767379d0cd174c2fea89b996e9dfd71f94cc9301904",
+    "scripts/audit_state_budget_rebuild.py": "8451a30832cf7aae27e008aae13e8107372095fd65e1f29d597fab304cb6167e",
+    "scripts/audit_state_budget_mitigation.py": "b477c4d0d4ef0be6c690df1da5f9a89ba2715ce2fe16ac5ec72cef6ab7df80f0",
+    "src/safeinvest/data.py": "70e511fd05c6e23fd6b8a72f1dc165426fc77a5eb4dbd8a3c13b839bb305a75f",
+    "src/safeinvest/__init__.py": "dcef1e2e1f0f7cd5426988f0f27408eebb9ded3fb32c961f8f23e2edfb6e4ad2"
+  },
+  "synthetic_tests": 15,
+  "scope": "Source and prospective plan frozen before producer final market evaluation; independently recompute all14objects and every main active13+9decision. No producer helper import.",
+  "producer_protocol_sha256": "f9a5719475ab222e111b8874e3b84f20c89a406254d557f97a33dbf7e5e4b76a",
+  "producer_source_freeze_sha256": "4fe35e70844a185b415a144e8c5179b5ead1b39e1c6df187b2a1092798b91d38",
+  "producer_release_sha256": "12d11ae86b48220313e89da593a1588be486865da9489a7253b981ae88a65887",
+  "prior_final_exposure": true
+}

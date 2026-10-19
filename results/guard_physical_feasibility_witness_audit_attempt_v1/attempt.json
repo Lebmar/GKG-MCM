@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "phase": "complete",
+  "parent_manifest_sha256": "46a621a0c8a5d8a0f0249a2c5a94f44d9ffd0cf9d691db69bbd435f4acb55f35",
+  "plan_sha256": "50cbc7b5b3c73b7ffef7fc3d3d40a897195c72756c2ae5595cd5bccb5b7f0d2e",
+  "source_freeze_sha256": "e6a5295c538648d9786f659597c9b7331ab68ce503ee04abebe7198f30db118f",
+  "new_LP_solves": 0,
+  "final_scenarios_loaded": false,
+  "receipt_sha256": "e465ef101db5627f2404e1565444cd57708e02c8441b48288aac2bc52970bdff"
+}
