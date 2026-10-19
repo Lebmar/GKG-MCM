@@ -1,0 +1,44 @@
+{
+  "version": "q1-guard-generalization-judgment-v1",
+  "date": "2026-10-20",
+  "scope": "Development-only resubstitution diagnostic (scenarios 1-120). Not held-out validation, not a fresh blind sample, no final data parsed.",
+  "protocol": "docs/q1_guard_generalization_protocol.json",
+  "source_freeze": "docs/q1_guard_generalization_source_freeze.json",
+  "results": "results/q1_guard_generalization_v1/",
+  "independent_audit": {
+    "script": "scripts/audit_q1_guard_generalization.py",
+    "receipt": "results/q1_guard_generalization_v1/independent_audit.json",
+    "status": "passed",
+    "checks": 10993,
+    "disclosure": "The audit's first two attempts failed on auditor-side convention bugs (an incorrect running-MDD reconstruction expression and an off-by-one in first-crossing indexing). Both fixes touched the auditor only; the producer script, protocol, freeze and outputs were never modified after the single producer run."
+  },
+  "findings": {
+    "B_guard": {
+      "status": "preinvestment_review",
+      "gate_reason": "initial_target_support_infeasible",
+      "budget_floor": 87.5,
+      "interpretation": "The locked one-year support floor (1 - L*release_fraction) * initial real wealth = (1 - 0.25*0.5)*100 = 87.5 cannot be met by any of the 13 primary proposals for the Conservative target 25/30/45 on the calendar development support. The unchanged guard declines to fund B automatically."
+    },
+    "E_guard": {
+      "status": "preinvestment_review",
+      "gate_reason": "initial_target_support_infeasible",
+      "budget_floor": 82.5,
+      "interpretation": "Same unchanged screen: (1 - 0.35*0.5)*100 = 82.5 cannot be met for the Growth target 65/5/30. The guard declines to fund E automatically."
+    },
+    "reference_crosscheck": "Static references reproduce the previously audited development 5x3 screen exactly: B Conservative 9/120 breaches, E Growth 6/120. Equal-thirds at own horizons: B 20/120, E 0/120 (E's thirds has P10 CAGR -2.32% and lower median growth than the Growth product).",
+    "contrast_with_C": "Profile C (Balanced 45/5/50, L=40%, floor 80.0) passes the identical initial support screen and was funded 60/60 in the locked final evaluation. The screen's selectivity comes from the interaction of the L-derived floor and target riskiness, not from a profile-specific adjustment."
+  },
+  "implications_for_report": [
+    "The safeguard is one coherent family: suitability screen at onboarding (A/D Review), then the same unchanged execution gate decides whether an assigned product may be auto-funded. Applied unchanged, that gate funds only C; B and E would require human review before investment.",
+    "This resolves the apparent 'B/C exceed the 10% reference' tension honestly: static Q1 product references are suitability assignments, never automatic execution approvals, and the guarded service layer confirms it by refusing unattended funding for B/E.",
+    "Do NOT present this as evidence that the guard reduces B/E breach rates in execution; no funded guard path exists for B/E. The finding is about the gate's conservatism, not about executed performance.",
+    "Equal-thirds at E's own horizon has 0/120 breaches but lower growth (median 3.52% vs 5.00%) and negative P10; it is a hypothetical reference, not the assigned product."
+  ],
+  "limitations": [
+    "Resubstitution on development data; guard parameters were selected for C on the same 120 paths.",
+    "The one-year support floor is a normative declared convention ((1 - L/2) of current real wealth), not a calibrated loss probability.",
+    "A stricter funding gate increases Review workload; no adviser capacity or response model is estimated.",
+    "No final-sample counterpart exists for B/E guard arms; none may be created without contaminating the disclosed nonblind protocol."
+  ],
+  "no_changes_statement": "No locked V2b parameter, target, candidate identity, frozen artifact or final evaluation result was modified. All outputs are additive evidence under results/q1_guard_generalization_v1/."
+}

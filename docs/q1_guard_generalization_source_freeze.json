@@ -1,0 +1,25 @@
+{
+  "version": "q1-guard-generalization-source-freeze-v1",
+  "execution_ready": true,
+  "frozen_utc": "2026-10-19T16:40:33.838710+00:00",
+  "protocol_sha256": "a017b9aeca63819a943991e2c9aa8b5b0d53e7041b8d0dae1f0b5eb73a556263",
+  "source_sha256": {
+    "scripts/run_q1_guard_generalization.py": "18c1d8b7537c4bcf01708ee48ed47341d3154801327b2312d2c61a3ad4792203",
+    "research/experimental_execution/state_budget_mitigation.py": "fe3904062f92a42f7fc37d664b53ee3ec6d336b2498448c1a707cb2edfda89ff",
+    "research/experimental_execution/state_budget_execution.py": "8480dc1c2d54175a9fafed2471991a0ea8fc6a4519a24140044d056dbafafb1f",
+    "research/experimental_execution/forecast_ensemble.py": "26b24902f448d5aeaec94f7b03f5a3451a33831299063ab42076e4bb18733010",
+    "research/experimental_execution/review_pending.py": "9038d420c9ea48df068c58a6abee3f993ac414f85dd0290cb56e3d703aae3894",
+    "research/safeinvest_research/metrics.py": "7ec8e4821ce284351a3d8ed7071c687fdf7d6e4cfd225f72cad1d09d623eb008",
+    "src/safeinvest/__init__.py": "dcef1e2e1f0f7cd5426988f0f27408eebb9ded3fb32c961f8f23e2edfb6e4ad2",
+    "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a",
+    "src/safeinvest/data.py": "70e511fd05c6e23fd6b8a72f1dc165426fc77a5eb4dbd8a3c13b839bb305a75f"
+  },
+  "input_sha256": {
+    "data/SafeInvest_Synthetic_Data.csv": "def0177704bf6cb98cec6da325b34208750d988f6ad97ec4a706a0d39e6f82c0",
+    "docs/q1_guard_generalization_protocol.json": "a017b9aeca63819a943991e2c9aa8b5b0d53e7041b8d0dae1f0b5eb73a556263",
+    "docs/mitigation_main_model_registry.json": "49059e6e2ef5138a1d8edd284a3353d5c412d2f54f518010c3ddfdaa561c6603",
+    "requirements-research-pinned.txt": "a18dc21251d1dcdba4c19b4137ed62083bf4d82ed6ea8fefc4ae3cbd421f02ee"
+  },
+  "market_value_access_during_freeze": false,
+  "scope": "Development-only resubstitution diagnostic for profiles B/E with the locked V2b candidate. No final data, no refit, no selection. First numeric run only after this freeze."
+}

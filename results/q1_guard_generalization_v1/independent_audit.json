@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "checks": 10993,
+  "failures": [],
+  "audited_output": "results/q1_guard_generalization_v1",
+  "scope": "Independent recomputation from saved arrays; no producer metric/policy import.",
+  "note": "Implementation/numerical audit only; not statistical validation or market evidence."
+}

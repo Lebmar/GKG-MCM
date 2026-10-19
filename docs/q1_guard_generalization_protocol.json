@@ -1,0 +1,142 @@
+{
+  "version": "q1-guard-generalization-development-v1",
+  "title": "Q1 guard generalization: applying the locked V2b protective rule to profiles B and E (development only)",
+  "status": "Declared and frozen before any market value is parsed. First numeric execution requires the source freeze and this protocol's hash to match.",
+  "objective": "Test whether the locked V2b protective-trade-then-review rule, with no new fitting, selection or parameter change, reduces loss-limit breach frequency for the assigned Q1 products of profiles B and E on development scenarios. No favorable outcome is promised; a null or adverse result remains publishable evidence.",
+  "motivation": "The Q1 static product references retain adverse tails (final B 11/60, C 8/60, E 5/60 breaches; E P10 growth negative). The Q2 guard was evaluated only for profile C. This study asks whether the same safeguard design extends to the other two assigned profiles, so the submission can describe one coherent safeguard family rather than a C-only device.",
+  "development_ids": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120],
+  "allow_final": false,
+  "training_ids": "1-120 (same identity set as the locked full120 V2b fit)",
+  "evaluation_ids": "1-120",
+  "evaluation_scope": "Resubstitution diagnostic on development scenarios only. This is NOT held-out validation and NOT a fresh blind sample; it measures whether the fixed rule mechanically extends to other (target, horizon, L) triples on data already used for development.",
+  "historical_exposure": "All 120 development paths have informed prior work; final scenarios 121-180 were previously exposed in the locked V2b evaluation. This run never parses final values (allow_final=false gate in the loader). No number produced here may be quoted as out-of-sample evidence.",
+  "locked_guard_spec": {
+    "candidate_id": "release_0.5_uniform",
+    "release_fraction": 0.5,
+    "forecast_rule": "uniform",
+    "support_mode": "calendar",
+    "cost_rate": 0.0025,
+    "source": "docs/mitigation_main_model_registry.json Q2 block; identical parameters to the locked profile-C object. No refit, no reselection, no threshold retuning for B or E.",
+    "rule_summary": "Initial full target allocation; annual review among 13 primary finite proposals with strictly positive fee-net paired predicted log advantage and a normative one-year support floor; on first funded no-feasible-proposal, one protective trade from the 9-action mitigation menu (only if the modeled worst next real wealth improves after exact costs), then absorbing human review/hold; annual real MDD above L also triggers absorbing pending hold."
+  },
+  "objects": [
+    {
+      "object_id": "B_guard",
+      "profile": "B",
+      "assignment": "Conservative",
+      "target": [0.25, 0.30, 0.45],
+      "horizon": 15,
+      "L": 0.25,
+      "liquidity": "medium",
+      "rule": "mitigation",
+      "note": "Target satisfies the declared medium-liquidity 10% bill floor (45% bills)."
+    },
+    {
+      "object_id": "B_same_target_annual",
+      "profile": "B",
+      "assignment": "Conservative",
+      "target": [0.25, 0.30, 0.45],
+      "horizon": 15,
+      "L": 0.25,
+      "liquidity": "medium",
+      "rule": "annual",
+      "note": "Static product reference: restore target at every annual review, same 0.25% fee."
+    },
+    {
+      "object_id": "B_same_target_pending",
+      "profile": "B",
+      "assignment": "Conservative",
+      "target": [0.25, 0.30, 0.45],
+      "horizon": 15,
+      "L": 0.25,
+      "liquidity": "medium",
+      "rule": "pending_hold",
+      "note": "Annual restore until first breach of L, then absorbing hold (the same-target B-style reference used for profile C)."
+    },
+    {
+      "object_id": "B_exact_thirds_annual",
+      "profile": "B",
+      "assignment": "exact_thirds_reference",
+      "target": [0.3333333333333333, 0.3333333333333333, 0.3333333333333333],
+      "horizon": 15,
+      "L": 0.25,
+      "liquidity": "medium",
+      "rule": "annual",
+      "note": "Hypothetical equal-weight baseline at B's own horizon and loss limit."
+    },
+    {
+      "object_id": "E_guard",
+      "profile": "E",
+      "assignment": "Growth",
+      "target": [0.65, 0.05, 0.30],
+      "horizon": 6,
+      "L": 0.35,
+      "liquidity": "high",
+      "rule": "mitigation",
+      "note": "Target sits exactly at the declared high-liquidity 30% bill floor."
+    },
+    {
+      "object_id": "E_same_target_annual",
+      "profile": "E",
+      "assignment": "Growth",
+      "target": [0.65, 0.05, 0.30],
+      "horizon": 6,
+      "L": 0.35,
+      "liquidity": "high",
+      "rule": "annual",
+      "note": "Static product reference at E's own horizon."
+    },
+    {
+      "object_id": "E_same_target_pending",
+      "profile": "E",
+      "assignment": "Growth",
+      "target": [0.65, 0.05, 0.30],
+      "horizon": 6,
+      "L": 0.35,
+      "liquidity": "high",
+      "rule": "pending_hold",
+      "note": "Annual restore until first breach, then absorbing hold."
+    },
+    {
+      "object_id": "E_exact_thirds_annual",
+      "profile": "E",
+      "assignment": "exact_thirds_reference",
+      "target": [0.3333333333333333, 0.3333333333333333, 0.3333333333333333],
+      "horizon": 6,
+      "L": 0.35,
+      "liquidity": "high",
+      "rule": "annual",
+      "note": "Hypothetical equal-weight baseline at E's own horizon and loss limit."
+    }
+  ],
+  "metrics": {
+    "per_path": ["log_growth", "cagr", "mdd", "volatility", "terminal_real", "nominal_fees", "trade_fraction", "breach", "first_crossing", "automatic_fraction", "protection_trade_fraction", "support_review", "mitigation_trade_fraction", "mitigation_nominal_fees"],
+    "definitions": "Identical to the locked final evaluation: growth = log(real_terminal/100)/H on purchasing-power wealth; MDD = maximum real drawdown from the running historical peak at annual endpoints; breach = MDD - L > 1e-12; volatility = sample std of annual net real returns (ddof=1); trade_fraction = share of decision periods with moved > 1e-12 including the mandatory initial allocation; automatic_fraction = 1 - mean(pending or guard-triggered at decision).",
+    "summary": ["breach_count", "breach_fraction", "median_cagr", "p10_cagr", "mean_mdd", "median_mdd", "p90_mdd", "cvar90_mdd", "mean_volatility", "mean_nominal_fees", "mean_trade_fraction", "mean_automatic_fraction", "funded_support_review_n"],
+    "quantile_convention": "P10/P90 use the empirical inverse CDF; medians use the ordinary median; CVaR90 averages the worst 10% probability mass including fractional boundary atoms. Identical to the locked final evaluation."
+  },
+  "paired_comparisons": [
+    "For each profile: guard vs same_target_annual and guard vs exact_thirds_annual on identical scenario IDs, with paired per-path differences (cagr, mdd, fees, trade/automatic fractions) and a both/model-only/reference-only/neither breach partition."
+  ],
+  "null_handling": "If the guard's initial decision is pre-investment Review for a profile, all its financial fields are NULL and this is reported as an honest negative result, not replaced by a reference arm.",
+  "no_changes": [
+    "No change to any locked V2b parameter, target, candidate identity or final evaluation artifact.",
+    "No new candidate family, selection step or threshold fitted for B or E.",
+    "No access to scenarios 121-180.",
+    "No claim that development resubstitution results estimate final-sample performance."
+  ],
+  "reporting": [
+    "results/q1_guard_generalization_v1/path_metrics.csv.gz (960 rows: 2 profiles x 4 arms x 120 paths)",
+    "results/q1_guard_generalization_v1/summary.csv.gz (8 rows)",
+    "results/q1_guard_generalization_v1/comparisons.json",
+    "results/q1_guard_generalization_v1/traces.npz (full physical accounts for audit)",
+    "results/q1_guard_generalization_v1/manifest.json (hash-bound execution record)"
+  ],
+  "independent_audit_plan": "scripts/audit_q1_guard_generalization.py reimplements every metric and summary from the saved arrays without importing the producer's metrics/policy modules, checks the self-financing accounting identity on every decision, verifies IDs/horizons/L conventions, and re-verifies the frozen source/input hashes.",
+  "limitations": [
+    "Resubstitution on development data: guard parameters were selected for C on the same 120 paths, so B/E numbers are mechanically optimistic relative to a held-out design.",
+    "The one-year support/forecast check is a finite empirical condition, not a calibrated loss probability.",
+    "B and E horizons (15, 6) are shorter than C's 30; results are not comparable across profiles and do not rank products.",
+    "A reduction in breach frequency here does not certify the 10% service convention for any profile."
+  ]
+}

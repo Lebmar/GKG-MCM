@@ -5,13 +5,14 @@ contains multiple generations of evidence. Historical files remain valid at thei
 own timestamps; they are not all current. This index prevents using a superseded
 V1/V2/earlier-final number in the final submission.
 
-Last updated: 2026-10-19 (submission closure). Current branch:
+Last updated: 2026-10-20 (Q1 guard generalization addendum). Current branch:
 `codex/risk-budget-development`.
 
 ## Current authoritative chain
 
 | Purpose | Authoritative file |
 | --- | --- |
+| Q1 guard generalization to B/E (development-only addendum, 2026-10-20) | [q1_guard_generalization_protocol.json](q1_guard_generalization_protocol.json), [judgment](q1_guard_generalization_judgment.json), [results](../results/q1_guard_generalization_v1/), [report note](../submission/Q1_GUARD_GENERALIZATION.md) |
 | Locked V2b model, Q1 products/assignments, Q2 rule, final scope | [mitigation_main_model_registry.json](mitigation_main_model_registry.json) |
 | Technical judgment, final rows and parameter meanings | [mitigation_technical_completion_judgment.json](mitigation_technical_completion_judgment.json) |
 | Final 121–180 evaluation (14 objects, 60 paths) | [results/mitigation_locked_final_evaluation_v1/](../results/mitigation_locked_final_evaluation_v1/) |
@@ -67,9 +68,11 @@ this index and a package README.
 
 The historical producers, audits, checkpoints and result archives are **not to be
 edited**. This closure adds new documents and a new package; it does not rewrite a
-frozen manifest. If a historical checkpoint hashes an older README or file, that
-checkpoint remains a true statement about its own timestamp, not about the current
-tree. The closure verification in
+frozen manifest. The 2026-10-20 Q1 guard generalization addendum follows the same
+rule: it is purely additive (new protocol, freeze, producer, audit and results),
+touches no locked artifact, and uses development scenarios 1–120 only. If a
+historical checkpoint hashes an older README or file, that checkpoint remains a
+true statement about its own timestamp, not about the current tree. The closure verification in
 [results/submission_closure_v2/verification.json](../results/submission_closure_v2/verification.json)
 records the Q1 table, report draft and v4 package checks. The earlier
 [results/submission_closure_v1/verification.json](../results/submission_closure_v1/verification.json)

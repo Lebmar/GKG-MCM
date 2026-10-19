@@ -1,0 +1,458 @@
+[
+  {
+    "profile": "B",
+    "model_object": "B_guard",
+    "reference_object": "B_same_target_annual",
+    "model": {
+      "object_id": "B_guard",
+      "profile": "B",
+      "assignment": "Conservative",
+      "horizon": 15,
+      "L": 0.25,
+      "rule": "mitigation",
+      "original_n": 120,
+      "financial_n": 0,
+      "initial_review_n": 120,
+      "initial_coverage": 0.0,
+      "breach_count": null,
+      "breach_fraction": null,
+      "mean_log_growth": null,
+      "median_cagr": null,
+      "p10_cagr": null,
+      "mean_mdd": null,
+      "median_mdd": null,
+      "p90_mdd": null,
+      "cvar90_mdd": null,
+      "mean_volatility": null,
+      "mean_nominal_fees": null,
+      "mean_trade_fraction": null,
+      "mean_automatic_fraction": null,
+      "funded_support_review_n": null,
+      "mean_protection_trade_fraction": null,
+      "mean_mitigation_trade_fraction": null,
+      "mean_mitigation_nominal_fees": null
+    },
+    "reference": {
+      "object_id": "B_same_target_annual",
+      "profile": "B",
+      "assignment": "Conservative",
+      "horizon": 15,
+      "L": 0.25,
+      "rule": "annual",
+      "original_n": 120,
+      "financial_n": 120,
+      "initial_review_n": 0,
+      "initial_coverage": 1.0,
+      "breach_count": 9,
+      "breach_fraction": 0.075,
+      "mean_log_growth": 0.028598869192324967,
+      "median_cagr": 0.03042603230662979,
+      "p10_cagr": 0.001004386434525145,
+      "mean_mdd": 0.14025231716485673,
+      "median_mdd": 0.13251712984366892,
+      "p90_mdd": 0.24223826434514883,
+      "cvar90_mdd": 0.28274792158448286,
+      "mean_volatility": 0.06746478571524546,
+      "mean_nominal_fees": 0.3183273393828097,
+      "mean_trade_fraction": 1.0,
+      "mean_automatic_fraction": 1.0,
+      "funded_support_review_n": 0,
+      "mean_protection_trade_fraction": 0.0,
+      "mean_mitigation_trade_fraction": 0.0,
+      "mean_mitigation_nominal_fees": 0.0
+    },
+    "same_funded_ids": [],
+    "paired_differences": {
+      "log_growth": {
+        "mean": null,
+        "median": null,
+        "positive_n": 0,
+        "negative_n": 0,
+        "numerical_tie_n": 0
+      },
+      "cagr": {
+        "mean": null,
+        "median": null,
+        "positive_n": 0,
+        "negative_n": 0,
+        "numerical_tie_n": 0
+      },
+      "mdd": {
+        "mean": null,
+        "median": null,
+        "positive_n": 0,
+        "negative_n": 0,
+        "numerical_tie_n": 0
+      },
+      "nominal_fees": {
+        "mean": null,
+        "median": null,
+        "positive_n": 0,
+        "negative_n": 0,
+        "numerical_tie_n": 0
+      },
+      "trade_fraction": {
+        "mean": null,
+        "median": null,
+        "positive_n": 0,
+        "negative_n": 0,
+        "numerical_tie_n": 0
+      },
+      "automatic_fraction": {
+        "mean": null,
+        "median": null,
+        "positive_n": 0,
+        "negative_n": 0,
+        "numerical_tie_n": 0
+      }
+    },
+    "event_id_partition": {
+      "neither": [],
+      "model_only": [],
+      "reference_only": [],
+      "both": []
+    }
+  },
+  {
+    "profile": "B",
+    "model_object": "B_guard",
+    "reference_object": "B_exact_thirds_annual",
+    "model": {
+      "object_id": "B_guard",
+      "profile": "B",
+      "assignment": "Conservative",
+      "horizon": 15,
+      "L": 0.25,
+      "rule": "mitigation",
+      "original_n": 120,
+      "financial_n": 0,
+      "initial_review_n": 120,
+      "initial_coverage": 0.0,
+      "breach_count": null,
+      "breach_fraction": null,
+      "mean_log_growth": null,
+      "median_cagr": null,
+      "p10_cagr": null,
+      "mean_mdd": null,
+      "median_mdd": null,
+      "p90_mdd": null,
+      "cvar90_mdd": null,
+      "mean_volatility": null,
+      "mean_nominal_fees": null,
+      "mean_trade_fraction": null,
+      "mean_automatic_fraction": null,
+      "funded_support_review_n": null,
+      "mean_protection_trade_fraction": null,
+      "mean_mitigation_trade_fraction": null,
+      "mean_mitigation_nominal_fees": null
+    },
+    "reference": {
+      "object_id": "B_exact_thirds_annual",
+      "profile": "B",
+      "assignment": "exact_thirds_reference",
+      "horizon": 15,
+      "L": 0.25,
+      "rule": "annual",
+      "original_n": 120,
+      "financial_n": 120,
+      "initial_review_n": 0,
+      "initial_coverage": 1.0,
+      "breach_count": 20,
+      "breach_fraction": 0.16666666666666666,
+      "mean_log_growth": 0.03363723358992318,
+      "median_cagr": 0.03606213147793497,
+      "p10_cagr": 0.000509421340319986,
+      "mean_mdd": 0.16366430493946685,
+      "median_mdd": 0.1518906401090168,
+      "p90_mdd": 0.27633494798553687,
+      "cvar90_mdd": 0.32820855442053404,
+      "mean_volatility": 0.07945192932167951,
+      "mean_nominal_fees": 0.3814361227162221,
+      "mean_trade_fraction": 1.0,
+      "mean_automatic_fraction": 1.0,
+      "funded_support_review_n": 0,
+      "mean_protection_trade_fraction": 0.0,
+      "mean_mitigation_trade_fraction": 0.0,
+      "mean_mitigation_nominal_fees": 0.0
+    },
+    "same_funded_ids": [],
+    "paired_differences": {
+      "log_growth": {
+        "mean": null,
+        "median": null,
+        "positive_n": 0,
+        "negative_n": 0,
+        "numerical_tie_n": 0
+      },
+      "cagr": {
+        "mean": null,
+        "median": null,
+        "positive_n": 0,
+        "negative_n": 0,
+        "numerical_tie_n": 0
+      },
+      "mdd": {
+        "mean": null,
+        "median": null,
+        "positive_n": 0,
+        "negative_n": 0,
+        "numerical_tie_n": 0
+      },
+      "nominal_fees": {
+        "mean": null,
+        "median": null,
+        "positive_n": 0,
+        "negative_n": 0,
+        "numerical_tie_n": 0
+      },
+      "trade_fraction": {
+        "mean": null,
+        "median": null,
+        "positive_n": 0,
+        "negative_n": 0,
+        "numerical_tie_n": 0
+      },
+      "automatic_fraction": {
+        "mean": null,
+        "median": null,
+        "positive_n": 0,
+        "negative_n": 0,
+        "numerical_tie_n": 0
+      }
+    },
+    "event_id_partition": {
+      "neither": [],
+      "model_only": [],
+      "reference_only": [],
+      "both": []
+    }
+  },
+  {
+    "profile": "E",
+    "model_object": "E_guard",
+    "reference_object": "E_same_target_annual",
+    "model": {
+      "object_id": "E_guard",
+      "profile": "E",
+      "assignment": "Growth",
+      "horizon": 6,
+      "L": 0.35,
+      "rule": "mitigation",
+      "original_n": 120,
+      "financial_n": 0,
+      "initial_review_n": 120,
+      "initial_coverage": 0.0,
+      "breach_count": null,
+      "breach_fraction": null,
+      "mean_log_growth": null,
+      "median_cagr": null,
+      "p10_cagr": null,
+      "mean_mdd": null,
+      "median_mdd": null,
+      "p90_mdd": null,
+      "cvar90_mdd": null,
+      "mean_volatility": null,
+      "mean_nominal_fees": null,
+      "mean_trade_fraction": null,
+      "mean_automatic_fraction": null,
+      "funded_support_review_n": null,
+      "mean_protection_trade_fraction": null,
+      "mean_mitigation_trade_fraction": null,
+      "mean_mitigation_nominal_fees": null
+    },
+    "reference": {
+      "object_id": "E_same_target_annual",
+      "profile": "E",
+      "assignment": "Growth",
+      "horizon": 6,
+      "L": 0.35,
+      "rule": "annual",
+      "original_n": 120,
+      "financial_n": 120,
+      "initial_review_n": 0,
+      "initial_coverage": 1.0,
+      "breach_count": 6,
+      "breach_fraction": 0.05,
+      "mean_log_growth": 0.043965423569071516,
+      "median_cagr": 0.04998107656911112,
+      "p10_cagr": -0.0368594452057999,
+      "mean_mdd": 0.15012241906165807,
+      "median_mdd": 0.13892225166420547,
+      "p90_mdd": 0.3117536822150599,
+      "cvar90_mdd": 0.3873561722339038,
+      "mean_volatility": 0.11444425507401444,
+      "mean_nominal_fees": 0.22777972250042733,
+      "mean_trade_fraction": 1.0,
+      "mean_automatic_fraction": 1.0,
+      "funded_support_review_n": 0,
+      "mean_protection_trade_fraction": 0.0,
+      "mean_mitigation_trade_fraction": 0.0,
+      "mean_mitigation_nominal_fees": 0.0
+    },
+    "same_funded_ids": [],
+    "paired_differences": {
+      "log_growth": {
+        "mean": null,
+        "median": null,
+        "positive_n": 0,
+        "negative_n": 0,
+        "numerical_tie_n": 0
+      },
+      "cagr": {
+        "mean": null,
+        "median": null,
+        "positive_n": 0,
+        "negative_n": 0,
+        "numerical_tie_n": 0
+      },
+      "mdd": {
+        "mean": null,
+        "median": null,
+        "positive_n": 0,
+        "negative_n": 0,
+        "numerical_tie_n": 0
+      },
+      "nominal_fees": {
+        "mean": null,
+        "median": null,
+        "positive_n": 0,
+        "negative_n": 0,
+        "numerical_tie_n": 0
+      },
+      "trade_fraction": {
+        "mean": null,
+        "median": null,
+        "positive_n": 0,
+        "negative_n": 0,
+        "numerical_tie_n": 0
+      },
+      "automatic_fraction": {
+        "mean": null,
+        "median": null,
+        "positive_n": 0,
+        "negative_n": 0,
+        "numerical_tie_n": 0
+      }
+    },
+    "event_id_partition": {
+      "neither": [],
+      "model_only": [],
+      "reference_only": [],
+      "both": []
+    }
+  },
+  {
+    "profile": "E",
+    "model_object": "E_guard",
+    "reference_object": "E_exact_thirds_annual",
+    "model": {
+      "object_id": "E_guard",
+      "profile": "E",
+      "assignment": "Growth",
+      "horizon": 6,
+      "L": 0.35,
+      "rule": "mitigation",
+      "original_n": 120,
+      "financial_n": 0,
+      "initial_review_n": 120,
+      "initial_coverage": 0.0,
+      "breach_count": null,
+      "breach_fraction": null,
+      "mean_log_growth": null,
+      "median_cagr": null,
+      "p10_cagr": null,
+      "mean_mdd": null,
+      "median_mdd": null,
+      "p90_mdd": null,
+      "cvar90_mdd": null,
+      "mean_volatility": null,
+      "mean_nominal_fees": null,
+      "mean_trade_fraction": null,
+      "mean_automatic_fraction": null,
+      "funded_support_review_n": null,
+      "mean_protection_trade_fraction": null,
+      "mean_mitigation_trade_fraction": null,
+      "mean_mitigation_nominal_fees": null
+    },
+    "reference": {
+      "object_id": "E_exact_thirds_annual",
+      "profile": "E",
+      "assignment": "exact_thirds_reference",
+      "horizon": 6,
+      "L": 0.35,
+      "rule": "annual",
+      "original_n": 120,
+      "financial_n": 120,
+      "initial_review_n": 0,
+      "initial_coverage": 1.0,
+      "breach_count": 0,
+      "breach_fraction": 0.0,
+      "mean_log_growth": 0.03062302712636334,
+      "median_cagr": 0.03523921439765916,
+      "p10_cagr": -0.023186516966268212,
+      "mean_mdd": 0.10145707627426899,
+      "median_mdd": 0.08899442555912149,
+      "p90_mdd": 0.21925349761768256,
+      "cvar90_mdd": 0.26645330686286267,
+      "mean_volatility": 0.07661332788388032,
+      "mean_nominal_fees": 0.21939620982431376,
+      "mean_trade_fraction": 1.0,
+      "mean_automatic_fraction": 1.0,
+      "funded_support_review_n": 0,
+      "mean_protection_trade_fraction": 0.0,
+      "mean_mitigation_trade_fraction": 0.0,
+      "mean_mitigation_nominal_fees": 0.0
+    },
+    "same_funded_ids": [],
+    "paired_differences": {
+      "log_growth": {
+        "mean": null,
+        "median": null,
+        "positive_n": 0,
+        "negative_n": 0,
+        "numerical_tie_n": 0
+      },
+      "cagr": {
+        "mean": null,
+        "median": null,
+        "positive_n": 0,
+        "negative_n": 0,
+        "numerical_tie_n": 0
+      },
+      "mdd": {
+        "mean": null,
+        "median": null,
+        "positive_n": 0,
+        "negative_n": 0,
+        "numerical_tie_n": 0
+      },
+      "nominal_fees": {
+        "mean": null,
+        "median": null,
+        "positive_n": 0,
+        "negative_n": 0,
+        "numerical_tie_n": 0
+      },
+      "trade_fraction": {
+        "mean": null,
+        "median": null,
+        "positive_n": 0,
+        "negative_n": 0,
+        "numerical_tie_n": 0
+      },
+      "automatic_fraction": {
+        "mean": null,
+        "median": null,
+        "positive_n": 0,
+        "negative_n": 0,
+        "numerical_tie_n": 0
+      }
+    },
+    "event_id_partition": {
+      "neither": [],
+      "model_only": [],
+      "reference_only": [],
+      "both": []
+    }
+  }
+]
