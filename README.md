@@ -3,35 +3,59 @@
 2026 HKUST(GZ) MCM Senior Group Problem A. Team **Lebmar**, number **87**.
 Author: **Chengxuan YUAN**.
 
-**Current status: final evaluation and numerical verification are complete with
-the previously fixed model and admission rules unchanged. C execution remains
-Review, with no main-service financial outcomes. A robust autonomous C
-investment strategy has not been demonstrated.**
-Start with the [current model registry](docs/main_model_registry.json),
-[current model contract](docs/current_model_contract_2026_10_19.json),
-[final interpretation](docs/locked_final_evaluation_interpretation_judgment.json),
-and [verified final archive](results/final_locked_evaluation_v1/).
-The V1 code and report below
-are an archived, auditable prototype; they are not the accepted final competition
-model or a submission recommendation. Subsequent development rebuilt the objective,
-parameter meanings, assumptions, internal validation and decision rules.
-See `docs/model_foundation_review.json`; parameter/refit, coverage and
-joint-liquidity history is in notebook sections10.12–10.15. The earlier
-[executed research companion](notebooks/admission_stability_forecasts.ipynb)
-and [reading copy](notebooks/admission_stability_forecasts.html) examine the
-risk cost of new admission, complete-refit stability and prediction assumptions.
-The subsequent [simplification diagnostic](notebooks/simple_execution_diagnostic.ipynb)
-and [reading copy](notebooks/simple_execution_diagnostic.html) compare smaller
-execution families; they do not select a final Q2 strategy.
-No report is being regenerated in this
-phase. The old evaluation scenarios have already been seen and cannot be
-represented as a new blind test for subsequent changes.
+**Current technical version: the simpler V2b mitigation model is locked, and its
+separate nonblind final evaluation, independent audit and isolated replay are complete.**
+Main C initially funds60/60 paths;2 breach the original40% annual real-MDD limit.
+All60 trigger human referral by decision year7 and then follow the modeled hold
+assumption. Ordinary autonomous service covers19.44% of account-years. This is
+a risk–growth–service tradeoff, not a demonstrated autonomous30-year service.
+
+Start with the [new model registry](docs/mitigation_main_model_registry.json),
+[technical judgment](docs/mitigation_technical_completion_judgment.json),
+[development reading copy](notebooks/technical_rebuild_2026_10_19.executed.html),
+[separate final reading copy](notebooks/mitigation_locked_final_2026_10_19.html),
+and [new final evidence](results/mitigation_locked_final_evaluation_v1/).
+The development notebook retains9 source-backed figures and runnable cells.
+No paper has been regenerated in this phase; the existing report remains an
+archived prototype. Historical final exposure remains disclosed: this is not a
+fresh blind confirmation sample, and no parameter was adjusted after this run.
+
+| Fixed Q2 object (same60 IDs/H30) | Median real CAGR | P10 real CAGR | P90 real MDD | Breaches | Ordinary service |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| V2b protective trade then review/hold | 2.35% | 0.87% | 28.69% | 2/60 | 19.44% |
+| Same-target annual/pending B | 3.56% | 1.50% | 43.54% | 8/60 | 94.56% |
+| Same-target continuous annual | 3.56% | 1.48% | 43.54% | 8/60 | 100% |
+| Exact-thirds continuous annual | 3.38% | 1.47% | 39.36% | 6/60 | 100% |
+
+All financial paths keep original CPI, horizon, peak and absorbing breach history
+after referral. Initial Review is financialNULL; funded review/hold is fully
+accounted. Fees use the original destination-buy cost once. The final severe
+example is synthetic ID161, selected by maximum main full-horizon MDD with
+smallest-ID ties. A one-year supported action is not a recursive or real-market
+safety guarantee. Q1 staticB/C final frequencies exceed the empirical10% design
+reference; E has negativeP10growth and A/D remain Review.
+
+The final audit independently checks720 complete accounts and every main active
+decision; an isolated copy reproduces all11 output artifacts exactly. The source
+and release hashes preceded execution. A mistaken test filename prevented the
+intended pre-run Git commit; its late completion is explicitly recorded in the
+[engineering incident](docs/mitigation_final_precommit_incident.json). These
+implementation checks do not establish predictive validity.
+
+For compact technical reproduction see [SUBMISSION_README.md](SUBMISSION_README.md).
+The additive adapter defaults to constructed synthetic data; only explicit
+`--development` reads IDs1–120, reproduces the locked four Q2 objects and checks
+canonical array fingerprints. Historical runners keep their full evidence gates.
+The source-only ZIP is a technical artifact; paper and CMT delivery remain separate.
+
+Earlier authoritative registry/final records below are retained historical
+evidence and are superseded for the new V2b evaluation only.
 
 This repository records a reproducible investigation of purchasing-power risk,
 customer suitability, selective rebalancing and bounded target updates. It does
 not assume that a more complicated policy improves investment outcomes.
 
-## Locked final evaluation
+## Historical final evaluation of the earlier model
 
 The separate [execution release](docs/final_evaluation_release.json), audit,
 reproduction and paired-analysis plans were fixed before this run. All 60

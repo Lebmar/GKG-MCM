@@ -1,0 +1,754 @@
+{
+  "version": "mitigation-locked-final-interpretation-independent-review-v1",
+  "reviewed_utc": "2026-10-19T07:48:11.280150+00:00",
+  "status": "no_blocking_metric_or_figure_errors_editorial_clarifications_recommended",
+  "scope": "Previously exposed fixed-policy saved-result interpretation; not a new physical audit or market validation",
+  "sources_and_artifacts_at_start": {
+    "docs/DATA_NOTICE.md": "346f20647a08d9fcb86f4bce2ee8b26c89b515a72670968730f84e0ba39ed875",
+    "docs/mitigation_final_precommit_incident.json": "09b827d8267a7db44de7ac6b356d2b9e3d412f4e82d0e703d0fe3ed2672c0d57",
+    "docs/mitigation_locked_final_evaluation_release.json": "12d11ae86b48220313e89da593a1588be486865da9489a7253b981ae88a65887",
+    "docs/mitigation_locked_final_evaluation_release_freeze.json": "419318da8c893380bb4379bff386611ec62f86e212a375d8d68f676f0f0a03c3",
+    "docs/mitigation_locked_final_evaluation_source_freeze.json": "4fe35e70844a185b415a144e8c5179b5ead1b39e1c6df187b2a1092798b91d38",
+    "docs/mitigation_main_model_registry.json": "49059e6e2ef5138a1d8edd284a3353d5c412d2f54f518010c3ddfdaa561c6603",
+    "notebooks/mitigation_locked_final_2026_10_19.html": "0c7c4b23541590952fa991a978f98aa066e7f61dda70410f0a350bf74d873f73",
+    "notebooks/mitigation_locked_final_2026_10_19_assets/01_final_same_ids_ecdf.png": "32c769408b690793080d0bb7549328b5bea3b821da89b2fcbdf1451ed95802e4",
+    "notebooks/mitigation_locked_final_2026_10_19_assets/01_final_same_ids_ecdf.svg": "4fb2a9c8a453410603bf161e9a9122b81b2e57c989403475e372713755d809b9",
+    "notebooks/mitigation_locked_final_2026_10_19_assets/01_final_same_ids_ecdf_data.csv": "a8e1fe862b23c0281d78bcb89481a4e039cb46c5a719c36a72ea9cb0dbcc2f0c",
+    "notebooks/mitigation_locked_final_2026_10_19_assets/02_service_and_fees.png": "cc311ef29ca0c036dcfe429beccb094b3c9066bce57164410068912c8e622408",
+    "notebooks/mitigation_locked_final_2026_10_19_assets/02_service_and_fees.svg": "203dbaa25ed616b2602e3d4d55fa2f740cb8481e213dc49eb60b5206b2c8dec8",
+    "notebooks/mitigation_locked_final_2026_10_19_assets/02_service_and_fees_data.csv": "55e9b925fa3246bf0cd0940a1484a9111add3c1d86175b1bb6384492d798244e",
+    "notebooks/mitigation_locked_final_2026_10_19_assets/03_severe_synthetic_path.png": "b8e20111dadbe09a37a15d6070323434414a37971510dce9c80f1fe31cb3f3eb",
+    "notebooks/mitigation_locked_final_2026_10_19_assets/03_severe_synthetic_path.svg": "71ee1607511eca4f9682d3b7365f66e02f8939b96ef883ca09b5601d60fe6454",
+    "notebooks/mitigation_locked_final_2026_10_19_assets/03_severe_synthetic_path_data.csv": "3a7388a392af840a7720e04dbb09fa5121406a3cf988ab33cb53797287d74eac",
+    "notebooks/mitigation_locked_final_2026_10_19_assets/all14_summary.csv": "95843446221c3cccc902fcc9e3160454f26cfe3f34148fdd3e6d17686c1dbc42",
+    "notebooks/mitigation_locked_final_2026_10_19_assets/build_manifest.json": "e20ba3842883a3a869a58771810c7d527221c06ef6daaab5831df8f0fdfff958",
+    "notebooks/mitigation_locked_final_2026_10_19_assets/paired_comparison.csv": "b3a87434453cb1a7fc2c41e2157433a4ce4754fd87628ee8ccfaa83d8dfcb5ce",
+    "results/mitigation_locked_final_evaluation_v1/Q1_paths.csv.gz": "7c311a2115ba2bf8a56ba5b23e364ddeadca1f9ea221468f14e1f13a253d6828",
+    "results/mitigation_locked_final_evaluation_v1/Q1_thirds_references.csv.gz": "77441aa07751feb06f64888619358f1231d73ee34bd1f2595e7cdf16ef79212a",
+    "results/mitigation_locked_final_evaluation_v1/Q2_paths.csv.gz": "d10bd18cd2de024739c82b4ce8d71059ffcf8a0f4cd0e9a8a8731b1f66b5be91",
+    "results/mitigation_locked_final_evaluation_v1/comparisons.json": "5d2c2a89e568ea9cdd5a03f3d8feb89ac74103061f54869166c3074383323793",
+    "results/mitigation_locked_final_evaluation_v1/independent_audit.json": "7929ea36e23c9b357a568b8d0f06cd7f90024a61aae0222c11c532cc1bcf65c8",
+    "results/mitigation_locked_final_evaluation_v1/initial_witness.json": "e7e6f0e28ba67b784ab78f0111734cc1fa7be7f8ed6516edcdec9b6c1a88eb72",
+    "results/mitigation_locked_final_evaluation_v1/manifest.json": "7401ad59279c694fc4077ab42af1af42e707b258156bca5a7ec110467e407f07",
+    "results/mitigation_locked_final_evaluation_v1/object_specification.json": "e3d688efed00bccd9483cc4814d88533fa17d6c18d4f7874e79b3e97d15f4efe",
+    "results/mitigation_locked_final_evaluation_v1/paired_paths.csv.gz": "84b2f17708845785592dfc0a61d694255e14c063511fa0de6073aeab7928ea37",
+    "results/mitigation_locked_final_evaluation_v1/severe_example.json": "f7b8ecbbf0ef2880067542dd6ce231d6fb95172a473032426e514b7faf233edf",
+    "results/mitigation_locked_final_evaluation_v1/summary.csv.gz": "c050b0fac11437dfb7c8879f58db7f65de94346521362b5828ac998f6c42d6bc",
+    "results/mitigation_locked_final_evaluation_v1/trace_groups.json": "6543fb2e3d64a8c9415822b123588fb6505112810ef304f15b56d06d644fc833",
+    "results/mitigation_locked_final_evaluation_v1/traces.npz": "4383cb1cdcd812b120a512557c9d0463c58de35ce725a7d668fb378b76be513a",
+    "results/mitigation_locked_final_reproduction_v1/comparison.json": "db944f203a44ad4ef4d0414f363008736f2c95ccd259a3f78a13b95a7e0670c0",
+    "results/mitigation_locked_final_reproduction_v1/manifest.json": "109e4c8e1a18dfebe9e0da282faea15f664f36d577fafdf7371dda288a1ce0a1",
+    "scripts/build_mitigation_final_companion.py": "28e335fd26f52fe85f3bc0e3b2610b1196667d168f479490dbc8ad658603cc9a"
+  },
+  "parent_manifest_sha256": "7401ad59279c694fc4077ab42af1af42e707b258156bca5a7ec110467e407f07",
+  "independent_audit_sha256": "7929ea36e23c9b357a568b8d0f06cd7f90024a61aae0222c11c532cc1bcf65c8",
+  "isolated_replay_manifest_sha256": "109e4c8e1a18dfebe9e0da282faea15f664f36d577fafdf7371dda288a1ce0a1",
+  "reviewed_builder_sha256": "28e335fd26f52fe85f3bc0e3b2610b1196667d168f479490dbc8ad658603cc9a",
+  "reviewed_page_sha256": "0c7c4b23541590952fa991a978f98aa066e7f61dda70410f0a350bf74d873f73",
+  "q2_same_original_and_funded_60": [
+    {
+      "object_id": "mitigation_main",
+      "original_n": 60,
+      "financial_n": 60,
+      "breach_count": 2,
+      "breach_fraction": 0.03333333333333333,
+      "median_cagr": 0.023456969155278853,
+      "mean_nominal_fees": 0.353286079844228,
+      "ordinary_service_fraction": 0.1944444444444444,
+      "trade_fraction": 0.21222222222222223
+    },
+    {
+      "object_id": "same_target_B",
+      "original_n": 60,
+      "financial_n": 60,
+      "breach_count": 8,
+      "breach_fraction": 0.13333333333333333,
+      "median_cagr": 0.03561646587310585,
+      "mean_nominal_fees": 1.0175608057534467,
+      "ordinary_service_fraction": 0.9455555555555556,
+      "trade_fraction": 0.9455555555555556
+    },
+    {
+      "object_id": "same_target_annual",
+      "original_n": 60,
+      "financial_n": 60,
+      "breach_count": 8,
+      "breach_fraction": 0.13333333333333333,
+      "median_cagr": 0.03561646587310585,
+      "mean_nominal_fees": 1.0669435058009846,
+      "ordinary_service_fraction": 1.0,
+      "trade_fraction": 1.0
+    },
+    {
+      "object_id": "exact_thirds_annual",
+      "original_n": 60,
+      "financial_n": 60,
+      "breach_count": 6,
+      "breach_fraction": 0.1,
+      "median_cagr": 0.033760821101778485,
+      "mean_nominal_fees": 0.9787498107143866,
+      "ordinary_service_fraction": 1.0,
+      "trade_fraction": 1.0
+    }
+  ],
+  "q1_own_horizon_null_review": [
+    {
+      "profile": "A",
+      "horizon": 5,
+      "L": 0.1,
+      "financial_n": 0,
+      "breach_count": null,
+      "median_cagr": null,
+      "p10_cagr": null
+    },
+    {
+      "profile": "B",
+      "horizon": 15,
+      "L": 0.25,
+      "financial_n": 60,
+      "breach_count": 11,
+      "median_cagr": 0.03210568247124884,
+      "p10_cagr": 0.0034533036487742596
+    },
+    {
+      "profile": "C",
+      "horizon": 30,
+      "L": 0.4,
+      "financial_n": 60,
+      "breach_count": 8,
+      "median_cagr": 0.03561646587310585,
+      "p10_cagr": 0.014829895574796569
+    },
+    {
+      "profile": "D",
+      "horizon": 25,
+      "L": 0.15,
+      "financial_n": 0,
+      "breach_count": null,
+      "median_cagr": null,
+      "p10_cagr": null
+    },
+    {
+      "profile": "E",
+      "horizon": 6,
+      "L": 0.35,
+      "financial_n": 60,
+      "breach_count": 5,
+      "median_cagr": 0.04514872699475683,
+      "p10_cagr": -0.015799721224558305
+    }
+  ],
+  "paired_same_id_differences": [
+    {
+      "reference": "same_target_B",
+      "matched_ids": [
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180
+      ],
+      "paired_metrics": {
+        "log_growth": {
+          "mean_difference": -0.011534002053186521,
+          "higher_n": 4,
+          "lower_n": 56
+        },
+        "cagr": {
+          "mean_difference": -0.01196827865843668,
+          "higher_n": 4,
+          "lower_n": 56
+        },
+        "mdd": {
+          "mean_difference": -0.07317610924180593,
+          "higher_n": 8,
+          "lower_n": 52
+        }
+      }
+    },
+    {
+      "reference": "same_target_annual",
+      "matched_ids": [
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180
+      ],
+      "paired_metrics": {
+        "log_growth": {
+          "mean_difference": -0.011336415773906958,
+          "higher_n": 3,
+          "lower_n": 57
+        },
+        "cagr": {
+          "mean_difference": -0.011767116365941804,
+          "higher_n": 3,
+          "lower_n": 57
+        },
+        "mdd": {
+          "mean_difference": -0.07433289613696334,
+          "higher_n": 8,
+          "lower_n": 52
+        }
+      }
+    },
+    {
+      "reference": "exact_thirds_annual",
+      "matched_ids": [
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180
+      ],
+      "paired_metrics": {
+        "log_growth": {
+          "mean_difference": -0.008093214051398439,
+          "higher_n": 9,
+          "lower_n": 51
+        },
+        "cagr": {
+          "mean_difference": -0.00835513406241718,
+          "higher_n": 9,
+          "lower_n": 51
+        },
+        "mdd": {
+          "mean_difference": -0.04526762487486117,
+          "higher_n": 15,
+          "lower_n": 45
+        }
+      }
+    }
+  ],
+  "posthoc_guard_timing": {
+    "selection_or_policy_change": false,
+    "all_original_ids_preserved": true,
+    "per_original_id": [
+      {
+        "scenario_id": 121,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 122,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 123,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 124,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 125,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 126,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 127,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 128,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 129,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 130,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 131,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 132,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 133,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 134,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 135,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 136,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 137,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 138,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 139,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 140,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 141,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 142,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 143,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 144,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 145,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 146,
+        "first_guard_year": 6
+      },
+      {
+        "scenario_id": 147,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 148,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 149,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 150,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 151,
+        "first_guard_year": 5
+      },
+      {
+        "scenario_id": 152,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 153,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 154,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 155,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 156,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 157,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 158,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 159,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 160,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 161,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 162,
+        "first_guard_year": 6
+      },
+      {
+        "scenario_id": 163,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 164,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 165,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 166,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 167,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 168,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 169,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 170,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 171,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 172,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 173,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 174,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 175,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 176,
+        "first_guard_year": 5
+      },
+      {
+        "scenario_id": 177,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 178,
+        "first_guard_year": 6
+      },
+      {
+        "scenario_id": 179,
+        "first_guard_year": 7
+      },
+      {
+        "scenario_id": 180,
+        "first_guard_year": 4
+      }
+    ],
+    "histogram": {
+      "4": 1,
+      "5": 2,
+      "6": 3,
+      "7": 54
+    },
+    "year7_fraction": 0.9,
+    "ordinary_true_periods": 350,
+    "original_account_period_denominator": 1800,
+    "ordinary_fraction": 0.19444444444444445,
+    "average_ordinary_periods": 5.833333333333333,
+    "full_matrix_identity": "ordinary[i,t] == (0-based t < first_guard_year[i]-1)",
+    "all_mitigation_evaluations": 60,
+    "nonzero_mitigation_trades": 59,
+    "total_trade_periods": 382,
+    "after_guard_interpretation": "One guard-period mitigation decision, then absorbing pending hold; no simulated human portfolio decision or timely human response."
+  },
+  "severe_example": {
+    "original_id": 161,
+    "mdd": 0.47680088076968674,
+    "selection_rule": "max fullH main MDD then min exact-tied originalID",
+    "illustrative_not_representative": true
+  },
+  "figure_review": {
+    "actual_view_image": [
+      "01_final_same_ids_ecdf.png",
+      "02_service_and_fees.png",
+      "03_severe_synthetic_path.png"
+    ],
+    "PNG_hashes": {
+      "01_final_same_ids_ecdf.png": "32c769408b690793080d0bb7549328b5bea3b821da89b2fcbdf1451ed95802e4",
+      "02_service_and_fees.png": "cc311ef29ca0c036dcfe429beccb094b3c9066bce57164410068912c8e622408",
+      "03_severe_synthetic_path.png": "b8e20111dadbe09a37a15d6070323434414a37971510dce9c80f1fe31cb3f3eb"
+    },
+    "all_fig1_60_ids_and_CAGR_MDD_verified": true,
+    "severe_all4_31endpoints_exactly_verified": true,
+    "readability": "Three PNGs readable; differentiated lines, all references shown, full original horizon retained; no confidence bands.",
+    "HTML_rendered_by_this_reviewer": false,
+    "HTML_scope": "Source and saved HTML text/CSS inspected; browser-wide/narrow rendering belongs to separate root QA."
+  },
+  "temporal_record": {
+    "release_activation_utc": "2026-10-19T07:30:02.668357+00:00",
+    "producer_started_utc": "2026-10-19T07:33:05.738440+00:00",
+    "producer_completed_utc": "2026-10-19T07:33:06.346231+00:00",
+    "incident_recorded_utc": "2026-10-19T07:33:51.656877+00:00",
+    "source_hash_freeze_precedes_access": true,
+    "git_commit_precedes_access": false,
+    "assessment": "Reading copy correctly discloses hash freeze before access and delayed intended Git commit; do not claim a pre-run Git commit."
+  },
+  "supported_conclusion": "For these60 previously exposed synthetic scenarios, the locked V2b has fewer40% MDD breaches and lower average MDD than each declared reference, with lower growth, far less ordinary service and earlier absorbing referral/hold. These are paired descriptive trade-offs, not universal dominance or a population risk guarantee.",
+  "required_boundaries": [
+    "2/60 is an empirical frequency; it does not establish true future breach probability at or below10%. Prior exposure and small fixed synthetic sample prevent a fresh blind generalization claim.",
+    "Three references are distinct. Same-target B stops rebalancing after breach; same-target annual continues; identical median CAGR and event counts do not make their full paths identical.",
+    "Ordinary service350/(60×30)=19.4444% excludes the guard-trigger period even when that period executes mitigation. Initial funding60/60 is not long-horizon service coverage.",
+    "Every account triggers guard in years4–7, with54 at year7. This is a posthoc description of the complete fixed cohort, not a mechanism identification, a new selection criterion or a reason to retune.",
+    "Main MDD exceeds B on8 paths and thirds on15 paths; fewer threshold events does not imply pathwise drawdown dominance. Main worst MDD remains47.6801%.",
+    "Lower transaction fees omit human-service costs and accompany lower growth and much more pending hold. They do not establish net economic superiority.",
+    "Annual endpoint MDD omits intra-year losses; empirical return support/floor feasibility is not a true future or recursive guarantee.",
+    "Q1 A/D are financial NULL and cannot inherit returns from their thirds references. B15y, C30y and E6y have different L/H; their risk frequencies cannot be ranked as a common risk score.",
+    "Independent accounting audit and exact same-source replay establish correctness/reproducibility of declared calculations, not predictive correctness or a new independent sample."
+  ],
+  "editorial_recommendations": [
+    {
+      "priority": "clarity",
+      "location": "Result paragraph and figure2 title",
+      "recommendation": "Prefer 触发人工转介并进入持有 to 最终转人工, so a simulated human action or successful handoff is not implied."
+    },
+    {
+      "priority": "material_negative_timing",
+      "location": "Result/service explanation",
+      "recommendation": "Add complete posthoc guard histogram4:1/5:2/6:3/7:54 and explain 350/1800 ordinary service periods; the long passive tail is material to30-year result interpretation."
+    },
+    {
+      "priority": "precision",
+      "location": "Any mitigation count discussion",
+      "recommendation": "State60 mitigation evaluations but59 nonzero mitigation trades; do not label all60 as executed trades."
+    }
+  ],
+  "raw_market_reads": 0,
+  "new_model_runs": 0,
+  "new_fits": 0,
+  "new_selection": 0,
+  "old_frozen_sources_modified": false,
+  "sources_and_artifacts_at_end": {
+    "docs/DATA_NOTICE.md": "346f20647a08d9fcb86f4bce2ee8b26c89b515a72670968730f84e0ba39ed875",
+    "docs/mitigation_final_precommit_incident.json": "09b827d8267a7db44de7ac6b356d2b9e3d412f4e82d0e703d0fe3ed2672c0d57",
+    "docs/mitigation_locked_final_evaluation_release.json": "12d11ae86b48220313e89da593a1588be486865da9489a7253b981ae88a65887",
+    "docs/mitigation_locked_final_evaluation_release_freeze.json": "419318da8c893380bb4379bff386611ec62f86e212a375d8d68f676f0f0a03c3",
+    "docs/mitigation_locked_final_evaluation_source_freeze.json": "4fe35e70844a185b415a144e8c5179b5ead1b39e1c6df187b2a1092798b91d38",
+    "docs/mitigation_main_model_registry.json": "49059e6e2ef5138a1d8edd284a3353d5c412d2f54f518010c3ddfdaa561c6603",
+    "notebooks/mitigation_locked_final_2026_10_19.html": "0c7c4b23541590952fa991a978f98aa066e7f61dda70410f0a350bf74d873f73",
+    "notebooks/mitigation_locked_final_2026_10_19_assets/01_final_same_ids_ecdf.png": "32c769408b690793080d0bb7549328b5bea3b821da89b2fcbdf1451ed95802e4",
+    "notebooks/mitigation_locked_final_2026_10_19_assets/01_final_same_ids_ecdf.svg": "4fb2a9c8a453410603bf161e9a9122b81b2e57c989403475e372713755d809b9",
+    "notebooks/mitigation_locked_final_2026_10_19_assets/01_final_same_ids_ecdf_data.csv": "a8e1fe862b23c0281d78bcb89481a4e039cb46c5a719c36a72ea9cb0dbcc2f0c",
+    "notebooks/mitigation_locked_final_2026_10_19_assets/02_service_and_fees.png": "cc311ef29ca0c036dcfe429beccb094b3c9066bce57164410068912c8e622408",
+    "notebooks/mitigation_locked_final_2026_10_19_assets/02_service_and_fees.svg": "203dbaa25ed616b2602e3d4d55fa2f740cb8481e213dc49eb60b5206b2c8dec8",
+    "notebooks/mitigation_locked_final_2026_10_19_assets/02_service_and_fees_data.csv": "55e9b925fa3246bf0cd0940a1484a9111add3c1d86175b1bb6384492d798244e",
+    "notebooks/mitigation_locked_final_2026_10_19_assets/03_severe_synthetic_path.png": "b8e20111dadbe09a37a15d6070323434414a37971510dce9c80f1fe31cb3f3eb",
+    "notebooks/mitigation_locked_final_2026_10_19_assets/03_severe_synthetic_path.svg": "71ee1607511eca4f9682d3b7365f66e02f8939b96ef883ca09b5601d60fe6454",
+    "notebooks/mitigation_locked_final_2026_10_19_assets/03_severe_synthetic_path_data.csv": "3a7388a392af840a7720e04dbb09fa5121406a3cf988ab33cb53797287d74eac",
+    "notebooks/mitigation_locked_final_2026_10_19_assets/all14_summary.csv": "95843446221c3cccc902fcc9e3160454f26cfe3f34148fdd3e6d17686c1dbc42",
+    "notebooks/mitigation_locked_final_2026_10_19_assets/build_manifest.json": "e20ba3842883a3a869a58771810c7d527221c06ef6daaab5831df8f0fdfff958",
+    "notebooks/mitigation_locked_final_2026_10_19_assets/paired_comparison.csv": "b3a87434453cb1a7fc2c41e2157433a4ce4754fd87628ee8ccfaa83d8dfcb5ce",
+    "results/mitigation_locked_final_evaluation_v1/Q1_paths.csv.gz": "7c311a2115ba2bf8a56ba5b23e364ddeadca1f9ea221468f14e1f13a253d6828",
+    "results/mitigation_locked_final_evaluation_v1/Q1_thirds_references.csv.gz": "77441aa07751feb06f64888619358f1231d73ee34bd1f2595e7cdf16ef79212a",
+    "results/mitigation_locked_final_evaluation_v1/Q2_paths.csv.gz": "d10bd18cd2de024739c82b4ce8d71059ffcf8a0f4cd0e9a8a8731b1f66b5be91",
+    "results/mitigation_locked_final_evaluation_v1/comparisons.json": "5d2c2a89e568ea9cdd5a03f3d8feb89ac74103061f54869166c3074383323793",
+    "results/mitigation_locked_final_evaluation_v1/independent_audit.json": "7929ea36e23c9b357a568b8d0f06cd7f90024a61aae0222c11c532cc1bcf65c8",
+    "results/mitigation_locked_final_evaluation_v1/initial_witness.json": "e7e6f0e28ba67b784ab78f0111734cc1fa7be7f8ed6516edcdec9b6c1a88eb72",
+    "results/mitigation_locked_final_evaluation_v1/manifest.json": "7401ad59279c694fc4077ab42af1af42e707b258156bca5a7ec110467e407f07",
+    "results/mitigation_locked_final_evaluation_v1/object_specification.json": "e3d688efed00bccd9483cc4814d88533fa17d6c18d4f7874e79b3e97d15f4efe",
+    "results/mitigation_locked_final_evaluation_v1/paired_paths.csv.gz": "84b2f17708845785592dfc0a61d694255e14c063511fa0de6073aeab7928ea37",
+    "results/mitigation_locked_final_evaluation_v1/severe_example.json": "f7b8ecbbf0ef2880067542dd6ce231d6fb95172a473032426e514b7faf233edf",
+    "results/mitigation_locked_final_evaluation_v1/summary.csv.gz": "c050b0fac11437dfb7c8879f58db7f65de94346521362b5828ac998f6c42d6bc",
+    "results/mitigation_locked_final_evaluation_v1/trace_groups.json": "6543fb2e3d64a8c9415822b123588fb6505112810ef304f15b56d06d644fc833",
+    "results/mitigation_locked_final_evaluation_v1/traces.npz": "4383cb1cdcd812b120a512557c9d0463c58de35ce725a7d668fb378b76be513a",
+    "results/mitigation_locked_final_reproduction_v1/comparison.json": "db944f203a44ad4ef4d0414f363008736f2c95ccd259a3f78a13b95a7e0670c0",
+    "results/mitigation_locked_final_reproduction_v1/manifest.json": "109e4c8e1a18dfebe9e0da282faea15f664f36d577fafdf7371dda288a1ce0a1",
+    "scripts/build_mitigation_final_companion.py": "28e335fd26f52fe85f3bc0e3b2610b1196667d168f479490dbc8ad658603cc9a"
+  }
+}

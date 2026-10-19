@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "command": ".venv/bin/python -m unittest discover -s tests -v",
+  "tests_run": 1419,
+  "skipped": 0,
+  "successful_non_skipped": 1419,
+  "seconds": 176.9,
+  "log_path": "results/technical_completion_test_run_v1/unit_tests.txt",
+  "log_sha256": "82073c094a62f14cbbc5e2d1c753d3269c9edaf787be48dabfb6d3735b75184d",
+  "source_changes_after_test_start": false,
+  "scope": "Full repository unittest discovery;1419 tests, no skips. No claim of independent predictive validation."
+}
