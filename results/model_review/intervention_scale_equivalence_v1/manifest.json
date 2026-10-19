@@ -1,0 +1,47 @@
+{
+  "status": "complete",
+  "completed_utc": "2026-10-19T04:35:07.425936+00:00",
+  "plan_sha256": "bb4a07a1b3910fbff87cbc62e474f917626734b10754f24a7dfd069930dbae2f",
+  "sources_and_inputs_at_start": {
+    "scripts/diagnose_intervention_scale_equivalence.py": "373451316d71c34cc4bcba70073e702656a9619190880a43493c751be9f9d9c8",
+    "tests/test_intervention_scale_equivalence.py": "aa0b91a6418b25edf77447a6a521785d227353460e9b0f12bfc8eef041119085",
+    "scripts/audit_review_pending_execution.py": "9c208ce69a03f1a13460908ec04b39a8dc232eacbb8882b5bdef3aafae60a264",
+    "scripts/audit_fan_rollout_execution.py": "9f9d4a274e3be531040193e1654ec6bdf74733ad5204937b8a8d8195d02940fb",
+    "docs/failure_action_intervention_protocol.json": "fd84ca974aa7b81416e150809e1b87ebc5b759d4202e81872ee12c9287884963",
+    "results/model_review/failure_action_intervention_v1/manifest.json": "00b350cea199d8d851ce7596fc1f11507a7a5af7ec46e0de6ed18dd2a8b09660",
+    "results/model_review/failure_action_intervention_v1/independent_audit.json": "afb814dabcffb98df8c154caea9948300483afaae1c15ab1fccfb34ad84c89bb",
+    "results/model_review/failure_action_intervention_v1/full_branches.npz": "7fa53c2c0f1668d942a9f7a72db69cdb56d75e6f71d4b6d56744f98e29519f5c",
+    "results/model_review/failure_action_intervention_v1/intervention_summary.json": "50bb2e24179898b5aec7488cfa566abf218f0991db88ff70478d4126327091fb",
+    "docs/intervention_scale_equivalence_plan.json": "bb4a07a1b3910fbff87cbc62e474f917626734b10754f24a7dfd069930dbae2f"
+  },
+  "sources_and_inputs_at_end": {
+    "scripts/diagnose_intervention_scale_equivalence.py": "373451316d71c34cc4bcba70073e702656a9619190880a43493c751be9f9d9c8",
+    "tests/test_intervention_scale_equivalence.py": "aa0b91a6418b25edf77447a6a521785d227353460e9b0f12bfc8eef041119085",
+    "scripts/audit_review_pending_execution.py": "9c208ce69a03f1a13460908ec04b39a8dc232eacbb8882b5bdef3aafae60a264",
+    "scripts/audit_fan_rollout_execution.py": "9f9d4a274e3be531040193e1654ec6bdf74733ad5204937b8a8d8195d02940fb",
+    "docs/failure_action_intervention_protocol.json": "fd84ca974aa7b81416e150809e1b87ebc5b759d4202e81872ee12c9287884963",
+    "results/model_review/failure_action_intervention_v1/manifest.json": "00b350cea199d8d851ce7596fc1f11507a7a5af7ec46e0de6ed18dd2a8b09660",
+    "results/model_review/failure_action_intervention_v1/independent_audit.json": "afb814dabcffb98df8c154caea9948300483afaae1c15ab1fccfb34ad84c89bb",
+    "results/model_review/failure_action_intervention_v1/full_branches.npz": "7fa53c2c0f1668d942a9f7a72db69cdb56d75e6f71d4b6d56744f98e29519f5c",
+    "results/model_review/failure_action_intervention_v1/intervention_summary.json": "50bb2e24179898b5aec7488cfa566abf218f0991db88ff70478d4126327091fb",
+    "docs/intervention_scale_equivalence_plan.json": "bb4a07a1b3910fbff87cbc62e474f917626734b10754f24a7dfd069930dbae2f"
+  },
+  "outputs_sha256": {
+    "pair_results.json": "165a3006ba33b615f356a6aa2556f7da03f0ced24d109d9d4440064840af2adf",
+    "endpoint_scan.csv.gz": "65fdaa1b55aa7b919e5d005b13bf3e4d23699d4f0aab6eb828cb3f3757998893",
+    "pair_summary.csv.gz": "6d9f6961838cb6aa6d50034f41086f7b23bdafd757e4ce92ccd5d5d00ee37d95"
+  },
+  "summary": {
+    "pairs": 11,
+    "pairs_with_interior_witness": 9,
+    "pairs_with_verified_scaled_future": 9,
+    "failed_earliest_candidates": 0,
+    "equal_terminal_mdd_pairs": 9,
+    "witnesses_strictly_before_both_mdd_attainments": 9,
+    "no_new_market_load": true,
+    "new_fits": 0,
+    "new_policy_simulations": 0,
+    "admission_changed": false
+  },
+  "inference": "Post-hoc sufficient scaling identity check on all fixed CF paths; no conditional forecast, market or population causal validation"
+}

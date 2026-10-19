@@ -1,0 +1,1523 @@
+{
+  "status": "passed",
+  "protocol_sha256": "de4e73d682411df7ca5a5095d947f9541e30cfba68046cce611afe28cd497e1d",
+  "exact_NPZ_base_bridge": {
+    "fixed_target_learner": [
+      {
+        "field": "actions",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "<U7",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "added_severity",
+        "shape": [
+          120
+        ],
+        "dtype": "float64",
+        "values": 120,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "annual_prices",
+        "shape": [
+          1
+        ],
+        "dtype": "float64",
+        "values": 1,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "available_followup",
+        "shape": [
+          120
+        ],
+        "dtype": "int64",
+        "values": 120,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "cpi",
+        "shape": [
+          120,
+          31
+        ],
+        "dtype": "float64",
+        "values": 3720,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "current_drawdown",
+        "shape": [
+          120,
+          31
+        ],
+        "dtype": "float64",
+        "values": 3720,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "drawdown_at_trigger",
+        "shape": [
+          120
+        ],
+        "dtype": "float64",
+        "values": 120,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "end_weights",
+        "shape": [
+          120,
+          30,
+          3
+        ],
+        "dtype": "float64",
+        "values": 10800,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "end_year_tv_drift",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "float64",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "ever_breached",
+        "shape": [
+          120,
+          31
+        ],
+        "dtype": "bool",
+        "values": 3720,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "fee_fraction",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "float64",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "fees",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "float64",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "first_crossing",
+        "shape": [
+          120
+        ],
+        "dtype": "int64",
+        "values": 120,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "forecast_n",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "int64",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "gate_reason",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "<U48",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "holdings",
+        "shape": [
+          120,
+          31,
+          3
+        ],
+        "dtype": "float64",
+        "values": 11160,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "loss_tolerances",
+        "shape": [
+          1
+        ],
+        "dtype": "float64",
+        "values": 1,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "moved",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "float64",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "moved_fraction",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "float64",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "nominal_wealth",
+        "shape": [
+          120,
+          31
+        ],
+        "dtype": "float64",
+        "values": 3720,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "observed_followup",
+        "shape": [
+          120
+        ],
+        "dtype": "int64",
+        "values": 120,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "peak_at_trigger",
+        "shape": [
+          120
+        ],
+        "dtype": "float64",
+        "values": 120,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "pending_at_decision",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "bool",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "posttrade_holdings",
+        "shape": [
+          120,
+          30,
+          3
+        ],
+        "dtype": "float64",
+        "values": 10800,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "predicted_breach_count_delta_restore",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "int64",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "predicted_growth_advantage_restore",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "float64",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "predicted_score",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "float64",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "pretrade_tv_drift",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "float64",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "pretrade_wealth",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "float64",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "qbad_hold_count",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "int64",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "qbad_restore_count",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "int64",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "qg_hold",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "float64",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "qg_restore",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "float64",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "real_peak",
+        "shape": [
+          120,
+          31
+        ],
+        "dtype": "float64",
+        "values": 3720,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "real_wealth",
+        "shape": [
+          120,
+          31
+        ],
+        "dtype": "float64",
+        "values": 3720,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "real_wealth_at_trigger",
+        "shape": [
+          120
+        ],
+        "dtype": "float64",
+        "values": 120,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "recovered",
+        "shape": [
+          120
+        ],
+        "dtype": "bool",
+        "values": 120,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "recovery_endpoint",
+        "shape": [
+          120
+        ],
+        "dtype": "int64",
+        "values": 120,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "recovery_time",
+        "shape": [
+          120
+        ],
+        "dtype": "int64",
+        "values": 120,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "restoration_predicted_growth_sacrifice",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "bool",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "right_censored",
+        "shape": [
+          120
+        ],
+        "dtype": "bool",
+        "values": 120,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "running_mdd",
+        "shape": [
+          120,
+          31
+        ],
+        "dtype": "float64",
+        "values": 3720,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "target_execution",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "bool",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "targets",
+        "shape": [
+          3
+        ],
+        "dtype": "float64",
+        "values": 3,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "terminal_excess",
+        "shape": [
+          120
+        ],
+        "dtype": "float64",
+        "values": 120,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "trades",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "bool",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "triggered",
+        "shape": [
+          120
+        ],
+        "dtype": "bool",
+        "values": 120,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "weights",
+        "shape": [
+          120,
+          31,
+          3
+        ],
+        "dtype": "float64",
+        "values": 11160,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      }
+    ],
+    "annual_then_pending": [
+      {
+        "field": "actions",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "<U7",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "added_severity",
+        "shape": [
+          120
+        ],
+        "dtype": "float64",
+        "values": 120,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "available_followup",
+        "shape": [
+          120
+        ],
+        "dtype": "int64",
+        "values": 120,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "cpi",
+        "shape": [
+          120,
+          31
+        ],
+        "dtype": "float64",
+        "values": 3720,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "current_drawdown",
+        "shape": [
+          120,
+          31
+        ],
+        "dtype": "float64",
+        "values": 3720,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "drawdown_at_trigger",
+        "shape": [
+          120
+        ],
+        "dtype": "float64",
+        "values": 120,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "end_weights",
+        "shape": [
+          120,
+          30,
+          3
+        ],
+        "dtype": "float64",
+        "values": 10800,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "end_year_tv_drift",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "float64",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "ever_breached",
+        "shape": [
+          120,
+          31
+        ],
+        "dtype": "bool",
+        "values": 3720,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "fee_fraction",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "float64",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "fees",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "float64",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "first_crossing",
+        "shape": [
+          120
+        ],
+        "dtype": "int64",
+        "values": 120,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "holdings",
+        "shape": [
+          120,
+          31,
+          3
+        ],
+        "dtype": "float64",
+        "values": 11160,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "moved",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "float64",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "moved_fraction",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "float64",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "nominal_wealth",
+        "shape": [
+          120,
+          31
+        ],
+        "dtype": "float64",
+        "values": 3720,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "observed_followup",
+        "shape": [
+          120
+        ],
+        "dtype": "int64",
+        "values": 120,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "peak_at_trigger",
+        "shape": [
+          120
+        ],
+        "dtype": "float64",
+        "values": 120,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "pending_at_decision",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "bool",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "posttrade_holdings",
+        "shape": [
+          120,
+          30,
+          3
+        ],
+        "dtype": "float64",
+        "values": 10800,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "pretrade_tv_drift",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "float64",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "pretrade_wealth",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "float64",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "real_peak",
+        "shape": [
+          120,
+          31
+        ],
+        "dtype": "float64",
+        "values": 3720,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "real_wealth",
+        "shape": [
+          120,
+          31
+        ],
+        "dtype": "float64",
+        "values": 3720,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "real_wealth_at_trigger",
+        "shape": [
+          120
+        ],
+        "dtype": "float64",
+        "values": 120,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "recovered",
+        "shape": [
+          120
+        ],
+        "dtype": "bool",
+        "values": 120,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "recovery_endpoint",
+        "shape": [
+          120
+        ],
+        "dtype": "int64",
+        "values": 120,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "recovery_time",
+        "shape": [
+          120
+        ],
+        "dtype": "int64",
+        "values": 120,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "right_censored",
+        "shape": [
+          120
+        ],
+        "dtype": "bool",
+        "values": 120,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "running_mdd",
+        "shape": [
+          120,
+          31
+        ],
+        "dtype": "float64",
+        "values": 3720,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "target_execution",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "bool",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "targets",
+        "shape": [
+          3
+        ],
+        "dtype": "float64",
+        "values": 3,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "explicitly declared old protocol metadata; absent old NPZ field"
+      },
+      {
+        "field": "terminal_excess",
+        "shape": [
+          120
+        ],
+        "dtype": "float64",
+        "values": 120,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "trades",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "bool",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "triggered",
+        "shape": [
+          120
+        ],
+        "dtype": "bool",
+        "values": 120,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "weights",
+        "shape": [
+          120,
+          31,
+          3
+        ],
+        "dtype": "float64",
+        "values": 11160,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      }
+    ],
+    "equal_thirds_annual": [
+      {
+        "field": "actions",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "<U7",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "added_severity",
+        "shape": [
+          120
+        ],
+        "dtype": "float64",
+        "values": 120,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "available_followup",
+        "shape": [
+          120
+        ],
+        "dtype": "int64",
+        "values": 120,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "cpi",
+        "shape": [
+          120,
+          31
+        ],
+        "dtype": "float64",
+        "values": 3720,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "current_drawdown",
+        "shape": [
+          120,
+          31
+        ],
+        "dtype": "float64",
+        "values": 3720,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "drawdown_at_trigger",
+        "shape": [
+          120
+        ],
+        "dtype": "float64",
+        "values": 120,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "end_weights",
+        "shape": [
+          120,
+          30,
+          3
+        ],
+        "dtype": "float64",
+        "values": 10800,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "end_year_tv_drift",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "float64",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "ever_breached",
+        "shape": [
+          120,
+          31
+        ],
+        "dtype": "bool",
+        "values": 3720,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "fee_fraction",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "float64",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "fees",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "float64",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "first_crossing",
+        "shape": [
+          120
+        ],
+        "dtype": "int64",
+        "values": 120,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "holdings",
+        "shape": [
+          120,
+          31,
+          3
+        ],
+        "dtype": "float64",
+        "values": 11160,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "moved",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "float64",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "moved_fraction",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "float64",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "nominal_wealth",
+        "shape": [
+          120,
+          31
+        ],
+        "dtype": "float64",
+        "values": 3720,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "observed_followup",
+        "shape": [
+          120
+        ],
+        "dtype": "int64",
+        "values": 120,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "peak_at_trigger",
+        "shape": [
+          120
+        ],
+        "dtype": "float64",
+        "values": 120,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "pending_at_decision",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "bool",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "posttrade_holdings",
+        "shape": [
+          120,
+          30,
+          3
+        ],
+        "dtype": "float64",
+        "values": 10800,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "pretrade_tv_drift",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "float64",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "pretrade_wealth",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "float64",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "real_peak",
+        "shape": [
+          120,
+          31
+        ],
+        "dtype": "float64",
+        "values": 3720,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "real_wealth",
+        "shape": [
+          120,
+          31
+        ],
+        "dtype": "float64",
+        "values": 3720,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "real_wealth_at_trigger",
+        "shape": [
+          120
+        ],
+        "dtype": "float64",
+        "values": 120,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "recovered",
+        "shape": [
+          120
+        ],
+        "dtype": "bool",
+        "values": 120,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "recovery_endpoint",
+        "shape": [
+          120
+        ],
+        "dtype": "int64",
+        "values": 120,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "recovery_time",
+        "shape": [
+          120
+        ],
+        "dtype": "int64",
+        "values": 120,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "right_censored",
+        "shape": [
+          120
+        ],
+        "dtype": "bool",
+        "values": 120,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "running_mdd",
+        "shape": [
+          120,
+          31
+        ],
+        "dtype": "float64",
+        "values": 3720,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "target_execution",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "bool",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "targets",
+        "shape": [
+          3
+        ],
+        "dtype": "float64",
+        "values": 3,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "explicitly declared old protocol metadata; absent old NPZ field"
+      },
+      {
+        "field": "terminal_excess",
+        "shape": [
+          120
+        ],
+        "dtype": "float64",
+        "values": 120,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "trades",
+        "shape": [
+          120,
+          30
+        ],
+        "dtype": "bool",
+        "values": 3600,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "triggered",
+        "shape": [
+          120
+        ],
+        "dtype": "bool",
+        "values": 120,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      },
+      {
+        "field": "weights",
+        "shape": [
+          120,
+          31,
+          3
+        ],
+        "dtype": "float64",
+        "values": 11160,
+        "exact_values_and_NULL_mask": true,
+        "historical_provenance": "old archived same field"
+      }
+    ]
+  },
+  "CSV_base_bridge": {
+    "fixed_target_learner": {
+      "paths": 120,
+      "fields": [
+        "log_growth",
+        "cagr",
+        "mdd",
+        "volatility",
+        "terminal_real",
+        "nominal_fees",
+        "nominal_moved",
+        "trade_fraction",
+        "breach",
+        "excess",
+        "first_crossing"
+      ],
+      "maximum_absolute_error": 0.0,
+      "numeric_tolerance": {
+        "atol": 2e-10,
+        "rtol": 5e-13
+      },
+      "note": "CSV decimal parsing tolerance only; all archived NPZ bridge arrays use exact identity"
+    },
+    "annual_then_pending": {
+      "paths": 120,
+      "fields": [
+        "log_growth",
+        "cagr",
+        "mdd",
+        "volatility",
+        "terminal_real",
+        "nominal_fees",
+        "nominal_moved",
+        "trade_fraction",
+        "breach",
+        "excess",
+        "first_crossing"
+      ],
+      "maximum_absolute_error": 0.0,
+      "numeric_tolerance": {
+        "atol": 2e-10,
+        "rtol": 5e-13
+      },
+      "note": "CSV decimal parsing tolerance only; all archived NPZ bridge arrays use exact identity"
+    },
+    "equal_thirds_annual": {
+      "paths": 120,
+      "fields": [
+        "log_growth",
+        "cagr",
+        "mdd",
+        "volatility",
+        "terminal_real",
+        "nominal_fees",
+        "nominal_moved",
+        "trade_fraction",
+        "breach",
+        "excess",
+        "first_crossing"
+      ],
+      "maximum_absolute_error": 0.0,
+      "numeric_tolerance": {
+        "atol": 2e-10,
+        "rtol": 5e-13
+      },
+      "note": "CSV decimal parsing tolerance only; all archived NPZ bridge arrays use exact identity"
+    }
+  },
+  "shared_kernel_hashes": {
+    "research/experimental_execution/risk_priced_fan_rollout.py": "2a935cfe1d039f6a020e104fe92aa659bb92aac2a0b3bed2ef767437015ba472",
+    "research/experimental_execution/fan_rollout.py": "d195d721c895700925e9b24c91640c59737fe4eb542272376d2de78ce62fe1ba",
+    "research/experimental_execution/review_pending.py": "9038d420c9ea48df068c58a6abee3f993ac414f85dd0290cb56e3d703aae3894",
+    "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a",
+    "research/safeinvest_research/metrics.py": "7ec8e4821ce284351a3d8ed7071c687fdf7d6e4cfd225f72cad1d09d623eb008"
+  },
+  "development_arrays_sha256": "56420cb159e13102ea2c6633089263bdddfaa09cc801d6dd74f72801c5506d8c",
+  "candidate": {
+    "target": [
+      0.45,
+      0.05,
+      0.5
+    ],
+    "eta": 0.03,
+    "H": 30,
+    "L": 0.4,
+    "original_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120
+    ]
+  },
+  "current_service": {
+    "status": "execution_review",
+    "financial_outputs": null,
+    "stress_admission_recomputed": false,
+    "interpretation": "Frozen Review across hypothetical costs is not an empirical robustness result"
+  },
+  "limits": [
+    "These are reused full-development resubstitution scenario results for one fixed rejected candidate and hypothetical references, not newly independent validation.",
+    "Old expanded learner has an obsolete Growth target; old fiveouter fits/menus/selection/coverage do not transfer.",
+    "Fee is known and equal in actual/forecast branch computations. This is not cost misestimation robustness.",
+    "Changing known fees can change decisions and financial history even with target/eta fixed. No refit or feasibility screening is repeated at other fees.",
+    "Current global service remainsReview with financial outputsNULL. Its admission was not retested; fixedReview is imposed and cannot prove robustness or beneficial automation.",
+    "No favorable rate, action, split or alternative strategy will be selected; all five rates retained even if outcomes worsen.",
+    "All original common accounting:100bills, exactself-financing once fees before returns includinginitial, no terminalfee, own absorbing breach pending, originalH/CPI/peak/MDD retained."
+  ]
+}

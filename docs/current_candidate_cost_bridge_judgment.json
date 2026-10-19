@@ -1,0 +1,206 @@
+{
+  "version": "current-rejected-candidate-cost-bridge-judgment-v1",
+  "written_utc": "2026-10-19T04:19:45.725229+00:00",
+  "status": "Producer bridge and interpretation finalized with separately authored passed root numerical/source audit bound to exact manifest",
+  "independence": "Interpretation is by the bridge source author. A separate root-authored audit independently checks archive identities, all copied path values and compensated-sum/ordered-statistic summaries; this is AI computational review, not external human peer review.",
+  "protocol_sha256": "de4e73d682411df7ca5a5095d947f9541e30cfba68046cce611afe28cd497e1d",
+  "result_manifest_sha256": "398395e1f8e1bf2c22ab4ae23150babcdcda12975e680a5990c07e81870a6c68",
+  "purpose": "Close the version link between historical known-cost evidence and the same current full120 rejected fixed candidate; no new policy selected.",
+  "base_identity": {
+    "candidate": {
+      "target": [
+        0.45,
+        0.05,
+        0.5
+      ],
+      "technical_eta": 0.03,
+      "horizon": 30,
+      "loss_tolerance": 0.4,
+      "updates_enabled": false,
+      "training_and_evaluation_original_ID_range_inclusive": [
+        1,
+        120
+      ]
+    },
+    "shared_kernel_and_development_array_SHA": "Checked equal across both frozen parent manifests and unchanged current files.",
+    "trace_arrays": {
+      "fixed_target_learner": {
+        "fields": 48,
+        "values": 147125,
+        "exact_dtype_shape_values_pairedNaN": true
+      },
+      "annual_then_pending": {
+        "fields": 36,
+        "values": 111123,
+        "exact_dtype_shape_values_pairedNaN": true
+      },
+      "equal_thirds_annual": {
+        "fields": 36,
+        "values": 111123,
+        "exact_dtype_shape_values_pairedNaN": true
+      }
+    },
+    "reference_schema_exception": "Old B/thirds referenceNPZ did not export targets. Only that field is explicitly matched to the frozen old Balanced plan or exactthirds rule; all35 remaining current fields for each reference match archived fields exactly.",
+    "CSV_base_paths": 360,
+    "CSV_fields_per_path": 11,
+    "CSV_maximum_absolute_error": 0.0,
+    "source_vs_value_scope": "Exact archive/source identity, not a fresh physical-account or Q recomputation."
+  },
+  "cost_evidence": {
+    "scope": "All five original known actual=forecast cost rates, fixed candidate plus matching B and exactthirds references, original full120 development paths only. All15 groups and1800 scenario-policy-rate rows retained.",
+    "candidate_rows": [
+      {
+        "cost_label": "zero",
+        "cost_rate": 0.0,
+        "research_policy": "fixed_target_learner",
+        "n": 120,
+        "mean_log_growth": 0.0435556345398658,
+        "median_cagr": 0.04411318189611173,
+        "p10_cagr": 0.013981955726570225,
+        "median_mdd": 0.25449608819076863,
+        "p90_mdd": 0.39814094512971604,
+        "breach_count": 10,
+        "mean_nominal_fees": 0.0,
+        "mean_trade_fraction": 0.2888888888888889
+      },
+      {
+        "cost_label": "half",
+        "cost_rate": 0.00125,
+        "research_policy": "fixed_target_learner",
+        "n": 120,
+        "mean_log_growth": 0.04355102008722058,
+        "median_cagr": 0.04406304945516097,
+        "p10_cagr": 0.013364166634928775,
+        "median_mdd": 0.2558450837077826,
+        "p90_mdd": 0.3982823610181669,
+        "breach_count": 9,
+        "mean_nominal_fees": 0.3882869231500683,
+        "mean_trade_fraction": 0.2875
+      },
+      {
+        "cost_label": "base",
+        "cost_rate": 0.0025,
+        "research_policy": "fixed_target_learner",
+        "n": 120,
+        "mean_log_growth": 0.04357928389877332,
+        "median_cagr": 0.04401296546566785,
+        "p10_cagr": 0.013630861452719942,
+        "median_mdd": 0.25473221612677843,
+        "p90_mdd": 0.398423596567628,
+        "breach_count": 9,
+        "mean_nominal_fees": 0.782852823681622,
+        "mean_trade_fraction": 0.2897222222222222
+      },
+      {
+        "cost_label": "double",
+        "cost_rate": 0.005,
+        "research_policy": "fixed_target_learner",
+        "n": 120,
+        "mean_log_growth": 0.04350930482902705,
+        "median_cagr": 0.04390798859753978,
+        "p10_cagr": 0.013566942773212177,
+        "median_mdd": 0.2489931477536838,
+        "p90_mdd": 0.39481386091093174,
+        "breach_count": 10,
+        "mean_nominal_fees": 1.5810708613854894,
+        "mean_trade_fraction": 0.29666666666666663
+      },
+      {
+        "cost_label": "quadruple",
+        "cost_rate": 0.01,
+        "research_policy": "fixed_target_learner",
+        "n": 120,
+        "mean_log_growth": 0.043032298107540466,
+        "median_cagr": 0.04392186446807794,
+        "p10_cagr": 0.013439440941563432,
+        "median_mdd": 0.2570046386105322,
+        "p90_mdd": 0.39695246499116504,
+        "breach_count": 9,
+        "mean_nominal_fees": 3.037453918970001,
+        "mean_trade_fraction": 0.29055555555555557
+      }
+    ],
+    "reference_breach_counts": {
+      "annual_then_pending": [
+        9,
+        9,
+        9,
+        9,
+        10
+      ],
+      "equal_thirds_annual": [
+        5,
+        5,
+        6,
+        6,
+        6
+      ]
+    },
+    "main_findings": [
+      "The rejected fixed candidate has10,9,9,10,9 exceedances at zero,half,base,double,quadruple known fees. Fewer fees do not imply weakly fewer breaches when action choices and future pending histories adapt.",
+      "Candidate annualized mean log growth is not monotone in the known fee: the base-cost value exceeds zero/half-cost values slightly. This is different adaptive behavior, not evidence that adding fees improves a fixed investment trajectory or a fee-selection opportunity.",
+      "Candidate trading frequency changes across the rates, so a fixed-trade fee-subtraction approximation does not reproduce this experiment.",
+      "The current base-cost candidate has higher mean growth and fewer fees than matched annualB but a larger median andP90 MDD. Growth, costs and tail loss cannot be collapsed into an unqualified improvement claim.",
+      "No new menu, eta, beta, alpha, candidate, training risk screen, inner admission or oldouter performance was selected or recalculated at the other fees."
+    ],
+    "summary_path": "results/model_review/current_candidate_cost_bridge_v1/research_summary.csv",
+    "all_research_paths": "results/model_review/current_candidate_cost_bridge_v1/research_paths.csv"
+  },
+  "Q3_recommendation_interpretation": {
+    "answer": "The main operational recommendation remains human review under the existing base-cost evidence and declared contract; this cost bridge supplies no basis to approve the rejected candidate or turn on target updates.",
+    "why": "Current full120 same-U inner comparison remains10versusB8; the bridged stress is full120 fixed-candidate resubstitution, not the selected-beta inner/refit learning procedure. Cost changes were known to its gate, not misestimated, and stress-specific admissibility was never recalibrated.",
+    "what_must_not_be_claimed": [
+      "That unchanged frozenReview is empirical robustness.",
+      "That all fee rates pass the original complete-policy admission.",
+      "That higherfees directly improved the same frozen path.",
+      "That the historicalfiveouter/expanded-menu results validate currentjoint/refit/same-U deployment.",
+      "That exact numerical identity certifies a conditional forecast law or true future10% ceiling."
+    ],
+    "current_service": {
+      "status": "execution_review",
+      "financial_outputs": null,
+      "admission_recomputed": false,
+      "automatic_target_updates": false
+    }
+  },
+  "limits": [
+    "Repeatedly reused development evidence; no freshblind test or new external market information.",
+    "One fixed technical control parameter and target only; not all feasible strategies or product menus.",
+    "No runtime adviser response, withdrawal or emergency liquidity model.",
+    "No raw marketCSV reading, final121–180 access, fits, strategy simulations, report rewriting or old result edits in this bridge."
+  ],
+  "evidence_sha256": {
+    "results/model_review/current_candidate_cost_bridge_v1/bridge.json": "5cd756bf307609a6dc8f57478cd2056065056880aa06671fce725c10c8728e6a",
+    "results/model_review/current_candidate_cost_bridge_v1/manifest.json": "398395e1f8e1bf2c22ab4ae23150babcdcda12975e680a5990c07e81870a6c68",
+    "results/model_review/current_candidate_cost_bridge_v1/research_summary.csv": "740614a7eb97445f497f51affb2a19101702bc5e6076c730d13cd693081c6572",
+    "results/model_review/current_candidate_cost_bridge_v1/research_paths.csv": "1cd55fd381895dafc7f1ca7f6d10a041558e3e9b70e503df72a7c3e96bcfe080",
+    "docs/main_model_registry.json": "2d73f73d47523c922329c59c78548f8bc67a8bb93d4e8d3eef67a5bd1d2e7074",
+    "results/model_review/current_candidate_cost_bridge_v1/independent_audit.json": "3bf9d6c90418fe11ec5450facdaedf1fe3066d0316fbf761d1c3a1f2e5e91cf4",
+    "scripts/audit_current_candidate_cost_bridge.py": "0a4091d8606df2ecf81ff9a0d9fc08c964c33a0f0b3f39ec7848110ad7ca416c"
+  },
+  "finalized_utc": "2026-10-19T04:29:26.305405+00:00",
+  "root_independent_audit": {
+    "status": "passed",
+    "receipt": "results/model_review/current_candidate_cost_bridge_v1/independent_audit.json",
+    "receipt_sha256": "3bf9d6c90418fe11ec5450facdaedf1fe3066d0316fbf761d1c3a1f2e5e91cf4",
+    "parent_manifest_sha256": "398395e1f8e1bf2c22ab4ae23150babcdcda12975e680a5990c07e81870a6c68",
+    "protocol_sha256": "de4e73d682411df7ca5a5095d947f9541e30cfba68046cce611afe28cd497e1d",
+    "auditor_sha256": "0a4091d8606df2ecf81ff9a0d9fc08c964c33a0f0b3f39ec7848110ad7ca416c",
+    "exact_array_fields_checked": {
+      "fixed_target_learner": 48,
+      "annual_then_pending": 36,
+      "equal_thirds_annual": 36
+    },
+    "scalar_values_in_exact_arrays": 369371,
+    "research_rows_independently_matched_to_old_archive": 1800,
+    "financial_scalar_checks": 19800,
+    "summary_groups_independently_recomputed": 15,
+    "maximum_summary_absolute_error": 2.220446049250313e-16,
+    "audit_development_history": "First metadata-only attempt stopped because the older cost audit uses source_and_artifact_sha256_start/end, rather than the later plural key. Explicit schema support and exact start/end binding were added before numerical comparisons. No frozen producer or evidence changed.",
+    "scope": "Post-hoc independent exact saved-array and copied-row verification, ordered-statistic/compensated-sum arithmetic; not a new market or strategy test",
+    "raw_market_rows_parsed": false,
+    "new_policy_replays": 0,
+    "new_fits": 0,
+    "final_scenarios_loaded": false
+  }
+}

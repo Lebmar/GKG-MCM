@@ -29,13 +29,16 @@ HASH_KEYS = {
     "sources_and_artifacts_at_start", "sources_and_artifacts_at_end",
     "checked_current_file_sha256",
     "evidence_sha256", "source_evidence_sha256_start", "source_evidence_sha256_end", "sources_sha256_at_start",
-    "frozen_input_sha256", "execution_sources_sha256",
+    "frozen_input_sha256", "execution_sources_sha256", "provenance_sha256",
+    "inputs_and_sources", "sources_and_inputs_sha256",
+    "sources_and_inputs_at_start", "sources_and_inputs_at_end",
+    "source_and_contract_sha256",
     "reviewed_sources_sha256", "audit_source_sha256", "audit_sources_sha256", "source_input_artifact_sha256",
     "outputs_sha256_before", "outputs_sha256_after",
     "copied_files_sha256_before", "copied_files_sha256_after", "wrapper_test_sources_sha256",
     "original_archive_sha256_start", "original_archive_sha256_end",
     "wrapper_engine_source_sha256", "wrapper_engine_source_sha256_at_end",
-    "outputs", "outputs_sha256", "output_artifact_sha256", "output_file_sha256_after_write",
+    "outputs", "outputs_sha256", "output_sha256", "output_artifact_sha256", "output_file_sha256_after_write",
 }
 PAIRS = [
     ("sources", "sources_at_end"), ("sources_at_start", "sources_at_end"),
@@ -55,6 +58,7 @@ PAIRS = [
     ("artifacts_at_start", "artifacts_at_end"),
     ("source_input_artifact_sha256_start", "source_input_artifact_sha256_end"),
     ("sources_and_artifacts_at_start", "sources_and_artifacts_at_end"),
+    ("sources_and_inputs_at_start", "sources_and_inputs_at_end"),
     ("source_evidence_sha256_start", "source_evidence_sha256_end"),
     ("outputs_sha256_before", "outputs_sha256_after"),
     ("copied_files_sha256_before", "copied_files_sha256_after"),
@@ -104,6 +108,15 @@ def main():
                           *sorted((ROOT / 'docs').glob('constrained_*.json')),
                           *sorted((ROOT / 'docs').glob('global_policy_*.json')),
                           *sorted((ROOT / 'docs').glob('fan_continuation_*.json')),
+                          *sorted((ROOT / 'docs').glob('failure_path_*.json')),
+                          *sorted((ROOT / 'docs').glob('failure_action_*.json')),
+                          *sorted((ROOT / 'docs').glob('current_candidate_cost_*.json')),
+                          *sorted((ROOT / 'docs').glob('matched_parameter_*.json')),
+                          *sorted((ROOT / 'docs').glob('intervention_scale_*.json')),
+                          ROOT / 'docs/model_closure_requirements_review_2026_10_19.json',
+                          ROOT / 'docs/current_model_contract_2026_10_19.json',
+                          ROOT / 'docs/current_model_contract_2026_10_19_independent_review.json',
+                          ROOT / 'docs/model_stage_readiness_2026_10_19.json',
                           ROOT / 'docs/admission_failure_identity_review.json',
                           ROOT / 'docs/overnight_handoff_2026_10_18.json',
                           ROOT / 'docs/main_model_registry.json',
@@ -135,6 +148,10 @@ def main():
         if path.name == "independent_audit.json":
             assert item.get("status") == "passed" or item.get("passed") is True, path
             checks += 1
+        if path.name == 'current_model_contract_2026_10_19_independent_review.json':
+            assert item['status'] == 'passed', path
+            assert item['contract_sha256'] == sha(ROOT/'docs/current_model_contract_2026_10_19.json')
+            checks += 2
         assert not item.get("final_scenarios_loaded", False), path
         assert not item.get("final_scenarios_read", False), path
         for record in evidence_records(item):
@@ -179,7 +196,8 @@ def main():
     additional_notebooks = []
     for companion in [ROOT / "notebooks/admission_stability_forecasts.ipynb",
                       ROOT / "notebooks/simple_execution_diagnostic.ipynb",
-                      ROOT / "notebooks/final_model_development.ipynb"]:
+                      ROOT / "notebooks/final_model_development.ipynb",
+                      ROOT / "notebooks/failure_path_development.ipynb"]:
         if not companion.exists():
             continue
         saved = nbformat.read(companion, as_version=4)
@@ -187,11 +205,15 @@ def main():
         assert companion_code and all(cell.execution_count is not None for cell in companion_code)
         assert not any(output.output_type == "error" for cell in companion_code for output in cell.outputs)
         reading_copy = companion.with_suffix(".html")
-        if companion.name=='final_model_development.ipynb':
-            execution=json.loads((ROOT/'research/figures/final_model_development/notebook_execution.json').read_text())
+        if companion.name in {'final_model_development.ipynb', 'failure_path_development.ipynb'}:
+            figure_folder=ROOT/'research/figures'/companion.stem
+            execution=json.loads((figure_folder/'notebook_execution.json').read_text())
             assert execution['notebook_sha256']==sha(companion)
             assert execution['html_sha256']==sha(reading_copy)
-            assert execution['figure_manifest_sha256']==sha(ROOT/'research/figures/final_model_development/manifest.json')
+            assert execution['figure_manifest_sha256']==sha(figure_folder/'manifest.json')
+            if companion.name == 'failure_path_development.ipynb':
+                presentation=json.loads((figure_folder/'manifest.json').read_text())
+                assert presentation['status']=='complete' and presentation['visual_review_confirmed'] is True
         additional_notebooks.append({"path": str(companion.relative_to(ROOT)),
             "executed_code_cells": len(companion_code), "sha256": sha(companion),
             "reading_copy_path": str(reading_copy.relative_to(ROOT)), "reading_copy_sha256": sha(reading_copy)})

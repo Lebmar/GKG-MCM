@@ -1,0 +1,222 @@
+{
+  "full_35__control": {
+    "pair_id": "full_35",
+    "branch": "control",
+    "scenario_id": 35,
+    "tau": 2,
+    "original_job": "c0_refit",
+    "selected_candidate_order": 4,
+    "original_action": "hold",
+    "forced_first_action": "hold"
+  },
+  "full_35__treatment": {
+    "pair_id": "full_35",
+    "branch": "treatment",
+    "scenario_id": 35,
+    "tau": 2,
+    "original_job": "c0_refit",
+    "selected_candidate_order": 4,
+    "original_action": "hold",
+    "forced_first_action": "restore"
+  },
+  "inner_35__control": {
+    "pair_id": "inner_35",
+    "branch": "control",
+    "scenario_id": 35,
+    "tau": 4,
+    "original_job": "c0_inner2",
+    "selected_candidate_order": 4,
+    "original_action": "hold",
+    "forced_first_action": "hold"
+  },
+  "inner_35__treatment": {
+    "pair_id": "inner_35",
+    "branch": "treatment",
+    "scenario_id": 35,
+    "tau": 4,
+    "original_job": "c0_inner2",
+    "selected_candidate_order": 4,
+    "original_action": "hold",
+    "forced_first_action": "restore"
+  },
+  "full_112__control": {
+    "pair_id": "full_112",
+    "branch": "control",
+    "scenario_id": 112,
+    "tau": 2,
+    "original_job": "c0_refit",
+    "selected_candidate_order": 4,
+    "original_action": "hold",
+    "forced_first_action": "hold"
+  },
+  "full_112__treatment": {
+    "pair_id": "full_112",
+    "branch": "treatment",
+    "scenario_id": 112,
+    "tau": 2,
+    "original_job": "c0_refit",
+    "selected_candidate_order": 4,
+    "original_action": "hold",
+    "forced_first_action": "restore"
+  },
+  "inner_112__control": {
+    "pair_id": "inner_112",
+    "branch": "control",
+    "scenario_id": 112,
+    "tau": 2,
+    "original_job": "c0_inner4",
+    "selected_candidate_order": 4,
+    "original_action": "hold",
+    "forced_first_action": "hold"
+  },
+  "inner_112__treatment": {
+    "pair_id": "inner_112",
+    "branch": "treatment",
+    "scenario_id": 112,
+    "tau": 2,
+    "original_job": "c0_inner4",
+    "selected_candidate_order": 4,
+    "original_action": "hold",
+    "forced_first_action": "restore"
+  },
+  "full_52__control": {
+    "pair_id": "full_52",
+    "branch": "control",
+    "scenario_id": 52,
+    "tau": 2,
+    "original_job": "c0_refit",
+    "selected_candidate_order": 4,
+    "original_action": "hold",
+    "forced_first_action": "hold"
+  },
+  "full_52__treatment": {
+    "pair_id": "full_52",
+    "branch": "treatment",
+    "scenario_id": 52,
+    "tau": 2,
+    "original_job": "c0_refit",
+    "selected_candidate_order": 4,
+    "original_action": "hold",
+    "forced_first_action": "restore"
+  },
+  "inner_52__control": {
+    "pair_id": "inner_52",
+    "branch": "control",
+    "scenario_id": 52,
+    "tau": 2,
+    "original_job": "c0_inner3",
+    "selected_candidate_order": 4,
+    "original_action": "hold",
+    "forced_first_action": "hold"
+  },
+  "inner_52__treatment": {
+    "pair_id": "inner_52",
+    "branch": "treatment",
+    "scenario_id": 52,
+    "tau": 2,
+    "original_job": "c0_inner3",
+    "selected_candidate_order": 4,
+    "original_action": "hold",
+    "forced_first_action": "restore"
+  },
+  "full_98__control": {
+    "pair_id": "full_98",
+    "branch": "control",
+    "scenario_id": 98,
+    "tau": 2,
+    "original_job": "c0_refit",
+    "selected_candidate_order": 4,
+    "original_action": "hold",
+    "forced_first_action": "hold"
+  },
+  "full_98__treatment": {
+    "pair_id": "full_98",
+    "branch": "treatment",
+    "scenario_id": 98,
+    "tau": 2,
+    "original_job": "c0_refit",
+    "selected_candidate_order": 4,
+    "original_action": "hold",
+    "forced_first_action": "restore"
+  },
+  "inner_98__control": {
+    "pair_id": "inner_98",
+    "branch": "control",
+    "scenario_id": 98,
+    "tau": 2,
+    "original_job": "c0_inner3",
+    "selected_candidate_order": 4,
+    "original_action": "hold",
+    "forced_first_action": "hold"
+  },
+  "inner_98__treatment": {
+    "pair_id": "inner_98",
+    "branch": "treatment",
+    "scenario_id": 98,
+    "tau": 2,
+    "original_job": "c0_inner3",
+    "selected_candidate_order": 4,
+    "original_action": "hold",
+    "forced_first_action": "restore"
+  },
+  "outer_r2_52__control": {
+    "pair_id": "outer_r2_52",
+    "branch": "control",
+    "scenario_id": 52,
+    "tau": 2,
+    "original_job": "c202_refit",
+    "selected_candidate_order": 5,
+    "original_action": "hold",
+    "forced_first_action": "hold"
+  },
+  "outer_r2_52__treatment": {
+    "pair_id": "outer_r2_52",
+    "branch": "treatment",
+    "scenario_id": 52,
+    "tau": 2,
+    "original_job": "c202_refit",
+    "selected_candidate_order": 5,
+    "original_action": "hold",
+    "forced_first_action": "restore"
+  },
+  "outer_r4_112__control": {
+    "pair_id": "outer_r4_112",
+    "branch": "control",
+    "scenario_id": 112,
+    "tau": 2,
+    "original_job": "c405_refit",
+    "selected_candidate_order": 5,
+    "original_action": "hold",
+    "forced_first_action": "hold"
+  },
+  "outer_r4_112__treatment": {
+    "pair_id": "outer_r4_112",
+    "branch": "treatment",
+    "scenario_id": 112,
+    "tau": 2,
+    "original_job": "c405_refit",
+    "selected_candidate_order": 5,
+    "original_action": "hold",
+    "forced_first_action": "restore"
+  },
+  "outer_r5_112__control": {
+    "pair_id": "outer_r5_112",
+    "branch": "control",
+    "scenario_id": 112,
+    "tau": 2,
+    "original_job": "c502_refit",
+    "selected_candidate_order": 4,
+    "original_action": "hold",
+    "forced_first_action": "hold"
+  },
+  "outer_r5_112__treatment": {
+    "pair_id": "outer_r5_112",
+    "branch": "treatment",
+    "scenario_id": 112,
+    "tau": 2,
+    "original_job": "c502_refit",
+    "selected_candidate_order": 4,
+    "original_action": "hold",
+    "forced_first_action": "restore"
+  }
+}

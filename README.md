@@ -7,6 +7,7 @@ Author: **Chengxuan YUAN**.
 rules are fixed for this research checkpoint; full-development C execution is
 Review. A robust autonomous C investment strategy has not been demonstrated.**
 Start with the [current model registry](docs/main_model_registry.json),
+[current model contract](docs/current_model_contract_2026_10_19.json),
 [independent convergence judgment](docs/final_model_convergence_judgment.json),
 and [research companion](notebooks/final_model_development.ipynb).
 The V1 code and report below
@@ -31,7 +32,41 @@ not assume that a more complicated policy improves investment outcomes.
 
 ## Current development research
 
-The final evening session localizes the admission differences by original
+The October19 mechanism study reconstructs11 fixed model/reference pairs
+for original IDs35/52/98/112. All22 complete accounts retain the original
+30-year clock, CPI, real peak and absorbing breach history. Higher terminal
+wealth can coexist with greater drawdown because the historical peak also
+changes. Independent accounting checks pass; crossing-year target equality
+does not remove the effect of the earlier path.
+
+Replacing only the first model/reference action disagreement, then letting
+the unchanged policy replan from each branch's own state, removes none of
+the11 breach/first-crossing outcomes. Nine pairs attain proportional holdings
+and peaks before their eventual worst drawdown; all later normalized states,
+actions and Q values agree. This post-hoc positive-homogeneity check explains
+their equal MDD despite different wealth. The other two pairs remain visible.
+
+One metadata-matched full112/outer112 pair isolates a particular forecast-fan
+change at the same original year5 state, target45/5/50 and eta.03. Full120
+and a fixed-state119 fan deleting actual112 restore; outer96 holds. All335
+paired members/670 action branches pass independent scalar checks. The result
+does not attribute the complete future loss to that decision or establish
+conditional forecasting accuracy; deleting self alone does not flip it.
+
+An exact baseline bridge reuses five known-fee-rate experiments for the
+current rejected fixed candidate, after checking all48 candidate NPZ fields
+and both reference accounts. Candidate breaches across0/.125/.25/.5/1 percent
+fees are10/9/9/10/9 out of120. Fees can change actions, so risk is not monotone.
+These are archival shadow outcomes, not admitted service returns or approval
+robustness. Current C still requires Review with financial outputsNULL.
+
+The new [executed mechanism companion](notebooks/failure_path_development.ipynb)
+and [reading copy](notebooks/failure_path_development.html) collect four figures,
+all fixed cases and the exact scope of each audit. The [model contract](docs/current_model_contract_2026_10_19.json)
+also reconciles Q1/Q2/Q3 requirements, a severe originally admitted outer case,
+and a44-word customer explanation. This is model specification, not a paper.
+
+The prior evening session localizes the admission differences by original
 market ID: full-training9 to inner10 consists of8 shared events, ID98 leaving,
 and IDs35/112 entering. On the same inner paths B has8 events, with the two
 model-only events35/112. Targets and training fans also change, so this is

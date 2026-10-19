@@ -1,0 +1,137 @@
+{
+  "version": "model-closure-requirements-readonly-review-2026-10-19-v1",
+  "written_utc": "2026-10-19T04:09:19.562548+00:00",
+  "status": "Read-only original-question/current-version closure review; no model change or new market result",
+  "scope": {
+    "original_problem_pages_read": 3,
+    "raw_market_loaded": false,
+    "new_fit_or_simulation": false,
+    "final_scenarios_read": false,
+    "old_files_modified": false,
+    "paper_written": false,
+    "evidence": "Text extracted locally with pypdf; current registry, prior handoff, frozen protocols and saved table schemas were read. No new strategy outcome was calculated."
+  },
+  "main_judgment": {
+    "C": "execution_review remains correct under the retained declared rule. Human referral is an explicitly allowed output, but allReview alone does not demonstrate effective autonomous investment or remove the Q2 evaluation duties.",
+    "Q2": "Current-version growth/tail/trading summaries already exist, including correct NULL full120 model financials. Complete the interpretation of coverage, conditional OOF outcomes, references, one severe example and benefit/cost semantics. Separate admitted service from rejected-candidate shadow research.",
+    "Q3": "Current safeguards and forecast limitations are explicit, but an exact current-version link to the chosen stress evidence must be established. Old full120 fixed-candidate cost evidence may be reusable after a complete baseline bridge; old outer fits/selection/admission cannot be transferred.",
+    "stopping": "Do not relax alpha/same-U gate, pick a favorable repeat, invent fallback returns, remove influential market IDs, or expand policy searches merely to obtain automatic admission."
+  },
+  "closed_or_material_gap": [
+    {
+      "id": "Q1_METRICS",
+      "status": "implemented_audited_current_research",
+      "basis": "Net real annualized log growth/CAGR, ordinary annual real-return volatility and annual-endpoint real MDD/tail severity have own-H summaries. Larger MDD means larger loss; original100/fees/CPI/history are retained.",
+      "remaining": "Explain units and annual observation limitation; L is a questionnaire response and review trigger, never guaranteed loss limit. No new fitting is needed for existing own-H metrics."
+    },
+    {
+      "id": "Q1_PRODUCTS_LIQUIDITY_ASSIGNMENTS",
+      "status": "research_contract_closed_deployment_limits_explicit",
+      "basis": "Current full targets Conservative25/30/45, Balanced45/5/50, Growth65/5/30 and A/DReview, BConservative, CBalanced, EGrowth are recorded. Normative high/medium/low bill floors30/10/0 enter every static refit; use ownH5/15/30/25/6 and ownL.",
+      "remaining": "Do not repeat old crosswalk statement that liquidity is wholly untreated. Floors are target conventions, not identified expenditure needs/live balances/withdrawal guarantees. Real deployment must verify cash facts, but the provided contest profiles must not be retroactively rejected solely because the problem omits withdrawal amounts."
+    },
+    {
+      "id": "Q2_RULE_AND_BENEFIT",
+      "status": "mathematics_and_implementation_closed_with_declared_interpretation",
+      "basis": "Optional finite score DeltaNetQg-originalH*eta*DeltaP has net current/future costs once; initial allocation is mandatory convention. Negative unpricedDeltaQg trades must be disclosed as modeled risk reduction with growth cost. eta is technical, not elicited willingness to pay.",
+      "remaining": "A positive modeled score does not imply positive financial return, calibrated conditional risk or globally optimal Qpi. Annual same-target B is a research comparator and cannot become automatic fallback without a benefit gate."
+    },
+    {
+      "id": "Q2_SUMMARIES_BASELINE",
+      "status": "current_guard_tables_exist_interpretation_needed",
+      "basis": "global_policy_admission_v1/summary.csv.gz has median_cagr,p10_cagr,median_mdd,p90_mdd,mean_trade_fraction. Same-H exactthirds restores every annual review and continues after crossing. Current full120 model metricsNULL are the correct zero-auto output.",
+      "remaining": "Report original/case/auto/review units and conditional denominators. Pair exact common automatic IDs before growth/risk attribution; full120 baseline versus model24/48 paths is not a same-population effect. Repeats reuse120 markets, not independent deployments. Do not average fold quantiles."
+    },
+    {
+      "id": "Q2_SEVERE_EXAMPLE",
+      "status": "current_version_narrative_gap_saved_trace_sufficient",
+      "basis": "Today failure-path inventory can supply an illustrative severe held-out automatic case without searching for a favorable example.",
+      "remaining": "Choose and label an existing guard-admitted outer example, such as previously identified repeated112, explain original-year wealth/peak/MDD/action/fees/crossing/pending. Inner35/112 and rejected full98 are mechanism research, not served-customer experience. State that purposeful failure selection is exploratory and not representative."
+    },
+    {
+      "id": "Q2_TARGET_UPDATES",
+      "status": "off_is_declared_historical_incremental_evidence_not_current_family_test",
+      "basis": "Current rule excludes automatic target updates. Old bounded18-family experiment selected NO-UPDATE but used old menu, including Growth70/10/20 rather than current65/5/30 and different fitting/admission.",
+      "remaining": "Current defensible decision is not to enable updates without demonstrated incremental benefit for the present contract. Do not claim proof that updates never add value or that current joint/refit/same-U learner tested the old18-family comparison. A new search is unnecessary merely to defend the conservative off choice."
+    },
+    {
+      "id": "Q2_EXPLANATION_LE50",
+      "status": "current_alignment_still_needed",
+      "basis": "An English explanation may cover pre-investment human review, or an observed financial crossing, with explicit distinction.",
+      "remaining": "No more than50 words; identify human adviser, why automatic decision is unsupported, and that existing investments remain market-exposed while pending. Do not imply an adviser has actually replied or that L is a guaranteed stop-loss. Drafting report prose is deferred."
+    },
+    {
+      "id": "Q3_SENSITIVITY",
+      "status": "exact_evidence_bridge_needed_before_current_claim",
+      "basis": "Old full120 selected fixed candidate matches proposed target/eta/fan metadata. Its old cost study uses actual=forecast known fee rates0,.00125,.0025,.005,.01, with parameters/admission frozen.",
+      "remaining": "First compare source/lineage, all current c0 candidate state/action/Q arrays and base-cost path metrics. If and only if it matches, reuse exactly full120 fixed-candidate and declared reference subsets. Do not import old fiveouter fits, expanded learner, updated menu, re-screening or true-risk certification. AlwaysReview under a frozen admission is imposed policy, not empirical robustness."
+    },
+    {
+      "id": "Q3_SAFEGUARDS",
+      "status": "financial_pending_closed_other_channels_are_design_limits",
+      "basis": "First real annual MDD-L crossing creates absorbing pending; next decision holds quantities, preserves CPI/peak/MDD/b/H, continues market returns, no invented adviser intervention or automatic recovery re-entry. Separate input integrity/model applicability/material questionnaire-change reasons exist.",
+      "remaining": "No empirically calibrated drift detector, human response time or emergency liquidity model is present. Explain exact observable integrity checks separately from untested operational thresholds; do not fabricate a numerical validity threshold."
+    },
+    {
+      "id": "FINAL_EVALUATION_AND_DELIVERY",
+      "status": "not_yet_closed_intentionally_outside_today_readonly_review",
+      "basis": "Problem requires final121–180 evaluation without further adjustment. Old V1 final was exposed; current phase has not reopened it.",
+      "remaining": "Freeze one complete final rule before one transparent restricted-independence evaluation and no subsequent tuning. Then produce revised<=10A4-page >=11pt English report, actual AI disclosure, attribution and<=50MB reproducible ZIP. No claim of freshblind or CMT submission."
+    }
+  ],
+  "current_review_does_not_mean": [
+    "All safe profitable C strategies are impossible",
+    "C may never invest",
+    "Onboarding Q1Balanced automatically authorizes current dynamic execution",
+    "Review produces a zero-loss portfolio",
+    "Baseline or bills financial outcomes can fill modelNULLs",
+    "Passing arithmetic audits validates the conditional market law"
+  ],
+  "failure_path_mechanism_design_review": {
+    "status": "Conceptual review of root communicated11-pair plan before numerical mechanism output; actual protocol file/source review is a separate check when available.",
+    "supports": [
+      "Identify first stored M/B action divergence on the same market and own matching fit target/fan/eta/H.",
+      "Reconstruct exact chronological wealth/fees/asset-return differences and peak/MDD histories.",
+      "Distinguish crossing inherited from earlier wealth and peak history from crossing-year target equality."
+    ],
+    "cannot_support": [
+      "An additive accounting identity does not identify a causal share of MDD or prove the first divergent action caused the excess event.",
+      "First action difference need not be first material holdings difference when transferred amount is zero.",
+      "Several same-ID occurrences or rows from shared training fits do not constitute independent failures.",
+      "A few selected failure paths cannot calibrate conditional tail probabilities or prove an improved policy."
+    ],
+    "followup_single_intervention": {
+      "judgment": "No method block if all prespecified pairs and missing/zero cases retained.",
+      "requirements": [
+        "Fix tau from saved original first action difference once; no outcome-selected action/tau.",
+        "Verify same pre-tau target/holdings/CPI/wealth/peak/MDD/absorbing flag and reproduce original action→pi entire saved path first.",
+        "Replace only tau action with originalB action, execute exact fee and actual returns, then recompute the same frozen policy from branch-specific actual states.",
+        "Preserve branch-own absorbing breach/pending, originalH/fan/target/eta, no copied oldQ or reset.",
+        "A forced action need not satisfy original benefit gate and is never an approved alternative strategy."
+      ],
+      "estimand": "Single intervention effect within a fixed deterministic account/model, one supplied market path and fixed policy/fan; includes all subsequent policy feedback. It is not Qpi calibration, optimal action, population causal effect or deployable improvement."
+    }
+  },
+  "today_minimum_closure_order": [
+    "Complete11-pair mechanism and identity/accounting audits; interpret before proposing changes.",
+    "Bridge existing full120 fixed-candidate cost evidence under a small frozen read-only protocol; no new market data, fits or fee grid.",
+    "Consolidate current-version Q1/Q2/Q3 definitions, allNULL/coverage and one illustrative severe admitted path.",
+    "Keep current rule/gate unchanged; explain remaining predictive/service limitations.",
+    "Only after model closure decide final evaluation/report/package phase with exposed-final disclosure."
+  ],
+  "provenance_sha256": {
+    "docs/problem_A.pdf": "2ac9412ed68349d36a3fbd2c6cddc5789a81dab8acbfa08c63a3bdb34d2aa2dd",
+    "docs/main_model_registry.json": "2d73f73d47523c922329c59c78548f8bc67a8bb93d4e8d3eef67a5bd1d2e7074",
+    "docs/overnight_handoff_2026_10_18.json": "5c48b29f7d52b03cf84fb8d34d0f16a187f82144edee689d29e29c0d509ffd79",
+    "docs/problem_A_deliverable_crosswalk.json": "1c476d8d2117d8dcad2d16d2bd686fe13aab91c2f37069392af7d21a2dc3bf65",
+    "docs/joint_liquidity_refit_protocol.json": "1e92a4f7b374bd7437315c89e513a830f12211b54cb08d3c4341dffdc9f1e3f6",
+    "docs/service_policy_refinement_contract.json": "cc379f88b88d70433a0cda382a577ede621dc1f85d5f0a78c319900af1f79818",
+    "docs/service_refinement_readiness_review.json": "98ff90324461e415c86857d135450e64f4b5006ac5343d215e1e9558f77e8cbc",
+    "docs/final_model_convergence_judgment.json": "cfa39a2f897d1cad07593e6792bc3fc0e8d5dbb2924b0ad4753a8c9de2e2ad55",
+    "docs/bounded_target_update_protocol.json": "e33f7401d3c631c1c155e6f0639ffabb4c3190b4b32ebb8e9a42f541a4f6e591",
+    "docs/selected_controller_cost_stress_protocol.json": "9d2e62ddf6dd14ea5b21b41142b2b4e75a3d20296f7a948b2255cf459e7e3672",
+    "results/model_review/global_policy_admission_v1/manifest.json": "5b6449d949999458abe5ea6b8f47a74139ae0bf1699883bf5c8da7646c31c749",
+    "results/model_review/global_policy_admission_v1/summary.csv.gz": "a8108b91378c2db4be72d7e3e2aa5c57c661b4d55af9e675993835e1d4f77684",
+    "results/model_review/joint_liquidity_summary_v1/q1_own_horizon_annual_summary.csv": "994dbb5f54f34405662ed7debe707d44ebc1674193900443ff1a3fed70f0de92"
+  }
+}

@@ -518,3 +518,104 @@ Final evening checkpoint passes151 saved snapshots and898 distinct hashed
 files, including the completed747-test log and executed earlier companions.
 The new evidence is additive; existing frozen sources/results and all
 previous numeric/visual archives retain their original hashes.
+
+
+## 2026-10-19: failure paths, controlled interventions and model closure
+
+The user's daytime work session continues development deeply while paper
+writing remains deferred. All numerical work below uses original IDs1–120;
+final121–180 is not reopened. The unchanged main registry and legacy
+src/report/output remain authoritative. New studies are additive and never
+turn current C executionReview into a simulated investment return.
+
+The first mechanism protocol is frozen before its numerical execution
+(7249682). Eleven fixed M/B cases from the original failure-ID inventory
+reconstruct22 original30-year accounts,682 endpoints and660 account periods.
+Four missing inner B trace arrays are reconstructed with the original own-target
+annual/pending reference and checked against saved financial metrics. Independent
+fee/account arithmetic passes72210 checks, maximum3.67e-13. The auditor initially
+encountered absent optional loss_tolerances metadata in old B arrays; its explicit
+adapter uses the frozen group L. Producer and old evidence are unchanged. The
+first action difference is not necessarily the first exposure difference, and
+crossing-year equal targets do not imply equal wealth or historical real peaks.
+Current-DD accounting components are not additive lifetime-MDD causal shares.
+
+The next question was fixed before the new mechanism outputs (a2d559f), then
+its implementation/protocol frozen in27b2393. Only the original first M/B action
+disagreement is replaced; both branches subsequently re-evaluate the unchanged
+policy from their own original histories. All11 control paths reproduce the
+original model. Independent review passes12036 checks,22 complete accounts and
+54 active fixed Q witness slots (43 distinct); the finite witness scalar-fan
+checks are not described as an independent recomputation of every new Q.
+None of11 breach/first-crossing labels changes. Total net-log wealth changes
+are5 positive/6 negative. Nine MDD changes are rounding scale; full98 improves
+by0.548826pp and outer_r4_112 worsens by1.994169pp. No intervention becomes an
+approved repair, and no unfavorable case is replaced.
+
+The9 equal-MDD observations motivate an explicitly post-hoc positive-homogeneity
+question. Its source, plan and10 synthetic tests are frozen in04262b7 before
+new saved-array matches. Every original case is retained. Exactly9 reach a
+sufficient proportional holdings/real-peak state at an interior endpoint before
+both arms attain finalMDD; all subsequent actions, normalized physical states,
+Q/counts and future fee scaling pass, maximum8.88e-16. The two materially
+changed-MDD cases have no such witness. This derivative diagnosis uses the
+already independently audited intervention arrays; it is not a fifth independent
+market or all-policy audit, a probability estimate or proof of necessity.
+
+A separate outcome-free metadata match within the already selected11 cases
+finds exactly one same-ID/target/eta pair among55 possibilities. The protocol
+and source freeze in dafda15 precedes new local Q computation. Full112 and
+outer_r5_112 first act differently in original year5 after15 categories of
+exactly equal prior state/history. Full120 and delete-self119 recommend restore;
+original outer96 holds. Independent scalar fan reconstructs every335 paired
+member and670 action branches, maximum1.22e-15. The risk reduction9→8 in120/119
+compensates negative predicted financial growth, while96 has7→7 and no risk
+compensation. Removing112 alone does not explain this local flip. This is a
+particular fixed-state fan replacement, not a full119 learner, calibration or
+attribution of the entire later MDD difference to year5.
+
+The known-cost evidence bridge (89632b8) requires exact base-cost identity of
+all48 candidate fields and36 fields for each reference before copying old cost
+rows. Old reference target metadata is the sole explicitly supplied missing
+field. Full120 fixed-candidate/reference subsets at five original rates yield
+1800 shadow rows; no old outer fit, menu, selection or admission transfers.
+Root's independently authored bridge review compares120 arrays/369371 scalar
+values and19800 saved financial scalars, and separately recomputes15 aggregate
+groups; maximum2.22e-16. Its first metadata adapter assumed plural start/end
+keys, while the old cost receipt uses singular source_and_artifact keys; this
+was corrected explicitly without changing old producer/results. Candidate
+breach counts10/9/9/10/9 are nonmonotone because known fees also change actions.
+Fixed Review under all rates is not empirical admission robustness.
+
+A new current model contract is independently reconciled with the original
+three-page problem and current artifacts (ec6c0db).193 checks cover18 summary
+rows,96 records/74 IDs, same-auto B comparisons,678=376+302 restore classes,
+Q1 own-H labels/annual reference,112 severe-case fields and44 customer words.
+The static Q1 annual reference is distinct from Q2 B annual-then-pending.
+Training resubstitution is distinct from the causal information set of heldout
+execution. Eight finite technical prices are separate from risk_first. The
+historical registry's growth_only31 trial label is clarified as the positive
+financial-benefit simplification; retained eta0 training is37/120. Frozen
+registry/history are not edited. Source/accounting correctness does not solve
+conditional prediction or autonomous-service stability; no new search is
+undertaken merely to obtain automatic approval.
+
+The new companion builder is frozen in2de2c14 after7 synthetic artifact-gate
+tests and actual inspection of all four final PNGs. Its initial source freeze
+attempt was stopped by gitdiff whitespace checking before commit; the draft EOF
+was fixed and presentation fingerprints refreshed before the successful freeze.
+The executed notebook has13 sequential code cells,9 HTML tables and4 embedded
+figures, zero errors. All PNG/SVG bytes remain those actually inspected; SVGs
+have no trailing whitespace. The receipt binds source/evidence/figure manifest,
+notebook andHTML. Entire-HTML browser preview and fully offline math rendering
+are explicitly not claimed.860 unit tests pass in154.139s for this checkpoint.
+A premature checkpoint attempt correctly rejects the still-running test log;
+no rule is weakened, and the completed log is used on the successful rerun.
+
+The readiness judgment supports closing model definition and preparing a
+locked transparent final evaluation, not declaring C deployable. Current C
+remainsReview/financialNULL because selected-beta inner10 exceeds same-U B8.
+The remaining evaluation adapter must separate primary service, nonadmitted
+shadow and references, lock metrics/NULL/information timing before final data,
+and disclose that the earlier V1 already saw121–180. Paper/ZIP/CMT work remains
+outside this session's current modelling checkpoint.
