@@ -25,6 +25,7 @@ Last updated: 2026-10-19 (submission closure). Current branch:
 | V2b report draft | [main.pdf](../report/v2b_submission/main.pdf) and [main.tex](../report/v2b_submission/main.tex) |
 | Q3 sensitivity note | [Q3_SENSITIVITY.md](../submission/Q3_SENSITIVITY.md) |
 | Compact final reproduction guide | [FINAL_REPRODUCTION.md](../submission/FINAL_REPRODUCTION.md) |
+| Closure verification v2 (Q1 table, report, v4 package) | [results/submission_closure_v2/verification.json](../results/submission_closure_v2/verification.json) |
 | Data provenance/licence | [DATA_NOTICE.md](DATA_NOTICE.md) |
 | AI assistance record | [AI_USE.md](../submission/AI_USE.md) |
 
@@ -69,5 +70,7 @@ edited**. This closure adds new documents and a new package; it does not rewrite
 frozen manifest. If a historical checkpoint hashes an older README or file, that
 checkpoint remains a true statement about its own timestamp, not about the current
 tree. The closure verification in
+[results/submission_closure_v2/verification.json](../results/submission_closure_v2/verification.json)
+records the Q1 table, report draft and v4 package checks. The earlier
 [results/submission_closure_v1/verification.json](../results/submission_closure_v1/verification.json)
-records the new files and checks.
+remains the historical v3-package record.

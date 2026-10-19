@@ -1,0 +1,122 @@
+{
+  "version": "submission-closure-v2-verification-2026-10-19",
+  "status": "passed",
+  "completed_utc": "2026-10-19T16:13:35.041433+00:00",
+  "base_commit": "71d268811c5c0a896b5584123f48032b1d12b6f4",
+  "content_commit": "c680425aef442311a341e50e731f4f9bc99323dc",
+  "scope": "Add Q1 5x3 screen, one-page onboarding flow and 7-page V2b report draft; build and verify v4 package. No model/final-output change.",
+  "model_changed": false,
+  "new_fits": 0,
+  "new_selections": 0,
+  "new_final_evaluations": 0,
+  "fixed_final_reproduction_read": true,
+  "full_test_suite": {
+    "command": "PYTHONPATH=src .venv/bin/python -m unittest discover -s tests -v",
+    "tests_run": 1534,
+    "skipped": 0,
+    "status": "OK",
+    "seconds": 187.867,
+    "log_path": "results/submission_closure_v1/full_tests.log",
+    "log_sha256": "ffed7809f5fbf172535cec0374db565c7325bf832bdcf573bb7b15c8e2eebe45"
+  },
+  "q1_product_comparison": {
+    "status": "complete",
+    "validation": {
+      "checks": 30,
+      "max_abs_error": 1.6653345369377348e-16,
+      "all_checked": true
+    },
+    "development_csv_sha256": "698a90d617ccb83fc7279519074463450ec096f1b079ce0e0a56c5d0efcb4174",
+    "final_csv_sha256": "886d12f7215867058f8e9b75c63770334764a49e53d5d914770e2894b21bfff9",
+    "assignments_changed": false
+  },
+  "report": {
+    "path": "report/v2b_submission/main.pdf",
+    "pages": 7,
+    "a4": "RectangleObject([0, 0, 595.276, 841.89])",
+    "bytes": 408331,
+    "sha256": "e75a45ddeba0e66b299ae10013bd066c91fcf0a425b1b766af22e013de7aadbd",
+    "pdflatex_passes": 2,
+    "overfull_count": 0,
+    "undefined_reference_count": 0,
+    "draft": true,
+    "pdf_byte_identity_claim": false,
+    "note": "The submitted PDF is the two-pass build included in v4; a fresh pdflatex run can change PDF byte metadata while keeping content."
+  },
+  "clean_zip_reproduction": {
+    "archive": "dist/Team87_Lebmar_Technical_Source_v4.zip",
+    "archive_sha256": "fe03c7c92dd96bb887b43246b47eb732597adca02b0a38cac064d76941a780af",
+    "archive_bytes": 4398299,
+    "status": "passed",
+    "mode": "fixed_nonblind_final",
+    "final_scenarios_loaded": true,
+    "new_fits": 0,
+    "new_selections": 0,
+    "post_final_parameter_changes": false,
+    "array_fields": 505,
+    "total_rows": 840,
+    "summary_rows": 14,
+    "comparisons": 8,
+    "manifest_sha256": "d59c4c3c91bd60403c1b9a15dd2404406f456d46d1ecc3e6ddfaa8c419a25d09",
+    "checks_sha256": "56bc5d88028ad59c733d9c1efb10f435a21650aa83451bf9d80b2d5e075d00cb"
+  },
+  "package": {
+    "archive": "dist/Team87_Lebmar_Technical_Source_v4.zip",
+    "archive_sha256": "fe03c7c92dd96bb887b43246b47eb732597adca02b0a38cac064d76941a780af",
+    "archive_bytes": 4398299,
+    "members": 606,
+    "under_50mb": true,
+    "sha256sums_checked": 605,
+    "sha256sums_failures": 0,
+    "core_members_checked": 564,
+    "core_mismatches": 0,
+    "report_pdf_included": true
+  },
+  "files_sha256": {
+    "README.md": "97e6b6769a07870517de126d2063a7db47e9066295cda6d4ee92c8cfc68aa842",
+    "docs/AUTHORITATIVE_INDEX.md": "c17469038f936be93f41f41f3889f54c83dc91917c6915f3c52d73ba556a3b84",
+    "submission/TASK_ANSWER_SHEET.md": "8ac28132c6780680c9364aff2251ed9f93d146c5a37a8b35d27f87be03cabaaa",
+    "submission/Q1_PRODUCT_COMPARISON.md": "73a4b0b96138a7c3698c98681b28b9b608bff3c4258fc5595ad797bf01c9dd72",
+    "submission/Q1_ONBOARDING_FLOW.md": "9c0263dd339d267a9a55d3e01803a234f06c294dbb9009945fd5915b9e71a262",
+    "report/v2b_submission/main.tex": "f463160284a444d53e316ffc7e33e8d2981f2c9366fa648b885511379209901a",
+    "report/v2b_submission/main.pdf": "e75a45ddeba0e66b299ae10013bd066c91fcf0a425b1b766af22e013de7aadbd",
+    "dist/Team87_Lebmar_Technical_Source_v4.zip": "fe03c7c92dd96bb887b43246b47eb732597adca02b0a38cac064d76941a780af",
+    "dist/Team87_Lebmar_Technical_Source_v4.zip.sha256": "4ec8ca76c083611802fc4889eea354c943a50a22640efb4e7afe42ab9b59d9b8"
+  },
+  "frozen_evidence": {
+    "changed_paths_since_base": [
+      "README.md",
+      "dist/Team87_Lebmar_Technical_Source_v4.zip",
+      "dist/Team87_Lebmar_Technical_Source_v4.zip.sha256",
+      "docs/AUTHORITATIVE_INDEX.md",
+      "report/v2b_submission/README.md",
+      "report/v2b_submission/figures/q1_onboarding_flow.pdf",
+      "report/v2b_submission/figures/q1_onboarding_flow.tex",
+      "report/v2b_submission/figures/q1_onboarding_flow_cropped.pdf",
+      "report/v2b_submission/figures/q2_tradeoff_severe.pdf",
+      "report/v2b_submission/figures/q2_tradeoff_severe.png",
+      "report/v2b_submission/main.pdf",
+      "report/v2b_submission/main.tex",
+      "results/q1_product_comparison_v1/development_5x3.csv",
+      "results/q1_product_comparison_v1/final_5x3.csv",
+      "results/q1_product_comparison_v1/manifest.json",
+      "scripts/build_q1_product_comparison.py",
+      "scripts/make_v2b_report_figures.py",
+      "submission/Q1_ONBOARDING_FLOW.md",
+      "submission/Q1_PRODUCT_COMPARISON.md",
+      "submission/TASK_ANSWER_SHEET.md"
+    ],
+    "frozen_paths_changed": [],
+    "note": "Historical producers, final arrays and audits were not modified."
+  },
+  "github_main_update": "Pending after this verification write; the commit adding this file is the final documentation commit.",
+  "limitations": [
+    "Q1 final 5x3 table is descriptive only; assignments were fixed from development 1-120.",
+    "The final 121-180 sample was previously exposed; the report describes it as nonblind.",
+    "Report is a participant-review draft; CMT upload and final human page/font checks remain."
+  ],
+  "post_content_changes": [
+    "docs/AUTHORITATIVE_INDEX.md (closure v2 link row)",
+    "results/submission_closure_v2/verification.json"
+  ]
+}
