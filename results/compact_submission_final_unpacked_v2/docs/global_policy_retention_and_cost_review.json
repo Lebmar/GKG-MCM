@@ -1,0 +1,89 @@
+{
+  "version": "global-policy-retention-cost-interpretation-and-fixed-sameU-review-v1",
+  "declared_utc": "2026-10-18T08:49:29.303517+00:00",
+  "status": "Prospective fixed postfit admission overlay and interpretation audit; no source changes, new training, market simulation or same-U result read for this review",
+  "read_boundary": {
+    "new_cost_or_constrained_result_files_read": false,
+    "same_U_overlay_outcomes_read": false,
+    "new_market_data_read": false,
+    "final_scenarios_121_180_read": false,
+    "evidence": "Old frozen mathematical/selection/score source and protocols only. The parent reports recent growth-only and fixed-local-cap controllers failed all fits on training/inner support; those numerical reports are not independently reverified here."
+  },
+  "framework_decision": {
+    "main_mathematical_framework": "Retain complete-policy finite-family learning with an original-H chance-style risk-service constraint and explicit Review option as the main framework. Use the unique already existing joint_tie_set_refit_learner for the prospective postfit review below; do not choose a legacy learner by outer financial ranking.",
+    "why_global_is_more_direct": "The original risk object is the complete policy original-H event probability, not a requirement that every observed state conditional model probability be<=.10. Whole-path candidate evaluation directly addresses that object; statewise fixed-alpha feasibility adds a stronger, dynamically different heuristic restriction.",
+    "logical_counterexample": "A policy may have original breach probability.10, while an observed pre-breach regime identifying10%of paths has conditional future breach probability1. The original chance constraint can hold while requiring every reachable state risk<=.10 fails. This is a logical distinction, not a market example or proof the old learner is safe.",
+    "do_not_overclaim_old_optimization": "Within each fixed beta, the old selector maximizes complete-training mean annualized log growth over its9price-generated controllers satisfying k<=min(kB,floor(beta*n)). Inner beta/topE selection first maximizes automatic coverage among risk-eligible beta procedures, then conditional inner growth; refit searches only the retained tiedE in ascendingbeta. Therefore the implemented learner also contains an explicit coverage-priority service rule, not a universal pure maxG solution over all policies.",
+    "failed_simplifications": "Failure of the two recent specific growth-only/hard-local-cap rules does not establish infeasibility of all fixed-target two-action policies or all automaticC service. Any earlier review language suggesting that broader conclusion was too strong; restrict it to the tested controllers and their declared rules.",
+    "limits": "The retained framework remains a restricted finite candidate method with an unconditioned calendar fan, nested reused data, possible parameter/target/admission instability and no population10%risk guarantee."
+  },
+  "eta_and_cost_benefit_legitimacy": {
+    "finite_score": "For fixed eta>=0, DeltaQg=Qg_restore-Qg_hold is the full-original-H same-state action-then-B NET log-growth difference; DeltaP=(k_restore-k_hold)/N is its paired terminal everbreach difference. Score=DeltaQg-H_original*eta*DeltaP. Restore iff score>1e-12 in total-log units.",
+    "what_eta_is": "A declared technical controller-generation parameter drawn from a fixed finite grid and selected by whole-policy empirical feasibility/growth. It need not be identified by the questionnaire to serve this role. The old source/protocol already states this technical interpretation; it is not a new utility-identification claim.",
+    "what_eta_is_not": "Not elicited customer risk aversion, CRRA gamma, estimated monetary willingness to pay, an identified KKT multiplier, exact dual optimum, carried conditional risk budget or proof that policy risk is monotone in eta.",
+    "cost_once": "Qg already contains the current exact paid restoration, future B fees and altered branch pending/history. Its difference is NET. No second fee or log-cost offset may be subtracted. Exact current fee can be displayed separately as an accounting quantity.",
+    "finite_benefit_interpretation": "Positive score means positive estimated risk-adjusted net benefit under that explicit technical surrogate. A negative unpriced DeltaQg restore can be justified by a sufficiently large predicted risk reduction under the chosen controller score, while the outer complete-policy selection separately enforces service risk. Do not describe it as positive expected cash profit or as a customer-approved exchange price.",
+    "risk_first_special": "The ninth risk_first label is a separate lexicographic rule: lower integer predicted bad count restores; higher count holds; equal counts use positive net growth. It is not numerical infinity arithmetic or a finite price. A negative-growth restoration under this rule has an explicit predicted risk-reduction reason, without claiming a finite monetized risk benefit.",
+    "task_interpretation": "The contest qualitative estimated-benefit-versus-cost condition allows an explicitly stated risk-adjusted or risk-service benefit. Expected net log growth alone is one defensible interpretation, not a necessary unique one. A technical score can operationalize the broader interpretation if its empirical forecast, normative service rules, cost accounting and limitations are transparent.",
+    "not_a_global_guarantee": "A positive local score does not prove realized benefit, true conditional calibration, whole-policy safety, optimality, lower severity or final deployment eligibility. The actual complete path must satisfy the frozen training/inner/refit/admission rules."
+  },
+  "prospective_overlay_fixed_rules": {
+    "retained_learner_exact": "joint_tie_set_refit_learner",
+    "scope": "All26old contexts:25 refit_stability repeated outer contexts plus original joint full_development c0. The original full120 financial evaluation is in_sample_full120 and never added to outer evidence.",
+    "immutable_choices": "Freeze every old refit selected beta, selected candidate order/eta, topE, target, Q1 assignment/gamma, original contexts/folds, cost, H/L, servicealpha and existing rejection. Do not recompute training fits, change selections, rerankE, choose another beta/price/target/architecture or evaluate an alternative to rescue coverage.",
+    "only_old_automated_can_pass": "If the old selected learner was Q1Review, outsideBalanced or executionReview, preserve that status/reason andNULL financial outputs. An old rejection is never re-admitted. Overlay eligibility is old_automated AND new_same_U_guard_pass.",
+    "which_inner_predictions": "For an old automated final fit, take ONLY its old final-selected beta original inner prediction rows across its4inner jobs. Each row represents that own inner job originally selected eta at thisbeta and own target; do not apply the final refit eta retrospectively to the inner paths. Do not consult other beta results to find a guard that passes.",
+    "U": "U is exactly those original inner heldout IDs assigned automatically under the fixed selected beta procedure. Preserve all parent original training IDs once in the evidence table, with the othersNULL/status. Require nU>0; k=sum original terminal breach flags onU.",
+    "absolute_guard": "Require k<=floor(.10*nU+1e-12). This reconstructs the old selected beta risk-screen evidence; it is not a newly tuned threshold.",
+    "same_U_B_guard": "Using only the matching audited B cache rows for exactly the same inner jobs/IDs inU, require k<=kB(U). B must be the same own-target, originalH30/L.40, exactfee, mandatoryinitial, annual-until-own-breach/pending convention.",
+    "pass": "Pass only when both count predicates andpositiveU hold. Passing does not change the old beta/eta/target; retain the old final policy financial trajectories as the selected actual strategy subject to the more restrictive admission overlay.",
+    "fail": "On either count failure ornoU, all24outer evaluation paths, or all120full-development paths, become executionReview withNULL service financial outcomes. Do not try another beta insideE, go outsideE, swapeta, retarget, useB or adopt another architecture. Preserve old traces as archived counterfactual evidence, not new served returns.",
+    "fit_timing": "The overlay uses only that fit old inner/training evidence, never its outer/full120 realized future financial outcomes. Its one decision applies uniformly to the complete evaluation set. The overlay itself is designed after earlier development, so this timing does not make the project fresh blinded validation."
+  },
+  "B_cache_identity_and_integrity": {
+    "source": "Already independently audited benefit_cost_execution_v1 130job inner_reference_paths cache, not raw market resimulation. Only its reference B rows are reused; its failed model predictions are not needed.",
+    "mandatory_checks": [
+      "Complete cached main manifest and passed independent audit bind to its exact manifest; current source/input/output hashes match before andafter processing",
+      "Old context/job_id, parentcontext, original training IDs and heldout IDs exactly match the new cache component",
+      "Own Q1 effective case, targetweights/name/local/global indices, static gamma/context/canonical bundle identity and H/L/cost/pending conventions agree",
+      "All parent training IDs appear once across4inner validation blocks; old selectedbeta row IDs and B IDs pair by job_id+originalID with no missing/duplicate/foreign row",
+      "B is available for every automaticU row; breach flags are observed booleans and correspond to the same original-H event",
+      "Full c0 static refit outerIDs[] remains distinct from its separate dynamic120in-sample evaluation; inner90/30cache identities are not rewritten"
+    ],
+    "integrity_failure": "Missing/mismatched cache, manifest, target or row identity is an audit/integrity failure that aborts a successful overlay receipt. It must not be disguised as ordinary modelReview or resolved by substituting another cache/fold."
+  },
+  "prospective_actual_trace_cost_audit": {
+    "scope": "Audit ALL originally automated actual selected retained-learner trace accounts across the26contexts, including contexts later rejected by the overlay. Map the exact old selected order to the appropriate saved physical trace; shared canonical/retained physical traces may be deduplicated only with explicit identity. Originally rejected contexts have no invented actual strategy trace.",
+    "every_active_optional_decision": "Verify original own training fanN, H, selectedeta/order, actual pending flag, paired Qg and integer Qbad. Reconstruct finite score=DeltaQg-H*eta*(DeltaK/N) without another fee; compare stored score and exact selected action against the frozen>1e-12 rule. Forrisk_first use the separately defined integer lexicographic rule and keep scoreNULL.",
+    "negative_growth_invariant": "Every optional restore with DeltaQg< -1e-12 must have k_restore<k_hold. For finiteeta, its positive score must be supported by that risk term; eta0 cannot have a strict negative-growth restore. Forrisk_first strict count reduction supplies the reason. Do not falsely say every such trade is the only feasible or necessary action.",
+    "initial_and_pending": "Mandatory initial configuration and absorbing pending hold are separate exceptions to optional scoring. Initial/pending Q/score sentinels remain absent under the old frozen schema; do not fabricate positive economic evidence. Verify their actual fees/history/pending accounting against saved audit evidence.",
+    "growth_sacrifice_reporting": "Report number/fraction of optional restorations with strict negative DeltaQg, exact original path/fit denominators, negative-gap distribution in total-log Q units, paired predicted event-count/probability reductions and actual current fees. Distinguish within1e-12ties from strict sacrifice. Qg branches overlap across dates, so summing their gaps is not a realized cumulative loss or complete-policy growth effect; no annual-row IID inference.",
+    "actual_accounting": "Current actual fee is paid once under the exact transfer executor. Existing independent physical/forecast-Q audits support unchanged old traces; this overlay audit verifies complete score/action/selection identity, not a newly calibrated forecast law.",
+    "boundary_rule": "If reconstructing a boundary decision conflicts with the stored rule/action, preserve the discrepancy and fail the implementation audit rather than widening tolerance or flipping a historical action to pass."
+  },
+  "predeclaration_and_previous_stopping_rule": {
+    "what_stays_frozen": "Recent growth-only and constrained-local experiments remain completed failed experiments with their original principals, archives andallReview conclusions; do not rewrite their protocol or claim they succeeded under this interpretation.",
+    "not_new_action_family": "This overlay adds no policy candidate, price, seed, horizon, target or training search and only removes original admissions. It does not restart the promised no-more-controller-family expansion.",
+    "what_is_new": "A postfit admission rule and the project main-framework adoption judgment are new development decisions. The served learner is the old selected controller with this new guard, not an unchanged admission procedure. State that explicitly and freeze it before reading its same-U outcomes.",
+    "no_retrospective_primary_claim": "Do not claim the retained framework was always the prospectively fixed final principal throughout the two failed experiments. Restoring it as the project main framework is an openly documented methodological judgment about the global risk object and technical parameter interpretation, not a retroactive preregistration.",
+    "remaining_adaptivity": "The same120paths and known old results have been repeatedly used. Even though the overlay decisions use only per-fit inner evidence and never choose an outer financial winner, its development history remains adaptive and cannot provide a fresh confirmatory safety certificate.",
+    "stop_after_overlay": "Freeze the unique retained learner and this guard once. If no supported final service remains, keepReview; do not remove the B-relative gate, searchanotherE beta or revive another learner for coverage."
+  },
+  "accurate_reporting_before_and_after": {
+    "before_overlay": "The two recent cost-focused controller experiments failed to support any automaticC service under their own complete procedures. The older global learner previously had fit-dependent automatic eligibility under its own rules; its final status under this additional guard has not yet been determined. Therefore do not say no strategy has ever been automatic, and do not say an effective finalC deployment has already been established.",
+    "framework_can_be_set_now": "The trusted main mathematical framework can be fixed as constrained whole-policy learning with a reject option and explicitly technical finite-family controllers. Concrete automatic service eligibility remains conditional on the frozen postfit review/audit and full-development decision.",
+    "if_overlay_supports_some_fits": "Describe the exact supported conditional service population/fit variation and full120final status. Same-population returns are not populationwide performance; passing admission is empirical approval support, not a guaranteed10%true risk or stable personalized suitability.",
+    "if_overlay_allReview": "Conclude that none of the reviewed fixed admitted procedures is supported for automaticC deployment under the retained rules and data. Retain the mathematical framework and clearly state the service/evidence limitation; do not callAllReview an investable strategy or infer all safe/profitable strategies are impossible.",
+    "failures_are_findings": "Keep the failed simplifications in the research record: positive local economics and a statewise local chance rule are insufficient for complete-policy feasibility in these tests. Their failure is useful diagnosis, not permission to erase costs, risks or inconvenient outcomes."
+  },
+  "reviewed_source_sha256": {
+    "research/experimental_execution/risk_priced_fan_rollout.py": "2a935cfe1d039f6a020e104fe92aa659bb92aac2a0b3bed2ef767437015ba472",
+    "research/experimental_execution/nested_dynamic_selection.py": "a293daf2383477e4b33fffd5dacad04ab8fbc71dc92edab2c9f9ff492a28aa20",
+    "research/experimental_execution/refit_aware_selection.py": "12d90c14e1208143014a4d0f9d8eadd69960bd966308f24d5d13f7873866d7c6",
+    "scripts/run_joint_liquidity_refit.py": "d6c6dfa2b18fd4b0fcfc9ec97b6a822c87f50ea1f42b2ee763d06a394e8641fe",
+    "scripts/run_refit_stability.py": "08a7f7e92a2f7272e24b0ed13922f25048f2a4911a351860d4fe39c96334189b",
+    "docs/risk_priced_fan_execution_protocol.json": "67051393a4f56bc6ae754795b5b47e38b6a01b57f9607ae3fe3374540df93bb6",
+    "docs/constrained_rollout_design_review.json": "a0841a0e0922eabb3cd4a182b4e54097562b87eda49c4a24e5423c440549733f",
+    "docs/constrained_fan_preexecution_review.json": "19f783c0ac1a72cec1a3d25d1b5ba878789c8f2b1814ff1644ff6760f3811b81"
+  }
+}

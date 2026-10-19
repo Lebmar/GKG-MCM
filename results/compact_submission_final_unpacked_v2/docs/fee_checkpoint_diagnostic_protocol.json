@@ -1,0 +1,34 @@
+{
+  "version": "2026-10-17-fee-checkpoint-diagnostic-v1",
+  "status": "Declared before calculating fee-checkpoint results; observation-definition sensitivity only",
+  "scope": "Keep the original annual-endpoint MDD unchanged. Add known post-fee/pre-return wealth observations to the same executed static annual paths. Do not refit menus, targets, assignments, alpha or confidence conventions.",
+  "data": {"allowed_ids": [1, 120], "meaning": "Inclusive guarded development range", "allow_final": false, "prior_exposure": "Old V1 final data were previously seen; this is no fresh blind evaluation."},
+  "execution": {"policy": "Existing annual restoration of all 232 fixed 5pp/exact-thirds targets", "cost_rate": 0.0025, "initial_nominal_wealth": 100, "initial_asset": "bills", "initial_fee": "Charged once under the existing exact transfer convention", "terminal_liquidation": false},
+  "definitions": {
+    "price": "P_0=1; P_t=product_{j=1}^t(1+inflation_j). Executed annual real wealth R_t=W_t/P_t already includes all actual fees.",
+    "annual_peak": "M_(t-1)=max_{0<=j<=t-1} R_j, using the original annual endpoints.",
+    "post_fee_real": "F_t=(W_(t-1)-C_t)/P_(t-1)=R_(t-1)-C_t/P_(t-1), before year-t returns and year-t inflation.",
+    "fee_checkpoint_mdd": "D_feeobs=max(D_annual, max_{1<=t<=H}(1-F_t/M_(t-1))). Fees are nonnegative, so F_t cannot raise the existing annual running peak.",
+    "interpretation": "MDD at annual endpoints plus known fee observations. It is a finer observation lower bound for an unknown continuous path, not measured intrayear or continuous-time MDD.",
+    "no_double_fee": "Only add an observation to an already executed path. Do not subtract a fee again from annual/terminal wealth, alter growth or alter cumulative fees.",
+    "risk_event": "MDD > L + 1e-12, preserving the original numerical equality convention."
+  },
+  "horizons": [5, 6, 15, 25, 30],
+  "client_events": [{"name": "A", "H": 5, "L": 0.10}, {"name": "B", "H": 15, "L": 0.25}, {"name": "C", "H": 30, "L": 0.40}, {"name": "D", "H": 25, "L": 0.15}, {"name": "E", "H": 6, "L": 0.35}],
+  "comparisons": [
+    "All 232 candidates at the five fixed client H,L events, with exact counts, sample denominator, newly flagged paths, MDD increment, expected excess and CVaR90 changes.",
+    "Every product-client pair in all nine frozen full-development primary menus; retain product identity, original chosen flag and assignment. Do not classify by refitting the observation definition.",
+    "The 600 original alpha10/risk_only primary OOF client-path rows. Preserve the recorded fold target and assignment; Review financial fields stay null and coverage denominators remain explicit."
+  ],
+  "unchanged": ["Annual-endpoint risk definition in the original study", "Nominal and real annual/terminal wealth", "Growth and volatility", "Actual fees, moved amounts and trade frequency", "Frozen menu weights and assignments"],
+  "checks": [
+    "Reproduced annual paths and every cached annual metric/fee/moved/trade-fraction value at all five H before assessing sensitivity.",
+    "D_feeobs >= D_annual; fee points do not create a new peak; expected excess and CVaR90 cannot decrease apart from numerical tolerance.",
+    "MDD increment is no greater than the largest real fee divided by the preceding annual peak. The proportional model also gives C/V <= c/(1+c).",
+    "Synthetic initial fee followed by a positive net annual gain: annual MDD zero but fee-observation MDD positive.",
+    "Synthetic annual path [100,90.01,110] with second-year fee .02: L=.10 changes from non-exceedance to exceedance.",
+    "Use the transaction-time P_(t-1), not P_t; adding observations cannot charge the fee twice."
+  ],
+  "inference": "Descriptive definition sensitivity on reused development paths. No new risk certification, intrayear protection, policy selection, cost probe or menu replacement.",
+  "provenance": "Record source and frozen-input hashes at start/end, guarded-development array hash, output hashes and the exact observation formula."
+}

@@ -1,0 +1,201 @@
+{
+  "version": "simple-execution-design-review-v1",
+  "created_utc": "2026-10-18T05:15:10.583489+00:00",
+  "status": "Prospective independent method review before any new simple-execution market run; approved only as bounded diagnostic controls after explicit clarifications",
+  "scope": {
+    "new_market_fit": false,
+    "new_simulation": false,
+    "raw_market_data_loaded": false,
+    "new_final_evaluation": false,
+    "frozen_artifacts_modified": false,
+    "paper_written": false,
+    "review_role": "Independent AI design/source review, not independent human peer review",
+    "source_inspection": "Read local problem page2, frozen crosswalk/readiness, accounting and cached-component contracts; no new market outcomes read."
+  },
+  "central_judgment": "The two fixed architectures can diagnose candidate-family support and the separate inner risk-admission gate. They are not complete replacements for the contest Q2 benefit-versus-transaction-cost policy. Including the exact annual B candidate removes one old training infeasibility mechanism by construction; any observed admission increase must not be labelled an identified causal effect of removing forecasts or a risk guarantee.",
+  "accepted_study_purpose": [
+    "Separate the old finite9-price family potentially lacking any observed-training feasible controller from the independent pooled-inner risk support question.",
+    "Compare a one-candidate annual positive control and a three-candidate drift-band family while reusing exactly the same fully trained static Q1 components.",
+    "Hold all five repeated whole-path partitions, all125 component contexts and all25 outer fits fixed; evaluate both architectures, with no architecture/seed/threshold winner chosen on the outer results."
+  ],
+  "contest_coverage_block": {
+    "status": "Not a blocker for diagnostic execution; blocker for calling either architecture the final complete Q2 automated policy without further benefit rule.",
+    "problem_source": "docs/problem_A.pdf page2 Q2",
+    "requirement": "Trades or target changes require estimated benefit to justify transaction cost.",
+    "annual": "A yearly restoration schedule, even after whole-policy empirical admission, contains no per-trade estimated benefit-versus-cost comparison.",
+    "drift": "TV deviation above a fixed band is a state/transaction-frequency rule. Cost is charged in scored net growth, but that fact alone does not estimate the benefit of each proposed trade relative to its cost.",
+    "initial": "Mandatory initial allocation remains a clearly labelled modeling convention; it is not evidence that later scheduled trades satisfy the benefit clause.",
+    "naming": "Use simplified execution diagnostic/positive control; if identifiers annual_gated or drift_band_gated remain, state that gated refers to empirical initial admission, not trade-level net-benefit gating.",
+    "no_silent_promotion": "The prior hypothetical annual reference can have its identical financial trajectory under a new diagnostic admission rule. It does not become a contest-complete automatic fallback or real adviser service."
+  },
+  "fixed_common_accounting": {
+    "profile": "Original C only, H30/L.4, Q2 only when own effective Q1 label Balanced.",
+    "target": "Exactly own job static bundle Balanced weights. Fixed target throughout; no update, no mutation of joint30/10/0 normative target floors.",
+    "initial": "New account100 in bills, mandatory restore before original year1 returns, one original self-financing .25% transfer fee.",
+    "order": "At year t decision use pretrade holdings/weights from observations through t−1; charge a single transfer fee before year-t returns.",
+    "history": "Retain originalH, accumulatedCPI, realwealth/peak/MDD and absorbing first-exceedance flag; no annual risk reset.",
+    "pending": "After first endpoint MDD−L>1e−12, subsequent decisions hold existing units; holdings still earn market returns. No invented adviser response, re-entry or emergency return.",
+    "terminal": "No liquidation fee or year31 trade. A first crossing at year30 is still recorded.",
+    "liquidity": "Target reserve convention only; a drift band does not ensure a live bills floor, cash access or purchasing-power guarantee."
+  },
+  "architecture_definitions": {
+    "annual_gated": {
+      "candidate_orders": [
+        0
+      ],
+      "candidate_definition": "Exactly the frozen same-target annual-until-own-first-breach-then-pending reference B. Restore at every active decision, including zero TV; hold only when already pending."
+    },
+    "drift_band_gated": {
+      "candidate_orders": [
+        0,
+        1,
+        2
+      ],
+      "delta_values": [
+        0.0,
+        0.05,
+        0.1
+      ],
+      "TV": "TV_t=.5*sum_j abs(x_j,t/sum_j x_j,t − w_j), computed on current pretrade holdings; dimensionless portfolio-weight fraction.",
+      "priority": [
+        "year1 mandatoryrestore",
+        "alreadybreached => hold",
+        "delta0 => exact annualB active restore branch",
+        "delta>0 and TV_t>delta => restore",
+        "otherwise hold"
+      ],
+      "threshold_numerics": "For positive deltas use strict floating comparison TV>delta, no extra numeric tolerance; equality holds. Keep original1e−12 only for risk-event/cap conventions.",
+      "delta0_identity": "Explicit annual branch is required. TV>0 alone may hold at exact-zero drift where B records restore/target_execution; financial equivalence alone is weaker than all-state/action equivalence.",
+      "no_threshold_search": "Exactly0,.05,.10 as a predeclared finite technical family; these are not data-identified customer preferences or established optimal bands."
+    }
+  },
+  "fixed_training_selection": {
+    "data": "Only nominated complete original training IDs T (72 inner or96 final). Every candidate evaluated over all of T from100 through originalH30.",
+    "reference": "Own job B using own job target and same originalH/L/cost/pending rule, not parent target and not another architecture cohort.",
+    "eligibility": "Integer k_candidate <= min(k_B, floor(.1*|T|+1e−12)); no beta grid and no eta/fan is used.",
+    "growth": "Mean originalH annual log growth, already net of actual fees: mean(log(W_real,H/100)/H).",
+    "tie_recommendation": "Keep the one global set G>=max_eligibleG−1e−12; then exact lexicographic minimum(mean_excess, mean_nominal_fees, original_candidate_order). If another fee-burden statistic is chosen, freeze its exact denominator before execution.",
+    "mean_excess": "Mean of MDD−L only where MDD−L>1e−12, otherwise0; declare this convention exactly and retain MDD larger-is-worse meaning.",
+    "fee_tie_interpretation": "The fixed .25% cost_rate itself cannot break ties because identical across candidates. Mean nominal fees is an observable secondary burden at equal initial100, not a second utility penalty or estimated customer preference. Alternative mean annual fee/pretradewealth would require an explicit formula including initial and pending periods.",
+    "empty_family": "If Q1 is not Balanced, no Q2 candidate is simulated or financially assigned. Any genuinely empty eligible family remains execution Review with NULLs; never choose from held-out returns."
+  },
+  "structural_facts_to_prove_not_market_discoveries": [
+    {
+      "id": "B_FIRST_EVENT_PREFIX",
+      "statement": "B with pending after crossing and alwaysannual static evaluation take the same actions until first crossing, so full-H ever-exceedance and first crossing agree pathwise. Their later wealth, MDD severity and fees can differ."
+    },
+    {
+      "id": "B_SUPPORTED_BY_Q1",
+      "statement": "When own Q1 Balanced candidate is training-risk feasible at gamma<=alpha=.1 using the identical event/accounting convention, k_B<=floor(.1*n+1e−12). Thus B is eligible under the proposed absolute-and-B count cap. The frozen current gamma grid is entirely<=.1; gammaNone/Q1Review does not imply any B guarantee."
+    },
+    {
+      "id": "REFIT_NONEMPTY_BY_CONSTRUCTION",
+      "statement": "Both architectures include exactB. Conditional on the preceding Q1/coupling conditions, Balanced final training has at least one feasible candidate. Old selected-beta/refit candidate-family failure is removed mechanically, not learned from outer performance."
+    },
+    {
+      "id": "COMMON_INNER_AUTO_SET",
+      "statement": "Conditional on supported Balanced Q1 inner cases and exact B feasibility, both architectures admit the same whole inner validation chunks before parent inner-risk qualification. Their inner auto set U should match exactly; a mismatch must be explained/audited as an implementation/accounting issue or explicitly unsupported Q1 condition."
+    },
+    {
+      "id": "TRAINING_GROWTH_DOMINANCE_IS_SELECTION",
+      "statement": "The drift family containsB and maximizes eligible trainingG up to1e−12. Hence selected trainingG>=G_B−1e−12 and selected trainingk<=k_B are enforced selection properties. Neither property establishes held-out growth or tail-risk improvement."
+    },
+    {
+      "id": "NO_PURE_FORECAST_ABLATION",
+      "statement": "The old family, price/beta selection, candidate inclusion and new inner-B qualification all change together. The two-control study does not uniquely identify a causal effect of deleting the unconditional forecast fan."
+    }
+  ],
+  "inner_support_and_final_admission": {
+    "inner_folds": "Four original dynamic inner folds inside each parent S96, each T72/validation24. Own cached Q1 calibrations are used at every job; no new fitting of an outer target inside an inner evaluation.",
+    "per_inner_job": "For each fixed architecture, select candidate from that T72 training only, then evaluate only the selected delta on its24 held-out IDs, or preserve its Q1/execution case NULLs.",
+    "U": "Pooled original IDs with observed automated candidate outcomes under that architecture across the four validation chunks, each ID at most once; not all96 if unsupported Q1 chunks exist.",
+    "positive_evidence": "Require |U|>0. Zero automatic evidence yields Review and conditional risk NULL, not0.",
+    "absolute_gate": "k_selected(U)<=floor(.1*|U|+1e−12).",
+    "relative_gate": "k_selected(U)<=k_B(U), with B evaluated on exactly U and each row using that inner-job72-trained target, sameH/L/cost. The phrase not worse thanB means this aggregate first-event count only.",
+    "reference_scope": "Do not use all96 B events against subsetU, parent96-trained target on inner24, other architecture auto sets, or outer24 B outcomes for admission.",
+    "not_pathwise": "Aggregate k<=k_B allows candidate-only events and B-only events to offset. Report event contingency on commonU as a diagnostic; do not say risk is never worse on each path.",
+    "architecture_separation": "Run and qualify the annual and drift architectures separately. Do not select whichever has better validation/outer metrics as a new meta-policy.",
+    "final_order": "First preserve final Q1 Review/outsideBalanced case. For final Balanced, an unsupported inner gate yields executionReview; a passed inner gate proceeds to own S96 training selection under the same declared rule. Any final failure yields Review. Only admitted selected final candidate is evaluated on outer24.",
+    "no_fallback": "Failure of the drift architecture does not automatically switch that customer to annual; the annual control is a separate fixed diagnostic learner. Old B/EQ references remain hypothetical.",
+    "no_extra_minimum_coverage": "No added minimum number of inner auto paths/fit successes is introduced. Risk and denominator evidence are reported without claiming finite-sample guarantees."
+  },
+  "cached_Q1_component_review": {
+    "allowed": "Reuse all125 static bundles from audited refit_stability_v1 as exact deterministic component caches; this is computational reuse of the unchanged Q1 learner, not access to held-out returns for selection.",
+    "required_identity": [
+      "Original protocol/source hash and main manifest/audit passed",
+      "Everyjob ID, parent,stage,exact train/evaluation IDs,seed and canonical static subfold context",
+      "All five questionnaires and H/L,strict172 mapping and joint30/10/0 floors",
+      "Selectedgamma,raw/effectiveassignments,own Balanced target and explicit Review causes"
+    ],
+    "forbidden": [
+      "Use full120 or parent96 target in an inner72 job",
+      "Choose a cached static fit because it improves a simple controller or outer outcome",
+      "Re-fit or mutate the frozen bundles to rescue a diagnostic admission",
+      "Use Q1 alwaysannual cached growth/fees/severity as if it were B after pending; prefix equivalence only validates first-event counts, not postbreach financial paths"
+    ],
+    "source_boundary": "New simulator must use exact own-job target and original physical accounting. Cache validation does not make repeated data new or the architectures independent."
+  },
+  "comparison_and_reporting": {
+    "full_batch": "Same five repeats25outerfits125jobs, no extra full120 fit, no new split/seed expansion.",
+    "units": [
+      "Perfit24heldout plus explicit initial A(S,C) status",
+      "Perrepeat120 original IDs",
+      "Peroriginalscenario five related left-out fits",
+      "Optional600 repeated-outcome bookkeeping, never600 independent markets or25 independent fit trials"
+    ],
+    "case_partitions": "originalN=BalancedCaseN+Q1ReviewN+outsideBalancedN; BalancedCaseN=autoN+executionReviewN. Reference availability separate.",
+    "common_group": "Financial pair deltas only on same repeat/fold/originalID with both learner outcomes present. Differing admitted cohorts are separately counted, not assigned zero returns.",
+    "references": "Same-target B and exactthirds alwaysannual remain hypothetical comparisons. New diagnostic annual admission and reference availability are distinct labels, even if trajectories match.",
+    "old_controls": "Compare both fixed old canonical/refit-aware learned controls only at their already training-selected outer arms; no evaluate/select unselected old price on outer outcomes.",
+    "no_factor_attribution": "Removing forecast, replacing candidate family, dropping beta grid and adding inner B support are multiple simultaneous changes. Report limited architectural comparison.",
+    "risk_support": "Observed first-event counts, wholeH severities, growth, fees and trade fraction conditional on available paths. No certified10% law, withdrawal guarantee, monotonicity in delta, benefit guarantee, population coverage or deployment approval.",
+    "no_paper_or_finaldata": "No paper, final121–180 parse or CMT action in this diagnostic stage."
+  },
+  "preexecution_acceptance_checklist": [
+    "Freezeexactcandidate orders/deltas and all source/input IDs/hashes before any newmarket run; the design follows prior exploratory observations, so do not call confirmatory preregistration.",
+    "Synthetic tests demonstrate delta0 full path/account/action/target-execution equality with frozenB, including exactzeroTV and positivefee, firstcrossing, year30crossing and absorbingpending.",
+    "Synthetictests demonstrate strict positive-band equalityhold, TV threshold crossing only uses paststate, future perturbation leaves currentdecisionunchanged, no doubledfees orterminaltrade.",
+    "Selection tests cover globalG band, exact excess/fee/order ties, no eligible candidate, nonBalanced and gammaNone, no innerauto, B count computed on sameU, and finalcasepriority.",
+    "Everycachedbundle exactcontext/seed/train/eval/target/source identity audited; no parent/full target leakage.",
+    "Confirm common innerU structure and annual self-reference equality; record any violated support condition explicitly rather than mutating frozencomponents.",
+    "Evaluate both fixed architectures and report all25 outer fits/all5 repeats, including zeroautoNULL; no minimumcoverage tweak, delta search, seed extension or architecture selection afterward.",
+    "Independent accounting/action replay checks all selected actual/inner traces; noQ forecasts exist in this architecture, so Qaudit is inapplicable, not zeroerror.",
+    "Keep first-event risk and severity separate; a pending response cannot prevent an already recorded first breach.",
+    "Report diagnostic/contestbenefit gap prominently before discussing whether any architecture should become a finalpolicy candidate."
+  ],
+  "provenance": {
+    "sources_and_evidence_at_start": {
+      "docs/problem_A.pdf": "2ac9412ed68349d36a3fbd2c6cddc5789a81dab8acbfa08c63a3bdb34d2aa2dd",
+      "docs/problem_A_deliverable_crosswalk.json": "1c476d8d2117d8dcad2d16d2bd686fe13aab91c2f37069392af7d21a2dc3bf65",
+      "docs/service_refinement_readiness_review.json": "98ff90324461e415c86857d135450e64f4b5006ac5343d215e1e9558f77e8cbc",
+      "docs/joint_liquidity_refit_protocol.json": "1e92a4f7b374bd7437315c89e513a830f12211b54cb08d3c4341dffdc9f1e3f6",
+      "docs/refit_stability_protocol.json": "8e9ab035073b91e4004c76c41296c56665d2199620e92d8cc0eb4eaca7a4efae",
+      "docs/refit_stability_independent_judgment.json": "01604a70d58b7b3fdd35539f23610b791433254803f48ff50c8677433956951a",
+      "research/experimental_execution/review_pending.py": "9038d420c9ea48df068c58a6abee3f993ac414f85dd0290cb56e3d703aae3894",
+      "research/experimental_execution/joint_liquidity_static.py": "f12fc90a78594f91a11c46a4ca7306237024404098df467e9dc66e110ee78c10",
+      "research/experimental_execution/nested_static_adapter.py": "9401e5b7454b9b0b88b28060baefeb3920dab9fd3e3c31870d00977e5ca84d6f",
+      "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a",
+      "results/model_review/refit_stability_v1/manifest.json": "035bfa20b4e659e88ff48b56ffdc21a6563db32a0490d2ec8a6852154018e5a5",
+      "results/model_review/refit_stability_v1/independent_audit.json": "7725716ddbfb2da1071027936fc90374668f99161e6e15b57fd3f80b90a9e712",
+      "results/model_review/refit_stability_v1/static_refits.json.gz": "1621772a0a0d0dfb822692a21ff5b8fd15b90b0977c9ba6f78f9bfd10bf87fa7"
+    },
+    "sources_and_evidence_at_end": {
+      "docs/problem_A.pdf": "2ac9412ed68349d36a3fbd2c6cddc5789a81dab8acbfa08c63a3bdb34d2aa2dd",
+      "docs/problem_A_deliverable_crosswalk.json": "1c476d8d2117d8dcad2d16d2bd686fe13aab91c2f37069392af7d21a2dc3bf65",
+      "docs/service_refinement_readiness_review.json": "98ff90324461e415c86857d135450e64f4b5006ac5343d215e1e9558f77e8cbc",
+      "docs/joint_liquidity_refit_protocol.json": "1e92a4f7b374bd7437315c89e513a830f12211b54cb08d3c4341dffdc9f1e3f6",
+      "docs/refit_stability_protocol.json": "8e9ab035073b91e4004c76c41296c56665d2199620e92d8cc0eb4eaca7a4efae",
+      "docs/refit_stability_independent_judgment.json": "01604a70d58b7b3fdd35539f23610b791433254803f48ff50c8677433956951a",
+      "research/experimental_execution/review_pending.py": "9038d420c9ea48df068c58a6abee3f993ac414f85dd0290cb56e3d703aae3894",
+      "research/experimental_execution/joint_liquidity_static.py": "f12fc90a78594f91a11c46a4ca7306237024404098df467e9dc66e110ee78c10",
+      "research/experimental_execution/nested_static_adapter.py": "9401e5b7454b9b0b88b28060baefeb3920dab9fd3e3c31870d00977e5ca84d6f",
+      "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a",
+      "results/model_review/refit_stability_v1/manifest.json": "035bfa20b4e659e88ff48b56ffdc21a6563db32a0490d2ec8a6852154018e5a5",
+      "results/model_review/refit_stability_v1/independent_audit.json": "7725716ddbfb2da1071027936fc90374668f99161e6e15b57fd3f80b90a9e712",
+      "results/model_review/refit_stability_v1/static_refits.json.gz": "1621772a0a0d0dfb822692a21ff5b8fd15b90b0977c9ba6f78f9bfd10bf87fa7"
+    },
+    "source_hashes_match": true,
+    "new_literature_browsed": false,
+    "primary_requirements_source": "Local provided problemPDF; structural implications derive directly from the frozen algorithms and explicitly stated candidate inclusion."
+  }
+}

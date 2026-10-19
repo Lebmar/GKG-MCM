@@ -1,0 +1,18 @@
+{
+  "version": "state-budget-cushion-independent-audit-source-freeze-v1",
+  "execution_ready": true,
+  "frozen_utc": "2026-10-19T06:59:42.486627+00:00",
+  "plan_sha256": "3d23dca62a51832a737f4c63ab3041c9dd2a7cfa01c403ff1e73a44c4dbb44bf",
+  "source_sha256": {
+    "scripts/audit_state_budget_cushion.py": "7f2f88071c3c64801ed5d20951c94c5f3537852165940c229c567eb518ae4ec0",
+    "tests/test_audit_state_budget_cushion.py": "becda1666aba8e183eb77bb418b26c7b347c0dec1aae0f720e2ebd497fe1b639",
+    "docs/state_budget_cushion_audit_plan.json": "3d23dca62a51832a737f4c63ab3041c9dd2a7cfa01c403ff1e73a44c4dbb44bf",
+    "scripts/audit_state_budget_rebuild.py": "8451a30832cf7aae27e008aae13e8107372095fd65e1f29d597fab304cb6167e",
+    "scripts/audit_state_budget_mitigation.py": "b477c4d0d4ef0be6c690df1da5f9a89ba2715ce2fe16ac5ec72cef6ab7df80f0",
+    "src/safeinvest/data.py": "70e511fd05c6e23fd6b8a72f1dc165426fc77a5eb4dbd8a3c13b839bb305a75f",
+    "src/safeinvest/__init__.py": "dcef1e2e1f0f7cd5426988f0f27408eebb9ded3fb32c961f8f23e2edfb6e4ad2"
+  },
+  "focused_synthetic_tests": 16,
+  "market_or_saved_values_read_during_source_preparation": false,
+  "scope": "Every active decision in all fundedgroups with independent scaledprimary/unscaledfallback; allphysical states/fees/NULL/wholelearner. Shares frozen earlier independent audit math."
+}

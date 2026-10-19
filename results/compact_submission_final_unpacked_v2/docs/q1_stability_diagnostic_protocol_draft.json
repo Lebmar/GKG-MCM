@@ -1,0 +1,83 @@
+{
+  "version": "q1-static-suitability-stability-diagnostic-draft-v1",
+  "status": "Design only; no new fit, cache/market values, current rebuild outcomes or final scenarios read. Not a model change or an executable release.",
+  "development_ids": [
+    1,
+    120
+  ],
+  "allow_final": false,
+  "purpose": "Establish which Q1 choices are stable, economically interpretable and supported at each customer horizon; keep questionnaire suitability separate from Q2 execution admission.",
+  "facts_from_source": [
+    "The strict static universe has172 targets on the old5-percentage-point grid plus exact thirds; every asset is>=5%. The problem requires all three assets but does not uniquely impose a5% minimum.",
+    "Gamma is a technical training event screen selected from0/.025/.05/.075/.10 by whole-scenario inner evidence; service alpha=.10 is a normative reference, not identified from the supplied loss tolerance.",
+    "The raw common menu maximizes coverage, then minimizes maximum and mean growth regret against each profile feasible training oracle; representative profiles are not a sampled customer population.",
+    "Unidentified catalogue roles may be completed using a15-year reference growth/CVaR frontier, then named by that reference risk. Label order is not guaranteed at every other horizon or loss definition.",
+    "Raw gamma selection and post-refit admission are distinct operations. Effective Q1 Review can arise from unsupported calibration, no inner automatic evidence, lack of risk/liquidity feasibility, or menu-level referral.",
+    "Target bill floors30/10/0 for high/medium/low are liquidity proxies under the problem no-withdrawal condition; drifting holdings do not constitute a guaranteed live cash reserve."
+  ],
+  "phase_A_metadata_stability": {
+    "inputs": "Existing frozen30 job definitions and their exact-own-training static_refits; no market parsing or new optimization needed for this phase.",
+    "counts": "Six parent contexts: full120 plus5 outer96. Each has4 dynamic-inner fits and1 refit, yielding30 static fit bundles and150 profile-fit assignments. Full120 inner fitN90; outer96 inner fitN72.",
+    "fields": [
+      "job_id",
+      "training_ids/hash",
+      "training_n",
+      "selected_gamma",
+      "gamma_top_tie_set_if_saved",
+      "raw_menu_complete",
+      "product_role",
+      "weights",
+      "candidate_local_and_originalID",
+      "identified_by_profiles_or_reference_completion",
+      "reference15year_CVaR",
+      "profile_name",
+      "profile_H_L_liquidity",
+      "raw_assignment",
+      "effective_assignment",
+      "admission_reason",
+      "risk_joint_feasible_counts"
+    ],
+    "outputs": "All30 fits retained; per-role weight ranges and distinct targets; gamma/label distributions; raw-to-effective transitions; exact Review reasons; no averaging profile labels into a number.",
+    "interpretation": "Fit variation is sensitivity to training subsets and overlapping selection contexts. These are not30 independent deployments or a confidence interval for a population preference. Two identical target/assignment vectors do not identify a unique gamma."
+  },
+  "phase_B_own_horizon_OOF": {
+    "population": "Primary5 outer refits only. Their24-ID evaluation sets partition original1-120 once. Apply all5 questionnaire profiles:120×5=600 original scenario-profile records, including every Review/noninvestment.",
+    "fit_scope": "Use each outer fit own menu and effective labels; no full120 target/assignment inheritance. Complete static training/calibration must exclude the respective actual24IDs.",
+    "policy": "Static own-target annual restoration with stated exact initial/later fees, continued after an L crossing as a named product reference. It is not the dynamic Q2 pending policy or an execution approval.",
+    "horizons": "A5,B15,C30,D25,E6, each with its own L/liquidity category. Annualize growth over original own H and preserve initial100 real peak.",
+    "financial_denominators": "Effective Review retains financialNULL. Report original120 per profile, assigned count and reasons, plus conditional invested metrics; separately report raw menu assignment if diagnostic, without replacing effective results.",
+    "metrics": "Real median/P10 CAGR; mean log growth; ordinary within-path real-return volatility; real annual MDD median/P90/fractional CVaR90; strict MDD-L>1e-12 event fraction; exact fee/trade fraction where saved or independently reconstructable.",
+    "comparators": "Own-profile horizon exact-thirds static annual reference on all120 and on identical assigned IDs; optionally the fixed old full120 menu only as a previously development-derived descriptive reference, never an independent outer learner.",
+    "no_equal_H_ranking": "Portfolio names may refer to a common15year reference ordering. Do not infer that E6 is safer than C30 from raw event frequencies, or claim a label dominates at all horizons.",
+    "coverage_vs_risk": "Do not call profiles with zeroassigned zero-risk. Do not remove B/C/E unfavorable tails or A/D Review. A fitted training oracle remains a training optimization comparator, not a best-on-heldout portfolio."
+  },
+  "phase_C_parameter_resolution": {
+    "gamma_count_resolution": "For every actual trainingN/gamma report floor(gamma*N+1e-12), actual eligible candidate sets and chosen action/menu/assignment vectors. Several gamma values may map to the same permissible event counts or identical behavior.",
+    "global_tie_bands": "Use saved exact global tolerance-band definitions. Distinguish equal objective, near-equal growth and complete behavior equivalence; do not enlarge the top set because heldout outcomes later look similar.",
+    "refit_instability": "Track whether a gamma with favorable inner evidence yields a materially different full-training menu/admission. This diagnoses nonunique selection/refit behavior; it does not by itself justify rescuing a rejected fit.",
+    "boundary_arithmetic_check": "Use subtraction-before-comparison MDD-L>1e-12 consistently in new diagnostics. Some older saved detail-count source uses MDD>L+tol; if a constructed floating boundary differs, disclose it without modifying old evidence or retroactively changing labels.",
+    "no_psychological_identification": "Gamma,5%grid resolution,15year role reference and liquidity floors are model conventions. A precise selected gamma is not an elicited customer risk-aversion coefficient."
+  },
+  "optional_new_sensitivity_requires_separate_freeze": {
+    "liquidity": "Exactly three predeclared cases: lower floors(high.25,medium.05,low0), retained(.30,.10,0), higher(.35,.15,0). Refit all static inner menus/oracles jointly, maintain long-only/three-positive-assets, same alpha and raw objective; evaluate the complete new learner. These are normative proxy sensitivities, not calibrated spending needs.",
+    "selection_boundary": "Do not choose the easiest floors from outer outcomes. Report the retained convention plus both directions and any loss of service. Any adoption of a different convention is a new model version requiring its own justification/evaluation.",
+    "partition_stability": "If adding folds, predeclare a small finite ID-only seed set and rerun the complete static learning/calibration mapping. Keep each repeat separate and track overlapping original IDs; repeated rows are not additional independent markets.",
+    "bootstrap_warning": "Naively resampling scenario indices with replacement then splitting duplicated rows leaks the same original path between fitting and validation. A complete-learner bootstrap must group all copies of the same originalID and preserve multiplicity weights, or be labeled a conditional fixed-fit bootstrap. Do not improvise this during execution.",
+    "budget": "Prefer metadata stability and existing-cache own-H OOF first. A finer continuous-weight grid, extra market regime models or broad normative parameter search is a separate scientific project, not a diagnostic repair."
+  },
+  "pure_tests_before_any_new_numeric_summary": [
+    "Profile horizon/L/liquidity mapping and local172-to-original232 indices.",
+    "All outer original-ID/profile pairs exactly once; no evaluation ID in its static fit.",
+    "Raw vs effective labels and Review reasons remain distinct; zeroassigned statisticsNULL.",
+    "Gamma-to-event-count granularity and exact tolerance-boundary consistency.",
+    "Shared15year risk ordering does not override profile own-H risk metrics.",
+    "All saved-source/input hashes fixed at start/end; all final IDs rejected before parsing."
+  ],
+  "next_step": "Root may authorize metadata summary first. Any actual PhaseB cache reads/new sensitivity fits require a concrete source/inputs/schema and an independent frozen execution gate. This draft does not enable them.",
+  "source_sha256": {
+    "research/experimental_execution/joint_liquidity_static.py": "f12fc90a78594f91a11c46a4ca7306237024404098df467e9dc66e110ee78c10",
+    "research/experimental_execution/nested_static_adapter.py": "9401e5b7454b9b0b88b28060baefeb3920dab9fd3e3c31870d00977e5ca84d6f",
+    "research/safeinvest_research/selection.py": "ea4aeeca113f73c04d56fa48498f34fc41af39730bb046b97548233dc0f26e3a",
+    "docs/positive_asset_specification_protocol.json": "ff23c3fcdad54d83a2896a11459db1cec3e4f48fe6352d994139e4c9ff79475c"
+  }
+}

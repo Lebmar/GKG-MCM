@@ -1,0 +1,59 @@
+{
+  "version": "2026-10-17-finite-horizon-execution-prototype-v1",
+  "status": "Exploratory prototype with declared numerical checks; no replacement of primary menu or automatic service approval",
+  "motivation": "A one-step growth gate can reject a fee that pays off over several years. The paired annual-vs-hold ablation shows that fewer trades can raise full-horizon drawdown risk. Study horizon-consistent fee accounting on a small frozen-target family before any new joint optimization.",
+  "data_history": "Only guarded scenarios 1--120. Previously seen V1 final scenarios 121--180 are forbidden. Development data are reused. This protocol is prospective for this new prototype calculation, not preregistration on unseen data.",
+  "targets": "Freeze the three alpha10 risk_only annual-policy targets in each full/96-scenario fold fit. Do not refit menus, risk budgets, target weights or customer assignment based on prototype results. The exact-third annual baseline is a comparison only.",
+  "forecast": {
+    "sample": "Only the current training context: 120 full-development or 96 fold-training complete 30-year scenarios. Equal weight per original scenario and equal weight per year within each path; use all joint three-asset annual gross vectors exactly.",
+    "assumption": "A stationary iid annual opportunity mixture is a forecasting approximation. Synthetic scenario independence does not imply annual independence, stationarity or real-world validity. Annual rows are integration support, not additional independent inferential trials.",
+    "joint": "Retain each three-asset return vector. Common inflation cancels from log action comparisons under this exogenous return model; realized real wealth and historical MDD always use actual inflation.",
+    "no_online_fit": "No updates from the current investor history and no future rows of the evaluated scenario enter forecast fitting. Current holdings and known remaining horizon are the only live state."
+  },
+  "bellman": {
+    "state": "u=x/sum(x), nonnegative and sums to 1; h remaining periods. No deposits, withdrawals or terminal liquidation.",
+    "actions": "hold actual holdings or restore one approved fixed target w. Target does not change over the horizon.",
+    "V0": "0",
+    "Qhold": "E[log(u dot g)+I(V_(h-1))(u*g/(u dot g))]",
+    "Qtrade": "log(1-rho(u,w))+E[log(w dot g)+I(V_(h-1))(w*g/(w dot g))]",
+    "fee": "rho comes from execute_target(u,w,c), once, including initial allocation when chosen.",
+    "selection": "Take trade only if approximate Qtrade-Qhold>1e-12 and the current weights differ from the target. Otherwise hold. No positive policy margin or confidence multiplier is tuned.",
+    "initial": "The gate applies at t=0 as well; initial investment is optional for the prototype, unlike the mandatory initial allocation in the annual and buy-and-hold comparisons. Record initial trade frequency explicitly.",
+    "horizon": "Use h=H-t at each decision and run each client horizon separately; DP actions can depend on H. A 30-year path prefix is not a 5-year DP policy.",
+    "risk": "This is a growth Bellman prototype, not a risk-constrained Bellman optimizer. It does not carry peak/drawdown risk budgets; full executed-path diagnostics must be reported and original suitability must not be inherited."
+  },
+  "numerics": {
+    "state_mesh_primary_step": 0.05,
+    "state_mesh_check_step": 0.025,
+    "interpolation": "Deterministic triangular simplex barycentric interpolation, with nonnegative weights summing to 1; no projection of actual holdings in simulation.",
+    "online_hold": "Evaluate the current empirical expected log return exactly and interpolate only future V via direct current-state transition. Do not interpolate grid Qhold as economic gain; that can spuriously favor a trade even at h=1 due to concavity.",
+    "optimality": "Backward recursion solves the specified approximate transition model. No claim of exact continuous-state optimality or bounded solver error without evidence.",
+    "resolution": "Repeat same fixed-target experiment at both resolutions; report changes in initial modeled V, action disagreement on common visited states if available, actual paired G/MDD/cost/trade frequency and client exceedance counts. Do not choose the more flattering mesh.",
+    "no_monte_carlo": "Finite empirical expectation integration; no 256 forecast paths or seed-based approximation."
+  },
+  "policies": {
+    "annual_restore": "Frozen-target annual restoration, with mandatory initial allocation and exact costs.",
+    "initial_then_hold": "Frozen-target mandatory initial allocation, then no later transfers.",
+    "myopic_gate": "The same forecast and exact fee, with h=1 at every review; the gate applies initially too. A diagnostic of myopia, not a selected policy.",
+    "finite_horizon_gate": "The same forecast and target, current actual u and true remaining H; direct-transition approximate Bellman evaluation.",
+    "equal_weight_annual": "Exact one-third target, annual restoration including the initial fee, at the same cost."
+  },
+  "evaluation": {
+    "full": "Training-context descriptive outcome, not external performance.",
+    "folds": "Use the already declared five 96/24 whole-scenario folds. Refit the forecast and Bellman solution separately on each set of 96; use its already frozen annual-menu targets. Do not refit targets or menus on the 24 evaluation paths. This evaluates a fixed-target execution ablation, not a newly optimized complete service.",
+    "metrics": "At H=5,6,15,25,30 and each client's own H,L, report G, median/P10 net real CAGR, median/P90 MDD, CVaR90, ordinary annual volatility, expected excess and exact breach counts; report costs and trade frequency with explicitly named denominators.",
+    "referrals": "Keep original full/fold assignments and Review frozen; Review financial outcomes remain NULL. No adviser response or fallback is invented.",
+    "actions": "Record pretrade u, h, selected action, modeled Q difference, exact fee/moved amount, current one-period expected gain and paired realized next-year gain computed only after the decision. A modeled net continuation gain is not a guaranteed realized benefit.",
+    "uncertainty": "No per-action 95% claim, pooled OOF certificate or final selection. The finite-family CP1160 bound from the static annual study cannot be reused for data-learned dynamic policies."
+  },
+  "initial_fee_rate": 0.0025,
+  "later_cost_probe": "Only after numerical and causality audits, optionally repeat the fixed design at 0 and .005 with the new known cost in accounting and Bellman evaluation; changing the cost input is not margin retuning. No policy winner is chosen.",
+  "required_checks": [
+    "Pure unit tests of the simplex, stochastic operator, H=1 off-mesh direct enumeration and identity/scale.",
+    "Constructed H=2 gain recovers the amortization counterexample.",
+    "Independent H=2 exact scenario-tree enumeration on small synthetic empirical support to bound interpolation error.",
+    "Annual and buy-and-hold branches match the already verified cache/ablation exactly.",
+    "Future-perturbation causality: the evaluated scenario suffix cannot change earlier actions under a frozen model.",
+    "Source/input/output start/end hashes; guarded scenarios 1--120 only."
+  ]
+}

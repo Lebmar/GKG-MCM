@@ -1,0 +1,61 @@
+{
+  "version": "calendar-fan-rollout-mathematical-review-v1",
+  "date_beijing": "2026-10-17",
+  "scope": "Independent derivations and fixed synthetic counterexample; written before reading the new market rollout results. No final service or policy selection.",
+  "general_exact_model_result": {
+    "state": "The full history or a sufficient state retains holdings, actual real peak, running drawdown, absorbing breach and original horizon. Let B restore the fixed target before breach and hold after breach.",
+    "definition": "Qg_B(s,a) is the expected total future log growth if the current action is a and every later action follows B. Qb_B(s,a) is the expected terminal full-history everbreach indicator under that same continuation.",
+    "rule": "If the current action of B is restore, allow hold only when Qg_B(s,hold)>=Qg_B(s,restore) and Qb_B(s,hold)<=Qb_B(s,restore). Otherwise follow B. At b=1 both policies hold.",
+    "proof": "For every state, assume the new continuation at the next time has growth value at least B and terminal-b value at most B. Applying the same chosen current action and the same genuine conditional transition law preserves both expectation inequalities. The chosen action's two B-continuation values are nonworse than B's action, so the two inequalities hold one step earlier. At terminal time they are equal. Backward induction proves model-relative growth/risk nonworsening.",
+    "conditions": "Exact Q values under one dynamically consistent conditional law, applicable comparisons at every reachable state, the same baseline and feasible actions, and no unaccounted changes in fees, peaks, events, horizon or pending actions.",
+    "limits": "Not constrained-growth optimality, not a full-H q<=alpha guarantee unless B is already known feasible in that model, not a severity guarantee, and not a guarantee after forecast estimation or approximation. Numerical tolerances require separate error accounting."
+  },
+  "unconditional_fan_counterexample": {
+    "purpose": "Exact integration of an unconditional fan can violate both whole-policy inequalities. More forecast samples do not repair failure to condition on information already observed.",
+    "initial": {"wealth": 100, "holdings": [0, 0, 100], "CPI": 1, "real_peak": 100, "running_MDD": 0},
+    "H": 2,
+    "L": 0.12,
+    "cost_rate": 0,
+    "target": [0.5, 0.4, 0.1],
+    "equal_weight_joint_gross_paths": [
+      {"assets": [[2, 1, 1], [0.8, 1, 1]], "inflation_gross": [1, 1]},
+      {"assets": [[0.5, 1, 1], [1, 0.68, 1]], "inflation_gross": [1, 1]}
+    ],
+    "first_path_second_decision": {
+      "holdings": [100, 40, 10], "wealth_and_peak": 150,
+      "hold_fan_factors": [0.8666666666666667, 0.9146666666666666],
+      "restore_fan_factors": [0.9, 0.872],
+      "hold_bad_vector": [1, 0], "restore_bad_vector": [0, 1],
+      "Qg_hold": -0.11614821122257213,
+      "Qg_restore": -0.1211631853654918,
+      "recommendation": "Local empirical mean-growth and mean-risk comparisons both admit hold."
+    },
+    "complete_paths": {
+      "B_terminal_real": [135, 62.2],
+      "local_Pareto_rule_terminal_real": [130, 62.2],
+      "B_everbreach": [false, true],
+      "local_Pareto_rule_everbreach": [true, true],
+      "first_path_B_MDD": 0.1,
+      "first_path_local_Pareto_MDD": 0.13333333333333333,
+      "second_path_MDD_both": 0.378,
+      "consequence": "B has1/2 breaches; the local fan rule has2/2 and lower expected total log growth. The second path crosses at year1, so both correctly hold after its crossing."
+    },
+    "why_the_theorem_does_not_apply": "The observed first-year return identifies which of the two joint paths is being followed. At the first path's second decision the true conditional future is stock gross0.8, not an unconditional mixture with the second path. Recombining suffixes ignores that information, so the local fan Q is not the conditional Q in the theorem.",
+    "verification": "The numerical-core synthetic test and a separately implemented scalar calculation agree. Both were AI-assisted; this is not external human peer review."
+  },
+  "pathwise_fixed_fan_alternative": {
+    "rule": "Keep one fixed fan of complete calendar paths. At every active post-inception state, allow hold only when its current-action-then-B total log growth is at least restore-then-B separately for EVERY fan suffix and its terminal everbreach flag is at most restore's separately for EVERY fan suffix. Otherwise follow B. Use ideal growth tolerance zero and exact binary risk ordering.",
+    "claim": "For any one of those same complete fan paths, from any consistent state at any time, the fully executed rule has terminal log growth at least B and terminal everbreach at most B. Common mandatory initial allocation preserves this statement from inception.",
+    "proof": "Fix a fan path j and time t, with an arbitrary consistent current state s. If hold is chosen, the pathwise gate includes j, so hold-then-B is nonworse than B from s on j. At the successor state reached by that action, apply the induction hypothesis for the SAME j's suffix, which remains in the fixed fan, to replace B's continuation by the new rule without worsening either quantity. If restore is chosen, its first step equals B and the same induction applies. At b=1 both hold; at terminal time the claim is equality. Backward induction holds for all states and all fixed fan identities, regardless of the probabilities or statistical conditioning of these paths.",
+    "why_changed_histories_are_allowed": "The induction is over all consistent states, not only states previously visited by B. Holdings, peak and MDD reached after a hold can differ, but the successor-state induction is still applicable.",
+    "growth_tolerance": "With an ideal nonzero gate allowance eps per approved hold, only a total-log lower bound of minus(number of approved holds)*eps follows; a global exact nonworsening claim would be wrong. The separate proposed pilot uses computed growth allowance0. Floating-point and audit comparison tolerances are still not mathematical error bounds.",
+    "support_limit": "The property applies only when the actual remaining sequence is one of the same fixed fan suffixes at every later decision. A held-out or new continuous return path is generally outside that finite support. No OOF or population guarantee follows; training-fold supports overlap and cannot be pooled into independent observations.",
+    "other_limits": "Changing the fan, dropping the realized support path, misaligning calendar years, changing the baseline pending rule or resetting history breaks the proof. Nonincreasing terminal everbreach does not imply nonincreasing MDD magnitude, faster recovery, more liquidity, optimality or an elicited customer preference. The rule may save almost no trades and is a deliberately conservative research alternative.",
+    "status": "Separate prospective pilot; preserve the original two mean-fan candidates and report all results. No market winner is selected."
+  },
+  "primary_background_source": {
+    "title": "Dimitri Bertsekas, Rollout, Policy Iteration, and Distributed Reinforcement Learning",
+    "url": "https://web.mit.edu/dimitrib/www/dp_rollout_book.html",
+    "scope": "General base-policy rollout background. The specialized two-objective proof, unconditional-fan counterexample, pathwise fixed-fan derivation and their restrictions are our own calculations, not claims attributed to the source."
+  }
+}

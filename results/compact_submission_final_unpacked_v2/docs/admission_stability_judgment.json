@@ -1,0 +1,94 @@
+{
+  "version": "admission-stability-forecast-judgment-v1",
+  "written_utc": "2026-10-18T05:13:18.963878+00:00",
+  "purpose": "Research model judgment, no submission prose or final policy selection",
+  "status": "Current learned controller remains an experimental comparator",
+  "primary_repeats": [
+    {
+      "repeat_id": 1,
+      "original_n": 120,
+      "automatic_n": 0,
+      "breach_n": null,
+      "conditional_breach_probability": null
+    },
+    {
+      "repeat_id": 2,
+      "original_n": 120,
+      "automatic_n": 48,
+      "breach_n": 8,
+      "conditional_breach_probability": 0.1666666666666666
+    },
+    {
+      "repeat_id": 3,
+      "original_n": 120,
+      "automatic_n": 120,
+      "breach_n": 12,
+      "conditional_breach_probability": 0.1
+    },
+    {
+      "repeat_id": 4,
+      "original_n": 120,
+      "automatic_n": 72,
+      "breach_n": 7,
+      "conditional_breach_probability": 0.0972222222222222
+    },
+    {
+      "repeat_id": 5,
+      "original_n": 120,
+      "automatic_n": 48,
+      "breach_n": 3,
+      "conditional_breach_probability": 0.0625
+    }
+  ],
+  "primary_fit_counts": {
+    "total": 25,
+    "automatic": 12,
+    "no_top_inner_beta": 7,
+    "no_refit_feasible_beta_in_top_E": 6
+  },
+  "primary_selected_training_event_slack_counts": {
+    "0": 8,
+    "1": 4
+  },
+  "findings": [
+    "Old added24 retain full path identities. Relative to same-target40/25/35 annual/pending B, all24 have higher MDD,18 higher G,22 lower fees; events3 versus1. More admission carries a measured downside cost.",
+    "Crossing-year end weights agree on primary-only events35 and112, but real wealth and whole-history peaks differ. Peak reconstruction passes; the accounting identity does not identify causal contributions of exposure, fees, forecasts or target changes.",
+    "Every final-fit C is Balanced. Q1 gamma and exact target change, while Q2 admission ranges0 to120 per repeat. All outer training sizes96 and inner72 are fixed; sample-size changes do not explain these differences.",
+    "Of12 primary-admitted fits,8 selected controllers are exactly at their training event cap and4 have only one event of slack. This is integer in-sample feasibility, not confidence or future risk margin.",
+    "Canonical admits7 of25 fits, primary12. Their168 common scenario-repeat financial records are exactly equal. Added120 records across5 fits have14 events and reuse92 originalIDs; this does not create120 independent market observations.",
+    "Admission is A(training set, original C), fixed before evaluation returns and common to all24 paths of a fit. Per-original-ID admission frequencies track which held-out fits included it, not anticipation or future-path filtering.",
+    "Next-year market prediction standardized MSE falls0.938926%, remaining-period0.109113% with fixed lag-state ridge comparator. These are small descriptive mean-loss changes, not return gains, conditional Q accuracy or tail calibration.",
+    "Five repeated partitions use the same120 development paths. Zero admission means NULL conditional financial risk, not zero risk. A selected good repeat cannot establish a stable10% service guarantee."
+  ],
+  "decisions": [
+    "Keep original alpha10% as an explicit service reference and30/10/0 target-bill conventions; neither receives new empirical identification from this study.",
+    "Do not choose a seed, exact beta/eta or architecture from the new OOF performance. Freeze any follow-up design separately and retain all old evidence.",
+    "Investigate a smaller transparent execution family and an annual positive control to distinguish absence of a feasible reference from independent inner-risk rejection. This is an architectural diagnostic, not an already approved Q2 strategy or a pure causal effect of removing forecasts.",
+    "Any service improvement must jointly show original-denominator admission, common-path growth/fees/loss severity and repeated-fit behavior. Retain financialNULLs and original horizon/peak/absorbing events."
+  ],
+  "limitations": [
+    "All new calculations use original development1–120; no121–180parse, no new blind evaluation.",
+    "Independent arithmetic and AI-assisted review are not human peer review or a probability certificate.",
+    "Target floors do not guarantee drifting balances or withdrawals.",
+    "No paper/report/CMT or final-policy approval; V1 source/report/output unchanged."
+  ],
+  "source_input_artifact_sha256": {
+    "docs/incremental_admission_risk_diagnostic_protocol.json": "c37b8b614b2aee40fbabf55b6d577b9d7303f730079d1f00aaa632be4ae1b956",
+    "docs/refit_stability_protocol.json": "8e9ab035073b91e4004c76c41296c56665d2199620e92d8cc0eb4eaca7a4efae",
+    "docs/forecast_assumption_diagnostic_protocol.json": "d12e57ed11ff6b1af1a635d8041eb8c27808634a9c6e198a1894dec5bdd0a439",
+    "docs/current_diagnostic_claims_review.json": "a518d59272aea92cc89cd06f7b74f026d249849b9d70e3c927e33a8889f79be3",
+    "docs/refit_stability_independent_judgment.json": "01604a70d58b7b3fdd35539f23610b791433254803f48ff50c8677433956951a",
+    "docs/forecast_assumption_diagnostic_judgment.json": "a32d02356bfbb1b85881e405a41da8841dc6643c87e1b196a3980405b2740f5c",
+    "results/model_review/incremental_admission_risk_v1/manifest.json": "558ebbc4f15189c065e298bd83333445d5c4b3897c49ee524cb665087743bfe0",
+    "results/model_review/incremental_admission_risk_v1/findings.json": "971f8d0e5b7d751dcad642fa4167f3daf5c4d9c3ccf2369ca08527766f51ba74",
+    "results/model_review/refit_stability_v1/manifest.json": "035bfa20b4e659e88ff48b56ffdc21a6563db32a0490d2ec8a6852154018e5a5",
+    "results/model_review/refit_stability_v1/independent_audit.json": "7725716ddbfb2da1071027936fc90374668f99161e6e15b57fd3f80b90a9e712",
+    "results/model_review/refit_stability_summary_v1/manifest.json": "2298b7c90cca375cdc308c300a8f45048a22e34f3eca8af99f8e418e84b7092c",
+    "results/model_review/refit_stability_summary_v1/fit_contexts.csv": "16b8e6494b6162cd9e3d0410c9c1a2e365d395fc6eb290fca3f586aa6842cae1",
+    "results/model_review/refit_stability_summary_v1/repeat_summary.csv": "23237df8c665fbf272ef442ef2a6204900d67bdfe585c9352718436e780798c0",
+    "results/model_review/refit_stability_summary_v1/refit_training_margins.csv": "2fd8558e80c900a93b65702c7077abf60509b3b12e5320b38a658c7979b2fc40",
+    "results/model_review/forecast_assumptions_v2/manifest.json": "8462b516302142dd644e6e2440d5a15b971fd1226b26d6efdd0ef2df02947001",
+    "results/model_review/forecast_assumptions_v2/independent_audit.json": "b47af35bb59755bc0d4405fd874aec4b490fae64366438d1d4e1a04d80e882c5"
+  },
+  "final_scenarios_loaded": false
+}

@@ -1,0 +1,25 @@
+{
+  "version": "compact-fixed-nonblind-final-source-freeze-template-v1",
+  "execution_ready": false,
+  "protocol_sha256": "b9c999cb48a7b85189e8e42bbd5f19deefb20b6c5fa7344daae64814e343cd97",
+  "source_sha256": {
+    "research/experimental_execution/forecast_ensemble.py": "26b24902f448d5aeaec94f7b03f5a3451a33831299063ab42076e4bb18733010",
+    "research/experimental_execution/review_pending.py": "9038d420c9ea48df068c58a6abee3f993ac414f85dd0290cb56e3d703aae3894",
+    "research/experimental_execution/state_budget_execution.py": "8480dc1c2d54175a9fafed2471991a0ea8fc6a4519a24140044d056dbafafb1f",
+    "research/experimental_execution/state_budget_mitigation.py": "fe3904062f92a42f7fc37d664b53ee3ec6d336b2498448c1a707cb2edfda89ff",
+    "research/experimental_execution/state_budget_selection.py": "682b88b9a4c35a6823d35d9170df6d006a6cd63ce37baae28cef8cdc053aaa9f",
+    "research/safeinvest_research/metrics.py": "7ec8e4821ce284351a3d8ed7071c687fdf7d6e4cfd225f72cad1d09d623eb008",
+    "scripts/prepare_compact_final_submission.py": "280f51c712942d073ad19a2f57a4e64e5ebd8c662eb851a70f57e29d06b4a96d",
+    "scripts/prepare_compact_submission.py": "0bc79cae3d6b47ef31a15c9d1caf3b56f3eb0e6dfe6846663309409caa58f4d0",
+    "scripts/run_mitigation_locked_final_evaluation.py": "f0f93860d0ecfce3970cd985f79052135cc36570965cbe7e965cca4cc3bbd2b8",
+    "scripts/submission_adapter.py": "8b03c3f97191bd1d0fc7d02d075d654658a6ed558600f8c9bb6df4bdeeb1a080",
+    "scripts/submission_final_adapter.py": "d9b52f86447a7afaf66710c16fec753560a439f9d8c86939a5c892db12bb51e6",
+    "src/safeinvest/__init__.py": "dcef1e2e1f0f7cd5426988f0f27408eebb9ded3fb32c961f8f23e2edfb6e4ad2",
+    "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a",
+    "src/safeinvest/data.py": "70e511fd05c6e23fd6b8a72f1dc165426fc77a5eb4dbd8a3c13b839bb305a75f",
+    "tests/test_compact_final_submission.py": "2571a56a4c094956baa4bb2b87009e98fca1b02ab5030f03b2a3343943d15720",
+    "tests/test_submission_final_adapter.py": "c0c3af29016122b39d8ffa49fed7edc33d123aadff23fa1d4bef1c3cad0147b2"
+  },
+  "input_sha256": {},
+  "instructions": "Root creates separate actual compact_submission_final_source_freeze.json after source review; bind REQUIRED_INPUTS including final protocol SHA and canonical_closure complete source/input/original-output/audit/replay mappings. This template cannot activate numerical extraction."
+}

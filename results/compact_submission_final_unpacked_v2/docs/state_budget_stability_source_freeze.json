@@ -1,0 +1,36 @@
+{
+  "version": "state-budget-stability-source-freeze-v1",
+  "execution_ready": true,
+  "frozen_utc": "2026-10-19T06:22:04.287275+00:00",
+  "protocol_sha256": "ef70660aaac6cc2d76702b39a65e68ffc8517c30a85639e513fda32aca62a02f",
+  "source_sha256": {
+    "research/experimental_execution/forecast_ensemble.py": "26b24902f448d5aeaec94f7b03f5a3451a33831299063ab42076e4bb18733010",
+    "research/experimental_execution/review_pending.py": "9038d420c9ea48df068c58a6abee3f993ac414f85dd0290cb56e3d703aae3894",
+    "research/experimental_execution/state_budget_execution.py": "8480dc1c2d54175a9fafed2471991a0ea8fc6a4519a24140044d056dbafafb1f",
+    "research/experimental_execution/state_budget_selection.py": "682b88b9a4c35a6823d35d9170df6d006a6cd63ce37baae28cef8cdc053aaa9f",
+    "research/safeinvest_research/metrics.py": "7ec8e4821ce284351a3d8ed7071c687fdf7d6e4cfd225f72cad1d09d623eb008",
+    "scripts/run_state_budget_rebuild.py": "4f27d26eaece5f0547d32cce96d6e47a01cfe8495b5269aa0dad33061058ffb3",
+    "scripts/run_state_budget_stability.py": "d4983fc7b4121e8bff7b0eec5ef6eb5492ee03613f1ef72cfafa1aa66727d88b",
+    "src/safeinvest/__init__.py": "dcef1e2e1f0f7cd5426988f0f27408eebb9ded3fb32c961f8f23e2edfb6e4ad2",
+    "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a",
+    "src/safeinvest/data.py": "70e511fd05c6e23fd6b8a72f1dc165426fc77a5eb4dbd8a3c13b839bb305a75f",
+    "tests/test_forecast_ensemble.py": "11aa8f0bae094c46dada5344bdee4096a8243d6ac6a46ea69a6c6f1f7fd5dede",
+    "tests/test_state_budget_execution.py": "55af433b318958ce3dbd9021597aeabf316ed88e56726ff293ea6ccb85a32de5",
+    "tests/test_state_budget_rebuild_runner.py": "f98a6a4151903091e08ba15c769db8f3f8001e7459f716d5f7f68fffb4e9aeb4",
+    "tests/test_state_budget_selection.py": "f14e403cf2fb6f7b6024b7b66faac3e100be3538bb430e0470159dd4e583cc5a",
+    "tests/test_state_budget_stability.py": "d866e14f9c3db465e83a38db12002f8af840ccb7c628c633623f5c1213b0a894"
+  },
+  "input_sha256": {
+    "data/SafeInvest_Synthetic_Data.csv": "def0177704bf6cb98cec6da325b34208750d988f6ad97ec4a706a0d39e6f82c0",
+    "docs/refit_stability_protocol.json": "8e9ab035073b91e4004c76c41296c56665d2199620e92d8cc0eb4eaca7a4efae",
+    "docs/state_budget_rebuild_protocol.json": "4270a46493c370a7dc970a34444214cb086e57bf657e8b81335d0994c33dcfaf",
+    "docs/state_budget_rebuild_source_freeze.json": "9a8382ef1546b491a9f2acc3713e1ea3efa85e62dcb79604d91c07455cf1df3e",
+    "docs/state_budget_stability_protocol.json": "ef70660aaac6cc2d76702b39a65e68ffc8517c30a85639e513fda32aca62a02f",
+    "requirements-research-pinned.txt": "a18dc21251d1dcdba4c19b4137ed62083bf4d82ed6ea8fefc4ae3cbd421f02ee",
+    "results/model_review/refit_stability_v1/independent_audit.json": "7725716ddbfb2da1071027936fc90374668f99161e6e15b57fd3f80b90a9e712",
+    "results/model_review/refit_stability_v1/manifest.json": "035bfa20b4e659e88ff48b56ffdc21a6563db32a0490d2ec8a6852154018e5a5",
+    "results/model_review/refit_stability_v1/static_refits.json.gz": "1621772a0a0d0dfb822692a21ff5b8fd15b90b0977c9ba6f78f9bfd10bf87fa7"
+  },
+  "synthetic_tests_passed": 11,
+  "scope": "Five dependent repeats, never600new scenarios; same6family/alpha/severity/coverage rule. No rawvalues opened during preparation."
+}

@@ -1,0 +1,12 @@
+{
+  "version": "guard-physical-feasibility-witness-audit-source-freeze-v1",
+  "execution_ready": false,
+  "plan_sha256": "19182a45019a55715a1bc54567476c14d8dde5ec52d85189dc50e4343e35fd01",
+  "source_sha256": {
+    "scripts/audit_guard_physical_feasibility.py": "9e187405376e863b8000e37d59d96a83e21807ccb65b762b3999f050ecfdd867",
+    "tests/test_audit_guard_physical_feasibility.py": "d6a40167d32df20f70f2341b149d1e8176ea0fca48db15d1368b7c6a4c964199"
+  },
+  "input_sha256": {},
+  "instructions": "Template only. Root reviews/commits sources, sets auditplan execution_readyTrue then binds its newSHA, fills evidence_closure(root) plus auditplan exactinputSHA, and records new freeze before execution. This file cannot authorize parsing.",
+  "new_LP_solves": 0
+}

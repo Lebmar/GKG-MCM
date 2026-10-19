@@ -1,0 +1,14 @@
+{
+  "version": "q1-independent-cache-audit-source-freeze-v1",
+  "execution_ready": true,
+  "frozen_utc": "2026-10-19T06:39:55.510674+00:00",
+  "plan_sha256": "f532cb8fa0883fe3c9eba994d1a6fc55428d6aecaa246f54238b55da3156c47a",
+  "source_sha256": {
+    "scripts/audit_q1_stability_diagnostic.py": "fb7a8af9ef328a8f2d9baa424d620e0d0823f3e879332b9ef8c618cee08136a2",
+    "tests/test_q1_stability_cache_audit.py": "7135a7325ab84a1148eedd17917e28b0deb7b21e7b46c64b9c3f502283c5296e"
+  },
+  "synthetic_tests": 11,
+  "cache_numeric_access_during_audit_freeze": false,
+  "scope": "Independent scalar postprocessing of old cache; no productiondiagnostic import or upstreamsimulation independence claim.",
+  "preflight_note": "First shell preflight used incorrect test filename; no freeze produced. Guarded invocation rejected missing freeze before cache numeric access. Log retained tmp/q1_stability_diagnostic_audit_first.log; no numerical attempt occurred."
+}

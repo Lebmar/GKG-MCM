@@ -1,0 +1,13 @@
+{
+  "version": "mitigation-Q2-customer-explanation-contract-v1",
+  "completed_utc": "2026-10-19T07:25:53.657273+00:00",
+  "problem_location": "Question2, not Question3",
+  "trigger": "First funded primary support-family failure, followed by one optional strict fee-net worst-supported-wealth-improving mitigation and absorbing human Review.",
+  "customer_text": "Your portfolio’s risk buffer no longer supports our usual trading options. We make a protective trade only if the modeled worst outcome improves after costs, then pause automated trading for human review. Existing holdings remain invested and may continue losing value.",
+  "word_count_whitespace": 41,
+  "word_limit": 50,
+  "financial_guarantee": false,
+  "model_change": false,
+  "registry_sha256": "49059e6e2ef5138a1d8edd284a3353d5c412d2f54f518010c3ddfdaa561c6603",
+  "explanation": "Usual trading options refers to the declared finite family, not all possible portfolios. Protective trade is conditional; absent strict modeled improvement the account holds. Pending existing exposures remain invested and can lose value. This is technical product text, not paper drafting."
+}

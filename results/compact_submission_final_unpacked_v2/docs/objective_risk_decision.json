@@ -1,0 +1,99 @@
+{
+  "status": "foundation recommendation for discussion; not a new frozen experiment",
+  "date_beijing": "2026-10-17",
+  "scope": "Mathematical objective, loss definitions and interpretation of preference/policy parameters only. No portfolio weights, forecasting assumptions or client assignments selected.",
+  "evidence_scope": "Algebra, explicit constructed counterexamples, exact binomial calculations and reviewed primary sources. No development or final market returns were loaded for this review.",
+  "validation_history": "V1 final scenarios 121–180 have already been evaluated and inspected. New model development cannot claim a fresh blind final test; this review does not change that limitation.",
+  "definitions": {
+    "policy": "A causal rule for holdings, trades, target changes and referral/pending handling; decisions for year t use only information available through t-1.",
+    "real_wealth": "R_t = W_t / product_{s=1}^t(1+inflation_s), R_0=100. Nominal W includes initial and later trading costs under the contest's convention.",
+    "growth": "G_H = E[log(R_H/100)]/H, expected annualized log growth under the stated scenario model. exp(G_H)-1 is a geometric growth measure, not mean or median CAGR.",
+    "ordinary_risk": "Within-path sample standard deviation of annual net real portfolio returns; report its across-scenario distribution separately from large losses.",
+    "large_loss": "D_H = max_{0<=t<=H}{1-R_t/max_{0<=s<=t}R_s}. Annual observation times include initial wealth. Larger means greater purchasing-power loss; no intrayear protection is claimed.",
+    "exceedance": "p_{H,L}=P(D_H>L), a full-horizon event, not an annual probability. Equality to L is not an exceedance.",
+    "severity": "e_{H,L}=E[(D_H-L)_+] equals p_{H,L} times conditional mean excess when p>0. It is diagnostic, not a constrained quantity in the main model.",
+    "cvar": "CVaR_beta(D)=min_eta{eta+E[(D-eta)_+]/(1-beta)}; use this general-distribution definition for finite scenario atoms. This is CVaR across path MDD outcomes, not time-pooled CDaR."
+  },
+  "chosen_framework": {
+    "objective": "Maximize G_H over admissible causal policies subject to p_{H,L}<=alpha and separately justified trading/liquidity constraints. For onboarding the candidate set is the three actual menu policies, each evaluated at the client's H and L.",
+    "growth_assumption": "Log growth is an explicit normative modeling criterion with diminishing marginal utility. Removing lambda does not identify investor utility or remove all preference assumptions.",
+    "lambda": "Retire 10/4/1 as the main product-design preferences. They were not elicited from the questionnaire, are not CRRA gamma, and cannot be estimated from market outcomes alone. Keep the V1 implementation unchanged as an archive.",
+    "alpha_reference": 0.10,
+    "alpha_status": "Declared service-policy benchmark, not a questionnaire estimate, statistical finding, contest requirement or guaranteed real-world maximum.",
+    "alpha_reason": "Its complement corresponds to the mandated P90 loss summary, giving a simple reporting convention. Reporting P90 does not establish that clients accept a 10% probability of exceeding their stated loss tolerance.",
+    "alpha_policy_cases": [0.05, 0.10, 0.20],
+    "alpha_case_meaning": "Half and double the reference are sensitivity probes, not an estimated preference interval and not proof that all plausible client preferences lie within this range. Do not choose among them to force a desired mapping or backtest ranking.",
+    "severity_handling": "Always show expected excess and CVaR90 alongside p and growth. Remove dominated choices when one has no better growth and no lower frequency/severity; do not claim this controls all tail severity. A severity cap needs a separately justified budget.",
+    "boundary_handling": "A point estimate just below alpha is not sufficient by itself for a confident automatic recommendation. Distinguish evidence of excessive risk, uncertain statistical support and sensitivity to the assumed service policy. Exact numerical stability/review rules belong to the next protocol stage.",
+    "infeasible_case": "If no menu policy is suitable under the declared constraints, refer for review; do not relax alpha or redefine L merely to create a match.",
+    "reporting": "Also report median/P10 real CAGR and median/P90 MDD as required, even though the optimization objective is expected log growth. Evaluate actual execution and pending behaviour, not just target weights."
+  },
+  "alternatives_considered": [
+    {
+      "model": "Elog terminal wealth minus lambda times expected MDD",
+      "decision": "Not the primary objective.",
+      "reason": "Numerical lambda values are unidentified; mean MDD does not determine tail suitability. A constant lambda has a fixed cumulative wealth trade-off, with effective annual coefficient lambda/H."
+    },
+    {
+      "model": "CVaR90(D_H)<=L",
+      "decision": "Retain as a stronger alternative policy case, not as the default interpretation of the questionnaire.",
+      "reason": "It implies P(D_H>L)<=10% but additionally interprets L as the worst-10%-tail average MDD budget. It is stronger than the 10% reference chance constraint, not necessarily stronger than the 5% chance case. To compare matched sufficient conditions use CVaR_(1-alpha)(D_H)<=L. P90 reporting does not justify this stronger service promise. Only 12 of 120 equally weighted original paths populate a 10% tail; optimization and model uncertainty remain."
+    },
+    {
+      "model": "Expected excess MDD <= an extra budget",
+      "decision": "Calculate severity but do not add an unidentified cap now.",
+      "reason": "The additional budget or a growth-severity weight/lexicographic priority is another normative preference, not information recoverable from H,L,liquidity."
+    },
+    {
+      "model": "Pareto frontier alone",
+      "decision": "Use to inspect growth-frequency-severity trade-offs, not to claim a unique answer.",
+      "reason": "A frontier reveals dominated choices but cannot identify a unique Balanced product or three representative products without a stated selection principle."
+    }
+  ],
+  "statistical_evidence_policy": {
+    "alpha_vs_delta": "alpha is a modeled market exceedance budget; delta is a statistical noncoverage level. Neither is identified by the provided loss-tolerance amounts.",
+    "delta_illustration": 0.05,
+    "cp_role": "The numerical audit illustrates pointwise one-sided 95% exact binomial upper bounds for a fixed rule on independent identically distributed evaluation paths. This is not current model certification.",
+    "selection": "A candidate selected on the same outcomes does not inherit a naive pointwise CP certificate. A pre-fixed finite family can use a simultaneous bound, or a frozen learned rule can use genuinely independent evaluation; the current full-data history must be disclosed.",
+    "cross_validation": "Nested scenario-level validation can estimate procedure behaviour and stability. Overlapping training folds do not yield independent Bernoulli outcomes for a single fixed strategy; do not pool them into an exact CP certificate or count repeated folds as new paths.",
+    "resampling": "More generated forecast paths reduce conditional Monte Carlo error; they do not increase the number of independent original market scenarios or establish predictive tail accuracy.",
+    "scenario_theorems": "No convex scenario-optimization guarantee is imported. Applicability to fee-aware compounded relative MDD and adaptive rules has not been proved."
+  },
+  "dynamic_consistency": {
+    "past_risk": "Keep full historical MDD in evaluation. A past exceedance cannot be made feasible by a later allocation; do not reset history and still claim the original full-path constraint.",
+    "action_risk": "A full-horizon initial chance constraint is not a rule to grant a fresh alpha budget at every annual review. The complete implemented rolling policy must be evaluated; any conditional budget scheme requires explicit propagation.",
+    "scope_limit": "The conditional annual decision problem and pending-review policy are not redesigned or tuned in this foundation step."
+  },
+  "next_step_after_discussion": "Construct development-only growth-frequency-severity frontiers at the actual questionnaire horizons, with predeclared policy cases and scenario-level stability analysis; then define three stable menu products and numerical evidence rules. No final-scenario reselection.",
+  "primary_sources": [
+    {
+      "title": "2026 MCM Senior Group Problem A: SafeInvest",
+      "local_path": "docs/problem_A.pdf",
+      "supports": "Questionnaire H,L,liquidity; L is not a guarantee; annual synthetic data; required median/P10 growth and median/P90 loss summaries. No lambda, exceedance probability or confidence level is prescribed."
+    },
+    {
+      "title": "NIST Dataplot: Exact Binomial",
+      "url": "https://www.itl.nist.gov/div898/software/dataplot/refman2/auxillar/exacbino.htm",
+      "supports": "Exact binomial upper/lower bounds, including one-sided bounds; binomial-CDF inversion.",
+      "does_not_support": "The value alpha=.10, a client preference, model selection without correction or real-market calibration."
+    },
+    {
+      "title": "Busseti, Ryu and Boyd (2016), Risk-Constrained Kelly Gambling",
+      "url": "https://web.stanford.edu/~boyd/papers/pdf/kelly.pdf",
+      "supports": "Conceptual use of log-growth maximization subject to a separately stated wealth-loss probability constraint.",
+      "does_not_support": "Their loss is a fall below initial wealth, not our relative running-peak real MDD. Their iid repeated-bet convex bound is not transplanted to our fees and adaptive multi-period model; their lambda is not our old MDD penalty."
+    },
+    {
+      "title": "Rockafellar and Uryasev (2002), Conditional Value-at-Risk for General Loss Distributions",
+      "url": "https://sites.math.washington.edu/~rtr/papers/rtr187-CVaR2.pdf",
+      "supports": "The general-distribution CVaR variational representation and correct handling of atoms in finite scenario distributions.",
+      "does_not_support": "CVaR90<=L as a client mandate, an assumption-free tail estimate or convexity of our underlying relative MDD policy problem."
+    },
+    {
+      "title": "Bengio and Grandvalet (2004), No Unbiased Estimator of the Variance of K-Fold Cross-Validation",
+      "url": "https://www.jmlr.org/papers/volume5/grandvalet04a/grandvalet04a.pdf",
+      "supports": "Dependent test errors from overlapping cross-validation designs and the danger of ignoring that dependence.",
+      "does_not_support": "A distribution-free confidence certificate for our final policy."
+    }
+  ]
+}

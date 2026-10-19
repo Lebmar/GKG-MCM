@@ -1,0 +1,689 @@
+{
+  "status": "selected",
+  "selected_index": 1,
+  "posttrade_holdings": [
+    44.943820224719104,
+    4.993757802746567,
+    49.93757802746567
+  ],
+  "fee": 0.12484394506866417,
+  "moved": 49.93757802746567,
+  "action": "restore",
+  "gate_reason": "mandatory_initial_full_target_support_pass",
+  "hold_feasible": true,
+  "support_feasible": true,
+  "guard_triggered": false,
+  "floor": 60.0,
+  "budget_floor": 80.0,
+  "real_wealth": 100.0,
+  "selected_score": -0.0012492194004319278,
+  "pred_log_growth_hold": 0.0,
+  "pred_log_growth_selected": -0.0012492194004319278,
+  "uniform_predicted_advantage": -0.0012492194004319278,
+  "conditional_predicted_advantage": null,
+  "min_predicted_advantage": -0.0012492194004319278,
+  "current_log_fee": -0.0012492194004319248,
+  "gross_log_advantage_uniform": 0.0,
+  "gross_log_advantage_min": 0.0,
+  "worst_real_shortfall_hold": 0.0,
+  "worst_real_shortfall_selected": 0.0,
+  "worst_real_shortfall_improvement": 0.0,
+  "growth_sacrifice": true,
+  "interval_lo": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "interval_hi": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "interval_feasible": [
+    true,
+    true,
+    true,
+    true
+  ],
+  "interval_lower_member": [
+    -1,
+    -1,
+    -1,
+    -1
+  ],
+  "interval_upper_member": [
+    -1,
+    -1,
+    -1,
+    -1
+  ],
+  "candidate_posttrade": [
+    [
+      0.0,
+      0.0,
+      100.0
+    ],
+    [
+      44.943820224719104,
+      4.993757802746567,
+      49.93757802746567
+    ],
+    [
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null
+    ]
+  ],
+  "candidate_lambda": [
+    0.0,
+    1.0,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "candidate_fees": [
+    0.0,
+    0.12484394506866417,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "candidate_moved": [
+    0.0,
+    49.93757802746567,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "candidate_proposal": [
+    -1,
+    0,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+  ],
+  "candidate_feasible": [
+    false,
+    true,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "candidate_score": [
+    0.0,
+    -0.0012492194004319278,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "candidate_min_support_slack": [
+    20.0,
+    19.875156054931338,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "candidate_worst_support_member": [
+    0,
+    0,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+  ],
+  "candidate_member_advantage": [
+    [
+      0.0
+    ],
+    [
+      -0.0012492194004319278
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ]
+  ],
+  "candidate_member_log_growth": [
+    [
+      0.0
+    ],
+    [
+      -0.0012492194004319278
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ]
+  ],
+  "candidate_member_gross_advantage": [
+    [
+      0.0
+    ],
+    [
+      0.0
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ]
+  ],
+  "candidate_log_fee": [
+    -0.0,
+    -0.0012492194004319248,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "candidate_predicted_next_breach": [
+    [
+      0.0
+    ],
+    [
+      0.0
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ]
+  ],
+  "mitigation_evaluated": false,
+  "mitigation_trade": false,
+  "mitigation_selected_index": -1,
+  "mitigation_selected_proposal": -1,
+  "mitigation_selected_q": null,
+  "mitigation_worst_next_real_hold": null,
+  "mitigation_worst_next_real_selected": null,
+  "mitigation_worst_next_real_improvement": null,
+  "actual_decision_source": "primary",
+  "primary_failed_hold_score": null,
+  "primary_failed_hold_pred_log_growth": null,
+  "primary_failed_hold_fee": null,
+  "primary_failed_hold_shortfall": null,
+  "primary_failed_hold_posttrade": [
+    null,
+    null,
+    null
+  ],
+  "mitigation_candidate_q": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "mitigation_candidate_fees": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "mitigation_candidate_moved": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "mitigation_candidate_worst_next_real": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "mitigation_candidate_shortfall": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "mitigation_candidate_proposal": [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+  ],
+  "mitigation_candidate_worst_support_member": [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+  ],
+  "mitigation_candidate_posttrade": [
+    [
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null
+    ]
+  ],
+  "mitigation_candidate_member_advantage": [
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ]
+  ],
+  "mitigation_candidate_member_log_growth": [
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ]
+  ],
+  "mitigation_candidate_member_gross_advantage": [
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ]
+  ],
+  "mitigation_candidate_member_predicted_next_breach": [
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ],
+    [
+      null
+    ]
+  ],
+  "primary_gate_reason": "mandatory_initial_full_target_support_pass",
+  "primary_selected_score": -0.0012492194004319278,
+  "primary_pred_log_growth_selected": -0.0012492194004319278
+}

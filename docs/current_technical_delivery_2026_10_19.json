@@ -1,0 +1,70 @@
+{
+  "version": "current-technical-delivery-index-2026-10-19-v1",
+  "completed_utc": "2026-10-19T08:54:58.076901+00:00",
+  "status": "Technical model/evaluation/reproduction work complete for the fixed candidate. Paper and submission are not completed.",
+  "team": {
+    "name": "Lebmar",
+    "number": 87,
+    "participant": "Chengxuan YUAN"
+  },
+  "branch": "codex/risk-budget-development",
+  "chosen_version": "V2b",
+  "model_changed_after_final": false,
+  "final_label": "previously_exposed_nonblind",
+  "artifacts": {
+    "model_registry": {
+      "path": "docs/mitigation_main_model_registry.json",
+      "sha256": "49059e6e2ef5138a1d8edd284a3353d5c412d2f54f518010c3ddfdaa561c6603"
+    },
+    "technical_judgment": {
+      "path": "docs/mitigation_technical_completion_judgment.json",
+      "sha256": "d18978dccceaf3bdfcb1e20983e07ab392a4277e29b670a1f788dc6dc369f8a9"
+    },
+    "development_reading": {
+      "path": "notebooks/technical_rebuild_2026_10_19.executed.html",
+      "sha256": "a3065d1330210251620e339aa31ba0333759a32ba093399b8d07dbc3c7c68e1a"
+    },
+    "development_notebook": {
+      "path": "notebooks/technical_rebuild_2026_10_19.ipynb",
+      "sha256": "aa1f1fc2c442f4f5215e55c125404d61459b6ffe18fbbec01691b3cae5309220"
+    },
+    "nonblind_final_reading": {
+      "path": "notebooks/mitigation_locked_final_2026_10_19.html",
+      "sha256": "0faf10734cfe483fe5b6613a2e406874bb7897499639211308cc23fe0b673d79"
+    },
+    "technical_checkpoint": {
+      "path": "results/technical_completion_checkpoint_v2/verification.json",
+      "sha256": "a00d813b70eaddceb13083d9b24161754332bf44e63584c70927c9ec4edd7b22"
+    },
+    "delivery_verification": {
+      "path": "results/technical_delivery_addendum_v1/verification.json",
+      "sha256": "deea49069502e1eac1cd211eecad7e8226612a9b95bc3ccb134177f06792504f"
+    },
+    "source_archive": {
+      "path": "dist/Team87_Lebmar_Technical_Source_v2.zip",
+      "sha256": "78b710d75f9cba9497ac6059995ac874dfa30a949b06a8072088235cd3f2d4dc"
+    },
+    "final_reproduction_guide": {
+      "path": "submission/FINAL_REPRODUCTION.md",
+      "sha256": "9caa4805696c439471b358cfa17118c69fd38ca8bf35b1a5dc263c99ba55a061"
+    }
+  },
+  "source_archive_bytes": 3135797,
+  "validation": {
+    "historical_full_suite": 1419,
+    "metadata_v2_additional_tests": 22,
+    "compact_final_additional_tests": 13,
+    "old1055_unchanged": true,
+    "technical_checkpoint_hashed_files": 2061,
+    "fresh_final_replay_exact_arrays": 505,
+    "fresh_final_replay_byte_exact_artifacts": 11,
+    "development_replay_exact_arrays": 225
+  },
+  "remaining": [
+    "Participant review of the technical tradeoff and assumptions.",
+    "Prepare the revised English paper with page/font checks and final AI/source disclosure.",
+    "Leader later uploads report and source ZIP in CMT and saves changes."
+  ],
+  "paper_regenerated": false,
+  "CMT_uploaded": false
+}

@@ -1,0 +1,35 @@
+{
+  "version": "failure-first-action-intervention-independent-audit-plan-v1",
+  "declared_utc": "2026-10-19T04:13:50.323548+00:00",
+  "known_prior_evidence": "Original11pair identities and old outcome/event categories were already seen. New intervention outputs have not been read by this auditor. This is post-hoc controlled model-path diagnosis, not a blind trial.",
+  "parent_plan": "docs/failure_path_mechanism_audit_plan.json",
+  "scope": "All11root-frozen pair identities, both identity-control and single-action treatment branches; preserve original scenario, target, trainingfan, finite technical price, CPI, elapsed calendar, originalH30, loss.4 and fee.0025. No refit, admission change, outlier removal or final121..180 market values.",
+  "complete_checks": [
+    "Read new numeric outputs only after execution-ready protocol, complete manifest and exact source/input/output SHA validation. Never import new intervention producer/runner or policy/metric/execution kernel.",
+    "Independently derive tau from original saved M/B actions; match first disagreement and require tau>=2, same target and matching whole physical history beforetau, both active. No disagreement remainsNULL with all11identityrows retained; no substitute interventionyear.",
+    "Preserve exact original prefix endpoints beforetau, including previous peak, MDD and absorbing state. Original initial fee/wealth is retained, no starting wealth or risk budget restart at intervention.",
+    "Control executes originalM action at tau; treatment executes originalB action only at tau. Subsequent active decisions must match original fixed eta gate at each branch own saved Q. Pending is absorbing and has no available Q. A treatment action forced against its Q is allowed only at tau and is labelled a diagnostic intervention, not recommended service.",
+    "Independently replay both complete branch account histories from recorded actions using old separate100-step self-financing fee bisection and scalar accounting. Check every fee/moved/posttrade holding, endpoint CPI/nominal/real/peak/currentDD/runningMDD/breach/firstcrossing and pending; no terminalfee.",
+    "Check control physical states/actions/fees and all available Qs match frozen originalM fullH saved trace; numerical identity must hold, not only terminalwealth or eventlabel.",
+    "Independently recompute net remaining total-log Qmeans, eventcounts and score at the deterministically fixed Qslots defined below using old independent scalar action-then-B fan; own training IDs, original clock and own branch historical states. This validates a fixed subset of new intervention Qs, not all adaptively visited Qs or the conditional forecast law.",
+    "Rebuild bothbranch terminal net total log growth, original-history MDD, breach, firstcrossing, fees and wealth, and all treatment-minus-control differences with correct NULL semantics. Current refused C financials remainNULL outside this retrospective diagnostic.",
+    "Check protocol/source/input/output hashes unchanged through audit; no passed receipt if any required case, field or slot is missing."
+  ],
+  "fixed_Q_slots": {
+    "pairs": "All11root-frozen pairs; neither subset by event direction nor omission after outcome",
+    "branches": [
+      "control",
+      "treatment"
+    ],
+    "original_years": "Sorted unique {tau,tau+1,originalH=30}, clipped only to original1..30; tau is exactly original first M/B action disagreement. If tau isNULL, retain no-intervention skip record rather than choose another year.",
+    "state": "Saved own branch predecision state. At forcedtau Qmay be explicitly copied from identical originalM prestate rather than newly evaluated; independently recompute regardless, with source-availability disclosure.",
+    "skip": "If an original slot is pending/unavailable, record exact skip and do not substitute. Initial states are not optional-gate slots; tau>=2 is mandatory.",
+    "shared_work": "Identical control/treatment tau prestate and same fan may share numerical calculation, but slotcount and unique evaluated statecount must both be disclosed."
+  },
+  "inference_limits": [
+    "The action intervention isolates an effect inside this deterministic fixed policy/market simulation, including downstream replanning; it does not identify a population treatment effect or an implementable improvement.",
+    "The selected failure/contrast cases and repeated originalID112 do not constitute independent random samples; no confidence certificate or frequency estimate from these11pairs.",
+    "A changed breach after replacing one action does not establish the cause is conditional forecast miscalibration, fan insufficiency, eta preference, or Q1target error.",
+    "Physical replay follows recorded actions; full adaptive continuation/action evaluation is independently checked only at frozen Qwitness slots. Control identity and source checks do not make the untested Qstates a new independent evaluation."
+  ]
+}

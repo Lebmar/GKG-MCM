@@ -1,0 +1,28 @@
+{
+  "version": "q1-stability-diagnostic-source-freeze-v1",
+  "execution_ready": true,
+  "frozen_utc": "2026-10-19T06:32:21.022141+00:00",
+  "protocol_sha256": "55daacaf420d8c7cda681e0881e868a80da8f3bb297fedb0db727760f6d5c746",
+  "source_sha256": {
+    "research/diagnostics/q1_stability.py": "69bd3fc094293944b2b4f153ffb910554196d731426a745aab77ddfc0e15df2f",
+    "research/safeinvest_research/metrics.py": "7ec8e4821ce284351a3d8ed7071c687fdf7d6e4cfd225f72cad1d09d623eb008",
+    "research/safeinvest_research/static.py": "3681b49748b7d30a749a5e4dfa6a8ff8675fb3a417b80bac9cb8483b19371552",
+    "scripts/diagnose_q1_stability.py": "6336f706d874b02af6bfb64eeb56461c1f022b67345b6cd6af775c16713108c8",
+    "src/safeinvest/__init__.py": "dcef1e2e1f0f7cd5426988f0f27408eebb9ded3fb32c961f8f23e2edfb6e4ad2",
+    "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a",
+    "tests/test_q1_stability.py": "2aebb4fe21f6f7354e2dc81b416369bbbd05cffb01128398ba33a0e2daa4e051"
+  },
+  "input_sha256": {
+    "docs/joint_liquidity_refit_protocol.json": "1e92a4f7b374bd7437315c89e513a830f12211b54cb08d3c4341dffdc9f1e3f6",
+    "docs/q1_stability_diagnostic_protocol.json": "55daacaf420d8c7cda681e0881e868a80da8f3bb297fedb0db727760f6d5c746",
+    "requirements-research-pinned.txt": "a18dc21251d1dcdba4c19b4137ed62083bf4d82ed6ea8fefc4ae3cbd421f02ee",
+    "results/model_review/joint_liquidity_refit_v1/independent_audit.json": "16339e76e41e07b6f37fbd0c88baff3ffe77d245e77258ef9bc8060fd79b3a15",
+    "results/model_review/joint_liquidity_refit_v1/manifest.json": "28819dca54041e22ae53ac924b71e023c005f96cd73ca66d102b3a1ac20a4c99",
+    "results/model_review/joint_liquidity_refit_v1/static_refits.json": "f46236a5b3c49973cf6d4286b8f711a7ad44f39b0871c7605e5a18ce873038dd",
+    "results/model_review/risk_menu_v1/cache/step_0500__cost_002500.json": "225a36e8585bf6c5f310979193264a84c88ce98170d60c0d04665abb6bc6b804",
+    "results/model_review/risk_menu_v1/cache/step_0500__cost_002500.npz": "558b547574265a6fce5befa6803a55b9d7cbd8cc01a66603d38e080c880d97bb"
+  },
+  "focused_synthetic_tests": 13,
+  "cache_numeric_access_during_freeze": false,
+  "scope": "Training-only complete individual nearoptimal sets; unchanged fitted menus and ownH OOF diagnostics. No new fitting, no raw/finalparser."
+}

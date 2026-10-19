@@ -1,0 +1,85 @@
+{
+  "version": "finite-horizon-synthetic-tree-audit-v1",
+  "status": "Fixed before running the audit or observing its numerical tree comparisons.",
+  "date_beijing": "2026-10-17",
+  "scope": "Synthetic supports only; no market files, cached market results, menu selection, alpha tuning or primary-model changes.",
+  "cost_rates": [0.0, 0.0025],
+  "horizons": [1, 2, 3],
+  "mesh_steps": [0.05, 0.025],
+  "support_probabilities": "Equal positive mass on the two or three joint vectors in each case, independently redrawn at each period. This is the defined synthetic opportunity law, not an assumption inferred from market data.",
+  "cases": [
+    {
+      "name": "initial_fee_amortization_h2",
+      "gross": [[1.0015, 1.0, 1.0], [1.0015, 1.01, 1.0]],
+      "target": [1.0, 0.0, 0.0],
+      "initial_state": [0.0, 0.0, 1.0],
+      "special_check": "At c=.0025, exact H1 holds and exact H2 restores: two-period equity log growth exceeds the initial log fee; no forced initial allocation."
+    },
+    {
+      "name": "future_fee_closed_form",
+      "gross": [[1.32, 0.88, 1.0], [0.88, 1.32, 1.0]],
+      "target": [0.5, 0.5, 0.0],
+      "initial_state": [0.5, 0.5, 0.0],
+      "special_check": "At c=.0025, V2=2log1.1+log(1-.00025/1.00125); the post-first-return states(.6,.4,0)/(.4,.6,0) lie on both meshes."
+    },
+    {
+      "name": "offmesh_last_period_counterexample",
+      "gross": [[1.2, 0.8, 1.0], [0.8, 1.2, 1.0]],
+      "target": [0.5, 0.5, 0.0],
+      "initial_state": [0.49, 0.51, 0.0],
+      "special_check": "At c=.0025,H1, exact holdQ=-8.000064e-6 exceeds tradeQ=-2.496910e-5. The adopted direct current-reward query must hold on both meshes; the rejected grid-Q interpolation may be displayed only as an explanation."
+    },
+    {
+      "name": "offmesh_thirds_three_point",
+      "gross": [[1.25, 0.93, 1.005], [0.9, 1.2, 1.001], [1.03, 1.02, 0.99]],
+      "target": [0.3333333333333333, 0.3333333333333333, 0.3333333333333333],
+      "initial_state": [0.17, 0.28, 0.55]
+    },
+    {
+      "name": "asymmetric_two_point_interior",
+      "gross": [[1.38, 0.97, 1.005], [0.83, 1.08, 1.004]],
+      "target": [0.65, 0.1, 0.25],
+      "initial_state": [0.31, 0.44, 0.25]
+    },
+    {
+      "name": "dominated_bill_target",
+      "gross": [[1.07, 1.01, 1.0], [1.11, 0.99, 1.0]],
+      "target": [0.0, 0.0, 1.0],
+      "initial_state": [1.0, 0.0, 0.0],
+      "special_check": "Equity gross exceeds the bill target in every support outcome; hold remains optimal over all tested horizons."
+    },
+    {
+      "name": "offmesh_identity_thirds",
+      "gross": [[1.2, 0.9, 1.01], [0.8, 1.15, 1.005], [1.05, 1.02, 1.0]],
+      "target": [0.3333333333333333, 0.3333333333333333, 0.3333333333333333],
+      "initial_state": [0.3333333333333333, 0.3333333333333333, 0.3333333333333333],
+      "special_check": "The first physical hold and restore action coincide, so the implementation must hold without a fee, even though later states can drift."
+    },
+    {
+      "name": "vertex_identity",
+      "gross": [[1.15, 1.02, 1.0], [0.85, 0.99, 1.005]],
+      "target": [0.0, 1.0, 0.0],
+      "initial_state": [0.0, 1.0, 0.0],
+      "special_check": "A pure-asset target stays identical to its holdings after every outcome; both baselines, exact control and implemented policy agree."
+    }
+  ],
+  "reference_method": {
+    "fees": "Independent scalar bisection of C=c*sum(max((1-C)w-u,0)) at unit wealth, with no call to core fee or prototype fee routines.",
+    "optimal_control": "Enumerate both actions and every support outcome recursively in the original continuous state; use exact positive gross factors and independently calculated state updates. H<=3 and support size<=3 make the entire tree enumerable. No projection, prototype transition or interpolation is used by the optimal reference.",
+    "implemented_policy": "Call only the prototype's evaluate_action to choose the frozen approximate policy action, then independently execute it with the same scalar bisection and enumerate every future support branch. This is the actual model-conditional continuous-state value of that implemented policy, not its grid table.",
+    "baselines": "Enumerate never-restore and restore-every-period policies under the same opportunity law, costs, target, starting weights and horizon. Initial allocation is charged when restoring and terminal liquidation is absent.",
+    "grid_table_display": "Report the grid table at an initial mesh node or independently interpolate its values over the regular triangle containing the initial state. Label this projected-chain value, not exact control or implemented-policy payoff.",
+    "initial_greedy_prediction": "Separately report max of evaluate_action hold_q/trade_q, which can differ from the interpolated grid table at off-mesh initial states and from actual implemented-policy value at H>1."
+  },
+  "numeric_checks": {
+    "oracle_baseline_dominance": "Exact optimum minus each baseline>=-1e-10 in log units.",
+    "implemented_policy_gap": "Exact optimum minus independently replayed implemented-policy expected log value>=-1e-10. Report signed numerical residues, not clipped-only gaps.",
+    "h1_accuracy": "At H1, direct prototype hold_q/trade_q must equal independent reference two-action values within1e-10; implemented expected value equals the optimum within numerical action guard.",
+    "fee_query_accuracy": "Compare hypothetical fee_fraction from every queried nonterminal policy state with independent unit-wealth fee, within1e-11.",
+    "first_action": "Record exact action difference and canonical strict restore-if-positive action with identity ties forced to hold. Report all mismatches and separately those with abs(exact gap)>1e-10; this threshold is only a numerical audit classification, not a policy margin.",
+    "h0": "Independent recursion returns0 and prototype h0 prohibits trading.",
+    "no_uniform_bound": "Errors across these cases and coarse/fine meshes are observed diagnostics only; neither monotone improvement nor a universal approximation bound is asserted."
+  },
+  "expected_output": "results/model_review/finite_horizon_execution_v1/synthetic_tree_audit.json",
+  "provenance": "Run after prototype sources are declared stable. Record protocol, audit script and prototype/core source SHA256 before and after; abort success if changed. Record exact case inputs, counters, comparisons and failed checks. No market input is loaded."
+}

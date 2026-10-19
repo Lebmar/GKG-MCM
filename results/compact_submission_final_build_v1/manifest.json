@@ -1,0 +1,14 @@
+{
+  "status": "complete",
+  "phase": "complete",
+  "protocol_sha256": "7027204f1f6954d1b4c7f862e4b793643c9f63a7c1b47eeba4b6db079a52bd63",
+  "source_freeze_sha256": "debf854d7898ccb501c3aa299064f745535b4d1b7c316065b10f09c58f4cbfc0",
+  "build_release_sha256": "ad2214cfe675a0ed6b69a65e32d0a8d55714c8866a292b649c0d97a6eaf3763b",
+  "new_policy_runs": 0,
+  "actual_final_replay_executed": false,
+  "archive": "dist/Team87_Lebmar_Technical_Source_v2.zip",
+  "archive_sha256": "78b710d75f9cba9497ac6059995ac874dfa30a949b06a8072088235cd3f2d4dc",
+  "archive_bytes": 3135797,
+  "member_count": 564,
+  "uncompressed_bytes": 14121808
+}

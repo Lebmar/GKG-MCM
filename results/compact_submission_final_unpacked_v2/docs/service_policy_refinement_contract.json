@@ -1,0 +1,129 @@
+{
+  "version": "service-policy-refinement-contract-v1",
+  "created_utc": "2026-10-18T02:37:38.289870+00:00",
+  "status": "新竞赛服务规则的纯治理原型；政策范围已声明，尚未完成新联合模型验证，不是已采纳的投资执行器。",
+  "scope": {
+    "market_fit_or_replay": false,
+    "final_scenarios_loaded": false,
+    "write_report": false,
+    "old_archives_modified": false,
+    "complete_new_service_validated": false
+  },
+  "policy": {
+    "policy_id": "contest_ordinal_target_reserve_v1",
+    "service_alpha": 0.1,
+    "service_alpha_interpretation": "公开的风险参考标准，不由短问卷唯一识别，也不是保证。gamma/beta是分开的技术screen，不是新客户偏好。",
+    "target_bill_floors": {
+      "High": 0.3,
+      "Medium": 0.1,
+      "Low": 0.0
+    },
+    "reserve_interpretation": "规范性的目标现金样储备惯例；目标份额不是提款额、原始100的固定金额、支出覆盖或随时可用现金保证。",
+    "floor_sensitivity": {
+      "id": "larger_reserve_norm",
+      "target_bill_floors": {
+        "High": 0.5,
+        "Medium": 0.2,
+        "Low": 0.0
+      },
+      "use": "保留规范敏感性，不按回测选择winner。"
+    },
+    "three_asset_positivity": "三共同产品每种资产严格正权重、fully invested；纯模块不把旧网格5%升格为流动性偏好。",
+    "growth_metric_id": "mean_annual_log_net_real_terminal_growth_v1",
+    "risk_metric_id": "annual_endpoint_net_real_MDD_v1",
+    "severity_metric_id": "fractional_empirical_CVaR90_MDD_v1",
+    "training_rule_id": "complete_empirical_count_screen_v1",
+    "comparison_tolerance": 1e-12,
+    "proposal_selection": "每产品同H/L完整训练候选；计数screen可行且目标bill满足label floor后取最大mean annual log growth。在距全局max不超过tol的集合内取最小expected_excess，再在距该全局min excess不超过tol的集合内取最小CVaR90，最后在距全局min CVaR不超过tol的集合内按Conservative/Balanced/Growth顺序。沿用既有G→expected_excess→CVaR→canonical排序；两个严重度量只是tie顺序，不是额外风险约束。",
+    "cost_rate": 0.0025,
+    "excess_metric_id": "mean_positive_MDD_excess_above_individual_L_v1",
+    "proposal_sort_rule_id": "global_G_excess_CVaR_canonical_bands_v1",
+    "training_gamma_scope": "本轮技术training screen必须在[0,service_alpha=.10]；任意gamma>.10是模型证据版本/范围不符，返回model_review，不混作放宽客户偏好。"
+  },
+  "two_layers": {
+    "contest": "给定H/L/liquidity视为完整例题输入；不因缺题面没有的提款日期/金额把A-E全部Review。建议仍以年度、无后续存取、合成市场和公开惯例为条件。",
+    "deployment": "真实资金用途、金额、日期、可等待时间、外部储备和真实产品流动性仍须核实；本原型不编造事实、不替代真实部署适当性结论。"
+  },
+  "separate_outputs": {
+    "proposal": "conditional_proposal或Review；risk_review/liquidity_review/model_review分开。所有训练growth/risk数据显式标training，不生成金融回放。",
+    "admission": "新policy及完整菜单、所选产品、profile/H/L/liquidity、度量、费用和执行版本一致的whole-scenario联合流程验证收据才可通过版本匹配gate；仅匹配是必要条件，不是风险保证。",
+    "legacy_evidence": "旧risk-only训练细节可用于本次条件目录示意；不能标成新规则联合验证。E旧Growth/其他H或产品执行证据不允许迁移。",
+    "no_fallback": "新联合证据缺失则保留条件proposal、service pending/model_review，不自动fallback annual/全票据，不填金融结果。",
+    "balanced_case": "分开记录conditional Balanced case和effective admitted Balanced case。其他产品是not_balanced_case而非risk失败；H6 E不能借H30 C的执行证据。",
+    "fit_lineage": "proposal保留可重算canonical的profile+完整三pair训练payload（H/L、n/gamma、全部指标/费用/版本/context、source fit artifact SHA、原始training_ids）。联合receipt必须匹配其training_evidence_fingerprint，不能仅因不同fit权重相同就复用。",
+    "lineage_is_not_independent_validation": "这是本proposal/final fit与所引用完整流程记录的身份一致性；不是额外要求每个full refit再获取全新heldout市场，不把CV说成该精确fit风险证书。实际receipt仍须说明procedure-CV evidence与final-fit provenance的关系，由caller核真实scope。",
+    "receipt_schema": "whole_service_validation_with_fit_lineage_v1"
+  },
+  "runtime": {
+    "assignment_and_new_target": "必须满足目标floor；新目标还需当前策略的风险/执行/授权规则支持。",
+    "drift_only": "真实bill份额漂移低于目标权重或类别floor，只输出bill_share_below_target/对应gap监测。单凭drift不自动Review、不暂停、不改变旧cost gate、不强制恢复现金。",
+    "actual_need_or_questionnaire_change": "已知真实需求改变、问卷改变或模型不再适用时request review，冻结未批准的新目标；原型decision_action=None，合法既有controller及其pending行为由caller按原授权管理。",
+    "pending": "既有review状态不因份额恢复而自动清除；本治理原型不发清仓/永久hold指令，不是紧急提款方案。实际人工响应/应急变现未建模。",
+    "history": "原H、elapsed、实际holdings、CPI、peak、MDD、everbreach和其他输入历史完整带回，不重置风险、不重启预算。",
+    "hard_live_floor": "若要承诺实际floor，须另protocol、动作优先级/成本/时点/完整验证；不能把这项soft target规则静默变成live-floor gate。"
+  },
+  "coverage": {
+    "units": [
+      "illustrative_profile_cases",
+      "training_refit_runs",
+      "market_scenario_paths"
+    ],
+    "example_profiles": "A-E五个题例，conditional proposal数/5不是客户人口覆盖率。",
+    "outer_refits": "五个已计算并审计完成的outerfit中，两个给客户例C自动执行准入=2/5训练任务准入计数；另三个是政策转介，不是数值求解失败，也不是40%客户人口。",
+    "OOF_paths": "48/120是本例客户C在120市场路径中有自动执行的路径权重；因每折24而数值等于2/5，不估计人群比例。",
+    "zero_denominator": "分母0的比例为NULL，不填0或当零风险。",
+    "financial_results": "本原型/示例不产生金融结果；不改任何已有数值表或用新覆盖口径覆写旧结果。"
+  },
+  "examples": {
+    "source": "results/model_review/positive_asset_specification_v1/nested_context_refits.json/full_development/raw_fit",
+    "source_scope": "旧full120 risk-only三产品目录与15个完整训练pair，只读重用，不选择floor，不重新fit。",
+    "expected_conditional_assignments": {
+      "A": "Review",
+      "B": "Conservative",
+      "C": "Balanced",
+      "D": "Review",
+      "E": "Balanced"
+    },
+    "expected_formal_admission": "新联合规则未验证，A/D维持各自风险Review；B/C/E有条件proposal但new-policy admission为model_review/pending，不把五例都称risk Review。",
+    "needed_warning": "E-Balanced原始H6 training count可作为候选；旧E-Growth inner admission和C-H30执行artifact都不能证明该新配对及流程已验证。"
+  },
+  "implementation_files": [
+    "research/experimental_execution/service_governance.py",
+    "tests/test_service_governance.py",
+    "scripts/build_service_policy_examples.py"
+  ],
+  "output_directory": "results/model_review/service_policy_design_v1",
+  "required_tests": [
+    "三资产正权重/非法profile",
+    "风险与序数floor分别筛选",
+    "全局tol tie不累积",
+    "完整每产品训练证据及H/L/版本匹配",
+    "旧risk-only/Growth/不同H联合gate拒绝",
+    "非Balanced case不当风险失败",
+    "drift只提示，真实need改变request review而无投资动作",
+    "pending及原风险历史不重置",
+    "例题/拟合任务/市场路径覆盖单位和零分母",
+    "不同费用训练/联合证据拒绝；malformed证据/布尔伪装不产生admission",
+    "重算policy/catalogue hash并核target相容性，不能信被修改proposal中旧fingerprint标签",
+    "gamma>.10不能混作候选；G→expected_excess→CVaR每层使用全局tol band，不逐对累积",
+    "同catalogue/H/L/n/聚合统计但不同training_ids或source artifact SHA必须拒绝旧receipt；payload hash可重算防篡改"
+  ],
+  "frozen_input_sha256": {
+    "docs/problem_A.pdf": "2ac9412ed68349d36a3fbd2c6cddc5789a81dab8acbfa08c63a3bdb34d2aa2dd",
+    "docs/liquidity_policy_refinement_review.json": "0fca66a7765b6d2305ffeb2a04c60ccd53c63c7c48fefa28bcdc551624737886",
+    "docs/liquidity_service_design.json": "049938f609d704a1fe5dde682deaf9645101cfb66a7d813e96d31b9c22f0c218",
+    "docs/positive_asset_specification_protocol.json": "ff23c3fcdad54d83a2896a11459db1cec3e4f48fe6352d994139e4c9ff79475c",
+    "results/model_review/positive_asset_specification_v1/manifest.json": "da65841decff7d50ec7baa8fe80c4e6593112ea0c7d083affe2a0dd68f2f306e",
+    "results/model_review/positive_asset_specification_v1/nested_context_refits.json": "d13450e05051c02d2bf54a4edfc77ef01d880cee0c78238cc3d7204a6ab27aa1"
+  },
+  "prohibited": [
+    "新market fit/simulation",
+    "读取121-180收益",
+    "覆写旧文件/旧图/旧研究数值",
+    "按旧OOF选择floor或放松证据gate",
+    "把conditional proposal称jointly validated",
+    "把5pp网格正权重称现金需求",
+    "把实际drift自动变成新live-floor门控",
+    "提交git或写论文"
+  ]
+}

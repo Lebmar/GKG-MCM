@@ -1,0 +1,58 @@
+{
+  "version": "state-budget-cushion-source-only-requirements-review-v1",
+  "completed_utc": "2026-10-19T06:54:16.123368+00:00",
+  "status": "No material method blocker to separately freezing a development evaluation; no empirical improvement or admission conclusion.",
+  "review_scope": {
+    "source_and_synthetic_design_only": true,
+    "actual_new_strategy_run_by_reviewer": false,
+    "provided_market_or_final_read_for_this_review": false,
+    "old_frozen_sources_changed": false,
+    "review_is_not_external_human_peer_review": true
+  },
+  "reviewed_sha256": {
+    "docs/problem_A.pdf": "2ac9412ed68349d36a3fbd2c6cddc5789a81dab8acbfa08c63a3bdb34d2aa2dd",
+    "docs/technical_rebuild_requirements_review.json": "8368ce603ab5cd08fceace6ef41f24301db759902b634e02d2e155e154e0803d",
+    "docs/state_budget_mitigation_requirements_review.json": "6128318f0ab3b518a351cdf5f138c6ca90490909ba77e38cae135c3ce0944d0c",
+    "docs/state_budget_cushion_design.json": "c0c0f03837a1e5b75f8cb18143e4a26327156258b7d0c4d411d7a6cc361c7e73",
+    "research/experimental_execution/state_budget_execution.py": "8480dc1c2d54175a9fafed2471991a0ea8fc6a4519a24140044d056dbafafb1f",
+    "research/experimental_execution/state_budget_mitigation.py": "fe3904062f92a42f7fc37d664b53ee3ec6d336b2498448c1a707cb2edfda89ff",
+    "research/experimental_execution/state_budget_cushion_primary.py": "d44dda7d43d27a5f02b6088d2c00d7ca482b4eaf6a0bc89c29c9ce09975b3fd4",
+    "research/experimental_execution/state_budget_cushion.py": "8052ff8f5d2d4ad7876097e2e2ba429ecf66474d07fa45b3bb7f19df647b82c9",
+    "tests/test_state_budget_cushion.py": "6d5aa59b34f2322b2671bfda706304d1dbad97960965846f7541f96c3a71a7c3"
+  },
+  "problem_fit": {
+    "temporary_execution": "Q2 permits prospective weight adjustments and review. The four scaled destinations are temporary executions of the existing strategic target, not a new persistent Q1 menu or fourth investment product. A temporary all-bill protective proposal at m=0 remains an allocation among the same three asset classes.",
+    "benefit_and_cost": "A growth trade with support-feasible hold still needs a strictly positive paired expected log-wealth advantage after exact fees. If hold is infeasible, growth may be sacrificed for a declared prospective support-risk benefit; protection is not claimed to earn positive financial growth. Report fees, sacrificed growth, residual risk and ensuing Review explicitly.",
+    "risk_tolerance": "Original L remains the drawdown tolerance and original floor is not relaxed. The formula does not turn the question into a capital guarantee or replace observed running maximum drawdown by current drawdown."
+  },
+  "mathematical_check": {
+    "formula": "m=clip((R-(1-L)*P)/(L*R),0,1), for 0<L<=1; R=current real wealth, P=historical real peak.",
+    "drawdown_form": "For d=1-R/P, m=clip((L-d)/(L*(1-d)),0,1). For 0<L<1, the unclipped derivative with respect to d is (L-1)/(L*(1-d)^2)<=0.",
+    "units_and_boundaries": "m is invariant to common positive scaling of R/P, equals1 at peak and0 at the original floor for0<L<1. Source uses exact R>=P for the L=0 scale1 convention; a tolerated R<P state has scale0. L=1 gives scale1. Source clamps a numerically admissible historical peak up to current real wealth before active use.",
+    "proposal": "For each fixed a in[1,.75,.5,.25], proposal=a*m*w+(1-a*m)*e_bill. It is nonnegative and sums to1. Its equity-plus-bond share is a*m*(w_equity+w_bond), not m.",
+    "fee_geometry": "The full destination is executed by the same exact transaction solver. Partial post-dollar segment y(q)=x+q*(y_star-x), fee(q)=q*fee_star, and all joint-support floor constraints remain unchanged; scaling destination weights does not scale or omit the fee.",
+    "information": "m uses only the current pre-action R/P/L. Current realized market and future suffix are absent from the pure decision arguments. The training forecast and support information sets are unchanged.",
+    "initial_and_review": "Initial m is1 and requires full original target or Review/financial NULL. Already-breached or pending accounts do not restart. The unchanged V2b fallback is imported directly and is followed by absorbing Review."
+  },
+  "essential_nonclaims": [
+    "The new four-destination family replaces the old family; it is not a superset. A former growth or feasible point may disappear. There is no monotone improvement theorem for feasibility, coverage, growth, fees or realized risk.",
+    "m limits new proposal destinations only. Separate hold may retain higher exposure; partial execution may also exceed a destination exposure. Unscaled V2b mitigation endpoints may carry more risk than the scaled primary proposals.",
+    "This is not a compulsory hold-exposure cap, CPPI insurance, recursive viability guarantee, future-support containment argument or intrayear drawdown guarantee.",
+    "Real bill returns can be below1, and transaction fees consume wealth. Even m=0 does not guarantee feasibility or restoration of the original floor.",
+    "Primary support feasibility concerns the declared finite training one-step support. It does not certify real predictive calibration or all future scenarios. Fallback retains support_feasible=False and does not restore ordinary autonomous service.",
+    "m is a deterministic normative architecture using client tolerance, not an estimated psychological preference or newly identified risk-aversion parameter."
+  ],
+  "synthetic_evidence_reviewed": {
+    "reported_tests": 19,
+    "covered": "At-peak/initial equality to old rules; mathematical boundaries; exact partial execution; added safe point and lost old growth-point counterexamples; hold above proposal exposure; m0 infeasibility with negative real bills; direct fallback identity; absorbing Review/original H; actual-breach bypass; prefix information; readonly witnesses.",
+    "scope": "Handmade tests validate implementation examples and invariants, not market efficacy."
+  },
+  "empirical_questions_for_frozen_development_only": [
+    "Run the complete own-training nested learner with unchanged six families and selector; retain old V2/V2b negative outcomes and exploratory version chronology.",
+    "Report all original IDs, initial financial coverage, time to first funded referral, ordinary autonomous continuity, residual risk after mitigation and full-H pending wealth separately.",
+    "Compare net full-H growth and MDD mean/CVaR/events against each same-funded-ID benchmark while retaining all-original benchmark summaries. Include costs and actual trading; do not select a favorable comparator.",
+    "Inspect re-risking delay, loss ratcheting and turnover induced by reactive m. Any empirical gain must survive fees and cannot be inferred from smaller proposal exposures alone.",
+    "Do not use the historically seen final60 to choose or adjust this architecture. New development results remain exploratory evidence, even when outer folds are numerically audited."
+  ],
+  "decision": "Accept as a coherent, explicitly limited next structural hypothesis. Freeze new source/protocol before any actual development execution. This review changes no old model, label, target or readiness flag."
+}

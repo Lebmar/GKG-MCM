@@ -1,0 +1,65 @@
+{
+  "version": "liquidity-capacity-source-method-review-v1",
+  "status": "passed_source_and_synthetic_review_only",
+  "reviewer": "path_mechanisms, separate from root kernel author",
+  "review_scope": "Read kernel, driver and original6synthetic tests; check mathematics, information set, original-horizon/Review semantics and before-parser freeze flow. Add4synthetic driver tests and the explicitly authorized emptyannual-header fix. No supplied market values or numeric result archives parsed; dependency byte hashes alone were inspected.",
+  "source_authorship_boundary": "The kernel and its6tests were not edited. Driver changes made by this reviewer are presentation-only fixed output columns; therefore this is a source/method review, not a wholly independent implementation or a postexecution result audit.",
+  "reviewed_source_sha256": {
+    "research/diagnostics/liquidity_capacity.py": "49fa1c4837b4039e15694d19672ce0232b6ccc70b1e91316b38968139cc001af",
+    "scripts/diagnose_liquidity_capacity.py": "44a2a39d7cd189f2d356818bf7eea8dd9b13c1cc64ee899963989dd447e5c0ae",
+    "tests/test_liquidity_capacity.py": "3a7cb8dc2a3f234b218df6644124d790301ac2e6280530bc65befa4e1d8c74c7",
+    "tests/test_liquidity_capacity_runner.py": "d034dc0d01adfda167b758543b337058fe359e5e877c464f31d3fe49a8171804"
+  },
+  "pre_freeze_protocol_sha256": "ebe49546515b486108153ccc76da2acb9fbe10592c658991d5eb9b94f3ab2311",
+  "pre_freeze_protocol_sha_is_historical_scalar": true,
+  "mathematical_findings": {
+    "annual_target_share": "After exact annual restoration, holdings have common post-fee scale Wf times w. End shares equal w_i*(1+r_i)/sum_j w_j*(1+r_j), so scale/CPI cancel and no separate new portfolio simulation is required for these ratios.",
+    "liquidation_fee": "Let A=x_equity+x_bond. With fee charged on new bill purchases, transferred=A/(1+c), fee=c*A/(1+c), available=x_bill+A/(1+c). available+fee=sum(x). This matches core.execute_target(x,e_bill,c), including existing-bill-only and zero-fee boundaries.",
+    "not_double_fee": "Hypothetical liquidation is computed from endpoint shares only, gives ratio+drag=1 and does not alter any investment-path fee or wealth. It does not add actual trading, withdrawal or client liability.",
+    "drift_vs_floor": "The target bill floor is an allocation convention. Returns can push the end share below it despite a valid target; the diagnostic labels that drift and does not redefine suitability/admission.",
+    "real_bill_loss": "A positive nominal bill gross can be a negative real bill return after inflation. The separate negative-real-return indicator avoids treating bills or convertibility as real capital insurance."
+  },
+  "identity_and_information_findings": {
+    "own_fit": "Each outer refit uses its saved training identity list and effective assigned product. Training/evaluation intersection is rejected. Each prior own-H job/scenario/profile record must exist exactly once with identical effective label and assigned flag.",
+    "own_horizon": "Each profile retains original H: A5/B15/C30/D25/E6. All120 original IDs once per profile yield600 metadata rows, while annualrows=sum_assigned H. C30 is never copied to B15/E6 or a Review entry.",
+    "Review": "A missing effective product is financialNULL, never a hypothetical cash strategy. Existing A/D Review entries remain NULL and contribute no annual records. Static C product properties do not authorize any separate Q2 execution service.",
+    "timing": "Current returns/inflation are used only to describe year-end shares and real bill returns of an already selected static product; no effective assignment or target is optimized on them.",
+    "development_gate": "The driver verifies source-freeze readiness, protocolSHA, allow_final=False, exact1-120 declared IDs and source/input hashes before calling the raw loader with range(1,121),allow_final=False. The loader ignores unrequested final return values before their numeric parse.",
+    "failure_evidence": "An attempt is created before parser access. Assignment/other failures leave a failed manifest and traceback; any existing output is refused. Missing sourcefreeze blocks before parser or attempt creation."
+  },
+  "presentation_fix": {
+    "problem": "An allReview cohort previously produced0annual records with no columns, leaving a gzip CSV that read_csv could not parse.",
+    "change": "Declare COMMON_COLUMNS/PATH_COLUMNS/ANNUAL_COLUMNS and pass columns explicitly to both DataFrame constructors. No math, assignment, horizon, input, cost or output row is altered.",
+    "checked": "AllReview synthetic now retains600financialNULL path rows,0annual rows and the complete annual header."
+  },
+  "validation": {
+    "command": ".venv/bin/python -m unittest discover -s tests -p test_liquidity_capacity*.py -v",
+    "kernel_tests": 6,
+    "runner_tests": 4,
+    "passed": true,
+    "synthetic_driver_cases": [
+      "allReview:600metadata/financialNULL,0annualrows with explicit parseable header,5NULLsummaries",
+      "C-only funded:120assigned/3600ownH annual rows, allotherprofilesNULL, ratio+drag1 and no strategy/liability charge",
+      "wrong original effective assignment: failed receipt/traceback retained and output refuses overwrite before parser",
+      "missing sourcefreeze: no parser call and no created output"
+    ],
+    "provided_market_values_read": false,
+    "actual_numeric_diagnostic_run": false,
+    "final_scenarios_loaded": false
+  },
+  "execution_preconditions_remaining": [
+    "Root exact source/input freeze must bind all protocol source/input paths, including unchanged own-fit partition/cache-derived assignment evidence.",
+    "The original Q1 own-H independent_audit.json was absent at this source review; root must finish and bind passed parent audit before this diagnostic execution. No missing parent evidence is silently replaced by the synthetic suite.",
+    "Root performs the first development-only run after freeze; a separate saved-result check is still required. This source review does not certify an unevaluated numerical output."
+  ],
+  "limits": [
+    "Annual contest tradability, not immediate/intrayear liquidity or a real market execution model.",
+    "No external client liability/expenditure/withdrawal schedule is supplied or invented.",
+    "No probability, coverage, capital or future drawdown guarantee follows from these ratios.",
+    "The five profiles share120 reused markets and different horizons; do not treat600 profile copies as independent observations or rank all horizons as equal.",
+    "No new fit, policy/action family, parameter selection or old archive/source change."
+  ],
+  "blockers_found": [],
+  "kernel_edit_required": false,
+  "ready_for_root_source_freeze_review": true
+}

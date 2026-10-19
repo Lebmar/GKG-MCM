@@ -1,0 +1,52 @@
+{
+  "version": "failure-path-mechanisms-independent-audit-plan-v1",
+  "declared_utc": "2026-10-19T04:06:35.262178+00:00",
+  "role": "Independent mechanical path/accounting/identity audit; not policy development, forecast validation, a causal analysis, human review, or a risk certificate.",
+  "outcome_exposure": "The influential original scenario IDs35/52/98/112 and their old breach/event labels were already known from frozen prior diagnostics. This plan is declared before reading any newly produced path-mechanism output. It is post-hoc diagnosis, not blind model evaluation.",
+  "identity_scope": {
+    "fixed_inventory": "Exactly11model-versus-own-B pairs: fourIDs35/52/98/112 under full old selected fixed policy and own selected-beta original-inner program (8pairs), plus r2_ID52/r4_ID112/r5_ID112 (3pairs); exact pair/job/fan/target identities require root-frozen protocol.",
+    "accounts": 22,
+    "annual_decisions": 660,
+    "annual_endpoints_including_initial": 682,
+    "paired_annual_records": 330,
+    "market": "Only complete original development IDs1..120 through guarded load_paths(...allow_final=False), preserving original annual joint asset/inflation chronology. Do not parse return/inflation values121..180.",
+    "same_fit_comparison": "Each M/B pair must have exactly same original scenario ID, job, H=30, L=.4, target and own training IDs. Different fits of the same original ID are descriptive cross-fit comparisons; targets/fans may differ and must be disclosed."
+  },
+  "independence": {
+    "permitted_project_import": "Only guarded safeinvest.data.load_paths for the complete development arrays.",
+    "permitted_previous_audit_imports": [
+      "scripts/audit_review_pending_execution.py:independent_trade",
+      "scripts/audit_fan_rollout_execution.py:reference_actual"
+    ],
+    "prohibited_imports": "No new path-mechanism producer/runner, reviewed policy/rollout/metric/execution modules, or new fitting/selection routines.",
+    "actual_action_scope": "Replay all22accounts independently from saved model actions and independently derived own-B annual-before-breach/hold-after-breach actions. This verifies recorded mechanical paths, not independent recomputation of every adaptive Q/action choice."
+  },
+  "checks": [
+    "Require frozen root protocol, complete producer manifest, exact source/input SHA start/end equality, output SHA matches, and untouched protocol before any new output values are read.",
+    "Require exact11pair inventory and unique330pair-years/660account-years/682account-endpoints. Check own target, fan IDs/inclusion, original period, scenario, source group, accounting status and Review/hypothetical labels.",
+    "Independently solve exact self-financing fee C=.0025*sum positive((V-C)*w-x) with100bisectionsteps, restoring destination amount once; same initial charge, no hold/terminal fee. Rebuild posttrade holdings and every later holding/weight/wealth endpoint.",
+    "Rebuild CPI from actual inflation, original peak100 and all elapsed annual endpoints, current drawdown, running original-history MDD, threshold strict excess>1e-12, first crossing, and absorbing pending at next decision. Recovery cannot reset/restart the service.",
+    "Compare all saved predecision/posttrade/endyear quantities, actions, fees and moved amounts to independent scalar reference. For B, derive actions independently from its own history, never borrow M breach state.",
+    "All initial and pending Q/risk/score values must be unavailable/NULL; all B Q values unavailable/NULL. At active model states compare copied saved Qs/counts/actions to frozen parent source and independently recalculate finite technical-price score using total remaining logs and originalH; do not subtract fees twice or call this forecast calibration.",
+    "Independently check per-year logwealth-gap increment = difference in log fee survival + difference in posttrade gross logreturn; common actual CPI cancels only within same original calendar path.",
+    "Independently check nominalgap = inherited nominalgap*B posttrade gross + (Bfee-Mfee)*B posttrade gross + (Mprewealth-Mfee)*(Mposttrade gross-Bposttrade gross); realgap divides this by common endpointCPI. Also check direct3asset gap recursion.",
+    "Independently verify currentDD_M-currentDD_B = realwealth_B/peak_B-realwealth_M/peak_M, separately preserving each arm peak. RunningMDD gap is a difference between pathwise running maxima, not a sum of currentDD gaps.",
+    "Identify first action divergence and first posttrade exposure/holdings/wealth/peak/currentDD/runningMDD divergence separately; identical initial restore action does not imply identical target exposure. Verify firstcrossing and its preceding original year for both arms, with no-breach values NULL.",
+    "Preserve all NULLs and missing-source statuses. Missing inner B source trace is reconstructed openly by independent B accounting and compared to frozen same-job B endpoint metrics; do not invent a parent trace.",
+    "Cross-fit summaries retain each fit own weights/fan/eta/selection status. Repeated ID112 is one original market trajectory appearing under distinct fits, not independent market risk observations."
+  ],
+  "numeric_contract": {
+    "accounting_comparison_atol": 3e-10,
+    "accounting_comparison_rtol": 3e-13,
+    "score_comparison_atol": 2e-12,
+    "breach_and_action_score_tolerance": 1e-12,
+    "first_divergence_tolerance": "Use the producer protocol explicit comparison tolerance unchanged, with separately declared financial-unit/weight-unit meaning; no outcome-driven adjustment."
+  },
+  "failure_rule": "No successful audit receipt on an incomplete or failed check; no changing old sources, dropping IDs, changing controller/target/alpha/eta/admission, replacing missing paths, or choosing another test witness after results.",
+  "interpretation_limits": [
+    "Accounting decompositions are exact mechanical identities along already-selected realized paths; ordering of reference/gross terms is a convention and is not a unique causal contribution.",
+    "The first realized difference or crossing localizes a path; it does not isolate the cause due to target choice, fan membership, eta, conditional-law error or B continuation approximation.",
+    "Replay from saved actions establishes accounting correctness, not optimality or complete independent validation of every adaptive forecast.",
+    "No new automatic admission evidence is created. Current full C remains execution_review with financial outputsNULL until an independently justified later decision; no paper or final heldout evaluation is authorized by this audit."
+  ]
+}

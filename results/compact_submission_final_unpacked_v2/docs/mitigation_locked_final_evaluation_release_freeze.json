@@ -1,0 +1,8 @@
+{
+  "version": "mitigation-locked-final-release-hash-freeze-v1",
+  "execution_ready": true,
+  "release_sha256": "12d11ae86b48220313e89da593a1588be486865da9489a7253b981ae88a65887",
+  "protocol_sha256": "f9a5719475ab222e111b8874e3b84f20c89a406254d557f97a33dbf7e5e4b76a",
+  "source_freeze_sha256": "4fe35e70844a185b415a144e8c5179b5ead1b39e1c6df187b2a1092798b91d38",
+  "created_utc": "2026-10-19T07:30:02.668357+00:00"
+}

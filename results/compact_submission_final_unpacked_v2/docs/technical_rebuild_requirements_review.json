@@ -1,0 +1,131 @@
+{
+  "version": "technical-rebuild-requirements-review-v1",
+  "written_utc": "2026-10-19T05:53:43.811973+00:00",
+  "status": "Methodological proposal for a new research version, not an executable frozen protocol, model adoption or paper.",
+  "scope": {
+    "allowed_development_ids": [
+      1,
+      120
+    ],
+    "new_market_data_loaded": false,
+    "final_121_180_loaded_in_this_review": false,
+    "new_model_executed": false,
+    "old_frozen_sources_or_results_changed": false,
+    "current_historical_contract_superseded": false
+  },
+  "executive_judgment": [
+    "A new structure is authorized. Old freezes protect historical evidence; they do not prohibit a new separately versioned learning procedure.",
+    "The original question does not require the previously chosen 10% empirical event cap, eta/beta grids or exact same-target-B event-count dominance. These are design conventions and may be reconsidered transparently using development data only.",
+    "Partial restoration and cost-justified protection trades are compatible with the problem. They need explicit, prospective benefit definitions, exact self-financing fees and separate descriptions of partial execution versus changing the target.",
+    "A useful new model must be judged jointly on whole-path risk, available automated service, financial growth and trading costs. Rejecting every initial investment is a governance outcome, not an effective autonomous portfolio.",
+    "Previously exposed final scenarios cannot be made fresh by a new development split. This review does not inspect their values; any later evaluation must disclose the old exposure and preserve prior versions."
+  ],
+  "original_problem_requirements": {
+    "mandatory": [
+      "Long-only, fully invested, initial100 units in bills, no later deposits or withdrawals; apply stated0.25% fee before current returns and count transfers once, including inception, without terminal liquidation.",
+      "At actual period t use only that scenario observations through t-1 plus a separately fitted development model. Neither actual future observations nor scenario identity may serve as a predictor.",
+      "Q1 separates ordinary fluctuations from large losses in purchasing power; defines three portfolio allocations or rules and transparent onboarding for A-E using their own horizons, loss tolerances and liquidity categories.",
+      "For a Balanced client Q2 supplies a keep/rebalance/target-change/human-review rule. Trading or target changes need estimated benefits that justify the transaction cost.",
+      "Mandatory equal-thirds comparator restores exactly each review and pays the same fee; report median growth and loss, P10 growth, P90 loss, a severe-loss example and actual trading-period percentage; decide whether automated target changes add value.",
+      "Q3 tests a meaningful assumption or fee rate and states whether the recommendation changes; identifies a limitation, review/suspension trigger and the actual pending action.",
+      "Final evaluation prescribed for original IDs121-180 after development on1-120, with no later adjustment."
+    ],
+    "explicit_tolerance_meaning": "The supplied loss tolerance is a customer response, explicitly not a guaranteed portfolio limit. L may motivate a risk budget or review threshold, but must not be marketed as a guaranteed stop-loss.",
+    "not_mandated": [
+      "A10% probability/empirical-count cap, fixed gamma/beta/eta, absolute dominance of B on breach counts, full restoration as the only trade, mandatory target updates, positive expected financial growth for every protective trade, or a particular human response time.",
+      "The problem provides no withdrawals. Target bill floors represent a normative liquidity proxy; they cannot be called a guaranteed expenditure-funded emergency reserve."
+    ],
+    "benefit_interpretation": {
+      "growth_trade": "A prospective after-fee growth or certainty-equivalent improvement over hold can justify a growth trade. If the objective already deducts current fees, do not subtract them again.",
+      "protection_trade": "A minimal necessary action satisfying an explicitly declared after-fee risk constraint can be justified by reduced forecast shortfall/risk, even if expected financial growth falls. Record the modeled risk improvement, fee, growth sacrifice and reason; a risk-reduction label alone is not a benefit test.",
+      "target_update": "Changing the persistent target needs a separate after-fee comparison against retaining the original target. A partial movement toward the same target is not itself an automated target update."
+    }
+  },
+  "development_negative_evidence_relevant_to_design": {
+    "source": "current_model_contract_2026_10_19.json; development facts only",
+    "old_full_service": "Selected inner learner10 events versus same-inner B8; guard rejects despite full-training candidate9/120. Training fit quality did not establish transferable feasibility.",
+    "old_outer_service": "Automatic records per repeat0/24/0/24/48; one admitted repeat5/24 events. These are dependent fits on reused development markets, not independent deployments.",
+    "failed_simplifications": "Local constrained repair25/120 with cap9; positive-financial-benefit simplification31/120. Restricting every trade to positive financial benefit or adding a local count constraint did not solve complete-policy risk.",
+    "forecast_mismatch": "Old fan estimates current hold/restore followed by annual/pending B, while the actual learner replans. It is a reference-continuation forecast, not Qpi or a calibrated conditional market law.",
+    "structural_need": "A richer action space and explicit support-conditioned protection address a different mechanism; they still require complete-path evaluation and cannot inherit a safety conclusion from their local algebra."
+  },
+  "new_structure_requirements": {
+    "state": "Retain actual holdings, original horizon/remaining periods, cumulative CPI, full original real peak and running MDD; market features may use only observed prefixes. Do not reset peak/MDD after trade, target change or review.",
+    "exact_partial_execution": {
+      "construction": "For a completely specified exact-fee endpoint y_star with V-sum(y_star)=fee_star, use post-dollar segment y(lambda)=(1-lambda)*x+lambda*y_star, lambda in[0,1]. Under proportional transfer fees this has exact fee(lambda)=lambda*fee_star, as long as the same execution definition and sign-preserving endpoint construction are used.",
+      "constraints": "Check nonnegative post holdings and exact self financing at each selected lambda. A support-wise next-period real-wealth floor is linear along this post-dollar segment, giving an interval of feasible lambda values.",
+      "interpretation": "A partial trade may preserve the original target, while a changed persistent target must be a separately enumerated action/state update. Mandatory initial allocation also incurs cost; it is not a free trade.",
+      "caution": "Directly interpolating prefee weights and then scaling fees is not automatically the same construction; the producer and independent auditor must verify the actual dollar identity."
+    },
+    "growth_and_protection": "Propose an original-target/growth action, project it onto the predeclared support-feasible interval, and choose the explicitly specified minimum necessary or utility-preferred point. If hold is feasible and growth benefit is insufficient, hold. If protection is needed, explain its risk benefit and growth cost. If no feasible action exists, review with explicit remaining exposure.",
+    "support_limit": "A floor proven for declared support rows is a one-step conditional statement. An empirical support is not the true future support. One-step feasibility is neither recursive viability nor a guarantee for the entire customer horizon.",
+    "pending": "A pending hold continues actual market and inflation exposure; it does not inherit protection guarantees. Count all remaining periods in full-H metrics. Initial Review has financial NULLs and cannot be assigned zero loss, bill returns or reference returns.",
+    "initial_information_symmetry": "Within one fitted model, all clients with identical C profile, initial100bills and no market history have the same initial decision. Do not create apparent initial coverage by using the actual future scenario or ID. Different fold-level admissions are fit instability, not prospectively identified safe market scenarios.",
+    "target_updates": "Include an off-versus-on comparison with the same fitted base menu, action kernel, fee model and evaluation IDs. Keep the on-family small and economically interpretable; require extra switching friction/after-fee benefit. A failed or untested update family supports off only within this declared family, not universal uselessness."
+  },
+  "evaluation_design_proposal": {
+    "unit": "An entire original30-year scenario, never an annual row. All training, calibration, selection, bootstrap and uncertainty procedures group by original scenario.",
+    "outer": "Predeclare a deterministic ID-only5-fold partition of1-120,24 IDs each. Each outer fold fits on96 and evaluates the complete frozen learner on its24 untouched-within-that-fit paths. Every original ID contributes once to the primary OOF table.",
+    "inner": "Within each96-path outer training set use4 whole-scenario folds of24 for tuning; candidate inner fits use72. For the final development refit on120 use5 inner folds of24, each candidate trained on96. Freeze exact ID maps and deterministic seeds before any new numeric execution.",
+    "what_must_be_refit": "All data-derived menu/targets, suitability assignments, growth proposals, support/conditional forecast, calibration, ensemble weights, controller parameters and admission rules must use only the appropriate fit side. Full120 old optimized targets cannot be silently supplied as independent outer-fit targets.",
+    "fixed_anchor_exception": "An explicitly fixed old45/5/50 anchor can be an exploratory conditional-on-target mechanism comparator. It must be labeled as previously development-derived, not an honest refit of the complete new learner. The main complete-pipeline comparison must refit data-derived static rules or declare genuinely fixed normative rules.",
+    "selection_scope": "Inner validation selects the entire prospective learner, including its possible initial and midstream Review decisions. Outer results assess that selection procedure and must not subsequently choose its parameters/family. Any redesign after outer inspection is a new exploratory version, retaining prior negative results.",
+    "candidate_budget": "Before source execution root should freeze a small named structural menu rather than a large Cartesian search: original hold/full-restore mechanism, exact partial projection, and one predeclared uncertainty/ensemble variant. Every target-update extension is a named separate candidate. Set a finite total candidate/runtime budget before seeing results.",
+    "selection_principle": "Report the complete risk-coverage-cost-growth frontier. Predetermine the adoption order: accounting/information validity, declared risk/feasibility criteria, nonzero useful coverage, then growth net of fees and a simplicity/stability tie-break. Never score unavailable financials as zero or let zero-coverage appear lowest-risk. If an absolute alpha or minimum coverage is used for admission, its normative rationale and strict treatment of infeasibility must be frozen first.",
+    "reference_risk": "The old alpha=.10 may remain a transparent service reference for comparability; it is not required by the problem or identified from L. Do not pick an easier cap just because a candidate otherwise fails. Exact same-B event-count dominance is optional model governance, not a compulsory task requirement or a significance test.",
+    "comparators": [
+      "Mandatory exact-thirds annual restoration, continued after L crossing, with exact transaction costs.",
+      "Same-fit target annual restoration and separately same-fit target annual-then-pending, so any comparison states which governance behavior differs.",
+      "Old frozen mechanism and old Review service as named historical baselines on development only; old Review finance remains NULL.",
+      "A simple fixed/static policy should remain visible even if a more complex new method wins an inner criterion. Do not remove an unfavorable benchmark."
+    ],
+    "primary_output": "One unfiltered OOF row per original ID and declared object, containing fit IDs/hashes, Q1 suitability, initial admission, first review time/reason, pending behavior and all original-H financials when invested. Keep original scenario IDs and all failures.",
+    "coverage_and_risk_denominators": [
+      "Initial automated/admitted count divided by all original eligible C cases, reported per fit and pooled ID-once OOF; also report non-Balanced suitability and initial Review separately.",
+      "Conditional breach/growth/loss/cost only among genuinely invested paths; compare references on exactly these admitted IDs as well as reporting unconditional reference results.",
+      "Fraction of annual decisions remaining automated before review, first-review distribution and exposure after review; distinguish these from initial service coverage.",
+      "Do not censor a post-investment loss at review: carry actual pending holdings through original H and retain breach, peak/MDD and fees. Initial Review remains NULL.",
+      "For repeated sensitivity folds, publish each repeat and original-ID overlap; do not pool repeated paths as independent samples or concatenate fold quantiles."
+    ],
+    "required_metrics": "Ordinary real-return volatility; real annual log growth and CAGR; ordinary median growth/MDD; empirical inverse-CDF P10growth/P90MDD; fractional-mass CVaR90; events D_H>L; mean nominal fees; turnover and actual-trade fraction over original H. Report paired differences against both principal references, with complete event-ID partitions.",
+    "uncertainty": "Use scenario-level paired resampling or exact descriptive intervals as appropriate, with all selection outside the resample fixed; intervals are conditional on the declared learner/OOF design and prior development exposure. Distinguish estimated-risk uncertainty from model/support misspecification. No finite-frequency statement becomes a guaranteed future limit.",
+    "full_refit_failure": "Predeclare what happens when the inner-selected learner is infeasible on the120-path refit. Retain Review or the explicitly predeclared training-only tie/equivalence rule; do not inspect outer/final outcomes to select a rescue parameter.",
+    "historical_exposure": "All1-120 have already informed extensive prior research and final121-180 were historically seen. Whole-scenario splits provide correct mechanical information separation for the new learner, not pristine independence of the analyst or a new blind experiment."
+  },
+  "forecast_calibration_and_ensemble": {
+    "separate_questions": [
+      "Support coverage: did the next realized joint real-gross vector lie in the declared forecast support or satisfy all support inequalities?",
+      "Decision forecast quality: did predicted after-fee action growth/shortfall rank actions reliably on a heldout full path or predeclared one-step counterfactual?",
+      "Policy reliability: did the actual multi-period adaptive rule satisfy acceptable risk/coverage/cost on complete heldout scenarios? Good one-step support coverage alone does not settle this."
+    ],
+    "small_forecast_menu": "Use a low-capacity unconditional joint empirical support as a transparent starting point. A conditional alternative may use a few predeclared lagged joint-market features with shrinkage toward the unconditional model. Preserve cross-asset/inflation dependence and temporal blocks; fit all conditioning/scales within training scenarios.",
+    "chronology": "Do not independently shuffle assets or inflation. A chronological suffix encodes an original-year alignment assumption; a pooled/block alternative encodes stationarity assumptions. Test and name the actual assumption instead of calling a resampling rule a learned true conditional law.",
+    "calibration": "Produce predictions strictly before each outer observation, aggregate coverage and proper growth/risk scoring by scenario, and keep predeclared time/drawdown groups coarse. Use all rows for diagnostics but scenario-level uncertainty. Sparse30year tails and severe states limit conditional calibration claims.",
+    "formal_calibration_option": "If claiming a distribution-free calibration guarantee, freeze a genuinely separate whole-scenario calibration partition that is not used to choose the forecast family or score. Hyperparameter selection must be confined to its fit partition. State exchangeability, finite-sample granularity and whether the calibrated event is one-step or a full-path maximum. Ordinary cross-fitted residual calibration after adaptive model selection is diagnostic, not automatically an exact conformal theorem.",
+    "ensemble": "Predeclare a small deterministic ensemble and fit weights using only inner training/calibration. For growth forecasts averaging may reduce variance; for robust safety, enforcing all members uses a union of support constraints and is conservative. Averaging failure estimates or majority voting does not preserve a hard support guarantee. Report disagreement and per-fit target/action variation.",
+    "Q_consistency": "If using an H-step Q forecast for the new adaptive policy, simulate the same declared continuation or explicitly label an approximate/reference continuation. A one-step support projection can avoid a falsely named Qpi, but full policy outcomes must still be OOF evaluated.",
+    "no_final_calibration": "Do not use121-180 observations, outcomes, saved severe cases or old final rankings to fit supports, tune margins, select ensemble weights or decide target updates."
+  },
+  "parameter_interpretation_and_stability": {
+    "customer_inputs": "H, L and liquidity response are supplied preferences/needs; L is not a probability preference or return guarantee.",
+    "normative_service_choices": "Risk reference alpha, confidence level, minimum useful coverage, liquidity floors and governance action are declared service choices. Explain their rationale and show limited predeclared sensitivity; they are not statistically identified psychological parameters.",
+    "technical_parameters": "Support margins, conditional bandwidth/shrinkage, ensemble weights and action-grid resolution are technical approximation/uncertainty parameters. Lambda is an execution decision, not a risk-preference coefficient. Eta, if retained, remains a technical utility price unless a monetary preference elicitation model is actually supplied.",
+    "identifiability": "Group parameters that generate identical complete action/admission vectors; do not infer a unique preference from a flat performance optimum. Retain near-optimal choices and their risk/coverage outcomes rather than reporting one arbitrarily precise best value.",
+    "stability_outputs": "Across outer fits report selected target/parameter distribution, support size/calibration level, initial status, matched-state action disagreement, feasible-lambda interval and action movement. Separate target-refit, fan/support-refit and controller-parameter changes. Do not decompose them as unique causal contributions without a fixed intervention design.",
+    "selection_bias": "If outer validation or a prior final result motivates a parameter, mark that choice as new exploratory research. A new version can proceed, but old evaluation cannot be relabeled as its independent confirmation."
+  },
+  "recommended_next_actions_before_new_numeric_run": [
+    "Agree a single mathematical action/fee/support specification and prove its limited support-wise claims; explicitly list the no-feasible and pending cases.",
+    "Choose and freeze a small structural candidate list, parameter meanings/ranges, target-update alternatives, exact nested ID maps and a finite execution budget.",
+    "Freeze all comparator behavior, risk/coverage/cost/growth definitions, selection/admission/refit-failure rules and NULL/denominator handling.",
+    "Implement source and independent scalar tests using synthetic states: hold, partial/full actions, fee identities, boundaries, support infeasibility, negative real bill return, inflation/peak preservation and no-future access.",
+    "Run only1-120 under a development-only loader guard. Inspect all outer outcomes as the evaluation of the frozen complete procedure; retain failures and resist an unbounded cycle of rescue searches.",
+    "Choose any subsequent step through an explicit new research version; do not change or overwrite the old contract, final artifacts or historical judgments."
+  ],
+  "source_sha256": {
+    "docs/problem_A.pdf": "2ac9412ed68349d36a3fbd2c6cddc5789a81dab8acbfa08c63a3bdb34d2aa2dd",
+    "docs/current_model_contract_2026_10_19.json": "5f47d9a7b3720e2642bd7767cd3fb126e7df9ee9b7d759a7ecd24ba6e5d124af",
+    "docs/main_model_registry.json": "2d73f73d47523c922329c59c78548f8bc67a8bb93d4e8d3eef67a5bd1d2e7074",
+    "docs/refit_aware_selection_contract.json": "d139340300c65bd28f3869bce061b120e1925cb95cfb0660151a2e95905e8d50"
+  }
+}

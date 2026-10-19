@@ -1,0 +1,12 @@
+{
+  "version": "isolated-locked-final-reproduction-source-freeze-v1",
+  "execution_ready": true,
+  "frozen_utc": "2026-10-19T05:24:05.270877+00:00",
+  "plan_sha256": "b675b450adf5f9acadb22129293bd7e7f44b67754d009f66c7aa68b1ada39598",
+  "source_sha256": {
+    "scripts/reproduce_locked_final_evaluation.py": "f06dd5377729efeda03889261d561ba3650f09a34620dca1493d697f2376f987",
+    "tests/test_reproduce_locked_final_evaluation.py": "9ac342399dba966005fa8e6f74d8fc6de62b3e53eaa1af57c67f1ed87fddf4aa"
+  },
+  "synthetic_tests_passed": 15,
+  "scope": "Frozen before current final run; replay only after first complete original. Same source/input/runtime, no new model or market trial."
+}

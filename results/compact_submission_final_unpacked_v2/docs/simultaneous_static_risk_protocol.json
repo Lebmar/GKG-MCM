@@ -1,0 +1,42 @@
+{
+  "version": "secondary-static-simultaneous-evidence-v1",
+  "status": "Declared before computing any market-outcome menus using this evidence screen; the original empirical screen remains the primary developmental reference.",
+  "scope": "Secondary conservative simultaneous-bound diagnostic, proposed after V1 and exploratory development exposure. It is not a new blind-final evaluation or real-market certificate.",
+  "assumptions": [
+    "Whole 30-year paths are iid from one common synthetic distribution; the statement gives independence but does not explicitly establish identical distribution.",
+    "The policy/event family is fixed: 232 long-only 5pp/exact-thirds static annual targets, contest cost .0025, the five supplied H,L pairs. No forecast or adaptive-target fitting occurs inside a candidate."
+  ],
+  "n_full": 120,
+  "n_fold_train": 96,
+  "candidate_count": 232,
+  "client_events_per_candidate": 5,
+  "family_events": 1160,
+  "delta": 0.05,
+  "bound": "U_wj = Beta inverse survival(delta/1160;k_wj+1,n-k_wj) for k<n; U=1 at k=n. P(all fixed risks p_wj<=U_wj)>=1-delta by union bound.",
+  "selection": "For each requested alpha, require U_wj<=alpha, then use the same predeclared common-menu coverage/minimax-regret/mean-regret rule. Because n and confidence allocation are shared, this is equivalent to a fixed maximum exceedance count computed mathematically before market fitting.",
+  "alpha_cases": [
+    0.05,
+    0.1,
+    0.2
+  ],
+  "liquidity_cases": [
+    "risk_only",
+    "reference_reserve",
+    "larger_reserve"
+  ],
+  "multiplicity": "No extra factor for menus or alpha/floor cases when these reuse the same fixed p_wj bounds. Additional cost rates, fine-grid weights, horizons/L events, forecasts or dynamic rules are outside the 1160-event guarantee.",
+  "insufficient_evidence": "If even k=0 has U>alpha, report that the sample cannot support that budget under this evidence standard; do not conclude that safe portfolios do not exist.",
+  "growth_severity": "The joint bound covers individual product-client exceedance probabilities, not growth, regret, CVaR, all-client simultaneous non-loss, or model/DGP validity.",
+  "folds": "Apply the same specified selection procedure to each 96-path training fold, evaluate frozen assignments on 24 test paths. OOF remains a mixed-policy dependent internal diagnostic; no joint confidence claim across folds. A joint assertion across all five training subsets would require additional multiplicity accounting.",
+  "bootstrap": "Not used as extra independent evidence. If later used for configuration stability, duplicate paths do not create a new certificate.",
+  "zero_count_math": {
+    "n120_upper": 0.08035347646213811,
+    "n120_one_count_upper": 0.10057883068632147,
+    "n96_zero_count_upper": 0.09941197724973548,
+    "alpha10_max_count_n120": 0,
+    "alpha10_max_count_n96": 0,
+    "alpha05_min_zero_count_n": 196
+  },
+  "reuse_history": "The finite-family theorem permits data-dependent choices inside the fixed family. The family and iid assumptions must be stated, and its retrospective proposal disclosed. It cannot be extended to the former learned forecast/dynamic family merely by counting targets.",
+  "source": "https://www.itl.nist.gov/div898/software/dataplot/refman2/auxillar/exacbino.htm"
+}

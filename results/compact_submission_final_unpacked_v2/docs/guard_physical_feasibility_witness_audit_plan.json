@@ -1,0 +1,68 @@
+{
+  "version": "guard-physical-feasibility-independent-witness-audit-v1",
+  "status": "Root source review and 11 analytical/synthetic tests passed; freeze exact evidence before first saved-witness parse.",
+  "execution_ready": true,
+  "parent_manifest": "results/guard_physical_feasibility_v1/manifest.json",
+  "parent_manifest_sha256": "46a621a0c8a5d8a0f0249a2c5a94f44d9ffd0cf9d691db69bbd435f4acb55f35",
+  "certificate_tolerance": 1e-08,
+  "comparison_tolerance": 1e-08,
+  "audit_atol": 1e-11,
+  "audit_rtol": 1e-11,
+  "allow_final": false,
+  "audit_receipt": "results/guard_physical_feasibility_v1/independent_witness_audit.json",
+  "attempt_directory": "results/guard_physical_feasibility_witness_audit_attempt_v1",
+  "source_sha256": {
+    "scripts/audit_guard_physical_feasibility.py": "9e187405376e863b8000e37d59d96a83e21807ccb65b762b3999f050ecfdd867",
+    "tests/test_audit_guard_physical_feasibility.py": "d6a40167d32df20f70f2341b149d1e8176ea0fca48db15d1368b7c6a4c964199"
+  },
+  "independence": "No producer LP/driver import and no scipy.optimize import, LP solve or strategy call. Independently rebuild scalar support inequalities, sign-region bounds, exact-fee funding and dual sensitivity equations from saved x/CPI/support/solution/marginals. Synthetic fixtures are analytical equal-support certificates, with no optimizer needed.",
+  "original_state_binding": "From original audited V2b/V3 NPZ metadata independently enumerate all selected full/outer groups, including NULL, original120IDs per scope and every firstguard once. Compare every saved LP input identity/currentstate/owntrainingcalendar row against the original account arrays, then verify all12inventory and4summary rows. No substitute candidate or favorable-case selection.",
+  "checks": [
+    "8ordered buy/sell masks and normalized funding RHS",
+    "support/equality/bounds/longonly primal residuals",
+    "dual sign/freebound marginal restrictions and scalar stationarity",
+    "complementarity and independently recomputed primal-dual gap",
+    "normalizedsolution to nominal postholdings/fees/self-finance and nextrealwealth",
+    "truepositivepart fee versus region fee, charged once",
+    "certificate status versus independently recomputed residual thresholds",
+    "bestregion exact saved-value floating tie order after individual numeric verification",
+    "classification from both saved-verified and independently recomputed physical values; disagreement fails",
+    "guardCSV header/eachfield/NULL, all12selectedinventory,4summaries and producercounts",
+    "exactproof/accountchange/futureguarantee flags remainFalse"
+  ],
+  "numeric_limits": "Primal/dual physical certificates retain original normalized1e-8 criterion and1e-8*R floor comparison. Separate1e-11 absolute/relative storage/algebra comparison allows floating evaluation order only; it is not a risk/eligibility relaxation. Boundary instabilities fail and preserve evidence rather than silently change a label.",
+  "rawfun_boundary": {
+    "raw_solver_objective_reconstructed": false,
+    "reason": "Producer did not save raw res.fun.",
+    "treatment": "solver_objective_gap_abs is only checked finite/nonnegative and versus the existing threshold. All other residuals, c@q, savednormalizedprimalobjective, primaldual gap and physical money conversions are independently reconstructed. Do not claim the raw solver objective itself was re-executed or reconstructed."
+  },
+  "saved_array_timing": "Whole saved account state members are parsed for predecision index extraction; futureendpoint columns are not LP inputs. No actualmarket realization members/rawmarket/final121-180 are loaded. Full120 remains its previously exposed resubstitution diagnostic, not fresh validation.",
+  "engineering": "Both new plan/sourcefreeze readiness, exact parentmanifestSHA, sourceSHA and complete LP producer/parent transitive dependency closure must pass before gzip numericJSON, CSV or NPZ parse. evidence_closure(root) assembles currentmetadata/bytehash closure only. Never overwrite existing attempt or receipt. Failures retain attempt/traceback; success adds only newreceipt and auditattempt, leaving every producer/source/input byte unchanged.",
+  "freeze_inputs": "Union of evidence_closure(root) (LPsource/input frozenmaps, parentartifactbytes, LPoutputs4, LPmanifest/protocol/sourcefreeze) plus the new auditplan; root fills exact map after source review. No actual numeric parse is needed to create the sourcefreeze.",
+  "outputs": {
+    "receipt": "statuspassed, parentmanifestSHA, plan/sourcefreezeSHA, source/artifact start=end hashes, checks/cases/patterns/inventory/summarycounts, explicitrawfunlimit and numerical-not-exactproof scope",
+    "attempt": "new directory; incomplete/passed/failed state, receiptSHA or traceback, no auto-retry"
+  },
+  "synthetic_validation": {
+    "passed": true,
+    "tests": 11,
+    "command": ".venv/bin/python -m unittest discover -s tests -p test_audit_guard_physical_feasibility.py -v",
+    "actual_LP_results_parsed": false,
+    "cases": [
+      "analytical8regionduals",
+      "feasible/boundary/globalshortfall",
+      "currency/CPI and actualfee",
+      "badprimal/dual/mask/missingregion/proof rejected",
+      "rawfunfield disclosed/rangechecked",
+      "originalstate/12inventory/4summary/CSVpipeline",
+      "allNULL/emptyCSV",
+      "tamperedparent/missingfreeze beforeparsers",
+      "failedattempt/nooverwrite",
+      "wrongclassification/inputbinding rejected"
+    ]
+  },
+  "new_LP_solves": 0,
+  "new_policy_runs": 0,
+  "parameter_or_registry_changes": false,
+  "exact_arithmetic_impossibility_proof": false
+}

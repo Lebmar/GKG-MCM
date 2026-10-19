@@ -1,0 +1,84 @@
+{
+  "version": "constrained-B-rollout-prospective-independent-design-review-v1",
+  "written_utc": "2026-10-18T08:31:15.373575+00:00",
+  "status": "One prospectively agreed final repair candidate; no implementation, new market run or final numerical adoption decision in this review",
+  "history_and_scope": {
+    "trigger": "Parent reports the completed frozen positive-net-growth controllers have no inner auto evidence and remainReview. Parent reports positive initial economics coexist with complete-training infeasibility. The reason for this design correction is training/service feasibility, not choosing an architecture, seed or price from outer economic returns.",
+    "verification_boundary": "This reviewer has not read any new benefit-cost result file, partial output, raw market data or121–180 for this design. Parent-reported outcome numbers remain to be independently checked after the bound audit and complete summary are ready.",
+    "archive": "Keep the previous principal/sensitivity model, sources, forecasts, constraints and allReview result unchanged. This is a distinct constrained repair architecture, not a retrospective change to that experiment.",
+    "one_candidate_only": "Freeze exactly one fixed-cap feasibility-first B-rollout controller. After its results, do not expand the execution family, adjust alpha, search prices/seeds, swap continuation, weaken same-U gates or choose another architecture to force coverage."
+  },
+  "fundamental_objective": {
+    "global": "The study objective remains maximize expected original-H annualized real log growth over allowed causal policies, subject to original-H real-MDD risk-service constraints and Q1 contract/liquidity restrictions.",
+    "why_repair": "A strict positive one-year or buyhold-net-growth condition excludes risk-reducing trades that may be necessary to satisfy an independently declared chance constraint. Risk compliance is an explicit noncompensatory benefit; no unidentified eta or growth-probability monetary exchange rate is required.",
+    "honest_consistency": "The proposed rule follows the same order at the local model level: first feasible risk, then largest fee-inclusive log-growth value. This is a restricted rollout heuristic with a B continuation, not an optimizer of the complete constrained adaptive problem or a proof that the global chance constraint holds.",
+    "normative": "Alpha=.10 remains a service benchmark, log growth a stated objective, and fixed local-cap/empty-set behavior modeling choices. The contest does not prescribe this unique benefit or utility interpretation."
+  },
+  "one_fixed_controller": {
+    "name": "fixed_cap_feasibility_first_B_rollout",
+    "client": "Current C only, originalH30,L=.40,cost=.0025; own identity-matched supported Balanced Q1 target, no updates.",
+    "current_state": "At year t before actual returns: actual x,CPI,real peak,running full-history MDD and breach flag contain only realized history through t-1. Preserve original initial100 and originalH. Use only this job own training paths same-calendar suffix t:H.",
+    "two_actions_and_continuation": "Evaluate hold now then B and paid restore now then B, using the identical current state and identical joint training suffixes. B restores the same approved target at subsequent annual decisions while its branch has not breached, then holds forever. Both branch forecasts retain exact current and future fees, inflation, peak, MDD, originalH and their own pending triggers.",
+    "values": "Qg[a]=mean of total future REAL log-wealth increments from the same current real wealth to originalH. Qg is NET of all branch fees and is NOT annualized. k[a]=integer count of terminal original-history everbreach events under the same branch. N is the number of own training original paths.",
+    "fixed_cap": "K=floor(.10*N+1e-12) using the existing numerical convention, not a fitted probability, confidence level or annual risk allocation.",
+    "feasible_set": "A={a in{hold,restore}:k[a]<=K}.",
+    "nonempty_action": "If A is nonempty, compute max Qg over A and retain actions within1e-12 TOTAL-log of that global maximum. Choose hold if retained, otherwise restore. With only two actions, this is an unambiguous global tie rule, not tolerance chaining.",
+    "empty_action": "If A is empty, set local_model_infeasible=True. First retain the action(s) with exactly smallest integer k, then maximize netQg within that set with the same1e-12total-log tie rule ending in hold. This is best effort for defining a complete causal path; it neither creates local feasibility nor asserts risk repair succeeded.",
+    "inception": "Preserve the Q1 initial allocation as mandatory and charge its exact fee once. Remove the failed architecture initial short-horizon positive-economic deployment veto. Record same-state action-then-B Qg/count/fee evidence at inception, but do not use either net-Q positivity or an all-bills risk-direction veto to override the approved mandatory configuration.",
+    "pending": "For an actually already breached account, choose hold with absent Q evidence/sentinels; actual returns, CPI, historic MDD and recovery accounting continue, no response/resume is assumed and no terminal liquidation is added.",
+    "allowed_action_set": "Only hold actual assets or restore own approved target. No emergency third portfolio, new asset, adaptive target, annual-B fallback branch or sensitivity-controller switch."
+  },
+  "cost_and_reason_semantics": {
+    "already_net": "DeltaQg=Qg[restore]-Qg[hold] already includes current fee, every later branch fee and changes in continuation/pending. Do not subtract another execution charge or log-fee offset. Display current quoted fee and actual charged fee separately, without interpreting them as an additional objective penalty.",
+    "positive_net_restore": "If an optional restore has DeltaQg>1e-12, label economic_improvement; still record whether only restore was feasible or the empty-set branch was active. Positive net does not itself imply risk safety.",
+    "nonpositive_net_restore": "If an optional restore has DeltaQg<=1e-12, label risk_constraint_repair. Under the stated action rule such a restore MUST have k_restore<k_hold: either it is the only locally feasible action or the empty-set minimum-risk action. Preserve local_model_infeasible and whether repair meetsK, so the label cannot falsely assert a cap was restored.",
+    "growth_sacrifice": "Separately flag strict predicted_growth_sacrifice when an optional restore has DeltaQg< -1e-12. A within-tolerance comparison is a tie, not measurable negative growth. Record the net log sacrifice magnitude and predicted event-count/probability reduction without mixing their units.",
+    "risk_necessity_limit": "When only restore is feasible, it is necessary only within these two actions and this empirical B-continuation model. When neither is feasible, call it an attempted risk reduction with an unresolved modeled cap, not necessary successful repair. Never call negative net log gain positive currency profit.",
+    "holds": "Keep distinct reasons for growth/tie hold when both feasible, hold as only feasible action, and hold as best effort in empty set. A profitable restoration vetoed by its risk infeasibility is not evidence that the economic estimate failed.",
+    "mandatory_reason": "Mandatory inception is its own reason; do not include it among optional economic-improvement or repair counts. Initial Q estimates are diagnostic evidence, not a gate that was applied.",
+    "benefit_cost_interpretation": "Selecting maximum fee-inclusive Qg among risk-feasible options weighs costs in the growth objective while enforcing a separately stated service benefit. This constrained justification is valid as a modeling interpretation of estimated benefit justifies cost; it is neither the only interpretation allowed by the problem nor a numerical comparison of probability points with dollars."
+  },
+  "complete_policy_admission_and_scope": {
+    "components": "Reuse the exact frozen25repeated outer contexts/125jobs plus the original c0four90/30inner jobs and full120refit. Each job uses only its own Q1 cache target/forecast law. Keep the full120 static cache no-heldout identity separate from dynamic120in-sample evaluation.",
+    "training": "A supported Balanced job simulates the one complete controller from100 over original30years, including mandatory inception and every chosen repair/hold/pending action. Require k_policy<=min(kB,floor(.10*n+tol)), with B newly simulated on the identical training IDs and target. A nonempty local action set at some or all dates does not replace this complete-path test.",
+    "inner": "Evaluate each eligible inner job on its untouched original heldout IDs. Pool only its automatically eligible own U. Require nU>0, selectedk<=floor(.10*nU+tol), and selectedk<=B(U) on exactly those IDs and each corresponding own inner target. Keep all other inner identities asNULL status rows.",
+    "final": "Q1case priority first, positive qualifying inner evidence and own final complete-training cap all required. One fit-level decision applies to all24future heldout paths or all120in-sample paths. Review remainsNULL; references never supply absent service results.",
+    "reporting": "Separate repeated outer_oof from in_sample_full120, preserve original120per-repeat and24per-fit denominators, and show local empty-set/repair/economic/hold reason counts. Paired financial comparisons use only exact common-auto repeat/fold/context/originalID, not incomparable auto populations.",
+    "failed_old_model_comparison": "Because old growth-only methods are allReview, there may be no common-auto financial effect to estimate against them. A coverage increase is service availability under a changed rule, not a measured investment-return improvement over theirNULL outcomes."
+  },
+  "what_this_does_not_solve": [
+    "A complete-H inherited-history event in each local branch is not an annual event reset. Nevertheless repeatedly checking10% at every observed state does not propagate a mathematically valid conditional risk budget or guarantee initial unconditional chance feasibility.",
+    "Training suffixes are an unconditioned calendar empirical law; actual holdings/peak encode observed history that law may ignore. No exact-conditional rollout or global policy-improvement theorem follows.",
+    "Changing current fees can change future peak/breach/pending actions. A hypothetical fee-free B branch is not automatically a scaled paid branch with a removable constant fee; use the actual netQg values.",
+    "The local branch continuation B differs from the subsequently replanned constrained controller. All its actual causal decisions must therefore be simulated and checked, not replaced by local branch results.",
+    "No-action-feasible states can remain risky despite an apparently sensible least-risk action. Such frequency is evidence about model adequacy, not something to hide before a safety claim.",
+    "The new design follows an observed training-feasibility failure on already reused development paths; no prospective freezing can recreate independent untouched market validation."
+  ],
+  "essential_synthetic_tests_before_freeze": [
+    "Exhaustive small truth-table of k_hold/k_restore below/equal/above K crossed with positive/negative/tied DeltaQg; verify the complete action, feasible-set flag, count priority and hold tie rule.",
+    "Nonpositive optional restores imply strictly fewer predicted events; negative growth cannot restore when both are feasible or risk counts tie. A positive-net restore may occur when both feasible; a positive-net but infeasible restore must be held if hold is feasible.",
+    "Neither-action-feasible: flag persists regardless chosen action; smallest integer k outranks arbitrarily large growth; equal k uses total-log Qg then hold; never label the result cap-feasible.",
+    "One exact current fee per actual restore; Qg already net; construct current-fee-induced pending/continuation switch to detect illicit extra subtraction or fixed fee-free offset. Use independent scalar state/fee recursion for both B branches.",
+    "Mandatory inception still occurs with negative recorded DeltaQg or a worse all-bill risk comparison, but exact initial cost/peak/original100 remain. Initial diagnostics are not an economic eligibility filter.",
+    "Actualfuture/currentyear perturbations cannot affect the current Q/action when history and own training inputs are fixed; own inner targets cannot be replaced with parent/outer targets.",
+    "Past real peak/CPI/MDD and originalH survive branch rollout, actual pending, recovery and later high returns. Original past breach remains absorbing; no forecast is fabricated in pending and no terminal trade is added.",
+    "Complete130-job synthetic pipeline: allauto, trainingcapfail, own-U relative/absolute failures, zero-U NULL, Q1Review/outside priority, full120in-sample segregation, semantic cache tamper, gate before allfutureeval and no fallback.",
+    "Independent integer/count/action-selection audit and scalar net-Q/accounting replay; bind receipt to complete manifest and frozen protocol. Report exact check denominators and keep numerical auditing distinct from economic forecasting validation."
+  ],
+  "predeclared_stop_and_final_judgment": {
+    "one_run": "Execute the single frozen complete learner across all130tasks or preserve an explicitly incomplete archive; no stopping on a flattering subset.",
+    "no_more_family_expansion": "After this repair result, do not add another controller/price/horizon/alpha/seed adjustment. Implementation defects may be corrected transparently, but failed economic/risk evidence is not a defect to tune away.",
+    "if_supported": "Adopt the constrained repair as the prospectively chosen final candidate only subject to its own complete/inner/final service rules. Discuss actual outer stability/conditional risk and forecast limits before making a deployment claim.",
+    "if_unsupported": "Preserve Review and state that the current fixed-target/two-action class, empirical forecast and service-evidence rules do not support automaticC service. Do not call allReview a useful investable strategy, but do not infer every possible safe/profitable policy is impossible.",
+    "competition_answer": "Present a coherent constrained model, explicit benefit/cost and risk-repair reasoning, auditable empirical behavior and honest service limits. Neither a guaranteed prize nor guaranteed automatic coverage is a mathematical modeling requirement."
+  },
+  "reviewed_source_sha256": {
+    "docs/benefit_cost_final_design_review.json": "a5c8b7db38ddd46c3ec67b49063e60820ff6ad58d6cc9c7051031e1c34c6fc85",
+    "docs/benefit_cost_preexecution_review.json": "99d69566713c53f3ed538aa9cfc4fb8f477462908366ba49857eb9345bfff8ca",
+    "docs/benefit_cost_primary_adoption_logic_plan.json": "2c72a5e86348f2394485a7438d96260df2489175a06c023c719a3952bcf0d9c3",
+    "docs/benefit_cost_risk_repair_logic_review.json": "8ef2e803372d012248bc6d7ec2452205383c48580f0e6ed4447773e36a7d3eaf",
+    "docs/fan_rollout_mathematical_review.json": "499754a2265573b9753568acbff06618cc969d79e9c0a5dee81d9247d9a3d046",
+    "research/experimental_execution/fan_rollout.py": "d195d721c895700925e9b24c91640c59737fe4eb542272376d2de78ce62fe1ba",
+    "research/experimental_execution/risk_priced_fan_rollout.py": "2a935cfe1d039f6a020e104fe92aa659bb92aac2a0b3bed2ef767437015ba472"
+  }
+}

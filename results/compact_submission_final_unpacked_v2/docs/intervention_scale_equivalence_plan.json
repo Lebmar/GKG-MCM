@@ -1,0 +1,56 @@
+{
+  "version": "posthoc-intervention-scale-equivalence-plan-v1",
+  "declared_utc": "2026-10-19T04:29:22.857551+00:00",
+  "execution_ready": true,
+  "prior_exposure": "All original11intervention outcomes were already produced and independently audited. It is known9/11terminalMDDchanges are within1.11e-16while terminalwealth changes. These results motivated this post-hoc mechanistic check; this is not a blind validation or a prespecified prediction of scale equivalence.",
+  "purpose": "Check a sufficient deterministic scale-equivalence mechanism on every already-frozen pair; preserve cases without an interior equivalence endpoint or whose future fails. No model/parameter/admission change and no new market return load.",
+  "lemma": {
+    "assumptions": "Same original calendar/CPI, joint trainingfan, target, finite technicaleta, originalH and lossL. At a common endpoint x_T=k*x_C, real_peak_T=k*real_peak_C for k>0, equal runningMDD and absorbing pendingflag.",
+    "fee": "Unique solution C=c*sum positive((V-C)w-x) scales linearly with x. Posttrade holdings and destination amount scale by k; hold also scales.",
+    "forecast": "Each own-B forecast branch inherits scaled holdings/peak, identical CPI and runningMDD. Every next gross transition preserves scaling; real terminal/current wealth ratio and hence net total remaining loggrowth are equal, as are badflags/counts. Technical-price scores and action recommendations therefore coincide.",
+    "future": "By induction the unchanged policy on the same actual chronological market keeps wealth/holdings/peak ratio k, identical normalized exposures, drawdown/runningMDD/flags and actions. Future fees scale by k. This concerns future from the endpoint; cumulative prefixfees and past firstcrossingdates need not scale/equal.",
+    "floating_point_limit": "The lemma is exact mathematically. Numerical near-equivalence at an explicit tolerance is a witness check; proximity alone does not guarantee a score-threshold decision if it lies near a boundary. Therefore all subsequent saved actions/Q/counts and scaled states are actually verified."
+  },
+  "inventory": "All11pairIDs and bothcontrol/treatmentbranches from original docs/failure_action_intervention_protocol.json, unchanged.",
+  "search": {
+    "candidate_endpoints": "Ascending original endpoints e=tau..H-1, after forcedtau action/return; exclude common pre-intervention state. Choose only the earliest matching endpoint. Never skip a candidate whose future verification fails in favor of a later successful endpoint.",
+    "conditions": "Same normalized assetweights within abs1e-12, same realwealth/realpeak within abs1e-12, same runningMDD within abs1e-12, exact same absorbingflag, same actualCPI. k=V_T/V_C at endpoint.",
+    "no_interior_match": "KeepNULL endpoint, no substitute. Evaluate endpointH separately as terminal_state_equivalent, explicitly no future-period validation and no mechanism claim from a terminal-only match.",
+    "attainment": "Also record eacharm earliest endpoint with runningMDD within1e-12of finalMDD. Distinguish equivalence strictly before both finalMDDattainment endpoints from equivalence at/after; the latter cannot be used to explain earlier risk retrospectively."
+  },
+  "future_checks": [
+    "All endpoints e..H normalized holdings/weights, wealth/realwealth/peak ratio relative to k, currentDD/runningMDD, commonCPI and exactflag.",
+    "All decision periods e+1..H actualactions, policyactions, pendingflags and forcedflags agree; no further intervention.",
+    "Future posttrade holdings, fees and moved amount scale by k; compare normalized fractions with original control prewealth, so the tolerance has a declared scale.",
+    "All future active saved Qmeans and scores within abs1e-12, eventcounts and fanN exactly equal; pending Qavailability identical and all missing.",
+    "Terminal original-history MDD and breach comparison retained for everycase, whether or not scale equivalence exists."
+  ],
+  "tolerances": {
+    "dimensionless_state_and_Q_absolute": 1e-12,
+    "wealth_peak_scale_ratio_relative_to_k_absolute": 1e-12,
+    "flags_actions_counts": "exact",
+    "breach_rule": "Unchanged original strict MDD-L>1e-12; no classification based on relaxed scale tolerances"
+  },
+  "independent_validation": "Pure synthetic fee-homogeneity/scalar-fan/inherited-history scaling checks use earlier independent audit references, not CF producer. The artifact diagnosis reads frozen independently audited savedarrays only; it does not claim an additional independent market/accounting or all-Q rerun.",
+  "sources_sha256": {
+    "scripts/diagnose_intervention_scale_equivalence.py": "373451316d71c34cc4bcba70073e702656a9619190880a43493c751be9f9d9c8",
+    "tests/test_intervention_scale_equivalence.py": "aa0b91a6418b25edf77447a6a521785d227353460e9b0f12bfc8eef041119085",
+    "scripts/audit_review_pending_execution.py": "9c208ce69a03f1a13460908ec04b39a8dc232eacbb8882b5bdef3aafae60a264",
+    "scripts/audit_fan_rollout_execution.py": "9f9d4a274e3be531040193e1654ec6bdf74733ad5204937b8a8d8195d02940fb"
+  },
+  "frozen_input_sha256": {
+    "docs/failure_action_intervention_protocol.json": "fd84ca974aa7b81416e150809e1b87ebc5b759d4202e81872ee12c9287884963",
+    "results/model_review/failure_action_intervention_v1/manifest.json": "00b350cea199d8d851ce7596fc1f11507a7a5af7ec46e0de6ed18dd2a8b09660",
+    "results/model_review/failure_action_intervention_v1/independent_audit.json": "afb814dabcffb98df8c154caea9948300483afaae1c15ab1fccfb34ad84c89bb",
+    "results/model_review/failure_action_intervention_v1/full_branches.npz": "7fa53c2c0f1668d942a9f7a72db69cdb56d75e6f71d4b6d56744f98e29519f5c",
+    "results/model_review/failure_action_intervention_v1/intervention_summary.json": "50bb2e24179898b5aec7488cfa566abf218f0991db88ff70478d4126327091fb"
+  },
+  "output_directory": "results/model_review/intervention_scale_equivalence_v1",
+  "limits": [
+    "Sufficient scale condition, not a necessary characterization; no match does not prove another mechanism impossible.",
+    "Earliest endpoint search is a declared descriptive scan, not selecting a policy or optimizing outcome.",
+    "OriginalIDs/fits overlap and outcomes selectedposthoc; no riskprobability, generalization or populationcausal claim.",
+    "No fresh121..180data, newpolicy, target/eta/alpha search, paper or CMTfiles."
+  ],
+  "frozen_utc": "2026-10-19T04:34:41.205693+00:00"
+}

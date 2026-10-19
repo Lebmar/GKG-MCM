@@ -1,0 +1,22 @@
+{
+  "status": "documented_frozen_generated_formatting_exception",
+  "scope": "Git line-whitespace style only; plotted data, geometry, code and numerical findings unaffected",
+  "files": {
+    "research/figures/final_model_development/01_repeated_admission_and_same_ID_events.svg": {
+      "sha256": "f6636ca6160f5b22228cc036c462832a17127ab24e9a033c6e62c4ca953dcb2d",
+      "trailing_space_lines": 135
+    },
+    "research/figures/final_model_development/02_full_training_and_inner_guard.svg": {
+      "sha256": "ac280d2f967816ae8ea1b5b9f1b5c64b123fe5e5b32785b523d37ba93ed23203",
+      "trailing_space_lines": 97
+    },
+    "research/figures/final_model_development/03_admitted_trade_cost_attribution.svg": {
+      "sha256": "9061988c8c7669b4e94dde38dbe5aead523d11d1323efceca3af94cf753cbf9d",
+      "trailing_space_lines": 214
+    }
+  },
+  "explanation": "The builder rstrip applies to the complete SVG string and removes end-of-file whitespace, not spaces within Matplotlib multiline paths. Preserve the already-hashed SVG/figure/notebook evidence rather than rewrite frozen bytes. The figure manifest claim is interpreted as EOF stripping only. No source or result was normalized after hashing.",
+  "source_sha256": {
+    "scripts/build_final_model_notebook.py": "230bb57591681e200b3c9df2c54283cd413c926ef264d6448b7bea59841f2734"
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "version": "simple-drift-execution-implementation-review-v1",
+  "review_completed_utc": "2026-10-18T05:18:41.475939+00:00",
+  "status": "passed for the pure diagnostic execution component; no newmarket run or complete-study audit implied",
+  "scope": {
+    "source_read_only": true,
+    "reviewed_source_modified": false,
+    "new_test_file": "tests/test_simple_drift_independent_replay.py",
+    "raw_market_loaded": false,
+    "new_fit_or_market_simulation": false,
+    "synthetic_simulation_only": true,
+    "paper_written": false,
+    "review_role": "Independent AI source review and separate numerical reference, not human peer review"
+  },
+  "reviewed_api": "simulate_drift(returns,inflation,target,threshold,*,L=.4,horizon=None,cost_rate=.0025) creates one new original-H account; no state-reset API, file IO, forecast, price selection, target update or admission inside module.",
+  "checks": [
+    {
+      "item": "Delta0 reference identity",
+      "judgment": "Explicit annual active restore branch, including exactzeroTV. All shared old pending-B physical/action/recovery arrays match exactly in original18-test suite; independent added test also verifies normalizedtarget andloss metadata under expected squeeze shape. It is pending B, not the alwaysannual cache wealth or growth."
+    },
+    {
+      "item": "Positive delta decision timing",
+      "judgment": "HalfL1 current pretrade weights versus fixed target, strict TV>delta without added tolerance. Initial allocation and already-pending branches have priority. Current/future realized returns cannot enter the currentaction; synthetic future perturbation test passes."
+    },
+    {
+      "item": "Self-financing and fees",
+      "judgment": "Only restored rows call original execute_target once. Fees and actualmoved recorded before that year returns; fees=.0025*moved, posttradewealth+fee=pretradewealth. Zero-transfer target executions remain distinct fromtrades."
+    },
+    {
+      "item": "Purchasing-power history",
+      "judgment": "Original100 endpoint andrealpeak retained; cumulativeCPI divides nominalwealth at everyendpoint. Realpeak/runningMDD and absorbingevent never reset after recovery. Initialfee enters scored path and year30crossing isretained without a terminaltrade."
+    },
+    {
+      "item": "Pending and recovery",
+      "judgment": "Firstendpoint MDD−L>1e−12 triggers onlyfutureholding; no undo of crossingtrade. Recovery/rightcensor follow old schema, including zero availablefollowup at horizon andno reentry afterrecovery."
+    },
+    {
+      "item": "Schema and protection",
+      "judgment": "Squeezedarrays compatible with existingjoint financial/trace helpers. Actualmovement trade count, targetexecution count, fee fractions andphysicalarrays available; extra diagnosticmetrics agree with independentmetrics within numeric tolerance. Allreturnedndarrays readonly and inputs unmodified."
+    },
+    {
+      "item": "No benefit-model claim",
+      "judgment": "Moduledocstring explicitlystates simplifieddiagnostic, no trade-level benefit-versus-cost model andno finalQ2strategy. Chargingcost inpathscore does not itself establishpertrade estimatedbenefit."
+    }
+  ],
+  "independent_synthetic_replay": {
+    "test_module": "tests/test_simple_drift_independent_replay.py",
+    "seed": 870202610181337,
+    "original_synthetic_paths": 6,
+    "years_per_path": 30,
+    "deltas": [
+      0.0,
+      0.05,
+      0.1
+    ],
+    "separate_reference_accounts": 18,
+    "accounting_reference": "audit_fan_rollout_execution.reference_actual with independently reimplemented pre-returnTV actions and audit_review_pending_execution independent100-stepfee bisection/metrics; newdrift kernel is not used by that reference.",
+    "original_tests_passed": 18,
+    "additional_independent_tests_passed": 2,
+    "total_tests_passed": 20,
+    "command": "PYTHONPATH=src:research .venv/bin/python -m unittest tests.test_simple_drift_execution tests.test_simple_drift_independent_replay -v",
+    "coverage": "All independent physical/recovery fields, actions, fees/moved, realwealth/peak/MDD/CPI/history plus9extra outcome metrics peraccount. Additionalmetadata identity. No marketfile used."
+  },
+  "accepted_refinement_of_prior_design_recommendation": {
+    "prior_design_path": "docs/simple_execution_design_review.json",
+    "prior_recommendation": "Meanexcess masked to0 within numericaleventtolerance; fee-burden statistic tobe chosen beforeexecution.",
+    "accepted_actual_tie_metric": "Keep existingfinancial-row convention excess=max(mdd−L,0), including positive differences<=1e−12; risk event remains mdd−L>1e−12. Tiefees use mean_nominal_fees.",
+    "meaning": "This is a preexecution definitionclarification agreed withroot; prior designreview remainsunchanged. No riskcap, data result or candidate changed. Newrunner/protocol shouldspellout theactualmetric rather than implying theearlier masked recommendation wasimplemented."
+  },
+  "remaining_whole_study_requirements": [
+    "Freeze newrunner/protocol, architecturedefinitions andglobalG/excess/mean_nominal_fees/order selector before marketexecution.",
+    "Audit exactperjobcached Q1/context/seed/target identities, sameU innerreference counts, architecture-specific initialadmission and allNULL partitions.",
+    "Verify delta0 equality with actual savedB and oldstatic firsteventcounts on thedevelopmentdata only during the separatelyauthorizedstudy; currentreview has notdone that.",
+    "Check structural B-feasibility/commoninnerU properties as mathematicalcandidate-support checks, not learnedriskcertification.",
+    "Completebotharchitectures and all5repeat/25fit batch; no outcome-drivenarchitecture/threshold/seed choices.",
+    "No probabilityguarantee, final121–180parse, realdeploymentapproval orpaper is implied."
+  ],
+  "provenance": {
+    "sources_and_evidence_at_start": {
+      "research/experimental_execution/simple_drift_execution.py": "60dc564d8cf0abda4f2d7b2a83114c03473f8968d1f6af1ce35dd60fc84097c7",
+      "tests/test_simple_drift_execution.py": "29c31c1355d3ac47ba8320f51dbf20f4847ad2a0b3057e821c5a863ef273272b",
+      "tests/test_simple_drift_independent_replay.py": "2153c51e95f8edc17c0a36e9df84222d2f650ece4ab0b174af4b82c22360c6a7",
+      "research/experimental_execution/review_pending.py": "9038d420c9ea48df068c58a6abee3f993ac414f85dd0290cb56e3d703aae3894",
+      "scripts/run_joint_liquidity_refit.py": "d6c6dfa2b18fd4b0fcfc9ec97b6a822c87f50ea1f42b2ee763d06a394e8641fe",
+      "scripts/run_risk_priced_fan_execution.py": "68b34a4b0592f68327c09200b61dc8d980e8fbea7e282518de8164140ffc6bab",
+      "research/safeinvest_research/metrics.py": "7ec8e4821ce284351a3d8ed7071c687fdf7d6e4cfd225f72cad1d09d623eb008",
+      "scripts/audit_fan_rollout_execution.py": "9f9d4a274e3be531040193e1654ec6bdf74733ad5204937b8a8d8195d02940fb",
+      "scripts/audit_review_pending_execution.py": "9c208ce69a03f1a13460908ec04b39a8dc232eacbb8882b5bdef3aafae60a264",
+      "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a",
+      "docs/simple_execution_design_review.json": "66d49cfcd69981e8b97f17088f91529a214dd1fd346c0316d36f97da572ccefe"
+    },
+    "sources_and_evidence_at_end": {
+      "research/experimental_execution/simple_drift_execution.py": "60dc564d8cf0abda4f2d7b2a83114c03473f8968d1f6af1ce35dd60fc84097c7",
+      "tests/test_simple_drift_execution.py": "29c31c1355d3ac47ba8320f51dbf20f4847ad2a0b3057e821c5a863ef273272b",
+      "tests/test_simple_drift_independent_replay.py": "2153c51e95f8edc17c0a36e9df84222d2f650ece4ab0b174af4b82c22360c6a7",
+      "research/experimental_execution/review_pending.py": "9038d420c9ea48df068c58a6abee3f993ac414f85dd0290cb56e3d703aae3894",
+      "scripts/run_joint_liquidity_refit.py": "d6c6dfa2b18fd4b0fcfc9ec97b6a822c87f50ea1f42b2ee763d06a394e8641fe",
+      "scripts/run_risk_priced_fan_execution.py": "68b34a4b0592f68327c09200b61dc8d980e8fbea7e282518de8164140ffc6bab",
+      "research/safeinvest_research/metrics.py": "7ec8e4821ce284351a3d8ed7071c687fdf7d6e4cfd225f72cad1d09d623eb008",
+      "scripts/audit_fan_rollout_execution.py": "9f9d4a274e3be531040193e1654ec6bdf74733ad5204937b8a8d8195d02940fb",
+      "scripts/audit_review_pending_execution.py": "9c208ce69a03f1a13460908ec04b39a8dc232eacbb8882b5bdef3aafae60a264",
+      "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a",
+      "docs/simple_execution_design_review.json": "66d49cfcd69981e8b97f17088f91529a214dd1fd346c0316d36f97da572ccefe"
+    },
+    "source_hashes_match": true
+  }
+}

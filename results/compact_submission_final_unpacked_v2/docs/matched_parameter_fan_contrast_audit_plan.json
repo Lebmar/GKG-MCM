@@ -1,0 +1,29 @@
+{
+  "version": "matched-parameter-fan-contrast-independent-audit-plan-v1",
+  "declared_utc": "2026-10-19T04:30:32.764073+00:00",
+  "prior_exposure": "Existing original failure cases/outcome differences and all11intervention results are known. The matchedpair was selected metadata-only within this post-hoc family. No newly produced fan-contrast τ/Q/member values were read by this auditor before this plan.",
+  "scope": "All metadata-eligible pairs among original11cases; current metadata yields full_112 versus outer_r5_112. No new policy, fit, year/fan/eta/target search or final121..180 returns.",
+  "independence": "New fan-contrast producer, policy/execution/metric kernels never imported. Only guarded development loader and earlier independent scalar_fan/reference fee helpers permitted. Validate new output only after frozen execution-ready protocol, finished passed manifest, source/input/output SHA matches.",
+  "checks": [
+    "Independently inspect all55unordered casepairs using exact originalID,target,eta,H,L,cost,executionkernelSHA,dataarraySHA equality and different orderedtrainingIDs; match complete saved metadata-eligible pair set without outcome filtering.",
+    "Bind each selected originalaccount to ownjob trainingIDs,target,selectedbeta/eta from immutable staticfit/tracegroup/NPZ; check originalfull120inclusion and outer96exclusion of actualID.",
+    "Independently locate first ORIGINAL saved M/M action discrepancy; compare both full physical histories up to predecision state, preceding fees/moved/posttrade/trades/actions, and original clock. Require both active, same actualcalendarCPI/peak/MDD/H; no substitute year when unavailable.",
+    "Recompute exact full120, fullwithoutactual119 and ownouter96 orderedfanIDs; all335pairedmemberrecords retained, no unrelated removal or riskdenominatorchange. Verify fanIDcanonicalSHA, originalactualmarketSHA and actualinclusion flags.",
+    "Using old independent scalar_fan and its100step self-financingfee, independently replay all hold/restore branches for every fanmember from the same saved actualstate over originaljoint suffix throughH30:335members/670branches. Compare every netremaining totallog and inherited-history breachflag in NPZ and memberCSV, then aggregate3means/counts.",
+    "Independently compute technicalfiniteη score DeltaNetQg-originalH*eta*DeltaBad/N and strict1e-12 action. No annualization or second fee subtraction. Check savedtwooriginal Qs/counts/scores/actions and copied gate reasons separately from independent numerical-score validation.",
+    "Recompute stored originalfullH outcome summaries/differences from frozen sourcearrays only, explicitly not new complete policy replay or an effect of first action alone.",
+    "PreserveNULL/no-action-difference cases and all frozenmetadata identities. Verify source/input/protocol/output snapshots unchanged through audit. No passedreceipt on mismatch."
+  ],
+  "numeric_tolerance": {
+    "net_total_log_Q_and_score_absolute": 2e-12,
+    "account_state_atol": 2e-10,
+    "account_state_rtol": 5e-13,
+    "breach_counts_actions_IDs": "exact"
+  },
+  "limitations": [
+    "670branches reuse providedfanmembers/oneactualstate, not670independentvalidationtrials.",
+    "A fan replacement can explain an internal action difference at this same state; no conclusion about which forecastlaw is true or futurepopulationrisk.",
+    "The119contrast is local selfmember deletion, not learnerLOOCV or a completepolicyevaluation;119to96 also removes23othermembers.",
+    "No mainmodel/admissionchange; currentCReviewfinancialsremainNULL."
+  ]
+}

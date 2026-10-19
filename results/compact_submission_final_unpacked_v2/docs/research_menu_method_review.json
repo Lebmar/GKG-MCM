@@ -1,0 +1,171 @@
+{
+  "artifact_type": "prospective_technical_method_review",
+  "scope": {
+    "purpose": "Design development-only research on one shared three-product menu before running the proposed comparison.",
+    "allowed_market_scenarios": [1, 120],
+    "excluded_market_scenarios": [121, 180],
+    "v1_policy": "Do not modify V1 frozen source, manifests or saved outcomes.",
+    "disclosure": "Earlier holdout exposure cannot be reversed. These are exploratory development comparisons and internal validation, not a newly pristine final test."
+  },
+  "primary_recommendation": {
+    "name": "Coverage first, then minimize maximum growth regret, with explicit catalogue extension if demand identifies fewer than three products",
+    "candidate_weights": {
+      "grid_step": 0.05,
+      "constraints": ["Each asset weight is nonnegative", "Weights sum to one"],
+      "include_pure_bill": true,
+      "include_exact_equal_weight": true,
+      "minimum_each_asset": 0.0,
+      "execution": "One common annual fixed-target rebalancing rule with the task's self-financing transfer cost, including initial allocation."
+    },
+    "risk_policy_cases": {
+      "primary_alpha": 0.1,
+      "alpha_comparisons": [0.05, 0.1, 0.2],
+      "primary_liquidity_case": "risk_only",
+      "liquidity_cases": {
+        "risk_only": {"high": 0.0, "medium": 0.0, "low": 0.0},
+        "legacy_reference": {"high": 0.3, "medium": 0.1, "low": 0.0},
+        "stronger_reference": {"high": 0.5, "medium": 0.2, "low": 0.0}
+      },
+      "interpretation": "Alpha and bill floors are explicit service-policy cases, not identified client preferences or calibrated withdrawal reserves. The risk_only case is not a complete liquidity suitability solution."
+    },
+    "per_customer_metrics": {
+      "growth": "g_j(w) = mean_s(log(real_terminal_s,Hj(w)/100))/Hj",
+      "breach_probability": "p_j(w) = count_s(MDD_s,Hj(w) > Lj)/n",
+      "severity_diagnostic": "e_j(w) = mean_s(max(MDD_s,Hj(w)-Lj,0))",
+      "eligible_set": "F_j = {w: breach_count <= floor(n*alpha) and bill_weight >= the explicitly selected liquidity-case floor}",
+      "strict_exceedance": "D > L; do not silently change the event to D >= L.",
+      "integer_screen": "Implement the count threshold directly. At n=96 and alpha=.10 the maximum allowable count is 9, not 9.6; disclose the resulting empirical resolution."
+    },
+    "shared_menu_and_assignment": {
+      "menu": "One set M of at most three distinct weight vectors, shared by all five representative profiles.",
+      "assignment": "For each client choose the largest g_j among M intersect F_j; if that set is empty, refer to human review.",
+      "assignment_ties": ["Smaller expected excess loss", "Smaller common-reference tail risk", "Fixed lexicographic weight order for remaining numerical ties"],
+      "no_hidden_fourth_product": "A client-specific feasible optimum may be computed only as a diagnostic regret benchmark. It must never be offered, traded, or used as a fallback outside the shared menu."
+    },
+    "menu_objective": {
+      "benchmark": "g_star_j = max_{w in F_j} g_j(w), when F_j is nonempty.",
+      "regret": "r_j(M) = g_star_j - max_{w in M intersect F_j} g_j(w), only for clients covered by M.",
+      "lexicographic_order": [
+        "Maximize the number of the five representative clients covered by the menu.",
+        "Among maximum-coverage menus, minimize the maximum annualized expected-log growth regret over covered clients.",
+        "Among those menus, minimize mean regret over covered clients."
+      ],
+      "empty_coverage": "If no representative client is coverable, define regret comparisons as vacuous and identify zero demand-supported products; proceed only with the explicitly labelled reference-frontier catalogue extension.",
+      "coverage_set_audit": "Retain the identities of covered and referred clients, not only their count. At equal coverage, regret over covered clients can favor a different subset; this is not a guarantee of fairness to every uncovered client.",
+      "numerical_tie_tolerance": 1e-12,
+      "tie_tolerance_interpretation": "Floating-point equality only, not a practical growth-indifference band.",
+      "normative_choices": [
+        "Serving an additional representative client has priority over improving growth for already covered clients.",
+        "Worst-client opportunity loss is prioritized before average efficiency.",
+        "Annualized log-growth regret is compared in the same units across horizons.",
+        "The five supplied profiles receive equal representational standing; they are not an estimated customer-population distribution."
+      ]
+    },
+    "fewer_than_three_demand_supported_products": {
+      "required_diagnostic": "Compute the optimal objective vector separately for menu cardinalities one, two and three; use zero if nobody is coverable.",
+      "identified_cardinality": "The smallest cardinality attaining the three-product optimum under the numerical tie tolerance.",
+      "do_not_force_usage": "Do not require each product to serve a supplied profile solely to manufacture three labels. This could worsen suitability or make the problem infeasible.",
+      "reference_horizon": 15,
+      "reference_horizon_reason": "The median of the five stated horizons, used as a descriptive catalogue reference, not a population estimate.",
+      "reference_tail_level": 0.9,
+      "reference_tail_level_scope": "Fixed CVaR level used for catalogue description across all alpha policy cases; it is not an extra eligibility constraint.",
+      "frontier": "Training-fold Pareto frontier of larger g_15 and smaller CVaR_0.90(MDD_15), retaining nondominated distinct targets.",
+      "extension_rule": "After selecting the minimal demand-supported menu, fill remaining slots from the reference frontier by maximizing the minimum absolute CVaR_0.90 distance to existing products. With an empty menu, start from the minimum-risk frontier endpoint. Repeat until three targets exist.",
+      "extension_ties": ["Larger g_15", "Fixed lexicographic weight order"],
+      "interpretation": "An extension slot broadens the risk spectrum of the catalogue. It is not identified by the five customers and must not be claimed to improve their coverage or regret.",
+      "completion_assertion": "The completed menu must retain the computed three-product optimum's coverage and regret vector. An improving completion reveals a selection or tie-handling error; a worsening completion is not admissible.",
+      "degeneracy": "If the union of demand-supported products and available reference-frontier extensions cannot supply three distinct targets or three reference risk levels, report the precise limitation. Demand-supported products need not all lie on the H15 frontier. Do not manufacture risk separation by renaming tied targets."
+    },
+    "product_labels": {
+      "ordering": "Sort final targets by increasing training-fold CVaR_0.90(MDD_15); use Conservative, Balanced, Growth only as reference-horizon labels.",
+      "risk_ties": "Retain an explicit tied-risk flag; deterministic weight ordering is not evidence of risk separation.",
+      "mandatory_cross_horizon_check": [5, 6, 15, 25, 30],
+      "crossing_interpretation": "If risk order reverses at another horizon, label the hierarchy reference-horizon-specific. Do not claim global monotone risk ordering."
+    }
+  },
+  "fixed_comparator": {
+    "name": "Reference-H15 risk representative menu",
+    "construction": [
+      "Construct the training-only g_15 versus CVaR_0.90(MDD_15) Pareto frontier.",
+      "Choose the minimum-risk frontier endpoint and the maximum-growth endpoint.",
+      "Choose a distinct interior frontier point closest to the midpoint of those endpoints' tail-risk values."
+    ],
+    "ties": ["Larger g_15", "Smaller tail risk", "Fixed lexicographic weight order"],
+    "normative_choices": "H15 is the median reference horizon; the middle product represents half the risk range, not an empirically identified Balanced preference.",
+    "degeneracy": "If fewer than three nondominated distinct risk points exist, report the limitation instead of inventing a third Pareto point.",
+    "comparison_policy": "Evaluate this predeclared comparator; do not retrospectively replace the primary method merely because one cached comparison looks better."
+  },
+  "empirical_tail_calculation": {
+    "var": "Use the empirical-CDF generalized inverse, such as quantile(method='inverted_cdf'), when a quantile is intended to correspond to the empirical chance constraint.",
+    "cvar": "For beta=.90 use eta + mean(max(D-eta,0))/(1-beta), minimized in eta; an empirical generalized-inverse beta-quantile is a valid minimizer.",
+    "fractional_tail": "At n=96 the worst 10% has mass 9.6 observations. Do not simply average the worst 10 observations without fractional weighting.",
+    "reported_p90": "If linear-interpolated P90 is also reported, distinguish that descriptive statistic from the generalized-inverse VaR used mathematically."
+  },
+  "internal_validation": {
+    "folds": 5,
+    "test_scenarios_per_fold": 24,
+    "training_scenarios_per_fold": 96,
+    "suggested_seed": 2026101701,
+    "split_rule": "Seeded permutation of the 120 scenario IDs into five fixed groups; keep every complete scenario in one group.",
+    "training_boundary": "For every fold and every policy case, fit the metric summaries, reference frontier, demand menu, extension products and customer assignments from scratch using only its 96 training scenarios.",
+    "test_boundary": "Freeze the shared menu and each customer's selected product or referral before evaluating the 24 test paths. Do not inspect held-out losses to switch to another product or the oracle.",
+    "referrals": "Retain referrals in the coverage denominator. Do not impute their investment returns as zero or silently give them a bill-only fourth product.",
+    "pooled_oof": "The pooled out-of-fold results describe the 96-scenario learning procedure with different fold-trained menus, not performance of one fixed final 120-scenario menu.",
+    "uncertainty_scope": "Training folds overlap, so pooled out-of-fold outcomes do not justify a naive independent-binomial certification of the selected learning procedure."
+  },
+  "resolution_check": {
+    "fine_step": 0.025,
+    "scope": "Only the union of simplex neighborhoods within one coarse swap, L1 distance <=.10, of the originally selected coarse-grid products.",
+    "purpose": "Check coverage, screen boundaries, menu regret and target sensitivity to discretization; do not replace the declared coarse-grid primary result in pursuit of better growth.",
+    "required_outputs": ["Coverage change", "Maximum and mean regret change", "Client auto/referral change", "Target displacement", "Reference and cross-horizon risk-order changes"]
+  },
+  "complete_reselection_bootstrap": {
+    "suggested_replicates": 200,
+    "suggested_seed": 2026101702,
+    "unit": "Whole scenario IDs, retaining all years, assets and inflation jointly.",
+    "procedure": "Resample 120 whole scenarios with replacement; recompute all candidate metrics and rerun the complete menu selection and assignment, including minimal-cardinality and catalogue-extension rules.",
+    "alignment": "For weight-distribution diagnostics align products by minimum total L1 distance to the reference menu over all six permutations; also retain each replicate's H15 risk-order labels.",
+    "required_outputs": ["Automatic versus referral frequency per client", "Menu target distributions", "Coverage and regret distributions", "Identified-cardinality frequencies", "Reference risk-order and cross-horizon crossing frequencies"],
+    "precision_note": "With 200 replicates, a reported frequency near one half has Monte Carlo standard error about 3.5 percentage points. Replicate count is a computational precision choice, not extra market evidence.",
+    "optional_oob": "If selected products are scored on out-of-bag paths, report their varying sample sizes and call the results diagnostics; repeated out-of-bag evaluations overlap and do not create independent tail samples.",
+    "nested_cv_caution": "If bootstrapping cross-validation, all duplicate copies of an original scenario must remain in its same original fold; never allow duplicate paths in both training and test.",
+    "prohibited_claim": "No pointwise Clopper-Pearson or Wilson upper bound calculated after menu selection on the same sample is a certificate for the selected menu. Reselection bootstrap distributions are not such a certificate either."
+  },
+  "executable_diagnostic_grades": {
+    "separate_axes": "Do not collapse normative policy dependence, sampling sensitivity, numerical sensitivity and parameter identifiability into one supposed probability of safety.",
+    "empirical_screen": {
+      "pass": "k <= floor(n*alpha)",
+      "fail": "k > floor(n*alpha)",
+      "one_scenario_boundary_pass": "k == floor(n*alpha): changing one non-breach path to a breach can reverse the screen.",
+      "one_scenario_boundary_fail": "k == floor(n*alpha)+1: changing one breach path to a non-breach can reverse the screen."
+    },
+    "policy_dependence": {
+      "P0": "Coverage and assigned reference role are unchanged across the declared policy cases.",
+      "P1": "Product or role changes across policy cases, but auto/referral status does not.",
+      "P2": "Auto/referral status changes with alpha or the declared liquidity floor.",
+      "meaning": "These are normative policy effects, not necessarily sampling failure. Report both fixed-base-menu counterfactual screening and full menu reselection if feasible, since they answer different questions."
+    },
+    "sampling_sensitivity": {
+      "consistent_referral": "The full-development fit and all five training folds refer the client; no automatic suitability claim is supported.",
+      "development_consistent_auto": "Full-development assignment passes its empirical screen, all five training folds provide an eligible automatic product, pooled OOF empirical exceedance is <=alpha, and the full-development screen is not one-scenario-boundary-pass.",
+      "sampling_sensitive": "At least one training fold refers while another provides an automatic product, or the full-development screen is one-scenario-boundary-pass.",
+      "internal_calibration_warning": "For clients with frozen fold-level automatic assignments, their pooled OOF empirical exceedance rate exceeds alpha; retain the actual counts and denominators and do not reinterpret this as proof about the population probability.",
+      "bootstrap_role": "Report the continuous reselection frequencies and functional outcome distributions alongside these flags. Do not choose an unannounced bootstrap approval cutoff after seeing its values.",
+      "not_certification": "Development-consistent means no specified internal warning was observed; it is not a guarantee, a formal population-probability confidence statement, or independent final validation."
+    },
+    "numerical_sensitivity": {
+      "flag": "The local 2.5% resolution check changes coverage or any client's auto/referral status, or changes whether the three reference risks are distinct.",
+      "otherwise": "Report the actual functional and weight changes; absence of this flag is not proof of grid independence."
+    },
+    "parameter_vs_function": "Large weight variability with nearly unchanged coverage, growth regret and risk diagnostics is parameter non-identifiability on a flat objective, not necessarily functional instability. Keep these conclusions separate."
+  },
+  "mandatory_claim_boundaries": [
+    "This method defines a three-target menu, not five customer-specific portfolios.",
+    "Three supplied product names do not imply that all three must be chosen by the five supplied profiles.",
+    "A risk-spectrum extension is an explicit catalogue policy, not estimated customer demand.",
+    "Expected excess loss is a mandatory severity diagnostic, not a hidden severity constraint.",
+    "Reference-horizon risk labels do not guarantee ordering at every customer horizon.",
+    "Coverage over five representative profiles is not customer-population coverage.",
+    "Synthetic empirical risk budgets and internal development consistency do not certify real-world loss probabilities."
+  ]
+}

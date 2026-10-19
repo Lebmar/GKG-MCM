@@ -1,0 +1,345 @@
+"""Complete-process nested calibration on original development paths only.
+
+Thirty explicit training tasks reselect the strict static products/gamma.
+Only their effective Balanced cases learn the nine-price execution family.
+Dynamic beta is chosen using complete inner validation trajectories, before
+one final training refit and one outer controller (or NULL financial outcome).
+"""
+from __future__ import annotations
+
+from datetime import datetime, timezone
+import hashlib
+import json
+from pathlib import Path
+import sys
+import time
+
+import numpy as np
+import pandas as pd
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path[:0] = [str(ROOT / "src"), str(ROOT / "research"), str(ROOT / "scripts")]
+import run_risk_priced_fan_execution as priced
+import run_fan_rollout_execution as reference
+from safeinvest.data import load_paths
+from safeinvest_research.metrics import discrete_cvar
+from experimental_execution.nested_static_adapter import prepare_strict_family, make_context, calibrate_static
+from experimental_execution.nested_dynamic_selection import (BETAS, ALPHA, classify_assignment,
+    price_selection, final_status, denominator_counts, beta_summary, choose_beta)
+
+PROTOCOL = ROOT / "docs/nested_dynamic_calibration_protocol.json"
+OUT = ROOT / "results/model_review/nested_dynamic_calibration_v1"
+CACHE = ROOT / "results/model_review/risk_menu_v1/cache/step_0500__cost_002500.npz"
+LEARNER = "nested_dynamic_learner"
+H, LOSS, COST = 30, .4, .0025
+FINANCIAL = priced.FINANCIAL
+
+
+def sha(path): return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def write_json(path, item):
+    Path(path).write_text(json.dumps(item, indent=2, ensure_ascii=False, allow_nan=False) + "\n")
+
+
+def source_manifest():
+    paths = [Path(__file__).resolve(), PROTOCOL,
+        ROOT / "tests/test_nested_dynamic_calibration.py", ROOT / "tests/test_nested_dynamic_selection.py",
+        ROOT / "tests/test_nested_dynamic_runner_integration.py",
+        ROOT / "tests/test_nested_dynamic_pipeline_smoke.py",
+        ROOT / "tests/test_nested_static_adapter.py",
+        *sorted((ROOT / "research/safeinvest_research").glob("*.py"))]
+    paths += [ROOT / p for p in [
+        "src/safeinvest/core.py", "src/safeinvest/data.py",
+        "scripts/run_risk_menu_research.py", "scripts/run_nested_static_calibration.py",
+        "scripts/run_positive_asset_specification.py", "scripts/run_fan_rollout_execution.py",
+        "scripts/run_risk_priced_fan_execution.py",
+        "research/experimental_execution/nested_static_adapter.py",
+        "research/experimental_execution/nested_dynamic_selection.py",
+        "research/experimental_execution/risk_priced_fan_rollout.py",
+        "research/experimental_execution/fan_rollout.py", "research/experimental_execution/review_pending.py"]]
+    return {str(p.relative_to(ROOT)): sha(p) for p in sorted(set(paths))}
+
+
+def validate_protocol(p, legacy_contexts):
+    if (p["data"]["scenario_ids"] != list(range(1,121)) or p["data"]["allow_final"] is not False
+            or p["profile"] != {"name":"C","horizon":H,"loss_tolerance":LOSS}
+            or p["primary_family"]["finite_annual_prices"] != list(priced.FINITE_PRICES)
+            or p["primary_family"]["target_updates_enabled"] is not False
+            or p["primary_family"]["optional18_run"] is not False
+            or p["primary_family"]["count"] != 9
+            or p["primary_family"]["additional_candidate"] != "risk_first"
+            or p["primary_family"]["cost_rate"] != COST
+            or p["calibration"]["dynamic_betas"] != list(BETAS)
+            or p["calibration"]["service_alpha"] != ALPHA):
+        raise ValueError("Declared data, profile, candidate family or service rule changed")
+    jobs=p["jobs"]
+    if len(jobs)!=30 or len({x["job_id"] for x in jobs})!=30: raise ValueError("Require all thirty fixed training tasks")
+    expected_order=[name for c in legacy_contexts for name in
+                    [*[f'c{c["context_id"]}_inner{i}' for i in range(1,5)],f'c{c["context_id"]}_refit']]
+    if [x["job_id"] for x in jobs]!=expected_order:
+        raise ValueError("Four complete inner tasks must precede every context refit")
+    for c in legacy_contexts:
+        group=[x for x in jobs if x["parent_context_id"]==c["context_id"]]
+        if len(group)!=5: raise ValueError("Each context needs four inner tasks and its refit")
+        for f in c["inner_folds"]:
+            j=next(x for x in group if x["job_id"]==f'c{c["context_id"]}_inner{f["inner_fold"]}')
+            if (j["training_ids"]!=f["train_ids"] or j["evaluation_ids"]!=f["test_ids"]
+                    or j["stage"]!="inner" or j["parent_context"]!=c["name"]
+                    or j["static_inner_seed"]!=8702026101800+100*c["context_id"]+f["inner_fold"]):
+                raise ValueError("Dynamic inner identities or static seed changed")
+        j=next(x for x in group if x["stage"]=="refit")
+        if (j["training_ids"]!=c["training_ids"] or j["static_inner_seed"]!=c["inner_seed"]
+                or j["evaluation_ids"]!=(c["training_ids"] if c["context_id"]==0 else c["outer_test_ids"])):
+            raise ValueError("Final training/evaluation identities changed")
+    return jobs
+
+
+def frozen_inputs(p):
+    result={path:sha(ROOT/path) for path in p["frozen_input_sha256"]}
+    if result!=p["frozen_input_sha256"]: raise RuntimeError("A frozen input changed")
+    return result
+
+
+def common_fields(job,bundle):
+    case=bundle["q2_case"]; product=case["product"]; q1_product=case["q1_product"]
+    return {"job_id":job["job_id"],"context":job["parent_context"],"context_id":job["parent_context_id"],
+        "dynamic_inner_fold":job["dynamic_inner_fold"],"client":"C","horizon":H,"loss_tolerance":LOSS,
+        "q1_effective_assignment":case["effective_assignment"],"case_status":case["status"],
+        "static_gamma":bundle["refit"]["selection"]["selected_gamma"],
+        "candidate_local_index":product["candidate_index"] if product else None,
+        "candidate_original232_index":product["candidate_original232_index"] if product else None,
+        "q1_candidate_local_index":q1_product["candidate_index"] if q1_product else None,
+        "q1_candidate_original232_index":q1_product["candidate_original232_index"] if q1_product else None,
+        "selection_training_n":len(job["training_ids"])}
+
+
+def null_records(ids,common,status,reason):
+    return priced.null_rows(ids,{**common,"hypothetical_reference":bool(common.get("reference_only",False)),
+                                 "execution_status":status,"execution_reason":reason})
+
+
+def arm_records(arm,ids,common):
+    hypothetical=bool(common.get("reference_only",False))
+    return priced.financial_rows(arm,ids,{**common,"hypothetical_reference":hypothetical,
+        "execution_status":"hypothetical_reference" if hypothetical else "automated","execution_reason":None})
+
+
+def truthful_extract(family,order):
+    arm=priced.extract_price(family,order)
+    arm["annual_prices"]=np.array([priced.PRICES[order]])
+    return arm
+
+
+def evaluate_unique_orders(simulator,actual,inflation,train,train_infl,target,orders):
+    """No ranking of validation outcomes; caller supplies training choices."""
+    unique=sorted(set(x for x in orders if x is not None))
+    if any(isinstance(x,bool) or not isinstance(x,(int,np.integer)) or not 0<=x<9 for x in unique):
+        raise ValueError("Invalid selected price order")
+    return {int(order):priced.evaluate_selected(simulator,actual,inflation,train,train_infl,target,int(order),L=LOSS,horizon=H)
+            for order in unique}
+
+
+def save_trace(archive,groups,key,arm,ids,common,order=None,kind="learner"):
+    for name,values in arm.items():
+        if isinstance(values,np.ndarray): archive[key+"__"+name]=values
+    groups[key]={"scenario_ids":list(ids),"metadata":common,"selected_candidate_order":order,"kind":kind,
+                 "q_subset_scenario_id":min(ids),"q_subset_years":[2,16,30],
+                 "annual_prices_metadata":"single executed price, not the training family catalog" if order is not None else None}
+
+
+def performance_summary(rows):
+    result=[]
+    for (scope,policy),g in pd.DataFrame(rows).groupby(["scope","policy"],sort=False):
+        records=g.to_dict("records"); auto=g.loc[g.assigned]
+        if policy==LEARNER: d=denominator_counts(records)
+        else:
+            d={"original_n":len(g),"balanced_case_n":int(g.case_status.eq("balanced_case").sum()),
+               "risk_review_n":int(g.case_status.eq("risk_review").sum()),
+               "not_balanced_case_n":int(g.case_status.eq("not_balanced_case").sum()),
+               "case_auto_n":None,"case_execReview_n":None}
+        k=int(auto.breach.astype(bool).sum()) if len(auto) else None
+        result.append({"scope":scope,"policy":policy,**d,"assigned_paths":len(auto),
+            "financial_null_paths":len(g)-len(auto),"reference_only":policy!=LEARNER,
+            "reference_available_n":len(auto) if policy!=LEARNER else None,
+            "case_reference_available_n":int((g.assigned & g.case_status.eq("balanced_case")).sum()) if policy!=LEARNER else None,
+            "breach_count":k,"conditional_breach_probability":k/len(auto) if len(auto) else None,
+            "breaches_per_original_n":k/len(g) if k is not None else None,
+            "mean_log_growth":float(auto.log_growth.mean()) if len(auto) else None,
+            "median_cagr":float(auto.cagr.median()) if len(auto) else None,
+            "p10_cagr":float(np.quantile(auto.cagr,.1,method="inverted_cdf")) if len(auto) else None,
+            "median_mdd":float(auto.mdd.median()) if len(auto) else None,
+            "p90_mdd":float(np.quantile(auto.mdd,.9,method="inverted_cdf")) if len(auto) else None,
+            "cvar90_mdd":float(discrete_cvar(auto.mdd.to_numpy())) if len(auto) else None,
+            **{name:float(auto[field].mean()) if len(auto) else None for name,field in
+               [("mean_nominal_fees","nominal_fees"),("mean_trade_fraction","trade_fraction"),("mean_excess","excess")]}})
+    return result
+
+
+def paired_outputs(rows):
+    frame=pd.DataFrame(rows); learner=frame.loc[frame.policy==LEARNER]
+    pairs=[]
+    for policy in ("annual_then_pending","equal_thirds_annual"):
+        merged=learner.merge(frame.loc[frame.policy==policy],on=["scope","context","scenario_id"],suffixes=("_learner","_reference"),validate="one_to_one")
+        for x in merged.to_dict("records"):
+            common=bool(x["assigned_learner"] and x["assigned_reference"])
+            pairs.append({"scope":x["scope"],"context":x["context"],"scenario_id":x["scenario_id"],
+                "reference_policy":policy,"learner_auto":bool(x["assigned_learner"]),"reference_available":bool(x["assigned_reference"]),
+                "common_auto":common,**{"delta_"+k:float(x[k+"_learner"])-float(x[k+"_reference"]) if common else None
+                for k in ("log_growth","cagr","mdd","excess","nominal_fees","trade_fraction","breach")}})
+    summary=[]
+    for (scope,policy),g in pd.DataFrame(pairs).groupby(["scope","reference_policy"],sort=False):
+        both=g.loc[g.common_auto]
+        summary.append({"scope":scope,"reference_policy":policy,"original_pairs":len(g),"learner_auto_n":int(g.learner_auto.sum()),
+            "reference_available_n":int(g.reference_available.sum()),"common_auto_n":len(both),
+            **{"mean_"+k:float(both[k].mean()) if len(both) else None for k in g.columns if k.startswith("delta_")}})
+    return pairs,summary
+
+
+def main():
+    from experimental_execution.risk_priced_fan_rollout import simulate_prices
+    from experimental_execution.review_pending import simulate_paired
+    started=time.perf_counter(); p=json.loads(PROTOCOL.read_text())
+    if p.get("execution_ready") is not True: raise RuntimeError("Prospective protocol/source review not complete")
+    source=source_manifest(); inputs=frozen_inputs(p)
+    if p["execution_sources_sha256"]!={k:v for k,v in source.items() if k!=str(PROTOCOL.relative_to(ROOT))}:
+        raise RuntimeError("Execution source fingerprints are not frozen")
+    legacy=json.loads((ROOT/"docs/positive_asset_specification_protocol.json").read_text())
+    jobs=validate_protocol(p,legacy["contexts"])
+    if OUT.exists(): raise RuntimeError("Preserve existing archive; use a new protocol/version for another study")
+    returns,inflation,ids=load_paths(ROOT/p["data"]["path"],range(1,121),allow_final=False)
+    digest=hashlib.sha256()
+    for a in (ids,returns,inflation): digest.update(np.ascontiguousarray(a).tobytes())
+    cachemeta=json.loads(CACHE.with_suffix(".json").read_text())
+    if digest.hexdigest()!=cachemeta["development_arrays_sha256"] or sha(CACHE)!=cachemeta["npz_sha256"]:
+        raise RuntimeError("Guarded development/cache array identity changed")
+    with np.load(CACHE,allow_pickle=False) as f: cache={k:f[k] for k in f.files}
+    if not np.array_equal(cache["scenario_ids"],ids): raise RuntimeError("Cached original scenario axis changed")
+    metrics={h:{k:cache[f"H{h}__{k}"] for k in reference.METRICS} for h in (5,6,15,25,30)}
+    allowed,weights,strictmetrics=prepare_strict_family(cache["weights"],metrics)
+    if len(allowed)!=172: raise RuntimeError("Require strict172")
+    eq_candidates=np.flatnonzero(np.all(cache["weights"]==np.ones(3)/3,axis=1))
+    if len(eq_candidates)!=1: raise RuntimeError("Require the unique exactthird reference")
+    eqglobal=int(eq_candidates[0]); eqlocal=int(np.flatnonzero(allowed==eqglobal)[0])
+    oldfits=json.loads((ROOT/"results/model_review/positive_asset_specification_v1/nested_context_refits.json").read_text())
+    OUT.mkdir(parents=True)
+    static_evidence={}; static_paths=[]; training_paths=[]; training_summaries=[]
+    validation=[]; beta_selections={}; beta_summaries=[]; context_selections={}
+    actual_archive={}; validation_archive={}; trace_groups={"actual":{},"validation":{}}
+    client_paths=[]; legacy_checks={}; completed=[]
+    for c in legacy["contexts"]:
+        context=c["name"]; cid=c["context_id"]
+        for job in [x for x in jobs if x["parent_context_id"]==cid]:
+            tick=time.perf_counter(); jid=job["job_id"]; train_ids=job["training_ids"]; eval_ids=job["evaluation_ids"]
+            if job["stage"]=="refit": sc=c
+            else: sc=make_context(train_ids,seed=job["static_inner_seed"],name=jid,
+                                 context_id=100+cid*4+job["dynamic_inner_fold"],outer_test_ids=eval_ids)
+            if sc!=p["static_contexts"][jid]: raise RuntimeError("Static subfold identities changed")
+            bundle=calibrate_static(strictmetrics,weights,legacy["clients"],sc,candidate_original_indices=allowed)
+            static_paths.extend({"job_id":jid,**r} for r in bundle["inner_oof_paths"])
+            static_evidence[jid]={k:v for k,v in bundle.items() if k!="inner_oof_paths"}
+            if job["stage"]=="refit":
+                if bundle["refit"]!=oldfits[context]: raise RuntimeError("Same-fold final static learner failed to reproduce legacy fit: "+context)
+                legacy_checks[context]={"refit_all_fields_exact":True,"gamma":bundle["refit"]["selection"]["selected_gamma"]}
+            common=common_fields(job,bundle); case=bundle["q2_case"]["status"]
+            tr=np.asarray(train_ids)-1; ev=np.asarray(eval_ids)-1
+            family=None; summaries=[]; selections={}; target=None; kB=None
+            if case=="balanced_case":
+                target=np.asarray(bundle["q2_case"]["product"]["weights"])
+                global_index=bundle["q2_case"]["product"]["candidate_original232_index"]
+                kB=int((cache["H30__mdd"][tr,global_index]-LOSS>1e-12).sum())
+                family=simulate_prices(returns[tr],inflation[tr],returns[tr],inflation[tr],target,priced.PRICES,L=LOSS,cost_rate=COST,horizon=H)
+                for order in range(9):
+                    rows=arm_records(truthful_extract(family,order),train_ids,{**common,**priced.candidate_meta(order,H),"scope":"training_support"})
+                    training_paths.extend(rows)
+                    s=priced.training_summary(rows,order,H); s.update({"job_id":jid,"context":context,"static_gamma":common["static_gamma"],"q1_effective_assignment":common["q1_effective_assignment"]})
+                    summaries.append(s); training_summaries.append(s)
+                selections={str(beta):price_selection(summaries,kB,len(train_ids),beta) for beta in BETAS}
+            else:
+                for order in range(9):
+                    training_paths.extend(null_records(train_ids,{**common,**priced.candidate_meta(order,H),"scope":"training_support"},case,case))
+                    training_summaries.append({"job_id":jid,"context":context,**priced.candidate_meta(order,H),
+                        "q1_effective_assignment":common["q1_effective_assignment"],"n_training":len(train_ids),
+                        "breach_count":None,"mean_log_growth":None,"simulation_status":case})
+                selections={str(beta):{"training_beta":beta,"selected_candidate_order":None,"execution_status":case,"execution_review_reason":case} for beta in BETAS}
+            static_evidence[jid]["training_price_selections"]=selections
+            static_evidence[jid]["reference_training_breach_count"]=kB
+            if job["stage"]=="inner":
+                orders=[s["selected_candidate_order"] for s in selections.values()]
+                arms=evaluate_unique_orders(simulate_prices,returns[ev],inflation[ev],returns[tr],inflation[tr],target,orders) if case=="balanced_case" else {}
+                for order,arm in arms.items():
+                    save_trace(validation_archive,trace_groups["validation"],jid+f"__p{order}",arm,eval_ids,common,order)
+                for beta in BETAS:
+                    order=selections[str(beta)]["selected_candidate_order"]
+                    meta={**common,"training_beta":beta,"selected_candidate_order":order,"scope":"inner_validation"}
+                    if case!="balanced_case": rows=null_records(eval_ids,meta,case,case)
+                    elif order is None: rows=null_records(eval_ids,meta,"execution_review","no_admissible_training_price")
+                    else: rows=arm_records(arms[order],eval_ids,meta)
+                    validation.extend(rows)
+            else:
+                pool=[r for r in validation if r["context"]==context]
+                bs=[{"context":context,**beta_summary([r for r in pool if r["training_beta"]==b],b,c["training_ids"])} for b in BETAS]
+                beta_summaries.extend(bs); chosen=choose_beta(bs); beta=chosen["selected_beta"]
+                beta_selections[context]=chosen
+                order=selections[str(beta)]["selected_candidate_order"] if beta is not None else None
+                status,reason=final_status(case,beta,order)
+                meta={**common,"policy":LEARNER,"training_beta":beta,"selected_candidate_order":order,
+                      "scope":"full_development" if cid==0 else "outer_oof","reference_only":False}
+                arm=None
+                if status=="automated":
+                    arm=truthful_extract(family,order) if cid==0 else evaluate_unique_orders(simulate_prices,returns[ev],inflation[ev],returns[tr],inflation[tr],target,[order])[order]
+                    client_paths.extend(arm_records(arm,eval_ids,meta))
+                    save_trace(actual_archive,trace_groups["actual"],f"c{cid}__{LEARNER}",arm,eval_ids,meta,order)
+                else: client_paths.extend(null_records(eval_ids,meta,status,reason))
+                context_selections[context]={"training_ids":train_ids,"evaluation_ids":eval_ids,"case":bundle["q2_case"],
+                    "static_gamma":common["static_gamma"],"beta_selection":chosen,"selected_candidate_order":order,
+                    "selected_price_training_evidence":selections.get(str(beta)) if beta is not None else None,
+                    "execution_status":status,"execution_reason":reason}
+                # References never become an automatic fallback or replace NULL.
+                if case=="balanced_case":
+                    pair=simulate_paired(returns[ev],inflation[ev],target,LOSS,horizon=H,cost_rate=COST)
+                    barm=reference.squeeze_pending(pair["pending_hold"])
+                    barm["targets"]=target.copy()
+                    bmeta={**meta,"policy":"annual_then_pending","reference_only":True,"training_beta":None,"selected_candidate_order":None}
+                    client_paths.extend(arm_records(barm,eval_ids,bmeta))
+                    save_trace(actual_archive,trace_groups["actual"],f"c{cid}__annual_then_pending",barm,eval_ids,bmeta,kind="annual_then_pending")
+                else: client_paths.extend(null_records(eval_ids,{**meta,"policy":"annual_then_pending","reference_only":True,"hypothetical_reference":True},"reference_unavailable",case))
+                eq=reference.squeeze_pending(simulate_paired(returns[ev],inflation[ev],np.ones(3)/3,LOSS,horizon=H,cost_rate=COST)["annual"])
+                eq["targets"]=np.ones(3)/3
+                eqmeta={**meta,"policy":"equal_thirds_annual","reference_only":True,"training_beta":None,"selected_candidate_order":None,
+                        "candidate_local_index":eqlocal,"candidate_original232_index":eqglobal,"execution_target_type":"exact_thirds_reference"}
+                client_paths.extend(arm_records(eq,eval_ids,eqmeta))
+                save_trace(actual_archive,trace_groups["actual"],f"c{cid}__equal_thirds_annual",eq,eval_ids,eqmeta,kind="equal_thirds_annual")
+            if source_manifest()!=source or frozen_inputs(p)!=inputs: raise RuntimeError("Source or input changed during a training task")
+            completed.append({"job_id":jid,"seconds":time.perf_counter()-tick,"case_status":case,
+                              "gamma":common["static_gamma"],"training_n":len(train_ids),"evaluation_n":len(eval_ids)})
+            write_json(OUT/"progress.json",{"completed_jobs":completed,"execution_sources_sha256":source,"final_scenarios_loaded":False})
+            print(json.dumps(completed[-1]),flush=True)
+            if time.perf_counter()-started>60*p["budget"]["numeric_minutes"]: raise RuntimeError("Predeclared numeric budget reached; incomplete archive, no final claims")
+    pairs,paired_summary=paired_outputs(client_paths)
+    frames={"static_inner_paths.csv":static_paths,"training_candidate_paths.csv":training_paths,
+        "training_candidate_summary.csv":training_summaries,"inner_validation_paths.csv":validation,
+        "beta_summaries.csv":beta_summaries,"client_paths.csv":client_paths,
+        "summary.csv":performance_summary(client_paths),"paired_paths.csv":pairs,"paired_summary.csv":paired_summary}
+    for name,rows in frames.items(): pd.DataFrame(rows).to_csv(OUT/name,index=False)
+    write_json(OUT/"static_refits.json",static_evidence); write_json(OUT/"context_selections.json",context_selections)
+    write_json(OUT/"trace_groups.json",trace_groups); write_json(OUT/"legacy_static_reproduction.json",legacy_checks)
+    np.savez_compressed(OUT/"actual_traces.npz",**actual_archive)
+    np.savez_compressed(OUT/"validation_traces.npz",**validation_archive)
+    if source_manifest()!=source or frozen_inputs(p)!=inputs: raise RuntimeError("Source or input changed while writing")
+    outputs={x.name:sha(x) for x in OUT.iterdir() if x.is_file() and x.name!="manifest.json"}
+    write_json(OUT/"manifest.json",{"completed_utc":datetime.now(timezone.utc).isoformat(),"elapsed_seconds":time.perf_counter()-started,
+        "sources":source,"sources_at_end":source_manifest(),"input_sha256":inputs,"input_sha256_at_end":frozen_inputs(p),
+        "outputs_sha256":outputs,"scenario_ids_loaded":ids.tolist(),"development_arrays_sha256":digest.hexdigest(),
+        "final_scenarios_loaded":False,"training_tasks":len(completed),"candidate_count":9,
+        "selected_beta_by_context":{k:v["selected_beta"] for k,v in beta_selections.items()},
+        "row_counts":{name:len(rows) for name,rows in frames.items()},
+        "limitations":["Reused development paths; not fresh blind evaluation or fixed-policy risk certificate",
+                       "Unconditional calendar fan remains a heuristic; calibration does not repair conditional-law misspecification",
+                       "Risk-only static questionnaire procedure; liquidity service rule is not finalized",
+                       "Review/outside-Balanced cases are NULL; no hidden annual fallback",
+                       "All training candidate metrics retained; unselected training state trees not saved"]})
+    print(json.dumps({"status":"complete","output":str(OUT.relative_to(ROOT)),"seconds":time.perf_counter()-started}),flush=True)
+
+
+if __name__=="__main__": main()

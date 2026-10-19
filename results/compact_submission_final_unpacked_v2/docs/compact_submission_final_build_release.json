@@ -1,0 +1,10 @@
+{
+  "version": "compact-fixed-nonblind-final-build-release-v1",
+  "build_ready": true,
+  "protocol_sha256": "7027204f1f6954d1b4c7f862e4b793643c9f63a7c1b47eeba4b6db079a52bd63",
+  "source_freeze_sha256": "debf854d7898ccb501c3aa299064f745535b4d1b7c316065b10f09c58f4cbfc0",
+  "preparation_manifest_sha256": "2115826ee79c1a13b111bba38e01df26fc566d5488b3e512e98785471c6a6e8e",
+  "allowlist_without_release_sha256": "e51d7474da491fc30a3f9e04d532f2ed898b53bdd4c155f9404fb515857c332e",
+  "instructions": "Root actual V2 engineering build activation, exact current payload allowlist; template remains separate.",
+  "scope": "Same locked original model, no new fit/selection or independent validation. V1 archive unchanged."
+}

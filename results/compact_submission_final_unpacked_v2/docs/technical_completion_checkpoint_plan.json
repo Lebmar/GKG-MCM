@@ -1,0 +1,71 @@
+{
+  "version": "technical-completion-metadata-checkpoint-v1",
+  "execution_ready": true,
+  "scope": "Metadata/byte-only additive completion checkpoint; no raw market parse, model run, tests, notebook execution or replay rerun.",
+  "old_checkpoint": {
+    "path": "results/final_locked_checkpoint_v1/verification.json",
+    "expected_hashed_files": 1055,
+    "historical_test_count": 942,
+    "rerun_old_checks": false
+  },
+  "registry_sha256": "49059e6e2ef5138a1d8edd284a3353d5c412d2f54f518010c3ddfdaa561c6603",
+  "precommit_incident_sha256": "09b827d8267a7db44de7ac6b356d2b9e3d412f4e82d0e703d0fe3ed2672c0d57",
+  "expected_technical_receipt_count": 19,
+  "unit_test_log": "results/technical_completion_test_run_v1/unit_tests.txt",
+  "expected_unit_test_count": 1419,
+  "companion": {
+    "build_manifest": "notebooks/technical_rebuild_2026_10_19_assets/build_manifest.json",
+    "builder_source": "scripts/build_technical_rebuild_companion.py",
+    "source_manifest": "notebooks/technical_rebuild_2026_10_19_assets/source_manifest.json",
+    "visual_qa": "notebooks/technical_rebuild_2026_10_19_assets/visual_qa.json",
+    "root_browser_qa": "results/technical_completion_browser_qa_v1/development_html_qa.json",
+    "expected_wide_viewport_width": 1440,
+    "expected_narrow_viewport_width": 500
+  },
+  "final_reading": {
+    "build_manifest": "notebooks/mitigation_locked_final_2026_10_19_assets/build_manifest.json",
+    "builder_source": "scripts/build_mitigation_final_companion.py",
+    "timing_addendum": "docs/mitigation_locked_final_interpretation_timing_addendum.json",
+    "root_browser_qa": "results/technical_completion_browser_qa_v1/final_html_qa.json",
+    "expected_wide_viewport_width": 1440,
+    "expected_narrow_viewport_width": 500,
+    "historical_review_is_opaque": true
+  },
+  "bundle": {
+    "archive": "dist/Team87_Lebmar_Technical_Source_v1.zip",
+    "build_receipt": "results/compact_submission_build_v1/manifest.json",
+    "unpacked_directory": "results/compact_submission_unpacked_v1",
+    "development_replay_receipt": "results/compact_submission_development_replay_v1/manifest.json",
+    "strict_decimal_limit_bytes": 50000000,
+    "requires_size_strictly_less": true
+  },
+  "extra_selected_files": [
+    "README.md",
+    "docs/mitigation_technical_completion_judgment.json",
+    "docs/mitigation_nominal_risk_resolution_note.json",
+    "docs/mitigation_customer_explanation_contract.json",
+    "docs/compact_submission_independent_source_review.json",
+    "docs/compact_submission_independent_source_review_path_fix_addendum.json",
+    "docs/mitigation_final_audit_supplemental_validation.json",
+    "tests/test_mitigation_final_audit_integration_supplement.py",
+    "SUBMISSION_README.md",
+    "docs/compact_submission_build_release.json",
+    "results/compact_submission_activation_attempt_v1/attempt.json",
+    "results/compact_submission_synthetic_smoke_v1/manifest.json"
+  ],
+  "gates": [
+    "Root finalizes full-suite saved log and exact parsed count; checkpoint does not run tests.",
+    "All required anchor paths frozen in input_sha256, plus own source/tests and final plan SHA.",
+    "All19 final protocol technical receipts complete/passed; every recorded hash mapping and start/end pair unchanged.",
+    "Old1055 hashes and942-test historical log retained without rerunning or overwriting old checker.",
+    "All fixed final14 objects/60IDs/11 artifacts, independent audit and isolated reproduction passed.",
+    "Six development replay profiles passed; same-source replay is not independent predictive validation.",
+    "Executed development companion9 images and current final reading3 PNGs, separate current1440/500 browser QA and screenshot hashes.",
+    "Historical presentation review retained as opaque archival bytes; latest timing addendum binds current builder/page/build/CSV, not obsolete historical current-path SHA.",
+    "Compact ZIP strictly below50,000,000bytes, member/unpacked bytehashes and explicit development-only fixed-model replay passed.",
+    "No hash changes across checkpoint; failure attempt retained and no overwrite."
+  ],
+  "precommit_boundary": "Hash freeze preceded actual parse; intended Git commit did not. Preserve engineering incident and do not imply Git commit was earlier.",
+  "prediction_boundary": "Previously exposed nonblind final. Byte checks, independent financial/action audits and same-source replay do not restore blind validity or prove predictive effectiveness.",
+  "preparation_note": "Only constructed metadata/byte/ZIP/notebook fixtures used for tests. No actual completion checkpoint executed during preparation. Chrome CLI requested430 but measured500; this plan requires actual500 and must not claim actual430."
+}

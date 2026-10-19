@@ -1,0 +1,107 @@
+{
+  "version": "incremental_admission_risk_diagnostic_v1",
+  "purpose": "Read-only forensic accounting of the previously identified newly admitted original-C outer-fold-2 market paths; no fitting, policy selection, threshold tuning, or risk certification.",
+  "predeclared_before_diagnostic_calculation": true,
+  "data_access": {
+    "allowed": "Frozen joint_liquidity_refit_v1 saved CSV, NPZ traces and metadata; joint_liquidity_summary_v1 receipts for corroboration only",
+    "forbidden": [
+      "raw scenario CSV",
+      "scenario IDs 121-180",
+      "new policy simulation or fitting",
+      "replacing Review outcomes",
+      "modifying prior frozen artifacts"
+    ]
+  },
+  "primary_policy": "joint_tie_set_refit_learner",
+  "canonical_policy": "joint_canonical_learner",
+  "references": [
+    "annual_then_pending",
+    "equal_thirds_annual"
+  ],
+  "population": {
+    "client": "Original C only",
+    "horizon": 30,
+    "loss_tolerance": 0.4,
+    "breach_tolerance": 1e-12,
+    "incremental_cohort": "All 24 original scenario IDs with automated primary and non-automated canonical status, expected outer_fold_2 only",
+    "common_context": "All 48 original IDs automated by both learners, descriptive saved-arm metrics only, kept separate",
+    "neither_context": "All 48 original IDs not automated by either learner; admission inventory only, no invented learner financial outcomes",
+    "units": "Market paths for one client under five overlapping refits, not customers or independent deployment trials"
+  },
+  "fixed_metrics": {
+    "path": [
+      "annualized log growth",
+      "CAGR",
+      "terminal real wealth",
+      "maximum drawdown",
+      "drawdown excess over .4",
+      "first crossing year",
+      "nominal fees",
+      "trade count",
+      "target execution count",
+      "pending decision count",
+      "maximum pretrade total variation drift",
+      "maximum end-year total variation drift",
+      "maximum equity weight",
+      "minimum bill weight",
+      "terminal asset weights",
+      "added MDD after crossing",
+      "underwater years after crossing",
+      "first recovery to original crossing peak"
+    ],
+    "distribution": [
+      "count",
+      "breach count",
+      "mean MDD",
+      "linear empirical P90 MDD",
+      "fractionally weighted upper-tail 10% empirical CVaR MDD",
+      "mean excess",
+      "mean annualized log growth",
+      "mean nominal fees",
+      "mean trade count"
+    ],
+    "pairs": "All 24 same-original-ID primary-minus-reference differences for both references; breach contingency counts and annual exposure/action divergence summaries",
+    "independent_consistency": "Reconstruct annual-checkpoint MDD by all peak-trough intervals, growth by terminal/initial wealth, cost/moved identity, holdings/weights/accounting, crossing and absorbing flags, pending behavior, fees/trades and exported CSV metrics; no raw returns needed"
+  },
+  "event_witness_selection": {
+    "rule": "Union of all incremental-cohort scenario IDs breached under any of the three saved arms, plus the minimum original scenario ID with no breach under any arm",
+    "all_years": "Export all 30 annual decisions for every arm of each selected witness; never select best/worst return after seeing outcomes",
+    "ordering": "Original scenario IDs ascending, year ascending, fixed policy order"
+  },
+  "outputs": [
+    "admission_partition.csv",
+    "incremental_paths.csv",
+    "incremental_paired_paths.csv",
+    "incremental_summary.csv",
+    "incremental_paired_summary.csv",
+    "incremental_annual_states.csv",
+    "event_witness_annual_states.csv",
+    "common_context_summary.csv",
+    "consistency_checks.json",
+    "findings.json",
+    "manifest.json"
+  ],
+  "interpretation_limits": [
+    "Same-ID saved policy differences are descriptive computational comparisons; exposure or action divergence alone does not causally attribute additional breaches.",
+    "Targets and dynamic rules may differ from the exact-thirds reference; cost and exposure effects are not isolated.",
+    "Fractional empirical CVaR and P90 describe 24 reused paths and are not confidence bounds or population tail-risk estimates.",
+    "Annual-checkpoint drawdown follows the contest implementation; no claim about unobserved intra-year drawdown or realizable cash-withdrawal protection.",
+    "No confidence interval or binomial certificate is computed for adaptively reused development paths.",
+    "No empirical winner is selected and no paper is written."
+  ],
+  "source_sha256": {
+    "docs/joint_liquidity_refit_protocol.json": "1e92a4f7b374bd7437315c89e513a830f12211b54cb08d3c4341dffdc9f1e3f6",
+    "results/model_review/joint_liquidity_refit_v1/manifest.json": "28819dca54041e22ae53ac924b71e023c005f96cd73ca66d102b3a1ac20a4c99",
+    "results/model_review/joint_liquidity_refit_v1/independent_audit.json": "16339e76e41e07b6f37fbd0c88baff3ffe77d245e77258ef9bc8060fd79b3a15",
+    "results/model_review/joint_liquidity_refit_v1/client_paths.csv": "821447bb511aef53fb7743d7ddcf763d7f3acf007993b52ce26897c1a59d4c2e",
+    "results/model_review/joint_liquidity_refit_v1/fit_admission.csv": "0952a06a58d17369bd463f4f766a9cbddb9494f4c974891509efb2b1a8a50e59",
+    "results/model_review/joint_liquidity_refit_v1/trace_groups.json": "47b931c0e2509ecc5dfc2d47f1d87dfa0bb22fd2651e794509593098f4c21b8a",
+    "results/model_review/joint_liquidity_refit_v1/actual_traces.npz": "3db95752784aa8ee834a4a921cc8e8ed5d9ef899d9eb11ff01d9be409f70499c",
+    "results/model_review/joint_liquidity_refit_v1/context_selections.json": "9620df702547f68f7c0d304e664d5bb433500c08138a492a4bdba9fae2d4321b",
+    "results/model_review/joint_liquidity_summary_v1/manifest.json": "1d174fa266ee34a19545ada22fdd72dee1b8dc072c962bd9ce82a0d4fee97be1",
+    "results/model_review/joint_liquidity_summary_v1/new_admission_overlap_paths.csv": "a936be4f83f2920ae83ec3d1494edd0812f3dc9037670e907a099149800f5606",
+    "results/model_review/joint_liquidity_summary_v1/new_admission_overlap_summary.csv": "b501eb667bc495a504e5decabd24bd12e3d72475d916ceeb5f8c631cefd1ac9e",
+    "results/model_review/joint_liquidity_summary_v1/admission_partition.csv": "87b3b29063ab4366407ec3c0d14913d7368720be38be3f45e9e284e1d72d398e",
+    "results/model_review/joint_liquidity_summary_v1/interpretation.json": "2d3a56af7c4de2564e6ded7d205bc958fde6bee219b59429dc78278fd436e034"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "version": "independent-locked-final-audit-source-freeze-v1",
+  "execution_ready": true,
+  "frozen_utc": "2026-10-19T05:22:14.453955+00:00",
+  "source_sha256": {
+    "scripts/audit_final_locked_evaluation.py": "5d3f1bada5107f511990cce4156e9a1c2e77f9a48b21bb793df0666c4a924a53",
+    "tests/test_audit_final_locked_evaluation.py": "197c9c133f8de383e12c82cb5664fafab79362eeffd4920db88b46ff98b74318",
+    "docs/final_locked_evaluation_audit_plan.json": "0dd2da5f569480788004a2e8c1d7c928c4a07183ecac5c3b1caa8f0e90495b7e",
+    "scripts/audit_review_pending_execution.py": "9c208ce69a03f1a13460908ec04b39a8dc232eacbb8882b5bdef3aafae60a264",
+    "scripts/audit_fan_rollout_execution.py": "9f9d4a274e3be531040193e1654ec6bdf74733ad5204937b8a8d8195d02940fb",
+    "scripts/audit_final_evaluation_development_gate.py": "8122b9b3b99092309a7dfd0743d209901fa68f195bfce6332f372dc6a972ab21",
+    "src/safeinvest/data.py": "70e511fd05c6e23fd6b8a72f1dc165426fc77a5eb4dbd8a3c13b839bb305a75f"
+  },
+  "plan_sha256": "0dd2da5f569480788004a2e8c1d7c928c4a07183ecac5c3b1caa8f0e90495b7e",
+  "synthetic_tests_passed": 23,
+  "scope": "Frozen before current final values; independent audit may run only after exact root release and complete final producer. No model or original producer changes."
+}

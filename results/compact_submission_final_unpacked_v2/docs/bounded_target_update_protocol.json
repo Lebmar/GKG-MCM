@@ -1,0 +1,92 @@
+{
+  "version": "frozen-three-target-update-incremental-learner-v1",
+  "date_beijing": "2026-10-17",
+  "design_declared_before_price_family_outcomes": true,
+  "execution_ready": true,
+  "status": "Fully frozen after20 synthetic tests and independent source/main review, before first market replay; original action/price/selection design unchanged.",
+  "question": "For the originally Balanced Profile C at its original30-year horizon, does allowing target changes among the same three already frozen products add value beyond a training-selected fixed-target execution price? Keep the no-update family as a real candidate so extra actions are not forced.",
+  "scope": {
+    "data": "Guarded original development scenarios1--120 only. Original strict172 full120 and five96-train/24-test contexts; no final returns or new target/menu fitting. Development data were reused; this is not a fresh blind experiment.",
+    "client": "Original Profile C only: H30,L0.40,low liquidity label. Its frozen risk-only assignment is Balanced in each current context. Do not substitute another horizon or profile after seeing results.",
+    "products": "Use exactly each context's three strict172 menu targets in Conservative/Balanced/Growth order, verified against local/global mapping. Positive weights stay fixed. No new tilt size, reserve floor, return forecast, asset class or allocation grid is optimized.",
+    "initial_and_pending": "Initial target is the frozen Balanced product and common mandatory initial allocation from100/all bills is charged once. After the actual controller's own first annual MDD-L>1e-12 crossing, hold actual asset quantities through original H with no human response; no target change, peak/flag/horizon reset or re-entry.",
+    "target_state": "Carry the current target identity separately from drifting actual holdings. Retaining holdings keeps that identity. A target change updates identity and executes its exact post-fee target from actual holdings, paying only the actual money moved once. A metadata change with zero movement is a target update but not an actual trade."
+  },
+  "forecast_and_actions": {
+    "fan": "Same fixed equal-weight training calendar joint suffixes t..H, preserving within-path order and asset/inflation dependence. Unconditional/recombined law limitations remain; no conditional or DP guarantee is inherited.",
+    "baseline_for_an_action": "Hold uses current target k as its future annual-until-own-breach-then-hold baseline. Restore/change-to-target m executes m now and uses that SAME m as its future baseline. Carry the actual current CPI/peak/MDD/b/H into every branch. Never take the hypothetical hold value with a different target's future baseline and treat it as doing nothing.",
+    "action_order": "Available actions are hold, restore Conservative, restore Balanced, restore Growth. Fixed-mode permits only hold and restore the current/original Balanced target. Update-mode permits all four. For numerical ties prefer hold, then restore current target, then other targets in Conservative/Balanced/Growth order.",
+    "finite_price": "For every action a compute its advantage over HOLD: Qg_a-Qg_hold-H_original*eta_annual*(bad_count_a-bad_count_hold)/Nfan. Finite positive prices/grid are inherited unchanged from the price-family protocol. If no advantage exceeds1e-12 total-log score, hold. Otherwise choose a positive-score action within1e-12 of the maximum using the declared action priority. Original H stays fixed online.",
+    "risk_first": "The separate risk-first candidate first minimizes exact bad count over available actions. If a strictly smaller count than hold exists, choose maximum Qg among minimum-count actions, with declared ties; this may sacrifice growth. If hold's count is minimal, change only for Qg gain>1e-12 among minimum-count actions, otherwise hold. Do not use infinity arithmetic.",
+    "benefit": "Every post-inception finite-price trade/target change must have strictly positive recorded estimated risk-adjusted NET advantage after exact current/future baseline fees. Risk-first decisions use their separately declared lexicographic benefit. Neither means pure growth must improve or that the approximation solves the chance-constrained problem exactly."
+  },
+  "two_learners": {
+    "fixed_reference": "The completed price-family learner restricted to no target updates, with the same nine finite/risk-first candidates, own whole-path training feasibility and selected price.",
+    "expanded": "Eighteen candidates: the same nine NO-UPDATE controllers plus nine UPDATE-enabled controllers. Replay all on each context's training paths at H30. The first nine must reproduce the already saved fixed-family training metrics. Only the expanded learner's selected candidate is applied to its outer24 test paths.",
+    "risk_cap": "Same integer cap=min(annual-then-pending Balanced reference training breach count,floor(.10*n_train+1e-12)) for both learners. All eligibility uses complete original-H path everbreach, not current fan risk or annual risk. No new gamma, conditional alpha reset or risk-price monotonic search.",
+    "selection": "Maximize mean annualized log growth among eligible candidates; take all within1e-12 of global maximum. Prefer NO-UPDATE candidates first, then within each mode ascending finite price followed by risk-first. Thus the enlarged family includes the old learner, rather than forcing target changes. If none eligible request execution review before investment, with null financial outcomes and preserved original risk assignment.",
+    "interpretation": "Containing the old family can improve the training optimum but does not imply held-out improvement. The two learners can select different prices; this is the incremental value of adding a target-update option to the learning procedure, not a same-price or single-decision causal effect."
+  },
+  "outputs": {
+    "training": "All18 context/candidate training path metrics, cap/eligibility/growth summaries and selected candidate evidence. Overlapping six contexts are not600 independent scenarios.",
+    "selected": "Full120 descriptive and pooled OOF120 original C rows for each learner, including null executionReview; report coverage, conditional financial results, explicit common-served paired differences, median/P10 CAGR, median/P90/CVaR MDD, excess, fees, moved amounts, trade fraction and target-update frequency.",
+    "trace": "Actual wealth/holdings/CPI/peak/MDD/b, current target before/after each decision, action/actual fee/moved/trade/update flag, all available action Qg/bad counts, Nfan, selected original/annual price, chosen net score or lex reason. Pending/initial Q is null.",
+    "comparison": "Replicate the selected fixed learner exactly on common parent observations. Do not evaluate or choose unselected UPDATE candidates using outer outcomes, expand targets/prices after OOF, hide lost coverage or average fold quantiles.",
+    "decision": "Report whether the expanded procedure actually uses target changes and what incremental growth/risk/cost/coverage occurs. A final adoption recommendation requires the complete evidence and user discussion; do not label a favorable exploratory contrast as a new risk certificate."
+  },
+  "synthetic_acceptance": [
+    "Fixed/no-update mode reproduces the frozen risk-priced kernel for every declared price, original-H score and real transition.",
+    "Independent scalar all-action fan accounting verifies hold uses the current target baseline, while a retarget branch uses its chosen target baseline; all current/future fees occur once.",
+    "Finite and risk-first action comparisons, hold/current-target/other-target tie order and strictly positive finite changed-action scores are correct.",
+    "Target identity persists through hold and updates through a selected retarget; zero moved metadata updates are distinguished from trades.",
+    "Mandatory initial Balanced allocation, original peak/CPI/MDD/b, actual post-breach hold, original H, final-endpoint trigger and future-actual nonanticipation are preserved.",
+    "Expanded-family eligibility/selection includes original candidates exactly and cannot lose a training-feasible fixed candidate through indexing, local/global target confusion or changed denominators."
+  ],
+  "independent_Q_subset": "For each context's selected expanded learner use its smallest evaluation scenario ID and returnyears2,16,30. Record pending or executionReview skips without replacement. Independently simulate every available current action and all training suffixes using the saved current target/history, exact bisection fees and selected price, then reconstruct chosen action/target transition/score.",
+  "freeze_before_execution": "After parent price experiment and pure synthetic checks complete, record exact source/test/parent-input hashes and UTC in this document; preserve the initial design digest. Any substantive departure from the stated actions/grid/selection must be documented before new outputs, never made to improve OOF results.",
+  "design_declared_utc": "2026-10-17T14:35:53.092865+00:00",
+  "draft_dependency_sha256": {
+    "docs/risk_priced_fan_execution_protocol.json": "faea98bdff25d3bbd3698f0928a5fca27dd6109062624c7e865e03d679bb259d",
+    "docs/fan_rollout_execution_protocol.json": "dece4b446f8bd20ee5590ffc1188b13ddd57f19631a21e7b362ad800df030cd3",
+    "docs/fan_rollout_mathematical_review.json": "499754a2265573b9753568acbff06618cc969d79e9c0a5dee81d9247d9a3d046",
+    "docs/positive_asset_specification_protocol.json": "ff23c3fcdad54d83a2896a11459db1cec3e4f48fe6352d994139e4c9ff79475c",
+    "results/model_review/positive_asset_specification_v1/manifest.json": "da65841decff7d50ec7baa8fe80c4e6593112ea0c7d083affe2a0dd68f2f306e",
+    "results/model_review/positive_asset_specification_v1/nested_context_refits.json": "d13450e05051c02d2bf54a4edfc77ef01d880cee0c78238cc3d7204a6ab27aa1",
+    "results/model_review/positive_asset_specification_v1/candidate_mapping.json": "c6221636a667536cbf1e4dbaa132c4cca1b00efb692dc180f5fc189655a744d5"
+  },
+  "initial_design_sha256": "0a8854778d74a983d33b834a38185c123f942eccb9084db25eae9c8114cb95f4",
+  "execution_frozen_utc": "2026-10-17T14:45:04.657055+00:00",
+  "frozen_input_sha256": {
+    "docs/positive_asset_specification_protocol.json": "ff23c3fcdad54d83a2896a11459db1cec3e4f48fe6352d994139e4c9ff79475c",
+    "results/model_review/positive_asset_specification_v1/manifest.json": "da65841decff7d50ec7baa8fe80c4e6593112ea0c7d083affe2a0dd68f2f306e",
+    "results/model_review/positive_asset_specification_v1/nested_context_refits.json": "d13450e05051c02d2bf54a4edfc77ef01d880cee0c78238cc3d7204a6ab27aa1",
+    "results/model_review/positive_asset_specification_v1/candidate_mapping.json": "c6221636a667536cbf1e4dbaa132c4cca1b00efb692dc180f5fc189655a744d5",
+    "docs/risk_priced_fan_execution_protocol.json": "67051393a4f56bc6ae754795b5b47e38b6a01b57f9607ae3fe3374540df93bb6",
+    "docs/fan_rollout_execution_protocol.json": "dece4b446f8bd20ee5590ffc1188b13ddd57f19631a21e7b362ad800df030cd3",
+    "docs/fan_rollout_mathematical_review.json": "499754a2265573b9753568acbff06618cc969d79e9c0a5dee81d9247d9a3d046",
+    "data/SafeInvest_Synthetic_Data.csv": "def0177704bf6cb98cec6da325b34208750d988f6ad97ec4a706a0d39e6f82c0",
+    "results/model_review/risk_priced_fan_execution_v1/manifest.json": "a3e5dc61ba2a5b9df1e0b3976f69f25fc5823a7d5f52d1dba344eadd7b0bc321",
+    "results/model_review/risk_priced_fan_execution_v1/context_selections.json": "281fab47e231ab0cd8ebd42d95f47301443e1f3393962b51c10c13a7d06b7a65",
+    "results/model_review/risk_priced_fan_execution_v1/training_candidate_paths.csv": "6969a27d62df0c8b10a439a049e34a358fe9f3dc0ed9d8a14f1823b7e3bc0750",
+    "results/model_review/risk_priced_fan_execution_v1/training_candidate_summary.csv": "0920ed3e86b8b59d75bc446ad3675ba66eaa7f1b0d703afd8b74848a061096ac",
+    "results/model_review/risk_priced_fan_execution_v1/client_paths.csv": "660b2d05831a39dc179c4555f46a146ffa9c79331cd6bf9d35ebaad1e774a46e",
+    "results/model_review/risk_priced_fan_execution_v1/actual_traces.npz": "4e5547b1e563b9562396fc6663ccbaaf7d7ca1a955d44a5337329784a676e5c1",
+    "results/model_review/risk_priced_fan_execution_v1/independent_audit.json": "02c7ac0bf810155c0cf06f927e509620629ce34d508e7bd6d313a6ad53cfdd20"
+  },
+  "execution_sources_sha256": {
+    "scripts/run_bounded_target_updates.py": "f0f893070c028e2be05a37936195806269d8aaeba32a75b9660b72ba3113f8ee",
+    "tests/test_bounded_target_updates.py": "61926ecc0e4b420db3940fc99f6aa04ee8b0d34f9fff6002191f443a55f7267e",
+    "research/experimental_execution/bounded_target_update.py": "5b237da1d3864818d52a62c472089453d65837ec96c3ecb5558538ecea201282",
+    "tests/test_bounded_target_update.py": "564652c1bb013b57c3527863562b34df03d34052f177e0173462d8fc001de865",
+    "research/experimental_execution/risk_priced_fan_rollout.py": "2a935cfe1d039f6a020e104fe92aa659bb92aac2a0b3bed2ef767437015ba472",
+    "research/experimental_execution/fan_rollout.py": "d195d721c895700925e9b24c91640c59737fe4eb542272376d2de78ce62fe1ba",
+    "research/experimental_execution/review_pending.py": "9038d420c9ea48df068c58a6abee3f993ac414f85dd0290cb56e3d703aae3894",
+    "scripts/run_risk_priced_fan_execution.py": "68b34a4b0592f68327c09200b61dc8d980e8fbea7e282518de8164140ffc6bab",
+    "scripts/run_fan_rollout_execution.py": "100fe1fd5f9e3718cbf7e804e4dca736c81b407bc3c93a1a0eb24d47a02732e6",
+    "research/safeinvest_research/metrics.py": "7ec8e4821ce284351a3d8ed7071c687fdf7d6e4cfd225f72cad1d09d623eb008",
+    "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a",
+    "src/safeinvest/data.py": "70e511fd05c6e23fd6b8a72f1dc165426fc77a5eb4dbd8a3c13b839bb305a75f"
+  },
+  "parent_resolution_note": "The risk-price parent protocol acquired only its execution source/test hashes and freeze timestamp after this design draft; its current completed version and results are frozen below. Historical draft digests are not active execution snapshots.",
+  "pre_execution_review_additions": "Before first market replay, independent main review added guarded-array identity against parent and exact nullable first-crossing checks for all fixed candidate/selected replays. No action, grid, objective, cap, tie or evaluation rule changed."
+}

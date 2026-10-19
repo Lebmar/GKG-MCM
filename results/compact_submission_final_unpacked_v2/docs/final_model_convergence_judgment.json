@@ -1,0 +1,318 @@
+{
+  "version": "final-model-convergence-independent-method-judgment-v1",
+  "written_utc": "2026-10-18T09:01:44.173128+00:00",
+  "status": "Final independent methodological judgment on complete frozen overlay with passed bound independent numerical audit",
+  "answer": "Trading-benefit/cost definitions, the main mathematical framework and the admission procedure have converged. A stable, empirically supported automatically deployable investment service for clientC has not been established. The final full-developmentC decision isReview under the retained declared rules.",
+  "evidence_boundary": {
+    "complete_global_manifest_sha256": "5b6449d949999458abe5ea6b8f47a74139ae0bf1699883bf5c8da7646c31c749",
+    "protocol_sha256": "5b3c2fa27300774f24d0195e4817ad3fd5e662f30cf3deffbd29cdc3d5cb0bd0",
+    "current_source_input_output_protocol_hash_checks": 32,
+    "all_checks_passed": true,
+    "raw_market_data_loaded": false,
+    "new_fits_or_simulations_run": false,
+    "final_scenarios_121_180_read": false,
+    "numerical_scope": "Independently tallied saved complete admission/client/trade tables and reconstructed finite scores from exported values. Then verified passed separate overlay audit bound to the exact complete manifest. That audit reuses unchanged parent physical/Q audits and checks complete admission/identity/NULL/score/action consistency; no new raw-market physical/fan recomputation or market-law validation is claimed.",
+    "independent_audit": {
+      "status": "passed",
+      "checks_passed": 605004,
+      "fits_checked": 26,
+      "guard_admitted_fits": 4,
+      "client_records_checked": 2160,
+      "trade_records_checked": 12240,
+      "maximum_numeric_absolute_error": 2.220446049250313e-16,
+      "physical_audit_scope": "Unchanged parent physical and Q audits reused; complete admission/identity/NULL/score/action checks only",
+      "parent_manifest_sha256": "5b6449d949999458abe5ea6b8f47a74139ae0bf1699883bf5c8da7646c31c749",
+      "protocol_sha256": "5b3c2fa27300774f24d0195e4817ad3fd5e662f30cf3deffbd29cdc3d5cb0bd0",
+      "auditor_sha256": "02df47e54ff98d4ee0142c8cfa33d0465b69fcf7da01f435d154bbb5a1535911",
+      "receipt_sha256": "9f85f41112ac59a42f721c84808704cae980ca9cba61d63458ffe2018c77d8b0",
+      "snapshot_files_rehashed": 35
+    }
+  },
+  "what_has_converged": [
+    "Exact self-financing transfer cost accounting and its placement once in net branch wealth; full-original-H paired action-then-B netQ as the risk-adjusted trading estimator.",
+    "A fixed finite technical-controller family with complete-policy risk screening, transparent inner coverage/growth selection and retained topE refit rules, rather than unidentified customer utility coefficients.",
+    "A single retained learner identity joint_tie_set_refit_learner and fixed postfit same-U B admission guard, preserving old beta/eta/target/context and every prior rejection.",
+    "A service contract allowingReview withNULL unavailable financial outcomes, preserving actual post-investment pending returns and original risk history.",
+    "A stopping decision: do not expand the family, retunealpha, select a favorable repeat, remove the guard or change a target to obtain a flattering deployment result."
+  ],
+  "what_has_not_been_achieved": [
+    "A robust deployable automaticC policy under the finalfull120admission rule.",
+    "Stable admission across repeated training samples or a demonstrated true/state-conditional10%risk bound.",
+    "Identification of client risk preference, KKT multipliers, a globally optimal policy or a calibrated conditional joint-return distribution.",
+    "A fresh blind or independent confirmatory evaluation; the original120development paths have repeatedly informed model design."
+  ],
+  "final_full_development_decision": {
+    "context": "full_development",
+    "selected_beta": 0.075,
+    "unchanged_selected_candidate_order": 4,
+    "unchanged_eta_technical": 0.03,
+    "inner_U": 120,
+    "selected_inner_events": 10,
+    "same_U_B_events": 8,
+    "absolute_alpha_event_cap": 12,
+    "selected_inner_fraction": 0.08333333333333333,
+    "same_U_B_fraction": 0.06666666666666667,
+    "absolute_cap_passes": true,
+    "same_U_B_passes": false,
+    "decision": "execution_review",
+    "interpretation": "The final selected procedure has10inner events on120automatic inner records, which meets the absolute12-event reference but exceedsB8on identicalU. Review is caused by the additional conservative B-relative service rule, not by failure of the absolute10%empirical bound.",
+    "important_estimand": "The10events concern original fourinner fits at the fixed final-selectedbeta; each inner fit had its own target and choseneta. They are not independent validation of the finalsingleeta=.03/full120target. Final120financial rows are in_sample_full120and allNULL after admissionReview."
+  },
+  "repeated_outer_evidence": {
+    "per_repeat": [
+      {
+        "repeat_id": 1,
+        "original_n": 120,
+        "automatic_records": 0,
+        "breach_count": null,
+        "conditional_risk": null
+      },
+      {
+        "repeat_id": 2,
+        "original_n": 120,
+        "automatic_records": 24,
+        "breach_count": 5.0,
+        "conditional_risk": 0.2083333333333333
+      },
+      {
+        "repeat_id": 3,
+        "original_n": 120,
+        "automatic_records": 0,
+        "breach_count": null,
+        "conditional_risk": null
+      },
+      {
+        "repeat_id": 4,
+        "original_n": 120,
+        "automatic_records": 24,
+        "breach_count": 1.0,
+        "conditional_risk": 0.0416666666666666
+      },
+      {
+        "repeat_id": 5,
+        "original_n": 120,
+        "automatic_records": 48,
+        "breach_count": 3.0,
+        "conditional_risk": 0.0625
+      }
+    ],
+    "fit_counts": {
+      "old_automated_across26": 13,
+      "old_rejections_preserved": 13,
+      "additional_same_U_rejections": 9,
+      "retained_automated": 4,
+      "outer_fits_automated": 4,
+      "outer_fits_total": 25
+    },
+    "reason_counts": {
+      "inner_risk_exceeds_same_U_B": 9,
+      "no_top_inner_beta": 7,
+      "no_refit_feasible_beta_in_top_E": 6,
+      "passed": 4
+    },
+    "adverse_repeat": "Repeat2has5/24=20.8333%conditional exceedance, despite passing the prospective inner absolute+B-relative guard. Its P90MDD is.446943, aboveL=.40. This must be displayed plainly, not hidden by a pooled risk fraction or lower-risk repeats.",
+    "zero_coverage": "Repeats1and3have no automatic paths; their conditional risk/growth areNULL, not0. They provide no financial evidence for a servedCpopulation.",
+    "dependence": "The96automatic scenario-repeat records span74original scenarioIDs and arise from4overlapping-training fits. They are not96independent market trials for one fixed deployed rule or proof of16%population service coverage.",
+    "admission_timing": "Each fit one admission applies uniformly before all24future paths; auto IDs reflect which training fit held them out, not a future-aware decision to serve safer realized paths.",
+    "comparison_limit": "B/equal-thirds reference summaries have different broader availability. Comparing their full120risk with the model24/48risk directly is not a same-population policy effect. Pair exact commonauto IDs before attributing financial differences.",
+    "same_population_B_comparison": [
+      {
+        "repeat_id": 0,
+        "scope": "in_sample_full120",
+        "original_n": 120,
+        "common_auto_n": 0,
+        "model_breaches": null,
+        "B_breaches": null,
+        "mean_delta_log_growth": null,
+        "mean_delta_mdd": null,
+        "mean_delta_nominal_fees": null,
+        "mean_delta_trade_fraction": null
+      },
+      {
+        "repeat_id": 1,
+        "scope": "outer_oof",
+        "original_n": 120,
+        "common_auto_n": 0,
+        "model_breaches": null,
+        "B_breaches": null,
+        "mean_delta_log_growth": null,
+        "mean_delta_mdd": null,
+        "mean_delta_nominal_fees": null,
+        "mean_delta_trade_fraction": null
+      },
+      {
+        "repeat_id": 2,
+        "scope": "outer_oof",
+        "original_n": 120,
+        "common_auto_n": 24,
+        "model_breaches": 5,
+        "B_breaches": 4,
+        "mean_delta_log_growth": 0.003268024758102826,
+        "mean_delta_mdd": 0.01992906895128281,
+        "mean_delta_nominal_fees": -0.2460673135045123,
+        "mean_delta_trade_fraction": -0.6611111111111111
+      },
+      {
+        "repeat_id": 3,
+        "scope": "outer_oof",
+        "original_n": 120,
+        "common_auto_n": 0,
+        "model_breaches": null,
+        "B_breaches": null,
+        "mean_delta_log_growth": null,
+        "mean_delta_mdd": null,
+        "mean_delta_nominal_fees": null,
+        "mean_delta_trade_fraction": null
+      },
+      {
+        "repeat_id": 4,
+        "scope": "outer_oof",
+        "original_n": 120,
+        "common_auto_n": 24,
+        "model_breaches": 1,
+        "B_breaches": 0,
+        "mean_delta_log_growth": 0.0027257601610605775,
+        "mean_delta_mdd": 0.028184627639416007,
+        "mean_delta_nominal_fees": -0.3683324869096229,
+        "mean_delta_trade_fraction": -0.7430555555555557
+      },
+      {
+        "repeat_id": 5,
+        "scope": "outer_oof",
+        "original_n": 120,
+        "common_auto_n": 48,
+        "model_breaches": 3,
+        "B_breaches": 2,
+        "mean_delta_log_growth": 0.003412523466253512,
+        "mean_delta_mdd": 0.02073007130226095,
+        "mean_delta_nominal_fees": -0.3820220066586352,
+        "mean_delta_trade_fraction": -0.7125
+      }
+    ],
+    "same_population_judgment": "On every nonempty common-auto repeat, model event count is one higher thanB:5vs4,1vs0,3vs2. Mean annualized log growth is higher by about.002726-.003413, meanMDD higher by.019929-.028185, while mean nominal fees and trade fractions are lower. This is a growth/cost/risk tradeoff, not risk dominance or a free fee-saving improvement. These are paired descriptive development contrasts, not independent causal or population-risk estimates."
+  },
+  "cost_benefit_method_and_evidence": {
+    "score": "Finiteeta uses S=DeltaNetQg-H_original*eta*DeltaP; DeltaNetQg already contains current and future continuation fees. No additional fee subtraction is legitimate.",
+    "technical_parameter": "Eta generates controllers in a predeclared finite family. It is not questionnaire-identified customer aversion, an exact KKT/dual price or a guarantee. The earlier retired client-lambda claim is not revived by givingeta this technical role.",
+    "actual_optimization_scope": "At a fixedbeta, select greatest complete-trainingGamong9controllers satisfying k<=min(kB,floor(beta*n)); then inner procedure maximizes eligible automaticcoverage, then conditionalgrowth andretainedErefit feasibility. This is not unconstrained globalGmaxover all causalpolicies.",
+    "risk_adjusted_legitimacy": "The problem qualitative benefitjustifiescost condition can include explicit modeled risk reduction. Negative unpricedDeltaQg may be accepted under a positive risk-adjusted score, with whole-policy risk separately checked. This is a transparent modeling interpretation, not positive expected cash-profit evidence or elicited willingness to pay.",
+    "score_reconstruction": {
+      "active_optional_rows": 11416,
+      "finite_rows": 11416,
+      "risk_first_rows_in_current_saved_selected_traces": 0,
+      "maximum_abs_exported_score_residual": 2.0816681711721685e-16,
+      "restoration_rule_matches_all_reconstructed_finite_scores": true
+    },
+    "trace_scope": {
+      "all_saved_rows": 12240,
+      "old_originally_automated_accounts": 408,
+      "mandatoryinitial_rows": 408,
+      "pending_rows": 416,
+      "scope": "All408old originally automated account traces, including those rejected by the addedguard; not all of them are final service outcomes."
+    },
+    "all_old_automated_optional_trade_stats": {
+      "optional_restores": 2963,
+      "strict_sacrifice_restores": 1276,
+      "fraction": 0.4306446169422882,
+      "negative_delta_Qg_quantiles": {
+        "0.0": -0.0317632280637566,
+        "0.1": -0.012223010193806401,
+        "0.5": -0.005532430541719,
+        "0.9": -0.0015655205132212,
+        "1.0": -3.4360254896226294e-05
+      },
+      "paired_predicted_delta_p_quantiles": {
+        "0.0": -0.0520833333333333,
+        "0.1": -0.0208333333333333,
+        "0.5": -0.0104166666666666,
+        "0.9": -0.0083333333333333,
+        "1.0": -0.0083333333333333
+      },
+      "mean_actual_current_fee_on_sacrifice": 0.14817077711610005
+    },
+    "only_final_guard_approved_optional_trade_stats": {
+      "optional_restores": 678,
+      "strict_sacrifice_restores": 302,
+      "fraction": 0.44542772861356933,
+      "negative_delta_Qg_quantiles": {
+        "0.0": -0.0272678106726638,
+        "0.1": -0.01516725490682261,
+        "0.5": -0.006212887065686949,
+        "0.9": -0.0012766565648604684,
+        "1.0": -3.4360254896226294e-05
+      },
+      "paired_predicted_delta_p_quantiles": {
+        "0.0": -0.0416666666666666,
+        "0.1": -0.0208333333333333,
+        "0.5": -0.0104166666666666,
+        "0.9": -0.0104166666666666,
+        "1.0": -0.0104166666666666
+      },
+      "mean_actual_current_fee_on_sacrifice": 0.1299973935871831
+    },
+    "negative_growth_invariant": "All1276strict net-Q-sacrifice restorations have negative paired model breach-probability change. This demonstrates the stated reason within the forecast surrogate; it does not demonstrate realized risk reduction or a true conditional benefit.",
+    "units_and_overlap": "A negativeDeltaQg is a relative expected terminal log-wealth contrast of restoration againstholdingnow underBcontinuation, not necessarily a negative portfolio return. It is total-log, not annualCAGR. Its lookahead branches overlap acrossdates, so those gaps cannot be summed into realized policy loss/gain.",
+    "initial_and_pending": "Mandatory initial fees are included but are not optional score approvals; initial and pending estimates remain absent under the old frozen schema. Pendingactual paths remain fully financially accounted, whereas rejected predeployment service outputs areNULL."
+  },
+  "normative_rules_strength_review": {
+    "alpha10": "A declared service benchmark motivated by reporting convention, not a questionnaire estimate, contest mandate, confidence level or empirically proved future ceiling.",
+    "same_U_B_hard_gate": "It is stronger than the absolutechance-style constraint: it forbids any empirical inner event increase overB, even when both procedures lie below10%and the new procedure has other benefits. With no elicited willingness to spend additional risk, that is a coherent conservative service choice.",
+    "why_it_is_not_required": "The contest qualitative riskbenefit requirement does not uniquely require empirical nonworsening versusB. The fullC10versus8comparison shows the extra guard is decisive. These two events do not establish statistical significance, a true risk ordering or client rejection of the policy.",
+    "sample_granularity": "Exact integer nonworsening can flip admission with one or two events; ownUcan be as small as24in a retainedfit. No newminimumUor noninferioritymargin is justified by these outcomes; report the amount of evidence instead of silently weakening or strengthening the gate.",
+    "baseline_status": "B is an accounting/risk reference for an existingQ1target, not a cost-benefit-approved automaticfallback. Its9/120fullsample risk is neither sufficient to deploy it underQ2nor a future risk guarantee.",
+    "local_alpha_failure": "The failed local-cap rule imposed a statewise additional heuristic constraint; its failure does not disprove a globally chance-feasible policy. Conversely, the restored globalframework does not gain a safety theorem merely because its constraint object is more closely aligned with the originalH event.",
+    "decision": "Keep the norms transparent and unchanged. Do not remove the B-relative guard, increasealpha, pickanotherEbeta, turn toannualB or claim a different architecture is now the winner to improve coverage. Review is the correct finalfullCdecision under the chosen contract.",
+    "conservative_but_not_certifying": "The same-U rule can be restrictive for service availability and still fail to guarantee future nonworsening: all three nonempty outer common groups have one more model event thanB. Greater nominal conservatism is not calibrated predictive certainty. Do not respond to this tension by loosening the gate to obtain coverage or claiming that its current strictness makes approved fits safe."
+  },
+  "development_history_and_claims": {
+    "retention_history": "Restoring the retained globallearner as the main framework is an openly documented subsequent development judgment. It was not the unchanged final principal throughout the two later failed experiments; do not write a retrospective preregistration narrative.",
+    "failed_experiments": "The recent positive-net-growth and constrainedlocal rules retain their allReview results. They diagnose insufficiency of their particular local economics/risk rules and forecasts, not impossibility of allCservice.",
+    "what_review_means": "The tested fixedtarget/action/candidate/forecast/evidence procedures do not currently support robust automaticCdeployment under the finalnorms. The study does not show that every safe profitable policy is infeasible or thatCmust never invest.",
+    "honest_main_result": "Present a complete cost-aware risk-adjusted strategylearning/service model and a finalReview outcome, together with the remaining forecast/data/support limitations. Do not call allReview a successful investable portfolio; do not erase the limited old fit-level automatic cases either.",
+    "research_completion": "The present phase has completed definitions, implementation, reproducibility and admissibility convergence sufficiently to explain the model. Deployment efficacy remains an explicit negative/unresolved result, not a fact repaired by interpretation."
+  },
+  "final_disposition": {
+    "framework": "retain_complete_policy_global_constraint_framework",
+    "controller": "joint_tie_set_refit_learner_with_frozen_same_U_B_admission_overlay",
+    "client_C_full120": "Review",
+    "additional_family_search": "none",
+    "risk_guarantee": "not_established",
+    "independent_overlay_audit_status_at_writing": "passed_bound_to_current_manifest"
+  },
+  "checked_file_sha256": {
+    "scripts/finalize_global_policy_admission.py": "8d4b1e2ed8844752aa689637c733e662d54cc6504720dbd2e284fd7b3f3957f0",
+    "tests/test_global_policy_admission.py": "94697283648123024c5171ec7de889f5706aff047a64fff16f6dd87318d04be8",
+    "docs/global_policy_retention_and_cost_review.json": "a0763c8a020f655ca5df710f46392b1cbe4fcf05c2e7adbd412a5f539682f295",
+    "docs/objective_risk_decision.json": "0ad119355fb399c9ca52b47742ec581b1d1448b414cc5361594c4efec342a473",
+    "docs/joint_liquidity_refit_protocol.json": "1e92a4f7b374bd7437315c89e513a830f12211b54cb08d3c4341dffdc9f1e3f6",
+    "docs/refit_stability_protocol.json": "8e9ab035073b91e4004c76c41296c56665d2199620e92d8cc0eb4eaca7a4efae",
+    "results/model_review/joint_liquidity_refit_v1/manifest.json": "28819dca54041e22ae53ac924b71e023c005f96cd73ca66d102b3a1ac20a4c99",
+    "results/model_review/joint_liquidity_refit_v1/independent_audit.json": "16339e76e41e07b6f37fbd0c88baff3ffe77d245e77258ef9bc8060fd79b3a15",
+    "results/model_review/joint_liquidity_refit_v1/context_selections.json": "9620df702547f68f7c0d304e664d5bb433500c08138a492a4bdba9fae2d4321b",
+    "results/model_review/joint_liquidity_refit_v1/trace_groups.json": "47b931c0e2509ecc5dfc2d47f1d87dfa0bb22fd2651e794509593098f4c21b8a",
+    "results/model_review/joint_liquidity_refit_v1/actual_traces.npz": "3db95752784aa8ee834a4a921cc8e8ed5d9ef899d9eb11ff01d9be409f70499c",
+    "results/model_review/joint_liquidity_refit_v1/inner_validation_paths.csv": "2a15b1ade1956029707689e55c4545f6500cecff84b05d7cbc546d717e602480",
+    "results/model_review/joint_liquidity_refit_v1/client_paths.csv": "821447bb511aef53fb7743d7ddcf763d7f3acf007993b52ce26897c1a59d4c2e",
+    "results/model_review/refit_stability_v1/manifest.json": "035bfa20b4e659e88ff48b56ffdc21a6563db32a0490d2ec8a6852154018e5a5",
+    "results/model_review/refit_stability_v1/independent_audit.json": "7725716ddbfb2da1071027936fc90374668f99161e6e15b57fd3f80b90a9e712",
+    "results/model_review/refit_stability_v1/context_selections.json": "3e9ff0e536857b2d4366d5368ad5c22f42a00402335f3e7426872ff6e693c13b",
+    "results/model_review/refit_stability_v1/trace_groups.json": "d218fdcf9e4390cb31f753d3836fa81b9049d7fba540921d5268a2933e679d97",
+    "results/model_review/refit_stability_v1/actual_traces.npz": "42ba3f4ef3144cc2fc0e826e2693910387c4ed70278e76da5a02d7677a6aa549",
+    "results/model_review/refit_stability_v1/inner_validation_paths.csv.gz": "724b90003b8dc3fa251269f82d2d276ad984c4f9d2419629cedf064cd7c80155",
+    "results/model_review/refit_stability_v1/client_paths.csv.gz": "47c487dc12e5969f26450da66a350548dc81464e4562fa655c9f80c08f7481c7",
+    "results/model_review/joint_liquidity_refit_v1/static_refits.json": "f46236a5b3c49973cf6d4286b8f711a7ad44f39b0871c7605e5a18ce873038dd",
+    "results/model_review/benefit_cost_execution_v1/manifest.json": "84210684a3dea11b1670c27a72274644bfb2b55623d5fc35da522128142f1230",
+    "results/model_review/benefit_cost_execution_v1/independent_audit.json": "8171abb5da337416e1b6a0d79bdbcbb14c9aecd4047c60636fc2730bfd26b772",
+    "results/model_review/benefit_cost_execution_v1/inner_reference_paths.csv.gz": "d762c4b88c64c6d9a82607d551512f5a610a24d64e44d4f123bc24753904d4e6",
+    "results/model_review/constrained_fan_execution_v1/manifest.json": "0db6897a5b5390adcb0727cc3421d462713a622c5239f81233371b0b2d0a5e80",
+    "results/model_review/constrained_fan_execution_v1/independent_audit.json": "69fb683db7e6ca9c59b9df3047ea18d3103dd910249469c4788295d0976074c2",
+    "results/model_review/global_policy_admission_v1/client_paths.csv.gz": "6a83e5cd4fbc913dbff89d290bf940a17cb23c2f34ad3225d6c0d03611f95124",
+    "results/model_review/global_policy_admission_v1/admission.csv.gz": "b839933592a506a0b4d311b80da1fba0fd354088ea8bebc54c8128f4a46f78ee",
+    "results/model_review/global_policy_admission_v1/summary.csv.gz": "a8108b91378c2db4be72d7e3e2aa5c57c661b4d55af9e675993835e1d4f77684",
+    "results/model_review/global_policy_admission_v1/trade_estimates.csv.gz": "e2f41f619c873096da8ebcf6d7c10e49b2c302bb6655a21d45420938067fda8c",
+    "results/model_review/global_policy_admission_v1/admission.json": "d3b30953e461fb1781108e3df9e9c885f5b28e10e185567f58cbeac15eddd1a3",
+    "docs/global_policy_admission_protocol.json": "5b3c2fa27300774f24d0195e4817ad3fd5e662f30cf3deffbd29cdc3d5cb0bd0",
+    "results/model_review/global_policy_admission_v1/independent_audit.json": "9f85f41112ac59a42f721c84808704cae980ca9cba61d63458ffe2018c77d8b0"
+  },
+  "current_manifest_unchanged_at_end": "5b6449d949999458abe5ea6b8f47a74139ae0bf1699883bf5c8da7646c31c749"
+}

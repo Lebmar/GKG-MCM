@@ -1,0 +1,97 @@
+{
+  "version": "frozen-strict172-risk-priced-calendar-fan-learner-v1",
+  "date_beijing": "2026-10-17",
+  "status": "Prospective procedure for a new exploratory development learner; written after inspecting earlier development candidates, before any price-family results. No fresh-data preregistration, final policy selection or final-set access.",
+  "purpose": "Move from a local forecast-risk comparison to an explicit whole-policy training risk screen. Learn an execution tradeoff parameter from full original-H paths rather than eliciting an unsupported customer risk-aversion coefficient or assuming policy risk is monotone in that parameter.",
+  "frozen_components": {
+    "strict_protocol": "docs/positive_asset_specification_protocol.json",
+    "strict_manifest": "results/model_review/positive_asset_specification_v1/manifest.json",
+    "contexts": "results/model_review/positive_asset_specification_v1/nested_context_refits.json",
+    "mapping": "results/model_review/positive_asset_specification_v1/candidate_mapping.json",
+    "full_original_paths": "results/model_review/positive_asset_specification_v1/nested_full_paths.csv",
+    "outer_original_paths": "results/model_review/positive_asset_specification_v1/nested_outer_oof_paths.csv",
+    "calendar_fan_core": "research/experimental_execution/fan_rollout.py",
+    "calendar_fan_protocol": "docs/fan_rollout_execution_protocol.json",
+    "pending_protocol": "docs/review_pending_execution_protocol.json",
+    "mathematical_limitations": "docs/fan_rollout_mathematical_review.json"
+  },
+  "scope": {
+    "data": "Guarded complete original development scenarios1--120 only; never parse121--180. Use all five original clients at their own H/L, original100/all-bills inception, exact0.25% transferred-money cost, and initial plus annual-endpoint net real wealth.",
+    "products": "Freeze each context's strict172 product menu and effective risk-only assignments. No refit of weights, menu, nested gamma, liquidity floor or customer preference. Their risk-only suitability remains partial on the liquidity dimension.",
+    "training_and_evaluation": "One full120 descriptive training/refit context and the exact five96-train/24-test outer contexts. Each execution price is selected using only its own training paths. Evaluate that already selected execution learner on its24 held-out paths; pool one OOF row per original client/scenario. Previously reused development data and overlapping training folds remain explicit."
+  },
+  "forecast_and_score": {
+    "reference_fan": "Same fixed equally weighted training calendar suffixes t..original H, preserving each joint asset/inflation path and chronology. This remains an unconditional recombined fan, not the actual conditional law given observed history. No Monte Carlo draws, annual IID assumption or Bellman improvement theorem is invoked.",
+    "Q": "At the actual active state compare hold and restore, followed in both cases by B=annual restore until that simulated continuation's own first annual breach, then pending hold. Carry actual holdings/CPI/peak/MDD/b and original H; include all current/future baseline fees. Qg is mean future total log real growth; qfan is integer terminal-bad count divided by common fan size.",
+    "finite_price_gate": "For annual price eta, compute advantage=Qg_restore-Qg_hold-H_original*eta*(qfan_restore-qfan_hold). Restore iff advantage>1e-12 in total-log score units; otherwise hold. H_original is fixed through the account, never replaced by remaining h. The price multiplies only one terminal everbreach indicator, not a sum of annual flags.",
+    "risk_first_gate": "One additional declared lexicographic candidate: restore if its terminal-bad integer count is strictly smaller, hold if it is larger, and if counts tie use the growth-only total-log gate. This is explicitly a different limiting priority rule; do not evaluate infinity times zero.",
+    "inception_and_pending": "Mandatory common initial restoration. After the actual policy's own first breach, hold through original H with no human response. Initial/pending decisions have null Q and are separate from post-inception benefit-gate statistics.",
+    "meaning": "Eta is a technical finite-family execution parameter chosen by whole-policy empirical feasibility and growth. It is not elicited customer risk aversion, an identified KKT shadow price, an exact dual minimizer, or a carried conditional risk budget. Positive score means positive estimated penalized net benefit in this stated approximation, not a guaranteed return or exact constrained optimum."
+  },
+  "candidate_family": {
+    "annual_prices": [
+      0,
+      0.001,
+      0.003,
+      0.01,
+      0.03,
+      0.1,
+      0.3,
+      1
+    ],
+    "additional_candidate": "risk_first",
+    "order": "Ascending finite annual price followed by risk_first; this order is also the final numerical tie rule.",
+    "range_rationale": "The finite grid spans three orders of magnitude of the risk tradeoff plus unpriced growth and a risk-first limit. For a1 percentage-point change in forecast breach probability, finite positive prices correspond to0.00001..0.01 annual log-growth units, multiplied by original H in the total-log score. This is a transparent technical search range, not an identified human preference or continuous optimum.",
+    "commitment": "Do not expand the grid, change tie thresholds, choose a favorable horizon or select a new policy using OOF outcomes. If the optimum lies at a boundary or choices vary across folds, report that limitation. No assumed monotonic relationship between eta and full-policy risk; replay every candidate."
+  },
+  "whole_policy_selection": {
+    "per_context_and_client": "For every served frozen profile replay all nine candidates on every training path at that client's original H. Separately replay the same context's frozen annual-then-pending reference, whose everbreach equals original annual by the earlier coupling identity.",
+    "risk_cap": "A candidate is training-eligible only if its integer full-H breach count is no greater than min(reference training breach count, floor(0.10*n_training+1e-12)). Thus the new execution does not spend more empirical risk than its original reference. This relative cap is a declared conservative development choice, not calibrated evidence of a probability bound or an inherited nested gamma.",
+    "growth_objective": "Among training-eligible candidates maximize mean annualized log real growth. Candidates within1e-12 annual-log units of the maximum tie; take the earliest candidate in the predeclared order.",
+    "failure": "If no candidate is training-eligible, the new execution learner requests review BEFORE investment for that context/profile. Do not add the ungated annual policy as a hidden eligible fallback. Preserve the original risk-only product assignment separately, record execution_family_no_admissible_policy, retain all original rows and leave new financial outcomes null. Existing A/D or other frozen Review remains null and is not re-admitted.",
+    "no_global_claim": "This is sequential frozen-product execution learning, not joint product/control optimization. Full training is descriptive resubstitution. Only selected prices are applied to outer test paths; unselected OOF performance is not a selection input. Empirical feasibility does not certify unknown risk."
+  },
+  "outputs": {
+    "selection": "Every context/client's original risk assignment, training denominator/reference risk cap, all candidate training growth/risk/cost/trade summaries, eligibility, selected candidate/price or review reason and relevant source version.",
+    "selected_evaluation": "One full and one pooled OOF set for each original client/policy, including all120 original scenario rows and null Review. Main comparison is selected learner versus annual-then-pending. Report both coverage and conditional automatic metrics, and paired comparisons only on their explicit common served subset.",
+    "metrics": "Same path-level annualized log growth, CAGR, terminal real wealth, sample annual volatility, annual MDD/excess/everbreach/first crossing, fees, moved amounts and trade fraction; pooled median/P10 growth and median/P90/CVaR90 MDD from individual paths, never averaged fold quantiles. No pooled fixed-policy binomial certificate.",
+    "traces": "Keep actual selected actions/states/fees/Qg, integer qbad/fan denominator, selected annual/total price, score/decision reason and pending state. Every active post-inception restoration has strictly positive computed score (or a clearly labeled lexicographic risk-first reason). Unpriced growth sacrifice and avoided predicted risk are shown separately.",
+    "training_family": "Save per-path training candidate metrics and per-candidate/context summaries so the selected parameter can be reconstructed without evaluating unselected candidates on outer test data. Full training supports overlap; they are not600 independent paths per client."
+  },
+  "acceptance": [
+    "Freeze all sources/inputs before new market replay; start/end hashes agree and only allowed development returns are parsed.",
+    "Reuse exact strict172 indices/targets/H/L/effective assignments and original folds; baseline annual and pending reproduce their frozen artifacts.",
+    "Eta0 reproduces the already frozen growth_only_rollout from identical state/fan/H/cost, including total-log tie units, initial fees, actual actions and pending.",
+    "Independent scalar synthetic fan/price/whole-policy tests verify both finite and risk-first gates, original H scaling, no double penalty, original peak/b persistence, no future actual observation in a gate and exact fee accounting.",
+    "Reconstruct every training eligibility and selection from full-path candidate data with integer caps, original denominators, deterministic growth ties and no monotonic-risk shortcut.",
+    "No-eligible and frozen-Review rows stay null with explicit reasons, coverage and all original paths; selected-price test paths are never used for selection.",
+    "Independently replay all saved selected real transitions and a declared Q subset, including selected original/total price and score sign; do not hide numerical boundary discrepancies or change the policy to pass.",
+    "Report price instability/boundaries, empirical/forecast limits and unresolved liquidity/target-update/final-evaluation requirements; no final winner or actual-market safety claim."
+  ],
+  "independent_Q_subset": "For every automatically served context/client of the selected learner, take the smallest evaluation scenario ID and returnyears2,floor(H/2)+1,H (deduplicate). Audit only actual active recorded Q states; record initial/pending/onboardingReview skips without replacing identities. Independently use all frozen training suffixes, scalar bisection fees, selected original-H score and exact integer risk-first comparisons.",
+  "frozen_input_sha256": {
+    "docs/positive_asset_specification_protocol.json": "ff23c3fcdad54d83a2896a11459db1cec3e4f48fe6352d994139e4c9ff79475c",
+    "results/model_review/positive_asset_specification_v1/manifest.json": "da65841decff7d50ec7baa8fe80c4e6593112ea0c7d083affe2a0dd68f2f306e",
+    "results/model_review/positive_asset_specification_v1/nested_context_refits.json": "d13450e05051c02d2bf54a4edfc77ef01d880cee0c78238cc3d7204a6ab27aa1",
+    "results/model_review/positive_asset_specification_v1/candidate_mapping.json": "c6221636a667536cbf1e4dbaa132c4cca1b00efb692dc180f5fc189655a744d5",
+    "results/model_review/positive_asset_specification_v1/nested_full_paths.csv": "bb72ae6b72ea72da01f800fd0f9ae0139046c8684e67374cc0966fb849d52516",
+    "results/model_review/positive_asset_specification_v1/nested_outer_oof_paths.csv": "4a4a9dba68e824b3dc13161391433be25ec9eb5fc873e4bdc6548eb23ab67c8f",
+    "research/experimental_execution/fan_rollout.py": "d195d721c895700925e9b24c91640c59737fe4eb542272376d2de78ce62fe1ba",
+    "docs/fan_rollout_execution_protocol.json": "dece4b446f8bd20ee5590ffc1188b13ddd57f19631a21e7b362ad800df030cd3",
+    "docs/review_pending_execution_protocol.json": "8e85cff91a0f0459b0b67d5e76d3f87c3988b89992251fcbf067393f6776a559",
+    "docs/fan_rollout_mathematical_review.json": "499754a2265573b9753568acbff06618cc969d79e9c0a5dee81d9247d9a3d046"
+  },
+  "execution_sources_sha256": {
+    "scripts/run_risk_priced_fan_execution.py": "68b34a4b0592f68327c09200b61dc8d980e8fbea7e282518de8164140ffc6bab",
+    "tests/test_risk_priced_fan_execution.py": "9b413e2325d6f90223621edc2d99af62d1001f91035eda5c393e974d8b461943",
+    "research/experimental_execution/risk_priced_fan_rollout.py": "2a935cfe1d039f6a020e104fe92aa659bb92aac2a0b3bed2ef767437015ba472",
+    "tests/test_risk_priced_fan_rollout.py": "043bdc4f7f3cec0e9edec85250e3d6c3a05a90093dc2dc596f9c0ac17915aa0c",
+    "research/experimental_execution/fan_rollout.py": "d195d721c895700925e9b24c91640c59737fe4eb542272376d2de78ce62fe1ba",
+    "research/experimental_execution/review_pending.py": "9038d420c9ea48df068c58a6abee3f993ac414f85dd0290cb56e3d703aae3894",
+    "scripts/run_fan_rollout_execution.py": "100fe1fd5f9e3718cbf7e804e4dca736c81b407bc3c93a1a0eb24d47a02732e6",
+    "research/safeinvest_research/metrics.py": "7ec8e4821ce284351a3d8ed7071c687fdf7d6e4cfd225f72cad1d09d623eb008",
+    "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a",
+    "src/safeinvest/data.py": "70e511fd05c6e23fd6b8a72f1dc165426fc77a5eb4dbd8a3c13b839bb305a75f"
+  },
+  "execution_freeze_utc": "2026-10-17T14:36:33.319413+00:00"
+}

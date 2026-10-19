@@ -1,0 +1,4088 @@
+{
+  "status": "passed",
+  "version": "fixed-model-technical-delivery-addendum-v1",
+  "completed_utc": "2026-10-19T08:53:38.738732+00:00",
+  "parent_checkpoint_sha256": "a00d813b70eaddceb13083d9b24161754332bf44e63584c70927c9ec4edd7b22",
+  "all_parent2061_files_unchanged": true,
+  "all_old1055_files_unchanged": true,
+  "model_parameters_and_admission_changed": false,
+  "new_fits": 0,
+  "new_selections": 0,
+  "final_scope": "previously_exposed_nonblind",
+  "new_independent_validation": false,
+  "archive": "dist/Team87_Lebmar_Technical_Source_v2.zip",
+  "archive_bytes": 3135797,
+  "archive_sha256": "78b710d75f9cba9497ac6059995ac874dfa30a949b06a8072088235cd3f2d4dc",
+  "members": 564,
+  "strictly_below_50000000": true,
+  "fresh_unpacked_final_replay": {
+    "status": "passed",
+    "physical_accounts": 720,
+    "objects": 14,
+    "path_rows": 840,
+    "comparisons": 8,
+    "arrays": 505,
+    "all505_dtype_shape_values_exact": true,
+    "all11_artifacts_byte_exact": true,
+    "artifacts": {
+      "traces.npz": {
+        "original_sha256": "4383cb1cdcd812b120a512557c9d0463c58de35ce725a7d668fb378b76be513a",
+        "replay_sha256": "4383cb1cdcd812b120a512557c9d0463c58de35ce725a7d668fb378b76be513a",
+        "bytes_equal": true
+      },
+      "Q2_paths.csv.gz": {
+        "original_sha256": "d10bd18cd2de024739c82b4ce8d71059ffcf8a0f4cd0e9a8a8731b1f66b5be91",
+        "replay_sha256": "d10bd18cd2de024739c82b4ce8d71059ffcf8a0f4cd0e9a8a8731b1f66b5be91",
+        "bytes_equal": true
+      },
+      "Q1_thirds_references.csv.gz": {
+        "original_sha256": "77441aa07751feb06f64888619358f1231d73ee34bd1f2595e7cdf16ef79212a",
+        "replay_sha256": "77441aa07751feb06f64888619358f1231d73ee34bd1f2595e7cdf16ef79212a",
+        "bytes_equal": true
+      },
+      "comparisons.json": {
+        "original_sha256": "5d2c2a89e568ea9cdd5a03f3d8feb89ac74103061f54869166c3074383323793",
+        "replay_sha256": "5d2c2a89e568ea9cdd5a03f3d8feb89ac74103061f54869166c3074383323793",
+        "bytes_equal": true
+      },
+      "initial_witness.json": {
+        "original_sha256": "e7e6f0e28ba67b784ab78f0111734cc1fa7be7f8ed6516edcdec9b6c1a88eb72",
+        "replay_sha256": "e7e6f0e28ba67b784ab78f0111734cc1fa7be7f8ed6516edcdec9b6c1a88eb72",
+        "bytes_equal": true
+      },
+      "trace_groups.json": {
+        "original_sha256": "6543fb2e3d64a8c9415822b123588fb6505112810ef304f15b56d06d644fc833",
+        "replay_sha256": "6543fb2e3d64a8c9415822b123588fb6505112810ef304f15b56d06d644fc833",
+        "bytes_equal": true
+      },
+      "severe_example.json": {
+        "original_sha256": "f7b8ecbbf0ef2880067542dd6ce231d6fb95172a473032426e514b7faf233edf",
+        "replay_sha256": "f7b8ecbbf0ef2880067542dd6ce231d6fb95172a473032426e514b7faf233edf",
+        "bytes_equal": true
+      },
+      "summary.csv.gz": {
+        "original_sha256": "c050b0fac11437dfb7c8879f58db7f65de94346521362b5828ac998f6c42d6bc",
+        "replay_sha256": "c050b0fac11437dfb7c8879f58db7f65de94346521362b5828ac998f6c42d6bc",
+        "bytes_equal": true
+      },
+      "object_specification.json": {
+        "original_sha256": "e3d688efed00bccd9483cc4814d88533fa17d6c18d4f7874e79b3e97d15f4efe",
+        "replay_sha256": "e3d688efed00bccd9483cc4814d88533fa17d6c18d4f7874e79b3e97d15f4efe",
+        "bytes_equal": true
+      },
+      "paired_paths.csv.gz": {
+        "original_sha256": "84b2f17708845785592dfc0a61d694255e14c063511fa0de6073aeab7928ea37",
+        "replay_sha256": "84b2f17708845785592dfc0a61d694255e14c063511fa0de6073aeab7928ea37",
+        "bytes_equal": true
+      },
+      "Q1_paths.csv.gz": {
+        "original_sha256": "7c311a2115ba2bf8a56ba5b23e364ddeadca1f9ea221468f14e1f13a253d6828",
+        "replay_sha256": "7c311a2115ba2bf8a56ba5b23e364ddeadca1f9ea221468f14e1f13a253d6828",
+        "bytes_equal": true
+      }
+    }
+  },
+  "development225_fields_replay_passed": true,
+  "default505_fields_constructed_smoke_passed": true,
+  "unit_tests": {
+    "historical_full_suite": 1419,
+    "metadata_v2_focused": 22,
+    "compact_final_focused": 13,
+    "full_suite_rerun_after_additive_helpers": false
+  },
+  "paper_regenerated": false,
+  "CMT_uploaded": false,
+  "evidence_sha256": {
+    "README.md": "d5b48bb2a263196d0914eb3987f7336bf1713e36a67468aa5f518eabc49f0fcd",
+    "docs/mitigation_technical_completion_judgment.json": "d18978dccceaf3bdfcb1e20983e07ab392a4277e29b670a1f788dc6dc369f8a9",
+    "docs/mitigation_nominal_risk_resolution_note.json": "0f9a8ee52b06a01ff66daad27744709cb724bb46c047abf486eb3ef8fbb9a19a",
+    "docs/mitigation_main_model_registry.json": "49059e6e2ef5138a1d8edd284a3353d5c412d2f54f518010c3ddfdaa561c6603",
+    "docs/compact_submission_final_source_freeze.json": "debf854d7898ccb501c3aa299064f745535b4d1b7c316065b10f09c58f4cbfc0",
+    "docs/compact_submission_final_build_release.json": "ad2214cfe675a0ed6b69a65e32d0a8d55714c8866a292b649c0d97a6eaf3763b",
+    "results/technical_completion_checkpoint_v2/verification.json": "a00d813b70eaddceb13083d9b24161754332bf44e63584c70927c9ec4edd7b22",
+    "results/mitigation_locked_final_evaluation_v1/manifest.json": "7401ad59279c694fc4077ab42af1af42e707b258156bca5a7ec110467e407f07",
+    "results/mitigation_locked_final_evaluation_v1/independent_audit.json": "7929ea36e23c9b357a568b8d0f06cd7f90024a61aae0222c11c532cc1bcf65c8",
+    "results/compact_submission_fixed_final_replay_v2/manifest.json": "3b8fb4e2f2004142f62851d8edd13c2d853f689a1c592015f9d5e061fc18fb34",
+    "results/compact_submission_final_build_v1/manifest.json": "cf1476528fb9a53dd50064545672575f487693fbd67a9ab1cc22468350d83a2e",
+    "results/compact_submission_final_focused_tests_v1/unit_tests.txt": "6129f245b29d2e2d1095a8df0b65bf565fd07e90f356b2645cbfcb5d84529075",
+    "submission/FINAL_REPRODUCTION.md": "9caa4805696c439471b358cfa17118c69fd38ca8bf35b1a5dc263c99ba55a061",
+    "dist/Team87_Lebmar_Technical_Source_v2.zip": "78b710d75f9cba9497ac6059995ac874dfa30a949b06a8072088235cd3f2d4dc"
+  },
+  "array_inventory": {
+    "mitigation_main__fees": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__moved": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__pretrade_wealth": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__fee_fraction": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__moved_fraction": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__pretrade_tv_drift": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__end_year_tv_drift": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__floor": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__budget_floor": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__selected_score": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__pred_log_growth_hold": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__pred_log_growth_selected": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__uniform_predicted_advantage": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__conditional_predicted_advantage": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__min_predicted_advantage": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__current_log_fee": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__gross_log_advantage_uniform": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__gross_log_advantage_min": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__worst_real_shortfall_hold": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__worst_real_shortfall_selected": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__worst_real_shortfall_improvement": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__nominal_wealth": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__real_wealth": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__real_peak": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__current_drawdown": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__running_mdd": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__target_execution": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__pending_at_decision": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__guard_pending_at_decision": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__was_pending_input": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__was_guard_pending_input": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__automatic_service": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__support_feasible": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__hold_feasible": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__growth_sacrifice": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__trades": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__guard_triggered": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__gate_evaluated": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__holdings": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31,
+        3
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__weights": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31,
+        3
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__posttrade_holdings": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30,
+        3
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__cpi": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__ever_breached": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__guard_pending": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__actions": {
+      "dtype": "<U8",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__gate_reason": {
+      "dtype": "<U64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__first_crossing": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__first_guard_trigger": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__selected_index": {
+      "dtype": "int64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__selected_proposal": {
+      "dtype": "int64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__selected_lambda": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__forecast_n": {
+      "dtype": "int64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__forecast_member_count": {
+      "dtype": "int64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__actual_previous_state": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30,
+        4
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__training_previous_state": {
+      "dtype": "float64",
+      "shape": [
+        30,
+        120,
+        4
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__training_real_gross": {
+      "dtype": "float64",
+      "shape": [
+        30,
+        120,
+        3
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__realized_real_gross": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30,
+        3
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__drawdown_at_trigger": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__peak_at_trigger": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__real_wealth_at_trigger": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__interval_lo": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30,
+        4
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__interval_hi": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30,
+        4
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__interval_feasible": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        30,
+        4
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__interval_lower_member": {
+      "dtype": "int64",
+      "shape": [
+        60,
+        30,
+        4
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__interval_upper_member": {
+      "dtype": "int64",
+      "shape": [
+        60,
+        30,
+        4
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__candidate_lambda": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30,
+        13
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__candidate_fees": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30,
+        13
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__candidate_moved": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30,
+        13
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__candidate_score": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30,
+        13
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__candidate_min_support_slack": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30,
+        13
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__candidate_log_fee": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30,
+        13
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__candidate_feasible": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        30,
+        13
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__candidate_proposal": {
+      "dtype": "int64",
+      "shape": [
+        60,
+        30,
+        13
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__candidate_worst_support_member": {
+      "dtype": "int64",
+      "shape": [
+        60,
+        30,
+        13
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__candidate_posttrade": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30,
+        13,
+        3
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__candidate_member_advantage": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30,
+        13,
+        5
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__candidate_member_log_growth": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30,
+        13,
+        5
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__candidate_member_gross_advantage": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30,
+        13,
+        5
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__candidate_predicted_next_breach": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30,
+        13,
+        5
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__mitigation_evaluated": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__mitigation_trade": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__mitigation_selected_index": {
+      "dtype": "int64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__mitigation_selected_proposal": {
+      "dtype": "int64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__mitigation_selected_q": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__mitigation_worst_next_real_hold": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__mitigation_worst_next_real_selected": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__mitigation_worst_next_real_improvement": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__actual_decision_source": {
+      "dtype": "<U10",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__primary_failed_hold_score": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__primary_failed_hold_pred_log_growth": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__primary_failed_hold_fee": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__primary_failed_hold_shortfall": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__primary_failed_hold_posttrade": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30,
+        3
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__mitigation_candidate_q": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30,
+        9
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__mitigation_candidate_fees": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30,
+        9
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__mitigation_candidate_moved": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30,
+        9
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__mitigation_candidate_worst_next_real": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30,
+        9
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__mitigation_candidate_shortfall": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30,
+        9
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__mitigation_candidate_proposal": {
+      "dtype": "int64",
+      "shape": [
+        60,
+        30,
+        9
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__mitigation_candidate_worst_support_member": {
+      "dtype": "int64",
+      "shape": [
+        60,
+        30,
+        9
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__mitigation_candidate_posttrade": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30,
+        9,
+        3
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__mitigation_candidate_member_advantage": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30,
+        9,
+        5
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__mitigation_candidate_member_log_growth": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30,
+        9,
+        5
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__mitigation_candidate_member_gross_advantage": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30,
+        9,
+        5
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__mitigation_candidate_member_predicted_next_breach": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30,
+        9,
+        5
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__primary_gate_reason": {
+      "dtype": "<U64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__primary_selected_score": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__primary_pred_log_growth_selected": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__triggered": {
+      "dtype": "bool",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__recovered": {
+      "dtype": "bool",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__recovery_endpoint": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__recovery_time": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__right_censored": {
+      "dtype": "bool",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__available_followup": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__observed_followup": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__added_severity": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__terminal_excess": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__end_weights": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30,
+        3
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__targets": {
+      "dtype": "float64",
+      "shape": [
+        3
+      ],
+      "exact_values": true
+    },
+    "mitigation_main__loss_tolerances": {
+      "dtype": "float64",
+      "shape": [
+        1
+      ],
+      "exact_values": true
+    },
+    "same_target_B__fees": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "same_target_B__moved": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "same_target_B__pretrade_wealth": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "same_target_B__fee_fraction": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "same_target_B__moved_fraction": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "same_target_B__pretrade_tv_drift": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "same_target_B__end_year_tv_drift": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "same_target_B__nominal_wealth": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "same_target_B__real_wealth": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "same_target_B__real_peak": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "same_target_B__current_drawdown": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "same_target_B__running_mdd": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "same_target_B__holdings": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31,
+        3
+      ],
+      "exact_values": true
+    },
+    "same_target_B__weights": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31,
+        3
+      ],
+      "exact_values": true
+    },
+    "same_target_B__posttrade_holdings": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30,
+        3
+      ],
+      "exact_values": true
+    },
+    "same_target_B__ever_breached": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "same_target_B__target_execution": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "same_target_B__pending_at_decision": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "same_target_B__actions": {
+      "dtype": "<U7",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "same_target_B__first_crossing": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "same_target_B__drawdown_at_trigger": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "same_target_B__peak_at_trigger": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "same_target_B__real_wealth_at_trigger": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "same_target_B__triggered": {
+      "dtype": "bool",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "same_target_B__recovered": {
+      "dtype": "bool",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "same_target_B__recovery_endpoint": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "same_target_B__recovery_time": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "same_target_B__right_censored": {
+      "dtype": "bool",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "same_target_B__available_followup": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "same_target_B__observed_followup": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "same_target_B__added_severity": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "same_target_B__terminal_excess": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "same_target_B__trades": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "same_target_B__end_weights": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30,
+        3
+      ],
+      "exact_values": true
+    },
+    "same_target_B__cpi": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "same_target_annual__fees": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "same_target_annual__moved": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "same_target_annual__pretrade_wealth": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "same_target_annual__fee_fraction": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "same_target_annual__moved_fraction": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "same_target_annual__pretrade_tv_drift": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "same_target_annual__end_year_tv_drift": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "same_target_annual__nominal_wealth": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "same_target_annual__real_wealth": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "same_target_annual__real_peak": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "same_target_annual__current_drawdown": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "same_target_annual__running_mdd": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "same_target_annual__holdings": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31,
+        3
+      ],
+      "exact_values": true
+    },
+    "same_target_annual__weights": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31,
+        3
+      ],
+      "exact_values": true
+    },
+    "same_target_annual__posttrade_holdings": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30,
+        3
+      ],
+      "exact_values": true
+    },
+    "same_target_annual__ever_breached": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "same_target_annual__target_execution": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "same_target_annual__pending_at_decision": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "same_target_annual__actions": {
+      "dtype": "<U7",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "same_target_annual__first_crossing": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "same_target_annual__drawdown_at_trigger": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "same_target_annual__peak_at_trigger": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "same_target_annual__real_wealth_at_trigger": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "same_target_annual__triggered": {
+      "dtype": "bool",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "same_target_annual__recovered": {
+      "dtype": "bool",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "same_target_annual__recovery_endpoint": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "same_target_annual__recovery_time": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "same_target_annual__right_censored": {
+      "dtype": "bool",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "same_target_annual__available_followup": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "same_target_annual__observed_followup": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "same_target_annual__added_severity": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "same_target_annual__terminal_excess": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "same_target_annual__trades": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "same_target_annual__end_weights": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30,
+        3
+      ],
+      "exact_values": true
+    },
+    "same_target_annual__cpi": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "exact_thirds_annual__fees": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "exact_thirds_annual__moved": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "exact_thirds_annual__pretrade_wealth": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "exact_thirds_annual__fee_fraction": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "exact_thirds_annual__moved_fraction": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "exact_thirds_annual__pretrade_tv_drift": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "exact_thirds_annual__end_year_tv_drift": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "exact_thirds_annual__nominal_wealth": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "exact_thirds_annual__real_wealth": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "exact_thirds_annual__real_peak": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "exact_thirds_annual__current_drawdown": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "exact_thirds_annual__running_mdd": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "exact_thirds_annual__holdings": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31,
+        3
+      ],
+      "exact_values": true
+    },
+    "exact_thirds_annual__weights": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31,
+        3
+      ],
+      "exact_values": true
+    },
+    "exact_thirds_annual__posttrade_holdings": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30,
+        3
+      ],
+      "exact_values": true
+    },
+    "exact_thirds_annual__ever_breached": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "exact_thirds_annual__target_execution": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "exact_thirds_annual__pending_at_decision": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "exact_thirds_annual__actions": {
+      "dtype": "<U7",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "exact_thirds_annual__first_crossing": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "exact_thirds_annual__drawdown_at_trigger": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "exact_thirds_annual__peak_at_trigger": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "exact_thirds_annual__real_wealth_at_trigger": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "exact_thirds_annual__triggered": {
+      "dtype": "bool",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "exact_thirds_annual__recovered": {
+      "dtype": "bool",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "exact_thirds_annual__recovery_endpoint": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "exact_thirds_annual__recovery_time": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "exact_thirds_annual__right_censored": {
+      "dtype": "bool",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "exact_thirds_annual__available_followup": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "exact_thirds_annual__observed_followup": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "exact_thirds_annual__added_severity": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "exact_thirds_annual__terminal_excess": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "exact_thirds_annual__trades": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "exact_thirds_annual__end_weights": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30,
+        3
+      ],
+      "exact_values": true
+    },
+    "exact_thirds_annual__cpi": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "Q1_A_thirds__fees": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        5
+      ],
+      "exact_values": true
+    },
+    "Q1_A_thirds__moved": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        5
+      ],
+      "exact_values": true
+    },
+    "Q1_A_thirds__pretrade_wealth": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        5
+      ],
+      "exact_values": true
+    },
+    "Q1_A_thirds__fee_fraction": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        5
+      ],
+      "exact_values": true
+    },
+    "Q1_A_thirds__moved_fraction": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        5
+      ],
+      "exact_values": true
+    },
+    "Q1_A_thirds__pretrade_tv_drift": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        5
+      ],
+      "exact_values": true
+    },
+    "Q1_A_thirds__end_year_tv_drift": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        5
+      ],
+      "exact_values": true
+    },
+    "Q1_A_thirds__nominal_wealth": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        6
+      ],
+      "exact_values": true
+    },
+    "Q1_A_thirds__real_wealth": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        6
+      ],
+      "exact_values": true
+    },
+    "Q1_A_thirds__real_peak": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        6
+      ],
+      "exact_values": true
+    },
+    "Q1_A_thirds__current_drawdown": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        6
+      ],
+      "exact_values": true
+    },
+    "Q1_A_thirds__running_mdd": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        6
+      ],
+      "exact_values": true
+    },
+    "Q1_A_thirds__holdings": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        6,
+        3
+      ],
+      "exact_values": true
+    },
+    "Q1_A_thirds__weights": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        6,
+        3
+      ],
+      "exact_values": true
+    },
+    "Q1_A_thirds__posttrade_holdings": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        5,
+        3
+      ],
+      "exact_values": true
+    },
+    "Q1_A_thirds__ever_breached": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        6
+      ],
+      "exact_values": true
+    },
+    "Q1_A_thirds__target_execution": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        5
+      ],
+      "exact_values": true
+    },
+    "Q1_A_thirds__pending_at_decision": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        5
+      ],
+      "exact_values": true
+    },
+    "Q1_A_thirds__actions": {
+      "dtype": "<U7",
+      "shape": [
+        60,
+        5
+      ],
+      "exact_values": true
+    },
+    "Q1_A_thirds__first_crossing": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_A_thirds__drawdown_at_trigger": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_A_thirds__peak_at_trigger": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_A_thirds__real_wealth_at_trigger": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_A_thirds__triggered": {
+      "dtype": "bool",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_A_thirds__recovered": {
+      "dtype": "bool",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_A_thirds__recovery_endpoint": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_A_thirds__recovery_time": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_A_thirds__right_censored": {
+      "dtype": "bool",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_A_thirds__available_followup": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_A_thirds__observed_followup": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_A_thirds__added_severity": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_A_thirds__terminal_excess": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_A_thirds__trades": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        5
+      ],
+      "exact_values": true
+    },
+    "Q1_A_thirds__end_weights": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        5,
+        3
+      ],
+      "exact_values": true
+    },
+    "Q1_A_thirds__cpi": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        6
+      ],
+      "exact_values": true
+    },
+    "Q1_B__fees": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        15
+      ],
+      "exact_values": true
+    },
+    "Q1_B__moved": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        15
+      ],
+      "exact_values": true
+    },
+    "Q1_B__pretrade_wealth": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        15
+      ],
+      "exact_values": true
+    },
+    "Q1_B__fee_fraction": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        15
+      ],
+      "exact_values": true
+    },
+    "Q1_B__moved_fraction": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        15
+      ],
+      "exact_values": true
+    },
+    "Q1_B__pretrade_tv_drift": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        15
+      ],
+      "exact_values": true
+    },
+    "Q1_B__end_year_tv_drift": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        15
+      ],
+      "exact_values": true
+    },
+    "Q1_B__nominal_wealth": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        16
+      ],
+      "exact_values": true
+    },
+    "Q1_B__real_wealth": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        16
+      ],
+      "exact_values": true
+    },
+    "Q1_B__real_peak": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        16
+      ],
+      "exact_values": true
+    },
+    "Q1_B__current_drawdown": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        16
+      ],
+      "exact_values": true
+    },
+    "Q1_B__running_mdd": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        16
+      ],
+      "exact_values": true
+    },
+    "Q1_B__holdings": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        16,
+        3
+      ],
+      "exact_values": true
+    },
+    "Q1_B__weights": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        16,
+        3
+      ],
+      "exact_values": true
+    },
+    "Q1_B__posttrade_holdings": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        15,
+        3
+      ],
+      "exact_values": true
+    },
+    "Q1_B__ever_breached": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        16
+      ],
+      "exact_values": true
+    },
+    "Q1_B__target_execution": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        15
+      ],
+      "exact_values": true
+    },
+    "Q1_B__pending_at_decision": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        15
+      ],
+      "exact_values": true
+    },
+    "Q1_B__actions": {
+      "dtype": "<U7",
+      "shape": [
+        60,
+        15
+      ],
+      "exact_values": true
+    },
+    "Q1_B__first_crossing": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_B__drawdown_at_trigger": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_B__peak_at_trigger": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_B__real_wealth_at_trigger": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_B__triggered": {
+      "dtype": "bool",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_B__recovered": {
+      "dtype": "bool",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_B__recovery_endpoint": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_B__recovery_time": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_B__right_censored": {
+      "dtype": "bool",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_B__available_followup": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_B__observed_followup": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_B__added_severity": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_B__terminal_excess": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_B__trades": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        15
+      ],
+      "exact_values": true
+    },
+    "Q1_B__end_weights": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        15,
+        3
+      ],
+      "exact_values": true
+    },
+    "Q1_B__cpi": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        16
+      ],
+      "exact_values": true
+    },
+    "Q1_B_thirds__fees": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        15
+      ],
+      "exact_values": true
+    },
+    "Q1_B_thirds__moved": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        15
+      ],
+      "exact_values": true
+    },
+    "Q1_B_thirds__pretrade_wealth": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        15
+      ],
+      "exact_values": true
+    },
+    "Q1_B_thirds__fee_fraction": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        15
+      ],
+      "exact_values": true
+    },
+    "Q1_B_thirds__moved_fraction": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        15
+      ],
+      "exact_values": true
+    },
+    "Q1_B_thirds__pretrade_tv_drift": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        15
+      ],
+      "exact_values": true
+    },
+    "Q1_B_thirds__end_year_tv_drift": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        15
+      ],
+      "exact_values": true
+    },
+    "Q1_B_thirds__nominal_wealth": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        16
+      ],
+      "exact_values": true
+    },
+    "Q1_B_thirds__real_wealth": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        16
+      ],
+      "exact_values": true
+    },
+    "Q1_B_thirds__real_peak": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        16
+      ],
+      "exact_values": true
+    },
+    "Q1_B_thirds__current_drawdown": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        16
+      ],
+      "exact_values": true
+    },
+    "Q1_B_thirds__running_mdd": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        16
+      ],
+      "exact_values": true
+    },
+    "Q1_B_thirds__holdings": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        16,
+        3
+      ],
+      "exact_values": true
+    },
+    "Q1_B_thirds__weights": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        16,
+        3
+      ],
+      "exact_values": true
+    },
+    "Q1_B_thirds__posttrade_holdings": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        15,
+        3
+      ],
+      "exact_values": true
+    },
+    "Q1_B_thirds__ever_breached": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        16
+      ],
+      "exact_values": true
+    },
+    "Q1_B_thirds__target_execution": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        15
+      ],
+      "exact_values": true
+    },
+    "Q1_B_thirds__pending_at_decision": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        15
+      ],
+      "exact_values": true
+    },
+    "Q1_B_thirds__actions": {
+      "dtype": "<U7",
+      "shape": [
+        60,
+        15
+      ],
+      "exact_values": true
+    },
+    "Q1_B_thirds__first_crossing": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_B_thirds__drawdown_at_trigger": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_B_thirds__peak_at_trigger": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_B_thirds__real_wealth_at_trigger": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_B_thirds__triggered": {
+      "dtype": "bool",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_B_thirds__recovered": {
+      "dtype": "bool",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_B_thirds__recovery_endpoint": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_B_thirds__recovery_time": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_B_thirds__right_censored": {
+      "dtype": "bool",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_B_thirds__available_followup": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_B_thirds__observed_followup": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_B_thirds__added_severity": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_B_thirds__terminal_excess": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_B_thirds__trades": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        15
+      ],
+      "exact_values": true
+    },
+    "Q1_B_thirds__end_weights": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        15,
+        3
+      ],
+      "exact_values": true
+    },
+    "Q1_B_thirds__cpi": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        16
+      ],
+      "exact_values": true
+    },
+    "Q1_C__fees": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "Q1_C__moved": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "Q1_C__pretrade_wealth": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "Q1_C__fee_fraction": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "Q1_C__moved_fraction": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "Q1_C__pretrade_tv_drift": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "Q1_C__end_year_tv_drift": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "Q1_C__nominal_wealth": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "Q1_C__real_wealth": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "Q1_C__real_peak": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "Q1_C__current_drawdown": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "Q1_C__running_mdd": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "Q1_C__holdings": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31,
+        3
+      ],
+      "exact_values": true
+    },
+    "Q1_C__weights": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31,
+        3
+      ],
+      "exact_values": true
+    },
+    "Q1_C__posttrade_holdings": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30,
+        3
+      ],
+      "exact_values": true
+    },
+    "Q1_C__ever_breached": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "Q1_C__target_execution": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "Q1_C__pending_at_decision": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "Q1_C__actions": {
+      "dtype": "<U7",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "Q1_C__first_crossing": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_C__drawdown_at_trigger": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_C__peak_at_trigger": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_C__real_wealth_at_trigger": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_C__triggered": {
+      "dtype": "bool",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_C__recovered": {
+      "dtype": "bool",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_C__recovery_endpoint": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_C__recovery_time": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_C__right_censored": {
+      "dtype": "bool",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_C__available_followup": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_C__observed_followup": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_C__added_severity": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_C__terminal_excess": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_C__trades": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "Q1_C__end_weights": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30,
+        3
+      ],
+      "exact_values": true
+    },
+    "Q1_C__cpi": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "Q1_C_thirds__fees": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "Q1_C_thirds__moved": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "Q1_C_thirds__pretrade_wealth": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "Q1_C_thirds__fee_fraction": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "Q1_C_thirds__moved_fraction": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "Q1_C_thirds__pretrade_tv_drift": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "Q1_C_thirds__end_year_tv_drift": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "Q1_C_thirds__nominal_wealth": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "Q1_C_thirds__real_wealth": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "Q1_C_thirds__real_peak": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "Q1_C_thirds__current_drawdown": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "Q1_C_thirds__running_mdd": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "Q1_C_thirds__holdings": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31,
+        3
+      ],
+      "exact_values": true
+    },
+    "Q1_C_thirds__weights": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31,
+        3
+      ],
+      "exact_values": true
+    },
+    "Q1_C_thirds__posttrade_holdings": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30,
+        3
+      ],
+      "exact_values": true
+    },
+    "Q1_C_thirds__ever_breached": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "Q1_C_thirds__target_execution": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "Q1_C_thirds__pending_at_decision": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "Q1_C_thirds__actions": {
+      "dtype": "<U7",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "Q1_C_thirds__first_crossing": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_C_thirds__drawdown_at_trigger": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_C_thirds__peak_at_trigger": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_C_thirds__real_wealth_at_trigger": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_C_thirds__triggered": {
+      "dtype": "bool",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_C_thirds__recovered": {
+      "dtype": "bool",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_C_thirds__recovery_endpoint": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_C_thirds__recovery_time": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_C_thirds__right_censored": {
+      "dtype": "bool",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_C_thirds__available_followup": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_C_thirds__observed_followup": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_C_thirds__added_severity": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_C_thirds__terminal_excess": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_C_thirds__trades": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        30
+      ],
+      "exact_values": true
+    },
+    "Q1_C_thirds__end_weights": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        30,
+        3
+      ],
+      "exact_values": true
+    },
+    "Q1_C_thirds__cpi": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        31
+      ],
+      "exact_values": true
+    },
+    "Q1_D_thirds__fees": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        25
+      ],
+      "exact_values": true
+    },
+    "Q1_D_thirds__moved": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        25
+      ],
+      "exact_values": true
+    },
+    "Q1_D_thirds__pretrade_wealth": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        25
+      ],
+      "exact_values": true
+    },
+    "Q1_D_thirds__fee_fraction": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        25
+      ],
+      "exact_values": true
+    },
+    "Q1_D_thirds__moved_fraction": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        25
+      ],
+      "exact_values": true
+    },
+    "Q1_D_thirds__pretrade_tv_drift": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        25
+      ],
+      "exact_values": true
+    },
+    "Q1_D_thirds__end_year_tv_drift": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        25
+      ],
+      "exact_values": true
+    },
+    "Q1_D_thirds__nominal_wealth": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        26
+      ],
+      "exact_values": true
+    },
+    "Q1_D_thirds__real_wealth": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        26
+      ],
+      "exact_values": true
+    },
+    "Q1_D_thirds__real_peak": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        26
+      ],
+      "exact_values": true
+    },
+    "Q1_D_thirds__current_drawdown": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        26
+      ],
+      "exact_values": true
+    },
+    "Q1_D_thirds__running_mdd": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        26
+      ],
+      "exact_values": true
+    },
+    "Q1_D_thirds__holdings": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        26,
+        3
+      ],
+      "exact_values": true
+    },
+    "Q1_D_thirds__weights": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        26,
+        3
+      ],
+      "exact_values": true
+    },
+    "Q1_D_thirds__posttrade_holdings": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        25,
+        3
+      ],
+      "exact_values": true
+    },
+    "Q1_D_thirds__ever_breached": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        26
+      ],
+      "exact_values": true
+    },
+    "Q1_D_thirds__target_execution": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        25
+      ],
+      "exact_values": true
+    },
+    "Q1_D_thirds__pending_at_decision": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        25
+      ],
+      "exact_values": true
+    },
+    "Q1_D_thirds__actions": {
+      "dtype": "<U7",
+      "shape": [
+        60,
+        25
+      ],
+      "exact_values": true
+    },
+    "Q1_D_thirds__first_crossing": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_D_thirds__drawdown_at_trigger": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_D_thirds__peak_at_trigger": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_D_thirds__real_wealth_at_trigger": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_D_thirds__triggered": {
+      "dtype": "bool",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_D_thirds__recovered": {
+      "dtype": "bool",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_D_thirds__recovery_endpoint": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_D_thirds__recovery_time": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_D_thirds__right_censored": {
+      "dtype": "bool",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_D_thirds__available_followup": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_D_thirds__observed_followup": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_D_thirds__added_severity": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_D_thirds__terminal_excess": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_D_thirds__trades": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        25
+      ],
+      "exact_values": true
+    },
+    "Q1_D_thirds__end_weights": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        25,
+        3
+      ],
+      "exact_values": true
+    },
+    "Q1_D_thirds__cpi": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        26
+      ],
+      "exact_values": true
+    },
+    "Q1_E__fees": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        6
+      ],
+      "exact_values": true
+    },
+    "Q1_E__moved": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        6
+      ],
+      "exact_values": true
+    },
+    "Q1_E__pretrade_wealth": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        6
+      ],
+      "exact_values": true
+    },
+    "Q1_E__fee_fraction": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        6
+      ],
+      "exact_values": true
+    },
+    "Q1_E__moved_fraction": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        6
+      ],
+      "exact_values": true
+    },
+    "Q1_E__pretrade_tv_drift": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        6
+      ],
+      "exact_values": true
+    },
+    "Q1_E__end_year_tv_drift": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        6
+      ],
+      "exact_values": true
+    },
+    "Q1_E__nominal_wealth": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        7
+      ],
+      "exact_values": true
+    },
+    "Q1_E__real_wealth": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        7
+      ],
+      "exact_values": true
+    },
+    "Q1_E__real_peak": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        7
+      ],
+      "exact_values": true
+    },
+    "Q1_E__current_drawdown": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        7
+      ],
+      "exact_values": true
+    },
+    "Q1_E__running_mdd": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        7
+      ],
+      "exact_values": true
+    },
+    "Q1_E__holdings": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        7,
+        3
+      ],
+      "exact_values": true
+    },
+    "Q1_E__weights": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        7,
+        3
+      ],
+      "exact_values": true
+    },
+    "Q1_E__posttrade_holdings": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        6,
+        3
+      ],
+      "exact_values": true
+    },
+    "Q1_E__ever_breached": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        7
+      ],
+      "exact_values": true
+    },
+    "Q1_E__target_execution": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        6
+      ],
+      "exact_values": true
+    },
+    "Q1_E__pending_at_decision": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        6
+      ],
+      "exact_values": true
+    },
+    "Q1_E__actions": {
+      "dtype": "<U7",
+      "shape": [
+        60,
+        6
+      ],
+      "exact_values": true
+    },
+    "Q1_E__first_crossing": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_E__drawdown_at_trigger": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_E__peak_at_trigger": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_E__real_wealth_at_trigger": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_E__triggered": {
+      "dtype": "bool",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_E__recovered": {
+      "dtype": "bool",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_E__recovery_endpoint": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_E__recovery_time": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_E__right_censored": {
+      "dtype": "bool",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_E__available_followup": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_E__observed_followup": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_E__added_severity": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_E__terminal_excess": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_E__trades": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        6
+      ],
+      "exact_values": true
+    },
+    "Q1_E__end_weights": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        6,
+        3
+      ],
+      "exact_values": true
+    },
+    "Q1_E__cpi": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        7
+      ],
+      "exact_values": true
+    },
+    "Q1_E_thirds__fees": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        6
+      ],
+      "exact_values": true
+    },
+    "Q1_E_thirds__moved": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        6
+      ],
+      "exact_values": true
+    },
+    "Q1_E_thirds__pretrade_wealth": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        6
+      ],
+      "exact_values": true
+    },
+    "Q1_E_thirds__fee_fraction": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        6
+      ],
+      "exact_values": true
+    },
+    "Q1_E_thirds__moved_fraction": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        6
+      ],
+      "exact_values": true
+    },
+    "Q1_E_thirds__pretrade_tv_drift": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        6
+      ],
+      "exact_values": true
+    },
+    "Q1_E_thirds__end_year_tv_drift": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        6
+      ],
+      "exact_values": true
+    },
+    "Q1_E_thirds__nominal_wealth": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        7
+      ],
+      "exact_values": true
+    },
+    "Q1_E_thirds__real_wealth": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        7
+      ],
+      "exact_values": true
+    },
+    "Q1_E_thirds__real_peak": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        7
+      ],
+      "exact_values": true
+    },
+    "Q1_E_thirds__current_drawdown": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        7
+      ],
+      "exact_values": true
+    },
+    "Q1_E_thirds__running_mdd": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        7
+      ],
+      "exact_values": true
+    },
+    "Q1_E_thirds__holdings": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        7,
+        3
+      ],
+      "exact_values": true
+    },
+    "Q1_E_thirds__weights": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        7,
+        3
+      ],
+      "exact_values": true
+    },
+    "Q1_E_thirds__posttrade_holdings": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        6,
+        3
+      ],
+      "exact_values": true
+    },
+    "Q1_E_thirds__ever_breached": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        7
+      ],
+      "exact_values": true
+    },
+    "Q1_E_thirds__target_execution": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        6
+      ],
+      "exact_values": true
+    },
+    "Q1_E_thirds__pending_at_decision": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        6
+      ],
+      "exact_values": true
+    },
+    "Q1_E_thirds__actions": {
+      "dtype": "<U7",
+      "shape": [
+        60,
+        6
+      ],
+      "exact_values": true
+    },
+    "Q1_E_thirds__first_crossing": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_E_thirds__drawdown_at_trigger": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_E_thirds__peak_at_trigger": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_E_thirds__real_wealth_at_trigger": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_E_thirds__triggered": {
+      "dtype": "bool",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_E_thirds__recovered": {
+      "dtype": "bool",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_E_thirds__recovery_endpoint": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_E_thirds__recovery_time": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_E_thirds__right_censored": {
+      "dtype": "bool",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_E_thirds__available_followup": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_E_thirds__observed_followup": {
+      "dtype": "int64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_E_thirds__added_severity": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_E_thirds__terminal_excess": {
+      "dtype": "float64",
+      "shape": [
+        60
+      ],
+      "exact_values": true
+    },
+    "Q1_E_thirds__trades": {
+      "dtype": "bool",
+      "shape": [
+        60,
+        6
+      ],
+      "exact_values": true
+    },
+    "Q1_E_thirds__end_weights": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        6,
+        3
+      ],
+      "exact_values": true
+    },
+    "Q1_E_thirds__cpi": {
+      "dtype": "float64",
+      "shape": [
+        60,
+        7
+      ],
+      "exact_values": true
+    }
+  }
+}

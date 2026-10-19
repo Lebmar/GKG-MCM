@@ -1,0 +1,113 @@
+{
+  "version": "review-pending-design-contract-v1",
+  "date_beijing": "2026-10-17",
+  "status": "Proposed rules and next-round study contract only; not adopted as the final service, not implemented or fitted here, and not a report revision.",
+  "purpose": "Separate why automation refers a case from what actual holdings do while no human response has been observed. Define a reproducible frozen strict172 execution ablation without inventing adviser actions, response times or investment benefits.",
+  "scope": {
+    "data": "If later executed, guarded original development scenarios1--120 only. Previously exposed final scenarios121--180 remain forbidden. Reused whole-scenario internal validation is not a fresh blind test or an independent pooled risk certificate.",
+    "new_work_in_this_contract": "Design only: no new market experiment, source-algorithm change, parameter selection or claim that pending improves outcomes.",
+    "service_limit": "The existing strict172 annual-restoration rule is a frozen research comparator. Mandatory annual restoration has not been accepted as the final Q2 benefit-gated implementation, and adding referral does not make that unmet requirement disappear."
+  },
+  "referral_reasons": {
+    "input_failure": {
+      "meaning": "Required customer or current-account facts are missing, contradictory or unusable; the system cannot establish a valid decision state or the customer's applicable requirements.",
+      "examples": [
+        "Missing or inconsistent horizon, tolerance L, withdrawal/liquidity obligations, current holdings or observation dates.",
+        "Nonfinite/negative holdings, nonpositive wealth or CPI, inconsistent asset identifiers, or a claimed historical real peak materially below current real wealth under the documented relative numerical guard.",
+        "Incomplete history needed to reconstruct the real peak, historical maximum drawdown or ever-breached status; an unknown history is not a clean initial state."
+      ],
+      "logic_vs_policy": "Mathematical domain/consistency checks can be specified exactly. Acceptable data age, completeness, evidence sources and customer-change thresholds are separate unresolved operational choices; no arbitrary freshness duration or tolerance is adopted here.",
+      "handling": "Record reason and last trustworthy timestamp/state; request missing or corrected information. Do not infer zero breach, reset the account to100, invent a bill allocation or fabricate financial performance when valuation inputs are unknown. A simulated input-failure study would need separately declared fault timings and trusted evaluation data."
+    },
+    "model_integrity_or_validity_failure": {
+      "meaning": "Inputs may be valid, but the automated decision is unsupported by a trustworthy model, calculation or admissible rule.",
+      "integrity_examples": [
+        "Source/configuration/data fingerprint mismatch, training/evaluation leakage, numerical solver failure, invalid probability/action/fee output, or a failed documented accounting invariant.",
+        "An observed state/outcome outside a model's supported decision domain, including a conditional risk-budget rule with no defined off-support successor-budget mapping.",
+        "An intended trading, asset, cash-flow or monitoring regime that differs from the assumptions of the validated model."
+      ],
+      "validity_limit": "Annual IID stationarity and other predictive assumptions can be questionable without a numerical error. A deployable validity/drift diagnostic and its thresholds require a prospective decision rule and supporting evidence; ex-post poor investment returns must not be used to choose convenient failure times.",
+      "handling": "Disable the unsupported automatic decision, preserve its version and diagnostic evidence, and request model review. Do not silently refit, switch forecasts, choose another target, relax alpha or claim a fallback model has been validated. No new validity detector is selected in this contract."
+    },
+    "financial_drawdown_crossing": {
+      "meaning": "A correctly valued account under a functioning model has crossed that client's stated annual-observation drawdown tolerance. A genuine loss is distinct from input or software failure.",
+      "definition": "At annual endpoint t, R_t=nominal_wealth_t/CPI_t, P_t=max(P_(t-1),R_t), current_drawdown_t=1-R_t/P_t, D_t=max(D_(t-1),current_drawdown_t), and b_t=b_(t-1) OR(D_t-L>1e-12).",
+      "proposed_trigger": "Request review at the first annual endpoint with D_t-L>1e-12, using the individual client's original L. This follows the same stated risk event; it does not introduce the archived universal25% trigger. Choosing L as a governance trigger remains a proposed service rule, not a proven optimal intervention.",
+      "timing": "The year's chosen allocation, exact fee and realized return are completed before the annual endpoint is observed. Pending-hold starts at the next decision. No sale or allocation is retroactively inserted before the loss.",
+      "measurement": "Use initial100 plus annual-endpoint net real wealth in the proposed ablation, matching its original comparator. Fee-instant or continuous monitoring would define a different trigger/event and must be a separately declared study.",
+      "interpretation": "Requesting human attention does not revoke an already-observed crossing, erase its severity or demonstrate that an adviser can prevent further loss."
+    },
+    "multiple_reasons": "Keep all applicable reason codes and their first-observed times. Input/model failures must not be relabeled as financial crossings. The proposed financial-trigger coupling experiment below excludes earlier input/model failures; combining those triggers would require a separate prespecified experiment and would not inherit its event-count identity."
+  },
+  "persistent_state_and_nonresponse_proxy": {
+    "required_history": "Carry actual nominal holdings x, CPI, real wealth R, historical real peak P, historical maximum drawdown D, absorbing ever-breached flag b, original horizon H, elapsed time and remaining h=H-elapsed. Carry provenance, current referral reasons and onset times separately.",
+    "no_reset": "Neither referral, a year boundary, recovery, new model version nor renewed communication resets wealth, CPI, P, D, b or the original investment horizon. New deposits/withdrawals would need an explicit consistent accounting/event definition; they are not present in this ablation.",
+    "proxy": "Pending hold means retain the actual asset quantities at the trigger and make no discretionary trades or target changes thereafter through the original H. Annual asset returns and actual inflation continue; weights drift, wealth can fall, new peaks can occur and drawdown/severity are still scored.",
+    "fees": "No new discretionary execution fee is charged by the hold proxy; any expense already embedded in the provided asset return remains. The fee already paid in the crossing year is retained. No automatic liquidation, bill-only conversion, terminal liquidation or fee refund is invented.",
+    "frozen_updates": "The proposed ablation freezes forecast law, source/configuration version, target weights, menu, technical screen and effective assignments in both arms from inception. Pending adds no online learning, target refresh, risk-budget recalibration or automatic re-entry. Freezing the model never means freezing realized returns or account values.",
+    "human_response": "No response time, response probability, adviser action, adviser alpha, recovery guarantee or return-to-service outcome is known. The no-response-through-H branch is an explicit scorable proxy/scenario, not an estimate that actual advisers will never respond or a recommendation for permanent customer inaction.",
+    "unknown_valuations": "If account valuation/CPI/history itself is unavailable, financial outcomes are unknown rather than zero. Real holdings persist, but simulation or reported metrics need trustworthy evaluation values. This is distinct from the complete-data financial-trigger experiment."
+  },
+  "future_frozen_strict172_ablation": {
+    "status": "Executable study specification for a future authorized run; no result is produced by this document.",
+    "frozen_references": {
+      "protocol": "docs/positive_asset_specification_protocol.json",
+      "manifest": "results/model_review/positive_asset_specification_v1/manifest.json",
+      "context_fits": "results/model_review/positive_asset_specification_v1/nested_context_refits.json",
+      "candidate_mapping": "results/model_review/positive_asset_specification_v1/candidate_mapping.json",
+      "original_full_paths": "results/model_review/positive_asset_specification_v1/nested_full_paths.csv",
+      "original_outer_paths": "results/model_review/positive_asset_specification_v1/nested_outer_oof_paths.csv",
+      "freeze_rule": "Before any new replay, record and verify exact source/input/output hashes of these artifacts. Use the already selected nested context fits and effective assignments; do not rerun nested selection or choose a different gamma, product, trigger or response rule based on ablation outcomes."
+    },
+    "population_and_contexts": "Use the one full120 context and the exact five existing whole-scenario96-train/24-test outer contexts. Keep each context's training/test identities, fixed strict-positive menu, targets and effective client assignments. Every original client/path remains in the full or OOF denominator.",
+    "index_space": "Strict172 candidate IDs are local0..171. Use the frozen mapping to original232 cache columns only for verification. Never accidentally interpret local IDs as global addresses or substitute relaxed232 targets.",
+    "clients_and_horizons": "Use all five original profiles at their original H and L: A(5,.10), B(15,.25), C(30,.40), D(25,.15), E(6,.35). Each H is initialized afresh at original100/all bills with original CPI and peak conventions; no30-year dynamic-policy prefix substitutes for a shorter-H policy.",
+    "original_arm": "Reproduce the frozen strict172 annual-restoration path for that context's fixed assigned target, including mandatory initial allocation and exact self-financing cost. Verify its path metrics against the saved original artifact before comparing interventions.",
+    "pending_arm": "Use exactly the original arm's actions and state until and including the first annual-endpoint D_t-L>1e-12. At that endpoint record a financial referral; retain actual holdings with no later trades through H. If no crossing occurs, reproduce the original arm through H.",
+    "referrals_at_onboarding": "A frozen effective Review remains Review in both arms, with null investment outcomes and an explicit coverage denominator. No adviser return, hypothetical customer allocation or fallback is filled in. Any target-level hypothetical comparison must remain separately labeled and must not masquerade as a served client.",
+    "no_other_treatment_difference": "Same original joint asset/inflation path, initial wealth, fee convention, monitoring times, source version and frozen target. No altered return law, additional liquidity floor, response delay, source update or target selection is introduced.",
+    "parameter_commitment": "The only proposed financial trigger is the existing individual L under the same strict numerical crossing rule; the proxy has no observed response before original H. Neither trigger values nor a response-delay grid may be selected from these results. Any later response-data study requires a new prospective protocol."
+  },
+  "coupling_identity_and_its_consequence": {
+    "definition": "For an automatically assigned original path let tau be its first annual endpoint with D_t-L>1e-12; tau=none if it never crosses before or at H.",
+    "prefix_coupling": "Both arms use the same initial state, returns/inflation, exact fee kernel and actions before the first crossing. Induction on annual observations gives identical holdings, wealth, CPI, peaks, drawdown flags and actions through tau. Therefore the pending arm's first crossing time is the same tau.",
+    "no_crossing_case": "If tau is absent, the trigger never activates; both arms remain identical through H and both complete-horizon ever-breached flags are false.",
+    "crossing_case": "If tau<=H, both arms already have b_tau=1 before they diverge. The flag is absorbing, so b_H_original=b_H_pending=1 regardless of subsequent holdings, fees or recovery. A trigger at tau=H has no later decision to change.",
+    "already_breached_entry": "An existing account with b0=1 retains that fact and can enter pending immediately; both complete-history flags are already1. Such cases must not be reinitialized as new b0=0 accounts. The primary proposed replay starts new clients at b0=0.",
+    "required_identity": "For every paired automatically assigned path, first-crossing time and full-H everbreach indicator must be exactly identical; consequently every client/context/OOF full-H breach count and frequency must be identical between arms. This is a structural coupling result, not a hypothesis test or an expected statistical tendency.",
+    "prohibited_claim": "A rule triggered only after this same event occurs cannot reduce that event's completed full-H everbreach frequency. Reporting a reduction would indicate a changed event, earlier additional trigger, missing paths, inconsistent accounting or a reset of b/peak/horizon. Human attention may matter for other outcomes, but no such benefit is established here."
+  },
+  "allowed_outcomes_of_the_future_ablation": {
+    "primary_diagnostic_domain": "Full-H severity, wealth, fees and post-trigger evolution only; everbreach counts are an invariant acceptance check, not a benefit endpoint.",
+    "severity": "Report full-H maximum real drawdown D_H, max(D_H-L,0), and added severity max(D_H-D_tau,0) among triggered paired paths. Any tail summary uses the same declared empirical quantile/fractional-atom convention; it is descriptive and does not introduce a new action threshold.",
+    "wealth_and_cost": "Report paired changes in net real terminal wealth, annualized log growth and cumulative nominal fees/moved amounts, with their units and original H. Report all assigned paired paths and triggered-only subgroups separately with explicit denominators.",
+    "recovery_time": "For a triggered path freeze the pre-crossing historical peak P_tau as the recovery reference. Record the first later annual endpoint with R_t>=P_tau and t-tau. If not recovered by original H, record right censoring and observed follow-up H-tau; do not invent an adviser recovery date, assign a finite future recovery time or average censored paths as if they recovered. No trigger means not applicable.",
+    "coverage": "Preserve all original path-profile rows, effective Review counts and null outcomes. Conditional triggered summaries must disclose their selected denominator; pooled OOF rules differ by fold and are not an iid fixed-policy sample.",
+    "interpretation": "Holding actual assets can increase or decrease subsequent severity and terminal wealth; fewer trades and lower fees do not establish lower risk. No outcome is assumed favorable and no policy winner or final service is selected from this ablation."
+  },
+  "unresolved_normative_and_operational_choices": [
+    "Whether a tolerance crossing should require human review at all, and what disclosed service promise links individual L to that request.",
+    "What severity-limiting action is appropriate after a breach: hold, partial de-risking, liquidation or another feasible rule. Each changes cost, liquidity and loss behavior and needs justification; none is adopted here.",
+    "Client-specific cash needs, withdrawal timing, bill/liquidity requirements and constraints on selling; the5% strict grid minimum does not identify these requirements.",
+    "Input freshness, verification sources, material-change thresholds and procedures when history or current valuation is unavailable.",
+    "A prospective, testable model-validity/drift trigger, its evidence and escalation policy; do not choose it using realized losses after the fact.",
+    "Actual human capacity, response times, advice, authorization and re-entry requirements. No numerical response-delay assumption is estimated or invented.",
+    "The Q2 net-benefit gate and incremental target-update policy remain unresolved; annual restoration and pending hold alone do not satisfy those design questions.",
+    "Any additional severity or CVaR budget/priority introduces a normative choice beyond the original everbreach probability constraint."
+  ],
+  "risk_budget_after_an_observed_crossing": {
+    "absorbing_fact": "Once b=1, the conditional probability of the same complete-history everbreach event is1 under every continuation. A conditional budget r<1 is infeasible; an admissible successor branch for this event must carry r=1.",
+    "no_reissue": "Do not issue a fresh alpha=.10, reset the peak/flag, start a new remaining-horizon clock or omit the triggered path to disguise this fact. A new future-loss/severity objective is a distinct problem that must be named and specified; it does not repair the already-failed event.",
+    "pending_vs_risk_control": "Pending hold is an explicit nonresponse proxy for actual holdings, not a proof of restored risk feasibility or a human risk-control action."
+  },
+  "acceptance_before_any_future_execution_or_service_adoption": [
+    "Resolve the proposed study's original artifact set and freeze its strict172 local/global mapping, source versions, target/menu, effective assignments, H/L, cost and existing folds before reading new ablation outcomes.",
+    "Verify exact original replay against saved strict172 metrics; retain120 original rows per full client and pooled OOF client, with24 per individual outer fold, including null Review rows.",
+    "Assert paired state/action/fee identity through first crossing and identical tau/b_H for every assigned path. Full-H breach-count differences must be zero; stop and investigate any nonzero difference.",
+    "After crossing, verify no discretionary pending transfers or target/model updates, while actual asset returns, CPI, wealth, peak, severity and elapsed time continue without resets.",
+    "Keep input/model failure experiments separate from the financial-crossing coupling experiment; predeclare any injected or observed failure timing and account for unknown valuations honestly.",
+    "Report severity/wealth/cost/recovery with units, all-path and triggered-only denominators, right censoring and overlapping-fold limitations. Do not equate pending with adviser improvement or lower everbreach probability.",
+    "Record source/input/output hashes at start/end, guarded1--120 access, action traces and reason codes; independent accounting and coupling replay must be possible.",
+    "Before any final service adoption obtain justified liquidity/input/model-validity/re-entry rules, distinguish actual human evidence from a nonresponse proxy, and address Q2 benefit-gated execution. This proposed ablation cannot substitute for those decisions."
+  ]
+}
