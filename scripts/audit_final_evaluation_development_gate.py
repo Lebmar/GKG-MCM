@@ -1,0 +1,305 @@
+"""Independent saved-array/table audit of the development-only eval adapter.
+
+Never imports the new preparation producer, policy/selector/metric modules,
+or a market loader. Original audited arrays are exact-reproduction references;
+exported financial fields and all nine summaries use separate arithmetic.
+This validates reproduction, object identities and NULL semantics, not a new
+independent market/forecast engine. No final release is created or invoked.
+"""
+from __future__ import annotations
+from datetime import datetime,timezone
+import ast,hashlib,json,math
+from pathlib import Path
+import numpy as np
+import pandas as pd
+ROOT=Path(__file__).resolve().parents[1]
+PROTOCOL=ROOT/'docs/final_evaluation_protocol.json'
+PLAN=ROOT/'docs/final_evaluation_development_gate_audit_plan.json'
+OUT=ROOT/'results/model_review/final_evaluation_development_gate_v1'
+RELEASE=ROOT/'docs/final_evaluation_release.json'
+FINAL_OUT=ROOT/'results/final_locked_evaluation_v1'
+TOL=1e-12
+FIN=('log_growth','cagr','mdd','volatility','terminal_real','nominal_fees','nominal_moved','trade_fraction','target_execution_fraction',
+     'terminal_equity_weight','terminal_bond_weight','terminal_bill_weight','breach','excess','first_crossing')
+METRIC=('log_growth','cagr','mdd','volatility','terminal_real')
+
+
+def sha(path):
+    h=hashlib.sha256()
+    with Path(path).open('rb') as f:
+        for block in iter(lambda:f.read(1048576),b''):h.update(block)
+    return h.hexdigest()
+def readj(path):return json.loads(Path(path).read_text())
+def null(v):return v is None or isinstance(v,(float,np.floating)) and np.isnan(v)
+def canonical(v):return hashlib.sha256(json.dumps(v,sort_keys=True,separators=(',',':'),allow_nan=False).encode()).hexdigest()
+
+
+def empirical_quantile(values,p):
+    v=sorted(float(x) for x in values)
+    if not v or not np.isfinite(v).all() or not 0<=p<=1:raise ValueError('Finite nonempty empirical sample and quantile0..1required')
+    return v[max(0,min(len(v)-1,math.ceil(p*len(v))-1))]
+
+
+def standard_median(values):
+    v=sorted(float(x) for x in values)
+    if not v or not np.isfinite(v).all():raise ValueError('Finite nonempty median sample required')
+    n=len(v);return v[n//2] if n%2 else (v[n//2-1]+v[n//2])/2
+
+
+def fractional_cvar90(values):
+    v=sorted((float(x) for x in values),reverse=True)
+    if not v or not np.isfinite(v).all():raise ValueError('Finite nonempty loss sample required')
+    mass=len(v)/10
+    return math.fsum(x*max(0.,min(1.,mass-i)) for i,x in enumerate(v))/mass
+
+
+def exact_inventory(observed,reference,fields):
+    if not fields or len(set(fields))!=len(fields) or set(observed)!=set(fields) or set(reference)!=set(fields):
+        raise ValueError('Complete identical field inventory required')
+    records=[]
+    for field in fields:
+        a,b=np.asarray(observed[field]),np.asarray(reference[field])
+        if a.dtype!=b.dtype or a.shape!=b.shape:raise ValueError('Exact dtype/shape mismatch: '+field)
+        equal=np.array_equal(a,b,equal_nan=True) if a.dtype.kind in 'fc' else np.array_equal(a,b)
+        if not equal:raise ValueError('Exact value/NULLmask mismatch: '+field)
+        records.append(dict(field=field,dtype=str(a.dtype),shape=list(a.shape),scalar_values=int(a.size),exact=True))
+    return records
+
+
+def require_financial_NULL(row):
+    if any(not null(row[field]) for field in FIN):raise ValueError('Rejected service/reference financials must beNULL, notzero/fallback')
+
+
+def independent_path(arm,i,loss):
+    real=np.asarray(arm['real_wealth'][i],float);h=len(real)-1
+    if h<1 or real[0]!=100 or not np.isfinite(real).all() or np.any(real<=0):raise ValueError('Own original horizon and preallocation100required')
+    peak=real[0];worst=0.;first=None
+    for endpoint,r in enumerate(real[1:],1):
+        peak=max(peak,r);worst=max(worst,1-r/peak)
+        if first is None and worst-loss>TOL:first=endpoint
+    annual=[real[t+1]/real[t]-1 for t in range(h)];mean=math.fsum(annual)/h
+    volatility=math.sqrt(math.fsum((x-mean)**2 for x in annual)/(h-1)) if h>1 else 0.
+    log=math.log(float(real[-1]/100))/h;bad=worst-loss>TOL
+    fees=np.asarray(arm['fees'][i],float);moved=np.asarray(arm['moved'][i],float)
+    if fees.shape!=(h,) or moved.shape!=(h,):raise ValueError('Exactly originalH fees includinginception, no terminalfee required')
+    if not np.array_equal(np.asarray(arm['trades'][i]),moved>TOL):raise ValueError('Actualtrade means physical amount moved')
+    weights=np.asarray(arm['weights'][i,-1],float)
+    return dict(log_growth=log,cagr=math.expm1(log),mdd=worst,volatility=volatility,terminal_real=float(real[-1]),
+        nominal_fees=math.fsum(fees),nominal_moved=math.fsum(moved),trade_fraction=int(sum(moved>TOL))/h,
+        target_execution_fraction=int(sum(arm['target_execution'][i]))/h,
+        terminal_equity_weight=float(weights[0]),terminal_bond_weight=float(weights[1]),terminal_bill_weight=float(weights[2]),
+        breach=bool(bad),excess=worst-loss if bad else 0.,first_crossing=first)
+
+
+class Checks:
+    def __init__(self):self.n=0;self.maximum_error=0.
+    def check(self,v,label):
+        self.n+=1
+        if not v:raise AssertionError(label)
+    def value(self,a,b,label,*,atol=2e-10,rtol=5e-13):
+        if null(b):self.check(null(a),label+'/NULL');return
+        if isinstance(b,(str,bool,np.bool_)):
+            self.check(a==b,label+'/exact');return
+        if isinstance(b,(dict,list)):
+            self.check(a==b,label+'/structure');return
+        self.check(not null(a),label+'/finite')
+        e=abs(float(a)-float(b));self.maximum_error=max(self.maximum_error,e)
+        self.check(e<=atol+rtol*abs(float(b)),label+'/numeric')
+
+
+SHADOW='unapproved_fixed_shadow'
+GROUPS={SHADOW:'c0__joint_tie_set_refit_learner','same_target_B':'c0__annual_then_pending','exact_thirds_annual':'c0__equal_thirds_annual'}
+SUMMARY_FIN=('breach_count','breach_fraction','mean_log_growth','mean_cagr','median_cagr','p10_cagr','mean_mdd','median_mdd','p90_mdd','cvar90_mdd','mean_volatility','mean_nominal_fees','mean_trade_fraction')
+FREEZE=ROOT/'docs/final_evaluation_development_gate_audit_source_freeze_v2.json'
+
+
+def source_gate_review(text):
+    tree=ast.parse(text);func={x.name:x for x in tree.body if isinstance(x,ast.FunctionDef)}
+    def calls(node,name):return sorted([x for x in ast.walk(node) if isinstance(x,ast.Call) and isinstance(x.func,ast.Name) and x.func.id==name],key=lambda x:x.lineno)
+    def loader_signature(call):
+        period=call.args[1]
+        if not isinstance(period,ast.Call) or not isinstance(period.func,ast.Name) or period.func.id!='range':raise ValueError('Literal original ID range required')
+        ids=tuple(ast.literal_eval(x) for x in period.args)
+        kws={x.arg:ast.literal_eval(x.value) for x in call.keywords}
+        return ids,kws.get('allow_final')
+    dev=calls(func['_development_attempt'],'load_paths');final=calls(func['_final_attempt'],'load_paths')
+    if [loader_signature(x) for x in dev]!=[((1,121),False)] or [loader_signature(x) for x in final]!=[((1,121),False),((121,181),True)]:raise ValueError('Exact guarded development/final parser signatures required')
+    all_loaders=calls(tree,'load_paths')
+    if len(all_loaders)!=3:raise ValueError('No extra or top-level market parser allowed')
+    f=func['final_evaluation'];order=[calls(f,x)[0].lineno for x in ('authorize_final','verify_development_evidence','freeze_snapshot','run_archived_attempt')]
+    if order!=sorted(order) or len(set(order))!=4:raise ValueError('Release and current dev closure must precede archived final callback')
+    source=ast.get_source_segment(text,f)
+    for phrase in ('if not release_path.is_file()', 'development_gate_audit_sha256','if out.exists()'):
+        if phrase not in source:raise ValueError('Missing separate release/nonoverwrite guard')
+    wrapped=func['run_archived_attempt'];wrapped_text=ast.get_source_segment(text,wrapped)
+    if wrapped_text.index('out.mkdir')>wrapped_text.index('result = work(state)') or 'exist_ok=False' not in wrapped_text or 'except BaseException' not in wrapped_text or 'rerun_allowed=False' not in wrapped_text:raise ValueError('Archive must persist before all parserwork and preserve failure')
+    actual=final[1];markers=[x for x in calls(func['_final_attempt'],'update_attempt') if any(k.arg=='final_value_access_started' and isinstance(k.value,ast.Constant) and k.value.value is True for k in x.keywords)]
+    if len(markers)!=1 or markers[0].lineno>=actual.lineno:raise ValueError('Durable final-access marker required before final parser')
+    flags=[]
+    for node in ast.walk(tree):
+        if isinstance(node,ast.Call) and isinstance(node.func,ast.Attribute) and node.func.attr=='add_argument':
+            flags.extend(ast.literal_eval(x) for x in node.args if isinstance(x,ast.Constant) and isinstance(x.value,str) and x.value.startswith('--'))
+    if set(flags)!={'--describe','--validate-development','--execute-final'}:raise ValueError('No CLI identity/root/allowfinal/target override permitted')
+    for node in calls(tree,'writej'):
+        first=ast.unparse(node.args[0])
+        if 'RELEASE' in first or 'release_path' in first:raise ValueError('Preparation must never write final release')
+    return dict(status='passed_source_review',guarded_loader_signatures=[dict(range=list(a),allow_final=b) for a,b in map(loader_signature,all_loaders)],
+        final_release_and_current_dev_closure_precede_archived_parser=True,failed_attempt_persists_and_nooverwrite=True,final_access_marker_before_parser=True,
+        CLI_flags=sorted(flags),final_release_creation_in_source=False,
+        limitation='Static source/AST and producer synthetic mock review; not an actual final invocation or a formal proof against arbitrary code modification')
+
+
+def snapshot(p,m):
+    files={PROTOCOL,PLAN,FREEZE,Path(__file__).resolve(),ROOT/'tests/test_audit_final_evaluation_development_gate.py',OUT/'manifest.json'}
+    for rel,digest in readj(FREEZE).get('historical_evidence_sha256',{}).items():
+        if sha(ROOT/rel)!=digest:raise AssertionError('Archived failed-audit evidence changed')
+        files.add(ROOT/rel)
+    for key in ('execution_sources_sha256','frozen_input_sha256'):
+        for rel,digest in p[key].items():
+            if Path(rel).is_absolute() or '..' in Path(rel).parts or len(digest)!=64 or sha(ROOT/rel)!=digest:raise AssertionError('Frozen dev dependency changed: '+rel)
+            files.add(ROOT/rel)
+    for name,digest in m['outputs_sha256'].items():
+        if Path(name).name!=name or sha(OUT/name)!=digest:raise AssertionError('Dev output changed: '+name)
+        files.add(OUT/name)
+    return {str(x.relative_to(ROOT)):sha(x) for x in sorted(files)}
+
+
+def physical_checks(arm,target,cpi_reference,h,c,label):
+    x=np.asarray(arm['holdings']);post=np.asarray(arm['posttrade_holdings']);fees=np.asarray(arm['fees']);moved=np.asarray(arm['moved']);cp=np.asarray(arm['cpi'])
+    c.check(x.shape==(120,h+1,3) and post.shape==(120,h,3) and fees.shape==moved.shape==(120,h),label+'/complete ownH shapes')
+    for field in ('holdings','posttrade_holdings','fees','moved','nominal_wealth','real_wealth','real_peak','running_mdd','cpi'):
+        c.check(np.isfinite(arm[field]).all(),label+'/finite '+field)
+    def close(a,b,name,atol=2e-10):c.check(np.allclose(a,b,atol=atol,rtol=5e-13),label+'/'+name)
+    close(x[:,0,:],np.tile([0.,0.,100.],(120,1)),'initial original allbills')
+    close(x.sum(axis=2),arm['nominal_wealth'],'holdings wealth')
+    close(arm['real_wealth'],arm['nominal_wealth']/cp,'real purchasingpower')
+    close(cp,cpi_reference[:,:h+1],'same original calendar CPI',atol=2e-12)
+    buys=np.maximum(post-x[:,:-1,:],0).sum(axis=2)
+    close(moved,buys,'destination amount once');close(fees,.0025*buys,'exact self-financing fee equation')
+    close(post.sum(axis=2),arm['nominal_wealth'][:,:-1]-fees,'self-financing wealth')
+    restore=np.asarray(arm['actions'])=='restore';hold=~restore
+    c.check(np.array_equal(arm['target_execution'],restore),label+'/targetexecution action')
+    c.check(np.array_equal(arm['trades'],moved>TOL),label+'/physical trade count')
+    if np.any(hold):close(post[hold],x[:,:-1,:][hold],'hold retains quantities')
+    if np.any(restore):close(post[restore]/post[restore].sum(axis=1)[:,None],np.broadcast_to(target,post[restore].shape),'restore target fractions',atol=2e-13)
+    peak=np.maximum.accumulate(arm['real_wealth'],axis=1);drawdown=1-arm['real_wealth']/peak;worst=np.maximum.accumulate(drawdown,axis=1)
+    close(arm['real_peak'],peak,'whole original historical peak')
+    close(arm['running_mdd'],worst,'whole original MDD',atol=2e-13)
+
+
+def summary_expected(rows,obj):
+    fin=[x for x in rows if x['financial_available']];n=len(rows);admitted=obj['service_admitted'];question=obj['question']
+    r={key:obj[key] for key in ('object_id','question','profile','horizon','loss_tolerance','financial_scope')}
+    r.update(scope='development_resubstitution_reproduction_only',execution_status=obj['execution_status'],original_n=n,case_status=obj['case_status'],
+        q1_assignment=obj.get('q1_assignment',obj.get('assignment')),liquidity=obj['liquidity'],case_n=n if obj['case_status']=='balanced_case' else None,
+        financial_n=len(fin),service_automatic_n=None if admitted is None else n if admitted else 0,
+        preinvestment_review_n=n if obj['execution_status']=='execution_review' else None,execution_review_n=n if obj['execution_status']=='execution_review' else None,
+        q1_suitable_n=(n if obj['q1_suitable'] else 0) if question=='Q1' else None,q1_review_n=(0 if obj['q1_suitable'] else n) if question=='Q1' else None,
+        **dict.fromkeys(SUMMARY_FIN))
+    if not fin:return r
+    def avg(k):return math.fsum(x[k] for x in fin)/len(fin)
+    growth=[x['cagr'] for x in fin];loss=[x['mdd'] for x in fin];k=sum(x['breach'] for x in fin)
+    r.update(breach_count=k,breach_fraction=k/len(fin),mean_log_growth=avg('log_growth'),mean_cagr=avg('cagr'),median_cagr=standard_median(growth),
+        p10_cagr=empirical_quantile(growth,.1),mean_mdd=avg('mdd'),median_mdd=standard_median(loss),p90_mdd=empirical_quantile(loss,.9),
+        cvar90_mdd=fractional_cvar90(loss),mean_volatility=avg('volatility'),mean_nominal_fees=avg('nominal_fees'),mean_trade_fraction=avg('trade_fraction'))
+    return r
+
+
+def run():
+    receipt=OUT/'independent_audit.json'
+    if receipt.exists():raise RuntimeError('Never overwrite a completed development gate audit')
+    if RELEASE.exists() or FINAL_OUT.exists():raise RuntimeError('This audit requires final release and new final archive to remain absent')
+    p=readj(PROTOCOL);m=readj(OUT/'manifest.json');frozen=readj(FREEZE)
+    if p.get('development_execution_ready') is not True or p.get('final_execution_ready') is not False:raise RuntimeError('Frozen development enabled/final disabled protocol required')
+    if (m.get('status')!='passed' or m['preparation_protocol_sha256']!=sha(PROTOCOL) or m['sources']!=m['sources_at_end'] or m['input_sha256']!=m['input_sha256_at_end']
+        or m['sources']!=p['execution_sources_sha256'] or m['input_sha256']!=p['frozen_input_sha256']):raise RuntimeError('Complete passed producer bound to current frozen protocol required before values')
+    for rel,digest in frozen['source_sha256'].items():
+        if sha(ROOT/rel)!=digest:raise RuntimeError('Auditor source/test/plan changed after freeze')
+    before=snapshot(p,m);c=Checks();spec=p['object_specification'];saved_spec=readj(OUT/'object_specification.json')
+    c.check(saved_spec==spec and canonical(spec)==p['object_specification_sha256']==m['object_specification_sha256'],'exact locked object specification')
+    c.check(p['development_ids']==list(range(1,121)) and p['final_ids']==list(range(121,181)) and p['development_allow_final'] is False,'original development/final identity metadata')
+    for key,value in [('final_scenarios_loaded',False),('final_release_created',False),('final_execution_enabled',False),('new_fits',0),('selection_changed',False),('admission_changed',False),('final_value_access_started',False),('final_values_may_have_been_parsed',False),('exact_array_fields',120),('Q1_available_reference_paths',360),('Q1_Review_paths',240)]:c.value(m[key],value,'manifest/'+key)
+    c.check(m['scenario_ids_loaded']==list(range(1,121)),'manifest original loaded IDs')
+    original_manifest=readj(ROOT/'results/model_review/joint_liquidity_refit_v1/manifest.json')
+    c.check(m['development_arrays_sha256']==m['frozen_parent_development_arrays_sha256']==original_manifest['development_arrays_sha256'],'original development fingerprint closure')
+    source_review=source_gate_review((ROOT/'scripts/prepare_final_evaluation.py').read_text())
+    objects=spec['Q2_objects']+spec['Q1_objects'];objmap={x['object_id']:x for x in objects};available={x['object_id'] for x in objects if x['financial_available']}
+    c.check(len(objects)==9 and len(objmap)==9 and len(available)==6,'9locked objects and6physical groups')
+    q2=pd.read_csv(OUT/'Q2_paths.csv.gz',float_precision='round_trip');q1=pd.read_csv(OUT/'Q1_paths.csv.gz',float_precision='round_trip');summary=pd.read_csv(OUT/'summary.csv.gz',float_precision='round_trip')
+    c.check(len(q2)==480 and len(q1)==600 and len(summary)==9,'complete480/600/9denominators')
+    for name,frame in [('Q2',q2),('Q1',q1)]:
+        c.check(not frame.duplicated(['object_id','scenario_id']).any(),name+'/unique original object IDs')
+        c.check(set(frame.object_id)=={x['object_id'] for x in spec[name+'_objects']},name+'/complete object set')
+    c.check(set(summary.object_id)==set(objmap) and not summary.object_id.duplicated().any(),'all9unique summary objects')
+    exact_receipt=readj(OUT/'exact_array_reproduction.json');q1_receipt=readj(OUT/'Q1_reference_reproduction.json')
+    original_Q1=pd.read_csv(ROOT/'results/model_review/joint_liquidity_refit_v1/q1_effective_paths.csv',float_precision='round_trip')
+    original_Q1=original_Q1.loc[original_Q1.context.eq('full_development')&original_Q1.view.eq('effective')]
+    c.check(len(original_Q1)==600,'complete original ownH Q1cache')
+    exact_cells=0;array_results={};derived={};q1_paths=review_paths=0;physical_accounts=0
+    with np.load(OUT/'development_traces.npz',allow_pickle=False) as new,np.load(ROOT/'results/model_review/joint_liquidity_refit_v1/actual_traces.npz',allow_pickle=False) as old:
+      prefixes={x.split('__',1)[0] for x in new.files};c.check(prefixes==available,'no physical Review accounts or missing available group')
+      all_arms={}
+      for objid in available:
+        prefix=objid+'__';arm={key[len(prefix):]:new[key].copy() for key in new.files if key.startswith(prefix)}
+        c.check(np.array_equal(arm.pop('scenario_ids'),np.arange(1,121)),objid+'/local rows ordered original1..120')
+        all_arms[objid]=arm
+      for objid,legacy in GROUPS.items():
+        prefix=legacy+'__';reference={key[len(prefix):]:old[key] for key in old.files if key.startswith(prefix)}
+        records=exact_inventory(all_arms[objid],reference,p['exact_reproduction_fields'][objid])
+        records=[dict(record,field=objid+'/'+record['field']) for record in records];array_results[objid]=records
+        c.check(exact_receipt[objid]==records,objid+'/independently rebuilt exact receipt')
+        exact_cells+=sum(x['scalar_values'] for x in records)
+      cp=all_arms[SHADOW]['cpi']
+      for obj in objects:
+        objid=obj['object_id'];frame=q2 if obj['question']=='Q2' else q1;rows=frame.loc[frame.object_id.eq(objid)].sort_values('scenario_id')
+        c.check(rows.scenario_id.tolist()==list(range(1,121)),objid+'/all120original scenario IDs')
+        metadata={key:obj[key] for key in ('object_id','question','profile','horizon','loss_tolerance','financial_scope','execution_status','service_admitted','financial_available','case_status','liquidity')}
+        metadata.update(scope='development_resubstitution_reproduction_only',q1_suitable=obj.get('q1_suitable'),q1_assignment=obj.get('q1_assignment',obj.get('assignment')))
+        arm=all_arms.get(objid);expected_rows=[]
+        if arm is not None:
+            physical_checks(arm,obj['target'],cp,obj['horizon'],c,objid);physical_accounts+=120
+            c.check(np.array_equal(arm['targets'],np.asarray(obj['target'])),objid+'/own locked target metadata')
+        for i,row in enumerate(rows.to_dict('records')):
+            for field,value in metadata.items():c.value(row[field],value,objid+'/row metadata '+field)
+            expected=dict(metadata,scenario_id=i+1)
+            if not obj['financial_available']:
+                require_financial_NULL(row);c.n+=len(FIN);expected.update(dict.fromkeys(FIN));review_paths+=1
+            else:
+                metrics=independent_path(arm,i,obj['loss_tolerance']);expected.update(metrics)
+                for field,value in metrics.items():c.value(row[field],value,objid+'/independent path '+field)
+                c.value(int(arm['first_crossing'][i]),-1 if metrics['first_crossing'] is None else metrics['first_crossing'],objid+'/trace firstcrossing')
+                c.value(bool(arm['ever_breached'][i,-1]),metrics['breach'],objid+'/trace wholehistory event')
+            expected_rows.append(expected)
+        derived[objid]=expected_rows
+        if obj['question']=='Q1':
+            cache=original_Q1.loc[original_Q1.client.eq(obj['profile'])].sort_values('scenario_id')
+            c.check(cache.scenario_id.tolist()==list(range(1,121)),objid+'/Q1 cache identities')
+            c.check(cache.horizon.eq(obj['horizon']).all() and cache.loss_tolerance.eq(obj['loss_tolerance']).all() and cache.assignment.eq(obj['assignment']).all(),objid+'/Q1 ownH/L/assignment')
+            c.check(cache.assigned.eq(obj['financial_available']).all(),objid+'/Q1 cache availability')
+            for i,cache_row in enumerate(cache.to_dict('records')):
+                for field in (*METRIC,'breach','excess'):
+                    c.value(cache_row[field],expected_rows[i][field],objid+'/Q1 independent/cache '+field)
+            if obj['financial_available']:q1_paths+=120
+        expected_summary=summary_expected(expected_rows,obj);record=summary.loc[summary.object_id.eq(objid)].iloc[0].to_dict()
+        for field,value in expected_summary.items():c.value(record[field],value,objid+'/independent summary '+field)
+    c.check(sum(map(len,array_results.values()))==120,'all120arrayfields independently exact compared')
+    c.check(q1_paths==360 and review_paths==360,'360Q1reference and360totalReviewpath rows')
+    c.value(q1_receipt['available_product_paths'],360,'Q1 receipt available paths');c.value(q1_receipt['preserved_Review_paths'],240,'Q1 receipt Review paths')
+    c.check(not RELEASE.exists() and not FINAL_OUT.exists(),'no final release/archive created during audit')
+    after=snapshot(p,m);c.check(before==after,'immutable producer/source/input/output/protocol closure')
+    result=dict(status='passed',completed_utc=datetime.now(timezone.utc).isoformat(),checks_passed=c.n,maximum_numeric_absolute_error=c.maximum_error,
+        parent_manifest_sha256=sha(OUT/'manifest.json'),preparation_protocol_sha256=sha(PROTOCOL),object_specification_sha256=p['object_specification_sha256'],audit_plan_sha256=sha(PLAN),audit_source_freeze_sha256=sha(FREEZE),
+        auditor_sha256=sha(Path(__file__)),test_sha256=sha(ROOT/'tests/test_audit_final_evaluation_development_gate.py'),source_gate_review=source_review,
+        exact_Q2_array_fields_compared=120,exact_Q2_scalar_values_compared=exact_cells,physical_accounts_artifact_arithmetic_checked=physical_accounts,
+        Q2_path_rows_checked=480,Q1_path_rows_checked=600,summary_rows_independently_rebuilt=9,Q1_annual_reference_paths_reconciled=360,Q1_Review_paths_preserved=240,current_C_Review_paths_preserved=120,
+        new_market_parsers_called=0,new_policy_simulations=0,new_fullfan_Q_evaluations=0,new_fits=0,final_scenarios_read=False,final_release_created=False,final_execution_enabled=False,
+        audit_development_history='Attempt1 failed only on receipt field-label prefix after exact array comparison. Original source/freeze bytes and failed-attempt description archived; v2 prefixes object_id labels, changes no data/value/tolerance/field checks, and preserves producer unchanged.',
+        independence='New producer not imported. Generated savedarrays independently exact compared with frozen c0arrays; metrics, fees/self-finance identities, originalpeak/MDD, firstcrossing, summaries and NULLs separately rebuilt from artifacts. Old production kernels and previous physical audits remain computational dependencies, not a new independent market engine.',
+        inference_limits=['Exact development adapter reproduction is not conditionalforecast calibration, predictive reliability, serviceapproval, or a new market sample.',
+            'This audit creates no final release and authorizes no121..180parsing; a separately bound future engineering release is required.',
+            'Source/AST+producer syntheticmock review validates the designed gate order; it is not a formal security proof against arbitrary code changes.',
+            'Current C remains executionReview with financialNULL; Q1B/C/Eproduct references, unapprovedshadow and hypotheticalreferences keep distinct meanings.'],
+        exact_array_results=array_results,sources_and_artifacts_at_start=before,sources_and_artifacts_at_end=after)
+    receipt.write_text(json.dumps(result,indent=2,ensure_ascii=False,allow_nan=False)+'\n')
+    print(json.dumps({key:result[key] for key in ('status','checks_passed','exact_Q2_array_fields_compared','exact_Q2_scalar_values_compared','Q1_annual_reference_paths_reconciled','maximum_numeric_absolute_error','final_scenarios_read')}));return result
+if __name__=='__main__':run()

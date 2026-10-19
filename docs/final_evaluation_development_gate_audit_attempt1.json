@@ -1,0 +1,16 @@
+{
+  "version": "development-gate-independent-audit-failed-attempt-v1",
+  "status": "failed_adapter_schema_mismatch",
+  "recorded_utc": "2026-10-19T05:00:24.202654+00:00",
+  "original_auditor_path": "scripts/audit_final_evaluation_development_gate.py",
+  "original_auditor_sha256": "510e3f4447af415624a0bd0e0e16a81d4cc9f2c4163047bacbc133bb6de2596a",
+  "archived_auditor_path": "research/audit_attempts/final_evaluation_development_gate_v1/auditor_attempt_1.py.txt",
+  "original_freeze_sha256_at_attempt": "c6d1b576d3bdd8bb44d48abb71930fbd353b372ddb62cf5467351539beacb68c",
+  "archived_original_freeze_path": "research/audit_attempts/final_evaluation_development_gate_v1/source_freeze_attempt_1.json.txt",
+  "producer_manifest_sha256": "6c3e6e7bfea747ead2c4eded311a4909679663bacfc2ce793c797fe56afb6e36",
+  "exception": "AssertionError: unapproved_fixed_shadow/independently rebuilt exact receipt",
+  "actual_difference": "Producer receipt field labels use object_id/array_field; independent receipt initially used array_field. Compared arrays had already passed exactdtype/shape/value/NULLmask validation; the failure was receipt metadata-label mismatch.",
+  "repair": "Prefix independently reconstructed metadata field labels with object_id before matching receipt. No compared fields, values, dtypes, shapes, NULL masks, tolerances, producer, protocol or output arrays change.",
+  "passed_receipt_created": false,
+  "final_scenarios_read": false
+}

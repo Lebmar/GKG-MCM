@@ -52,6 +52,11 @@ and a fixed-state119 fan deleting actual112 restore; outer96 holds. All335
 paired members/670 action branches pass independent scalar checks. The result
 does not attribute the complete future loss to that decision or establish
 conditional forecasting accuracy; deleting self alone does not flip it.
+A [post-hoc member identity review](docs/matched_fan_tail_vote_identity_review.json)
+shows that original95 supplies the sole full120 hold-versus-restore event
+difference at this state. The original outer fan omits95; all24 omitted
+members and their growth/event outcomes remain visible. No95-only deletion,
+new subset choice or recommendation to drop an influential market is made.
 
 An exact baseline bridge reuses five known-fee-rate experiments for the
 current rejected fixed candidate, after checking all48 candidate NPZ fields
@@ -65,6 +70,21 @@ and [reading copy](notebooks/failure_path_development.html) collect four figures
 all fixed cases and the exact scope of each audit. The [model contract](docs/current_model_contract_2026_10_19.json)
 also reconciles Q1/Q2/Q3 requirements, a severe originally admitted outer case,
 and a44-word customer explanation. This is model specification, not a paper.
+
+The [locked evaluation preparation](docs/final_evaluation_protocol.json)
+now fixes all primary, shadow and reference objects before final data. Its
+[development reproduction](results/model_review/final_evaluation_development_gate_v1/)
+matches all120 candidate/reference fields exactly. Independent saved-array
+review checks369,371 values,480 Q2 rows,600 Q1 rows and nine summaries; all
+unserved financials stayNULL. The [preparation judgment](docs/final_evaluation_development_gate_judgment.json)
+states the scope and preserves the first auditor's metadata-adapter failure.
+Only original1–120 were parsed. The separate final release does not yet exist;
+the development gate never opens121–180 or changes admission. Read its fixed
+objects without parsing market values:
+
+```sh
+.venv/bin/python scripts/prepare_final_evaluation.py --describe
+```
 
 The prior evening session localizes the admission differences by original
 market ID: full-training9 to inner10 consists of8 shared events, ID98 leaving,
@@ -393,8 +413,8 @@ audits; they do not replace the primary procedure. The research preserves full
 path folds, records referrals as null outcomes, and distinguishes empirical
 calibration, numerical correctness and statistical evidence.
 
-The latest checkpoint passes **747 tests** and checks 151 saved manifests,
-audits and receipts against 898 distinct source, input, result and execution
+The latest checkpoint passes **897 tests** and checks 189 saved manifests,
+audits and receipts against 1009 distinct source, input, result and execution
 evidence files. The preceding benefit-cost phase's Git-index proof binds172
 frozen package files. The
 previous joint stage passes 538,236 independent selection/accounting checks and its
@@ -418,12 +438,15 @@ The proposed primary family keeps nine fixed-target price candidates; the
 18-controller update family would be a separately declared incremental study.
 More cautious admission may lead to more Review cases and still cannot turn
 reused development results into a new blind test.
-The requirement-by-requirement inventory is
-`docs/problem_A_deliverable_crosswalk.json`. It also separates the Balanced-only
-Q2 case from other future training assignments and records the unresolved
-liquidity, final-policy, evaluation and submission steps.
+The historical requirement inventory is
+`docs/problem_A_deliverable_crosswalk.json`. Its earlier liquidity and policy
+gaps must be read alongside the current model contract and its independent
+review. The current preparation judgment records the remaining final execution,
+paper and delivery steps; the Balanced-only Q2 case stays distinct from Q1
+product references.
 
-To rebuild the reading notebook in an activated project virtual environment:
+Historical notebook-authoring recipe for an isolated copy, preserving the
+frozen research artifacts in the working repository:
 
 ```sh
 python -m pip install -r requirements-review.txt

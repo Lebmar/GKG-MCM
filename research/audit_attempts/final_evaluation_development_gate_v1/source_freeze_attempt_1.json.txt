@@ -1,0 +1,13 @@
+{
+  "version": "development-only-audit-source-freeze-v1",
+  "frozen_utc": "2026-10-19T04:58:53.728312+00:00",
+  "source_sha256": {
+    "scripts/audit_final_evaluation_development_gate.py": "510e3f4447af415624a0bd0e0e16a81d4cc9f2c4163047bacbc133bb6de2596a",
+    "tests/test_audit_final_evaluation_development_gate.py": "b996e57a27ff095f94322136ffd1369a37035f09095d5a8c803111dc9634e95b",
+    "docs/final_evaluation_development_gate_audit_plan.json": "5b71dcca3c89defd4bb43b11d12c64371a7d9854a6b62d31883236b084c1fe89"
+  },
+  "synthetic_tests_passed": 10,
+  "timing": "Auditplan declared before producer; adapter finalized after producer passed metadata was reported, before inspecting new numerical arrays/tables. No new numerical audit has run yet.",
+  "final_release_created": false,
+  "final_execution_enabled": false
+}

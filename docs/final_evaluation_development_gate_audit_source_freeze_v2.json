@@ -1,0 +1,19 @@
+{
+  "version": "development-only-audit-source-freeze-v2",
+  "frozen_utc": "2026-10-19T05:00:24.203075+00:00",
+  "source_sha256": {
+    "scripts/audit_final_evaluation_development_gate.py": "8122b9b3b99092309a7dfd0743d209901fa68f195bfce6332f372dc6a972ab21",
+    "tests/test_audit_final_evaluation_development_gate.py": "b996e57a27ff095f94322136ffd1369a37035f09095d5a8c803111dc9634e95b",
+    "docs/final_evaluation_development_gate_audit_plan.json": "5b71dcca3c89defd4bb43b11d12c64371a7d9854a6b62d31883236b084c1fe89"
+  },
+  "historical_evidence_sha256": {
+    "research/audit_attempts/final_evaluation_development_gate_v1/auditor_attempt_1.py.txt": "510e3f4447af415624a0bd0e0e16a81d4cc9f2c4163047bacbc133bb6de2596a",
+    "research/audit_attempts/final_evaluation_development_gate_v1/source_freeze_attempt_1.json.txt": "c6d1b576d3bdd8bb44d48abb71930fbd353b372ddb62cf5467351539beacb68c",
+    "docs/final_evaluation_development_gate_audit_source_freeze.json": "acaeafd9dc92ee419dfe6744df4d5ba20a6ee3cd7bebbb40ab14a51186c6c324",
+    "docs/final_evaluation_development_gate_audit_attempt1.json": "6fe58e64b0d5dd1f799eb5bae4311e36e8d185fae04e9789da40aed37feb7370"
+  },
+  "synthetic_tests_passed": 10,
+  "change": "Exact receipt field-label namespace correction only; historical source preserved. No producer/protocol/array/rule/tolerance changes.",
+  "final_release_created": false,
+  "final_execution_enabled": false
+}

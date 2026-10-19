@@ -619,3 +619,86 @@ The remaining evaluation adapter must separate primary service, nonadmitted
 shadow and references, lock metrics/NULL/information timing before final data,
 and disclose that the earlier V1 already saw121–180. Paper/ZIP/CMT work remains
 outside this session's current modelling checkpoint.
+
+
+A later explicitly post-hoc regrouping of all335 already independently audited
+matched-fan member rows identifies original95 as the only full120 paired event
+vote (hold true, restore false). It is among the original24 members absent in
+outer96. All common96 member growth/event fields are exact; removed24 has2/1
+events and paired mean-growth advantage+.00212114, versus−.00677266 in common96.
+All24 omitted identities and the full set of nonzero votes are preserved;
+no95-only deletion or new fan simulation occurs. The review is descriptive
+algebra of audited results, not another independent market audit or a reason
+to discard95. Its maximum mean-Q aggregate roundoff is3.68e-16.
+
+Archival whitespace checking initially flags the standard CRLF bytes of new
+CSV evidence. Those frozen bytes/hashes are preserved; a one-command Git
+cr-at-eol text convention confirms no actual trailing spaces or blank-EOF
+errors. No audit or model rule is changed. The completed mechanism checkpoint
+passes179 saved snapshots and985 distinct hashed files, including860 tests.
+
+
+## 2026-10-19: freeze evaluation objects and validate the adapter only
+
+The same session advances one concrete preparation step without reopening
+finaldata. The new adapter fixes4Q2objects and5own-H Q1objects in source before
+final values: the complete guardedC service, its separately unapprovedfixed
+shadow, own-targetB/pending, exactthirds annual, and the existing Q1 staticannual
+product references. MainC/A/DReview never obtain physical account trees or
+substituted finance. OriginalH/L/liq, case/original/financial/auto/Review
+populations and all growth/tail/trade metrics are explicit. Both source
+reviewers and root check these scopes;27 synthetic producer tests and10
+auditor tests precede the numerical reproduction.
+
+The adapter source/protocol/auditplan freeze in3953565. Root enables only
+preparation developmentready; preparation finalready staysFalse permanently.
+A later NEW engineering release must bind the unchanged source, objects,
+passed developmentmanifest and exact independentaudit plus their current
+closures before a final parser can be invoked. It is not an additional
+human-permission flow. Default--describe reads metadata only. No release is
+created and no final output directory exists in this session.
+
+The source review corrects the initial draft's numerical-excess semantics:
+when MDD-L lies inside the strict1e-12 equality tolerance, excess iszero.
+Terminalasset fields are explicitly weights, not currency values. Both
+possiblefuture final execution and current developmentgate write a unique
+incomplete attempt before any valueparser, retainphase/errorlogs/failed
+receipts on exception, and prohibit overwriting/retry. Finalpossibleaccess
+is marked before its parser and completeload separately. These changes are
+made before sourcefreeze and any new numerical gate, not after seeingfinal.
+
+Only the guarded1–120loader is called in the actual run. The original joint
+parent arrayfingerprint matches exactly. Single-fixedprice shadow48fields,
+B36 andthirds36 match everyold dtype/shape/value/NaNmask without tolerance.
+All360 availableQ1annualproduct metricpaths match savedCSV serialization;
+240Q1Reviewpaths remainNULL. The new artifact includes the six actually
+simulated physicaltrees so an independent reader can check them without
+another simulation; there is no invented mainReview physicalstate.
+
+Independent audit compares120fields/369371scalarvalues, reconstructs480Q2
+and600Q1rows and9summaries, and checks720 savedphysicalaccount artifacts.
+It passes52037 checks, maximum2.27e-13, with0newmarketparsers,0simulations,
+0newfullfanQevaluations. This is implementation/serialization evidence;
+conditionalriskcalibration and serviceefficacy remain unproven.
+
+The first independentauditor attempt stops after exactarray checks because
+its receipt fieldlabels omit the producer'sobject/ prefix. Oldauditor and
+originalfreeze bytes are preserved underresearch/audit_attempts, along with
+an explicit failure explanation. The historicalfreeze resolves its hashes
+to archivedsource and records the oldcurrentpath separately. V2 changes
+only the labeladapter, retaining allarrayfields/values/dtypes/shapes/NULL
+checks/tolerances and untouchedproducer. The successfulreceipt doesnot
+claim a successfulfirstattempt or a newindependentmarketengine.
+
+CurrentC still failsinner model10vsB8 and remainsReview. Final121–180,
+report, ZIP andCMTare not run. The unchangedmainmodel and newmodelcontract
+can now be evaluated by the fixedadapter after a separately declaredrelease,
+with oldV1final exposure disclosed and no furtheroutcome-driven selection.
+
+
+Final complete suite passes897 tests in153.393s. The final checkpoint passes
+189 saved snapshots and1009 distinct hashedfiles, including the executed
+13-cell mechanism companion and development-only evaluation gate plus its
+independent audit/failure history. Legacy src/report/output are unchanged
+from7bca10b. Default evaluation description is checked without marketvalue
+parsing; the separate finalrelease and finaloutput directory remain absent.

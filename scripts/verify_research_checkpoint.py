@@ -112,11 +112,19 @@ def main():
                           *sorted((ROOT / 'docs').glob('failure_action_*.json')),
                           *sorted((ROOT / 'docs').glob('current_candidate_cost_*.json')),
                           *sorted((ROOT / 'docs').glob('matched_parameter_*.json')),
+                          ROOT / 'docs/matched_fan_tail_vote_identity_review.json',
                           *sorted((ROOT / 'docs').glob('intervention_scale_*.json')),
                           ROOT / 'docs/model_closure_requirements_review_2026_10_19.json',
                           ROOT / 'docs/current_model_contract_2026_10_19.json',
                           ROOT / 'docs/current_model_contract_2026_10_19_independent_review.json',
                           ROOT / 'docs/model_stage_readiness_2026_10_19.json',
+                          ROOT / 'docs/final_evaluation_protocol.json',
+                          ROOT / 'docs/final_evaluation_development_gate_audit_plan.json',
+                          ROOT / 'docs/final_evaluation_development_gate_audit_source_freeze.json',
+                          ROOT / 'docs/final_evaluation_development_gate_audit_source_freeze_v2.json',
+                          ROOT / 'docs/final_evaluation_development_gate_audit_attempt1.json',
+                          ROOT / 'docs/final_evaluation_preparation_source_review.json',
+                          ROOT / 'docs/final_evaluation_development_gate_judgment.json',
                           ROOT / 'docs/admission_failure_identity_review.json',
                           ROOT / 'docs/overnight_handoff_2026_10_18.json',
                           ROOT / 'docs/main_model_registry.json',
@@ -152,6 +160,11 @@ def main():
             assert item['status'] == 'passed', path
             assert item['contract_sha256'] == sha(ROOT/'docs/current_model_contract_2026_10_19.json')
             checks += 2
+        if path == ROOT/'results/model_review/final_evaluation_development_gate_v1/manifest.json':
+            assert item['status'] == 'passed' and item['exact_array_fields'] == 120, path
+            assert item['final_execution_enabled'] is False and item['final_release_created'] is False
+            assert item['development_arrays_sha256'] == item['frozen_parent_development_arrays_sha256']
+            checks += 3
         assert not item.get("final_scenarios_loaded", False), path
         assert not item.get("final_scenarios_read", False), path
         for record in evidence_records(item):
