@@ -30,10 +30,14 @@ Last updated: 2026-10-20 (Q1 guard generalization addendum). Current branch:
 | Data provenance/licence | [DATA_NOTICE.md](DATA_NOTICE.md) |
 | AI assistance record | [AI_USE.md](../submission/AI_USE.md) |
 
-The final submission ZIP is [Team87_Lebmar_Technical_Source_v4.zip](../dist/Team87_Lebmar_Technical_Source_v4.zip)
-after the closure build. It keeps the V2 core unchanged and adds the Q1 5×3 screen,
-the one-page onboarding flow, the answer sheet, the Q3 note, the report draft/source,
-this index and a package README.
+The final submission ZIP is [Team87_Lebmar_Technical_Source_v6.zip](../dist/Team87_Lebmar_Technical_Source_v6.zip)
+(superseding v4/v5). It keeps the V2 core unchanged and adds the Q1 5x3 screen,
+the one-page onboarding flow, the answer sheet, the Q3 note, the final report
+source/PDF, the B/E guard-generalization study, the last-mile diagnostics chain
+(producers, audits, protocols, freezes, results and notebook), this index and a
+package README. Large upstream arrays (e.g. `results/state_budget_mitigation_v1`)
+remain regenerable from the bundled data via the frozen core scripts; the full
+historical record lives in the git history.
 
 ## Superseded or historical material — do not use for final claims
 
