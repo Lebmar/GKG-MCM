@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/Users/lebmar/Documents/ChatGPT/GKG数模/scripts/prepare_compact_submission.py", line 232, in <module>
+    elif args.build:build()
+                    ^^^^^^^
+  File "/Users/lebmar/Documents/ChatGPT/GKG数模/scripts/prepare_compact_submission.py", line 202, in build
+    raise RuntimeError('Separate current engineering build activation required')
+RuntimeError: Separate current engineering build activation required

@@ -1,0 +1,8 @@
+{
+  "status": "rejected_before_build",
+  "reason": "Root copied build-release template but initially omitted the required actual version string. Guard refused before creating build output or ZIP.",
+  "rejected_release_sha256": "0898212a7c222f119e4af527c494f56b32f2f5ee70c7e5ebbb897f086bf31412",
+  "model_or_parameter_changed": false,
+  "canonical_expectations_rerun": false,
+  "source_freeze_version_label_note": "The actual prepared sourcefreeze retains template-v1 in its descriptive version label. Its execution_readyTrue, exact protocol/source/input hashes and actual-file path were all explicitly activated and committed before the one canonical preparation. This historical label is preserved, not retroactively edited."
+}
