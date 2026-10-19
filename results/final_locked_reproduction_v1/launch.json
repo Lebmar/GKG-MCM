@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/Users/lebmar/Documents/ChatGPT/GKG数模/.venv/bin/python",
+    "-I",
+    "/var/folders/wr/mdv3gpmn60v93f7_2jlssl7w0000gn/T/safeinvest-locked-final-replay-ul5upnuu/scripts/prepare_final_evaluation.py",
+    "--execute-final"
+  ],
+  "cwd": "/var/folders/wr/mdv3gpmn60v93f7_2jlssl7w0000gn/T/safeinvest-locked-final-replay-ul5upnuu",
+  "python_executable": "/Users/lebmar/Documents/ChatGPT/GKG数模/.venv/bin/python",
+  "python_isolated_mode": true,
+  "PYTHONPATH": "",
+  "PYTHONNOUSERSITE": "1",
+  "original_final_outputs_copied": false
+}

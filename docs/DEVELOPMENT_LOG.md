@@ -702,3 +702,75 @@ Final complete suite passes897 tests in153.393s. The final checkpoint passes
 independent audit/failure history. Legacy src/report/output are unchanged
 from7bca10b. Default evaluation description is checked without marketvalue
 parsing; the separate finalrelease and finaloutput directory remain absent.
+
+
+## 2026-10-19: execute the unchanged locked final evaluation
+
+The user's next instruction explicitly authorizes final evaluation while
+keeping the established model and rules unchanged. A separate execution
+release binds the preparation's eight source files, twenty inputs, object
+specification and passed development audit. The preparation's own finalready
+flag staysFalse; the new release is the sole engineering activation. Fixed
+independent-audit, isolated-reproduction and paired-analysis plans accompany
+the release in41da208 before this run. Source checks and45 new synthetic tests
+precede execution. Old V1's prior final121–180 exposure is disclosed throughout;
+this is locked reuse, not a newly blind confirmation sample.
+
+The first released producer execution completes without an exception. It uses
+the unchanged120-path training fan and all sixty final IDs121–180, with no
+new fit, parameter or target selection, admission change, fallback or outcome
+selection. Four Q2 objects and five Q1 own-horizon objects produce240 and300
+path records plus nine summaries. C's primary service remains pre-investment
+executionReview on all sixty paths, with financial outcomesNULL. The rejected
+fixed candidate is separately named unapproved shadow. Same-target B/pending
+and exact-thirds annual are hypothetical references, not replacement service.
+
+Final Q2 shadow/B/thirds breach counts are11/8/6 of60. Median real CAGR is
+3.7335/3.5616/3.3761 percent, while P10 is1.2772/1.4955/1.4664 percent and
+P90 annual real MDD is45.0275/43.5416/39.3573 percent. Shadow trading and mean
+nominal fees fall, but lower-tail growth and drawdown tails worsen. Against B
+on identical IDs, growth is higher on45/60 paths and MDD larger on53/60;
+three extra breaches are124/152/167 with no B-only event. Against thirds,
+five additional breaches are124/152/156/167/170 with no reference-only event.
+Both reference groups and all sixty paired paths remain visible. There is
+no post-result rescue, alternative winner or significance claim.
+
+Q1 B/C/E static annual references retain own horizons15/30/6 and loss limits
+25/40/35 percent. Breaches are11/8/5 of60; B/C exceed the10% empirical reference,
+while E's P10 real CAGR is−1.5800%. A/D remainReview/financeNULL. These findings
+limit prospective risk claims and are not screened out. Different horizons
+and limits prevent a simple equal-horizon product-risk ranking. Q1 C continues
+annual restoration after crossing, unlike Q2 B's pending hold; matching event
+counts do not make the subsequent accounts identical.
+
+The first independent final audit passes81,911 arithmetic checks with maximum
+absolute error4.55e-13. It reconstructs all360 physical accounts,8460 periods,
+228 physical-array fields and all tables/summaries, preserving180 Review NULL
+rows. Nine prospectively fixed IDs121/150/180 by originalyears2/16/30 slots
+independently recompute both action branches over all120 training fan members.
+All nine are active; other active Q decisions receive saved-Q algebra and
+accounting checks, not a claimed independent complete Q recomputation. The
+audit is AI-assisted numerical checking, not external human peer review or
+conditional forecasting calibration. Original producer bytes remain unchanged.
+
+The first isolated same-source replay copies46 allowlisted dependencies to a
+fresh temporary workspace and reproduces all six producer artifacts byte for
+byte. All234 named NPZ fields and281540 scalar values match exactly; only
+the declared completed_utc key is normalized in the manifest. Copied files
+and original producer outputs are unchanged. This uses the same scenarios and
+runtime, so it is computational reproduction rather than another market test.
+The separate interpretation review independently reconstructs600 paired
+deltas,20 mean/median summaries,30 sign counts and all event-ID partitions:
+1030 checks, maximum difference0. The final reading figure retains all60
+same-B points and all four Q2 objects, including main financialNULL, and passes
+both author and root actual-image review before its manifest is frozen.
+
+The full suite passes942 tests in153.892s. A new final checkpoint checks1055
+distinct files and10632 hash/map relations, including release, producer,
+audit/attempt, replay, paired analysis, interpretation and figure lineage.
+Its verifier and saved receipt also receive separate read-only review. The
+old development verification and its897-test log remain byte-identical to
+the pre-final Git checkpoint; its189 snapshots are preserved. Legacy
+src/report/output remain unchanged from7bca10b. The final evaluation is
+procedurally complete; reliable autonomous service and future10% risk control
+are not established. No paper, codeZIP or CMT submission is made in this phase.

@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "phase": "completed_independent_audit",
+  "started_utc": "2026-10-19T05:24:51.045225+00:00",
+  "final_value_access_started": true,
+  "parent_manifest_sha256": "498ec9cd65142d35b040926f4d640ec1dd4a16e85b173c520a838aff5056cd97",
+  "auditor_source_sha256": "5d3f1bada5107f511990cce4156e9a1c2e77f9a48b21bb793df0666c4a924a53",
+  "receipt_sha256": "f2aa185d6b3cdeba850bc623cbbc3048a7e98a442ef15e28023f1e8ef52ae602"
+}

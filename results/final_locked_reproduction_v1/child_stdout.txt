@@ -1,0 +1,1 @@
+{"status": "complete", "manifest_sha256": "5c01c2901ed5e692d1b9c802fc76f6bea7a1dcadc3c9731410d5f18174322c18", "Q2_path_rows": 240, "Q1_path_rows": 300, "summary_rows": 9}

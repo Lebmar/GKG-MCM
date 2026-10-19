@@ -1,0 +1,45 @@
+{
+  "status": "complete",
+  "completed_utc": "2026-10-19T05:25:23.605323+00:00",
+  "sources_and_artifacts_at_start": {
+    "scripts/analyze_locked_final_evaluation.py": "febd6251b98166435d7d254761ac5149c553f89cff4ab1beb55695c0aa2a8a1d",
+    "docs/final_evaluation_analysis_plan.json": "d8129c47a81ecbaae6ddcd23d0df1f950b528f0b54c8aa77dc26f5578f962c1e",
+    "docs/final_evaluation_release.json": "a43b82db36906c5fa19ffb43cef0bca69fb908dc52a083179fa290b85c40d6dc",
+    "results/final_locked_evaluation_v1/manifest.json": "498ec9cd65142d35b040926f4d640ec1dd4a16e85b173c520a838aff5056cd97",
+    "results/final_locked_evaluation_v1/independent_audit.json": "f2aa185d6b3cdeba850bc623cbbc3048a7e98a442ef15e28023f1e8ef52ae602",
+    "results/final_locked_evaluation_v1/Q1_paths.csv.gz": "08d4e8be7ba5da7e5bc3a1ff7b2d8500f2b83f369feb7dd4273fddc297de23ca",
+    "results/final_locked_evaluation_v1/Q2_paths.csv.gz": "ac3a2c36305cda02f97c2ddfe1febb0379a5532d64abef2c6e8c7c47c04e5bdb",
+    "results/final_locked_evaluation_v1/evaluation_traces.npz": "eff39d3677ede5a615bae356951986c049649cd3ec847e29ec6a3839a94a366b",
+    "results/final_locked_evaluation_v1/existing_development_context.json": "f0afe44e955cb0fcb91da42f6744b09c48ae91f88ce58b06b0e41b20c493d91d",
+    "results/final_locked_evaluation_v1/object_specification.json": "d668629ccd9842f45e9906722a63c6e870b418fa515e1e539bdcf452796e7f0b",
+    "results/final_locked_evaluation_v1/summary.csv.gz": "472acd98e037b6f0e29a85e8ac54e0bbd2d3239cf5debce38a44d9366cb9822c"
+  },
+  "sources_and_artifacts_at_end": {
+    "scripts/analyze_locked_final_evaluation.py": "febd6251b98166435d7d254761ac5149c553f89cff4ab1beb55695c0aa2a8a1d",
+    "docs/final_evaluation_analysis_plan.json": "d8129c47a81ecbaae6ddcd23d0df1f950b528f0b54c8aa77dc26f5578f962c1e",
+    "docs/final_evaluation_release.json": "a43b82db36906c5fa19ffb43cef0bca69fb908dc52a083179fa290b85c40d6dc",
+    "results/final_locked_evaluation_v1/manifest.json": "498ec9cd65142d35b040926f4d640ec1dd4a16e85b173c520a838aff5056cd97",
+    "results/final_locked_evaluation_v1/independent_audit.json": "f2aa185d6b3cdeba850bc623cbbc3048a7e98a442ef15e28023f1e8ef52ae602",
+    "results/final_locked_evaluation_v1/Q1_paths.csv.gz": "08d4e8be7ba5da7e5bc3a1ff7b2d8500f2b83f369feb7dd4273fddc297de23ca",
+    "results/final_locked_evaluation_v1/Q2_paths.csv.gz": "ac3a2c36305cda02f97c2ddfe1febb0379a5532d64abef2c6e8c7c47c04e5bdb",
+    "results/final_locked_evaluation_v1/evaluation_traces.npz": "eff39d3677ede5a615bae356951986c049649cd3ec847e29ec6a3839a94a366b",
+    "results/final_locked_evaluation_v1/existing_development_context.json": "f0afe44e955cb0fcb91da42f6744b09c48ae91f88ce58b06b0e41b20c493d91d",
+    "results/final_locked_evaluation_v1/object_specification.json": "d668629ccd9842f45e9906722a63c6e870b418fa515e1e539bdcf452796e7f0b",
+    "results/final_locked_evaluation_v1/summary.csv.gz": "472acd98e037b6f0e29a85e8ac54e0bbd2d3239cf5debce38a44d9366cb9822c"
+  },
+  "outputs_sha256": {
+    "paired_differences.csv.gz": "b571b4135bcb5493c9be27300ec8faeead48c1cfd3c009138ba39dd20d4e82fa",
+    "paired_summary.json": "93fbecba4395da8bb72132e8e6be16c1312912320e8a5efb7624d0f16475e7ff",
+    "official_summary.csv.gz": "472acd98e037b6f0e29a85e8ac54e0bbd2d3239cf5debce38a44d9366cb9822c"
+  },
+  "parent_manifest_sha256": "498ec9cd65142d35b040926f4d640ec1dd4a16e85b173c520a838aff5056cd97",
+  "analysis_plan_sha256": "d8129c47a81ecbaae6ddcd23d0df1f950b528f0b54c8aa77dc26f5578f962c1e",
+  "all_prescribed_final_IDs_retained": true,
+  "paired_comparisons": 2,
+  "paired_rows": 120,
+  "no_new_fit_or_simulation": true,
+  "model_or_admission_changed": false,
+  "primary_C_service": "execution_review",
+  "primary_finance": null,
+  "inference": "Descriptive paired outcomes of unapproved shadow and both references; oldV1 exposure precludes newlyblind claims; no reapproval or future-risk certificate."
+}

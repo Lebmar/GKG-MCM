@@ -1,0 +1,21 @@
+{
+  "severe_example": {
+    "case_id": "outer_r5_112",
+    "job_id": "c502_refit",
+    "original_scenario_id": 112,
+    "scope": "existing dependent development failure, not selected from final",
+    "contract_path": "docs/current_model_contract_2026_10_19.json",
+    "contract_sha256": "5f47d9a7b3720e2642bd7767cd3fb126e7df9ee9b7d759a7ecd24ba6e5d124af"
+  },
+  "Q3_cost": {
+    "path": "results/model_review/current_candidate_cost_bridge_v1/manifest.json",
+    "sha256": "398395e1f8e1bf2c22ab4ae23150babcdcda12975e680a5990c07e81870a6c68",
+    "interpretation": "Existing fiveknowncosts on developmentfixedrejectedcandidate only;no finalfee expansion,mismodelledcost certification or approval stability claim."
+  },
+  "customer_explanation": {
+    "path": "docs/current_model_contract_2026_10_19.json",
+    "field": "customer_explanation",
+    "word_count": 44,
+    "meaning": "CurrentpreinvestmentReview wording distinct from hypothetical existinginvestmentpending. No newpaperwritten."
+  }
+}

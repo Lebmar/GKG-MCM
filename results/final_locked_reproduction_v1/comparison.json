@@ -1,0 +1,3892 @@
+{
+  "status": "passed",
+  "files": {
+    "Q1_paths.csv.gz": {
+      "original_sha256": "08d4e8be7ba5da7e5bc3a1ff7b2d8500f2b83f369feb7dd4273fddc297de23ca",
+      "replica_sha256": "08d4e8be7ba5da7e5bc3a1ff7b2d8500f2b83f369feb7dd4273fddc297de23ca",
+      "byte_equal": true
+    },
+    "Q2_paths.csv.gz": {
+      "original_sha256": "ac3a2c36305cda02f97c2ddfe1febb0379a5532d64abef2c6e8c7c47c04e5bdb",
+      "replica_sha256": "ac3a2c36305cda02f97c2ddfe1febb0379a5532d64abef2c6e8c7c47c04e5bdb",
+      "byte_equal": true
+    },
+    "evaluation_traces.npz": {
+      "original_sha256": "eff39d3677ede5a615bae356951986c049649cd3ec847e29ec6a3839a94a366b",
+      "replica_sha256": "eff39d3677ede5a615bae356951986c049649cd3ec847e29ec6a3839a94a366b",
+      "byte_equal": true,
+      "array_exact": true
+    },
+    "existing_development_context.json": {
+      "original_sha256": "f0afe44e955cb0fcb91da42f6744b09c48ae91f88ce58b06b0e41b20c493d91d",
+      "replica_sha256": "f0afe44e955cb0fcb91da42f6744b09c48ae91f88ce58b06b0e41b20c493d91d",
+      "byte_equal": true
+    },
+    "object_specification.json": {
+      "original_sha256": "d668629ccd9842f45e9906722a63c6e870b418fa515e1e539bdcf452796e7f0b",
+      "replica_sha256": "d668629ccd9842f45e9906722a63c6e870b418fa515e1e539bdcf452796e7f0b",
+      "byte_equal": true
+    },
+    "summary.csv.gz": {
+      "original_sha256": "472acd98e037b6f0e29a85e8ac54e0bbd2d3239cf5debce38a44d9366cb9822c",
+      "replica_sha256": "472acd98e037b6f0e29a85e8ac54e0bbd2d3239cf5debce38a44d9366cb9822c",
+      "byte_equal": true
+    }
+  },
+  "npz": {
+    "exact": true,
+    "fields_checked": 234,
+    "scalar_values_checked": 281540,
+    "container_bytes_equal": true,
+    "arrays": [
+      {
+        "field": "Q1_B_static_product__actions",
+        "shape_left": [
+          60,
+          15
+        ],
+        "shape_right": [
+          60,
+          15
+        ],
+        "dtype_left": "<U7",
+        "dtype_right": "<U7",
+        "scalar_values": 900,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_B_static_product__added_severity",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_B_static_product__available_followup",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "int64",
+        "dtype_right": "int64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_B_static_product__cpi",
+        "shape_left": [
+          60,
+          16
+        ],
+        "shape_right": [
+          60,
+          16
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 960,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_B_static_product__current_drawdown",
+        "shape_left": [
+          60,
+          16
+        ],
+        "shape_right": [
+          60,
+          16
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 960,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_B_static_product__drawdown_at_trigger",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_B_static_product__end_weights",
+        "shape_left": [
+          60,
+          15,
+          3
+        ],
+        "shape_right": [
+          60,
+          15,
+          3
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 2700,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_B_static_product__end_year_tv_drift",
+        "shape_left": [
+          60,
+          15
+        ],
+        "shape_right": [
+          60,
+          15
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 900,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_B_static_product__ever_breached",
+        "shape_left": [
+          60,
+          16
+        ],
+        "shape_right": [
+          60,
+          16
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 960,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_B_static_product__fee_fraction",
+        "shape_left": [
+          60,
+          15
+        ],
+        "shape_right": [
+          60,
+          15
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 900,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_B_static_product__fees",
+        "shape_left": [
+          60,
+          15
+        ],
+        "shape_right": [
+          60,
+          15
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 900,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_B_static_product__first_crossing",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "int64",
+        "dtype_right": "int64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_B_static_product__holdings",
+        "shape_left": [
+          60,
+          16,
+          3
+        ],
+        "shape_right": [
+          60,
+          16,
+          3
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 2880,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_B_static_product__moved",
+        "shape_left": [
+          60,
+          15
+        ],
+        "shape_right": [
+          60,
+          15
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 900,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_B_static_product__moved_fraction",
+        "shape_left": [
+          60,
+          15
+        ],
+        "shape_right": [
+          60,
+          15
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 900,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_B_static_product__nominal_wealth",
+        "shape_left": [
+          60,
+          16
+        ],
+        "shape_right": [
+          60,
+          16
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 960,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_B_static_product__observed_followup",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "int64",
+        "dtype_right": "int64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_B_static_product__peak_at_trigger",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_B_static_product__pending_at_decision",
+        "shape_left": [
+          60,
+          15
+        ],
+        "shape_right": [
+          60,
+          15
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 900,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_B_static_product__posttrade_holdings",
+        "shape_left": [
+          60,
+          15,
+          3
+        ],
+        "shape_right": [
+          60,
+          15,
+          3
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 2700,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_B_static_product__pretrade_tv_drift",
+        "shape_left": [
+          60,
+          15
+        ],
+        "shape_right": [
+          60,
+          15
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 900,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_B_static_product__pretrade_wealth",
+        "shape_left": [
+          60,
+          15
+        ],
+        "shape_right": [
+          60,
+          15
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 900,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_B_static_product__real_peak",
+        "shape_left": [
+          60,
+          16
+        ],
+        "shape_right": [
+          60,
+          16
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 960,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_B_static_product__real_wealth",
+        "shape_left": [
+          60,
+          16
+        ],
+        "shape_right": [
+          60,
+          16
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 960,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_B_static_product__real_wealth_at_trigger",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_B_static_product__recovered",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_B_static_product__recovery_endpoint",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "int64",
+        "dtype_right": "int64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_B_static_product__recovery_time",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "int64",
+        "dtype_right": "int64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_B_static_product__right_censored",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_B_static_product__running_mdd",
+        "shape_left": [
+          60,
+          16
+        ],
+        "shape_right": [
+          60,
+          16
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 960,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_B_static_product__scenario_ids",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "int64",
+        "dtype_right": "int64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_B_static_product__target_execution",
+        "shape_left": [
+          60,
+          15
+        ],
+        "shape_right": [
+          60,
+          15
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 900,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_B_static_product__targets",
+        "shape_left": [
+          3
+        ],
+        "shape_right": [
+          3
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 3,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_B_static_product__terminal_excess",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_B_static_product__trades",
+        "shape_left": [
+          60,
+          15
+        ],
+        "shape_right": [
+          60,
+          15
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 900,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_B_static_product__triggered",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_B_static_product__weights",
+        "shape_left": [
+          60,
+          16,
+          3
+        ],
+        "shape_right": [
+          60,
+          16,
+          3
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 2880,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_C_static_product__actions",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "<U7",
+        "dtype_right": "<U7",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_C_static_product__added_severity",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_C_static_product__available_followup",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "int64",
+        "dtype_right": "int64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_C_static_product__cpi",
+        "shape_left": [
+          60,
+          31
+        ],
+        "shape_right": [
+          60,
+          31
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1860,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_C_static_product__current_drawdown",
+        "shape_left": [
+          60,
+          31
+        ],
+        "shape_right": [
+          60,
+          31
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1860,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_C_static_product__drawdown_at_trigger",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_C_static_product__end_weights",
+        "shape_left": [
+          60,
+          30,
+          3
+        ],
+        "shape_right": [
+          60,
+          30,
+          3
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 5400,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_C_static_product__end_year_tv_drift",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_C_static_product__ever_breached",
+        "shape_left": [
+          60,
+          31
+        ],
+        "shape_right": [
+          60,
+          31
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 1860,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_C_static_product__fee_fraction",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_C_static_product__fees",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_C_static_product__first_crossing",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "int64",
+        "dtype_right": "int64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_C_static_product__holdings",
+        "shape_left": [
+          60,
+          31,
+          3
+        ],
+        "shape_right": [
+          60,
+          31,
+          3
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 5580,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_C_static_product__moved",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_C_static_product__moved_fraction",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_C_static_product__nominal_wealth",
+        "shape_left": [
+          60,
+          31
+        ],
+        "shape_right": [
+          60,
+          31
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1860,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_C_static_product__observed_followup",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "int64",
+        "dtype_right": "int64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_C_static_product__peak_at_trigger",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_C_static_product__pending_at_decision",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_C_static_product__posttrade_holdings",
+        "shape_left": [
+          60,
+          30,
+          3
+        ],
+        "shape_right": [
+          60,
+          30,
+          3
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 5400,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_C_static_product__pretrade_tv_drift",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_C_static_product__pretrade_wealth",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_C_static_product__real_peak",
+        "shape_left": [
+          60,
+          31
+        ],
+        "shape_right": [
+          60,
+          31
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1860,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_C_static_product__real_wealth",
+        "shape_left": [
+          60,
+          31
+        ],
+        "shape_right": [
+          60,
+          31
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1860,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_C_static_product__real_wealth_at_trigger",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_C_static_product__recovered",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_C_static_product__recovery_endpoint",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "int64",
+        "dtype_right": "int64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_C_static_product__recovery_time",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "int64",
+        "dtype_right": "int64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_C_static_product__right_censored",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_C_static_product__running_mdd",
+        "shape_left": [
+          60,
+          31
+        ],
+        "shape_right": [
+          60,
+          31
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1860,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_C_static_product__scenario_ids",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "int64",
+        "dtype_right": "int64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_C_static_product__target_execution",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_C_static_product__targets",
+        "shape_left": [
+          3
+        ],
+        "shape_right": [
+          3
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 3,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_C_static_product__terminal_excess",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_C_static_product__trades",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_C_static_product__triggered",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_C_static_product__weights",
+        "shape_left": [
+          60,
+          31,
+          3
+        ],
+        "shape_right": [
+          60,
+          31,
+          3
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 5580,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_E_static_product__actions",
+        "shape_left": [
+          60,
+          6
+        ],
+        "shape_right": [
+          60,
+          6
+        ],
+        "dtype_left": "<U7",
+        "dtype_right": "<U7",
+        "scalar_values": 360,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_E_static_product__added_severity",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_E_static_product__available_followup",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "int64",
+        "dtype_right": "int64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_E_static_product__cpi",
+        "shape_left": [
+          60,
+          7
+        ],
+        "shape_right": [
+          60,
+          7
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 420,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_E_static_product__current_drawdown",
+        "shape_left": [
+          60,
+          7
+        ],
+        "shape_right": [
+          60,
+          7
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 420,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_E_static_product__drawdown_at_trigger",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_E_static_product__end_weights",
+        "shape_left": [
+          60,
+          6,
+          3
+        ],
+        "shape_right": [
+          60,
+          6,
+          3
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1080,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_E_static_product__end_year_tv_drift",
+        "shape_left": [
+          60,
+          6
+        ],
+        "shape_right": [
+          60,
+          6
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 360,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_E_static_product__ever_breached",
+        "shape_left": [
+          60,
+          7
+        ],
+        "shape_right": [
+          60,
+          7
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 420,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_E_static_product__fee_fraction",
+        "shape_left": [
+          60,
+          6
+        ],
+        "shape_right": [
+          60,
+          6
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 360,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_E_static_product__fees",
+        "shape_left": [
+          60,
+          6
+        ],
+        "shape_right": [
+          60,
+          6
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 360,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_E_static_product__first_crossing",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "int64",
+        "dtype_right": "int64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_E_static_product__holdings",
+        "shape_left": [
+          60,
+          7,
+          3
+        ],
+        "shape_right": [
+          60,
+          7,
+          3
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1260,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_E_static_product__moved",
+        "shape_left": [
+          60,
+          6
+        ],
+        "shape_right": [
+          60,
+          6
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 360,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_E_static_product__moved_fraction",
+        "shape_left": [
+          60,
+          6
+        ],
+        "shape_right": [
+          60,
+          6
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 360,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_E_static_product__nominal_wealth",
+        "shape_left": [
+          60,
+          7
+        ],
+        "shape_right": [
+          60,
+          7
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 420,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_E_static_product__observed_followup",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "int64",
+        "dtype_right": "int64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_E_static_product__peak_at_trigger",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_E_static_product__pending_at_decision",
+        "shape_left": [
+          60,
+          6
+        ],
+        "shape_right": [
+          60,
+          6
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 360,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_E_static_product__posttrade_holdings",
+        "shape_left": [
+          60,
+          6,
+          3
+        ],
+        "shape_right": [
+          60,
+          6,
+          3
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1080,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_E_static_product__pretrade_tv_drift",
+        "shape_left": [
+          60,
+          6
+        ],
+        "shape_right": [
+          60,
+          6
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 360,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_E_static_product__pretrade_wealth",
+        "shape_left": [
+          60,
+          6
+        ],
+        "shape_right": [
+          60,
+          6
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 360,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_E_static_product__real_peak",
+        "shape_left": [
+          60,
+          7
+        ],
+        "shape_right": [
+          60,
+          7
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 420,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_E_static_product__real_wealth",
+        "shape_left": [
+          60,
+          7
+        ],
+        "shape_right": [
+          60,
+          7
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 420,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_E_static_product__real_wealth_at_trigger",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_E_static_product__recovered",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_E_static_product__recovery_endpoint",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "int64",
+        "dtype_right": "int64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_E_static_product__recovery_time",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "int64",
+        "dtype_right": "int64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_E_static_product__right_censored",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_E_static_product__running_mdd",
+        "shape_left": [
+          60,
+          7
+        ],
+        "shape_right": [
+          60,
+          7
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 420,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_E_static_product__scenario_ids",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "int64",
+        "dtype_right": "int64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_E_static_product__target_execution",
+        "shape_left": [
+          60,
+          6
+        ],
+        "shape_right": [
+          60,
+          6
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 360,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_E_static_product__targets",
+        "shape_left": [
+          3
+        ],
+        "shape_right": [
+          3
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 3,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_E_static_product__terminal_excess",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_E_static_product__trades",
+        "shape_left": [
+          60,
+          6
+        ],
+        "shape_right": [
+          60,
+          6
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 360,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_E_static_product__triggered",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "Q1_E_static_product__weights",
+        "shape_left": [
+          60,
+          7,
+          3
+        ],
+        "shape_right": [
+          60,
+          7,
+          3
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1260,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "exact_thirds_annual__actions",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "<U7",
+        "dtype_right": "<U7",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "exact_thirds_annual__added_severity",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "exact_thirds_annual__available_followup",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "int64",
+        "dtype_right": "int64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "exact_thirds_annual__cpi",
+        "shape_left": [
+          60,
+          31
+        ],
+        "shape_right": [
+          60,
+          31
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1860,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "exact_thirds_annual__current_drawdown",
+        "shape_left": [
+          60,
+          31
+        ],
+        "shape_right": [
+          60,
+          31
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1860,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "exact_thirds_annual__drawdown_at_trigger",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "exact_thirds_annual__end_weights",
+        "shape_left": [
+          60,
+          30,
+          3
+        ],
+        "shape_right": [
+          60,
+          30,
+          3
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 5400,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "exact_thirds_annual__end_year_tv_drift",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "exact_thirds_annual__ever_breached",
+        "shape_left": [
+          60,
+          31
+        ],
+        "shape_right": [
+          60,
+          31
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 1860,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "exact_thirds_annual__fee_fraction",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "exact_thirds_annual__fees",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "exact_thirds_annual__first_crossing",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "int64",
+        "dtype_right": "int64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "exact_thirds_annual__holdings",
+        "shape_left": [
+          60,
+          31,
+          3
+        ],
+        "shape_right": [
+          60,
+          31,
+          3
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 5580,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "exact_thirds_annual__moved",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "exact_thirds_annual__moved_fraction",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "exact_thirds_annual__nominal_wealth",
+        "shape_left": [
+          60,
+          31
+        ],
+        "shape_right": [
+          60,
+          31
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1860,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "exact_thirds_annual__observed_followup",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "int64",
+        "dtype_right": "int64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "exact_thirds_annual__peak_at_trigger",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "exact_thirds_annual__pending_at_decision",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "exact_thirds_annual__posttrade_holdings",
+        "shape_left": [
+          60,
+          30,
+          3
+        ],
+        "shape_right": [
+          60,
+          30,
+          3
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 5400,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "exact_thirds_annual__pretrade_tv_drift",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "exact_thirds_annual__pretrade_wealth",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "exact_thirds_annual__real_peak",
+        "shape_left": [
+          60,
+          31
+        ],
+        "shape_right": [
+          60,
+          31
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1860,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "exact_thirds_annual__real_wealth",
+        "shape_left": [
+          60,
+          31
+        ],
+        "shape_right": [
+          60,
+          31
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1860,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "exact_thirds_annual__real_wealth_at_trigger",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "exact_thirds_annual__recovered",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "exact_thirds_annual__recovery_endpoint",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "int64",
+        "dtype_right": "int64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "exact_thirds_annual__recovery_time",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "int64",
+        "dtype_right": "int64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "exact_thirds_annual__right_censored",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "exact_thirds_annual__running_mdd",
+        "shape_left": [
+          60,
+          31
+        ],
+        "shape_right": [
+          60,
+          31
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1860,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "exact_thirds_annual__scenario_ids",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "int64",
+        "dtype_right": "int64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "exact_thirds_annual__target_execution",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "exact_thirds_annual__targets",
+        "shape_left": [
+          3
+        ],
+        "shape_right": [
+          3
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 3,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "exact_thirds_annual__terminal_excess",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "exact_thirds_annual__trades",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "exact_thirds_annual__triggered",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "exact_thirds_annual__weights",
+        "shape_left": [
+          60,
+          31,
+          3
+        ],
+        "shape_right": [
+          60,
+          31,
+          3
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 5580,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "same_target_B__actions",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "<U7",
+        "dtype_right": "<U7",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "same_target_B__added_severity",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "same_target_B__available_followup",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "int64",
+        "dtype_right": "int64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "same_target_B__cpi",
+        "shape_left": [
+          60,
+          31
+        ],
+        "shape_right": [
+          60,
+          31
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1860,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "same_target_B__current_drawdown",
+        "shape_left": [
+          60,
+          31
+        ],
+        "shape_right": [
+          60,
+          31
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1860,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "same_target_B__drawdown_at_trigger",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "same_target_B__end_weights",
+        "shape_left": [
+          60,
+          30,
+          3
+        ],
+        "shape_right": [
+          60,
+          30,
+          3
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 5400,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "same_target_B__end_year_tv_drift",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "same_target_B__ever_breached",
+        "shape_left": [
+          60,
+          31
+        ],
+        "shape_right": [
+          60,
+          31
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 1860,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "same_target_B__fee_fraction",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "same_target_B__fees",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "same_target_B__first_crossing",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "int64",
+        "dtype_right": "int64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "same_target_B__holdings",
+        "shape_left": [
+          60,
+          31,
+          3
+        ],
+        "shape_right": [
+          60,
+          31,
+          3
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 5580,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "same_target_B__moved",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "same_target_B__moved_fraction",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "same_target_B__nominal_wealth",
+        "shape_left": [
+          60,
+          31
+        ],
+        "shape_right": [
+          60,
+          31
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1860,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "same_target_B__observed_followup",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "int64",
+        "dtype_right": "int64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "same_target_B__peak_at_trigger",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "same_target_B__pending_at_decision",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "same_target_B__posttrade_holdings",
+        "shape_left": [
+          60,
+          30,
+          3
+        ],
+        "shape_right": [
+          60,
+          30,
+          3
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 5400,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "same_target_B__pretrade_tv_drift",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "same_target_B__pretrade_wealth",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "same_target_B__real_peak",
+        "shape_left": [
+          60,
+          31
+        ],
+        "shape_right": [
+          60,
+          31
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1860,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "same_target_B__real_wealth",
+        "shape_left": [
+          60,
+          31
+        ],
+        "shape_right": [
+          60,
+          31
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1860,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "same_target_B__real_wealth_at_trigger",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "same_target_B__recovered",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "same_target_B__recovery_endpoint",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "int64",
+        "dtype_right": "int64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "same_target_B__recovery_time",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "int64",
+        "dtype_right": "int64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "same_target_B__right_censored",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "same_target_B__running_mdd",
+        "shape_left": [
+          60,
+          31
+        ],
+        "shape_right": [
+          60,
+          31
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1860,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "same_target_B__scenario_ids",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "int64",
+        "dtype_right": "int64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "same_target_B__target_execution",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "same_target_B__targets",
+        "shape_left": [
+          3
+        ],
+        "shape_right": [
+          3
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 3,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "same_target_B__terminal_excess",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "same_target_B__trades",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "same_target_B__triggered",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "same_target_B__weights",
+        "shape_left": [
+          60,
+          31,
+          3
+        ],
+        "shape_right": [
+          60,
+          31,
+          3
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 5580,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__actions",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "<U7",
+        "dtype_right": "<U7",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__added_severity",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__annual_prices",
+        "shape_left": [
+          1
+        ],
+        "shape_right": [
+          1
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__available_followup",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "int64",
+        "dtype_right": "int64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__cpi",
+        "shape_left": [
+          60,
+          31
+        ],
+        "shape_right": [
+          60,
+          31
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1860,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__current_drawdown",
+        "shape_left": [
+          60,
+          31
+        ],
+        "shape_right": [
+          60,
+          31
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1860,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__drawdown_at_trigger",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__end_weights",
+        "shape_left": [
+          60,
+          30,
+          3
+        ],
+        "shape_right": [
+          60,
+          30,
+          3
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 5400,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__end_year_tv_drift",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__ever_breached",
+        "shape_left": [
+          60,
+          31
+        ],
+        "shape_right": [
+          60,
+          31
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 1860,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__fee_fraction",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__fees",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__first_crossing",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "int64",
+        "dtype_right": "int64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__forecast_n",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "int64",
+        "dtype_right": "int64",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__gate_reason",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "<U48",
+        "dtype_right": "<U48",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__holdings",
+        "shape_left": [
+          60,
+          31,
+          3
+        ],
+        "shape_right": [
+          60,
+          31,
+          3
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 5580,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__loss_tolerances",
+        "shape_left": [
+          1
+        ],
+        "shape_right": [
+          1
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__moved",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__moved_fraction",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__nominal_wealth",
+        "shape_left": [
+          60,
+          31
+        ],
+        "shape_right": [
+          60,
+          31
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1860,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__observed_followup",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "int64",
+        "dtype_right": "int64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__peak_at_trigger",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__pending_at_decision",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__posttrade_holdings",
+        "shape_left": [
+          60,
+          30,
+          3
+        ],
+        "shape_right": [
+          60,
+          30,
+          3
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 5400,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__predicted_breach_count_delta_restore",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "int64",
+        "dtype_right": "int64",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__predicted_growth_advantage_restore",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__predicted_score",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__pretrade_tv_drift",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__pretrade_wealth",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__qbad_hold_count",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "int64",
+        "dtype_right": "int64",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__qbad_restore_count",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "int64",
+        "dtype_right": "int64",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__qg_hold",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__qg_restore",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__real_peak",
+        "shape_left": [
+          60,
+          31
+        ],
+        "shape_right": [
+          60,
+          31
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1860,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__real_wealth",
+        "shape_left": [
+          60,
+          31
+        ],
+        "shape_right": [
+          60,
+          31
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1860,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__real_wealth_at_trigger",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__recovered",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__recovery_endpoint",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "int64",
+        "dtype_right": "int64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__recovery_time",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "int64",
+        "dtype_right": "int64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__restoration_predicted_growth_sacrifice",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__right_censored",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__running_mdd",
+        "shape_left": [
+          60,
+          31
+        ],
+        "shape_right": [
+          60,
+          31
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 1860,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__scenario_ids",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "int64",
+        "dtype_right": "int64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__target_execution",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__targets",
+        "shape_left": [
+          3
+        ],
+        "shape_right": [
+          3
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 3,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__terminal_excess",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__trades",
+        "shape_left": [
+          60,
+          30
+        ],
+        "shape_right": [
+          60,
+          30
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 1800,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__triggered",
+        "shape_left": [
+          60
+        ],
+        "shape_right": [
+          60
+        ],
+        "dtype_left": "bool",
+        "dtype_right": "bool",
+        "scalar_values": 60,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      },
+      {
+        "field": "unapproved_fixed_shadow__weights",
+        "shape_left": [
+          60,
+          31,
+          3
+        ],
+        "shape_right": [
+          60,
+          31,
+          3
+        ],
+        "dtype_left": "float64",
+        "dtype_right": "float64",
+        "scalar_values": 5580,
+        "shape_equal": true,
+        "dtype_equal": true,
+        "values_and_paired_NULL_equal": true
+      }
+    ],
+    "differences": []
+  },
+  "manifest_equal_after_declared_normalization": true,
+  "normalized_manifest_keys": [
+    "completed_utc"
+  ],
+  "differences": []
+}

@@ -3,16 +3,17 @@
 2026 HKUST(GZ) MCM Senior Group Problem A. Team **Lebmar**, number **87**.
 Author: **Chengxuan YUAN**.
 
-**Current status: cost estimates, the main mathematical framework and admission
-rules are fixed for this research checkpoint; full-development C execution is
-Review. A robust autonomous C investment strategy has not been demonstrated.**
+**Current status: final evaluation and numerical verification are complete with
+the previously fixed model and admission rules unchanged. C execution remains
+Review, with no main-service financial outcomes. A robust autonomous C
+investment strategy has not been demonstrated.**
 Start with the [current model registry](docs/main_model_registry.json),
 [current model contract](docs/current_model_contract_2026_10_19.json),
-[independent convergence judgment](docs/final_model_convergence_judgment.json),
-and [research companion](notebooks/final_model_development.ipynb).
+[final interpretation](docs/locked_final_evaluation_interpretation_judgment.json),
+and [verified final archive](results/final_locked_evaluation_v1/).
 The V1 code and report below
 are an archived, auditable prototype; they are not the accepted final competition
-model or a submission recommendation. Work has returned to the objective,
+model or a submission recommendation. Subsequent development rebuilt the objective,
 parameter meanings, assumptions, internal validation and decision rules.
 See `docs/model_foundation_review.json`; parameter/refit, coverage and
 joint-liquidity history is in notebook sections10.12–10.15. The earlier
@@ -30,7 +31,60 @@ This repository records a reproducible investigation of purchasing-power risk,
 customer suitability, selective rebalancing and bounded target updates. It does
 not assume that a more complicated policy improves investment outcomes.
 
-## Current development research
+## Locked final evaluation
+
+The separate [execution release](docs/final_evaluation_release.json), audit,
+reproduction and paired-analysis plans were fixed before this run. All 60
+original IDs121–180 are retained. No new fitting, parameter selection, target
+change or admission decision occurred. The main C service has0 automatic
+paths and 60 pre-investment Review decisions; all its financial metrics are NULL.
+
+The following are research comparisons at C's 30-year horizon and 40% annual
+real-MDD limit. The shadow is the fixed candidate that failed the development
+execution gate; its returns never substitute for the main service'sNULLs.
+
+| Object | Median real CAGR | P10 real CAGR | P90 real MDD | Breaches |
+| --- | ---: | ---: | ---: | ---: |
+| Main C service: Review | NULL | NULL | NULL | NULL |
+| Unapproved fixed shadow | 3.73% | 1.28% | 45.03% | 11/60 |
+| Same-target annual/pending B | 3.56% | 1.50% | 43.54% | 8/60 |
+| Exact-thirds annual reference | 3.38% | 1.47% | 39.36% | 6/60 |
+
+The shadow trades less and pays lower average nominal fees, with higher
+central growth but worse lower-tail growth and drawdown tails. Against B on
+the same 60 IDs, growth is higher on 45 paths but MDD is larger on 53; three
+additional paths breach and no B-only breach disappears. Both references and
+all adverse outcomes remain in the [paired analysis](results/final_locked_analysis_v1/)
+and [reading figure](research/figures/locked_final_evaluation/paired_growth_drawdown_and_service_status.png).
+P10/P90 use the empirical inverse CDF; medians use the ordinary median. MDD
+uses annual endpoints and does not measure intrayear losses.
+
+Q1's own-horizon static annual references also retain adverse findings:
+B (15 years, L=25%) has 11/60 breaches, C (30 years, L=40%) has 8/60, and
+E (6 years, L=35%) has 5/60 with P10 real CAGR −1.58%. B/C exceed the 10%
+empirical service reference; E's lower breach frequency does not ensure positive
+growth. A/D remain Review.
+These are suitability/product references, not automatic execution approvals;
+their different horizons and limits do not permit an equal-horizon risk ranking.
+
+The [independent final audit](results/final_locked_evaluation_v1/independent_audit.json)
+passes 81,911 checks, reconstructing all 360 available physical accounts and
+independently recomputing nine predeclared scalar-fan Q witnesses. The
+[isolated replay](results/final_locked_reproduction_v1/) reproduces all six
+producer artifacts byte for byte and all 234 NPZ fields exactly. A separate
+paired arithmetic review passes 1,030 checks with zero differences. The new
+[final checkpoint](results/final_locked_checkpoint_v1/verification.json)
+passes 942 unit tests and verifies 1,055 distinct files; the previous development
+checkpoint remains unchanged. These AI-assisted numerical checks establish
+implementation/reproduction evidence, not calibrated future risk.
+
+Old V1 had already exposed these final scenarios before later development.
+This unchanged, released final reuse cannot be described as a fresh blind
+confirmation sample. Synthetic scenario frequencies are not a guarantee that
+future losses exceed a customer's limit at most 10% of the time. Paper,
+submission packaging and CMT upload remain separate, unfinished delivery tasks.
+
+## Development history
 
 The October19 mechanism study reconstructs11 fixed model/reference pairs
 for original IDs35/52/98/112. All22 complete accounts retain the original
@@ -78,8 +132,10 @@ matches all120 candidate/reference fields exactly. Independent saved-array
 review checks369,371 values,480 Q2 rows,600 Q1 rows and nine summaries; all
 unserved financials stayNULL. The [preparation judgment](docs/final_evaluation_development_gate_judgment.json)
 states the scope and preserves the first auditor's metadata-adapter failure.
-Only original1–120 were parsed. The separate final release does not yet exist;
-the development gate never opens121–180 or changes admission. Read its fixed
+Only original1–120 were parsed at that preparation checkpoint. The separate
+final release did not yet exist; the development gate itself never opens121–180
+or changes admission. The later final release and results are indexed above.
+Read the adapter's fixed
 objects without parsing market values:
 
 ```sh
@@ -137,7 +193,7 @@ one repeat has5/24=20.83%. The96 admitted scenario-repeat records involve74
 original IDs. Neither a risk guarantee nor independent96/600 observations
 is claimed. See `results/model_review/global_policy_admission_v1/`.
 
-The new work uses scenarios **1–120 only** and keeps the V1 archives intact.
+The development work below uses scenarios **1–120 only** and keeps the V1 archives intact.
 Start with `notebooks/objective_risk_foundations.ipynb`, then the
 [executed development notebook](notebooks/risk_menu_development.ipynb).
 A [reading copy](notebooks/risk_menu_development.html) hides code cells;
@@ -413,7 +469,7 @@ audits; they do not replace the primary procedure. The research preserves full
 path folds, records referrals as null outcomes, and distinguishes empirical
 calibration, numerical correctness and statistical evidence.
 
-The latest checkpoint passes **897 tests** and checks 189 saved manifests,
+The preserved development checkpoint passes **897 tests** and checks 189 saved manifests,
 audits and receipts against 1009 distinct source, input, result and execution
 evidence files. The preceding benefit-cost phase's Git-index proof binds172
 frozen package files. The
@@ -441,9 +497,9 @@ reused development results into a new blind test.
 The historical requirement inventory is
 `docs/problem_A_deliverable_crosswalk.json`. Its earlier liquidity and policy
 gaps must be read alongside the current model contract and its independent
-review. The current preparation judgment records the remaining final execution,
-paper and delivery steps; the Balanced-only Q2 case stays distinct from Q1
-product references.
+review. The preparation judgment records the remaining steps at that earlier
+phase; the final evaluation and current unfinished paper/delivery work are
+indexed above. The Balanced-only Q2 case stays distinct from Q1 product references.
 
 Historical notebook-authoring recipe for an isolated copy, preserving the
 frozen research artifacts in the working repository:

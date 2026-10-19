@@ -1,0 +1,64 @@
+{
+  "status": "passed",
+  "started_utc": "2026-10-19T05:24:59.872901+00:00",
+  "phase": "finished",
+  "plan_sha256": "b675b450adf5f9acadb22129293bd7e7f44b67754d009f66c7aa68b1ada39598",
+  "source_freeze_sha256": "f38c0e149dfd7293b2730486bda3e0b8c9c3d3cc73bc385e83ce574f9d9ca96c",
+  "reproducer_sources": {
+    "scripts/reproduce_locked_final_evaluation.py": "f06dd5377729efeda03889261d561ba3650f09a34620dca1493d697f2376f987",
+    "tests/test_reproduce_locked_final_evaluation.py": "9ac342399dba966005fa8e6f74d8fc6de62b3e53eaa1af57c67f1ed87fddf4aa"
+  },
+  "original_final_producer_sha256_start": {
+    "Q1_paths.csv.gz": "08d4e8be7ba5da7e5bc3a1ff7b2d8500f2b83f369feb7dd4273fddc297de23ca",
+    "Q2_paths.csv.gz": "ac3a2c36305cda02f97c2ddfe1febb0379a5532d64abef2c6e8c7c47c04e5bdb",
+    "evaluation_traces.npz": "eff39d3677ede5a615bae356951986c049649cd3ec847e29ec6a3839a94a366b",
+    "existing_development_context.json": "f0afe44e955cb0fcb91da42f6744b09c48ae91f88ce58b06b0e41b20c493d91d",
+    "manifest.json": "498ec9cd65142d35b040926f4d640ec1dd4a16e85b173c520a838aff5056cd97",
+    "object_specification.json": "d668629ccd9842f45e9906722a63c6e870b418fa515e1e539bdcf452796e7f0b",
+    "summary.csv.gz": "472acd98e037b6f0e29a85e8ac54e0bbd2d3239cf5debce38a44d9366cb9822c"
+  },
+  "final_scenarios_loaded": true,
+  "same_source_same_runtime": true,
+  "independent_new_risk_validation": false,
+  "temporary_workspace": "/var/folders/wr/mdv3gpmn60v93f7_2jlssl7w0000gn/T/safeinvest-locked-final-replay-ul5upnuu",
+  "replica_execution_started": true,
+  "final_values_may_have_been_parsed": true,
+  "child_returncode": 0,
+  "completed_utc": "2026-10-19T05:25:01.100924+00:00",
+  "copied_files": 46,
+  "copied_sources_and_inputs_unchanged": true,
+  "original_final_producer_sha256_end": {
+    "Q1_paths.csv.gz": "08d4e8be7ba5da7e5bc3a1ff7b2d8500f2b83f369feb7dd4273fddc297de23ca",
+    "Q2_paths.csv.gz": "ac3a2c36305cda02f97c2ddfe1febb0379a5532d64abef2c6e8c7c47c04e5bdb",
+    "evaluation_traces.npz": "eff39d3677ede5a615bae356951986c049649cd3ec847e29ec6a3839a94a366b",
+    "existing_development_context.json": "f0afe44e955cb0fcb91da42f6744b09c48ae91f88ce58b06b0e41b20c493d91d",
+    "manifest.json": "498ec9cd65142d35b040926f4d640ec1dd4a16e85b173c520a838aff5056cd97",
+    "object_specification.json": "d668629ccd9842f45e9906722a63c6e870b418fa515e1e539bdcf452796e7f0b",
+    "summary.csv.gz": "472acd98e037b6f0e29a85e8ac54e0bbd2d3239cf5debce38a44d9366cb9822c"
+  },
+  "original_producer_archive_unchanged": true,
+  "temporary_workspace_removed": true,
+  "differences": 0,
+  "normalization_allowed": [
+    "completed_utc"
+  ],
+  "new_fits": 0,
+  "selection_changed": false,
+  "admission_changed": false,
+  "scope": "Isolated replay of the same already complete frozen final evaluation; no new market sample, independent numerical method or risk certification",
+  "outputs_sha256": {
+    "child_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "child_stdout.txt": "30dd5f92d5d31a6b82b8431e89caeff6f2eb0f7e8874ea4ca0860cb602aabdaf",
+    "comparison.json": "5628a36480927f433aba2bf8b468d76ec753977557d428547b11d9f68ad2f3c4",
+    "copied_dependencies_at_end.json": "453eb0899d6b9f8597b675c82521cf12eaad1df5442cd0e85ea4df486866db9d",
+    "copy_allowlist.json": "453eb0899d6b9f8597b675c82521cf12eaad1df5442cd0e85ea4df486866db9d",
+    "launch.json": "b7cbda1b9ce1c9b5d0a2e082198bb0aafae36268fc89115e95491978071a1ff7",
+    "replayed_outputs/Q1_paths.csv.gz": "08d4e8be7ba5da7e5bc3a1ff7b2d8500f2b83f369feb7dd4273fddc297de23ca",
+    "replayed_outputs/Q2_paths.csv.gz": "ac3a2c36305cda02f97c2ddfe1febb0379a5532d64abef2c6e8c7c47c04e5bdb",
+    "replayed_outputs/evaluation_traces.npz": "eff39d3677ede5a615bae356951986c049649cd3ec847e29ec6a3839a94a366b",
+    "replayed_outputs/existing_development_context.json": "f0afe44e955cb0fcb91da42f6744b09c48ae91f88ce58b06b0e41b20c493d91d",
+    "replayed_outputs/manifest.json": "5c01c2901ed5e692d1b9c802fc76f6bea7a1dcadc3c9731410d5f18174322c18",
+    "replayed_outputs/object_specification.json": "d668629ccd9842f45e9906722a63c6e870b418fa515e1e539bdcf452796e7f0b",
+    "replayed_outputs/summary.csv.gz": "472acd98e037b6f0e29a85e8ac54e0bbd2d3239cf5debce38a44d9366cb9822c"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "version": "locked-final-reproduction-independent-source-review-v1",
+  "written_utc": "2026-10-19T05:24:50.310608+00:00",
+  "status": "passed_source_and_synthetic_before_real_reproduction",
+  "review_kind": "Read-only independent source/plan review and focused synthetic rerun. No original final outcome/array/CSV parsed and no actual reproduction launched.",
+  "source_sha256": {
+    "scripts/reproduce_locked_final_evaluation.py": "f06dd5377729efeda03889261d561ba3650f09a34620dca1493d697f2376f987",
+    "tests/test_reproduce_locked_final_evaluation.py": "9ac342399dba966005fa8e6f74d8fc6de62b3e53eaa1af57c67f1ed87fddf4aa"
+  },
+  "plan_sha256": "b675b450adf5f9acadb22129293bd7e7f44b67754d009f66c7aa68b1ada39598",
+  "checked": [
+    "Explicit separatelyfrozen plan+source gate, originalcomplete producer/release/source/input/IDs/object/admission binding, currentbytes ofall dependencies and produceroutputs.",
+    "Exacttransitive allowlist:prep8source20input,all devmanifest/outputs and independentlyaudited closure,plus preciselyoneboundrelease; originalfinal/replayoutput paths are forbidden copieddependencies.",
+    "Freshsystemtemp cwd andoriginalabsolutevenvpython under-I,emptyPYTHONPATH/usersitedisabled,unchanged copiedadapter; no model argument,policysearch or originalfinaloutput copied.",
+    "Every six predefinedproducer artifacts retained:CSV/nonmanifestJSON strictbytecriterion,NPZ exactinventory/dtype/shape/values/pairedNaN withcontainerhash recorded,manifest onlyUTCcompletedtimestamp normalized; adversedifferences neverdropped.",
+    "Copiedsource/input andoriginalproducer archivescheckedunchanged; successpreservesreplicaoutputs beforecleanup;failed/differing/timeoutattempts retainworkspace/logs/availableoutputs andblockoverwrite/retry.",
+    "Same-source/input/runtime reconstruction isnot a newmarket sample, independentnumericalmethod or prospective riskcertificate."
+  ],
+  "runtime_metadata_check": "Currentoriginalvenv has no.pthfiles and noinstalledsafeinvest/safeinvest_research/experimental_executionprojectpackages. Copiednamespace directories therefore have noobservedoriginalregular-package fallback inthisruntime; no model module or market file was executed bythischeck.",
+  "synthetic_validation": {
+    "command": ".venv/bin/python -m unittest discover -s tests -p test_reproduce_locked_final_evaluation.py -v",
+    "passed": 15,
+    "seconds": 0.097,
+    "data": "Temporaryfake files and synthetic121/180labels only; subprocess childmocked inrun tests. Printedcopied_files39/pass belongs a temporarysynthetic fixture,never actualfinalresults."
+  },
+  "boundaries": {
+    "real_reproduction_run": false,
+    "original_final_outputs_read_by_review": false,
+    "raw_final_values_parsed": false,
+    "frozen_model_protocol_or_source_changed": false,
+    "paper_written": false
+  },
+  "next": "Root maybind thesame2sourceSHA andfixedplanSHA in a separatesource-freeze receipt. Actualreplay remainsafterthe originalcomplete locked evaluation, with allresultdifferences preserved.",
+  "provenance_sha256": {
+    "scripts/reproduce_locked_final_evaluation.py": "f06dd5377729efeda03889261d561ba3650f09a34620dca1493d697f2376f987",
+    "tests/test_reproduce_locked_final_evaluation.py": "9ac342399dba966005fa8e6f74d8fc6de62b3e53eaa1af57c67f1ed87fddf4aa",
+    "docs/final_evaluation_reproduction_plan.json": "b675b450adf5f9acadb22129293bd7e7f44b67754d009f66c7aa68b1ada39598"
+  }
+}
