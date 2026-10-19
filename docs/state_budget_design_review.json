@@ -1,0 +1,159 @@
+{
+  "version": "state-dependent-drawdown-budget-theoretical-review-v1",
+  "status": "theory_and_API_review_only_not_an_adopted_or_evaluated_model",
+  "evidence_boundary": {
+    "original_market_arrays_read": false,
+    "development_market_arrays_read": false,
+    "final_121_to_180_read_for_this_task": false,
+    "actual_training_or_final_run": false,
+    "new_parameter_selection": false,
+    "old_frozen_files_modified": false,
+    "basis": [
+      "source-only exact fee/accounting review",
+      "algebraic derivation",
+      "hand-constructed counterexamples, not market observations"
+    ]
+  },
+  "source_context": [
+    "src/safeinvest/core.py: execute_target",
+    "research/experimental_execution/review_pending.py: original history and strict annual crossing",
+    "research/experimental_execution/risk_priced_fan_rollout.py: old finite empirical-risk-price family, kept immutable"
+  ],
+  "objective": "A separately versioned state-dependent filter that constrains declared next-year real-wealth outcomes before considering growth. It removes a local empirical breach-price eta from the safety inequality; it does not remove support/forecast assumptions or guarantee improved coverage.",
+  "original_account_state": {
+    "inputs": {
+      "x": "three nonnegative pretrade nominal holdings",
+      "V": "sum(x), strictly positive",
+      "C": "cumulative CPI before the current return period, positive",
+      "P": "original-history maximum real wealth, including initial preallocation wealth",
+      "M": "original-history running annual-endpoint real MDD",
+      "L": "client original drawdown tolerance in [0,1]",
+      "t_H": "calendar year index and immutable original horizon",
+      "kappa": "exact transaction rate in [0,1)"
+    },
+    "derived": {
+      "R": "V/C",
+      "u": "x/V",
+      "z": "V/(C*P), in (0,1] for a consistent nonwithdrawal account",
+      "F": "(1-L)*P",
+      "headroom": "R-F"
+    },
+    "no_reset": "Preserve original CPI, historical P, original MDD, original H and absorbing ever-breached flag. A new trade cannot erase an already recorded crossing.",
+    "past_breach": "If M-L>the declared numerical convention, return already_breached/pending, not a new safe certificate. Holding during pending is an administrative continuation and is not guaranteed safe."
+  },
+  "joint_support": {
+    "input_schema": "At calendar t, each frozen training row s supplies the JOINT vector (g_equity,g_bond,g_bill,h), where g=1+nominal_return>0 and h=1+inflation>0.",
+    "real_gross": "a_s,i = g_s,i/h_s. Do not combine separate marginal worst asset returns and maximum inflation into an undeclared joint row.",
+    "within_year_convex_hull": "The displayed inequalities are affine in the joint (g,h) vector, so checking all declared rows also covers their convex hull. This is an explicitly declared support assumption, not a probability estimate or evidence that future observations lie inside it.",
+    "cross_year_scope": "Independent per-calendar support sets imply a rectangular product of within-year joint supports for a full-path conditional guarantee. Keeping the same original training member across years is a different, smaller nonrectangular set; the two claims must not be interchanged.",
+    "domain_limit": "There is no unconditional future support-membership guarantee. Bill nominal gains can coexist with negative real returns. Calendar support is the planned primary source; pooled support, if used later, is a separately labelled stress, not selected after seeing evaluation outcomes."
+  },
+  "exact_next_year_constraint": {
+    "fee_and_post": "For target w, Cfee=kappa*sum_i max((V-Cfee)*w_i-x_i,0), post y=(V-Cfee)*w. For hold, y=x and Cfee=0.",
+    "next_real": "Rnext_s=(g_s dot y)/(C*h_s)=(a_s dot y)/C.",
+    "full_current_budget_floor": "Rnext_s >= (1-L)*P for every declared support row.",
+    "peak_update": "Pnext_s=max(P,Rnext_s), currentDDnext_s=1-Rnext_s/Pnext_s, Mnext_s=max(M,currentDDnext_s).",
+    "proof": "If M<=L, then when Rnext<=P the inequality gives currentDDnext<=L; when Rnext>P the new peak equals wealth and currentDDnext=0. Thus Mnext<=L. The proof is conditional on support membership, exact fees and a feasible chosen action.",
+    "annual_not_intrayear": "The condition controls annual endpoints. It does not certify an unobserved intrayear path or the instantaneous post-fee mark. If an extra immediate posttrade floor is desired, sum(y)/C>=F is another linear constraint that must be declared separately before evaluation.",
+    "no_future_existence_claim": "A one-step feasible action does not imply a feasible action will exist next year. An all-H promise needs recursive feasibility or a separately stated sufficient certificate."
+  },
+  "budget_release_ratio": {
+    "definition": "For unbreached R>=F, F_rho=R-rho*(R-F)=F+(1-rho)*(R-F), with rho in (0,1].",
+    "interpretation": "rho releases the stated fraction of the current drawdown headroom for next-year losses; rho=1 uses the full client floor, smaller rho retains a buffer. This is not a risk-probability threshold, utility risk-aversion estimate or empirically identified preference.",
+    "candidate_family_from_root": "Prospective six engine candidates: rho in {0.5,0.75,1.0} crossed with forecast in {uniform,ensemble_min}; no choice or result has been assessed in this theoretical task.",
+    "constraint": "For every joint row, (g_s dot y) - C*h_s*F_rho >= 0.",
+    "nonpositive_headroom": "Do not silently apply the release formula to a breached/inconsistent state or reset its peak. Endpoint tolerance and validation of tiny negative headroom are engineering conventions, not additional financial risk budgets."
+  },
+  "one_dimensional_exact_fee_geometry": {
+    "endpoint": "Compute one exact target execution (y_star,C_star,moved_star)=execute_target(x,w_star,kappa).",
+    "line": "For lambda in [0,1], y_lambda=x+lambda*(y_star-x), C_lambda=lambda*C_star, moved_lambda=lambda*moved_star.",
+    "proof": "Every positive destination increment scales by lambda: sum max(y_lambda-x,0)=lambda*sum max(y_star-x,0). Also sum(y_lambda)=V-lambda*C_star. Hence the original fee equation and self-financing identity hold exactly; costs are paid once.",
+    "implied_weights": "w_lambda=y_lambda/(V-lambda*C_star); this generally differs from (1-lambda)*u+lambda*w_star. Interpolating prefee target weights and assigning a proportional fee is not the same operation.",
+    "support_margin": "A_s + lambda*B_s >=0, A_s=(a_s dot x)/C-F_rho, B_s=(a_s dot (y_star-x))/C.",
+    "closed_interval": "Intersect [0,1] with lambda>=-A/B when B>0 and lambda<=-A/B when B<0; B=0 with A<0 makes the segment infeasible. Preserve lower and upper binding support IDs, empty intervals and numeric margins. Numerical tolerance must not turn a genuinely infeasible interval into a safety certificate.",
+    "action_menu_from_root": "After inception, separate one-dimensional segments toward w, 0.75*w+0.25*e_bill, 0.5*w+0.5*e_bill, and 0.25*w+0.75*e_bill. These are strictly declared destinations, not data-selected allocations. Each segment has its own exact endpoint fee.",
+    "initial_rule_from_root": "At inception the original full target w must satisfy the declared support budget after its exact initial fee, or the account is preinvestment Review/financial NULL. No per-scenario-ID or future-path initial admission; identical known initial states imply identical decisions.",
+    "continuation_rule_status": "Root is freezing the new engine API and tie rules separately. This review does not instantiate a new service or modify the old frozen rule."
+  },
+  "growth_versus_protection": {
+    "growth_value": "A direct one-year forecast objective can be mean_s log(Rnext_s/R), with the exact fee inside Rnext. This is not a recursive Q^pi or a full-H optimality claim. Uniform means and a predeclared minimum over ensemble member mean-log forecasts can be evaluated directly on each feasible segment.",
+    "concavity": "For fixed endpoint, each Rnext_s is positive affine in lambda; mean log is concave, and a minimum of such concave ensemble objectives is concave. A bounded one-dimensional optimizer can retain endpoint/derivative/tie witnesses.",
+    "when_hold_is_feasible": "If the growth objective includes lambda=0 and selects a strictly better feasible point, its predicted net mean-log advantage is nonnegative relative to hold by construction. It remains a forecast, not a realized-gain guarantee.",
+    "when_hold_is_infeasible": "A necessary protection trade may have negative forecast growth advantage relative to hold. Report it as risk-constraint enforcement after fees, not as positive expected financial benefit.",
+    "protection_value": "Use the explicit worst support deficit S(y)=max_s max(F_rho-Rnext_s(y),0), together with minimum support slack, endpoint fees and moved amounts. A feasible protection reduces positive S(hold) to zero within the declared support.",
+    "least_change_option": "A transparent low-dimensional variant chooses the least moved feasible point when hold fails, with predeclared deterministic fee/growth/destination ties; when hold is safe it allows a net-growth-improving feasible trade. Root may instead optimize growth over all safe points; the distinction must be frozen before training.",
+    "no_double_counting": "Fee differences between chosen actions and a reference are accounting differences. They are not uniquely identified causal risk-versus-growth contributions. Do not execute a protection trade and then an additional growth trade while charging a single combined-segment fee."
+  },
+  "full_path_viability_and_optional_bill_diagnostic": {
+    "exact_robust_viability": "With normalized state (z,u), terminal K_H={(z,u):z>=1-L}; backward K_t consists of states with some exact self-financing action whose successor is in K_{t+1} for every declared joint support row. Successor r=(a dot y)/(C*P), z_next=min(r,1), u_next=(g*y)/(g dot y). Full-H induction requires this recursion, not simply K_t=one-step-safe states.",
+    "complexity_boundary": "A grid approximation of K must be labelled approximate. Ordinary interpolation of a feasible grid is not by itself an inner safety proof. No such DP or grid has been run in this task.",
+    "bill_lower_gross": "b_t=min_s g_s,bill/h_s. It may be below 1.",
+    "bill_backward_threshold": "k_H=1-L. If the next bill certificate is empty, the earlier one remains empty. Otherwise k_t=max(1-L,k_{t+1}/b_t); k_t>1 makes that suffix bill certificate empty. Do not divide a later impossible k>1 by a large earlier return and falsely revive it, because a new historical peak caps z at 1.",
+    "exact_switch_to_bill": "Switching arbitrary holdings x to all bills leaves A_bill=x_bill+(x_equity+x_bond)/(1+kappa). The switch fee is kappa*(x_equity+x_bond)/(1+kappa). Subsequent all-bill holding has no transfer fees.",
+    "optional_sufficient_set": "F_t contains states with a nonempty bill suffix certificate and A_bill/(C*P)>=k_t. This is a sufficient fallback set and may be much smaller than the true viability set.",
+    "linear_next_fallback_test": "For a current post vector y, define r_s=(a_s dot y)/(C*P) and ell_s=[a_bill*y_bill+(a_equity*y_equity+a_bond*y_bond)/(1+kappa)]/(C*P). Requiring ell_s>=k_{t+1} AND ell_s>=k_{t+1}*r_s ensures next state can switch to bills after its exact fee despite Pnext=P*max(1,r_s). Both are linear in y and hence lambda.",
+    "last_year": "At t=H-1 require only r_s>=1-L. There is no invented terminal liquidation or rebalancing fee.",
+    "conditional_induction": "If a controller requires the optional next-fallback test and starts from a nonempty feasible action set, support-realized successors lie in F_{t+1}; an all-bill fallback remains available, so repeated safe selection controls the entire annual-endpoint MDD within the declared rectangular support.",
+    "root_scope_decision": "The adopted research direction uses the one-step support filter as engine core. The all-H bill certificate is a separate conservative feasibility diagnostic, not a gate that cancels the new research when empty. Empty bill certificate does not prove the full three-asset strategy set is infeasible.",
+    "coverage_tradeoff": "More adaptive weights can enlarge feasible actions relative to old hold/full-restore choices. Robust supports, retained buffers and an all-H fallback certificate can also reduce coverage. Improvement of actual risk and coverage is an empirical whole-policy question, not a theorem of the filter."
+  },
+  "hand_constructed_counterexamples": [
+    {
+      "name": "one_step_not_recursive",
+      "setup": "Two years, L=0.2, zero fee, every asset real gross=0.8 each year, initial R=P=100.",
+      "result": "Year1 ends at80 and passes the first one-step floor80. Year2 must end at64, below the unchanged peak floor80; no allocation can avoid it. The all-H bill certificate is empty from inception."
+    },
+    {
+      "name": "peak_ratchet_matters",
+      "setup": "L=0.2, all assets real gross1.5 then0.7, zero fees, initial R=P=100.",
+      "result": "Endpoints150 then105 both exceed the obsolete initial floor80, but the new peak150 gives MDD30%. A floor permanently anchored to the original100 is not a drawdown filter."
+    },
+    {
+      "name": "fees_reverse_boundary_feasibility",
+      "setup": "x=(100,0,0), CPI1, P100, L0.1, switching fully to bill, kappa0.0025, bill next real gross0.9.",
+      "result": "Ignoring the fee predicts90 and a pass; exact post-bill wealth100/1.0025 gives next real wealth90/1.0025<90, hence a failure. This example concerns that proposed trade; holding may have a different certificate."
+    },
+    {
+      "name": "nominal_bill_is_not_real_floor",
+      "setup": "Bill nominal gross1.02, inflation gross1.05, initial R=P100, L0.02.",
+      "result": "Bill real gross34/35<0.98, so even a nominal bill gain does not meet this one-year real drawdown floor."
+    },
+    {
+      "name": "preserve_joint_hedging",
+      "setup": "Joint real-gross rows (0.5,1.5,1) and (1.5,0.5,1), no fee; half equity and half bond.",
+      "result": "Portfolio real gross is1 on both declared rows. Combining separate marginal minima into(0.5,0.5,1) invents an undeclared co-crash and falsely removes that hedge."
+    },
+    {
+      "name": "support_escape",
+      "setup": "All declared support rows preserve the proposed floor, but a later actual joint outcome has all real gross below1-L relative to a peak state.",
+      "result": "The conditional certificate says nothing about this outside-support outcome. A positive historical support minimum is not a future guarantee."
+    }
+  ],
+  "proposed_pure_API_and_witnesses": {
+    "one_step_state": "holdings(3),cpi,real_peak,running_mdd,ever_breached,year_index,original_horizon,L,kappa; all current/history-only.",
+    "forecast_inputs": "support_joint_gross(N,4) and declared support member IDs/hash, budget_release_ratio, frozen destination list, one-year forecast inputs/weights or ensemble grouping. Never pass actual current-year return, future actual suffix, evaluation scenario ID or final121-180 data into choice.",
+    "pure_outputs": [
+      "status and action_class: hold/growth_trade/protection_trade/preinvestment_review/already_breached/no_feasible_action",
+      "selected destination ID, lambda, post-dollar holdings, exact fee and moved",
+      "F,F_rho,R,oldP,M,headroom, budget ratio",
+      "every destination feasible interval and lower/upper binding support IDs",
+      "minimum support slack and all predicted support deficits",
+      "predicted one-year net log growth of hold/chosen and their difference",
+      "support/forecast hashes, originalH and state snapshots",
+      "certificate_scope explicitly one_step_support_only unless a separate all-H certificate is actually required/proven"
+    ],
+    "failure_semantics": "No feasible action is a recorded outcome. If an existing client cannot satisfy the filter, do not return a financial NULL row that deletes its prior loss, reset capital or silently substitute a guaranteed cash account. Service handling and physical continuation must be separately predeclared and all admitted paths retained.",
+    "fit_evaluation_boundary": "A complete deterministic annual policy must be run through originalH under whole-scenario outer folds; local safety/forecast witnesses are not recursively optimized Q^pi. Support coverage, everbreach, severity, service interruption, initial coverage, fees and growth need distinct denominators."
+  },
+  "mandatory_synthetic_checks_for_future_engine": [
+    "Exact post-dollar line preserves fee equation and funding at0, interior lambda and1; all costs paid once.",
+    "Closed-interval inequalities handle positive/negative/zero slopes, impossible rows and binding ties.",
+    "Target unsafe/hold safe, target safe/hold unsafe, both unsafe but an interior feasible point, and genuinely empty segment.",
+    "No scenarioID/futureactual dependency; identical initial states give identical full-target admission.",
+    "Peak ratchet, original CPI, original runningMDD and absorbing crossing survive state advancement.",
+    "Nominal positive but real negative bill outcome; support inflation remains joint with returns.",
+    "Historical breach cannot regain an unbreached safety status; no impossible bill certificate is revived backward.",
+    "Minimum support slack is recomputed from actual selected post vector, not inferred from rounded lambda alone."
+  ],
+  "next_step": "Await root-frozen engine API; implement additive source/synthetic tests only, then a separately frozen development-only protocol and full-policy nested evaluation on IDs1-120. This document itself executes no strategy and authorizes no final reread or service change."
+}

@@ -1,0 +1,40 @@
+{
+  "version": "state-budget-rebuild-independent-audit-plan-v1",
+  "scope": "Prospective independent audit of the new development-only whole-policy rebuild, not a new final evaluation, blind study, policy selection or risk guarantee.",
+  "execution_requires": "Root-frozen producer protocol/source/input closure; complete immutable producer output manifest; separately frozen independent auditor source/tests/this plan. All gates precede the sole raw-data parser. No numerical producer/auditor run is authorized by this draft alone.",
+  "producer_directory": "results/state_budget_rebuild_v1",
+  "receipt": "results/state_budget_rebuild_v1/independent_audit.json",
+  "attempt_directory": "results/state_budget_rebuild_audit_attempt_v1",
+  "independent_source_freeze": "docs/state_budget_rebuild_audit_source_freeze.json",
+  "data": "Only original IDs1..120 using guarded load_paths(...range(1,121),allow_final=False). Never parse121..180 or read old final values in this task. The previously exposed history remains disclosed.",
+  "independence": "Do not import the state-budget engine, forecast ensemble, selector, production trade execution or production metrics. Reimplement scalar fee bisection, post-dollar segment, interval,13point inventory, paired member scores, global score-band ties, forecasts and metrics. Reuse only the guarded raw CSV loader and general numpy/pandas/Python libraries.",
+  "complete_artifact_checks": [
+    "All30fixed job metadata/training/evaluation identities, whole-scenario nested partitions, per-job cached Q1 fit trainingIDs and original own target; no outer/inner heldout row enters its training support or forecast.",
+    "Allgroups, including declared unfunded empty groups and reference groups, have complete original identities and exact saved field inventory; no invented physical account for preinvestmentReview.",
+    "Every saved physical endpoint/period has independent fee equation, holdings/wealth, actual return advancement, original CPI/peak/currentDD/runningMDD/breach, originalH, crossing/recovery/censoring and no terminal fee checks. Reference annual and Bpending actions/flags are checked independently.",
+    "For all state-budget groups check retained selected gate fields, current guard-trigger versus previously pending, absorbing guard/actual-breach pending, selected post-dollar action and exact fee/moved, training/actual previous-state timing when retained, original base target and inactive NULL/sentinel masks. Full selected groups retain all13point candidate arrays for complete saved-gate algebra; inner candidates deliberately omit per-alternative candidate arrays and shared training_previous_state/training_real_gross, with the exact omitted inventory recorded. Nonwitness growth forecasts are audited as retained saved-score algebra plus physical/causal-source checks, not claimed fully independently reestimated.",
+    "Rebuild every path metric and all selected/reference summaries from complete original-H physical states, preserving actual-trade versus proposal execution and initial coverage/financialN/ReviewNULL distinction.",
+    "Rebuild all six-candidate inner summaries and same-funded-ID B summaries, alpha event thresholds, mean/CVaR90 risk checks, coverage/support-review/growth/fee/order selection including global tie bands, and no full-refit rescue. All original IDs and all candidates remain.",
+    "Check source/input/output bytes and all root-frozen protocol bindings before and after audit; never change producer/model or overwrite an existing audit attempt."
+  ],
+  "fixed_decision_witnesses": {
+    "groups": "All six original contexts' outer_selected/full_selected groups, including unfunded Review metadata when no selected candidate exists.",
+    "IDs": "For each group's sorted original evaluationIDs take minimum, index len//2 (ordinary upper middle), maximum; no outcome-based substitution.",
+    "original_years": [2, 16, 30],
+    "nominal_slots": 54,
+    "skip": "Keep every unfunded, prior-pending or otherwise unavailable original slot with explicit reason and no replacement; do not move to the first active/interesting year.",
+    "active_check": "Independently recompute training-only population scales, Gaussian kernel with uniform shrinkage and underflow handling, deterministic ID blocks, exact four endpoints and fee, clamped budget floor max(original client floor, release formula), four closed feasible intervals,13candidate arrays, all member paired log/gross/next-breach means, eligibility, selected global score band and fee/proposal/point tie rule.",
+    "initial": "All saved initial witnesses are additionally reconstructed independently using the fit's training-only support and mandatory full original target. This checks all-or-none within-fit admission without using actual future values."
+  },
+  "numeric_conventions": {
+    "breach_and_score_tolerance": 1e-12,
+    "support_relative_roundoff_tolerance": 1e-12,
+    "state_physical_atol": 3e-10,
+    "state_physical_rtol": 5e-13,
+    "forecast_score_atol": 3e-11,
+    "forecast_score_rtol": 5e-13,
+    "discrete_action_count_flag_ID_NULLmask": "Exact, except independently equivalent interval binding rows in an explicitly recorded numerical tie may be certified by equal binding margins rather than silently substituted. No risk/score threshold relaxation."
+  },
+  "failure_rule": "Create unique incomplete audit attempt before raw parsing; preserve traceback/status and any partially collected check evidence. A failure is not repaired by changing the producer, tolerances, selected rule, market IDs or old data. Any adapter correction must be root-reviewed with original failed attempt retained and separately versioned audit source.",
+  "claims_boundary": "Complete physical/metadata/selection checks plus fixed scalar decision witnesses do not prove a conditional forecast law, recursive feasibility, true future risk bound, unique risk preference or useful positive coverage/growth. New strict development folds provide mechanical information separation only; prior adaptive research exposure is not erased."
+}

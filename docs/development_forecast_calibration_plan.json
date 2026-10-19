@@ -1,0 +1,117 @@
+{
+  "version": "development-only-one-step-forecast-calibration-design-v1",
+  "written_utc": "2026-10-19T05:58:54.237971+00:00",
+  "status": "Design for saved OOF predictions, no actual market values or new numerical model runs; the concrete runner schema/source must be frozen separately.",
+  "allowed_ids": [
+    1,
+    120
+  ],
+  "no_market_loading": "The proposed summarizer accepts saved prediction/decision records only; it imports no engine or market loader and refuses final IDs.",
+  "information_contract": [
+    "Every record binds outer/inner context, full training-ID list/hash, actual original scenarioID, original period t and predecision status. The actual ID must not belong to the fit training IDs for an OOF diagnostic.",
+    "At t0 no observed previous state is supplied and the only forecast is uniform. At t>=1 use3 real returns plus inflation from the actual previous calendar period and the corresponding previous-calendar training states; forecast weights apply to current-calendar training rows.",
+    "Store the forecast and physical action before applying actual current-year return/inflation. The realized outcome is appended afterward. A diagnostic may compute the one-step hold counterfactual on that same realized joint row without changing the actual path.",
+    "The forecast module is pure but cannot establish which calendar rows a caller supplies. The runner and independent auditor must separately enforce t-1/t alignment and the complete training/actual ID separation."
+  ],
+  "prospective_record_fields": {
+    "identity": [
+      "context_id",
+      "evaluation_role",
+      "training_ids",
+      "scenario_id",
+      "original_H",
+      "period_1based",
+      "preinvestment_or_active_or_pending",
+      "initial_admitted"
+    ],
+    "prestate": [
+      "holdings_before",
+      "nominal_wealth_before",
+      "CPI_before",
+      "original_real_peak_before",
+      "running_MDD_before",
+      "L",
+      "rho",
+      "declared_floor"
+    ],
+    "forecast": [
+      "forecast_labels",
+      "weighted_expected_net_log_growth_selected",
+      "weighted_expected_net_log_growth_hold",
+      "weighted_expected_paired_log_benefit",
+      "weighted_probability_next_running_MDD_exceeds_L",
+      "weighted_expected_next_running_MDD",
+      "minimum_supported_next_real_wealth_selected",
+      "minimum_supported_next_real_wealth_hold"
+    ],
+    "action": [
+      "selected_post_holdings",
+      "fee",
+      "moved",
+      "selected_proposal",
+      "lambda",
+      "decision_reason",
+      "selected_objective_paired_score",
+      "hold_support_feasible",
+      "selected_support_feasible"
+    ],
+    "after_observation": [
+      "actual_next_real_wealth_selected",
+      "actual_one_step_hold_real_wealth",
+      "actual_next_running_MDD_selected",
+      "actual_next_running_MDD_exceeds_L",
+      "realized_net_log_growth_selected",
+      "realized_net_log_growth_hold",
+      "realized_paired_log_benefit"
+    ]
+  },
+  "definitions": {
+    "net_log_growth": "For a training or realized joint row, log(next_real_wealth/(pretrade_V/pretrade_CPI)). Selected post holdings already pay the current exact fee; hold uses unchanged pretrade holdings and no hypothetical fee.",
+    "paired_benefit": "For every row first compute log(next_real_wealth_selected/next_real_wealth_hold), then weight. Uniform uses that weighted mean; ensemble_min uses the minimum of those member means, not the difference of two minimum expected wealth levels.",
+    "next_running_MDD": "Preserve original historical peak and running MDD: newpeak=max(oldpeak,nextrealwealth); newMDD=max(oldMDD,1-nextrealwealth/newpeak). Next-year exceedance is newMDD-L>1e-12.",
+    "probability_diagnostic": "The weighted mass of next-year exceedance is a descriptive empirical forecast. Forecast weights are not calibrated true probabilities, and the support floor still constrains every calendar support row regardless of its forecast weight.",
+    "directional_support_miss": "Actual selected next real wealth is below the minimum supported selected next real wealth by the frozen numerical wealth tolerance. This is a decision-direction support diagnostic, not complete joint-vector support membership.",
+    "floor_failure": "Selected action passed the declared support-floor check, but realized next real wealth is below that same state floor. Also report actual new L events and already pending states separately.",
+    "no_continuous_point_equality_test": "Do not define support coverage as equality of the continuous OOF joint row to one finite training tuple; that would mechanically label almost every observation a miss.",
+    "counterfactual_scope": "Realized selected-vs-hold benefit is a one-step same-market physical-action contrast at the actual prestate. It does not replay alternative future policies and is not a full-H causal strategy improvement."
+  },
+  "population_and_nulls": [
+    "Use only genuine OOF records, no training resubstitution rows or final121-180. Retain excluded and malformed counts/reasons; fail on actual ID in training rather than silently calling it OOF.",
+    "Main prediction scoring covers predecision active-invested nonpending periods. Tabulate mandatory initial allocation separately from discretionary later growth/protection decisions; t0 is not a cost-benefit-selected trade.",
+    "Pending periods have no fresh policy forecast; keep their financial path outcomes in whole-H evaluation and mark prediction fields NULL. Initial Review has all financial/prediction outcomes NULL unless a separately named hypothetical diagnostic is explicitly declared.",
+    "Each scenario contributes its own within-path average/score first, then scenario means are averaged. Publish raw annual-row count and distinct scenario count, and do not treat annual rows or ensemble members as independent observations.",
+    "If a per-fit or per-forecast subset has no records, all calibration statistics are NULL, not zero error or perfect coverage. Forecast labels absent at t0 are not fabricated."
+  ],
+  "predeclared_primary_diagnostics": {
+    "growth": [
+      "mean prediction bias",
+      "RMSE of predicted net log growth against realized one-step net log growth"
+    ],
+    "next_MDD": [
+      "mean prediction bias",
+      "RMSE of expected next running MDD",
+      "Brier score for empirical next-L-exceedance mass"
+    ],
+    "paired_benefit": [
+      "mean forecast bias against one-step realized paired benefit",
+      "RMSE",
+      "fraction with predicted benefit>1e-12 but realized benefit<=1e-12",
+      "sign agreement among nonzero predicted/realized benefits, with zero/tie counts retained"
+    ],
+    "support": [
+      "directional support-miss fraction",
+      "supported-safe but actual-floor-failure fraction",
+      "unconditional per-scenario fraction and conditional active-period fraction, with original denominators"
+    ],
+    "reliability_bins": "Fixed probability bins[0,1/3),[1/3,2/3),[2/3,1], publishing nrecords, nscenarios, mean predicted mass and actual event fraction. Empty bins NULL; three bins do not prove conditional calibration.",
+    "status_slices": "Separate uniform and each member; inception versus later-active; growth versus protection. Use no post-result selected scenario or threshold bins."
+  },
+  "uncertainty_and_selection_limits": [
+    "Scenario-level block resampling of saved fixed OOF records can describe table uncertainty, not uncertainty of refitting the full learner. Overlapping fit training sets remain dependent.",
+    "Calibration diagnostics are audit/evaluation outputs of the frozen learner; they must not silently add a seventh model or tune rho/ensemble weights on outer outcomes.",
+    "Good empirical probability scoring does not prove a hard support boundary, recursive feasibility or full-H loss control. Whole-policy risk/coverage/cost remains the primary model evaluation.",
+    "All development data have a prior research history. New OOF separation is valuable algorithmic discipline, not an untouched analyst-level experiment."
+  ],
+  "implementation_next": "After the concrete engine trace schema is fixed, implement a pure record summarizer with synthetic cases for OOF identity rejection, NULLs, t0 membership, bins/endpoints, scalar Brier/log-ratio formulas and scenario-equal aggregation. No raw-market parser is needed.",
+  "forecast_source_sha256": "26b24902f448d5aeaec94f7b03f5a3451a33831299063ab42076e4bb18733010"
+}

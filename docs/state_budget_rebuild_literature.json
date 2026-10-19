@@ -1,0 +1,27 @@
+{
+  "version": "state-budget-rebuild-primary-literature-v1",
+  "sources": [
+    {
+      "title": "On Drawdown-Modulated Feedback Control in Stock Trading",
+      "authors": "Chung-Han Hsieh; B. Ross Barmish",
+      "year": 2017,
+      "url": "https://arxiv.org/html/1710.01503",
+      "use": "Related state/cushion feedback idea. Its idealized market has zero transaction costs, zero interest and known return support. Our exactfee, CPI and empirical support require our own conditional derivation; its guarantee is not inherited."
+    },
+    {
+      "title": "Distributional Robust Kelly Gambling",
+      "authors": "Qingyun Sun; Stephen Boyd",
+      "year": 2018,
+      "url": "https://stanford.edu/~boyd/papers/robust_kelly.html",
+      "use": "Related minimum expected log-growth over possible distributions. Our finite descriptive ensemble and paired trade/hold objective do not identify the true law or claim the continuous robust optimum."
+    },
+    {
+      "title": "Risk-Constrained Kelly Gambling",
+      "authors": "Enzo Busseti; Ernest K. Ryu; Stephen Boyd",
+      "year": 2016,
+      "url": "https://web.stanford.edu/~boyd/papers/kelly.html",
+      "use": "Separates long-run growth from a probability constraint under a specified gambling law. Its drawdown from an initial level and distributional assumptions cannot be silently substituted for our real running-peak finite-horizon loss."
+    }
+  ],
+  "notes": "Paraphrases and assumption checks from primary sources. Our construction/engineering is AI assisted and must be attributed; no claim of new drawdown-control literature."
+}
