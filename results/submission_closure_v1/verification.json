@@ -1,0 +1,105 @@
+{
+  "version": "submission-closure-verification-2026-10-19-v1",
+  "status": "passed",
+  "completed_utc": "2026-10-19T15:44:03.681751+00:00",
+  "base_commit": "5139b3a54fa93d572779c678e6d77687452bb89f",
+  "content_commit": "6874e0155a0a19733fc46d1cf1d502e29f33b96e",
+  "scope": "Additive submission closure: answer sheet, Q3 note, authoritative index, README alignment and v3 source ZIP; no model/final-output change.",
+  "model_changed": false,
+  "new_fits": 0,
+  "new_selections": 0,
+  "new_final_reads": 0,
+  "full_test_suite": {
+    "command": "PYTHONPATH=src .venv/bin/python -m unittest discover -s tests -v",
+    "tests_run": 1534,
+    "skipped": 0,
+    "status": "OK",
+    "seconds": 187.867,
+    "log_path": "results/submission_closure_v1/full_tests.log",
+    "log_sha256": "ffed7809f5fbf172535cec0374db565c7325bf832bdcf573bb7b15c8e2eebe45"
+  },
+  "clean_zip_reproduction": {
+    "archive": "dist/Team87_Lebmar_Technical_Source_v3.zip",
+    "archive_sha256": "f0a9165486cc2632b94326f55dd498e384e6c65e749fd83cd4328eaea7f0d344",
+    "archive_bytes": 3435417,
+    "command": [
+      "unzip -q dist/Team87_Lebmar_Technical_Source_v3.zip -d tmp/closure_v3_test_final",
+      "cd tmp/closure_v3_test_final/technical_source_v2",
+      ".venv/bin/python scripts/submission_final_adapter.py --reproduce-fixed-nonblind-final --output ../reproduction_final_verify",
+      "exit code 0"
+    ],
+    "status": "passed",
+    "mode": "fixed_nonblind_final",
+    "final_scenarios_loaded": true,
+    "market_is_constructed": false,
+    "raw_market_values_parsed": true,
+    "new_fits": 0,
+    "new_selections": 0,
+    "post_final_parameter_changes": false,
+    "previously_exposed_nonblind": true,
+    "new_independent_validation": false,
+    "array_fields": 505,
+    "Q2": 240,
+    "Q1": 300,
+    "Q1_reference": 300,
+    "total_rows": 840,
+    "summary_rows": 14,
+    "comparisons": 8,
+    "manifest_path": "results/submission_closure_v1/clean_zip_reproduction/manifest.json",
+    "manifest_sha256": "c1572f301e5a79a0146e7571a440028f8a239e1317be33ea0765f348cc55a79e",
+    "checks_path": "results/submission_closure_v1/clean_zip_reproduction/reproduction_checks.json",
+    "checks_sha256": "56bc5d88028ad59c733d9c1efb10f435a21650aa83451bf9d80b2d5e075d00cb",
+    "array_signature_count": 505,
+    "output_bytes_sha256_count": 10
+  },
+  "package": {
+    "archive": "dist/Team87_Lebmar_Technical_Source_v3.zip",
+    "archive_sha256": "f0a9165486cc2632b94326f55dd498e384e6c65e749fd83cd4328eaea7f0d344",
+    "archive_bytes": 3435417,
+    "members": 591,
+    "under_50mb": true,
+    "sha256sums_checked": 590,
+    "sha256sums_failures": 0,
+    "sha256sums_log": {
+      "path": "results/submission_closure_v1/package_sha_check.log",
+      "sha256": "bd7c60077b4375e3f28f95d3eac49dd2179a5114fd63307e95812ba5850380cd"
+    },
+    "core_archive": "dist/Team87_Lebmar_Technical_Source_v2.zip",
+    "core_archive_sha256": "78b710d75f9cba9497ac6059995ac874dfa30a949b06a8072088235cd3f2d4dc",
+    "core_members_checked": 564,
+    "core_mismatches": 0,
+    "core_note": "All 564 V2 core members extracted from v3 match the V2 archive byte-for-byte."
+  },
+  "files_sha256": {
+    "README.md": "6a4c3b17a2cc9ef97e2812ff51dad9b727ebbf919216fa95269fadac43427fa2",
+    "SUBMISSION_README.md": "daa8712fe0a99f305de7223aea0b4cbcd653c143a338e548065252ff8aa5de98",
+    "docs/AUTHORITATIVE_INDEX.md": "abea3c6ad94f7af1abe2817169733d5dd86e9891853624ce28aa811fece44596",
+    "submission/TASK_ANSWER_SHEET.md": "5c630b7267ddfefd2de2d5dfadab5109217e3eb58b136d44b908b1ebf7220e5a",
+    "submission/Q3_SENSITIVITY.md": "bec24611904c3335928d2a711c3a195c65cedc98d026c80547ac396df7ca4987",
+    "dist/Team87_Lebmar_Technical_Source_v3.zip": "f0a9165486cc2632b94326f55dd498e384e6c65e749fd83cd4328eaea7f0d344",
+    "dist/Team87_Lebmar_Technical_Source_v3.zip.sha256": "4a9dc2c916279cd61572fb3fd73273a86c2344f81063d3908f0c8be451360eb0"
+  },
+  "frozen_evidence": {
+    "changed_paths_since_base": [
+      "README.md",
+      "SUBMISSION_README.md",
+      "dist/Team87_Lebmar_Technical_Source_v3.zip",
+      "dist/Team87_Lebmar_Technical_Source_v3.zip.sha256",
+      "docs/AUTHORITATIVE_INDEX.md",
+      "results/submission_closure_v1/clean_zip_reproduction/command.txt",
+      "results/submission_closure_v1/clean_zip_reproduction/manifest.json",
+      "results/submission_closure_v1/clean_zip_reproduction/reproduction_checks.json",
+      "results/submission_closure_v1/full_tests.exit",
+      "submission/Q3_SENSITIVITY.md",
+      "submission/TASK_ANSWER_SHEET.md"
+    ],
+    "frozen_paths_changed": [],
+    "note": "Historical producers, final result arrays and audits were not modified. Old checkpoints remain statements about their timestamps."
+  },
+  "github_main_update": "Pending at verification write; see results/submission_closure_v1/github_sync.json after the push.",
+  "limitations": [
+    "Final 121-180 was previously exposed; this is nonblind fixed-table reproduction, not fresh validation.",
+    "The v3 ZIP contains the compact core and selected evidence; the full historical result archive is not included.",
+    "Passing tests and byte reproduction prove implementation/closure integrity, not future market predictive validity."
+  ]
+}
