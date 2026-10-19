@@ -1,0 +1,82 @@
+{
+  "version": "state-budget-v2b-one-time-mitigation-before-review-v1",
+  "status": "Source and synthetic design only; no actual market evaluation authorized by this document",
+  "provenance": {
+    "proposed_after_adverse_V2_development_findings": true,
+    "not_contemporaneously_prespecified_with_V2": true,
+    "baseline_source": "research/experimental_execution/state_budget_execution.py",
+    "baseline_source_sha256": "8480dc1c2d54175a9fafed2471991a0ea8fc6a4519a24140044d056dbafafb1f",
+    "baseline_findings_received_from_parent": "Full inner six-family learner failed its risk requirements; frequent support-family infeasibility led to long exposed pending holds. The negative baseline is retained, not overwritten or reinterpreted as success.",
+    "actual_development_or_final_arrays_read_for_this_task": false,
+    "actual_strategy_run": false
+  },
+  "single_intervention": "Change only the physical action at the first funded primary no-feasible-proposal decision: one best-effort protective action, then the same absorbing Review hold. All remaining account mechanics and initial/actual-breach handling are unchanged.",
+  "unchanged": [
+    "six release_fraction×forecast candidates",
+    "same own-training Q1 fits and original positive base target",
+    "same calendar support/forecast ensemble",
+    "same primary13 safe points and exact fee geometry",
+    "same whole-policy inner selector and service alpha/tail gates",
+    "same initial full-target-or-Review rule",
+    "same originalH/CPI/peak/runningMDD and actual strict crossing",
+    "same absorbing guard/actual-breach continuation and full financial denominators"
+  ],
+  "API": {
+    "module": "research/experimental_execution/state_budget_mitigation.py",
+    "simulate": "simulate_state_budget(actual_returns,actual_inflation,training_returns,training_inflation,target,*,L,horizon,cost_rate=.0025,release_fraction=.5,forecast_rule=uniform,training_ids,actual_ids=None,support_mode=calendar); alias simulate_state_budget_mitigation",
+    "decide": "decide_state_action has the frozen V2 signature, calls frozen primary first and adds mitigation witnesses without mutating any primary module global.",
+    "mitigation": "mitigate_support_failure(holdings,cpi,support_real_gross,*,target,cost_rate=.0025,budget_floor,forecast_real_gross=None,forecast_weights=None,real_peak=None,running_mdd=None,L=None). Optional complete forecast/history inputs add9 candidate growth/risk annotations; support worst wealth alone selects the point.",
+    "implementation": "Copy the already frozen V2 simulator function into the new module, importing its pure validators and primary decision helper. Add new fields and replace only the new module decision function; no monkeypatch, old source edit or selector change."
+  },
+  "permission_to_mitigate": {
+    "required": "Active already-funded account; initial=False; frozen primary status=no_feasible_action; no guard pending and no previously recorded actual breach.",
+    "forbidden": "Never rescue initial Review with a different allocation. Never trade anew after actual breach or a prior guard trigger. Identical known initial states retain identical initial admission.",
+    "state_transition": "The mitigation period is still Review: guard_triggered=True, pending_at_decision=True, was_pending_input=False, automatic_service=False. The next and all later decisions are pending hold. was_pending_input=True always implies no new trade.",
+    "administrative_scope": "The ordinary-service continuation fraction remains zero from the guard-trigger period even when a one-time protective action is executed automatically. It is not the fraction of every algorithmic action. Report mitigation counts, moved amounts and fees separately; there is no renewed automatic service or assumed human response."
+  },
+  "nine_point_menu": {
+    "hold": "candidate0, y=x, fee0",
+    "destinations": "a*w+(1-a)*e_bill for a=1,.75,.5,.25, the exact same four temporary destinations.",
+    "segment_points": "For each destination compute exact full endpoint y_star and feeC_star, then q=.5 and1. y(q)=x+q*(y_star-x), fee=q*C_star, moved=q*moved_star. Destination and point order are fixed.",
+    "exact_funding": "sum(y)+fee=sum(x); fee=kappa*sum(max(y-x,0)). The fee is already in post holdings and must never be charged twice.",
+    "objective": "Maximize min_s (a_s dot y)/currentCPI over the declared own-training joint real-gross support. No empirical probability weights, eta or forecast growth score ranks this fallback menu.",
+    "strict_improvement": "Let R=sum(x)/CPI. Trade only if chosen minimum next real wealth exceeds hold minimum by more than1e-12*R. A global maximum band of1e-12*R is applied; candidates not strictly improving hold are excluded from a positive-gain band.",
+    "tie": "Hold first, then smaller actual nominal fee, smaller proposal index, then fixed q/point order. A plateau therefore need not select q=1.",
+    "no_improvement": "If no strict supported improvement exists, choose hold with fee0 and still enter absorbing Review."
+  },
+  "honesty": {
+    "primary_witness": "Every original13 candidate and interval field remains untouched. The failed primary gate reason/score/hold prediction and primary_failed_hold_* are saved separately.",
+    "actual_decision": "actual_decision_source=primary/mitigation/pending; mitigation_selected_index identifies the actual9point arm. Actual post,fee,moved and scalar forecast loggrowth/paired advantage/gross advantage/logfee/next-shortfall describe the real mitigation action, not max(primary_index,0).",
+    "residual_shortfall": "worst_real_shortfall_selected can remain positive; do not label the floor restored or issue a support safety certificate merely because it improved.",
+    "financial_units": "Worst next real wealth and shortfall improvement are purchasing-power wealth units relative to initial real100. Fees/moved are nominal units. Shortfall value is evaluated after exact fees, not a benefit from subtracting the fee again.",
+    "adverse_results": "Worst supported next-year improvement does not ensure higher realized growth, smaller realized MDD, future feasibility, support containment or a positive gain in every forecast. Preserve all such adverse results and full-H outcomes.",
+    "at_mitigation": {
+      "support_feasible": false,
+      "primary_selected_index": -1,
+      "guard_triggered": true
+    }
+  },
+  "witnesses": {
+    "primary": "All13 original candidate/interval fields, selected_index and support_feasible remain from V2.",
+    "mitigation": [
+      "mitigation_evaluated",
+      "mitigation_trade",
+      "mitigation_selected_index/proposal/q",
+      "mitigation_worst_next_real_hold/selected/improvement",
+      "9candidate post/q/fees/moved/proposal/worst_next_real/worst_support_member/shortfall",
+      "9candidate×forecast member pairedadv/loggrowth/grossadv/nextbreach"
+    ],
+    "account": "Same original full physical state tree, pending flags and originalH metrics; both actual previous-state prefixes and post-action realized_real_gross remain available."
+  },
+  "validation": "Synthetic checks compare every shared V2 arm field exactly when mitigation is absent; preserve primary13 witnesses on a failed state; verify exact fee equations, worst-versus-mean distinction, fee reversal, plateau/global ties, strict relative improvement, residual failure, negative growth and adverse actual outcomes, no initial/breach rescue, one action then hold, and future/ID information isolation.",
+  "next_theory_only": {
+    "name": "Drawdown-modulated exposure cap",
+    "implemented": false,
+    "idea": "A next version could turn the current real headroom into an exposure cap before the primary family becomes infeasible, rather than intervening only afterwards. Keep this separate from the present one-factor fallback experiment.",
+    "no_fee_fixed_postwealth_derivation": "For risky-sleeve exposure e, per-row risky real gross r_s and bill gross b_s, a fixed post-fee real balance R_f would require R_f*((1-e)*b_s+e*r_s)>=F_rho. When b_s>r_s this yields e<=(b_s-F_rho/R_f)/(b_s-r_s); other slope signs yield lower bounds or no solution. Intersect every joint row and [0,1].",
+    "exact_fee_boundary": "R_f itself depends on the transition fee. A fee-free exposure formula cannot be transferred unchanged. Post-dollar parametrization retains linear inequalities with exact fees and original peak/CPI.",
+    "limits": "Bill real gross can be below1, so a nonnegative cap may not exist and cash is not guaranteed. One-step caps do not prove recursive feasibility or intrayear protection. Literature assumptions and any originality claim require separate source-backed review.",
+    "design_boundary": "No exposure-cap action, candidate or parameter is added to V2b. Such a policy needs a later independently declared version and complete nested development evaluation."
+  },
+  "execution_gate": "Only source/synthetic work here. Root will freeze a new additive protocol/runner/source closure before any development1-120 evaluation. This stage does not read121-180 or modify old V2/final artifacts."
+}
