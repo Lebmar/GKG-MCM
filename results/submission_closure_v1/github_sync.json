@@ -1,0 +1,25 @@
+{
+  "version": "submission-closure-github-sync-2026-10-19-v1",
+  "recorded_utc": "2026-10-19T15:44:42.555747+00:00",
+  "remote": "origin",
+  "repository": "Lebmar/GKG-MCM",
+  "default_branch": "main",
+  "remote_main_before": "7bca10bec7c919e50bfb53b6b59c58fb7656f02b",
+  "remote_branch_before": "5139b3a54fa93d572779c678e6d77687452bb89f",
+  "remote_main_at_push": "fc39c4297ac12ba12e32fcc6cb075f4eb539f2ab",
+  "remote_branch_at_push": "fc39c4297ac12ba12e32fcc6cb075f4eb539f2ab",
+  "remote_main_after_fetch": "fc39c4297ac12ba12e32fcc6cb075f4eb539f2ab",
+  "verified_api_commit": {
+    "sha": "fc39c4297ac12ba12e32fcc6cb075f4eb539f2ab",
+    "message": "Record closure verification for tests, clean ZIP and package integrity",
+    "date": "2026-10-19T15:44:07Z"
+  },
+  "checks": [
+    "git merge-base --is-ancestor origin/main HEAD passed before push",
+    "git push origin HEAD:main fast-forwarded 7bca10b..fc39c42",
+    "git push origin HEAD:codex/risk-budget-development fast-forwarded 5139b3a..fc39c42",
+    "GitHub API branches/main returned fc39c42",
+    "raw main README begins with the submission-closure block"
+  ],
+  "note": "The commit that adds this record is a later documentation commit; it does not change the model, results or package."
+}

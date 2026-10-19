@@ -96,10 +96,22 @@
     "frozen_paths_changed": [],
     "note": "Historical producers, final result arrays and audits were not modified. Old checkpoints remain statements about their timestamps."
   },
-  "github_main_update": "Pending at verification write; see results/submission_closure_v1/github_sync.json after the push.",
+  "github_main_update": {
+    "status": "completed",
+    "remote": "origin",
+    "main_sha_at_push": "fc39c4297ac12ba12e32fcc6cb075f4eb539f2ab",
+    "branch_sha_at_push": "fc39c4297ac12ba12e32fcc6cb075f4eb539f2ab",
+    "checked_via": [
+      "git ls-remote --heads origin",
+      "GitHub API branches/main",
+      "raw.githubusercontent.com main README"
+    ],
+    "note": "The commit that adds this sync record is a later documentation commit; main remains current with the closure content."
+  },
   "limitations": [
     "Final 121-180 was previously exposed; this is nonblind fixed-table reproduction, not fresh validation.",
     "The v3 ZIP contains the compact core and selected evidence; the full historical result archive is not included.",
     "Passing tests and byte reproduction prove implementation/closure integrity, not future market predictive validity."
-  ]
+  ],
+  "github_synced_utc": "2026-10-19T15:44:42.555358+00:00"
 }
