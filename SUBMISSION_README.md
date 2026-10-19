@@ -2,7 +2,14 @@
 
 Participant: Chengxuan YUAN. Team: Lebmar.
 
-Use `scripts/submission_adapter.py` for the compact reproduction. It calls the
+Submission-facing closure documents:
+[submission/TASK_ANSWER_SHEET.md](submission/TASK_ANSWER_SHEET.md),
+[submission/Q3_SENSITIVITY.md](submission/Q3_SENSITIVITY.md), and the
+repository-level [docs/AUTHORITATIVE_INDEX.md](docs/AUTHORITATIVE_INDEX.md). This
+file describes the compact V2 core; the closure package `v3` adds those documents
+without changing the core.
+
+Use `scripts/submission_adapter.py` for the compact development reproduction. It calls the
 unchanged locked V2b kernel. V3 and earlier programs are retained as exploratory
 and historical source, and are not substituted for the locked main model.
 No paper or historical large result archive is included in this source package.
@@ -28,9 +35,24 @@ This reads original scenario IDs 1–120 only. It compares the full fixed main
 model, same-target annual-then-pending B, same-target annual restoration, and
 exact-thirds annual restoration against small canonical per-field
 dtype/shape/value digests and financial summaries. No fitting, parameter
-selection, alternate candidate or final-data mode exists. Each command refuses
-to overwrite a previous complete, failed or incomplete output; use a new
-`--output` path for a separate explicitly intended run.
+selection or alternate candidate exists in this development adapter. Each
+command refuses to overwrite a previous complete, failed or incomplete output;
+use a new `--output` path for a separate explicitly intended run.
+
+The separate fixed final-table entrypoint is `scripts/submission_final_adapter.py`.
+Its default is a constructed synthetic smoke run; only the explicit fixed command
+reads evaluation IDs 121–180:
+
+```sh
+python scripts/submission_final_adapter.py
+python scripts/submission_final_adapter.py --reproduce-fixed-nonblind-final
+```
+
+The final command reproduces the 14 locked objects and checks every saved array
+field plus the byte identity of the ten table/JSON artifacts. It does not fit,
+select, change a parameter or create a new validation sample. See
+[submission/FINAL_REPRODUCTION.md](submission/FINAL_REPRODUCTION.md) for the exact
+contract and the previously-exposed nonblind disclosure.
 
 The compact adapter is a new fixed-model reproduction entrypoint. The old
 historical runners retain their original large transitive evidence checks;

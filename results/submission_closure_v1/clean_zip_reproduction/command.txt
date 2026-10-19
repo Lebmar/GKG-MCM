@@ -1,0 +1,4 @@
+unzip -q dist/Team87_Lebmar_Technical_Source_v3.zip -d tmp/closure_v3_test_final
+cd tmp/closure_v3_test_final/technical_source_v2
+.venv/bin/python scripts/submission_final_adapter.py --reproduce-fixed-nonblind-final --output ../reproduction_final_verify
+exit code 0

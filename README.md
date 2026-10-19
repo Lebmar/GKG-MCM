@@ -3,12 +3,19 @@
 2026 HKUST(GZ) MCM Senior Group Problem A. Team **Lebmar**, number **87**.
 Author: **Chengxuan YUAN**.
 
+**Submission closure (2026-10-19):** the task-facing numbers and metric definitions
+are in [TASK_ANSWER_SHEET.md](submission/TASK_ANSWER_SHEET.md), the Q3 sensitivity
+note in [Q3_SENSITIVITY.md](submission/Q3_SENSITIVITY.md), and the authoritative
+vs superseded document map in [AUTHORITATIVE_INDEX.md](docs/AUTHORITATIVE_INDEX.md).
+Read the latter before quoting an older report or registry.
+
 **Current technical version: the simpler V2b mitigation model is locked, and its
 separate nonblind final evaluation, independent audit and isolated replay are complete.**
-Main C initially funds60/60 paths;2 breach the original40% annual real-MDD limit.
-All60 trigger human referral by decision year7 and then follow the modeled hold
-assumption. Ordinary autonomous service covers19.44% of account-years. This is
-a risk–growth–service tradeoff, not a demonstrated autonomous30-year service.
+Main C initially funds 60/60 paths; 2 breach the original 40% annual real-MDD
+limit. All 60 trigger human referral by decision year 7 and then follow the
+modeled hold assumption. Ordinary autonomous service covers 19.44% of
+account-years. This is a risk–growth–service tradeoff, not a demonstrated
+autonomous 30-year service.
 
 Start with the [new model registry](docs/mitigation_main_model_registry.json),
 [technical judgment](docs/mitigation_technical_completion_judgment.json),
@@ -20,20 +27,30 @@ No paper has been regenerated in this phase; the existing report remains an
 archived prototype. Historical final exposure remains disclosed: this is not a
 fresh blind confirmation sample, and no parameter was adjusted after this run.
 
-| Fixed Q2 object (same60 IDs/H30) | Median real CAGR | P10 real CAGR | P90 real MDD | Breaches | Ordinary service |
-| --- | ---: | ---: | ---: | ---: | ---: |
-| V2b protective trade then review/hold | 2.35% | 0.87% | 28.69% | 2/60 | 19.44% |
-| Same-target annual/pending B | 3.56% | 1.50% | 43.54% | 8/60 | 94.56% |
-| Same-target continuous annual | 3.56% | 1.48% | 43.54% | 8/60 | 100% |
-| Exact-thirds continuous annual | 3.38% | 1.47% | 39.36% | 6/60 | 100% |
+| Fixed Q2 object (same60 IDs/H30) | Median real CAGR | Median real MDD | P10 real CAGR | P90 real MDD | Breaches | Trade periods | Ordinary service |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| V2b protective trade then review/hold | 2.35% | 20.02% | 0.87% | 28.69% | 2/60 | 21.22% | 19.44% |
+| Same-target annual/pending B | 3.56% | 27.49% | 1.50% | 43.54% | 8/60 | 94.56% | 94.56% |
+| Same-target continuous annual | 3.56% | 27.49% | 1.48% | 43.54% | 8/60 | 100% | 100% |
+| Equal-weight baseline (exact thirds, annual) | 3.38% | 22.29% | 1.47% | 39.36% | 6/60 | 100% | 100% |
+
+The equal-weight baseline is the required 1/3-each annual-restoration strategy.
+Trade periods = 382/1,800 = 21.22% of all decision periods, including the mandatory
+initial allocation; excluding the initial allocation it is 322/1,740 = 18.51%.
+Ordinary autonomous service = 350/1,800 = 19.44% and is a different metric. The
+V2b policy buys lower tail risk and fees at a cost of median and P10 growth; it is
+not a claim of all-metric dominance.
 
 All financial paths keep original CPI, horizon, peak and absorbing breach history
 after referral. Initial Review is financialNULL; funded review/hold is fully
 accounted. Fees use the original destination-buy cost once. The final severe
 example is synthetic ID161, selected by maximum main full-horizon MDD with
 smallest-ID ties. A one-year supported action is not a recursive or real-market
-safety guarantee. Q1 staticB/C final frequencies exceed the empirical10% design
-reference; E has negativeP10growth and A/D remain Review.
+safety guarantee. Q1 assignments are **A Review, B Conservative, C Balanced,
+D Review, E Growth**. Static B/C/E product references retain adverse tails:
+B 11/60, C 8/60, E 5/60 with P10 −1.58%; they are not autonomous execution
+approvals, and the 10% reference is a declared service convention, not a contest
+mandate or customer guarantee.
 
 The final audit independently checks720 complete accounts and every main active
 decision; an isolated copy reproduces all11 output artifacts exactly. The source
@@ -45,8 +62,17 @@ implementation checks do not establish predictive validity.
 For compact technical reproduction see [SUBMISSION_README.md](SUBMISSION_README.md).
 The additive adapter defaults to constructed synthetic data; only explicit
 `--development` reads IDs1–120, reproduces the locked four Q2 objects and checks
-canonical array fingerprints. Historical runners keep their full evidence gates.
-The source-only ZIP is a technical artifact; paper and CMT delivery remain separate.
+canonical array fingerprints. The final-table adapter and the fixed
+`--reproduce-fixed-nonblind-final` command are documented in
+[FINAL_REPRODUCTION.md](submission/FINAL_REPRODUCTION.md). Historical runners keep
+their full evidence gates.
+
+The final closure package is
+[Team87_Lebmar_Technical_Source_v3.zip](dist/Team87_Lebmar_Technical_Source_v3.zip):
+it keeps the V2 compact core unchanged and adds the closure documents (answer
+sheet, Q3 note, authoritative index and package README), still far below the
+50 MB CMT limit. The source-only ZIP is a technical artifact; paper and CMT
+delivery remain separate.
 
 Earlier authoritative registry/final records below are retained historical
 evidence and are superseded for the new V2b evaluation only.
