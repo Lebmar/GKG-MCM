@@ -1,0 +1,15 @@
+{
+  "version": "liquidity-capacity-independent-audit-source-freeze-v1",
+  "execution_ready": true,
+  "frozen_utc": "2026-10-19T07:07:31.622143+00:00",
+  "plan_sha256": "ff740122238b18d9c05c3680cf5959d8de1acc0106aa55ce675c967fa07c254f",
+  "source_sha256": {
+    "scripts/audit_liquidity_capacity.py": "b9a99d64a64793df0cbf40b830ce84f27b5d9e6e1b1ce5e1488e7326f8b5f045",
+    "tests/test_audit_liquidity_capacity.py": "d3324a3775e08a9448461f1b7b6d48963042e5e7e6fbf92706859657f44d1cf6",
+    "docs/liquidity_capacity_diagnostic_audit_plan.json": "ff740122238b18d9c05c3680cf5959d8de1acc0106aa55ce675c967fa07c254f",
+    "src/safeinvest/data.py": "70e511fd05c6e23fd6b8a72f1dc165426fc77a5eb4dbd8a3c13b839bb305a75f",
+    "src/safeinvest/__init__.py": "dcef1e2e1f0f7cd5426988f0f27408eebb9ded3fb32c961f8f23e2edfb6e4ad2"
+  },
+  "synthetic_tests": 14,
+  "numeric_values_read_during_preparation": false
+}
