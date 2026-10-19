@@ -1,0 +1,24 @@
+{
+  "version": "state-budget-mitigation-stress-independent-audit-source-freeze-v1",
+  "execution_ready": true,
+  "frozen_utc": "2026-10-19T07:13:13.253210+00:00",
+  "plan_sha256": "cf7dbdee8e9c9c129ab68b925f240dc8f52c26d14ba7b70de1bd6327c6529d69",
+  "source_sha256": {
+    "scripts/audit_state_budget_mitigation_stress.py": "ba7a3c0f2287416dff5dbb31c9c3604ed8f4315de768ca85f13e0510896b2364",
+    "tests/test_state_budget_mitigation_stress_audit.py": "c5aa845459896ac45757a5b933502e1dfcd3864602fd20f9d0fa12e10a55899e",
+    "scripts/audit_state_budget_rebuild.py": "8451a30832cf7aae27e008aae13e8107372095fd65e1f29d597fab304cb6167e",
+    "scripts/audit_state_budget_mitigation.py": "b477c4d0d4ef0be6c690df1da5f9a89ba2715ce2fe16ac5ec72cef6ab7df80f0",
+    "src/safeinvest/data.py": "70e511fd05c6e23fd6b8a72f1dc165426fc77a5eb4dbd8a3c13b839bb305a75f",
+    "src/safeinvest/__init__.py": "dcef1e2e1f0f7cd5426988f0f27408eebb9ded3fb32c961f8f23e2edfb6e4ad2"
+  },
+  "input_sha256": {
+    "docs/state_budget_mitigation_stress_audit_plan.json": "cf7dbdee8e9c9c129ab68b925f240dc8f52c26d14ba7b70de1bd6327c6529d69",
+    "docs/state_budget_mitigation_stress_protocol.json": "f8825f4a4090f6731860aa4f794a16594fbd636a174e2a6649d2e743020919da",
+    "docs/state_budget_mitigation_stress_source_freeze.json": "c00d316e5c21cd92023c8ab2f141d592d84f2dbee239994db27d180fbb371f4f",
+    "results/state_budget_mitigation_stress_v1/manifest.json": "890fce0b4e87d487273f90a61826aa716698c783583899ec497f1d586605a7bd",
+    "results/state_budget_mitigation_v1/manifest.json": "e97ef1326ffe1cb1e48f660ff1fd1e71cee2a0f1a26931ce84ac98ec03431f7d",
+    "data/SafeInvest_Synthetic_Data.csv": "def0177704bf6cb98cec6da325b34208750d988f6ad97ec4a706a0d39e6f82c0"
+  },
+  "synthetic_tests": 11,
+  "numeric_values_read_during_audit_preparation": false
+}
