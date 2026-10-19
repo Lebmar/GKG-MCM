@@ -1,0 +1,2205 @@
+{
+  "object_specification": {
+    "version": "compact-locked-V2b-four-objects-v1",
+    "main": {
+      "profile": "C",
+      "strategic_product": "Balanced",
+      "target": [
+        0.45,
+        0.05,
+        0.5
+      ],
+      "horizon": 30,
+      "L": 0.4,
+      "cost_rate": 0.0025,
+      "selected_candidate_id": "release_0.5_uniform",
+      "release_fraction": 0.5,
+      "forecast_rule": "uniform",
+      "support_mode": "calendar",
+      "service_alpha": 0.1,
+      "persistent_target_relearning": false
+    },
+    "objects": [
+      "mitigation_main",
+      "same_target_B",
+      "same_target_annual",
+      "exact_thirds_annual"
+    ],
+    "training_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120
+    ],
+    "evaluation_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120
+    ],
+    "initial_wealth": 100.0,
+    "asset_order": [
+      "equity",
+      "bond",
+      "bill"
+    ],
+    "no_refit": true,
+    "no_selection": true,
+    "final_access": false
+  },
+  "array_signatures": {
+    "mitigation_main": {
+      "actions": {
+        "dtype": "<U8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "58a0ccbb155bcb9be80e0b8b316a1d61d8ff97acc2786239c9e5485794d73837"
+      },
+      "actual_decision_source": {
+        "dtype": "<U10",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "9a665311ef23829181a4eae712863e196a51f6142e9a540727034b3e593d0dc2"
+      },
+      "actual_previous_state": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30,
+          4
+        ],
+        "sha256": "31f8483c2bdd70056201da1b53d4cd1a2da1d39f8b798bb99265c1d353ffa427"
+      },
+      "added_severity": {
+        "dtype": "<f8",
+        "shape": [
+          2
+        ],
+        "sha256": "241808cce19b49683d2308412efef71f1f4c7dcf2627039cba044bf44f6e3533"
+      },
+      "automatic_service": {
+        "dtype": "|b1",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "5e4084eff2f37d637e6502bf9472b0029755bbd130ebb52c8c33bb8148c31fd2"
+      },
+      "available_followup": {
+        "dtype": "<i8",
+        "shape": [
+          2
+        ],
+        "sha256": "5ac6a5945f16500911219129984ba8b387a06f24fe383ce4e81a73294065461b"
+      },
+      "budget_floor": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "81a36301a0359ded75507d7ed32c6bed6d1ec14c535ed0518cbcb7a561810a04"
+      },
+      "candidate_feasible": {
+        "dtype": "|b1",
+        "shape": [
+          2,
+          30,
+          13
+        ],
+        "sha256": "1fdd75bbaca803c708cf6e2375f210f12e143da1556677de1f2dab3b9081b677"
+      },
+      "candidate_fees": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30,
+          13
+        ],
+        "sha256": "79ec94a489058d46f7f4ad70a0a30caf6b0ad3967d0f66be51e7b45322a32c56"
+      },
+      "candidate_lambda": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30,
+          13
+        ],
+        "sha256": "fd6023d08fe8c832ef302615e8731eeb11d72c93803f5314eb2e06d3fa61e1a1"
+      },
+      "candidate_log_fee": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30,
+          13
+        ],
+        "sha256": "108031d8b38a7011ce348527e6b097c9518097e72399bd1a462b90d5c808de77"
+      },
+      "candidate_member_advantage": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30,
+          13,
+          5
+        ],
+        "sha256": "52af85206ff08edf1ce2b4afb1e23bc1040128155bcbb822bb2e0581492d3cb3"
+      },
+      "candidate_member_gross_advantage": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30,
+          13,
+          5
+        ],
+        "sha256": "74cfa10ddc4ee9cce4e836337abe78564db92919ba37f7ee288dff26588ac041"
+      },
+      "candidate_member_log_growth": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30,
+          13,
+          5
+        ],
+        "sha256": "52af85206ff08edf1ce2b4afb1e23bc1040128155bcbb822bb2e0581492d3cb3"
+      },
+      "candidate_min_support_slack": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30,
+          13
+        ],
+        "sha256": "d797c23c1239ea44c19e90a7e4376c326f04f04ba9a64594a677edb73ced7a9d"
+      },
+      "candidate_moved": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30,
+          13
+        ],
+        "sha256": "7e9b0f5839dc69adba299d9342f4bc92cd35efd20f43443dd0399bdcddb6d1ba"
+      },
+      "candidate_posttrade": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30,
+          13,
+          3
+        ],
+        "sha256": "d7ce464bde2ad730df378e2914bc1008805c7a209c90e1b8da6271e904be58b4"
+      },
+      "candidate_predicted_next_breach": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30,
+          13,
+          5
+        ],
+        "sha256": "74cfa10ddc4ee9cce4e836337abe78564db92919ba37f7ee288dff26588ac041"
+      },
+      "candidate_proposal": {
+        "dtype": "<i8",
+        "shape": [
+          2,
+          30,
+          13
+        ],
+        "sha256": "0ec4dca8a2f8832b8a10414f1c0ec2ba3d449a018d55732573312ba1c80373d3"
+      },
+      "candidate_score": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30,
+          13
+        ],
+        "sha256": "8ecb54c17d60af06e19090fc6f1111cff5d76206da52312951e7ff96f2b71297"
+      },
+      "candidate_worst_support_member": {
+        "dtype": "<i8",
+        "shape": [
+          2,
+          30,
+          13
+        ],
+        "sha256": "c3255adfdbf4de26ab4cd65b51bf3e4aeb16cfdebfe8ec53c472038fb297a482"
+      },
+      "conditional_predicted_advantage": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "1ce1d059689560f6bb728ccc72698a26ec2ef2fd9a22ad53abad48c0b058e2f9"
+      },
+      "cpi": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          31
+        ],
+        "sha256": "22bd61d4283af777886bd8253d1638cdd76ae83aa383ce4e57b11d577c78db60"
+      },
+      "current_drawdown": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          31
+        ],
+        "sha256": "5055eecb8ba150d00d848378e2637d17a0e9c6ccccb9f6ee7f10fdf5e1bb5524"
+      },
+      "current_log_fee": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "70999986b57a74a1c24ce499953ab00961accac627bfee823077f67b4dad0919"
+      },
+      "drawdown_at_trigger": {
+        "dtype": "<f8",
+        "shape": [
+          2
+        ],
+        "sha256": "241808cce19b49683d2308412efef71f1f4c7dcf2627039cba044bf44f6e3533"
+      },
+      "end_weights": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30,
+          3
+        ],
+        "sha256": "49cbe6dddb6dae98b588d98fc95d035595450d308c0b19ac99face097a8ef09d"
+      },
+      "end_year_tv_drift": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "4b48f21a4b7a02bfbec19ef880a967a02334a3cdcef8ae83de2ef327ba8bc5dd"
+      },
+      "ever_breached": {
+        "dtype": "|b1",
+        "shape": [
+          2,
+          31
+        ],
+        "sha256": "1ebb2bdc5ce08e6e90b3ede72a8ef315e3e1bced3a3c458f69b6d7eeff9e4f3a"
+      },
+      "fee_fraction": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "ce29697a82f7fe8192ec973fc5aca221cfa04aab8f79d620483265c0b9e7815d"
+      },
+      "fees": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "36d93bf8d784abf47edba1b0c9567ebd26b75aedffa057569117a6f93557527b"
+      },
+      "first_crossing": {
+        "dtype": "<i8",
+        "shape": [
+          2
+        ],
+        "sha256": "5ac6a5945f16500911219129984ba8b387a06f24fe383ce4e81a73294065461b"
+      },
+      "first_guard_trigger": {
+        "dtype": "<i8",
+        "shape": [
+          2
+        ],
+        "sha256": "5ac6a5945f16500911219129984ba8b387a06f24fe383ce4e81a73294065461b"
+      },
+      "floor": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "5712dc6c9f7f106c14d4ed94918dbab68f5ad1d6a3a3765d49a347137e558533"
+      },
+      "forecast_member_count": {
+        "dtype": "<i8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "3556f704911c489268cd24a46bddebc7d9b028d000569f9dbafda64f0e228e02"
+      },
+      "forecast_n": {
+        "dtype": "<i8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "7b89594040f3b95531ce715b8c8828955727c50e8a78fb69f664ad8d14cbe91f"
+      },
+      "gate_evaluated": {
+        "dtype": "|b1",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "5e4084eff2f37d637e6502bf9472b0029755bbd130ebb52c8c33bb8148c31fd2"
+      },
+      "gate_reason": {
+        "dtype": "<U64",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "3a23f891fc10aaa3b49424869c348fd3e504b20fad6c12a9595a15943f7f12d6"
+      },
+      "gross_log_advantage_min": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "4b48f21a4b7a02bfbec19ef880a967a02334a3cdcef8ae83de2ef327ba8bc5dd"
+      },
+      "gross_log_advantage_uniform": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "4b48f21a4b7a02bfbec19ef880a967a02334a3cdcef8ae83de2ef327ba8bc5dd"
+      },
+      "growth_sacrifice": {
+        "dtype": "|b1",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "28b9dab45a70cccc489b9046fae0138fc9a7b4d5261ef3cd6164691b2702ae72"
+      },
+      "guard_pending": {
+        "dtype": "|b1",
+        "shape": [
+          2,
+          31
+        ],
+        "sha256": "1ebb2bdc5ce08e6e90b3ede72a8ef315e3e1bced3a3c458f69b6d7eeff9e4f3a"
+      },
+      "guard_pending_at_decision": {
+        "dtype": "|b1",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "5dcc1b5872dd9ff1c234501f1fefda01f664164e1583c3e1bb3dbea47588ab31"
+      },
+      "guard_triggered": {
+        "dtype": "|b1",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "5dcc1b5872dd9ff1c234501f1fefda01f664164e1583c3e1bb3dbea47588ab31"
+      },
+      "hold_feasible": {
+        "dtype": "|b1",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "5e4084eff2f37d637e6502bf9472b0029755bbd130ebb52c8c33bb8148c31fd2"
+      },
+      "holdings": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          31,
+          3
+        ],
+        "sha256": "a6652e3718bb8ec64ec4b444af69fb81b958eea3587955e792b4eb35718a6d13"
+      },
+      "interval_feasible": {
+        "dtype": "|b1",
+        "shape": [
+          2,
+          30,
+          4
+        ],
+        "sha256": "770da3c513c3c3a2962fac92477cfe32e3fdbf225456264429ba384a35aaa971"
+      },
+      "interval_hi": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30,
+          4
+        ],
+        "sha256": "3f12853df4f558ba77d68cdfb27ea20476898765bcd73b997a66d5b57820f2f2"
+      },
+      "interval_lo": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30,
+          4
+        ],
+        "sha256": "155e437b946ac82ae591ff382b8d19efda9397b2282672dbabd91ec31ce8a651"
+      },
+      "interval_lower_member": {
+        "dtype": "<i8",
+        "shape": [
+          2,
+          30,
+          4
+        ],
+        "sha256": "a97445652c91c7b12838cdbe8545cdd1891a8eda7af5f1e8247c7592ae158401"
+      },
+      "interval_upper_member": {
+        "dtype": "<i8",
+        "shape": [
+          2,
+          30,
+          4
+        ],
+        "sha256": "a97445652c91c7b12838cdbe8545cdd1891a8eda7af5f1e8247c7592ae158401"
+      },
+      "loss_tolerances": {
+        "dtype": "<f8",
+        "shape": [
+          1
+        ],
+        "sha256": "76ac2cde7665454a2feeeb3ff8bf3c4b85272509b98228dbc1e8f7a8c979a647"
+      },
+      "min_predicted_advantage": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "cdaefc18cbb963cc13d97410ae2b20cb7ed9f04bca87929bf1c47abf06c5ebba"
+      },
+      "mitigation_candidate_fees": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30,
+          9
+        ],
+        "sha256": "37754048a52a02e834754f0d387360b76ec0ce00459572918fb682c0bcee5515"
+      },
+      "mitigation_candidate_member_advantage": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30,
+          9,
+          5
+        ],
+        "sha256": "4c4c96fa98433a64c692c73a48e79a48c93e5f0a27835a3018bfbfe87e62a440"
+      },
+      "mitigation_candidate_member_gross_advantage": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30,
+          9,
+          5
+        ],
+        "sha256": "4c4c96fa98433a64c692c73a48e79a48c93e5f0a27835a3018bfbfe87e62a440"
+      },
+      "mitigation_candidate_member_log_growth": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30,
+          9,
+          5
+        ],
+        "sha256": "4c4c96fa98433a64c692c73a48e79a48c93e5f0a27835a3018bfbfe87e62a440"
+      },
+      "mitigation_candidate_member_predicted_next_breach": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30,
+          9,
+          5
+        ],
+        "sha256": "4c4c96fa98433a64c692c73a48e79a48c93e5f0a27835a3018bfbfe87e62a440"
+      },
+      "mitigation_candidate_moved": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30,
+          9
+        ],
+        "sha256": "37754048a52a02e834754f0d387360b76ec0ce00459572918fb682c0bcee5515"
+      },
+      "mitigation_candidate_posttrade": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30,
+          9,
+          3
+        ],
+        "sha256": "cab7fa6a0d7bb651b55b7f55eb6fbf9936ee7365449198e95f5f4045d14eab13"
+      },
+      "mitigation_candidate_proposal": {
+        "dtype": "<i8",
+        "shape": [
+          2,
+          30,
+          9
+        ],
+        "sha256": "234529bba9f975fe94d1d8b4c62715dfd1790c412db974739e8ecda8133cafcf"
+      },
+      "mitigation_candidate_q": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30,
+          9
+        ],
+        "sha256": "37754048a52a02e834754f0d387360b76ec0ce00459572918fb682c0bcee5515"
+      },
+      "mitigation_candidate_shortfall": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30,
+          9
+        ],
+        "sha256": "37754048a52a02e834754f0d387360b76ec0ce00459572918fb682c0bcee5515"
+      },
+      "mitigation_candidate_worst_next_real": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30,
+          9
+        ],
+        "sha256": "37754048a52a02e834754f0d387360b76ec0ce00459572918fb682c0bcee5515"
+      },
+      "mitigation_candidate_worst_support_member": {
+        "dtype": "<i8",
+        "shape": [
+          2,
+          30,
+          9
+        ],
+        "sha256": "234529bba9f975fe94d1d8b4c62715dfd1790c412db974739e8ecda8133cafcf"
+      },
+      "mitigation_evaluated": {
+        "dtype": "|b1",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "5dcc1b5872dd9ff1c234501f1fefda01f664164e1583c3e1bb3dbea47588ab31"
+      },
+      "mitigation_selected_index": {
+        "dtype": "<i8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "bf9b62d4418d862aa0826a28a846948151da66b8042967382ca6bfd6d7d1cdb2"
+      },
+      "mitigation_selected_proposal": {
+        "dtype": "<i8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "bf9b62d4418d862aa0826a28a846948151da66b8042967382ca6bfd6d7d1cdb2"
+      },
+      "mitigation_selected_q": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "274f8fdc333da925ac450c1042758e2d048a3d8309c65ee7d6eb92af8dbf240d"
+      },
+      "mitigation_trade": {
+        "dtype": "|b1",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "5dcc1b5872dd9ff1c234501f1fefda01f664164e1583c3e1bb3dbea47588ab31"
+      },
+      "mitigation_worst_next_real_hold": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "274f8fdc333da925ac450c1042758e2d048a3d8309c65ee7d6eb92af8dbf240d"
+      },
+      "mitigation_worst_next_real_improvement": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "274f8fdc333da925ac450c1042758e2d048a3d8309c65ee7d6eb92af8dbf240d"
+      },
+      "mitigation_worst_next_real_selected": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "274f8fdc333da925ac450c1042758e2d048a3d8309c65ee7d6eb92af8dbf240d"
+      },
+      "moved": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "d674bcc328997de1d4b534b03876c67169482191e244f727781fbc3337c7f562"
+      },
+      "moved_fraction": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "9f7c2e333b950310946ce496e2b128669fab332d091110055ad68ce4d36692e7"
+      },
+      "nominal_wealth": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          31
+        ],
+        "sha256": "e7615a8db0c3119d2e9cb62a782893e719648df97dc502e4b2f3780bbc72c169"
+      },
+      "observed_followup": {
+        "dtype": "<i8",
+        "shape": [
+          2
+        ],
+        "sha256": "5ac6a5945f16500911219129984ba8b387a06f24fe383ce4e81a73294065461b"
+      },
+      "peak_at_trigger": {
+        "dtype": "<f8",
+        "shape": [
+          2
+        ],
+        "sha256": "241808cce19b49683d2308412efef71f1f4c7dcf2627039cba044bf44f6e3533"
+      },
+      "pending_at_decision": {
+        "dtype": "|b1",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "5dcc1b5872dd9ff1c234501f1fefda01f664164e1583c3e1bb3dbea47588ab31"
+      },
+      "posttrade_holdings": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30,
+          3
+        ],
+        "sha256": "271d505d414aeac27b364eb74d4532b3f6a6bed5275a24ae107eaef4e88ff6eb"
+      },
+      "pred_log_growth_hold": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "4b48f21a4b7a02bfbec19ef880a967a02334a3cdcef8ae83de2ef327ba8bc5dd"
+      },
+      "pred_log_growth_selected": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "cdaefc18cbb963cc13d97410ae2b20cb7ed9f04bca87929bf1c47abf06c5ebba"
+      },
+      "pretrade_tv_drift": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "c2d49f6f180ee57ab7bd14d16a53262b8353662a9edf3986b8add7e38a48cd59"
+      },
+      "pretrade_wealth": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "2816719e86959407eb7c68d480400c0d7f95a1e61a7998566ad90dd1507605bb"
+      },
+      "primary_failed_hold_fee": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "274f8fdc333da925ac450c1042758e2d048a3d8309c65ee7d6eb92af8dbf240d"
+      },
+      "primary_failed_hold_posttrade": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30,
+          3
+        ],
+        "sha256": "473fc8c687857fe31e1358bec78efcb514e056bb3242fa62df0219417c8710ea"
+      },
+      "primary_failed_hold_pred_log_growth": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "274f8fdc333da925ac450c1042758e2d048a3d8309c65ee7d6eb92af8dbf240d"
+      },
+      "primary_failed_hold_score": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "274f8fdc333da925ac450c1042758e2d048a3d8309c65ee7d6eb92af8dbf240d"
+      },
+      "primary_failed_hold_shortfall": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "274f8fdc333da925ac450c1042758e2d048a3d8309c65ee7d6eb92af8dbf240d"
+      },
+      "primary_gate_reason": {
+        "dtype": "<U64",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "3a23f891fc10aaa3b49424869c348fd3e504b20fad6c12a9595a15943f7f12d6"
+      },
+      "primary_pred_log_growth_selected": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "cdaefc18cbb963cc13d97410ae2b20cb7ed9f04bca87929bf1c47abf06c5ebba"
+      },
+      "primary_selected_score": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "cdaefc18cbb963cc13d97410ae2b20cb7ed9f04bca87929bf1c47abf06c5ebba"
+      },
+      "real_peak": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          31
+        ],
+        "sha256": "2c37d590a93570021c2da1af2a62393d17559e678e647de4e5db5de10aba9d48"
+      },
+      "real_wealth": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          31
+        ],
+        "sha256": "e7615a8db0c3119d2e9cb62a782893e719648df97dc502e4b2f3780bbc72c169"
+      },
+      "real_wealth_at_trigger": {
+        "dtype": "<f8",
+        "shape": [
+          2
+        ],
+        "sha256": "241808cce19b49683d2308412efef71f1f4c7dcf2627039cba044bf44f6e3533"
+      },
+      "realized_real_gross": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30,
+          3
+        ],
+        "sha256": "cacce830c17950b8218346d0ca8b96ad5d69b4924cc64903b74126881e668cf7"
+      },
+      "recovered": {
+        "dtype": "|b1",
+        "shape": [
+          2
+        ],
+        "sha256": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7"
+      },
+      "recovery_endpoint": {
+        "dtype": "<i8",
+        "shape": [
+          2
+        ],
+        "sha256": "5ac6a5945f16500911219129984ba8b387a06f24fe383ce4e81a73294065461b"
+      },
+      "recovery_time": {
+        "dtype": "<i8",
+        "shape": [
+          2
+        ],
+        "sha256": "5ac6a5945f16500911219129984ba8b387a06f24fe383ce4e81a73294065461b"
+      },
+      "right_censored": {
+        "dtype": "|b1",
+        "shape": [
+          2
+        ],
+        "sha256": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7"
+      },
+      "running_mdd": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          31
+        ],
+        "sha256": "5055eecb8ba150d00d848378e2637d17a0e9c6ccccb9f6ee7f10fdf5e1bb5524"
+      },
+      "selected_index": {
+        "dtype": "<i8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "e061e493ad51401e02e3855547dc5af476066d8f620c6f51e3cb2480ad6994b7"
+      },
+      "selected_lambda": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "12b43cc0149eb57779c2c40f6090d245c2c786af15d587919a129967628cf3f8"
+      },
+      "selected_proposal": {
+        "dtype": "<i8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "9d32becd1a73f1216fde3ab19c333270d82f1d777be357d6770becd5edc2edef"
+      },
+      "selected_score": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "cdaefc18cbb963cc13d97410ae2b20cb7ed9f04bca87929bf1c47abf06c5ebba"
+      },
+      "support_feasible": {
+        "dtype": "|b1",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "5e4084eff2f37d637e6502bf9472b0029755bbd130ebb52c8c33bb8148c31fd2"
+      },
+      "target_execution": {
+        "dtype": "|b1",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "28b9dab45a70cccc489b9046fae0138fc9a7b4d5261ef3cd6164691b2702ae72"
+      },
+      "targets": {
+        "dtype": "<f8",
+        "shape": [
+          3
+        ],
+        "sha256": "c57f0ccd00ea3b4f8545acca7f5b57b6890e9ea2be92b3a9a0e03ab7e9b6a906"
+      },
+      "terminal_excess": {
+        "dtype": "<f8",
+        "shape": [
+          2
+        ],
+        "sha256": "374708fff7719dd5979ec875d56cd2286f6d3cf7ec317a3b25632aab28ec37bb"
+      },
+      "trades": {
+        "dtype": "|b1",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "28b9dab45a70cccc489b9046fae0138fc9a7b4d5261ef3cd6164691b2702ae72"
+      },
+      "training_previous_state": {
+        "dtype": "<f8",
+        "shape": [
+          30,
+          3,
+          4
+        ],
+        "sha256": "b60afa56fbff413bdc7fac264a43a2bbd367d671c56bb8d68d9c27a89265222d"
+      },
+      "training_real_gross": {
+        "dtype": "<f8",
+        "shape": [
+          30,
+          3,
+          3
+        ],
+        "sha256": "3d7b0c616d264c0b2f1dcdc6f5843d36b6213fdab1faa239d116660841ecff5e"
+      },
+      "triggered": {
+        "dtype": "|b1",
+        "shape": [
+          2
+        ],
+        "sha256": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7"
+      },
+      "uniform_predicted_advantage": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "cdaefc18cbb963cc13d97410ae2b20cb7ed9f04bca87929bf1c47abf06c5ebba"
+      },
+      "was_guard_pending_input": {
+        "dtype": "|b1",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "5dcc1b5872dd9ff1c234501f1fefda01f664164e1583c3e1bb3dbea47588ab31"
+      },
+      "was_pending_input": {
+        "dtype": "|b1",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "5dcc1b5872dd9ff1c234501f1fefda01f664164e1583c3e1bb3dbea47588ab31"
+      },
+      "weights": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          31,
+          3
+        ],
+        "sha256": "a6ae7de576d0820883828865d439e2516e2e6fd61c7c88b27c99347927f58f1d"
+      },
+      "worst_real_shortfall_hold": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "4b48f21a4b7a02bfbec19ef880a967a02334a3cdcef8ae83de2ef327ba8bc5dd"
+      },
+      "worst_real_shortfall_improvement": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "4b48f21a4b7a02bfbec19ef880a967a02334a3cdcef8ae83de2ef327ba8bc5dd"
+      },
+      "worst_real_shortfall_selected": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "4b48f21a4b7a02bfbec19ef880a967a02334a3cdcef8ae83de2ef327ba8bc5dd"
+      }
+    },
+    "same_target_B": {
+      "actions": {
+        "dtype": "<U7",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "bd1b793072fea1e4e541d11c0915b57a54715a36fa6c8a78bfc99e220bdf357d"
+      },
+      "added_severity": {
+        "dtype": "<f8",
+        "shape": [
+          2
+        ],
+        "sha256": "241808cce19b49683d2308412efef71f1f4c7dcf2627039cba044bf44f6e3533"
+      },
+      "available_followup": {
+        "dtype": "<i8",
+        "shape": [
+          2
+        ],
+        "sha256": "5ac6a5945f16500911219129984ba8b387a06f24fe383ce4e81a73294065461b"
+      },
+      "cpi": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          31
+        ],
+        "sha256": "22bd61d4283af777886bd8253d1638cdd76ae83aa383ce4e57b11d577c78db60"
+      },
+      "current_drawdown": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          31
+        ],
+        "sha256": "5055eecb8ba150d00d848378e2637d17a0e9c6ccccb9f6ee7f10fdf5e1bb5524"
+      },
+      "drawdown_at_trigger": {
+        "dtype": "<f8",
+        "shape": [
+          2
+        ],
+        "sha256": "241808cce19b49683d2308412efef71f1f4c7dcf2627039cba044bf44f6e3533"
+      },
+      "end_weights": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30,
+          3
+        ],
+        "sha256": "49cbe6dddb6dae98b588d98fc95d035595450d308c0b19ac99face097a8ef09d"
+      },
+      "end_year_tv_drift": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "4b48f21a4b7a02bfbec19ef880a967a02334a3cdcef8ae83de2ef327ba8bc5dd"
+      },
+      "ever_breached": {
+        "dtype": "|b1",
+        "shape": [
+          2,
+          31
+        ],
+        "sha256": "1ebb2bdc5ce08e6e90b3ede72a8ef315e3e1bced3a3c458f69b6d7eeff9e4f3a"
+      },
+      "fee_fraction": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "ce29697a82f7fe8192ec973fc5aca221cfa04aab8f79d620483265c0b9e7815d"
+      },
+      "fees": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "36d93bf8d784abf47edba1b0c9567ebd26b75aedffa057569117a6f93557527b"
+      },
+      "first_crossing": {
+        "dtype": "<i8",
+        "shape": [
+          2
+        ],
+        "sha256": "5ac6a5945f16500911219129984ba8b387a06f24fe383ce4e81a73294065461b"
+      },
+      "holdings": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          31,
+          3
+        ],
+        "sha256": "a6652e3718bb8ec64ec4b444af69fb81b958eea3587955e792b4eb35718a6d13"
+      },
+      "moved": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "d674bcc328997de1d4b534b03876c67169482191e244f727781fbc3337c7f562"
+      },
+      "moved_fraction": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "9f7c2e333b950310946ce496e2b128669fab332d091110055ad68ce4d36692e7"
+      },
+      "nominal_wealth": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          31
+        ],
+        "sha256": "e7615a8db0c3119d2e9cb62a782893e719648df97dc502e4b2f3780bbc72c169"
+      },
+      "observed_followup": {
+        "dtype": "<i8",
+        "shape": [
+          2
+        ],
+        "sha256": "5ac6a5945f16500911219129984ba8b387a06f24fe383ce4e81a73294065461b"
+      },
+      "peak_at_trigger": {
+        "dtype": "<f8",
+        "shape": [
+          2
+        ],
+        "sha256": "241808cce19b49683d2308412efef71f1f4c7dcf2627039cba044bf44f6e3533"
+      },
+      "pending_at_decision": {
+        "dtype": "|b1",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "5dcc1b5872dd9ff1c234501f1fefda01f664164e1583c3e1bb3dbea47588ab31"
+      },
+      "posttrade_holdings": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30,
+          3
+        ],
+        "sha256": "271d505d414aeac27b364eb74d4532b3f6a6bed5275a24ae107eaef4e88ff6eb"
+      },
+      "pretrade_tv_drift": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "c2d49f6f180ee57ab7bd14d16a53262b8353662a9edf3986b8add7e38a48cd59"
+      },
+      "pretrade_wealth": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "2816719e86959407eb7c68d480400c0d7f95a1e61a7998566ad90dd1507605bb"
+      },
+      "real_peak": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          31
+        ],
+        "sha256": "2c37d590a93570021c2da1af2a62393d17559e678e647de4e5db5de10aba9d48"
+      },
+      "real_wealth": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          31
+        ],
+        "sha256": "e7615a8db0c3119d2e9cb62a782893e719648df97dc502e4b2f3780bbc72c169"
+      },
+      "real_wealth_at_trigger": {
+        "dtype": "<f8",
+        "shape": [
+          2
+        ],
+        "sha256": "241808cce19b49683d2308412efef71f1f4c7dcf2627039cba044bf44f6e3533"
+      },
+      "recovered": {
+        "dtype": "|b1",
+        "shape": [
+          2
+        ],
+        "sha256": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7"
+      },
+      "recovery_endpoint": {
+        "dtype": "<i8",
+        "shape": [
+          2
+        ],
+        "sha256": "5ac6a5945f16500911219129984ba8b387a06f24fe383ce4e81a73294065461b"
+      },
+      "recovery_time": {
+        "dtype": "<i8",
+        "shape": [
+          2
+        ],
+        "sha256": "5ac6a5945f16500911219129984ba8b387a06f24fe383ce4e81a73294065461b"
+      },
+      "right_censored": {
+        "dtype": "|b1",
+        "shape": [
+          2
+        ],
+        "sha256": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7"
+      },
+      "running_mdd": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          31
+        ],
+        "sha256": "5055eecb8ba150d00d848378e2637d17a0e9c6ccccb9f6ee7f10fdf5e1bb5524"
+      },
+      "target_execution": {
+        "dtype": "|b1",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "5e4084eff2f37d637e6502bf9472b0029755bbd130ebb52c8c33bb8148c31fd2"
+      },
+      "terminal_excess": {
+        "dtype": "<f8",
+        "shape": [
+          2
+        ],
+        "sha256": "374708fff7719dd5979ec875d56cd2286f6d3cf7ec317a3b25632aab28ec37bb"
+      },
+      "trades": {
+        "dtype": "|b1",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "28b9dab45a70cccc489b9046fae0138fc9a7b4d5261ef3cd6164691b2702ae72"
+      },
+      "triggered": {
+        "dtype": "|b1",
+        "shape": [
+          2
+        ],
+        "sha256": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7"
+      },
+      "weights": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          31,
+          3
+        ],
+        "sha256": "a6ae7de576d0820883828865d439e2516e2e6fd61c7c88b27c99347927f58f1d"
+      }
+    },
+    "same_target_annual": {
+      "actions": {
+        "dtype": "<U7",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "bd1b793072fea1e4e541d11c0915b57a54715a36fa6c8a78bfc99e220bdf357d"
+      },
+      "added_severity": {
+        "dtype": "<f8",
+        "shape": [
+          2
+        ],
+        "sha256": "241808cce19b49683d2308412efef71f1f4c7dcf2627039cba044bf44f6e3533"
+      },
+      "available_followup": {
+        "dtype": "<i8",
+        "shape": [
+          2
+        ],
+        "sha256": "5ac6a5945f16500911219129984ba8b387a06f24fe383ce4e81a73294065461b"
+      },
+      "cpi": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          31
+        ],
+        "sha256": "22bd61d4283af777886bd8253d1638cdd76ae83aa383ce4e57b11d577c78db60"
+      },
+      "current_drawdown": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          31
+        ],
+        "sha256": "5055eecb8ba150d00d848378e2637d17a0e9c6ccccb9f6ee7f10fdf5e1bb5524"
+      },
+      "drawdown_at_trigger": {
+        "dtype": "<f8",
+        "shape": [
+          2
+        ],
+        "sha256": "241808cce19b49683d2308412efef71f1f4c7dcf2627039cba044bf44f6e3533"
+      },
+      "end_weights": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30,
+          3
+        ],
+        "sha256": "49cbe6dddb6dae98b588d98fc95d035595450d308c0b19ac99face097a8ef09d"
+      },
+      "end_year_tv_drift": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "4b48f21a4b7a02bfbec19ef880a967a02334a3cdcef8ae83de2ef327ba8bc5dd"
+      },
+      "ever_breached": {
+        "dtype": "|b1",
+        "shape": [
+          2,
+          31
+        ],
+        "sha256": "1ebb2bdc5ce08e6e90b3ede72a8ef315e3e1bced3a3c458f69b6d7eeff9e4f3a"
+      },
+      "fee_fraction": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "ce29697a82f7fe8192ec973fc5aca221cfa04aab8f79d620483265c0b9e7815d"
+      },
+      "fees": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "36d93bf8d784abf47edba1b0c9567ebd26b75aedffa057569117a6f93557527b"
+      },
+      "first_crossing": {
+        "dtype": "<i8",
+        "shape": [
+          2
+        ],
+        "sha256": "5ac6a5945f16500911219129984ba8b387a06f24fe383ce4e81a73294065461b"
+      },
+      "holdings": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          31,
+          3
+        ],
+        "sha256": "a6652e3718bb8ec64ec4b444af69fb81b958eea3587955e792b4eb35718a6d13"
+      },
+      "moved": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "d674bcc328997de1d4b534b03876c67169482191e244f727781fbc3337c7f562"
+      },
+      "moved_fraction": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "9f7c2e333b950310946ce496e2b128669fab332d091110055ad68ce4d36692e7"
+      },
+      "nominal_wealth": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          31
+        ],
+        "sha256": "e7615a8db0c3119d2e9cb62a782893e719648df97dc502e4b2f3780bbc72c169"
+      },
+      "observed_followup": {
+        "dtype": "<i8",
+        "shape": [
+          2
+        ],
+        "sha256": "5ac6a5945f16500911219129984ba8b387a06f24fe383ce4e81a73294065461b"
+      },
+      "peak_at_trigger": {
+        "dtype": "<f8",
+        "shape": [
+          2
+        ],
+        "sha256": "241808cce19b49683d2308412efef71f1f4c7dcf2627039cba044bf44f6e3533"
+      },
+      "pending_at_decision": {
+        "dtype": "|b1",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "5dcc1b5872dd9ff1c234501f1fefda01f664164e1583c3e1bb3dbea47588ab31"
+      },
+      "posttrade_holdings": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30,
+          3
+        ],
+        "sha256": "271d505d414aeac27b364eb74d4532b3f6a6bed5275a24ae107eaef4e88ff6eb"
+      },
+      "pretrade_tv_drift": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "c2d49f6f180ee57ab7bd14d16a53262b8353662a9edf3986b8add7e38a48cd59"
+      },
+      "pretrade_wealth": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "2816719e86959407eb7c68d480400c0d7f95a1e61a7998566ad90dd1507605bb"
+      },
+      "real_peak": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          31
+        ],
+        "sha256": "2c37d590a93570021c2da1af2a62393d17559e678e647de4e5db5de10aba9d48"
+      },
+      "real_wealth": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          31
+        ],
+        "sha256": "e7615a8db0c3119d2e9cb62a782893e719648df97dc502e4b2f3780bbc72c169"
+      },
+      "real_wealth_at_trigger": {
+        "dtype": "<f8",
+        "shape": [
+          2
+        ],
+        "sha256": "241808cce19b49683d2308412efef71f1f4c7dcf2627039cba044bf44f6e3533"
+      },
+      "recovered": {
+        "dtype": "|b1",
+        "shape": [
+          2
+        ],
+        "sha256": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7"
+      },
+      "recovery_endpoint": {
+        "dtype": "<i8",
+        "shape": [
+          2
+        ],
+        "sha256": "5ac6a5945f16500911219129984ba8b387a06f24fe383ce4e81a73294065461b"
+      },
+      "recovery_time": {
+        "dtype": "<i8",
+        "shape": [
+          2
+        ],
+        "sha256": "5ac6a5945f16500911219129984ba8b387a06f24fe383ce4e81a73294065461b"
+      },
+      "right_censored": {
+        "dtype": "|b1",
+        "shape": [
+          2
+        ],
+        "sha256": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7"
+      },
+      "running_mdd": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          31
+        ],
+        "sha256": "5055eecb8ba150d00d848378e2637d17a0e9c6ccccb9f6ee7f10fdf5e1bb5524"
+      },
+      "target_execution": {
+        "dtype": "|b1",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "5e4084eff2f37d637e6502bf9472b0029755bbd130ebb52c8c33bb8148c31fd2"
+      },
+      "terminal_excess": {
+        "dtype": "<f8",
+        "shape": [
+          2
+        ],
+        "sha256": "374708fff7719dd5979ec875d56cd2286f6d3cf7ec317a3b25632aab28ec37bb"
+      },
+      "trades": {
+        "dtype": "|b1",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "28b9dab45a70cccc489b9046fae0138fc9a7b4d5261ef3cd6164691b2702ae72"
+      },
+      "triggered": {
+        "dtype": "|b1",
+        "shape": [
+          2
+        ],
+        "sha256": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7"
+      },
+      "weights": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          31,
+          3
+        ],
+        "sha256": "a6ae7de576d0820883828865d439e2516e2e6fd61c7c88b27c99347927f58f1d"
+      }
+    },
+    "exact_thirds_annual": {
+      "actions": {
+        "dtype": "<U7",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "bd1b793072fea1e4e541d11c0915b57a54715a36fa6c8a78bfc99e220bdf357d"
+      },
+      "added_severity": {
+        "dtype": "<f8",
+        "shape": [
+          2
+        ],
+        "sha256": "241808cce19b49683d2308412efef71f1f4c7dcf2627039cba044bf44f6e3533"
+      },
+      "available_followup": {
+        "dtype": "<i8",
+        "shape": [
+          2
+        ],
+        "sha256": "5ac6a5945f16500911219129984ba8b387a06f24fe383ce4e81a73294065461b"
+      },
+      "cpi": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          31
+        ],
+        "sha256": "22bd61d4283af777886bd8253d1638cdd76ae83aa383ce4e57b11d577c78db60"
+      },
+      "current_drawdown": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          31
+        ],
+        "sha256": "792f29407a619f79e3080b9570aeda29e86be7ebf89983737fc1d2b8cd25d1b9"
+      },
+      "drawdown_at_trigger": {
+        "dtype": "<f8",
+        "shape": [
+          2
+        ],
+        "sha256": "241808cce19b49683d2308412efef71f1f4c7dcf2627039cba044bf44f6e3533"
+      },
+      "end_weights": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30,
+          3
+        ],
+        "sha256": "a9bee5d3c40b89806495288b98416d5e8a611f838f4752cd8837963c554b244d"
+      },
+      "end_year_tv_drift": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "4b48f21a4b7a02bfbec19ef880a967a02334a3cdcef8ae83de2ef327ba8bc5dd"
+      },
+      "ever_breached": {
+        "dtype": "|b1",
+        "shape": [
+          2,
+          31
+        ],
+        "sha256": "1ebb2bdc5ce08e6e90b3ede72a8ef315e3e1bced3a3c458f69b6d7eeff9e4f3a"
+      },
+      "fee_fraction": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "5ba3edfa7920cd41603ac5b242a393d8079513d9065dd83196e8ee7dfea3d5fd"
+      },
+      "fees": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "fc25d13f4d451e28dacc56a46ddf8d3fa4e266b5038d431e6134f359bbb554c7"
+      },
+      "first_crossing": {
+        "dtype": "<i8",
+        "shape": [
+          2
+        ],
+        "sha256": "5ac6a5945f16500911219129984ba8b387a06f24fe383ce4e81a73294065461b"
+      },
+      "holdings": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          31,
+          3
+        ],
+        "sha256": "2a1e590039f7f529fef48f8b78807f68b90a3b642d35b675973ef4a5420f9fa4"
+      },
+      "moved": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "1595d5e49225f9c846d856ccb50588a2d5721102c886ddd4ed97d829a4ee808d"
+      },
+      "moved_fraction": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "05469e347e4c22e5c00b4560f6ed2bf7f069bbb6f78ab4d830178ec72a57aab3"
+      },
+      "nominal_wealth": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          31
+        ],
+        "sha256": "b30ecb737489a5e981381fa7aeea915c367445acce665f96cbc4db7fa385a141"
+      },
+      "observed_followup": {
+        "dtype": "<i8",
+        "shape": [
+          2
+        ],
+        "sha256": "5ac6a5945f16500911219129984ba8b387a06f24fe383ce4e81a73294065461b"
+      },
+      "peak_at_trigger": {
+        "dtype": "<f8",
+        "shape": [
+          2
+        ],
+        "sha256": "241808cce19b49683d2308412efef71f1f4c7dcf2627039cba044bf44f6e3533"
+      },
+      "pending_at_decision": {
+        "dtype": "|b1",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "5dcc1b5872dd9ff1c234501f1fefda01f664164e1583c3e1bb3dbea47588ab31"
+      },
+      "posttrade_holdings": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30,
+          3
+        ],
+        "sha256": "00bc0e38ab13a779b6469f474afca1578d948f5ae30ede4245779eca47eb22a1"
+      },
+      "pretrade_tv_drift": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "a6aedfd73f91bbb217d60befb839911f462e6888a1955683a27024cb0ef46d8b"
+      },
+      "pretrade_wealth": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "b7aef0419331692ca9e2b985374100a5b86e7ebed9491389da4ee8bc29782178"
+      },
+      "real_peak": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          31
+        ],
+        "sha256": "2c37d590a93570021c2da1af2a62393d17559e678e647de4e5db5de10aba9d48"
+      },
+      "real_wealth": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          31
+        ],
+        "sha256": "b30ecb737489a5e981381fa7aeea915c367445acce665f96cbc4db7fa385a141"
+      },
+      "real_wealth_at_trigger": {
+        "dtype": "<f8",
+        "shape": [
+          2
+        ],
+        "sha256": "241808cce19b49683d2308412efef71f1f4c7dcf2627039cba044bf44f6e3533"
+      },
+      "recovered": {
+        "dtype": "|b1",
+        "shape": [
+          2
+        ],
+        "sha256": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7"
+      },
+      "recovery_endpoint": {
+        "dtype": "<i8",
+        "shape": [
+          2
+        ],
+        "sha256": "5ac6a5945f16500911219129984ba8b387a06f24fe383ce4e81a73294065461b"
+      },
+      "recovery_time": {
+        "dtype": "<i8",
+        "shape": [
+          2
+        ],
+        "sha256": "5ac6a5945f16500911219129984ba8b387a06f24fe383ce4e81a73294065461b"
+      },
+      "right_censored": {
+        "dtype": "|b1",
+        "shape": [
+          2
+        ],
+        "sha256": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7"
+      },
+      "running_mdd": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          31
+        ],
+        "sha256": "792f29407a619f79e3080b9570aeda29e86be7ebf89983737fc1d2b8cd25d1b9"
+      },
+      "target_execution": {
+        "dtype": "|b1",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "5e4084eff2f37d637e6502bf9472b0029755bbd130ebb52c8c33bb8148c31fd2"
+      },
+      "terminal_excess": {
+        "dtype": "<f8",
+        "shape": [
+          2
+        ],
+        "sha256": "374708fff7719dd5979ec875d56cd2286f6d3cf7ec317a3b25632aab28ec37bb"
+      },
+      "trades": {
+        "dtype": "|b1",
+        "shape": [
+          2,
+          30
+        ],
+        "sha256": "28b9dab45a70cccc489b9046fae0138fc9a7b4d5261ef3cd6164691b2702ae72"
+      },
+      "triggered": {
+        "dtype": "|b1",
+        "shape": [
+          2
+        ],
+        "sha256": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7"
+      },
+      "weights": {
+        "dtype": "<f8",
+        "shape": [
+          2,
+          31,
+          3
+        ],
+        "sha256": "c86f5702c4920f366df51cbaaa1cfbb16d41329882f15c7313fced08efebaf6b"
+      }
+    }
+  },
+  "summaries": {
+    "mitigation_main": {
+      "original_n": 2,
+      "financial_n": 2,
+      "initial_noninvested_n": 0,
+      "not_balanced_n": 0,
+      "q1_review_n": 0,
+      "initial_execution_review_n": 0,
+      "initial_coverage": 1.0,
+      "breach_count": 0,
+      "breach_fraction": 0.0,
+      "mean_log_growth": -4.16406466810848e-05,
+      "median_cagr": -4.163977972139042e-05,
+      "p10_cagr": -4.163977972139042e-05,
+      "mean_mdd": 0.001248439450686618,
+      "median_mdd": 0.001248439450686618,
+      "p90_mdd": 0.001248439450686618,
+      "cvar90_mdd": 0.001248439450686618,
+      "mean_volatility": 0.00022793281627347787,
+      "mean_nominal_fees": 0.12484394506866417,
+      "mean_trade_fraction": 0.03333333333333333,
+      "support_review_n": 0,
+      "mean_automatic_fraction": 1.0,
+      "mean_protection_trade_fraction": 0.0,
+      "mean_mitigation_trade_fraction": 0.0,
+      "mean_mitigation_fees": 0.0
+    },
+    "same_target_B": {
+      "original_n": 2,
+      "financial_n": 2,
+      "initial_noninvested_n": 0,
+      "not_balanced_n": 0,
+      "q1_review_n": 0,
+      "initial_execution_review_n": 0,
+      "initial_coverage": 1.0,
+      "breach_count": 0,
+      "breach_fraction": 0.0,
+      "mean_log_growth": -4.16406466810848e-05,
+      "median_cagr": -4.163977972139042e-05,
+      "p10_cagr": -4.163977972139042e-05,
+      "mean_mdd": 0.001248439450686618,
+      "median_mdd": 0.001248439450686618,
+      "p90_mdd": 0.001248439450686618,
+      "cvar90_mdd": 0.001248439450686618,
+      "mean_volatility": 0.00022793281627347787,
+      "mean_nominal_fees": 0.12484394506866417,
+      "mean_trade_fraction": 0.03333333333333333,
+      "support_review_n": 0,
+      "mean_automatic_fraction": 1.0,
+      "mean_protection_trade_fraction": 0.0,
+      "mean_mitigation_trade_fraction": 0.0,
+      "mean_mitigation_fees": 0.0
+    },
+    "same_target_annual": {
+      "original_n": 2,
+      "financial_n": 2,
+      "initial_noninvested_n": 0,
+      "not_balanced_n": 0,
+      "q1_review_n": 0,
+      "initial_execution_review_n": 0,
+      "initial_coverage": 1.0,
+      "breach_count": 0,
+      "breach_fraction": 0.0,
+      "mean_log_growth": -4.16406466810848e-05,
+      "median_cagr": -4.163977972139042e-05,
+      "p10_cagr": -4.163977972139042e-05,
+      "mean_mdd": 0.001248439450686618,
+      "median_mdd": 0.001248439450686618,
+      "p90_mdd": 0.001248439450686618,
+      "cvar90_mdd": 0.001248439450686618,
+      "mean_volatility": 0.00022793281627347787,
+      "mean_nominal_fees": 0.12484394506866417,
+      "mean_trade_fraction": 0.03333333333333333,
+      "support_review_n": 0,
+      "mean_automatic_fraction": 1.0,
+      "mean_protection_trade_fraction": 0.0,
+      "mean_mitigation_trade_fraction": 0.0,
+      "mean_mitigation_fees": 0.0
+    },
+    "exact_thirds_annual": {
+      "original_n": 2,
+      "financial_n": 2,
+      "initial_noninvested_n": 0,
+      "not_balanced_n": 0,
+      "q1_review_n": 0,
+      "initial_execution_review_n": 0,
+      "initial_coverage": 1.0,
+      "breach_count": 0,
+      "breach_fraction": 0.0,
+      "mean_log_growth": -5.5509310635374716e-05,
+      "median_cagr": -5.550777002209737e-05,
+      "p10_cagr": -5.550777002209737e-05,
+      "mean_mdd": 0.001663893510815342,
+      "median_mdd": 0.001663893510815342,
+      "p90_mdd": 0.001663893510815342,
+      "cvar90_mdd": 0.001663893510815342,
+      "mean_volatility": 0.0003037840030533365,
+      "mean_nominal_fees": 0.16638935108153077,
+      "mean_trade_fraction": 0.03333333333333333,
+      "support_review_n": 0,
+      "mean_automatic_fraction": 1.0,
+      "mean_protection_trade_fraction": 0.0,
+      "mean_mitigation_trade_fraction": 0.0,
+      "mean_mitigation_fees": 0.0
+    }
+  }
+}

@@ -1,40 +1,48 @@
 {
   "version": "technical-completion-checkpoint-source-freeze-v1",
-  "execution_ready": false,
-  "plan_sha256": "f892efa02971350d9e2067b6ab21f0eca48ef1b01be2f930b9acdd2947299fcc",
+  "execution_ready": true,
+  "plan_sha256": "d27675fa36925032729faf7474fa271fb5d08dd2d34a446271fb9ced3437e9a2",
   "source_sha256": {
     "scripts/verify_technical_completion_checkpoint.py": "f650d6c6373ef9798756b0f633ff6a1115cf903f1e40d53298db9bfcc29c56ec",
     "tests/test_technical_completion_checkpoint.py": "859e04cf6bee801830204be44eb133ee49a453842c9b1fb9d4890edf93892505"
   },
   "input_sha256": {
+    "README.md": "d5b48bb2a263196d0914eb3987f7336bf1713e36a67468aa5f518eabc49f0fcd",
+    "SUBMISSION_README.md": "6a11099f8ed4cf33cea18be2c108960141a44280771980875b50325f624c3b25",
+    "dist/Team87_Lebmar_Technical_Source_v1.zip": "691b4623dfeb2089de5ced11821f7f38092a30a47c5b7d56f031d85de5e4e780",
+    "docs/compact_submission_build_release.json": "4f55feb9fbf0005fef8231397f908c4e5da5de836a643bebf247d18309f0a3d3",
+    "docs/compact_submission_independent_source_review.json": "b89aea65918417f3975d24ac1b2018c00901a4221904361042af9409de94569a",
+    "docs/compact_submission_independent_source_review_path_fix_addendum.json": "2064b93890bc1d467544706dccbf84ade3166764a0bd2c3fedc1be1ca2a2bb77",
+    "docs/mitigation_customer_explanation_contract.json": "64bd3e148a9f4d7207f6e7aac95c9e2ca23adaef86112f9368b59585d84478a9",
+    "docs/mitigation_final_audit_supplemental_validation.json": "1df5b1e266404f6431f3b9be0c379bd13df114939f755030cb205e70d99b9bdd",
     "docs/mitigation_final_precommit_incident.json": "09b827d8267a7db44de7ac6b356d2b9e3d412f4e82d0e703d0fe3ed2672c0d57",
     "docs/mitigation_locked_final_evaluation_protocol.json": "f9a5719475ab222e111b8874e3b84f20c89a406254d557f97a33dbf7e5e4b76a",
     "docs/mitigation_locked_final_interpretation_timing_addendum.json": "daa6fa86d0d07d5c7d4dab49601ca520c69cbca857df2ddc49df6cf899958361",
     "docs/mitigation_main_model_registry.json": "49059e6e2ef5138a1d8edd284a3353d5c412d2f54f518010c3ddfdaa561c6603",
+    "docs/mitigation_nominal_risk_resolution_note.json": "0f9a8ee52b06a01ff66daad27744709cb724bb46c047abf486eb3ef8fbb9a19a",
+    "docs/mitigation_technical_completion_judgment.json": "d18978dccceaf3bdfcb1e20983e07ab392a4277e29b670a1f788dc6dc369f8a9",
     "notebooks/mitigation_locked_final_2026_10_19_assets/build_manifest.json": "a5e2081773c5acf82bc391704c69e28a3fc13d1622c0e5d29c83689e1bf8e48d",
     "notebooks/technical_rebuild_2026_10_19_assets/build_manifest.json": "9927d60c42ee50e38851b1f2ec2914a6f23e7f74b290d8b99b23f3194d87443f",
     "notebooks/technical_rebuild_2026_10_19_assets/source_manifest.json": "937f8e85529278c454ea107526fdd5dd4dbb59ed5975dd2ec4daa8c112b1c6e2",
-    "notebooks/technical_rebuild_2026_10_19_assets/visual_qa.json": "25965c08d0d2d331f59248e68adc81a3f243a2980e83d65f7758a0cc63b05c2a",
+    "notebooks/technical_rebuild_2026_10_19_assets/visual_qa.json": "d08f442c6b252d3cff3a343131824d3d0359d54439f7601ec7f21b46d3d4bf3c",
+    "results/compact_submission_activation_attempt_v1/attempt.json": "254837db1b191c69a45d90d9bfb25506c5761b7e525010f901f6149cf517037a",
+    "results/compact_submission_build_v1/manifest.json": "71169610d0b0984a3db03edb0c8aff4c22c42370a4fe01223f141b19297359bb",
+    "results/compact_submission_development_replay_v1/manifest.json": "e575f3d9a8d31ba95fe69f0f1da8e9807758ccbf77b74381120316aaf57040a6",
+    "results/compact_submission_synthetic_smoke_v1/manifest.json": "b48f2d7e32c73034437c690e4f24da4e6039d173227dd6ab9f9672831a3b5379",
     "results/final_locked_checkpoint_v1/verification.json": "4a51f40d61ab07e20dbf2707f4fc8cb2f4299310c027d501d6316d650102f9fd",
     "results/mitigation_locked_final_evaluation_v1/independent_audit.json": "7929ea36e23c9b357a568b8d0f06cd7f90024a61aae0222c11c532cc1bcf65c8",
     "results/mitigation_locked_final_evaluation_v1/manifest.json": "7401ad59279c694fc4077ab42af1af42e707b258156bca5a7ec110467e407f07",
     "results/mitigation_locked_final_reproduction_v1/manifest.json": "109e4c8e1a18dfebe9e0da282faea15f664f36d577fafdf7371dda288a1ce0a1",
+    "results/technical_completion_browser_qa_v1/development_html_qa.json": "d9c654fede827bed98c4aab8ec298f08d94c4a495118f8838f36b2f9e0eb0f21",
+    "results/technical_completion_browser_qa_v1/final_html_qa.json": "173a04610e27bec31d4aed5d6c059247f1d2fc40f53aecd67ad849eae193c1a5",
+    "results/technical_completion_test_run_v1/unit_tests.txt": "82073c094a62f14cbbc5e2d1c753d3269c9edaf787be48dabfb6d3735b75184d",
     "results/technical_rebuild_reproduction_v1/manifest.json": "ead39b294097cadd2f1a1c917f7ee3c55fd4fac863fa4e16ea894dca4a2c51cc",
     "scripts/build_mitigation_final_companion.py": "dc24f7c12ef115d82cfe7fb9baf4e238d9848a268669e9811b1937c514fe8c71",
-    "scripts/build_technical_rebuild_companion.py": "90d8ee14a8585411bbcde9b0eabf3ba3aca8877c159a964c63072141cef6ced9"
+    "scripts/build_technical_rebuild_companion.py": "90d8ee14a8585411bbcde9b0eabf3ba3aca8877c159a964c63072141cef6ced9",
+    "tests/test_mitigation_final_audit_integration_supplement.py": "4a935df391eaa1f0e27513a5af32c734c6d971cff562618b92dede8755f2e74a"
   },
-  "pending_required_anchor_paths": [
-    "dist/Team87_Lebmar_Technical_Source_v1.zip",
-    "results/compact_submission_build_v1/manifest.json",
-    "results/compact_submission_development_replay_v1/manifest.json",
-    "results/technical_completion_browser_qa_v1/development_html_qa.json",
-    "results/technical_completion_browser_qa_v1/final_html_qa.json",
-    "tmp/technical_completion_tests.log"
-  ],
-  "pending_actions": [
-    "Root selects archived complete unit test log path and exact count in plan.",
-    "Root completes both current-browser QA receipts, compact build and unpacked replay.",
-    "Root refreshes input anchors and plan SHA, freezes source unchanged and explicitly enables both readiness flags before actual metadata checkpoint."
-  ],
-  "actual_checkpoint_executed": false
+  "pending_required_anchor_paths": [],
+  "pending_actions": [],
+  "actual_checkpoint_executed": false,
+  "readiness": "Root verified all receipt, dual browser,1419test log, compact ZIP and fresh unpacked development reproduction anchors complete; metadata-only verification authorized."
 }

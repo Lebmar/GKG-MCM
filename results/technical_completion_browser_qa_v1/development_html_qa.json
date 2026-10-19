@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "completed_utc": "2026-10-19T08:09:38.483219+00:00",
+  "html_path": "notebooks/technical_rebuild_2026_10_19.executed.html",
+  "html_sha256": "a3065d1330210251620e339aa31ba0333759a32ba093399b8d07dbc3c7c68e1a",
+  "wide_view_passed": true,
+  "narrow_view_passed": true,
+  "wide_actual_viewport_width": 1440,
+  "narrow_actual_viewport_width": 500,
+  "narrow_requested_viewport_width": 430,
+  "actual_430px_tested": false,
+  "screenshot_sha256": {
+    "results/technical_completion_browser_qa_v1/development_wide.png": "d83bd1e4c8de8eaa1a1ba64b427d9fdfc85073c58a9bc5a9be4d5e42b52eee82",
+    "results/technical_completion_browser_qa_v1/development_narrow.png": "ec014c61cdd6beaeecdd522499aa42ac55d642f26670f63530f4aac6d745e67b"
+  },
+  "actual_view_image": true,
+  "browser": "Local Google Chrome headless CLI, separate temporary profiles; CUA browser inventory unavailable.",
+  "browser_view_scope": "Actual first1800px viewport screenshots inspected. All quantitative PNG figures were separately inspected at standalone resolution. No claim of screenshot inspection of every lower-page text/table row or actual430px viewport.",
+  "dom_probe_note": "On this host a requested430px CLI screenshot captured only430px of a measured500px layout. A temporary development-page DOM probe measured innerWidth=clientWidth=scrollWidth=500 and no overflowing elements. Final narrow screenshots were therefore deliberately captured at500px. No false430px pass claim.",
+  "presentation": "Readable heading/prose; wide plots and responsive narrow layout checked. Narrow multi-column tables retain local horizontal scroll; publication images are available separately."
+}

@@ -1,6 +1,6 @@
 {
   "version": "technical-completion-metadata-checkpoint-v1",
-  "execution_ready": false,
+  "execution_ready": true,
   "scope": "Metadata/byte-only additive completion checkpoint; no raw market parse, model run, tests, notebook execution or replay rerun.",
   "old_checkpoint": {
     "path": "results/final_locked_checkpoint_v1/verification.json",
@@ -48,7 +48,10 @@
     "docs/compact_submission_independent_source_review_path_fix_addendum.json",
     "docs/mitigation_final_audit_supplemental_validation.json",
     "tests/test_mitigation_final_audit_integration_supplement.py",
-    "SUBMISSION_README.md"
+    "SUBMISSION_README.md",
+    "docs/compact_submission_build_release.json",
+    "results/compact_submission_activation_attempt_v1/attempt.json",
+    "results/compact_submission_synthetic_smoke_v1/manifest.json"
   ],
   "gates": [
     "Root finalizes full-suite saved log and exact parsed count; checkpoint does not run tests.",
