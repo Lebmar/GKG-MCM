@@ -1,0 +1,104 @@
+{
+  "version": "state-budget-v3-cushion-scaled-primary-v1",
+  "status": "Source and synthetic design only; no actual market evaluation authorized by this document",
+  "provenance": {
+    "proposed_after_V2_and_V2b_development": true,
+    "exploratory_structural_intervention": true,
+    "not_contemporaneously_prespecified_with_V2_or_V2b": true,
+    "motivation_received_from_parent": "The retained adverse V2 development baseline exhibited frequent support-family infeasibility. V2b separately studies a one-time best-effort action after infeasibility. This later version instead changes only the primary temporary destinations, retaining V2b protection as it was.",
+    "actual_development_or_final_arrays_read_for_this_task": false,
+    "actual_strategy_run": false,
+    "source_baselines": {
+      "research/experimental_execution/state_budget_execution.py": "8480dc1c2d54175a9fafed2471991a0ea8fc6a4519a24140044d056dbafafb1f",
+      "research/experimental_execution/state_budget_mitigation.py": "fe3904062f92a42f7fc37d664b53ee3ec6d336b2498448c1a707cb2edfda89ff"
+    }
+  },
+  "single_intervention": "Replace the four primary temporary target weights a*w+(1-a)*e_bill by a*m*w+(1-a*m)*e_bill for the same fixed a=1,.75,.5,.25. All other decision/account/selection rules, including the original unscaled V2b fallback, remain fixed.",
+  "state_formula": {
+    "variables": "R=sum(current nominal holdings)/current cumulative CPI, P=original running historical real peak, d=1-R/P, L=client original maximum drawdown tolerance.",
+    "ordinary_formula": "For 0<L<=1, m=clip((R-(1-L)*P)/(L*R),0,1)=clip((L-d)/(L*(1-d)),0,1).",
+    "state_not_parameter": "m is a deterministic current-state transformation of original L/R/P, not a fitted hyperparameter, psychological preference or independently selected risk aversion. It adds no candidate family to the existing six release_fraction/forecast tuples.",
+    "interpretation": "Original-floor headroom is scaled by L*R. At the original peak m=1; at the original floor m=0. For 0<L<1 it decreases with current d, with derivative (L-1)/(L*(1-d)^2) before clipping. Positive monetary scaling of R and P leaves m unchanged.",
+    "zero_loss_boundary": "For L=0 use the explicit convention m=1 at R>=P (including the existing tolerated numerical comparison), otherwise m=0. Active helper consistency and the absorbing actual-breach rule still apply; this convention does not weaken the floor.",
+    "unit_loss_boundary": "For L=1 and positive current real wealth m=1.",
+    "tiny_negative_headroom": "m clips to0. The unchanged primary budget floor remains max((1-L)*P, R-rho*(R-(1-L)*P)); it is never lowered below the original floor by a tolerated tiny breach."
+  },
+  "destinations_and_execution": {
+    "initial": "Initial admission still permits only full original w, with its original exact fee, or preinvestment Review/financial NULL. Initial m is exactly1 and there is no cash substitute.",
+    "continuation": "At each active funded noninitial decision rebuild the same four temporary destinations a*m*w+(1-a*m)*e_bill. The base Q1 target is not persistently reset.",
+    "risk_sleeve": "The new destination equity/bond proportions are a*m times their original w proportions; original bill allocation is also retained in the convex combination. This is not a separate leverage or risky-dollar formula.",
+    "same_postdollar_segments": "For each destination execute_target gives exact full after-fee endpoint y_star. The existing segment y(q)=x+q*(y_star-x), fee(q)=q*fee_star, and exact support interval are unchanged. Evaluate only lo/mid/hi in each interval plus separate hold, still13 candidates.",
+    "same_objective": "Uniform scores E log(W_candidate/W_hold); ensemble_min scores the minimum of the same paired expectation across the frozen five forecasts. Hold feasible still requires a strictly positive selected paired score above1e-12 to trade. Risk protection when hold is infeasible still records any growth sacrifice and fees.",
+    "same_tie": "Global maximum score band1e-12, then hold, lower actual fee, less cash tilt/proposal order, fixed point order.",
+    "same_fallback": "Only if the changed primary still has no feasible declared point, call the frozen V2b mitigate_support_failure directly. Its original four unscaled a*w+(1-a)*e_bill endpoints and q=.5/1 remain exactly9 points including hold. Its max-min after-fee objective, strict1e-12*R improvement, residual shortfall and absorbing Review are unchanged."
+  },
+  "unchanged": [
+    "six candidates: rho=.5/.75/1 crossed with uniform/ensemble_min",
+    "all own-training Q1 fits and original positive target allocation",
+    "calendar joint support; pooled support remains separately labelled stress",
+    "same past-only forecast inputs and fixed forecast construction",
+    "same one-step risk budget floor and exact fee computation",
+    "same finite13 primary candidates, same paired scores and ties",
+    "same initial full original target or Review financial NULL",
+    "same original unscaled V2b9 mitigation candidates",
+    "same originalH/CPI/historicalpeak/runningMDD and strict actual crossing",
+    "same once-triggered absorbing Review/actual-breach holds",
+    "same complete-learner nested whole-scenario evaluation and selection rules",
+    "same service alpha and meanMDD/CVaR severity gates; no relaxed threshold"
+  ],
+  "boundaries": {
+    "not_hold_cap": "m restricts new temporary destinations only. A support-feasible current hold may keep more risk exposure than every destination when no new safe trade offers sufficient paired gain. There is no compulsory liquidation.",
+    "replacement_not_superset": "At m<1 the destination family replaces rather than contains the previous family. Lower risky destinations can supply a safe point that was absent before, but prior high-growth points can disappear. Neither feasibility, growth nor realized risk is monotone between versions.",
+    "not_cash_safe": "The bill real gross return can be below1; even m=0, exact transaction fees and negative real bill returns can leave the same-year support floor infeasible.",
+    "not_CPPI_or_floor_insurance": "The formula does not establish a hard exposure constraint, CPPI guarantee, recursive feasibility, future support containment, pathwise maximum drawdown guarantee, or intrayear protection. It is only a deterministic proposal generator followed by the original exact one-step support filter.",
+    "unchanged_certificate_scope": "A feasible primary decision certifies only the declared training joint-support one-step floor, under the already declared numerical convention. A guard/mitigation action retains support_feasible=False even if shortfall improves; actual future events remain out of support and may breach L.",
+    "numeric_convention": "Exact mathematical intervals add no slack; eligibility allows the unchanged1e-12 relative-to-R support roundoff. Actual runningMDD crossing uses MDD-L>1e-12. Do not turn either numerical tolerance into a substantive risk budget.",
+    "past_breach": "A recovered current d does not remove an earlier runningMDD breach. Already breached or guard-pending accounts get no new cushion action or protection rescue.",
+    "no_new_claim": "This document makes no empirical improvement, novelty, admission, certification or final-data performance claim. A full frozen development evaluation and independent audit are still required."
+  },
+  "API": {
+    "pure_primary_module": "research/experimental_execution/state_budget_cushion_primary.py",
+    "scale": "cushion_scale(real_wealth,real_peak,L) -> scalar in[0,1]",
+    "pure_primary": "decide_state_action has the frozen primary signature, validates the same unbreached current state, changes the four destinations only and adds cushion_scale/proposal_target_weights.",
+    "simulator_module": "research/experimental_execution/state_budget_cushion.py",
+    "simulator": "simulate_state_budget has the frozen V2b signature and funded/Review wrapper; alias simulate_state_budget_cushion.",
+    "implementation": "The new pure module copies frozen V2 primary source without its simulator, modifies destination construction and witnesses only. The new simulator/wrapper copies V2b source but imports the new primary explicitly and frozen V2b mitigate_support_failure directly. No old source/module global is edited or monkeypatched.",
+    "new_arm_fields": {
+      "cushion_scale": "float(n,originalH); NaN for a period without an active primary calculation",
+      "proposal_target_weights": "float(n,originalH,4,3); actual temporary destination weights, NaN in pending periods"
+    },
+    "other_fields": "All standard financial arrays, primary13 witnesses, original9 fallback witnesses, actual_decision_source, original hold/pending state, forecasts and actual realized post-decision market traces retain their prior meanings. New arrays are readonly with the other saved arm arrays."
+  },
+  "synthetic_validation": {
+    "test_count": 19,
+    "command": ".venv/bin/python -m unittest discover -s tests -p test_state_budget_cushion.py -v",
+    "passed": true,
+    "checks": [
+      "drawdown-form identity, unit invariance, monotonicity, clip and L0/L1 boundary conventions",
+      "every shared primary field exact at the peak for all original six tuples",
+      "every shared initial V2b witness exact and mandatory original target unchanged",
+      "constructed safe point absent from the old family, and a counterexample forfeiting old growth points",
+      "exact after-fee partial funding and support interval geometry",
+      "hold above every proposal's risk exposure can remain selected",
+      "negative real bill makes m0 insufficient; original floor clamp remains",
+      "fallback function identity and every original9 candidate witness unchanged",
+      "initial Review needs no actual values and has no fallback/financial arm",
+      "all shared full-path fields exact on cost-free flat at-peak paths",
+      "one mitigation then originalH absorbing hold, without renewed ordinary service",
+      "actual breach bypasses future cushion calculations",
+      "current actual future and IDs cannot change the current choice; calendar policy ignores later training years",
+      "new state witnesses readonly and exact fee charged once"
+    ],
+    "provided_market_read": false
+  },
+  "new_files_sha256": {
+    "research/experimental_execution/state_budget_cushion_primary.py": "d44dda7d43d27a5f02b6088d2c00d7ca482b4eaf6a0bc89c29c9ce09975b3fd4",
+    "research/experimental_execution/state_budget_cushion.py": "8052ff8f5d2d4ad7876097e2e2ba429ecf66474d07fa45b3bb7f19df647b82c9",
+    "tests/test_state_budget_cushion.py": "6d5aa59b34f2322b2671bfda706304d1dbad97960965846f7541f96c3a71a7c3"
+  },
+  "execution_gate": {
+    "development_execution_ready": false,
+    "final_execution_ready": false,
+    "instruction": "Source/synthetic only here. A new additive root protocol/runner/source freeze and independent review must precede development1-120 execution. No121-180 parse, actual numerical run or old artifact modification is performed by this design task."
+  }
+}
