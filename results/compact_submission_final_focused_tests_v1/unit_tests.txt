@@ -1,0 +1,18 @@
+test_changed_source_release_or_spec_never_reaches_loader (test_submission_final_adapter.SubmissionFinalTests.test_changed_source_release_or_spec_never_reaches_loader) ... ok
+test_complete_noncyclic_manifest_and_release_gate (test_submission_final_adapter.SubmissionFinalTests.test_complete_noncyclic_manifest_and_release_gate) ... ok
+test_complete_ten_artifact_bytes_and_all_arrays_are_checked (test_submission_final_adapter.SubmissionFinalTests.test_complete_ten_artifact_bytes_and_all_arrays_are_checked) ... ok
+test_default_is_real_kernel_full14_object_constructed_market (test_submission_final_adapter.SubmissionFinalTests.test_default_is_real_kernel_full14_object_constructed_market) ... ok
+test_explicit_flag_has_exact_train_then_actual_ids_and_failure_preserved (test_submission_final_adapter.SubmissionFinalTests.test_explicit_flag_has_exact_train_then_actual_ids_and_failure_preserved) ... ok
+test_immutable_producer_helpers_are_used_without_run_or_parameter_search (test_submission_final_adapter.SubmissionFinalTests.test_immutable_producer_helpers_are_used_without_run_or_parameter_search) ... ok
+test_missing_final_manifest_stops_before_both_loaders_and_output (test_submission_final_adapter.SubmissionFinalTests.test_missing_final_manifest_stops_before_both_loaders_and_output) ... ok
+test_review_null_and_own_horizons_in_constructed_actual_outputs (test_submission_final_adapter.SubmissionFinalTests.test_review_null_and_own_horizons_in_constructed_actual_outputs) ... ok
+test_all14_groups_24_minimal_arrayfields_and_ten_bytes_outputs (test_compact_final_submission.CompactFinalTests.test_all14_groups_24_minimal_arrayfields_and_ten_bytes_outputs) ... ok
+test_missing_freeze_stops_before_canonical_npz (test_compact_final_submission.CompactFinalTests.test_missing_freeze_stops_before_canonical_npz) ... ok
+test_review_financial_arrays_rejected_with_failed_attempt_preserved (test_compact_final_submission.CompactFinalTests.test_review_financial_arrays_rejected_with_failed_attempt_preserved) ... ok
+test_separate_build_activation_noncyclic_manifests_and_v1_untouched (test_compact_final_submission.CompactFinalTests.test_separate_build_activation_noncyclic_manifests_and_v1_untouched) ... ok
+test_wrong_independent_binding_rejected_before_numeric_parse (test_compact_final_submission.CompactFinalTests.test_wrong_independent_binding_rejected_before_numeric_parse) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.964s
+
+OK

@@ -1,0 +1,9 @@
+{
+  "version": "compact-fixed-nonblind-final-build-release-template-v1",
+  "build_ready": false,
+  "protocol_sha256": "b9c999cb48a7b85189e8e42bbd5f19deefb20b6c5fa7344daae64814e343cd97",
+  "source_freeze_sha256": null,
+  "preparation_manifest_sha256": null,
+  "allowlist_without_release_sha256": null,
+  "instructions": "After preparation passes and packaged source/docs stop editing, root writes actual compact_submission_final_build_release.json with release version compact-fixed-nonblind-final-build-release-v1 and build_ready=true, exact hashes and canonical full payload allowlist excluding this release itself."
+}

@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "started_utc": "2026-10-19T08:39:42.061666+00:00",
+  "scope": "Metadata and byte hashes only; no market parsing, model, notebook execution, test rerun or package replay",
+  "completed_utc": "2026-10-19T08:39:44.363049+00:00",
+  "verification_sha256": "a00d813b70eaddceb13083d9b24161754332bf44e63584c70927c9ec4edd7b22"
+}
