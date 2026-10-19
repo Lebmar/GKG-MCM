@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "phase": "complete",
+  "started_utc": "2026-10-19T06:24:51.084688+00:00",
+  "market_value_access_started": true,
+  "final_scenarios_loaded": false,
+  "auditor_source_sha256": "8451a30832cf7aae27e008aae13e8107372095fd65e1f29d597fab304cb6167e",
+  "parent_manifest_sha256": "697010db7b2e8b5c54d96337090e77be5639b9b324b1237890c8c8d0f7b5c68f",
+  "receipt_sha256": "e51be76cef9ff9ec2c524f7abc71ffd3ca327cecee65cd94114504a11c476131"
+}

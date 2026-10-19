@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "groups": 144,
+  "funded_paths": 3600,
+  "first_guard_events": 2057,
+  "no_guard_paths": 1543,
+  "caution": "Same simulator deterministic prefix check; numerical independent accounting is performed by the separate audit. No new market paths or causal population inference."
+}

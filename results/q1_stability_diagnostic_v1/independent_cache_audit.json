@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "completed_utc": "2026-10-19T06:39:56.384090+00:00",
+  "checks": 87744,
+  "maximum_absolute_numeric_error": 1.1102230246251565e-16,
+  "counts": {
+    "individual_sets": 300,
+    "candidate_statistics": 51600,
+    "near_members": 477,
+    "metadata_rows": 150,
+    "model_OOF_rows": 600,
+    "financial_model_rows": 360,
+    "null_model_rows": 240,
+    "exact_thirds_reference_rows": 600,
+    "summary_groups": 5,
+    "raw_market_reads": 0,
+    "new_policy_runs": 0
+  },
+  "plan_sha256": "f532cb8fa0883fe3c9eba994d1a6fc55428d6aecaa246f54238b55da3156c47a",
+  "audit_source_freeze_sha256": "d61846bddf6450df68e269888d14c23affa9f2c30ef3f756045f0b81e4ee1be7",
+  "producer_manifest_sha256": "b15c08f03c2dde008bb0d4eb01673b0a6e017fa122873f4b0655fdc7d1b74959",
+  "audit_source_at_start": {
+    "scripts/audit_q1_stability_diagnostic.py": "fb7a8af9ef328a8f2d9baa424d620e0d0823f3e879332b9ef8c618cee08136a2",
+    "tests/test_q1_stability_cache_audit.py": "7135a7325ab84a1148eedd17917e28b0deb7b21e7b46c64b9c3f502283c5296e"
+  },
+  "producer_outputs_at_start": {
+    "fit_profile_metadata.csv.gz": "6b24f809249adac9f69b1eb3f0cac5c328e4f145c4fe5dd3dcbdbec5a77bacc4",
+    "own_horizon_oof_paths.csv.gz": "6c82eb99c289de6215d3294d2ffc3f3909e86a9c77da9fd62b6d8f30814cd6aa",
+    "near_optimal_members.csv.gz": "750b276a245814b76209c5b256d357969c128a6f7e1eca462e84efa5a151e046",
+    "fit_gamma_bands.json": "11d60b02301b1dd21681c7a2f918acaff1b3a76e7be37f44bdda8baa196d7a9d",
+    "exact_thirds_references.csv.gz": "217d1902129cbbd2b1dbd3eef80705aa6e87497873bbc88d096e41c3b078f6cf",
+    "own_horizon_summary.json": "31a2b43a456483d7c3f775693bb9c67a40278cfe998f47e8b7a04ae03fbed5b9",
+    "individual_feasible_sets.json": "35c9b3e1f0e7abf749a72b419761dadcc74918ae814ca262f75291f8d7cba3e7"
+  },
+  "independent_math": "Python scalar counts/fsum/sets/ordinary median/explicit quantile ranks/fractional tail; no production diagnostic import.",
+  "scope": "Saved-cache postprocessing correctness, not upstream market resimulation, joint-menu optimality, predictive calibration or future risk."
+}

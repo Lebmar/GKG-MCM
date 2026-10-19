@@ -1,0 +1,203 @@
+{
+  "status": "passed",
+  "canonical_manifest_sha256": "e97ef1326ffe1cb1e48f660ff1fd1e71cee2a0f1a26931ce84ac98ec03431f7d",
+  "canonical_traces_sha256": "c7ad7b70d3dbe3cf2e5647dc5acfbb020e1105b5da5ee43e6aa1c9a913b0422a",
+  "contexts": 6,
+  "objects": 24,
+  "fields": 1350,
+  "scalar_values": 6501864,
+  "checks": [
+    {
+      "context_id": 0,
+      "policy": "state_budget_learner",
+      "canonical_group_id": "c0_refit__release_0.5_uniform__full_selected",
+      "fields": 120,
+      "scalar_values": 2879764,
+      "all_exact": true
+    },
+    {
+      "context_id": 0,
+      "policy": "same_target_B",
+      "canonical_group_id": "c0_refit__same_target_B",
+      "fields": 35,
+      "scalar_values": 111120,
+      "all_exact": true
+    },
+    {
+      "context_id": 0,
+      "policy": "same_target_annual",
+      "canonical_group_id": "c0_refit__same_target_annual",
+      "fields": 35,
+      "scalar_values": 111120,
+      "all_exact": true
+    },
+    {
+      "context_id": 0,
+      "policy": "exact_thirds_annual",
+      "canonical_group_id": "c0_refit__exact_thirds_annual",
+      "fields": 35,
+      "scalar_values": 111120,
+      "all_exact": true
+    },
+    {
+      "context_id": 1,
+      "policy": "state_budget_learner",
+      "canonical_group_id": "c1_refit__release_0.5_uniform__outer_selected",
+      "fields": 120,
+      "scalar_values": 591076,
+      "all_exact": true
+    },
+    {
+      "context_id": 1,
+      "policy": "same_target_B",
+      "canonical_group_id": "c1_refit__same_target_B",
+      "fields": 35,
+      "scalar_values": 22224,
+      "all_exact": true
+    },
+    {
+      "context_id": 1,
+      "policy": "same_target_annual",
+      "canonical_group_id": "c1_refit__same_target_annual",
+      "fields": 35,
+      "scalar_values": 22224,
+      "all_exact": true
+    },
+    {
+      "context_id": 1,
+      "policy": "exact_thirds_annual",
+      "canonical_group_id": "c1_refit__exact_thirds_annual",
+      "fields": 35,
+      "scalar_values": 22224,
+      "all_exact": true
+    },
+    {
+      "context_id": 2,
+      "policy": "state_budget_learner",
+      "canonical_group_id": "c2_refit__release_0.5_ensemble_min__outer_selected",
+      "fields": 120,
+      "scalar_values": 591076,
+      "all_exact": true
+    },
+    {
+      "context_id": 2,
+      "policy": "same_target_B",
+      "canonical_group_id": "c2_refit__same_target_B",
+      "fields": 35,
+      "scalar_values": 22224,
+      "all_exact": true
+    },
+    {
+      "context_id": 2,
+      "policy": "same_target_annual",
+      "canonical_group_id": "c2_refit__same_target_annual",
+      "fields": 35,
+      "scalar_values": 22224,
+      "all_exact": true
+    },
+    {
+      "context_id": 2,
+      "policy": "exact_thirds_annual",
+      "canonical_group_id": "c2_refit__exact_thirds_annual",
+      "fields": 35,
+      "scalar_values": 22224,
+      "all_exact": true
+    },
+    {
+      "context_id": 3,
+      "policy": "state_budget_learner",
+      "canonical_group_id": "c3_refit__release_0.5_uniform__outer_selected",
+      "fields": 120,
+      "scalar_values": 591076,
+      "all_exact": true
+    },
+    {
+      "context_id": 3,
+      "policy": "same_target_B",
+      "canonical_group_id": "c3_refit__same_target_B",
+      "fields": 35,
+      "scalar_values": 22224,
+      "all_exact": true
+    },
+    {
+      "context_id": 3,
+      "policy": "same_target_annual",
+      "canonical_group_id": "c3_refit__same_target_annual",
+      "fields": 35,
+      "scalar_values": 22224,
+      "all_exact": true
+    },
+    {
+      "context_id": 3,
+      "policy": "exact_thirds_annual",
+      "canonical_group_id": "c3_refit__exact_thirds_annual",
+      "fields": 35,
+      "scalar_values": 22224,
+      "all_exact": true
+    },
+    {
+      "context_id": 4,
+      "policy": "state_budget_learner",
+      "canonical_group_id": "c4_refit__release_0.5_uniform__outer_selected",
+      "fields": 120,
+      "scalar_values": 591076,
+      "all_exact": true
+    },
+    {
+      "context_id": 4,
+      "policy": "same_target_B",
+      "canonical_group_id": "c4_refit__same_target_B",
+      "fields": 35,
+      "scalar_values": 22224,
+      "all_exact": true
+    },
+    {
+      "context_id": 4,
+      "policy": "same_target_annual",
+      "canonical_group_id": "c4_refit__same_target_annual",
+      "fields": 35,
+      "scalar_values": 22224,
+      "all_exact": true
+    },
+    {
+      "context_id": 4,
+      "policy": "exact_thirds_annual",
+      "canonical_group_id": "c4_refit__exact_thirds_annual",
+      "fields": 35,
+      "scalar_values": 22224,
+      "all_exact": true
+    },
+    {
+      "context_id": 5,
+      "policy": "state_budget_learner",
+      "canonical_group_id": "c5_refit__release_0.5_uniform__outer_selected",
+      "fields": 120,
+      "scalar_values": 591076,
+      "all_exact": true
+    },
+    {
+      "context_id": 5,
+      "policy": "same_target_B",
+      "canonical_group_id": "c5_refit__same_target_B",
+      "fields": 35,
+      "scalar_values": 22224,
+      "all_exact": true
+    },
+    {
+      "context_id": 5,
+      "policy": "same_target_annual",
+      "canonical_group_id": "c5_refit__same_target_annual",
+      "fields": 35,
+      "scalar_values": 22224,
+      "all_exact": true
+    },
+    {
+      "context_id": 5,
+      "policy": "exact_thirds_annual",
+      "canonical_group_id": "c5_refit__exact_thirds_annual",
+      "fields": 35,
+      "scalar_values": 22224,
+      "all_exact": true
+    }
+  ]
+}

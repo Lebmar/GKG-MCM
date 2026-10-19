@@ -1,0 +1,54 @@
+{
+  "status": "complete",
+  "completed_utc": "2026-10-19T06:35:41.877306+00:00",
+  "source_manifest_sha256": "e97ef1326ffe1cb1e48f660ff1fd1e71cee2a0f1a26931ce84ac98ec03431f7d",
+  "protocol_sha256": "443287b99e947894892ad0a08ffafef1158b472ff1f8c8b4c8dc83539ea37ade",
+  "source_freeze_sha256": "0789241dd0912d64eb1486559e755dfaed839ae830cee6ad2d177806b8f9642e",
+  "analysis_source_sha256": {
+    "scripts/analyze_state_budget_mitigation.py": "fa8b4f11b32d32877caede4e4b19ba9462984c22adb8298d6f1a3d7a1c486677",
+    "tests/test_state_budget_mitigation_analysis.py": "ac68048da98fee51b6abdf011a728139c04fdef8ef276a31efd77dcd968e5066"
+  },
+  "producer_outputs_at_start": {
+    "path_metrics.csv.gz": "9da6396dd3f256da1aa4d6de8a318e6f0dfabc037e64c6b5786fbb28ee88b168",
+    "traces.npz": "c7ad7b70d3dbe3cf2e5647dc5acfbb020e1105b5da5ee43e6aa1c9a913b0422a",
+    "initial_witnesses.json": "fdc46f2d02a6a3e909b96d6c2f58a7d46c7549c7a81c1fcffd26829262ab8d3d",
+    "trace_groups.json": "3cf4f14f1b860a7e32ee132472427774077fe2e29ea1e2b8e82b3ec5a63d3315",
+    "summary.csv.gz": "ce6419a64ef1706445acf51262c7dfbaad5b6563dc8f776e7624fd8731df96a2",
+    "selections.json": "ea4670df1f817086fd157afd014b1c1bcbdfefd7d6159b54c0d7d281c79e7fc9"
+  },
+  "analysis_input_sha256": {
+    "docs/state_budget_mitigation_analysis_protocol.json": "443287b99e947894892ad0a08ffafef1158b472ff1f8c8b4c8dc83539ea37ade",
+    "docs/state_budget_mitigation_protocol.json": "20f0a77765dfa25c2d8f5b0d3a37de9422b7c7137dd991f4f9e5948729151fa1",
+    "docs/state_budget_mitigation_source_freeze.json": "9c0be7f963314ed80de2f8bce7e3e45020c5e5379f77b236a2cacb1767cbef68",
+    "results/state_budget_rebuild_v1/manifest.json": "697010db7b2e8b5c54d96337090e77be5639b9b324b1237890c8c8d0f7b5c68f",
+    "results/state_budget_rebuild_v1/path_metrics.csv.gz": "9a0df7a238d4e508e26759846082d981567786d9bb779b2a720ca34130a9a115",
+    "results/state_budget_rebuild_v1/trace_groups.json": "b425c8bfc9b157c4b7c5e430dcd8348610d5d791a7597f1bf456c2cffa36604b"
+  },
+  "parent_manifest_sha256": "697010db7b2e8b5c54d96337090e77be5639b9b324b1237890c8c8d0f7b5c68f",
+  "parent_path_rows_sha256": "9a0df7a238d4e508e26759846082d981567786d9bb779b2a720ca34130a9a115",
+  "producer_outputs_at_end": {
+    "path_metrics.csv.gz": "9da6396dd3f256da1aa4d6de8a318e6f0dfabc037e64c6b5786fbb28ee88b168",
+    "traces.npz": "c7ad7b70d3dbe3cf2e5647dc5acfbb020e1105b5da5ee43e6aa1c9a913b0422a",
+    "initial_witnesses.json": "fdc46f2d02a6a3e909b96d6c2f58a7d46c7549c7a81c1fcffd26829262ab8d3d",
+    "trace_groups.json": "3cf4f14f1b860a7e32ee132472427774077fe2e29ea1e2b8e82b3ec5a63d3315",
+    "summary.csv.gz": "ce6419a64ef1706445acf51262c7dfbaad5b6563dc8f776e7624fd8731df96a2",
+    "selections.json": "ea4670df1f817086fd157afd014b1c1bcbdfefd7d6159b54c0d7d281c79e7fc9"
+  },
+  "new_model_runs": 0,
+  "new_raw_market_reads": 0,
+  "final_scenarios_loaded": false,
+  "comparisons": 6,
+  "paired_rows": 720,
+  "market_rows": 3600,
+  "policy_forecast_rows": 5235,
+  "outputs_sha256": {
+    "intervention_prefix_check.json": "9d03a5fd56c002ce90a6c5f24508cb9ce4c3ef3775ad1edd60c6ebe2c68cc203",
+    "cohort_comparisons.json": "b9a7a504317c4941b45a55a9397e82016e298c51982f39e86aacb113a9a5f1d7",
+    "intervention_contrasts.json": "20ba04b0011d93b64ed11c21313aee791e78a29ff489a33ccb0847b1929cc5b4",
+    "market_forecasts.csv.gz": "6fc1a732e03259e142212dc228fdb898b67248e369407ab1db424683337efb9f",
+    "prediction_summary.json": "09fda6ec074de01b4791a3387063a81ef368aeade2e8550d9f19a9a6ee1309d7",
+    "selected_coverage_contrasts.json": "dffd594af6a5d82971a41442e6b6e77827cd340319b21e645f1f2d067f324119",
+    "paired_paths.csv.gz": "af56e0bd882edd7a6a5da42eb92d326044497a4cf1ca65e7ea8f803ff122e9c8",
+    "policy_forecasts.csv.gz": "2ac45587a367b5ce815cbc4c367a558d50fa6a7bf872d8007b27118840e869f2"
+  }
+}

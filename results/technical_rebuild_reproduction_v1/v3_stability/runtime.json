@@ -1,0 +1,75 @@
+{
+  "python_executable": "/Users/lebmar/Documents/ChatGPT/GKG数模/.venv/bin/python",
+  "python_version": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "prefix": "/Users/lebmar/Documents/ChatGPT/GKG数模/.venv",
+  "base_prefix": "/Users/lebmar/.cache/codex-runtimes/codex-primary-runtime/dependencies/python",
+  "isolated": 1,
+  "no_user_site": 1,
+  "dont_write_bytecode": true,
+  "runtime_versions": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.18.1"
+  },
+  "cwd": "/private/var/folders/wr/mdv3gpmn60v93f7_2jlssl7w0000gn/T/gkg-technical-v3_stability-7ksq4l8i",
+  "workspace": "/private/var/folders/wr/mdv3gpmn60v93f7_2jlssl7w0000gn/T/gkg-technical-v3_stability-7ksq4l8i",
+  "package_origins_before": {
+    "safeinvest": [
+      "/private/var/folders/wr/mdv3gpmn60v93f7_2jlssl7w0000gn/T/gkg-technical-v3_stability-7ksq4l8i/src/safeinvest/__init__.py",
+      "/private/var/folders/wr/mdv3gpmn60v93f7_2jlssl7w0000gn/T/gkg-technical-v3_stability-7ksq4l8i/src/safeinvest"
+    ],
+    "experimental_execution": [
+      "/private/var/folders/wr/mdv3gpmn60v93f7_2jlssl7w0000gn/T/gkg-technical-v3_stability-7ksq4l8i/research/experimental_execution"
+    ],
+    "safeinvest_research": [
+      "/private/var/folders/wr/mdv3gpmn60v93f7_2jlssl7w0000gn/T/gkg-technical-v3_stability-7ksq4l8i/research/safeinvest_research"
+    ]
+  },
+  "package_origins_after": {
+    "safeinvest": [
+      "/private/var/folders/wr/mdv3gpmn60v93f7_2jlssl7w0000gn/T/gkg-technical-v3_stability-7ksq4l8i/src/safeinvest/__init__.py",
+      "/private/var/folders/wr/mdv3gpmn60v93f7_2jlssl7w0000gn/T/gkg-technical-v3_stability-7ksq4l8i/src/safeinvest"
+    ],
+    "experimental_execution": [
+      "/private/var/folders/wr/mdv3gpmn60v93f7_2jlssl7w0000gn/T/gkg-technical-v3_stability-7ksq4l8i/research/experimental_execution",
+      "/private/var/folders/wr/mdv3gpmn60v93f7_2jlssl7w0000gn/T/gkg-technical-v3_stability-7ksq4l8i/research/experimental_execution",
+      "/private/var/folders/wr/mdv3gpmn60v93f7_2jlssl7w0000gn/T/gkg-technical-v3_stability-7ksq4l8i/research/experimental_execution"
+    ],
+    "safeinvest_research": [
+      "/private/var/folders/wr/mdv3gpmn60v93f7_2jlssl7w0000gn/T/gkg-technical-v3_stability-7ksq4l8i/research/safeinvest_research",
+      "/private/var/folders/wr/mdv3gpmn60v93f7_2jlssl7w0000gn/T/gkg-technical-v3_stability-7ksq4l8i/research/safeinvest_research",
+      "/private/var/folders/wr/mdv3gpmn60v93f7_2jlssl7w0000gn/T/gkg-technical-v3_stability-7ksq4l8i/research/safeinvest_research"
+    ],
+    "safeinvest.data": [
+      "/private/var/folders/wr/mdv3gpmn60v93f7_2jlssl7w0000gn/T/gkg-technical-v3_stability-7ksq4l8i/src/safeinvest/data.py"
+    ],
+    "experimental_execution.forecast_ensemble": [
+      "/private/var/folders/wr/mdv3gpmn60v93f7_2jlssl7w0000gn/T/gkg-technical-v3_stability-7ksq4l8i/research/experimental_execution/forecast_ensemble.py"
+    ],
+    "safeinvest.core": [
+      "/private/var/folders/wr/mdv3gpmn60v93f7_2jlssl7w0000gn/T/gkg-technical-v3_stability-7ksq4l8i/src/safeinvest/core.py"
+    ],
+    "experimental_execution.state_budget_cushion_primary": [
+      "/private/var/folders/wr/mdv3gpmn60v93f7_2jlssl7w0000gn/T/gkg-technical-v3_stability-7ksq4l8i/research/experimental_execution/state_budget_cushion_primary.py"
+    ],
+    "experimental_execution.state_budget_execution": [
+      "/private/var/folders/wr/mdv3gpmn60v93f7_2jlssl7w0000gn/T/gkg-technical-v3_stability-7ksq4l8i/research/experimental_execution/state_budget_execution.py"
+    ],
+    "experimental_execution.state_budget_mitigation": [
+      "/private/var/folders/wr/mdv3gpmn60v93f7_2jlssl7w0000gn/T/gkg-technical-v3_stability-7ksq4l8i/research/experimental_execution/state_budget_mitigation.py"
+    ],
+    "experimental_execution.state_budget_cushion": [
+      "/private/var/folders/wr/mdv3gpmn60v93f7_2jlssl7w0000gn/T/gkg-technical-v3_stability-7ksq4l8i/research/experimental_execution/state_budget_cushion.py"
+    ],
+    "experimental_execution.review_pending": [
+      "/private/var/folders/wr/mdv3gpmn60v93f7_2jlssl7w0000gn/T/gkg-technical-v3_stability-7ksq4l8i/research/experimental_execution/review_pending.py"
+    ],
+    "safeinvest_research.metrics": [
+      "/private/var/folders/wr/mdv3gpmn60v93f7_2jlssl7w0000gn/T/gkg-technical-v3_stability-7ksq4l8i/research/safeinvest_research/metrics.py"
+    ],
+    "experimental_execution.state_budget_selection": [
+      "/private/var/folders/wr/mdv3gpmn60v93f7_2jlssl7w0000gn/T/gkg-technical-v3_stability-7ksq4l8i/research/experimental_execution/state_budget_selection.py"
+    ]
+  },
+  "status": "passed"
+}

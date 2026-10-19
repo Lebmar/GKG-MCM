@@ -1,0 +1,70 @@
+[
+  {
+    "version": "V2b",
+    "scope": "outer_selected",
+    "original_n": 120,
+    "group_count": 5,
+    "physical_path_n": 120,
+    "first_guard_n": 109,
+    "LP_count": 872,
+    "classification_counts": {
+      "numerical_physical_feasible_witness_above_budget": 20,
+      "all_eight_numerical_optima_below_budget": 89,
+      "numerical_boundary_unresolved": 0,
+      "incomplete_solver_or_certificate_evidence": 0,
+      "solver_or_certificate_unresolved": 0
+    },
+    "all_eight_resolved_n": 109
+  },
+  {
+    "version": "V2b",
+    "scope": "full_selected",
+    "original_n": 120,
+    "group_count": 1,
+    "physical_path_n": 120,
+    "first_guard_n": 120,
+    "LP_count": 960,
+    "classification_counts": {
+      "numerical_physical_feasible_witness_above_budget": 64,
+      "all_eight_numerical_optima_below_budget": 56,
+      "numerical_boundary_unresolved": 0,
+      "incomplete_solver_or_certificate_evidence": 0,
+      "solver_or_certificate_unresolved": 0
+    },
+    "all_eight_resolved_n": 120
+  },
+  {
+    "version": "V3",
+    "scope": "outer_selected",
+    "original_n": 120,
+    "group_count": 5,
+    "physical_path_n": 120,
+    "first_guard_n": 108,
+    "LP_count": 864,
+    "classification_counts": {
+      "numerical_physical_feasible_witness_above_budget": 13,
+      "all_eight_numerical_optima_below_budget": 95,
+      "numerical_boundary_unresolved": 0,
+      "incomplete_solver_or_certificate_evidence": 0,
+      "solver_or_certificate_unresolved": 0
+    },
+    "all_eight_resolved_n": 108
+  },
+  {
+    "version": "V3",
+    "scope": "full_selected",
+    "original_n": 120,
+    "group_count": 1,
+    "physical_path_n": 120,
+    "first_guard_n": 120,
+    "LP_count": 960,
+    "classification_counts": {
+      "numerical_physical_feasible_witness_above_budget": 62,
+      "all_eight_numerical_optima_below_budget": 58,
+      "numerical_boundary_unresolved": 0,
+      "incomplete_solver_or_certificate_evidence": 0,
+      "solver_or_certificate_unresolved": 0
+    },
+    "all_eight_resolved_n": 120
+  }
+]

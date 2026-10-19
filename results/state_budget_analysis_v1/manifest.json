@@ -1,0 +1,41 @@
+{
+  "status": "complete",
+  "completed_utc": "2026-10-19T06:24:09.218618+00:00",
+  "source_manifest_sha256": "697010db7b2e8b5c54d96337090e77be5639b9b324b1237890c8c8d0f7b5c68f",
+  "protocol_sha256": "0c18be598aa5d7bbe2a7b92c32629e04426c4a28afafe5effa7359028dffd3ae",
+  "source_freeze_sha256": "d1bca31de4b54ac8a069bdcf5fbf01c9d6eda3b909b8fbddb3f648237d797639",
+  "analysis_source_sha256": {
+    "scripts/analyze_state_budget_rebuild.py": "c46de0a1f5b524d6bfbf140a2defa16ce79a4662a0493a1de0dda3413e196595",
+    "tests/test_state_budget_analysis.py": "46b0822b445594c88192d5b5fd1c7ca4b61884abc922b5f3a370a0a08230c335"
+  },
+  "producer_outputs_at_start": {
+    "path_metrics.csv.gz": "9a0df7a238d4e508e26759846082d981567786d9bb779b2a720ca34130a9a115",
+    "traces.npz": "5e4a777dfec222d11d5b9b38dee6958b6edac2db4b9157b6fc97990f1aa77cb5",
+    "initial_witnesses.json": "031d1202d59977b8c8de8b1d9d4ec9f16232dbfc4abfca89c5a7a7ac60cf4147",
+    "trace_groups.json": "b425c8bfc9b157c4b7c5e430dcd8348610d5d791a7597f1bf456c2cffa36604b",
+    "summary.csv.gz": "3ba01d5ac7a28a73fa467ebff54e809426738d7b00145ab7366c02a087cf3f0e",
+    "selections.json": "4ee671158da7fff3aa8c1ff996035964b0e3c74fb85ac4328968cc01c00ab705"
+  },
+  "producer_outputs_at_end": {
+    "path_metrics.csv.gz": "9a0df7a238d4e508e26759846082d981567786d9bb779b2a720ca34130a9a115",
+    "traces.npz": "5e4a777dfec222d11d5b9b38dee6958b6edac2db4b9157b6fc97990f1aa77cb5",
+    "initial_witnesses.json": "031d1202d59977b8c8de8b1d9d4ec9f16232dbfc4abfca89c5a7a7ac60cf4147",
+    "trace_groups.json": "b425c8bfc9b157c4b7c5e430dcd8348610d5d791a7597f1bf456c2cffa36604b",
+    "summary.csv.gz": "3ba01d5ac7a28a73fa467ebff54e809426738d7b00145ab7366c02a087cf3f0e",
+    "selections.json": "4ee671158da7fff3aa8c1ff996035964b0e3c74fb85ac4328968cc01c00ab705"
+  },
+  "new_model_runs": 0,
+  "new_raw_market_reads": 0,
+  "final_scenarios_loaded": false,
+  "comparisons": 6,
+  "paired_rows": 72,
+  "market_rows": 3600,
+  "policy_forecast_rows": 2469,
+  "outputs_sha256": {
+    "cohort_comparisons.json": "d21b163dcb3cc02c52a90b2ae96b735a33471519c4c2b740e64094423f705903",
+    "market_forecasts.csv.gz": "6fc1a732e03259e142212dc228fdb898b67248e369407ab1db424683337efb9f",
+    "prediction_summary.json": "664eafc0d33cdc98c90ca41227aa1b74aad0479acfc3d2781b28572394645127",
+    "paired_paths.csv.gz": "024e3a1155a74872ee3ccf0312393ffb31b17e56f77a033088882ba507667cf6",
+    "policy_forecasts.csv.gz": "69e5b1564bc5d8273d2b916cd85963bd0354feac75f5ec36c5187fe7a038787d"
+  }
+}

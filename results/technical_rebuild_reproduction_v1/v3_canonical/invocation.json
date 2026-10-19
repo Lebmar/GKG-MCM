@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "/Users/lebmar/Documents/ChatGPT/GKG数模/.venv/bin/python",
+    "-I",
+    "-c",
+    "\nimport importlib, importlib.metadata, json, os, pathlib, runpy, sys, traceback\nworkspace, script, target, receipt, expected_venv = map(pathlib.Path, sys.argv[1:])\nworkspace = workspace.resolve()\nsys.dont_write_bytecode = True\nsys.path[:0] = [str(workspace / p) for p in (\"src\", \"research\", \"scripts\")]\npackages = (\"safeinvest\", \"experimental_execution\", \"safeinvest_research\")\ndef origins():\n    result = {}\n    for package in packages:\n        importlib.import_module(package)\n    for name, module in list(sys.modules.items()):\n        if any(name == p or name.startswith(p + \".\") for p in packages):\n            paths = ([str(module.__file__)] if getattr(module, \"__file__\", None) else []) + list(map(str, getattr(module, \"__path__\", [])))\n            if not paths or any(not pathlib.Path(p).resolve().is_relative_to(workspace) for p in paths):\n                raise RuntimeError(\"A domain package escaped the isolated source root: \" + name + repr(paths))\n            result[name] = paths\n    return result\nmeta = dict(python_executable=sys.executable, python_version=sys.version, prefix=sys.prefix, base_prefix=sys.base_prefix,\n    isolated=sys.flags.isolated, no_user_site=sys.flags.no_user_site, dont_write_bytecode=sys.dont_write_bytecode,\n    runtime_versions={p: importlib.metadata.version(p) for p in (\"numpy\", \"pandas\", \"scipy\")}, cwd=os.getcwd(), workspace=str(workspace))\ntry:\n    if not sys.flags.isolated or not sys.flags.no_user_site or pathlib.Path(sys.prefix) != expected_venv:\n        raise RuntimeError(\"Original virtualenv and isolated Python are required\")\n    meta[\"package_origins_before\"] = origins()\n    sys.argv = [str(script), \"--execute\", \"--output\", str(target)]\n    runpy.run_path(str(script), run_name=\"__main__\")\n    meta[\"package_origins_after\"] = origins()\n    meta[\"status\"] = \"passed\"\nexcept BaseException as exc:\n    meta.update(status=\"failed\", error_type=type(exc).__name__, error=str(exc), traceback=traceback.format_exc())\n    raise\nfinally:\n    receipt.write_text(json.dumps(meta, indent=2, ensure_ascii=False) + \"\\n\")\n",
+    "/var/folders/wr/mdv3gpmn60v93f7_2jlssl7w0000gn/T/gkg-technical-v3_canonical-rw4tp1vd",
+    "/var/folders/wr/mdv3gpmn60v93f7_2jlssl7w0000gn/T/gkg-technical-v3_canonical-rw4tp1vd/scripts/run_state_budget_cushion.py",
+    "/var/folders/wr/mdv3gpmn60v93f7_2jlssl7w0000gn/T/gkg-technical-v3_canonical-rw4tp1vd/results/state_budget_cushion_v1",
+    "/Users/lebmar/Documents/ChatGPT/GKG数模/results/technical_rebuild_reproduction_v1/v3_canonical/runtime.json",
+    "/Users/lebmar/Documents/ChatGPT/GKG数模/.venv"
+  ],
+  "cwd": "/var/folders/wr/mdv3gpmn60v93f7_2jlssl7w0000gn/T/gkg-technical-v3_canonical-rw4tp1vd",
+  "removed_environment_keys": [
+    "PYTHONHOME",
+    "PYTHONPATH"
+  ],
+  "forced_environment": {
+    "PYTHONNOUSERSITE": "1",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  }
+}

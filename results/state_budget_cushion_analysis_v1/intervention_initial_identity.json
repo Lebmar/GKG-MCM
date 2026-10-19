@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "groups": 144,
+  "funded_paths": 3600,
+  "initial_null_paths": 0,
+  "exact_array_slices": 1296,
+  "caution": "Exact deterministic initial-year identity only. Later guards/actions/states may change. No pre-firstguard equality or population causal claim."
+}

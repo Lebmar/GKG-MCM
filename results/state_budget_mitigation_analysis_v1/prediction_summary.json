@@ -1,0 +1,1541 @@
+{
+  "market": [
+    {
+      "phase": "inception",
+      "forecast": "uniform",
+      "rows": 120,
+      "original_scenarios": 120,
+      "scenario_equal_standardized_mse": 1.0382940101080609,
+      "scenario_equal_raw_mse": 0.013540601736239706
+    },
+    {
+      "phase": "inception",
+      "forecast": "shrink_conditional",
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_standardized_mse": null,
+      "scenario_equal_raw_mse": null
+    },
+    {
+      "phase": "positive_period",
+      "forecast": "uniform",
+      "rows": 3480,
+      "original_scenarios": 120,
+      "scenario_equal_standardized_mse": 1.0573282150803784,
+      "scenario_equal_raw_mse": 0.015114749223288341
+    },
+    {
+      "phase": "positive_period",
+      "forecast": "shrink_conditional",
+      "rows": 3480,
+      "original_scenarios": 120,
+      "scenario_equal_standardized_mse": 1.0535248526528485,
+      "scenario_equal_raw_mse": 0.015040333053568024
+    }
+  ],
+  "policy": [
+    {
+      "forecast": "uniform",
+      "phase": "inception",
+      "rows": 120,
+      "original_scenarios": 120,
+      "growth_bias": -0.0003812864051853832,
+      "benefit_bias": -0.00038128640518538226,
+      "brier": 0.0,
+      "predicted_positive_realized_nonpositive_fraction": 0.325,
+      "directional_support_miss_fraction": 0.0,
+      "supported_safe_floor_failure_fraction": 0.0,
+      "growth_rmse": 0.08369338681211341,
+      "benefit_rmse": 0.07516007813826667
+    },
+    {
+      "forecast": "uniform",
+      "phase": "growth",
+      "rows": 284,
+      "original_scenarios": 111,
+      "growth_bias": 0.017355797612391716,
+      "benefit_bias": 0.002916154103708946,
+      "brier": 0.0,
+      "predicted_positive_realized_nonpositive_fraction": 0.38577863577863575,
+      "directional_support_miss_fraction": 0.042042042042042045,
+      "supported_safe_floor_failure_fraction": 0.03153153153153153,
+      "growth_rmse": 0.0938126301372847,
+      "benefit_rmse": 0.021352317393442958
+    },
+    {
+      "forecast": "uniform",
+      "phase": "protection",
+      "rows": 360,
+      "original_scenarios": 119,
+      "growth_bias": 0.00391505053956294,
+      "benefit_bias": -4.1669008468491035e-05,
+      "brier": 0.0,
+      "predicted_positive_realized_nonpositive_fraction": 0.0,
+      "directional_support_miss_fraction": 0.008403361344537815,
+      "supported_safe_floor_failure_fraction": 0.008403361344537815,
+      "growth_rmse": 0.08234519054994292,
+      "benefit_rmse": 0.02439032739771816
+    },
+    {
+      "forecast": "uniform",
+      "phase": "hold",
+      "rows": 270,
+      "original_scenarios": 90,
+      "growth_bias": -0.002746472066916951,
+      "benefit_bias": 0.0,
+      "brier": 0.0,
+      "predicted_positive_realized_nonpositive_fraction": 0.0,
+      "directional_support_miss_fraction": 0.0125,
+      "supported_safe_floor_failure_fraction": 0.0125,
+      "growth_rmse": 0.09097625740326305,
+      "benefit_rmse": 0.0
+    },
+    {
+      "forecast": "uniform",
+      "phase": "referral",
+      "rows": 0,
+      "original_scenarios": 0,
+      "growth_bias": null,
+      "benefit_bias": null,
+      "brier": null,
+      "predicted_positive_realized_nonpositive_fraction": null,
+      "directional_support_miss_fraction": null,
+      "supported_safe_floor_failure_fraction": null,
+      "growth_rmse": null,
+      "benefit_rmse": null
+    },
+    {
+      "forecast": "uniform",
+      "phase": "mitigation_trade",
+      "rows": 108,
+      "original_scenarios": 108,
+      "growth_bias": -0.008007553294533041,
+      "benefit_bias": 0.0007866949574155902,
+      "brier": 1.0046939300411521e-06,
+      "predicted_positive_realized_nonpositive_fraction": 0.0,
+      "directional_support_miss_fraction": 0.0,
+      "supported_safe_floor_failure_fraction": 0.0,
+      "growth_rmse": 0.05187136575344267,
+      "benefit_rmse": 0.04012386068179729
+    },
+    {
+      "forecast": "uniform",
+      "phase": "mitigation_hold",
+      "rows": 1,
+      "original_scenarios": 1,
+      "growth_bias": 0.257723877930561,
+      "benefit_bias": 5.7824115865893565e-18,
+      "brier": 0.0,
+      "predicted_positive_realized_nonpositive_fraction": 0.0,
+      "directional_support_miss_fraction": 1.0,
+      "supported_safe_floor_failure_fraction": 0.0,
+      "growth_rmse": 0.257723877930561,
+      "benefit_rmse": 5.7824115865893565e-18
+    },
+    {
+      "forecast": "shrink_conditional",
+      "phase": "inception",
+      "rows": 0,
+      "original_scenarios": 0,
+      "growth_bias": null,
+      "benefit_bias": null,
+      "brier": null,
+      "predicted_positive_realized_nonpositive_fraction": null,
+      "directional_support_miss_fraction": null,
+      "supported_safe_floor_failure_fraction": null,
+      "growth_rmse": null,
+      "benefit_rmse": null
+    },
+    {
+      "forecast": "shrink_conditional",
+      "phase": "growth",
+      "rows": 284,
+      "original_scenarios": 111,
+      "growth_bias": 0.017681934447377205,
+      "benefit_bias": 0.003087198471037307,
+      "brier": 0.0,
+      "predicted_positive_realized_nonpositive_fraction": 0.38465250965250963,
+      "directional_support_miss_fraction": 0.042042042042042045,
+      "supported_safe_floor_failure_fraction": 0.03153153153153153,
+      "growth_rmse": 0.09313250016243986,
+      "benefit_rmse": 0.021263211974695103
+    },
+    {
+      "forecast": "shrink_conditional",
+      "phase": "protection",
+      "rows": 360,
+      "original_scenarios": 119,
+      "growth_bias": 0.0036589693144767465,
+      "benefit_bias": 5.112046697845779e-05,
+      "brier": 0.0,
+      "predicted_positive_realized_nonpositive_fraction": 0.0,
+      "directional_support_miss_fraction": 0.008403361344537815,
+      "supported_safe_floor_failure_fraction": 0.008403361344537815,
+      "growth_rmse": 0.08182523145534912,
+      "benefit_rmse": 0.024410654003671657
+    },
+    {
+      "forecast": "shrink_conditional",
+      "phase": "hold",
+      "rows": 270,
+      "original_scenarios": 90,
+      "growth_bias": -0.0020766572094508694,
+      "benefit_bias": 0.0,
+      "brier": 0.0,
+      "predicted_positive_realized_nonpositive_fraction": 0.0,
+      "directional_support_miss_fraction": 0.0125,
+      "supported_safe_floor_failure_fraction": 0.0125,
+      "growth_rmse": 0.09080615935729142,
+      "benefit_rmse": 0.0
+    },
+    {
+      "forecast": "shrink_conditional",
+      "phase": "referral",
+      "rows": 0,
+      "original_scenarios": 0,
+      "growth_bias": null,
+      "benefit_bias": null,
+      "brier": null,
+      "predicted_positive_realized_nonpositive_fraction": null,
+      "directional_support_miss_fraction": null,
+      "supported_safe_floor_failure_fraction": null,
+      "growth_rmse": null,
+      "benefit_rmse": null
+    },
+    {
+      "forecast": "shrink_conditional",
+      "phase": "mitigation_trade",
+      "rows": 108,
+      "original_scenarios": 108,
+      "growth_bias": -0.00905157666845847,
+      "benefit_bias": 0.001707789544874468,
+      "brier": 1.3308983016002064e-06,
+      "predicted_positive_realized_nonpositive_fraction": 0.009259259259259259,
+      "directional_support_miss_fraction": 0.0,
+      "supported_safe_floor_failure_fraction": 0.0,
+      "growth_rmse": 0.05194385494208656,
+      "benefit_rmse": 0.04006595426520126
+    },
+    {
+      "forecast": "shrink_conditional",
+      "phase": "mitigation_hold",
+      "rows": 1,
+      "original_scenarios": 1,
+      "growth_bias": 0.2554784394306571,
+      "benefit_bias": 2.5556724593017493e-18,
+      "brier": 0.0,
+      "predicted_positive_realized_nonpositive_fraction": 0.0,
+      "directional_support_miss_fraction": 1.0,
+      "supported_safe_floor_failure_fraction": 0.0,
+      "growth_rmse": 0.2554784394306571,
+      "benefit_rmse": 2.5556724593017493e-18
+    },
+    {
+      "forecast": "id_block_1",
+      "phase": "inception",
+      "rows": 0,
+      "original_scenarios": 0,
+      "growth_bias": null,
+      "benefit_bias": null,
+      "brier": null,
+      "predicted_positive_realized_nonpositive_fraction": null,
+      "directional_support_miss_fraction": null,
+      "supported_safe_floor_failure_fraction": null,
+      "growth_rmse": null,
+      "benefit_rmse": null
+    },
+    {
+      "forecast": "id_block_1",
+      "phase": "growth",
+      "rows": 284,
+      "original_scenarios": 111,
+      "growth_bias": 0.01733760855807474,
+      "benefit_bias": 0.0014782718183986656,
+      "brier": 0.0,
+      "predicted_positive_realized_nonpositive_fraction": 0.38465250965250963,
+      "directional_support_miss_fraction": 0.042042042042042045,
+      "supported_safe_floor_failure_fraction": 0.03153153153153153,
+      "growth_rmse": 0.09481051711059404,
+      "benefit_rmse": 0.021370998916322867
+    },
+    {
+      "forecast": "id_block_1",
+      "phase": "protection",
+      "rows": 360,
+      "original_scenarios": 119,
+      "growth_bias": 0.007482907777560251,
+      "benefit_bias": -0.0010059100478423592,
+      "brier": 0.0,
+      "predicted_positive_realized_nonpositive_fraction": 0.011377884487128185,
+      "directional_support_miss_fraction": 0.008403361344537815,
+      "supported_safe_floor_failure_fraction": 0.008403361344537815,
+      "growth_rmse": 0.08299037370649046,
+      "benefit_rmse": 0.024454767873075094
+    },
+    {
+      "forecast": "id_block_1",
+      "phase": "hold",
+      "rows": 270,
+      "original_scenarios": 90,
+      "growth_bias": -0.00257875711147771,
+      "benefit_bias": 0.0,
+      "brier": 0.0,
+      "predicted_positive_realized_nonpositive_fraction": 0.0,
+      "directional_support_miss_fraction": 0.0125,
+      "supported_safe_floor_failure_fraction": 0.0125,
+      "growth_rmse": 0.09151540266464954,
+      "benefit_rmse": 0.0
+    },
+    {
+      "forecast": "id_block_1",
+      "phase": "referral",
+      "rows": 0,
+      "original_scenarios": 0,
+      "growth_bias": null,
+      "benefit_bias": null,
+      "brier": null,
+      "predicted_positive_realized_nonpositive_fraction": null,
+      "directional_support_miss_fraction": null,
+      "supported_safe_floor_failure_fraction": null,
+      "growth_rmse": null,
+      "benefit_rmse": null
+    },
+    {
+      "forecast": "id_block_1",
+      "phase": "mitigation_trade",
+      "rows": 108,
+      "original_scenarios": 108,
+      "growth_bias": -0.008494350155769942,
+      "benefit_bias": 0.0068964565617902,
+      "brier": 9.04224537037037e-06,
+      "predicted_positive_realized_nonpositive_fraction": 0.0,
+      "directional_support_miss_fraction": 0.0,
+      "supported_safe_floor_failure_fraction": 0.0,
+      "growth_rmse": 0.052014913196774745,
+      "benefit_rmse": 0.04150177139085326
+    },
+    {
+      "forecast": "id_block_1",
+      "phase": "mitigation_hold",
+      "rows": 1,
+      "original_scenarios": 1,
+      "growth_bias": 0.2597930703651278,
+      "benefit_bias": 1.040834085586084e-17,
+      "brier": 0.0,
+      "predicted_positive_realized_nonpositive_fraction": 0.0,
+      "directional_support_miss_fraction": 1.0,
+      "supported_safe_floor_failure_fraction": 0.0,
+      "growth_rmse": 0.2597930703651278,
+      "benefit_rmse": 1.040834085586084e-17
+    },
+    {
+      "forecast": "id_block_2",
+      "phase": "inception",
+      "rows": 0,
+      "original_scenarios": 0,
+      "growth_bias": null,
+      "benefit_bias": null,
+      "brier": null,
+      "predicted_positive_realized_nonpositive_fraction": null,
+      "directional_support_miss_fraction": null,
+      "supported_safe_floor_failure_fraction": null,
+      "growth_rmse": null,
+      "benefit_rmse": null
+    },
+    {
+      "forecast": "id_block_2",
+      "phase": "growth",
+      "rows": 284,
+      "original_scenarios": 111,
+      "growth_bias": 0.019256682768597475,
+      "benefit_bias": 0.003953238279517976,
+      "brier": 0.0,
+      "predicted_positive_realized_nonpositive_fraction": 0.36776061776061775,
+      "directional_support_miss_fraction": 0.042042042042042045,
+      "supported_safe_floor_failure_fraction": 0.03153153153153153,
+      "growth_rmse": 0.09403485023180794,
+      "benefit_rmse": 0.021638115122774686
+    },
+    {
+      "forecast": "id_block_2",
+      "phase": "protection",
+      "rows": 360,
+      "original_scenarios": 119,
+      "growth_bias": -0.001911702699363195,
+      "benefit_bias": 0.0017825261173170836,
+      "brier": 0.0,
+      "predicted_positive_realized_nonpositive_fraction": 0.10742296918767506,
+      "directional_support_miss_fraction": 0.008403361344537815,
+      "supported_safe_floor_failure_fraction": 0.008403361344537815,
+      "growth_rmse": 0.08226199376832982,
+      "benefit_rmse": 0.024856270238927572
+    },
+    {
+      "forecast": "id_block_2",
+      "phase": "hold",
+      "rows": 270,
+      "original_scenarios": 90,
+      "growth_bias": -0.0075490989522412795,
+      "benefit_bias": 0.0,
+      "brier": 0.0,
+      "predicted_positive_realized_nonpositive_fraction": 0.0,
+      "directional_support_miss_fraction": 0.0125,
+      "supported_safe_floor_failure_fraction": 0.0125,
+      "growth_rmse": 0.09251274969384946,
+      "benefit_rmse": 0.0
+    },
+    {
+      "forecast": "id_block_2",
+      "phase": "referral",
+      "rows": 0,
+      "original_scenarios": 0,
+      "growth_bias": null,
+      "benefit_bias": null,
+      "brier": null,
+      "predicted_positive_realized_nonpositive_fraction": null,
+      "directional_support_miss_fraction": null,
+      "supported_safe_floor_failure_fraction": null,
+      "growth_rmse": null,
+      "benefit_rmse": null
+    },
+    {
+      "forecast": "id_block_2",
+      "phase": "mitigation_trade",
+      "rows": 108,
+      "original_scenarios": 108,
+      "growth_bias": -0.006425750876773493,
+      "benefit_bias": -0.009175549298960054,
+      "brier": 0.0,
+      "predicted_positive_realized_nonpositive_fraction": 0.0,
+      "directional_support_miss_fraction": 0.0,
+      "supported_safe_floor_failure_fraction": 0.0,
+      "growth_rmse": 0.05114994314974455,
+      "benefit_rmse": 0.04091512447444663
+    },
+    {
+      "forecast": "id_block_2",
+      "phase": "mitigation_hold",
+      "rows": 1,
+      "original_scenarios": 1,
+      "growth_bias": 0.2556845937458279,
+      "benefit_bias": 3.4694469519536126e-18,
+      "brier": 0.0,
+      "predicted_positive_realized_nonpositive_fraction": 0.0,
+      "directional_support_miss_fraction": 1.0,
+      "supported_safe_floor_failure_fraction": 0.0,
+      "growth_rmse": 0.2556845937458279,
+      "benefit_rmse": 3.4694469519536126e-18
+    },
+    {
+      "forecast": "id_block_3",
+      "phase": "inception",
+      "rows": 0,
+      "original_scenarios": 0,
+      "growth_bias": null,
+      "benefit_bias": null,
+      "brier": null,
+      "predicted_positive_realized_nonpositive_fraction": null,
+      "directional_support_miss_fraction": null,
+      "supported_safe_floor_failure_fraction": null,
+      "growth_rmse": null,
+      "benefit_rmse": null
+    },
+    {
+      "forecast": "id_block_3",
+      "phase": "growth",
+      "rows": 284,
+      "original_scenarios": 111,
+      "growth_bias": 0.01547310151050294,
+      "benefit_bias": 0.003316952213210197,
+      "brier": 0.0,
+      "predicted_positive_realized_nonpositive_fraction": 0.3554483054483054,
+      "directional_support_miss_fraction": 0.042042042042042045,
+      "supported_safe_floor_failure_fraction": 0.03153153153153153,
+      "growth_rmse": 0.09526692150139485,
+      "benefit_rmse": 0.021924481374589178
+    },
+    {
+      "forecast": "id_block_3",
+      "phase": "protection",
+      "rows": 360,
+      "original_scenarios": 119,
+      "growth_bias": 0.006173946540491768,
+      "benefit_bias": -0.0009016230948801986,
+      "brier": 0.0,
+      "predicted_positive_realized_nonpositive_fraction": 0.018180605575563558,
+      "directional_support_miss_fraction": 0.008403361344537815,
+      "supported_safe_floor_failure_fraction": 0.008403361344537815,
+      "growth_rmse": 0.08396246616498032,
+      "benefit_rmse": 0.02445590820120892
+    },
+    {
+      "forecast": "id_block_3",
+      "phase": "hold",
+      "rows": 270,
+      "original_scenarios": 90,
+      "growth_bias": 0.0018884398629681449,
+      "benefit_bias": 0.0,
+      "brier": 0.0,
+      "predicted_positive_realized_nonpositive_fraction": 0.0,
+      "directional_support_miss_fraction": 0.0125,
+      "supported_safe_floor_failure_fraction": 0.0125,
+      "growth_rmse": 0.09123929617894178,
+      "benefit_rmse": 0.0
+    },
+    {
+      "forecast": "id_block_3",
+      "phase": "referral",
+      "rows": 0,
+      "original_scenarios": 0,
+      "growth_bias": null,
+      "benefit_bias": null,
+      "brier": null,
+      "predicted_positive_realized_nonpositive_fraction": null,
+      "directional_support_miss_fraction": null,
+      "supported_safe_floor_failure_fraction": null,
+      "growth_rmse": null,
+      "benefit_rmse": null
+    },
+    {
+      "forecast": "id_block_3",
+      "phase": "mitigation_trade",
+      "rows": 108,
+      "original_scenarios": 108,
+      "growth_bias": -0.00910255885105569,
+      "benefit_bias": 0.004639177609416623,
+      "brier": 0.0,
+      "predicted_positive_realized_nonpositive_fraction": 0.0,
+      "directional_support_miss_fraction": 0.0,
+      "supported_safe_floor_failure_fraction": 0.0,
+      "growth_rmse": 0.05282027399195764,
+      "benefit_rmse": 0.04067875796449996
+    },
+    {
+      "forecast": "id_block_3",
+      "phase": "mitigation_hold",
+      "rows": 1,
+      "original_scenarios": 1,
+      "growth_bias": 0.2576939696807273,
+      "benefit_bias": 3.469446951953611e-18,
+      "brier": 0.0,
+      "predicted_positive_realized_nonpositive_fraction": 0.0,
+      "directional_support_miss_fraction": 1.0,
+      "supported_safe_floor_failure_fraction": 0.0,
+      "growth_rmse": 0.2576939696807273,
+      "benefit_rmse": 3.469446951953611e-18
+    }
+  ],
+  "decision": [
+    {
+      "phase": "inception",
+      "rows": 120,
+      "original_scenarios": 120,
+      "paired_score_bias": -0.00038128640518538226,
+      "paired_score_rmse": 0.07516007813826667,
+      "directional_support_miss_fraction": 0.0,
+      "supported_safe_floor_failure_fraction": 0.0
+    },
+    {
+      "phase": "growth",
+      "rows": 284,
+      "original_scenarios": 111,
+      "paired_score_bias": 0.002672963672494312,
+      "paired_score_rmse": 0.021391403696629913,
+      "directional_support_miss_fraction": 0.042042042042042045,
+      "supported_safe_floor_failure_fraction": 0.03153153153153153
+    },
+    {
+      "phase": "protection",
+      "rows": 360,
+      "original_scenarios": 119,
+      "paired_score_bias": -0.0007571073006278736,
+      "paired_score_rmse": 0.024363488995174015,
+      "directional_support_miss_fraction": 0.008403361344537815,
+      "supported_safe_floor_failure_fraction": 0.008403361344537815
+    },
+    {
+      "phase": "hold",
+      "rows": 270,
+      "original_scenarios": 90,
+      "paired_score_bias": 0.0,
+      "paired_score_rmse": 0.0,
+      "directional_support_miss_fraction": 0.0125,
+      "supported_safe_floor_failure_fraction": 0.0125
+    },
+    {
+      "phase": "referral",
+      "rows": 0,
+      "original_scenarios": 0,
+      "paired_score_bias": null,
+      "paired_score_rmse": null,
+      "directional_support_miss_fraction": null,
+      "supported_safe_floor_failure_fraction": null
+    },
+    {
+      "phase": "mitigation_trade",
+      "rows": 108,
+      "original_scenarios": 108,
+      "paired_score_bias": -0.0017198700361180587,
+      "paired_score_rmse": 0.0403487724916089,
+      "directional_support_miss_fraction": 0.0,
+      "supported_safe_floor_failure_fraction": 0.0
+    },
+    {
+      "phase": "mitigation_hold",
+      "rows": 1,
+      "original_scenarios": 1,
+      "paired_score_bias": 5.7824115865893565e-18,
+      "paired_score_rmse": 5.7824115865893565e-18,
+      "directional_support_miss_fraction": 1.0,
+      "supported_safe_floor_failure_fraction": 0.0
+    }
+  ],
+  "reliability_bins": [
+    {
+      "forecast": "uniform",
+      "phase": "inception",
+      "bin": 0,
+      "rows": 120,
+      "original_scenarios": 120,
+      "scenario_equal_predicted": 0.0,
+      "scenario_equal_actual": 0.0
+    },
+    {
+      "forecast": "uniform",
+      "phase": "inception",
+      "bin": 1,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "uniform",
+      "phase": "inception",
+      "bin": 2,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "uniform",
+      "phase": "growth",
+      "bin": 0,
+      "rows": 284,
+      "original_scenarios": 111,
+      "scenario_equal_predicted": 0.0,
+      "scenario_equal_actual": 0.0
+    },
+    {
+      "forecast": "uniform",
+      "phase": "growth",
+      "bin": 1,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "uniform",
+      "phase": "growth",
+      "bin": 2,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "uniform",
+      "phase": "protection",
+      "bin": 0,
+      "rows": 360,
+      "original_scenarios": 119,
+      "scenario_equal_predicted": 0.0,
+      "scenario_equal_actual": 0.0
+    },
+    {
+      "forecast": "uniform",
+      "phase": "protection",
+      "bin": 1,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "uniform",
+      "phase": "protection",
+      "bin": 2,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "uniform",
+      "phase": "hold",
+      "bin": 0,
+      "rows": 270,
+      "original_scenarios": 90,
+      "scenario_equal_predicted": 0.0,
+      "scenario_equal_actual": 0.0
+    },
+    {
+      "forecast": "uniform",
+      "phase": "hold",
+      "bin": 1,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "uniform",
+      "phase": "hold",
+      "bin": 2,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "uniform",
+      "phase": "referral",
+      "bin": 0,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "uniform",
+      "phase": "referral",
+      "bin": 1,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "uniform",
+      "phase": "referral",
+      "bin": 2,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "uniform",
+      "phase": "mitigation_trade",
+      "bin": 0,
+      "rows": 108,
+      "original_scenarios": 108,
+      "scenario_equal_predicted": 9.645061728395061e-05,
+      "scenario_equal_actual": 0.0
+    },
+    {
+      "forecast": "uniform",
+      "phase": "mitigation_trade",
+      "bin": 1,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "uniform",
+      "phase": "mitigation_trade",
+      "bin": 2,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "uniform",
+      "phase": "mitigation_hold",
+      "bin": 0,
+      "rows": 1,
+      "original_scenarios": 1,
+      "scenario_equal_predicted": 0.0,
+      "scenario_equal_actual": 0.0
+    },
+    {
+      "forecast": "uniform",
+      "phase": "mitigation_hold",
+      "bin": 1,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "uniform",
+      "phase": "mitigation_hold",
+      "bin": 2,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "shrink_conditional",
+      "phase": "inception",
+      "bin": 0,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "shrink_conditional",
+      "phase": "inception",
+      "bin": 1,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "shrink_conditional",
+      "phase": "inception",
+      "bin": 2,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "shrink_conditional",
+      "phase": "growth",
+      "bin": 0,
+      "rows": 284,
+      "original_scenarios": 111,
+      "scenario_equal_predicted": 0.0,
+      "scenario_equal_actual": 0.0
+    },
+    {
+      "forecast": "shrink_conditional",
+      "phase": "growth",
+      "bin": 1,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "shrink_conditional",
+      "phase": "growth",
+      "bin": 2,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "shrink_conditional",
+      "phase": "protection",
+      "bin": 0,
+      "rows": 360,
+      "original_scenarios": 119,
+      "scenario_equal_predicted": 0.0,
+      "scenario_equal_actual": 0.0
+    },
+    {
+      "forecast": "shrink_conditional",
+      "phase": "protection",
+      "bin": 1,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "shrink_conditional",
+      "phase": "protection",
+      "bin": 2,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "shrink_conditional",
+      "phase": "hold",
+      "bin": 0,
+      "rows": 270,
+      "original_scenarios": 90,
+      "scenario_equal_predicted": 0.0,
+      "scenario_equal_actual": 0.0
+    },
+    {
+      "forecast": "shrink_conditional",
+      "phase": "hold",
+      "bin": 1,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "shrink_conditional",
+      "phase": "hold",
+      "bin": 2,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "shrink_conditional",
+      "phase": "referral",
+      "bin": 0,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "shrink_conditional",
+      "phase": "referral",
+      "bin": 1,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "shrink_conditional",
+      "phase": "referral",
+      "bin": 2,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "shrink_conditional",
+      "phase": "mitigation_trade",
+      "bin": 0,
+      "rows": 108,
+      "original_scenarios": 108,
+      "scenario_equal_predicted": 0.00011100960508993865,
+      "scenario_equal_actual": 0.0
+    },
+    {
+      "forecast": "shrink_conditional",
+      "phase": "mitigation_trade",
+      "bin": 1,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "shrink_conditional",
+      "phase": "mitigation_trade",
+      "bin": 2,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "shrink_conditional",
+      "phase": "mitigation_hold",
+      "bin": 0,
+      "rows": 1,
+      "original_scenarios": 1,
+      "scenario_equal_predicted": 0.0,
+      "scenario_equal_actual": 0.0
+    },
+    {
+      "forecast": "shrink_conditional",
+      "phase": "mitigation_hold",
+      "bin": 1,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "shrink_conditional",
+      "phase": "mitigation_hold",
+      "bin": 2,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_1",
+      "phase": "inception",
+      "bin": 0,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_1",
+      "phase": "inception",
+      "bin": 1,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_1",
+      "phase": "inception",
+      "bin": 2,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_1",
+      "phase": "growth",
+      "bin": 0,
+      "rows": 284,
+      "original_scenarios": 111,
+      "scenario_equal_predicted": 0.0,
+      "scenario_equal_actual": 0.0
+    },
+    {
+      "forecast": "id_block_1",
+      "phase": "growth",
+      "bin": 1,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_1",
+      "phase": "growth",
+      "bin": 2,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_1",
+      "phase": "protection",
+      "bin": 0,
+      "rows": 360,
+      "original_scenarios": 119,
+      "scenario_equal_predicted": 0.0,
+      "scenario_equal_actual": 0.0
+    },
+    {
+      "forecast": "id_block_1",
+      "phase": "protection",
+      "bin": 1,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_1",
+      "phase": "protection",
+      "bin": 2,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_1",
+      "phase": "hold",
+      "bin": 0,
+      "rows": 270,
+      "original_scenarios": 90,
+      "scenario_equal_predicted": 0.0,
+      "scenario_equal_actual": 0.0
+    },
+    {
+      "forecast": "id_block_1",
+      "phase": "hold",
+      "bin": 1,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_1",
+      "phase": "hold",
+      "bin": 2,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_1",
+      "phase": "referral",
+      "bin": 0,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_1",
+      "phase": "referral",
+      "bin": 1,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_1",
+      "phase": "referral",
+      "bin": 2,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_1",
+      "phase": "mitigation_trade",
+      "bin": 0,
+      "rows": 108,
+      "original_scenarios": 108,
+      "scenario_equal_predicted": 0.00028935185185185184,
+      "scenario_equal_actual": 0.0
+    },
+    {
+      "forecast": "id_block_1",
+      "phase": "mitigation_trade",
+      "bin": 1,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_1",
+      "phase": "mitigation_trade",
+      "bin": 2,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_1",
+      "phase": "mitigation_hold",
+      "bin": 0,
+      "rows": 1,
+      "original_scenarios": 1,
+      "scenario_equal_predicted": 0.0,
+      "scenario_equal_actual": 0.0
+    },
+    {
+      "forecast": "id_block_1",
+      "phase": "mitigation_hold",
+      "bin": 1,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_1",
+      "phase": "mitigation_hold",
+      "bin": 2,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_2",
+      "phase": "inception",
+      "bin": 0,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_2",
+      "phase": "inception",
+      "bin": 1,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_2",
+      "phase": "inception",
+      "bin": 2,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_2",
+      "phase": "growth",
+      "bin": 0,
+      "rows": 284,
+      "original_scenarios": 111,
+      "scenario_equal_predicted": 0.0,
+      "scenario_equal_actual": 0.0
+    },
+    {
+      "forecast": "id_block_2",
+      "phase": "growth",
+      "bin": 1,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_2",
+      "phase": "growth",
+      "bin": 2,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_2",
+      "phase": "protection",
+      "bin": 0,
+      "rows": 360,
+      "original_scenarios": 119,
+      "scenario_equal_predicted": 0.0,
+      "scenario_equal_actual": 0.0
+    },
+    {
+      "forecast": "id_block_2",
+      "phase": "protection",
+      "bin": 1,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_2",
+      "phase": "protection",
+      "bin": 2,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_2",
+      "phase": "hold",
+      "bin": 0,
+      "rows": 270,
+      "original_scenarios": 90,
+      "scenario_equal_predicted": 0.0,
+      "scenario_equal_actual": 0.0
+    },
+    {
+      "forecast": "id_block_2",
+      "phase": "hold",
+      "bin": 1,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_2",
+      "phase": "hold",
+      "bin": 2,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_2",
+      "phase": "referral",
+      "bin": 0,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_2",
+      "phase": "referral",
+      "bin": 1,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_2",
+      "phase": "referral",
+      "bin": 2,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_2",
+      "phase": "mitigation_trade",
+      "bin": 0,
+      "rows": 108,
+      "original_scenarios": 108,
+      "scenario_equal_predicted": 0.0,
+      "scenario_equal_actual": 0.0
+    },
+    {
+      "forecast": "id_block_2",
+      "phase": "mitigation_trade",
+      "bin": 1,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_2",
+      "phase": "mitigation_trade",
+      "bin": 2,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_2",
+      "phase": "mitigation_hold",
+      "bin": 0,
+      "rows": 1,
+      "original_scenarios": 1,
+      "scenario_equal_predicted": 0.0,
+      "scenario_equal_actual": 0.0
+    },
+    {
+      "forecast": "id_block_2",
+      "phase": "mitigation_hold",
+      "bin": 1,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_2",
+      "phase": "mitigation_hold",
+      "bin": 2,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_3",
+      "phase": "inception",
+      "bin": 0,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_3",
+      "phase": "inception",
+      "bin": 1,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_3",
+      "phase": "inception",
+      "bin": 2,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_3",
+      "phase": "growth",
+      "bin": 0,
+      "rows": 284,
+      "original_scenarios": 111,
+      "scenario_equal_predicted": 0.0,
+      "scenario_equal_actual": 0.0
+    },
+    {
+      "forecast": "id_block_3",
+      "phase": "growth",
+      "bin": 1,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_3",
+      "phase": "growth",
+      "bin": 2,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_3",
+      "phase": "protection",
+      "bin": 0,
+      "rows": 360,
+      "original_scenarios": 119,
+      "scenario_equal_predicted": 0.0,
+      "scenario_equal_actual": 0.0
+    },
+    {
+      "forecast": "id_block_3",
+      "phase": "protection",
+      "bin": 1,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_3",
+      "phase": "protection",
+      "bin": 2,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_3",
+      "phase": "hold",
+      "bin": 0,
+      "rows": 270,
+      "original_scenarios": 90,
+      "scenario_equal_predicted": 0.0,
+      "scenario_equal_actual": 0.0
+    },
+    {
+      "forecast": "id_block_3",
+      "phase": "hold",
+      "bin": 1,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_3",
+      "phase": "hold",
+      "bin": 2,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_3",
+      "phase": "referral",
+      "bin": 0,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_3",
+      "phase": "referral",
+      "bin": 1,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_3",
+      "phase": "referral",
+      "bin": 2,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_3",
+      "phase": "mitigation_trade",
+      "bin": 0,
+      "rows": 108,
+      "original_scenarios": 108,
+      "scenario_equal_predicted": 0.0,
+      "scenario_equal_actual": 0.0
+    },
+    {
+      "forecast": "id_block_3",
+      "phase": "mitigation_trade",
+      "bin": 1,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_3",
+      "phase": "mitigation_trade",
+      "bin": 2,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_3",
+      "phase": "mitigation_hold",
+      "bin": 0,
+      "rows": 1,
+      "original_scenarios": 1,
+      "scenario_equal_predicted": 0.0,
+      "scenario_equal_actual": 0.0
+    },
+    {
+      "forecast": "id_block_3",
+      "phase": "mitigation_hold",
+      "bin": 1,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    },
+    {
+      "forecast": "id_block_3",
+      "phase": "mitigation_hold",
+      "bin": 2,
+      "rows": 0,
+      "original_scenarios": 0,
+      "scenario_equal_predicted": null,
+      "scenario_equal_actual": null
+    }
+  ],
+  "interpretation": "Scenario-equal descriptive OOF diagnostics; no conditional calibration, probability guarantee or independent ensemble samples. Mitigation pairedscore is an annotation, not its maxmin ranking objective. Pending has no fresh prediction."
+}

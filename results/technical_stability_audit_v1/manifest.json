@@ -1,0 +1,127 @@
+{
+  "status": "passed",
+  "completed_utc": "2026-10-19T06:46:40.660221+00:00",
+  "plan_sha256": "6a1c060490f5dd44917b5832a0ff63b45211cfbf0daba1cd5b363aaccdb549e2",
+  "source_freeze_sha256": "798b6e8afe03c3c53e3f1b72206578ad561a8bf97f9a283bd97cab11850d5edc",
+  "audit_sources_and_inputs": {
+    "scripts/audit_technical_stability.py": "18945bce3047815915d49556bb3cd5c23a3a31ac7a3e251c1be16cf40e708839",
+    "tests/test_technical_stability_audit.py": "304481d069c58a34161071123e46ea6563b630e6da9d233822bf99ce97703578",
+    "scripts/audit_state_budget_rebuild.py": "8451a30832cf7aae27e008aae13e8107372095fd65e1f29d597fab304cb6167e",
+    "scripts/audit_state_budget_mitigation.py": "b477c4d0d4ef0be6c690df1da5f9a89ba2715ce2fe16ac5ec72cef6ab7df80f0",
+    "src/safeinvest/data.py": "70e511fd05c6e23fd6b8a72f1dc165426fc77a5eb4dbd8a3c13b839bb305a75f",
+    "src/safeinvest/__init__.py": "dcef1e2e1f0f7cd5426988f0f27408eebb9ded3fb32c961f8f23e2edfb6e4ad2",
+    "data/SafeInvest_Synthetic_Data.csv": "def0177704bf6cb98cec6da325b34208750d988f6ad97ec4a706a0d39e6f82c0",
+    "docs/refit_stability_protocol.json": "8e9ab035073b91e4004c76c41296c56665d2199620e92d8cc0eb4eaca7a4efae",
+    "results/model_review/refit_stability_v1/static_refits.json.gz": "1621772a0a0d0dfb822692a21ff5b8fd15b90b0977c9ba6f78f9bfd10bf87fa7",
+    "docs/technical_stability_audit_plan.json": "6a1c060490f5dd44917b5832a0ff63b45211cfbf0daba1cd5b363aaccdb549e2",
+    "results/state_budget_stability_v1/manifest.json": "0667dc83edd3c7723f84e8db872efe095a4852111beb00ffdf19f6dba1c39d66",
+    "results/state_budget_mitigation_stability_v1/manifest.json": "6290ad6ef867d6b4f5a20162d2d50008655b3d3c26087611633b30f7d0ad635c"
+  },
+  "checks": 3143430,
+  "maximum_absolute_error": 9.094947017729282e-13,
+  "counts": [
+    {
+      "study": "V2",
+      "repeat_id": 1,
+      "groups": 200,
+      "path_rows": 4800,
+      "financial_accounts": 4512,
+      "periods": 135360,
+      "null_path_rows": 288,
+      "array_fields": 11196
+    },
+    {
+      "study": "V2",
+      "repeat_id": 2,
+      "groups": 200,
+      "path_rows": 4800,
+      "financial_accounts": 4704,
+      "periods": 141120,
+      "null_path_rows": 96,
+      "array_fields": 11716
+    },
+    {
+      "study": "V2",
+      "repeat_id": 3,
+      "groups": 200,
+      "path_rows": 4800,
+      "financial_accounts": 4704,
+      "periods": 141120,
+      "null_path_rows": 96,
+      "array_fields": 11716
+    },
+    {
+      "study": "V2",
+      "repeat_id": 4,
+      "groups": 200,
+      "path_rows": 4800,
+      "financial_accounts": 4704,
+      "periods": 141120,
+      "null_path_rows": 96,
+      "array_fields": 11716
+    },
+    {
+      "study": "V2",
+      "repeat_id": 5,
+      "groups": 200,
+      "path_rows": 4800,
+      "financial_accounts": 4488,
+      "periods": 134640,
+      "null_path_rows": 312,
+      "array_fields": 11105
+    },
+    {
+      "study": "V2b",
+      "repeat_id": 1,
+      "groups": 200,
+      "path_rows": 4800,
+      "financial_accounts": 4608,
+      "periods": 138240,
+      "null_path_rows": 192,
+      "array_fields": 13643
+    },
+    {
+      "study": "V2b",
+      "repeat_id": 2,
+      "groups": 200,
+      "path_rows": 4800,
+      "financial_accounts": 4800,
+      "periods": 144000,
+      "null_path_rows": 0,
+      "array_fields": 14265
+    },
+    {
+      "study": "V2b",
+      "repeat_id": 3,
+      "groups": 200,
+      "path_rows": 4800,
+      "financial_accounts": 4800,
+      "periods": 144000,
+      "null_path_rows": 0,
+      "array_fields": 14265
+    },
+    {
+      "study": "V2b",
+      "repeat_id": 4,
+      "groups": 200,
+      "path_rows": 4800,
+      "financial_accounts": 4800,
+      "periods": 144000,
+      "null_path_rows": 0,
+      "array_fields": 14265
+    },
+    {
+      "study": "V2b",
+      "repeat_id": 5,
+      "groups": 200,
+      "path_rows": 4800,
+      "financial_accounts": 4608,
+      "periods": 138240,
+      "null_path_rows": 192,
+      "array_fields": 13643
+    }
+  ],
+  "final_scenarios_loaded": false,
+  "new_model_runs": 0,
+  "scope": "All financial accounts, exact fees/CPI/originalpeak/MDD, metric rows/NULL, inner selection and refit status. Shares frozen independent ledgers. Does not recompute every forecast/action menu; dependent repeats are not new independent scenarios."
+}
