@@ -1,0 +1,9 @@
+{"completed": "B_guard", "status": "preinvestment_review", "breaches": 0}
+{"completed": "B_same_target_annual", "status": "funded", "breaches": 9}
+{"completed": "B_same_target_pending", "status": "funded", "breaches": 9}
+{"completed": "B_exact_thirds_annual", "status": "funded", "breaches": 20}
+{"completed": "E_guard", "status": "preinvestment_review", "breaches": 0}
+{"completed": "E_same_target_annual", "status": "funded", "breaches": 6}
+{"completed": "E_same_target_pending", "status": "funded", "breaches": 6}
+{"completed": "E_exact_thirds_annual", "status": "funded", "breaches": 0}
+{"status": "complete", "output": "/private/var/folders/wr/mdv3gpmn60v93f7_2jlssl7w0000gn/T/q1_guard_replay_wqsamg5q/results/q1_guard_generalization_v1", "manifest_sha256": "8c1c3354f0f36b83ce685273aca8b01e3312c6de53c51de64892d0fd2b5b00ac"}

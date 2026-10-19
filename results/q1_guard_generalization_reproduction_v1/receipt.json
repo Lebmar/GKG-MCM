@@ -1,0 +1,9 @@
+{
+  "status": "failed",
+  "started_utc": "2026-10-19T16:53:56.491533+00:00",
+  "original_manifest_sha256": "712dd569713aac37b5ee13d3b8dc0ab16a137d5d6ad6e2575a52aba85c695a1c",
+  "dependencies_copied": 13,
+  "scope": "same_source_isolated_replay",
+  "error": "Replay producer failed; see replay_stderr.txt",
+  "failed_utc": "2026-10-19T16:53:56.908085+00:00"
+}

@@ -1,0 +1,9 @@
+{
+  "status": "failed",
+  "started_utc": "2026-10-19T16:54:51.006849+00:00",
+  "original_manifest_sha256": "712dd569713aac37b5ee13d3b8dc0ab16a137d5d6ad6e2575a52aba85c695a1c",
+  "dependencies_copied": 14,
+  "scope": "same_source_isolated_replay",
+  "error": "'numpy.ndarray' object has no attribute 'files'",
+  "failed_utc": "2026-10-19T16:54:51.492379+00:00"
+}

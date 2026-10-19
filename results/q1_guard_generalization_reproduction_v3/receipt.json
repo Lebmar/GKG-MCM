@@ -1,0 +1,24 @@
+{
+  "status": "complete",
+  "started_utc": "2026-10-19T16:55:44.265246+00:00",
+  "original_manifest_sha256": "712dd569713aac37b5ee13d3b8dc0ab16a137d5d6ad6e2575a52aba85c695a1c",
+  "dependencies_copied": 14,
+  "scope": "same_source_isolated_replay",
+  "completed_utc": "2026-10-19T16:55:44.841391+00:00",
+  "compared_outputs": {
+    "comparisons.json": "byte_exact",
+    "initial_witnesses.json": "byte_exact",
+    "paired_paths.csv.gz": "byte_exact",
+    "path_metrics.csv.gz": "byte_exact",
+    "summary.csv.gz": "byte_exact",
+    "trace_groups.json": "byte_exact",
+    "traces.npz": "array_exact"
+  },
+  "npz_array_fields": 210,
+  "manifest_normalized_fields": [
+    "started_utc",
+    "completed_utc",
+    "outputs_sha256"
+  ],
+  "note": "Same-source/same-data computational reproduction; not statistical validation."
+}

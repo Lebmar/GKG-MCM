@@ -774,3 +774,39 @@ the pre-final Git checkpoint; its189 snapshots are preserved. Legacy
 src/report/output remain unchanged from7bca10b. The final evaluation is
 procedurally complete; reliable autonomous service and future10% risk control
 are not established. No paper, codeZIP or CMT submission is made in this phase.
+
+## 2026-10-20 Q1 guard generalization addendum (development-only)
+
+After submission closure, one additive question remained: does the locked V2b
+protective rule extend to the other two assigned profiles? A new protocol
+(`docs/q1_guard_generalization_protocol.json`) and source freeze were fixed
+before any numeric run. The locked `release_0.5_uniform` candidate was reused
+unchanged with each profile's own target, horizon and loss limit on development
+scenarios1-120 only; the loader's allow_final gate stayed closed. No refit,
+selection or threshold change occurred, and no locked artifact was modified.
+
+Both guard arms end in pre-investment Review: the declared one-year support
+floor ((1-L/2) of current real wealth; B 87.5, E 82.5, vs C's passing 80.0)
+admits no feasible initial allocation for the Conservative25/30/45 or
+Growth65/5/30 targets on the calendar development support. The safeguard
+therefore generalizes as a stricter funding gate, not as an executed policy;
+no funded B/E guard paths exist and no breach-reduction claim is made for
+them. The static references independently reproduce the previously audited
+development5x3 screen exactly (B Conservative9/120, E Growth6/120 breaches).
+
+An independent audit (`results/q1_guard_generalization_v1/independent_audit.json`)
+recomputes every metric and summary from the saved arrays without importing
+the producer's metric/policy modules, checks the self-financing identity and
+fee convention on all960 path records, and passes10993 checks. Its first two
+attempts failed on auditor-side convention bugs (running-MDD reconstruction;
+first-crossing off-by-one); only the auditor changed. An isolated same-source
+replay (`results/q1_guard_generalization_reproduction_v3/`) reruns the producer
+in a fresh temporary workspace: all six deterministic artifacts match byte for
+byte and all210 NPZ array fields match exactly, with only declared manifest
+runtime fields normalized. Two earlier replay attempts failed on replay-script
+dependency/zip handling and are preserved unchanged. Eleven new focused unit
+tests pin the freeze gate, summary conventions, NULL handling and partitions;
+the full suite then passes1545 tests. Report-facing wording rules are recorded
+in `submission/Q1_GUARD_GENERALIZATION.md` and
+`docs/q1_guard_generalization_judgment.json`. This phase adds no market
+observations and no final-data access.

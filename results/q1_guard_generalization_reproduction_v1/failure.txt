@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/lebmar/Documents/ChatGPT/GKG数模/scripts/reproduce_q1_guard_generalization.py", line 125, in run
+    raise RuntimeError('Replay producer failed; see replay_stderr.txt')
+RuntimeError: Replay producer failed; see replay_stderr.txt

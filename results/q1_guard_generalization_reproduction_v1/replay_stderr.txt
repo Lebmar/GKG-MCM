@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/var/folders/wr/mdv3gpmn60v93f7_2jlssl7w0000gn/T/q1_guard_replay_acevwva0/scripts/run_q1_guard_generalization.py", line 340, in <module>
+    run(args.output)
+  File "/var/folders/wr/mdv3gpmn60v93f7_2jlssl7w0000gn/T/q1_guard_replay_acevwva0/scripts/run_q1_guard_generalization.py", line 233, in run
+    p, f = freeze_gate()
+           ^^^^^^^^^^^^^
+  File "/var/folders/wr/mdv3gpmn60v93f7_2jlssl7w0000gn/T/q1_guard_replay_acevwva0/scripts/run_q1_guard_generalization.py", line 76, in freeze_gate
+    raise RuntimeError('Source freeze does not exist; freeze sources before first numeric run')
+RuntimeError: Source freeze does not exist; freeze sources before first numeric run

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/lebmar/Documents/ChatGPT/GKG数模/scripts/reproduce_q1_guard_generalization.py", line 137, in run
+    npz_arrays += compare_npz(left, right)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/lebmar/Documents/ChatGPT/GKG数模/scripts/reproduce_q1_guard_generalization.py", line 66, in compare_npz
+    if set(la.files) != set(lb.files):
+           ^^^^^^^^
+AttributeError: 'numpy.ndarray' object has no attribute 'files'. Did you mean: 'fill'?
