@@ -9,4 +9,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m pip install -r requirements.txt
+      # Several replay tests exercise the project-venv interpreter path.
+      # Provide one so isolation tests run in CI as they do locally.
+      - run: python -m venv --system-site-packages .venv
       - run: PYTHONPATH=src python -m unittest discover -s tests -v
