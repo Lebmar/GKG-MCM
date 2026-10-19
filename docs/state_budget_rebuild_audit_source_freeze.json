@@ -1,0 +1,15 @@
+{
+  "version": "state-budget-rebuild-independent-audit-source-freeze-v1",
+  "execution_ready": true,
+  "frozen_utc": "2026-10-19T06:24:50.677544+00:00",
+  "plan_sha256": "53198e682736feccde02461a34fe53e01a7794268022b56baaaec071a3f7d87a",
+  "source_sha256": {
+    "scripts/audit_state_budget_rebuild.py": "8451a30832cf7aae27e008aae13e8107372095fd65e1f29d597fab304cb6167e",
+    "tests/test_audit_state_budget_rebuild.py": "bc8e2bab2d8bd3e6e8fc5c174ef491abc91a13af15d1c3e71ff9c4a9c1075ca6",
+    "docs/state_budget_rebuild_audit_plan.json": "53198e682736feccde02461a34fe53e01a7794268022b56baaaec071a3f7d87a",
+    "src/safeinvest/data.py": "70e511fd05c6e23fd6b8a72f1dc165426fc77a5eb4dbd8a3c13b839bb305a75f",
+    "src/safeinvest/__init__.py": "dcef1e2e1f0f7cd5426988f0f27408eebb9ded3fb32c961f8f23e2edfb6e4ad2"
+  },
+  "synthetic_tests_passed": 30,
+  "scope": "Root reviewed scalar fee/forecast/interval/paired scores/metadata/NULL/whole-policy selection and guarded loader, final summary schema adapter fixed before audit release; no original model/raw numerical read by auditor before freeze."
+}
