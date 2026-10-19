@@ -4,11 +4,10 @@
   "completed_utc": "2026-10-19T15:44:03.681751+00:00",
   "base_commit": "5139b3a54fa93d572779c678e6d77687452bb89f",
   "content_commit": "6874e0155a0a19733fc46d1cf1d502e29f33b96e",
-  "scope": "Additive submission closure: answer sheet, Q3 note, authoritative index, README alignment and v3 source ZIP; no model/final-output change.",
+  "scope": "Additive submission closure: answer sheet, Q3 note, authoritative index, README alignment and v3 source ZIP. The clean-ZIP fixed-table reproduction re-reads 121-180 only to verify saved outputs; it performs no new evaluation, fit, selection or parameter change.",
   "model_changed": false,
   "new_fits": 0,
   "new_selections": 0,
-  "new_final_reads": 0,
   "full_test_suite": {
     "command": "PYTHONPATH=src .venv/bin/python -m unittest discover -s tests -v",
     "tests_run": 1534,
@@ -113,5 +112,7 @@
     "The v3 ZIP contains the compact core and selected evidence; the full historical result archive is not included.",
     "Passing tests and byte reproduction prove implementation/closure integrity, not future market predictive validity."
   ],
-  "github_synced_utc": "2026-10-19T15:44:42.555358+00:00"
+  "github_synced_utc": "2026-10-19T15:44:42.555358+00:00",
+  "new_final_evaluations": 0,
+  "fixed_final_reproduction_read": true
 }
