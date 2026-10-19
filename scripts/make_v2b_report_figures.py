@@ -29,7 +29,7 @@ plt.rcParams.update({
 })
 
 colors = {"mitigation_main": "#1f4e79", "same_target_B": "#c55a11", "exact_thirds_annual": "#548235"}
-labels = {"mitigation_main": "V2b", "same_target_B": "Same-target B", "exact_thirds_annual": "Equal thirds"}
+labels = {"mitigation_main": "V2b", "same_target_B": "Same-target pending", "exact_thirds_annual": "Equal thirds"}
 
 fig, axes = plt.subplots(1, 2, figsize=(7.2, 3.1), gridspec_kw={"width_ratios": [1.0, 1.15]})
 

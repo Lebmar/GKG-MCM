@@ -270,6 +270,7 @@ customer/adviser; do not assume an adviser response, recovery reset or liquidati
 | Q1 menu/feasibility | [q1_context_assignments.csv](../results/model_review/joint_liquidity_refit_v1/q1_context_assignments.csv) |
 | Q3 stress summary | [summary.csv.gz](../results/state_budget_mitigation_stress_v1/summary.csv.gz) |
 | Customer text | [mitigation_customer_explanation_contract.json](../docs/mitigation_customer_explanation_contract.json) |
+| B/E funding-gate addendum (2026-10-20) | [Q1_GUARD_GENERALIZATION.md](Q1_GUARD_GENERALIZATION.md), [results](../results/q1_guard_generalization_v1/), [audit](../results/q1_guard_generalization_v1/independent_audit.json), [replay](../results/q1_guard_generalization_reproduction_v3/) |
 | Requirements closure | [technical_evidence_closure_2026_10_19.json](../docs/technical_evidence_closure_2026_10_19.json) |
 
 ## 6. Remaining limitations to disclose
