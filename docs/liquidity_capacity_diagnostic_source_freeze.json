@@ -1,0 +1,34 @@
+{
+  "version": "liquidity-capacity-diagnostic-source-freeze-v1",
+  "execution_ready": true,
+  "frozen_utc": "2026-10-19T07:00:47.939571+00:00",
+  "protocol_sha256": "8b92a11f76669c70fbdb6c99b0e39b2bef8692564e41451dc59dc391e5960c95",
+  "source_sha256": {
+    "research/diagnostics/liquidity_capacity.py": "49fa1c4837b4039e15694d19672ce0232b6ccc70b1e91316b38968139cc001af",
+    "research/diagnostics/q1_stability.py": "69bd3fc094293944b2b4f153ffb910554196d731426a745aab77ddfc0e15df2f",
+    "scripts/diagnose_liquidity_capacity.py": "44a2a39d7cd189f2d356818bf7eea8dd9b13c1cc64ee899963989dd447e5c0ae",
+    "src/safeinvest/__init__.py": "dcef1e2e1f0f7cd5426988f0f27408eebb9ded3fb32c961f8f23e2edfb6e4ad2",
+    "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a",
+    "src/safeinvest/data.py": "70e511fd05c6e23fd6b8a72f1dc165426fc77a5eb4dbd8a3c13b839bb305a75f",
+    "tests/test_liquidity_capacity.py": "3a7cb8dc2a3f234b218df6644124d790301ac2e6280530bc65befa4e1d8c74c7",
+    "tests/test_liquidity_capacity_runner.py": "d034dc0d01adfda167b758543b337058fe359e5e877c464f31d3fe49a8171804"
+  },
+  "input_sha256": {
+    "data/SafeInvest_Synthetic_Data.csv": "def0177704bf6cb98cec6da325b34208750d988f6ad97ec4a706a0d39e6f82c0",
+    "docs/joint_liquidity_refit_protocol.json": "1e92a4f7b374bd7437315c89e513a830f12211b54cb08d3c4341dffdc9f1e3f6",
+    "docs/liquidity_capacity_diagnostic_protocol.json": "8b92a11f76669c70fbdb6c99b0e39b2bef8692564e41451dc59dc391e5960c95",
+    "docs/liquidity_capacity_method_review.json": "3a2a50c7a604cf4b62ba3e2eecccf3b2cbd6aedeccb10af4ba4967afd2805da8",
+    "docs/q1_stability_diagnostic_protocol.json": "55daacaf420d8c7cda681e0881e868a80da8f3bb297fedb0db727760f6d5c746",
+    "docs/q1_stability_diagnostic_source_freeze.json": "42243f2cad209833287fd8c4c43aeffd04f81a014c6fac22fc85500909399ffc",
+    "requirements-research-pinned.txt": "a18dc21251d1dcdba4c19b4137ed62083bf4d82ed6ea8fefc4ae3cbd421f02ee",
+    "results/model_review/joint_liquidity_refit_v1/manifest.json": "28819dca54041e22ae53ac924b71e023c005f96cd73ca66d102b3a1ac20a4c99",
+    "results/model_review/joint_liquidity_refit_v1/independent_audit.json": "16339e76e41e07b6f37fbd0c88baff3ffe77d245e77258ef9bc8060fd79b3a15",
+    "results/model_review/joint_liquidity_refit_v1/static_refits.json": "f46236a5b3c49973cf6d4286b8f711a7ad44f39b0871c7605e5a18ce873038dd",
+    "results/q1_stability_diagnostic_v1/manifest.json": "b15c08f03c2dde008bb0d4eb01673b0a6e017fa122873f4b0655fdc7d1b74959",
+    "results/q1_stability_diagnostic_v1/independent_cache_audit.json": "f3cd42571fdf26eec691c5b37460f0b71939bfc84209e490a9b7b563a816e434",
+    "results/q1_stability_diagnostic_v1/own_horizon_oof_paths.csv.gz": "6c82eb99c289de6215d3294d2ffc3f3909e86a9c77da9fd62b6d8f30814cd6aa"
+  },
+  "focused_synthetic_tests": 10,
+  "market_value_access_during_preparation": false,
+  "parent_Q1_audit_status": "passed"
+}
