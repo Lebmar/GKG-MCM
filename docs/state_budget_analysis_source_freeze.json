@@ -1,0 +1,12 @@
+{
+  "version": "state-budget-saved-analysis-source-freeze-v1",
+  "execution_ready": true,
+  "frozen_utc": "2026-10-19T06:22:04.170763+00:00",
+  "protocol_sha256": "0c18be598aa5d7bbe2a7b92c32629e04426c4a28afafe5effa7359028dffd3ae",
+  "source_sha256": {
+    "scripts/analyze_state_budget_rebuild.py": "c46de0a1f5b524d6bfbf140a2defa16ce79a4662a0493a1de0dda3413e196595",
+    "tests/test_state_budget_analysis.py": "46b0822b445594c88192d5b5fd1c7ca4b61884abc922b5f3a370a0a08230c335"
+  },
+  "synthetic_tests_passed": 16,
+  "scope": "Root source reviewed matched cohorts, prediction timing/units, one-step paired counterfactual, relative tolerance and allNULL CSV schema; no new market/policy runs or selection."
+}
