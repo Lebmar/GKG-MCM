@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "phase": "complete",
+  "started_utc": "2026-10-19T07:38:28.134537+00:00",
+  "final_value_access_started": true,
+  "automatic_retry": false,
+  "receipt_sha256": "7929ea36e23c9b357a568b8d0f06cd7f90024a61aae0222c11c532cc1bcf65c8"
+}

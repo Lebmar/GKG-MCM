@@ -1,0 +1,53 @@
+{
+  "version": "state-budget-mitigation-requirements-review-v1",
+  "status": "Pre-numeric methodological review of the separately proposed V2b intervention; no new market/output values read, no existing evidence changed.",
+  "direct_judgment": "Compatible with ProblemA if the action is prospectively justified by a strict improvement of net supported worst next-year real wealth, is followed immediately by the declared absorbing human-review continuation, and is evaluated as a whole new learner. It does not restore a safety floor or certify full-horizon risk.",
+  "proposal": {
+    "baseline": "The frozen V2 one-step safe-menu decision is attempted first. Preinvestment Review, an already pending account and an already breached account are not rescued.",
+    "intervention": "At the first funded active no-feasible-declared-action event only, compare hold and a fixed small set of exactly charged post-dollar partial/full cash-tilt actions. Maximize the minimum supported next-year real wealth. Trade only if that lower bound improves strictly over hold beyond the declared wealth-relative numerical tolerance; otherwise hold.",
+    "continuation": "Whether mitigation trades or holds, request human review immediately and retain an absorbing pending physical hold through the original horizon. The same current decision is a referral, not an automatic safe execution.",
+    "versioning": "The intervention is motivated after adverse V2 development findings. Preserve V2, its failures and the unchanged previous final archive; call V2b new exploratory development, never a previously prespecified V2 success."
+  },
+  "problem_alignment": {
+    "benefit_vs_cost": "The after-fee supported worst real wealth improvement is an explicit normative protection benefit. Costs are already in physical endpoints and must not be subtracted again. It can justify a growth-sacrificing trade; do not claim positive expected financial growth.",
+    "human_review": "The original question explicitly asks for a trigger and pending behavior. A one-time mitigation then hold is a concrete candidate pending behavior, not assumed human intervention, insurance, future cash flows or a guaranteed response time.",
+    "partial_actions": "The question does not require full restoration. The declared partial post-dollar segments satisfy long-only/full investment with exact fees and do not change the persistent strategic target.",
+    "customer_language": "Describe reduced modeled shortfall under declared scenarios while losses remain possible. Avoid promises of restored tolerance, recovered losses, safe cash or guaranteed capital preservation."
+  },
+  "mathematical_boundaries": [
+    "An increase in min_s R_next(action,s) versus min_s R_next(hold,s) is improvement of a supported lower bound. It need not improve every row; binding worst rows may differ between actions.",
+    "The selected action can still violate both the stricter budget floor and the original customer floor. Primary support_feasible must remain false and the original selected_index/failure witness must not be overwritten as a passed guard.",
+    "A finite empirical support is not the future law/support. Out-of-support actual wealth and complete-H MDD can become worse even after a positive supported-minimum improvement.",
+    "The statement concerns the enumerated mitigation menu only. No feasible declared segment or no improving candidate is not proof that all physically possible long-only portfolios fail.",
+    "The one-step criterion does not imply recursive feasibility, conditional calibration, nonnegative terminal profit or a10%future loss-risk guarantee.",
+    "Use tolerance1e-12 times current real wealth, not a larger nominal/absolute threshold at tiny wealth. Exact current costs, CPI, original peak/MDD/H and all later exposure are preserved."
+  ],
+  "evaluation_requirements": [
+    "Keep alpha=.10, the six release/forecast candidate families and same-cohort mean/CVaR risk requirements fixed; evaluate the whole changed policy in every inner fit before selecting its tuple.",
+    "Do not use old V2 selections as an automatically valid V2b selection. A changed continuation can change growth/risk/admission, so the complete selection mapping requires a separate strictly development-only evaluation.",
+    "Keep initial financialNULL unchanged when unsupported. Count mitigation fees/trades, the referral at that same decision and all future pending losses; do not censor at review or reset peak.",
+    "Retain both mandatory exact-thirds and same-target references, all original IDs and exact same-funded-cohort comparisons. Do not retain only improved mitigation paths.",
+    "For mechanism attribution, compare V2 and V2b at matched pre-intervention state/first divergence where that relation actually holds; report all eligible IDs and all adverse outcomes. This is not population causal evidence.",
+    "Save both primary failed-hold forecast/score and actual mitigation forecast/score/menu witnesses. A summary written for V2 primary candidate_index=-1/hold must not mistakenly attribute its old hold predictions to the physically different mitigation trade.",
+    "No final121-180 values may enter parameter/action/menu choice. Previously exposed final independence is not restored by a new version."
+  ],
+  "necessary_tests": [
+    "No intervention at initialReview, already-breached or already-pending states; exactly one event after funded primary failure.",
+    "Fee/self-finance and post-dollar partial execution identities; strict no-improvement tie retains hold; negative real bill return and fee-consuming protection examples.",
+    "Worst-row identity may change; improve minimum without a false pointwise-dominance or floor-restoration claim.",
+    "Original primary failed-menu arrays remain intact, actual mitigation predictions are separately labeled, current referral/pending and all later state/returns remain correct.",
+    "Identical prefixes to frozen V2 before first intervention, and unchanged no-intervention paths; full new learner inner/outer identity and NULL checks."
+  ],
+  "bound_proposal": {
+    "description": "Root-authorized V2b one-time net-worst-next-realwealth-improving mitigation followed by review; no source execution in this review.",
+    "pre_freeze_mitigation_source": "research/experimental_execution/state_budget_mitigation.py",
+    "pre_freeze_mitigation_source_sha256": "d28d1830a57b6dbc3f69152af80986299f537c3cda984695000f8e6741c563f5",
+    "pre_freeze_binding_note": "This scalar identifies the draft reviewed here. Root will separately freeze the complete final executable source; this review is not a current-file map requiring later draft equality."
+  },
+  "source_sha256": {
+    "docs/problem_A.pdf": "2ac9412ed68349d36a3fbd2c6cddc5789a81dab8acbfa08c63a3bdb34d2aa2dd",
+    "docs/state_budget_rebuild_protocol.json": "4270a46493c370a7dc970a34444214cb086e57bf657e8b81335d0994c33dcfaf",
+    "docs/state_budget_rebuild_source_freeze.json": "9a8382ef1546b491a9f2acc3713e1ea3efa85e62dcb79604d91c07455cf1df3e",
+    "docs/technical_rebuild_stage_cost_challenge.json": "3c2a71666bb66b17bf5b39b51734603a7dd75f4ffe92a578cf695b7130f85f29"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "version": "technical-rebuild-independent-stage-cost-challenge-v1",
+  "status": "Pre-execution challenge of the proposed six-candidate direct policy; no market run",
+  "scope": "Additive mathematics and selection contract only. No old frozen files edited, no1..120numeric evaluation, no121..180value reading, no implementation imported.",
+  "accepted_structural_clarifications": {
+    "policy": "A directly computable one-year fee-net policy is repeatedly executed inside full original-H paths. There is no recursive self-valuing Qpi claim. Whole-policy parameter selection must evaluate those same repeated decisions, not annual-B continuation.",
+    "candidate_inventory": "Proposed fixed six candidates: buffer rho in{.5,.75,1} crossed with uniform/ensemble_min one-year forecasts. Exact meaning of rho, ensemble members/weights and four proposal targets must be frozen before evaluation.",
+    "target_role": "Original fitted Q1 strategic target persists. Cash tilts are temporary per-period execution proposals; they are not stored as a changed strategic target. Realized allocations and temporary destinations still change and must be transparently reported.",
+    "paired_growth_score": "As accepted by root: score(y)=min_m E_m[log(W_next(y)/W_next(hold))], where W_next uses the same joint asset/inflation tuple and exact after-fee holdings. Hold score is exactly0. This is a robust paired one-year improvement, not a terminal-value prediction.",
+    "fallback": "Preinvestment infeasibility means Review with no account/financialNULL. After investment, no feasible action means a declared review-pending-hold physical continuation through original H, with retained fees, peak/MDD and all subsequent losses."
+  },
+  "exact_partial_trade_and_floor_interval": {
+    "endpoint": "For a declared proposal target w*, compute its unique full-restoration endpoint y* and fee f* satisfying sum(y*)+f*=V and f*=kappa*sum positive(y*-x).",
+    "segment": "For lambda in[0,1], y(lambda)=(1-lambda)x+lambda*y*. Positive parts scale for nonnegative lambda, so exact moved(lambda)=lambda*moved*, fee(lambda)=lambda*f*, and sum(y(lambda))+fee(lambda)=V. This statement is about post-dollar holdings, not linear interpolation of prefee target weights.",
+    "supported_real_endpoint": "For joint row j, a_j=dot(x,g_j)/(c*h_j), b_j=dot(y*-x,g_j)/(c*h_j), so R'_j(lambda)=a_j+b_j*lambda.",
+    "interval_rules": "For the declared state floor F: b_j>0 implies lambda>=(F-a_j)/b_j; b_j<0 implies lambda<=(F-a_j)/b_j; b_j=0 requires a_j>=F or the whole segment is infeasible. Intersect all inequalities with[0,1]. Preserve sign, exact empty intervals, lambda=0/1 and equality boundaries; do not replace an empty interval with a clipped feasible point.",
+    "selected_point_check": "Evaluate exact fee and every supported joint endpoint again at the selected lambda. If a solver tolerance or endpoint rounding violates the floor, preserve the failed check rather than widening L or declaring support-safety.",
+    "proposal_grid": "Comparing only feasible interval lower endpoint, midpoint and upper endpoint is a fixed finite action policy. It is not continuous optimization. Deduplicate coincident points and always retain the physical hold candidate when hold is feasible.",
+    "optional_grid_bound": "On a feasible interval of width d, each member's weighted log ratio is concave in lambda because it is a weighted sum of logs of positive affine wealth. The minimum of these concave member functions is concave too. If all member functions have derivative magnitude at most B, then their minimum is B-Lipschitz; the best of{lo,mid,hi} is within B*d/4 of the continuous maximum. This is a conditional approximation bound, not a claim that the chosen grid has a small bound on the actual data."
+  },
+  "cost_justification_by_stage": [
+    {
+      "stage": "initial accepted investment",
+      "contract": "Use the fit's actual Q1 target and initial100bills, charge the exact initial allocation fee, and apply the declared initial feasibility/suitability rules. The initial full-target-or-Review choice must use no actual future or scenario ID. Label mandatory accepted-product allocation separately from later discretionary growth/protection trades; do not call its fee zero or treat Review as an all-bills account."
+    },
+    {
+      "stage": "hold is support feasible",
+      "contract": "Include hold in the same candidate population with score0. Trade only for a prospectively positive paired after-fee score above the fixed numerical threshold; ties select hold. A higher gross return before fees, a favorable single ensemble, or a comparison to a different reference policy does not establish this trade's estimated net benefit. Record hold/candidate score, fee and physical moved amount."
+    },
+    {
+      "stage": "hold is support infeasible and some physical trade is feasible",
+      "contract": "A protective trade may have a negative financial paired score. Its explicit benefit is satisfying the stated support-floor constraint after its own fee. Define d(y)=max_j max(F-R'_j(y),0), with real purchasing-power units. Require d(hold)>0 and d(selected)=0 within the frozen conservative checking convention. Record the shortfall improvement, paid fee, one-year growth sacrifice and the particular declared support premise. This is a normative support-protection benefit, not an estimated real-world breach-probability reduction."
+    },
+    {
+      "stage": "choose among multiple feasible protection trades",
+      "contract": "Declare one ordering before execution, for example maximize the same paired fee-net score among feasible grid points, then minimum physical fee/moved and deterministic proposal/lambda tie order. Alternatively minimum necessary movement is a different declared policy. Do not switch these priorities after the result is known. Already-paid fees in log ratios must not be subtracted a second time as financial cost."
+    },
+    {
+      "stage": "no feasible action in the declared proposal family",
+      "contract": "Record that restricted-family infeasibility and the resulting review-pending-hold transition. It is not proof that every physically allowable portfolio is infeasible. Hold can lose further purchasing power; continued market exposure and all original-H risk metrics must remain. If hold violates the support floor, review does not turn that state into a protected state. A human-review label does not provide missing insurance, instant liquidation or cash flows."
+    }
+  ],
+  "paired_ensemble_score_warning": {
+    "non_equivalence": "min_m E_m(log W_trade)-min_m E_m(log W_hold) is generally not min_m E_m(log(W_trade/W_hold)).",
+    "constructed_example": "Two models give expected log outcomes hold=(0,2), trade=(1,1.5). The difference of minima is1>0, but the paired improvement in model2 is-.5. Only a positive minimum of paired differences supports the statement that every declared member expects a positive log improvement.",
+    "inflation": "For a fixed joint row, the same CPI/inflation divisor cancels in the paired wealth ratio. It still affects the safety floor, original purchasing-power path and model weights; it must not be omitted from those calculations.",
+    "full_horizon_limit": "Positive one-year paired forecast benefit does not prove higher full-H net growth. It ignores endogenous future fees and state changes in that local objective; whole-policy validation measures their realized effect."
+  },
+  "selection_stage_requirements": {
+    "freeze_learning_algorithm": "Specify an algorithm mapping an allowed training-ID set into a fitted Q1 menu, support/forecasts, selected policy tuple, initial admission and executable fallback. That entire mapping is the evaluated learner. Fitting only the six-controller score while borrowing a full120-derived Q1 target or inner-validation support leaks information into the purported outer fit.",
+    "inner_refit": "Within each outer training set, rebuild all data-derived components in each inner training fold before predicting its inner validation fold. Ensemble member training IDs must also stay inside the current inner training side; an ensemble assembled on all outer training rows cannot be reused while scoring a row held out only at the inner level.",
+    "eligibility_order": "Freeze whether full-training initial-feasibility is an eligibility screen before inner ranking, or inner ranking chooses a tuple whose full refit may become Review. Either can be a declared training-only algorithm if applied identically inside every outer fit. Changing to another feasible tuple only after a failed full refit is an undeclared rescue unless that fallback ranking was already part of the learner.",
+    "one_initial_state_per_fit": "With the same C profile, initial100bills and empty history, all evaluated scenarios in one fitted model have the same initial action/admission. Initial coverage within a fit is all or none, except an explicitly separate deterministic Q1 suitability case. Variation across folds is training-fit instability, not successful identification of safe future market scenarios.",
+    "coverage_granularity": "With four inner folds, fold-level initial-admission coverage is coarse and the folds share overlapping training sets. A high pooled inner coverage does not guarantee that the full-training refit starts an account. Preserve per-fit admission, target, support size, selected tuple and initial feasibility; do not hide that mismatch behind one pooled fraction.",
+    "nonzero_financialN": "Risk and growth criteria must define their behavior at financialN=0; zero financialN is unavailable risk, not0risk. An accepted-path-only growth score can otherwise favor rejecting difficult fits. Freeze a minimum useful coverage or explicit Pareto/lexicographic rule and report originalN, financialN and both conditional and original-cohort summaries.",
+    "risk_preference": "A risk cap, minimum coverage and rho-buffer strength remain stated governance choices. The supplied L does not identify them. Keep the chosen basis and small candidate budget explicit instead of selecting a cap that happens to admit the favored tuple.",
+    "whole_path_evaluation": "Candidate inner scores must come from complete actual repeated pi_theta execution, including temporary tilts, partial fees, support misses, infeasibility, pending exposure and original-H event history. Compare references on exactly admitted IDs for conditional value while retaining their all-original-ID tables separately.",
+    "restricted_action_family": "Empty support-feasible intervals on four proposal segments mean no feasible declared action, not no feasible point in the full long-only self-financing portfolio space. Distinguish hold infeasibility, all declared segments empty, numerical execution failure and already-breached states in the event log.",
+    "outer_once": "All original120IDs appear once in primary outer outputs. Outer results assess the full previously declared selection procedure. Choosing a new rho, proposal family, forecast variant or selection ordering from those outcomes is a new exploratory version, with the prior version retained.",
+    "resampling_limit": "Resampling a fixed OOF prediction table can describe uncertainty of that table under scenario resampling. It does not by itself reproduce the uncertainty of refitting the complete learner, and overlapping training folds do not create independent deployment trials.",
+    "pooled_stress_role": "Declare pooled-support stress as sensitivity of the same already selected candidate, or as an explicitly separate primary candidate before execution. It must not quietly become a winner-selection seventh family after calendar-support results are seen. Larger pooled support may make initial investment infeasible; retain that outcome and its original denominators.",
+    "historical_exposure": "All old outcomes have informed prior human/AI research. New strict1..120 loader/fold separation is valuable mechanical discipline; it does not restore an untouched analyst-level holdout or justify a freshblind claim on old121..180."
+  },
+  "minimum_frozen_fields_before_engine_audit": [
+    "Exact rho-to-floor formula, behavior at current/historical breach and every no-feasible branch.",
+    "Four target-proposal formulas, their order, target persistence semantics, endpoint fee equation, feasible interval sign rules, point deduplication and grid tie rules.",
+    "Uniform and ensemble member identities/weights, training masks, paired one-year benefit definition, numerical threshold and mandatory initial allocation rule.",
+    "Complete inner/outer ID maps, menu/support/forecast refitting scope, risk/coverage/cost/growth selection order, zero-financialN behavior and full-refit failure/rescue rule.",
+    "Calendar-support primary versus pooled-support sensitivity role; support rows carry original scenario/year joint identities.",
+    "Per-period exports for pretrade state, full endpoint, selected lambda, exact fee/moved, support margins, hold and selected paired scores, proposal/filter reason, pending/review transition and unchanged original strategic target.",
+    "Independent scalar audit will not import the producer engine. It will reconstruct fee/segments/interval/grid score/action/fallback and full actual states from frozen development-only inputs, with predeclared branch witnesses and no final-value access."
+  ],
+  "current_judgment": "The direct paired-growth policy with exact-dollar partial actions can be made concrete and causally auditable. Its largest remaining method risk is selection of the whole fitted/admitted procedure under changing fold targets/support and all-or-none initial coverage; its largest substantive risk is that local empirical support protection may buy low coverage/growth without protecting unseen paths. Neither issue is resolved by algebraically correct one-step filtering alone."
+}

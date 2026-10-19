@@ -1,0 +1,123 @@
+{
+  "status": "passed_PNG_QA_and_root_browser_views",
+  "updated_utc": "2026-10-19T07:41:29.539265+00:00",
+  "figures": {
+    "01_admission_referral.png": {
+      "sha256": "a997d160e2373afba141c6fc74a123570a2f07406333a463964041d6f3680c13",
+      "pixel_size": [
+        2843,
+        1233
+      ],
+      "dpi": 240.00459999999998,
+      "actual_view_image": true,
+      "review_basis": "previous_actual_view_with_identical_hash"
+    },
+    "02_same120_ecdf.png": {
+      "sha256": "93fe2054fbd4f99f1faa573bc03672405b5095ed26b7bf2fda0a1139134ba5a9",
+      "pixel_size": [
+        3320,
+        1350
+      ],
+      "dpi": 240.00459999999998,
+      "actual_view_image": true,
+      "review_basis": "previous_actual_view_with_identical_hash"
+    },
+    "03_partition_stability.png": {
+      "sha256": "ddc00fc80af922e2129ff9d0cda8129961b6acb8dd2e3381a8aa7982faef8fc0",
+      "pixel_size": [
+        3803,
+        1350
+      ],
+      "dpi": 240.00459999999998,
+      "actual_view_image": true,
+      "review_basis": "previous_actual_view_with_identical_hash"
+    },
+    "04_ordinary_service.png": {
+      "sha256": "a9afbdb44fe4e13ca7810170443b0726e0c01b6a6a47e5109696471f046b719b",
+      "pixel_size": [
+        3322,
+        1327
+      ],
+      "dpi": 240.00459999999998,
+      "actual_view_image": true,
+      "review_basis": "previous_actual_view_with_identical_hash"
+    },
+    "05_stress.png": {
+      "sha256": "249a3db4ebaf5e3e82cc22d0ee85e8c603080787139576ba3b00ab96e6146652",
+      "pixel_size": [
+        3561,
+        2426
+      ],
+      "dpi": 240.00459999999998,
+      "actual_view_image": true,
+      "review_basis": "previous_actual_view_with_identical_hash"
+    },
+    "06_q1_coupled_weights.png": {
+      "sha256": "79481b64fbddaa6060f0cadf940209680c17d22f9603cd4045c1fcd1775ba40f",
+      "pixel_size": [
+        3319,
+        1293
+      ],
+      "dpi": 240.00459999999998,
+      "actual_view_image": true,
+      "review_basis": "previous_actual_view_with_identical_hash"
+    },
+    "07_bill_floor_drift.png": {
+      "sha256": "680d866e46415c2bafbacf2dc8738ae4a3c200e61a22b6aacc792a6d7d7d6408",
+      "pixel_size": [
+        3800,
+        1328
+      ],
+      "dpi": 240.00459999999998,
+      "actual_view_image": true,
+      "review_basis": "previous_actual_view_with_identical_hash"
+    },
+    "08_severe_synthetic_path.png": {
+      "sha256": "f18e5dd52ffa68abc4256eeaba05328f7b4b39c9e0e940571799c8a637042a53",
+      "pixel_size": [
+        3323,
+        1399
+      ],
+      "dpi": 240.00459999999998,
+      "actual_view_image": true,
+      "review_basis": "previous_actual_view_with_identical_hash"
+    },
+    "09_guard_physical_feasibility.png": {
+      "sha256": "ad4ab083931371442535e301c03e7396b1f87586cdbd961a78de23b5f8f49cc0",
+      "pixel_size": [
+        3320,
+        1587
+      ],
+      "dpi": 240.00459999999998,
+      "actual_view_image": true,
+      "review_basis": "actual_view_image_2026_10_19_LP_insert"
+    }
+  },
+  "notebook_nbformat_valid": true,
+  "code_cells": 15,
+  "top_to_bottom_no_errors": true,
+  "embedded_figures": 9,
+  "HTML_input_code_hidden": true,
+  "external_HTML_resource_count": 0,
+  "PNG_corrections": [
+    "图3说明移出数据区域",
+    "压力Review维持NULL空位并完整显示标签",
+    "券份额CDF统一0–70%横轴"
+  ],
+  "HTML_browser_rendering": "Root previously rendered earlier HTML using local Chrome; current LP-inserted HTML with hidden inputs/responsive CSS awaits renewed wide and 430px root screenshot review. CUA remains unavailable to this agent.",
+  "root_reviewed_figures": [
+    2,
+    5,
+    8
+  ],
+  "LP_status": "Saved LP output bound to passed independent witness audit; 457 cases and 3656 patterns, no new solve or policy run",
+  "LP_audit_sha256": "e465ef101db5627f2404e1565444cd57708e02c8441b48288aac2bc52970bdff",
+  "notebook_sha256": "aa1f1fc2c442f4f5215e55c125404d61459b6ffe18fbbec01691b3cae5309220",
+  "html_sha256": "a3065d1330210251620e339aa31ba0333759a32ba093399b8d07dbc3c7c68e1a",
+  "raw_market_reads": 0,
+  "final_values_read": false,
+  "new_policy_runs": 0,
+  "root_browser_qa_path": "results/technical_completion_browser_qa_v1/development_html_qa.json",
+  "root_browser_qa_sha256": "d9c654fede827bed98c4aab8ec298f08d94c4a495118f8838f36b2f9e0eb0f21",
+  "root_browser_scope": "Actual1440px wide and500px narrow first1800px view, not430px; figures separately viewed."
+}

@@ -1,0 +1,28 @@
+{
+  "version": "compact-submission-independent-source-review-path-fix-addendum-v1",
+  "reviewed_utc": "2026-10-19T08:06:16.932205+00:00",
+  "status": "no_source_blocker_minor_edge_resolved",
+  "historical_review": "docs/compact_submission_independent_source_review.json",
+  "historical_review_sha256": "b89aea65918417f3975d24ac1b2018c00901a4221904361042af9409de94569a",
+  "historical_review_unchanged": true,
+  "current_sources_sha256": {
+    "scripts/submission_adapter.py": "8b03c3f97191bd1d0fc7d02d075d654658a6ed558600f8c9bb6df4bdeeb1a080",
+    "scripts/prepare_compact_submission.py": "0bc79cae3d6b47ef31a15c9d1caf3b56f3eb0e6dfe6846663309409caa58f4d0",
+    "tests/test_submission_adapter.py": "806a1303fa5f8252ac37f268ba94f3a9d1d815a3dc48e70ba697b5b5aabb9fbe",
+    "tests/test_compact_submission.py": "1b93d856c2659b505fee85db6e093f6116adc0c95711ea8cce39de858ed53dbf",
+    "docs/compact_submission_protocol.json": "8b39e34143de96cbfd46cd0849e0d8406079f30d4bd5572a508b65779ed96d1f",
+    "docs/compact_submission_source_freeze_template.json": "c00e1811ea4f47f453cc9a4f47ee440e579721627fd03de0b5f5e1284b6e6dac",
+    "docs/compact_submission_build_release_template.json": "8a32c9f814bc1cdb3fb15c97562e3d9d7d906c3d04edbe6903be79bfcb865691"
+  },
+  "source_only": true,
+  "correction": "safe_name now rejects an empty Path.parts sequence; literal dot and empty string explicitly join the pure-test invalid path cases. Builder and builder tests are unchanged from the reviewed version.",
+  "judgment": "Previously reported low-impact path edge is resolved. All other source-only conclusions remain applicable; this addendum, not the historical source hashes, identifies the corrected current adapter/test/protocol snapshot.",
+  "declared_focused_tests_passed": 14,
+  "tests_executed_by_this_reviewer": 0,
+  "canonical_NPZ_or_summary_parsed": false,
+  "raw_market_values_parsed": false,
+  "final_values_parsed": false,
+  "actual_prepare_executed": false,
+  "actual_package_created": false,
+  "new_model_runs": 0
+}

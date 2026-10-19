@@ -1,0 +1,138 @@
+{
+  "version": "admission-failure-identity-posthoc-method-review-v1",
+  "written_utc": "2026-10-18T14:27:43.084548+00:00",
+  "status": "Completed read-only existing-evidence identity diagnosis; independent derivative-ledger audit not yet claimed",
+  "post_hoc_declaration": "The source results and the9/120,10/120vsB8andouter5/24differences were read before this ledger was specified. This is subsequent evidence organization, not a prospective blind test, new model validation or a preregistered hypothesis discovery.",
+  "scope": "Only frozen saved tables, own-job static/selection metadata and completed parent manifests/audits are read. No raw synthetic returns, new fan evaluation, strategy simulation, fitting, selection change or121–180read. All120full-inner identities and all600outer original-ID-repeat records are preserved.",
+  "files": {
+    "script": "scripts/summarize_admission_failure_identities.py",
+    "ledger": "results/model_review/admission_failure_identities_v1/ledger.csv.gz",
+    "summary": "results/model_review/admission_failure_identities_v1/summary.json",
+    "manifest": "results/model_review/admission_failure_identities_v1/manifest.json"
+  },
+  "sha256": {
+    "scripts/summarize_admission_failure_identities.py": "a9bdc74186247abf3616cc53375c137df0bfe1d7ddc42775e3306cf9ff4ef305",
+    "results/model_review/admission_failure_identities_v1/ledger.csv.gz": "4a7f0edd6bb1dd4b94d1a65c6d8ea285ccc7ad836c6665c93d6971744c221ee5",
+    "results/model_review/admission_failure_identities_v1/summary.json": "f0bdaaa8ae28cab549172fa28ee0edc43ac816239cf2fc611e20f2ccf8e1e461",
+    "results/model_review/admission_failure_identities_v1/manifest.json": "16cf181ed89a68e4b2f8837ce930086d3da2597ab5f93992ede925f879948ec4"
+  },
+  "pairing_and_sources": {
+    "full_old_fixed_policy": "Take c0_refit and its immutable original selected candidate order4 from joint context_selections; extract its120rows directly from training_candidate_paths.csv. The selected policy nine breach IDs are[5,19,29,38,63,94,95,98,110]. These are training/resubstitution evidence, not current admitted client financials.",
+    "full_B": "Use old same-context/target annual_then_pending120in-sample reference rows; verify target local/global identity and own training IDs. Full-model training rows are separately checked to agree with archived original selected full120replay in event IDs andmdd/growth/fees.",
+    "inner_selected_beta_program": "Use ONLY original full_development rows at final selectedbeta=.075. Every original ID is held out once across four90/30inner jobs; each uses its original job own target/fan and originally selectedeta at thatbeta. This is not replaying finaleta=.03/fulltarget on every path.",
+    "inner_B": "Join the independently audited benefit-cost130inner-reference cache by exact job_id+scenarioID, matching own Q1 local/global target identities and training size. Uis120in the current fullcontext.",
+    "outer": "Join guarded model and hypotheticalB on exact repeat_id+context+scenarioID, requiring samejob and own target identity. Keep all600records, including504not-common-auto records withNULL model outcomes andNULL pair deltas; B remains explicitly hypothetical.",
+    "metadata_retained": "Each full-inner row stores full/inner targetweights, selectedeta/order, beta, gamma, original trainingID lists and fan sizes120vs90. Outer rows store originalselectedbeta/eta/target, owntrainingIDs96and finalguardstatus. No new policy is chosen."
+  },
+  "findings": {
+    "full_fixed_model_vs_full_B": "Both have9events on the same nine original IDs. Equal event counts do not establish equal MDDseverity or unknown future probabilities.",
+    "full_model_to_inner_program": "Eight original IDs breach in both;98isfull-only;35and112areinner-only. Thus9becomes10through one departure and two arrivals, not through one new unseen failure of a fixed final strategy.",
+    "full_B_to_inner_B": "Eight original IDs breach in both;98isfull-only;noinner-only. ThusB9becomes8.",
+    "inner_same_target_comparison": "The inner model andBshare8events;the model additionally breaches35and112;Bhasnoexclusiveevent. Therefore10vs8is a real paired two-event difference on these saved paths, not merely different denominators.",
+    "components_for_influential_IDs": [
+      {
+        "scenario_id": 35,
+        "inner_job": "c0_inner2",
+        "inner_target": [
+          0.4,
+          0.25,
+          0.35
+        ],
+        "inner_eta": 0.03,
+        "inner_fan_n": 90,
+        "inner_model_mdd": 0.4349463708756692,
+        "inner_first_crossing": 19
+      },
+      {
+        "scenario_id": 98,
+        "inner_job": "c0_inner3",
+        "inner_target": [
+          0.4,
+          0.2,
+          0.4
+        ],
+        "inner_eta": 0.03,
+        "inner_fan_n": 90,
+        "inner_model_mdd": 0.3912962304880809,
+        "inner_first_crossing": null
+      },
+      {
+        "scenario_id": 112,
+        "inner_job": "c0_inner4",
+        "inner_target": [
+          0.45,
+          0.15,
+          0.4
+        ],
+        "inner_eta": 0.03,
+        "inner_fan_n": 90,
+        "inner_model_mdd": 0.4373149636443782,
+        "inner_first_crossing": 26
+      }
+    ],
+    "full_component_for_these_comparisons": {
+      "target": [
+        0.45,
+        0.05,
+        0.5
+      ],
+      "eta": 0.03,
+      "training_fan_n": 120
+    },
+    "eta_is_not_the_entire_change": "The three identified full-inner event-flip IDs all useeta=.03in both fullandinner components. The target and training fan differ, so changes cannot be called solely eta instability. Other inner paths includec0_inner1eta=.1; the ledger retains that too.",
+    "outer_model_only_occurrences": [
+      {
+        "repeat_id": 2,
+        "context": "stability_r2_outer2",
+        "scenario_id": 52
+      },
+      {
+        "repeat_id": 4,
+        "context": "stability_r4_outer5",
+        "scenario_id": 112
+      },
+      {
+        "repeat_id": 5,
+        "context": "stability_r5_outer2",
+        "scenario_id": 112
+      }
+    ],
+    "outer_B_only_occurrences": [],
+    "outer_repeated_ID_interpretation": "The3model-only outer scenario-repeat events involve only2distinct original IDs,52and112. ID112appears under different fitted policies in repeats4and5; those are not two independent new market scenarios.",
+    "r2_high_fraction": "For repeat2same24records,4events are shared withB and1is model-only(ID52). Thus5/24=20.83%must be acknowledged, while the paired baseline4/24=16.67%shows the heldout subset is adverse forBtoo. This does not absolve the extra model event or identify its forecast cause."
+  },
+  "interpretation_by_source_of_difference": {
+    "estimand_change": "Training9/120is a finalfixedpolicy fitted/selected using all120. Inner10/120evaluates a learned procedure with four different90-training components at the selectedbeta. They use the SAME original120market IDs, but different target/fan/price fits and different traininginclusion. It is inaccurate to call the difference a generalization error of one unchanged eta=.03model or a new independent120-path sample.",
+    "selection_effect": "Traininggrowth maximization under observed risk caps can select a favorable empirical controller. Innerbeta/topEuse inneroutcomes for riskeligibility, coverage andgrowth, so the finally selected inneraggregate is also a selection statistic. These are plausible optimism/instability mechanisms; this ledger does not quantify their separate contributions.",
+    "finite_sample_error": "The source contains only120original paths and outer conditional ncan be24, where one event changes the fraction by4.17percentagepoints. Sample composition and fitted-sample variability can contribute. The observed IDs/decisions here are deterministic conditional on saveddata; no exact fraction of the difference is identified as random sampling error, and overlapping repeats do not justify IIDbinomial certification.",
+    "actual_policy_difference": "Inner model10versus same-ID/same-targetB8is an observed execution-policy difference on those paths, not a denominator artifact. Outer model-only events likewise document extra realized thresholdcrossings relative toB. Finite-sample uncertainty does not erase these observations, but they do not prove the truepopulation ordering.",
+    "cannot_call_prediction_error": "One realized rare event is compatible with a correct probability forecast. Full-inner comparisons change targetsandfans; outer riskreflects realized policy, trainingselection, market composition andpossible model error together. Without a properly specified forecast target, enough out-of-sample probability evidence and dependence-aware evaluation, these count differences cannot isolate miscalibration or establish that a particularQg/risk forecast was wrong.",
+    "no_causal_separation": "The ledger locates where outcomes differ and which fitted components differ. It does not isolate the causal share due to Q1weights, fan membership, price, statehistory or actionrule. That needs a separately defined controlled diagnostic, not a narrative inference from a breach."
+  },
+  "no_outlier_removal_or_rule_change": "Allinfluential IDs remain in every relevant denominator. ID35/52/98/112are legitimate provided scenarios, not labelled dataerrors or removable outliers because they affect approval. Do not exclude them, perturb the MDDthreshold, revise riskcounts, changealpha/eta/target or modifyadmission to force a pass.",
+  "next_three_priorities_for_tomorrow": [
+    {
+      "priority": 1,
+      "task": "Trace the first policy/state divergence forIDs35,112and98across full-vs-own-inner, plus52and112in their outer contexts, using saved holdings/actions/fees/peak/CPI/Qtraces only. Establish whether changed initial target, later restore/hold, concentrationdrift or thresholdmargin mechanically produces the event flip; keep fan/targetconfounding explicit and do not refit."
+    },
+    {
+      "priority": 2,
+      "task": "Complete a stage-by-stage evidence table separating finaltraining, selectedbeta innerprocedure and conditionaladmittedouterrisk, with exactU/targets/fans/selectionsteps and repeatedIDdependence. Audit which statements concern implementation, observed policybehavior, samplinguncertainty or unproved conditionalprediction; do not turn scalarQchecks into forecastcalibration or add posthocconfidencebounds."
+    },
+    {
+      "priority": 3,
+      "task": "Reconcile the fixed mainregistry with the contest requirements and finaldecision narrative: cost/risk-adjustedbenefit, ordinaryvolatility vsMDD, median/P10growth andmedian/P90loss, Q1liquidity targetfloor versus realcashneeds, predeploymentReviewNULL versus investedpendingpaths, andCnotautomaticallyapproved. Organize the alreadyavailable evidence for a clear methods/results explanation without newfamily/alpha tuning."
+    }
+  ],
+  "run_and_verification": {
+    "ledger_rows": 720,
+    "full_inner_rows": 120,
+    "outer_original_records": 600,
+    "outer_common_auto_records": 96,
+    "outer_noncommon_model_NULL_records": 504,
+    "source_and_input_start_end_equal": true,
+    "all_saved_output_hashes_checked": true,
+    "development_history": "The first uncompleted script invocation raised a duplicated Python dictionary keyword before output-directory creation. It was corrected without changing any frozen evidence or policy; the successful complete archive was then created once and never overwritten. A separate ad-hoc CSV verifier used an object-boolean mask incorrectly; its mask was corrected to explicit equality and the generated ledger/source remained unchanged.",
+    "independent_audit": "Requested next; no passed derivative-ledger independentaudit is asserted here."
+  }
+}

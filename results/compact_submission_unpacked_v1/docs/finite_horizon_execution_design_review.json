@@ -1,0 +1,96 @@
+{
+  "version": "finite-horizon-execution-independent-design-review-v1",
+  "date_beijing": "2026-10-17",
+  "review_scope": "Mathematical/computational review only. No new market results, policy selection, change to the primary static menu or final-scenario access.",
+  "decision": "Worth a limited prototype after synthetic validation: use the three already frozen targets and assignments in a complete execution ablation. Do not refit the 232-target common menu or replace the primary model on this basis.",
+  "model_and_objective": {
+    "state": "u in the long-only three-asset simplex and remaining decision horizon h; target w and trained empirical opportunity law mu are fixed configuration. Nominal wealth scale is omitted only because all costs are proportional and there are no withdrawals, fixed charges, taxes, credit constraints or wealth-dependent decisions.",
+    "actions": ["hold current assets", "restore the same fixed target w after its exact self-financing fee"],
+    "terminal_condition": "V_0(u)=0. No terminal trade or liquidation charge. At h>=1 the action precedes that year's return.",
+    "hold": "Qhold_h(u)=E_mu[log(u dot g)+V_(h-1)((u elementwise g)/(u dot g))].",
+    "restore": "Qtrade_h(u)=log(1-rho(u,w))+E_mu[log(w dot g)+V_(h-1)((w elementwise g)/(w dot g))].",
+    "bellman": "V_h(u)=max(Qhold_h(u),Qtrade_h(u)); exact ties hold. V is total expected log terminal growth over the remaining h periods, not an average repeatedly divided by h inside recursion. Dividing the complete horizon objective by fixed client H does not change actions.",
+    "fee": "At pretrade wealth1 solve rho=c*sum(max((1-rho)*w-u,0)); actual wealth V has fee V*rho and posttrade wealth V*(1-rho). Use log1p(-rho), exact normalized target weights and the established incoming-transfer convention; do not use c*L1/2 as an exact substitute.",
+    "real_objective": "With exogenous common inflation pi, log real terminal wealth is log nominal terminal wealth minus sum(log pi). This additive path term is the same under both actions. Independence between inflation and asset returns is unnecessary for cancellation in expected action comparisons. Real wealth, annual real returns, MDD and all client risk screens must nevertheless retain actual inflation.",
+    "limitations": "This is expected-log growth optimization in a restricted binary action class under the specified predictive law. It is not a risk-constrained optimizer, asset-allocation optimizer, or proof that the existing annual-policy suitability labels remain valid."
+  },
+  "predictive_and_causal_assumptions": {
+    "empirical_law": "Each complete training scenario contributes equally, and each of its30 annual joint gross asset vectors contributes equally. All three asset returns stay in the same observed row; marginal assets must not be independently resampled.",
+    "future_annual_iid": "The Bellman recursion additionally assumes future annual opportunities are independent over time and identically distributed according to the same frozen empirical mu, regardless of calendar year, recent returns, drawdown, client or wealth. Independent complete scenarios supplied by the problem do not establish independence or stationarity of years inside a path.",
+    "no_forecast_free_claim": "Using every empirical support point removes a Monte Carlo forecast-count choice, not the predictive assumption or estimation uncertainty. The mixture, pooling of years and stationarity are material modeling choices. n_train*30 support rows are not that many independent pieces of risk evidence; the independent-data unit remains the complete scenario.",
+    "no_forward_peeking": "Fit mu only from the nominated training IDs before a fold's execution. Online evaluate_action accepts frozen solution, current u, remaining h and fixed target ID; no realized future test return is an argument. Actual test returns enter only after the current decision to advance holdings.",
+    "offline_time_interpretation": "Using complete30-year training paths is defensible only as an explicitly available offline synthetic calibration sample. Nonanticipation along the test path does not itself prove calendar-time feasibility if the problem instead restricts all calibration observations to global years<=t; check and state that interpretation.",
+    "horizon": "Use h=client_H-elapsed_years, including H5/6/15/25/30 as applicable; a table solved through30 may be reused at the proper h. Do not execute a15-year client with a30-year horizon or append an unmodeled terminal liquidation.",
+    "historical_drawdown": "u,h are not sufficient for a full-history drawdown constraint or a drawdown-based review policy. Such a gate is an external part of the complete execution rule and changes its interpretation. No MDD safety claim follows from this state reduction."
+  },
+  "mesh_and_batch_design": {
+    "mesh": "Regular simplex lattice step.05 has231 states. The exact-third target may be off this mesh; it must have its own exact immediate reward and transition row, not be silently rounded to a neighboring target.",
+    "interpolation": "Inside a triangle, represent the drifted state by nonnegative barycentric weights summing to1. Accumulating these under mu gives row-stochastic P. Major negative coefficients or row-sum defects indicate an error; only numerical roundoff may be clipped and renormalized.",
+    "operators": "Let L_s=Elog(u_s dot g), P_s=E[barycentric(drift(u_s,g))], and similarly L_t,P_t for each target. At grid states holdQ=L_s[:,None]+P_s@Vprev. Tradebase[target]=L_t[target]+sum_s(P_t[target,s]*Vprev[s,target]); tradeQ=logfee[state,target]+tradebase[target]. A rowwise contraction/einsum avoids computing an unnecessary full target-by-target matrix just to take its diagonal.",
+    "online_default_adopted": "For arbitrary actual u use direct-transition holdQ=L(u)+P(u)@Vprev[:,target], with the same exact empirical support and barycentric interpolation only of future V. TradeQ=log1p(-rho_exact(u,w))+tradebase[target]. At h1 this is exact for arbitrary off-mesh u under mu. Do not interpolate grid holdQ or grid gain as if it were this same operator.",
+    "memory_and_scope": "A full V table0..30 for231 states and3 frozen targets is small. P,L can be shared across targets within a training fold; targets still have their own fee matrix/continuation. Chunk direct empirical transition queries to bound temporary memory. Each fold has a different trained mu and cannot reuse a full-development P.",
+    "same_state": "u=w makes rho0 and both mathematical Q values identical, including off-grid exact thirds. Force hold for exact/numerically identical state rather than allowing two separately computed floating-point paths to invent a trade.",
+    "numerical_tie": "A fixed1e-12 comparison tolerance may be identified as roundoff protection, not a positive economic performance margin or a validated forecast-error allowance. If V stores maxQ but execution holds for0<gain<=tol, the executed action may lose at most tol per stage in the same approximate model; separate the H*tol bound from the much larger and unproven mesh/model errors."
+  },
+  "bounds_and_error_claims": {
+    "exact_model_baselines": "The exact continuous-state Bellman optimum in this binary action class is at least the expected-log value of never restoring and of restoring every year, because both are admissible policies. This is a model-conditional expected-value statement, not pathwise wealth dominance, a real-market guarantee or an MDD comparison.",
+    "discrete_model_baselines": "The mesh DP dominates corresponding baseline policies in the same projected finite-state chain. Its value is not automatically a lower bound or upper bound for the true continuous-state optimum, and is not the exact value of the off-mesh direct-greedy policy when replayed without random state projection.",
+    "monotonicity": "Nonnegative row-stochastic interpolation makes the continuation operator order-preserving, translation-equivariant and1-Lipschitz in sup norm. Maximization retains nonexpansiveness, so local numerical/interpolation error can accumulate over a finite horizon without a discounted-contraction shortcut.",
+    "action_gap": "If the interpolated continuation has a genuine uniform error bound e, each exact immediate-reward action Q has error<=e and its action difference error<=2e. The current procedure does not establish such a bound merely by choosing step.05 or a small tie tolerance.",
+    "resolution": "Compare coarse/fine meshes on common states and predetermined off-mesh points, reporting value differences, gain differences and decisions. Near-zero gaps can flip with little value effect; report functional value/replay consequences as well as flip counts. Finer-grid agreement is a resolution diagnostic, not a calibrated or rigorous error certificate, and improvement need not be monotone at every point.",
+    "implementation_value_vs_replay": "Use exhaustive finite outcome trees at small horizons to compare a continuous-state oracle, the projected value table and the implemented direct-greedy policy value. Never report the grid table as observed replay wealth or exact continuous-state optimal performance."
+  },
+  "rejected_online_interpolation_counterexample": {
+    "horizon": 1,
+    "joint_gross_equal_mass": [[1.2, 0.8, 1.0], [0.8, 1.2, 1.0]],
+    "target": [0.5, 0.5, 0.0],
+    "current_state": [0.49, 0.51, 0.0],
+    "cost_rate": 0.0025,
+    "exact_hold_Q": -0.000008000064000690675,
+    "exact_trade_Q": -0.000024969100739134192,
+    "grid005_interpolated_hold_Q": -0.000040008002133969136,
+    "grid0025_interpolated_hold_Q": -0.000020001000066669466,
+    "conclusion": "The exact h1 decision is hold. Interpolating grid holdQ at step.05 spuriously trades; step.025 holds. At h1 L(u)=Elog(u dot g) is concave, so linear interpolation underestimates hold. This extra immediate-reward interpolation bias is removed by the adopted direct-transition default."
+  },
+  "minimum_meaningful_synthetic_tests": [
+    {
+      "name": "fee_homogeneity_and_funding",
+      "check": "Scale identical holdings by1 and100: normalized fees/action values match, fees and holdings scale, postwealth+fee=prewealth and fee=c*incoming transfer. Include vertices, zero cost and off-grid thirds."
+    },
+    {
+      "name": "h0_identity_and_last_year",
+      "check": "No terminal action at h0; u=w holds at every horizon; h1 direct Q equals the explicit two-action expected log formula for off-mesh u, including the rejected-interpolation counterexample."
+    },
+    {
+      "name": "initial_fee_amortization",
+      "check": "Deterministic gross[1.001,1,1], current all bills, target all equity, c=.0025: h1 and h2 hold, h3 restores since3log1.001-log1.0025>0. No mandatory initial trade. The alternative gross1.0015 gives a two-period version."
+    },
+    {
+      "name": "future_fee_is_not_omitted",
+      "check": "Equal-mass gross[1.32,.88,1]/[.88,1.32,1], u=w=[.5,.5,0], c=.0025. First-period gross1.1 drifts to(.6,.4)/(.4,.6), exactly on step.05 mesh; terminal restoration is worthwhile with rho=.00025/1.00125. V2(w)=2log1.1+log(1-rho)=.19037064054130148, not2log1.1=.19062035960864987."
+    },
+    {
+      "name": "transition_geometry_and_monotonicity",
+      "check": "Vertices/edges/interior interpolate nonnegatively, rows sum1, affine functions are reproduced; transition expectation agrees with direct support enumeration. Test order preservation, constant shifts and sup-norm nonexpansiveness with synthetic value vectors."
+    },
+    {
+      "name": "finite_tree_oracle_and_resolution",
+      "check": "Two joint outcomes and H<=3 permit exhaustive continuous-state recursion without interpolation. Compare projected table and implemented policy values at predeclared common/off-mesh states for step.10/.05/.025. Exact reachable-grid cases should agree within floating precision; general results must expose approximation rather than assert exactness."
+    },
+    {
+      "name": "causality_and_empirical_law_invariance",
+      "check": "With the frozen training law, same current u and same remaining h, changing actual future test returns cannot change the current decision. Reordering joint support or duplicating every support row leaves P,L and actions unchanged. Do not independently permute asset columns across support rows."
+    },
+    {
+      "name": "inflation_and_wealth_scale_invariance",
+      "check": "Action comparisons stay unchanged under a common positive outcome-dependent deflator, including correlation with asset outcomes; independently computed real-wealth/MDD replay still changes correctly. The wealth-free state reduction must be rejected if fixed monetary fees or fixed monetary withdrawals are later introduced without extending the state."
+    }
+  ],
+  "complete_policy_validation_before_any_promotion": {
+    "freeze": "Keep the existing full/fold three targets and customer assignments fixed for the initial ablation. Fit the empirical law separately within each fold; query each customer's actual remaining horizon. Do not use OOB/test/final performance to choose targets, alpha, mesh or forecast pooling.",
+    "evaluate": "Record realized fee-paid transfers, trade frequency, net real growth, full-horizon real MDD, client exceedance frequency/severity and all referral denominators. Different execution changes risk, so annual-policy suitability cannot be inherited.",
+    "reference": "Compare annual restore, never restore and finite-horizon execution under identical targets, initial bill holdings, initial/ongoing fee convention, no terminal liquidation and scenario pairing. These are mechanism ablations, not automatic winner selection.",
+    "no_static_certificate_reuse": "The existing1160-event simultaneous bound covers fixed annual policies. A DP rule whose empirical prediction law is learned from the same risk-evaluation paths is a data-dependent execution policy, not the same fixed family merely because it has one of232 target IDs. Do not extend the static CP diagnostic to it without a new valid statistical design.",
+    "prototype_stop_rule": "Proceed to development-only ablation only after the stated synthetic tests and numerical checks pass. Even successful expected-log/fee results do not justify promotion if suitability, horizon matching, predictive assumptions or approximation remain unresolved."
+  }
+}

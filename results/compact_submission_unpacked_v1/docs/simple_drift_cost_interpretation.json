@@ -1,0 +1,47 @@
+{
+  "version": "drift-fee-interpretation-v1",
+  "declared_utc": "2026-10-18T05:23:40.476463+00:00",
+  "status": "Analytic interpretation before simple-control numerical run",
+  "definitions": {
+    "w": "pre-fee current weights, simplex",
+    "v": "post-fee target weights, simplex",
+    "d": "halfL1(w-v) = sum positive(v-w)",
+    "tau": "fee per unit entering destination assets",
+    "m": "actual destination transfer / pretrade wealth",
+    "f": "fee/pretrade wealth = tau*m"
+  },
+  "equation": "m = sum_i max((1-tau*m)*v_i - w_i, 0)",
+  "bound": "d/(1+tau) <= m <= d; tau*d/(1+tau) <= f <= tau*d",
+  "proof": [
+    "Reducing every target component by tau*m*v_i cannot increase the sum of positive parts, so m<=d.",
+    "max(a-b,0)>=max(a,0)-b for b>=0. Sum with a=v_i-w_i, b=tau*m*v_i and sum v_i=1 gives m>=d-tau*m.",
+    "Rearrange the lower inequality and multiply by nonnegative tau. Bounds concern exact arithmetic; executor suppresses only machine-roundoff no-trade transfers."
+  ],
+  "default_fee_examples": [
+    {
+      "tau": 0.0025,
+      "drift": 0.05,
+      "fee_lower_basis_points": 1.2468827930174566,
+      "fee_upper_basis_points": 1.25
+    },
+    {
+      "tau": 0.0025,
+      "drift": 0.1,
+      "fee_lower_basis_points": 2.4937655860349133,
+      "fee_upper_basis_points": 2.5
+    }
+  ],
+  "interpretation": [
+    "Holding inside5%/10% TV bands avoids optional small restoration transactions whose contemporaneous fee fractions are bounded above by1.25/2.5basispoints, respectively, at0.25% per transferred unit.",
+    "These fee bounds do not quantify a future benefit, total multi-year savings, withdrawal need, risk preference or optimal drift band. Initial restoration remains mandatory.",
+    "A same-weight, same-fee example with current(60,30,10), target(.5,.3,.2) has opposite restore-now net growth benefits when the next equity gross return is1.2 versus.8, other gross returns1. This proves drift alone is insufficient to establish estimated benefit>cost.",
+    "The0/5%/10% set is a fixed coarse technical diagnostic family selected before this follow-up numerical run, after prior development analyses; no optimal economic parameter or fresh validation claim.",
+    "When a positive-band rule actually triggers, d>band and the fee can exceed1.25/2.5basispoints; these numbers bound avoided inside-band restorations, not every actual trade."
+  ],
+  "source_input_artifact_sha256": {
+    "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a",
+    "tests/test_drift_fee_bounds.py": "b013bfc42e95b8ac0f56885a3b53c5b2a536a28ea7ec6d2c1ed7577b58d03701"
+  },
+  "raw_market_loaded": false,
+  "final_scenarios_loaded": false
+}

@@ -1,0 +1,898 @@
+{
+  "version": "fixed-state-fan-diagnostic-v1",
+  "declared_utc": "2026-10-18T02:36:37.550759+00:00",
+  "status": "Prospective finite diagnostic on repeatedly used development data, not confirmatory preregistration",
+  "execution_ready": true,
+  "data": {
+    "scenario_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120
+    ],
+    "allow_final": false
+  },
+  "profile": {
+    "name": "C",
+    "H": 30,
+    "L": 0.4,
+    "cost_rate": 0.0025
+  },
+  "scope": "Only previously declared selected-policy Q subset. No new policy, no refit, no unselected controller outer evaluation, no reference fallback",
+  "identities": [
+    {
+      "scope": "actual",
+      "group": "c0__nested_dynamic_learner",
+      "scenario_id": 1,
+      "year": 2,
+      "training_n": 120,
+      "status": "audited"
+    },
+    {
+      "scope": "actual",
+      "group": "c0__nested_dynamic_learner",
+      "scenario_id": 1,
+      "year": 16,
+      "training_n": 120,
+      "status": "audited"
+    },
+    {
+      "scope": "actual",
+      "group": "c0__nested_dynamic_learner",
+      "scenario_id": 1,
+      "year": 30,
+      "training_n": 120,
+      "status": "audited"
+    },
+    {
+      "scope": "actual",
+      "group": "c1__nested_dynamic_learner",
+      "scenario_id": 1,
+      "year": 2,
+      "training_n": 96,
+      "status": "audited"
+    },
+    {
+      "scope": "actual",
+      "group": "c1__nested_dynamic_learner",
+      "scenario_id": 1,
+      "year": 16,
+      "training_n": 96,
+      "status": "audited"
+    },
+    {
+      "scope": "actual",
+      "group": "c1__nested_dynamic_learner",
+      "scenario_id": 1,
+      "year": 30,
+      "training_n": 96,
+      "status": "audited"
+    },
+    {
+      "scope": "actual",
+      "group": "c5__nested_dynamic_learner",
+      "scenario_id": 4,
+      "year": 2,
+      "training_n": 96,
+      "status": "audited"
+    },
+    {
+      "scope": "actual",
+      "group": "c5__nested_dynamic_learner",
+      "scenario_id": 4,
+      "year": 16,
+      "training_n": 96,
+      "status": "audited"
+    },
+    {
+      "scope": "actual",
+      "group": "c5__nested_dynamic_learner",
+      "scenario_id": 4,
+      "year": 30,
+      "training_n": 96,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c0_inner1__p5",
+      "scenario_id": 1,
+      "year": 2,
+      "training_n": 90,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c0_inner1__p5",
+      "scenario_id": 1,
+      "year": 16,
+      "training_n": 90,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c0_inner1__p5",
+      "scenario_id": 1,
+      "year": 30,
+      "training_n": 90,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c0_inner2__p4",
+      "scenario_id": 6,
+      "year": 2,
+      "training_n": 90,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c0_inner2__p4",
+      "scenario_id": 6,
+      "year": 16,
+      "training_n": 90,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c0_inner2__p4",
+      "scenario_id": 6,
+      "year": 30,
+      "training_n": 90,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c0_inner3__p4",
+      "scenario_id": 2,
+      "year": 2,
+      "training_n": 90,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c0_inner3__p4",
+      "scenario_id": 2,
+      "year": 16,
+      "training_n": 90,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c0_inner3__p4",
+      "scenario_id": 2,
+      "year": 30,
+      "training_n": 90,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c0_inner4__p4",
+      "scenario_id": 13,
+      "year": 2,
+      "training_n": 90,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c0_inner4__p4",
+      "scenario_id": 13,
+      "year": 16,
+      "training_n": 90,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c0_inner4__p4",
+      "scenario_id": 13,
+      "year": 30,
+      "training_n": 90,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c1_inner1__p4",
+      "scenario_id": 10,
+      "year": 2,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c1_inner1__p4",
+      "scenario_id": 10,
+      "year": 16,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c1_inner1__p4",
+      "scenario_id": 10,
+      "year": 30,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c1_inner2__p4",
+      "scenario_id": 2,
+      "year": 2,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c1_inner2__p4",
+      "scenario_id": 2,
+      "year": 16,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c1_inner2__p4",
+      "scenario_id": 2,
+      "year": 30,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c1_inner3__p5",
+      "scenario_id": 12,
+      "year": 2,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c1_inner3__p5",
+      "scenario_id": 12,
+      "year": 16,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c1_inner3__p5",
+      "scenario_id": 12,
+      "year": 30,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c1_inner4__p5",
+      "scenario_id": 5,
+      "year": 2,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c1_inner4__p5",
+      "scenario_id": 5,
+      "year": 16,
+      "training_n": 72,
+      "status": "pending_skip_no_replacement"
+    },
+    {
+      "scope": "validation",
+      "group": "c1_inner4__p5",
+      "scenario_id": 5,
+      "year": 30,
+      "training_n": 72,
+      "status": "pending_skip_no_replacement"
+    },
+    {
+      "scope": "validation",
+      "group": "c2_inner1__p5",
+      "scenario_id": 4,
+      "year": 2,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c2_inner1__p5",
+      "scenario_id": 4,
+      "year": 16,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c2_inner1__p5",
+      "scenario_id": 4,
+      "year": 30,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c2_inner2__p4",
+      "scenario_id": 2,
+      "year": 2,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c2_inner2__p4",
+      "scenario_id": 2,
+      "year": 16,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c2_inner2__p4",
+      "scenario_id": 2,
+      "year": 30,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c2_inner3__p4",
+      "scenario_id": 1,
+      "year": 2,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c2_inner3__p4",
+      "scenario_id": 1,
+      "year": 16,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c2_inner3__p4",
+      "scenario_id": 1,
+      "year": 30,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c2_inner4__p5",
+      "scenario_id": 6,
+      "year": 2,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c2_inner4__p5",
+      "scenario_id": 6,
+      "year": 16,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c2_inner4__p5",
+      "scenario_id": 6,
+      "year": 30,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c3_inner1__p4",
+      "scenario_id": 14,
+      "year": 2,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c3_inner1__p4",
+      "scenario_id": 14,
+      "year": 16,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c3_inner1__p4",
+      "scenario_id": 14,
+      "year": 30,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c3_inner2__p4",
+      "scenario_id": 4,
+      "year": 2,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c3_inner2__p4",
+      "scenario_id": 4,
+      "year": 16,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c3_inner2__p4",
+      "scenario_id": 4,
+      "year": 30,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c3_inner3__p5",
+      "scenario_id": 1,
+      "year": 2,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c3_inner3__p5",
+      "scenario_id": 1,
+      "year": 16,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c3_inner3__p5",
+      "scenario_id": 1,
+      "year": 30,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c3_inner4__p4",
+      "scenario_id": 3,
+      "year": 2,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c3_inner4__p4",
+      "scenario_id": 3,
+      "year": 16,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c3_inner4__p4",
+      "scenario_id": 3,
+      "year": 30,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c4_inner1__p4",
+      "scenario_id": 4,
+      "year": 2,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c4_inner1__p4",
+      "scenario_id": 4,
+      "year": 16,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c4_inner1__p4",
+      "scenario_id": 4,
+      "year": 30,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c4_inner2__p4",
+      "scenario_id": 1,
+      "year": 2,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c4_inner2__p4",
+      "scenario_id": 1,
+      "year": 16,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c4_inner2__p4",
+      "scenario_id": 1,
+      "year": 30,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c4_inner3__p4",
+      "scenario_id": 3,
+      "year": 2,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c4_inner3__p4",
+      "scenario_id": 3,
+      "year": 16,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c4_inner3__p4",
+      "scenario_id": 3,
+      "year": 30,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c4_inner4__p4",
+      "scenario_id": 8,
+      "year": 2,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c4_inner4__p4",
+      "scenario_id": 8,
+      "year": 16,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c4_inner4__p4",
+      "scenario_id": 8,
+      "year": 30,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c5_inner1__p5",
+      "scenario_id": 2,
+      "year": 2,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c5_inner1__p5",
+      "scenario_id": 2,
+      "year": 16,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c5_inner1__p5",
+      "scenario_id": 2,
+      "year": 30,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c5_inner2__p5",
+      "scenario_id": 15,
+      "year": 2,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c5_inner2__p5",
+      "scenario_id": 15,
+      "year": 16,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c5_inner2__p5",
+      "scenario_id": 15,
+      "year": 30,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c5_inner3__p4",
+      "scenario_id": 1,
+      "year": 2,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c5_inner3__p4",
+      "scenario_id": 1,
+      "year": 16,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c5_inner3__p4",
+      "scenario_id": 1,
+      "year": 30,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c5_inner4__p5",
+      "scenario_id": 7,
+      "year": 2,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c5_inner4__p5",
+      "scenario_id": 7,
+      "year": 16,
+      "training_n": 72,
+      "status": "audited"
+    },
+    {
+      "scope": "validation",
+      "group": "c5_inner4__p5",
+      "scenario_id": 7,
+      "year": 30,
+      "training_n": 72,
+      "status": "audited"
+    }
+  ],
+  "identity_rule": "Reuse all81 previous Q-subset entries exactly;79 active entries evaluated,2 pending skips remain skips without replacement; three nonautomated final jobs logged without replacement",
+  "nonautomated_jobs": [
+    {
+      "job_id": "c2_refit",
+      "scope": "actual",
+      "scenario_id": 3,
+      "years": [
+        2,
+        16,
+        30
+      ],
+      "reason": "no_automated_selected_price_no_replacement"
+    },
+    {
+      "job_id": "c3_refit",
+      "scope": "actual",
+      "scenario_id": 8,
+      "years": [
+        2,
+        16,
+        30
+      ],
+      "reason": "no_automated_selected_price_no_replacement"
+    },
+    {
+      "job_id": "c4_refit",
+      "scope": "actual",
+      "scenario_id": 2,
+      "years": [
+        2,
+        16,
+        30
+      ],
+      "reason": "no_automated_selected_price_no_replacement"
+    }
+  ],
+  "fixed_state": "Saved holdings,CPI,real peak,running MDD and b at predecision year. Keep original H=30 and annual-endpoint MDD definition; no reset or terminal fee",
+  "counterfactual": "At same fixed saved state, choose current hold or restore, then same target annual-until-own-breach/pending B through original H, using the one actually realized joint return/inflation suffix. Distinct from following the learned dynamic policy after current step",
+  "predicted": "Use saved qg_hold/qg_restore and integer qbad counts/forecast_n. These were independently audited on the same81 identities in the parent study",
+  "metrics": [
+    "Per-action forecast total real log growth vs one realized suffix log growth",
+    "Per-action predicted bad fraction vs realized full-history event indicator; residual only, not a probability calibration estimate",
+    "Growth advantage delta and sign agreement with1e-12 numeric band",
+    "Technical priced total-log advantage deltaG-H*eta*deltaBad and action agreement, using original selected eta and H",
+    "At saved chosen current action, realized score shortfall within only the two current-action-then-B branches; not implementable policy regret, optimal dynamic control or calibrated customer utility",
+    "Saved initial vs counterfactual end wealth,history MDD,own firstcrossing and nominal fee/moved counts as inspectable traces"
+  ],
+  "aggregation": {
+    "groups": [
+      "scope and parent context",
+      "scope and review year",
+      "overall descriptive inventory only"
+    ],
+    "unit": "fixed decision states, correlated/repeated market scenario identities; report unique scenario IDs,job groups and original state counts, no independent-sample binomial CI or p-values",
+    "full_development": "training/evaluation overlap explicitly descriptive; cannot pool into heldout claim",
+    "primary": "actual outer states separately from validation and full120 descriptive states, with tiny sample sizes visible",
+    "analysis_scopes": [
+      "full_development_descriptive",
+      "outer_oof",
+      "inner_validation"
+    ],
+    "expected_active_counts": {
+      "full_development_descriptive": 3,
+      "outer_oof": 6,
+      "inner_validation": 70
+    },
+    "sampling_boundary": "The minimum-ID/fixed-year subset is prespecified but not randomly sampled or representative. All averages describe only these states, not population forecast accuracy."
+  },
+  "no_selection": [
+    "No new eta,beta,floor,target,model fit or calibration",
+    "No replacing pending/no-automatic states or selecting larger errors",
+    "No treating one realized suffix as true conditional probability,oracle DP,causal effect on learned future policy or future risk guarantee",
+    "No modifying parent outputs or using diagnostic to overwrite parent choices"
+  ],
+  "budget_minutes": 20,
+  "frozen_input_sha256": {
+    "docs/nested_dynamic_calibration_protocol.json": "bdd065bed90856eddd7d18061f3fc1e6cc852e5730fa122be5b1f587391a266c",
+    "results/model_review/nested_dynamic_calibration_v1/manifest.json": "ace4e900da9311dc1d8750b21a9ef572a75fc28126cbe90ef0a80106daca8fd9",
+    "results/model_review/nested_dynamic_calibration_v1/independent_audit.json": "831012267f0cec785e07f1e3164ae46b1f0bbaa9dfeacfb276460a0ed77fcf8e",
+    "results/model_review/nested_dynamic_calibration_v1/trace_groups.json": "852ec21bb1848186a38a5b067772c023713e6cc7a493b45a27ad2dc21e21f86e",
+    "results/model_review/nested_dynamic_calibration_v1/actual_traces.npz": "999d097ef4b00a42721fd9a8731b8471737bef1f26388d5d7b92c3d53eedb363",
+    "results/model_review/nested_dynamic_calibration_v1/validation_traces.npz": "c771b6aaa8f5275fe865a2371f3d7e5ddafd38ac34c9dd34016ab615244fc0e5",
+    "data/SafeInvest_Synthetic_Data.csv": "def0177704bf6cb98cec6da325b34208750d988f6ad97ec4a706a0d39e6f82c0"
+  },
+  "execution_sources_sha256": {
+    "scripts/run_fixed_state_forecast_diagnostic.py": "15ddfef0de23e0ec0068782204fd453fd4a34a9cd4d134b41e1c8d4160dfcec2",
+    "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a",
+    "src/safeinvest/data.py": "70e511fd05c6e23fd6b8a72f1dc165426fc77a5eb4dbd8a3c13b839bb305a75f",
+    "src/safeinvest/__init__.py": "dcef1e2e1f0f7cd5426988f0f27408eebb9ded3fb32c961f8f23e2edfb6e4ad2",
+    "research/experimental_execution/fixed_state_counterfactual.py": "69a08ff5bcfa9748e454424df88132b15a75a053d93bb3b19b2ef2ed176e4da9",
+    "tests/test_fixed_state_counterfactual.py": "309ed2173514e0766eeb622a3facaac6ed7976702056ef9e68dd003518c18400",
+    "tests/test_fixed_state_diagnostic_runner.py": "786ec36ed36a6f7ca902cda8a9b004349e682398034f63887b782c46f2f523da"
+  },
+  "counterfactual_first_crossing": "Original year number, not remaining-time index; history MDD carries saved worst and peak, no current-wealth restart",
+  "inventory_counts": {
+    "previous_Q_identities": 81,
+    "active_states": 79,
+    "pending_skip_states": 2,
+    "nonautomated_final_jobs": 3,
+    "nonautomated_auxiliary_state_slots": 9,
+    "total_inventory_slots": 90,
+    "counterfactual_branches": 158
+  },
+  "execution_freeze": {
+    "utc": "2026-10-18T02:43:43.284042+00:00",
+    "draft_protocol_sha256": "7601a14cd2dd6646244c8b6ebb1cefd64dc15833f7bc780722579208ae1ff5ac",
+    "synthetic_tests": 10,
+    "pre_execution_code_review": "method_review passed; core initial kernel passed",
+    "new_counterfactual_outcomes_generated_before_freeze": false
+  }
+}

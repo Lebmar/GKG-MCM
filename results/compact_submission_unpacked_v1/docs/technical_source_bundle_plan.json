@@ -1,0 +1,188 @@
+{
+  "version": "team87-technical-source-bundle-plan-v1",
+  "status": "Dependency/size design only; no file copied, adapter written or ZIP created",
+  "proposed_archive": "dist/Team87_Lebmar_Technical_Source_v1.zip",
+  "maximum_archive_bytes": 50000000,
+  "working_uncompressed_budget_bytes": 45000000,
+  "authority": "Only plan requested in this task. Root may later implement a separate submission/reproduction adapter and bundle builder without editing any frozen runner/kernel/old archive. This plan does not enable a market/final evaluation.",
+  "minimal_current_policy_runtime": [
+    {
+      "path": "src/safeinvest/__init__.py",
+      "bytes": 60,
+      "sha256": "dcef1e2e1f0f7cd5426988f0f27408eebb9ded3fb32c961f8f23e2edfb6e4ad2"
+    },
+    {
+      "path": "src/safeinvest/core.py",
+      "bytes": 6451,
+      "sha256": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a"
+    },
+    {
+      "path": "src/safeinvest/data.py",
+      "bytes": 4169,
+      "sha256": "70e511fd05c6e23fd6b8a72f1dc165426fc77a5eb4dbd8a3c13b839bb305a75f"
+    },
+    {
+      "path": "research/experimental_execution/state_budget_execution.py",
+      "bytes": 27116,
+      "sha256": "8480dc1c2d54175a9fafed2471991a0ea8fc6a4519a24140044d056dbafafb1f"
+    },
+    {
+      "path": "research/experimental_execution/state_budget_mitigation.py",
+      "bytes": 27267,
+      "sha256": "fe3904062f92a42f7fc37d664b53ee3ec6d336b2498448c1a707cb2edfda89ff"
+    },
+    {
+      "path": "research/experimental_execution/forecast_ensemble.py",
+      "bytes": 8730,
+      "sha256": "26b24902f448d5aeaec94f7b03f5a3451a33831299063ab42076e4bb18733010"
+    },
+    {
+      "path": "research/experimental_execution/review_pending.py",
+      "bytes": 14338,
+      "sha256": "9038d420c9ea48df068c58a6abee3f993ac414f85dd0290cb56e3d703aae3894"
+    },
+    {
+      "path": "research/safeinvest_research/metrics.py",
+      "bytes": 10265,
+      "sha256": "7ec8e4821ce284351a3d8ed7071c687fdf7d6e4cfd225f72cad1d09d623eb008"
+    }
+  ],
+  "runtime_role": "These8local Python files cover the already locked V2b execution kernel, its frozen V2 primary dependency, forecasting, exact trade accounting, guarded raw loader, annual/pending references and financial metrics. Put src and research explicitly on sys.path; verify imported local module origins. Namespace package directories need their relative structure preserved.",
+  "minimal_snapshot_and_data": [
+    {
+      "path": "docs/mitigation_main_model_registry.json",
+      "bytes": 12064,
+      "sha256": "49059e6e2ef5138a1d8edd284a3353d5c412d2f54f518010c3ddfdaa561c6603"
+    },
+    {
+      "path": "requirements-research-pinned.txt",
+      "bytes": 297,
+      "sha256": "a18dc21251d1dcdba4c19b4137ed62083bf4d82ed6ea8fefc4ae3cbd421f02ee"
+    },
+    {
+      "path": "data/SafeInvest_Synthetic_Data.csv",
+      "bytes": 274914,
+      "sha256": "def0177704bf6cb98cec6da325b34208750d988f6ad97ec4a706a0d39e6f82c0"
+    }
+  ],
+  "snapshot_role": "Use the already frozen main registry, original provided synthetic CSV and pinned package versions. No learning or parameter change is implied by copying them. Packaging/hashing input bytes does not parse final return values.",
+  "optional_comparison_runtime": [
+    {
+      "path": "research/experimental_execution/state_budget_cushion_primary.py",
+      "bytes": 13848,
+      "sha256": "d44dda7d43d27a5f02b6088d2c00d7ca482b4eaf6a0bc89c29c9ce09975b3fd4"
+    },
+    {
+      "path": "research/experimental_execution/state_budget_cushion.py",
+      "bytes": 22498,
+      "sha256": "8052ff8f5d2d4ad7876097e2e2ba429ecf66474d07fa45b3bb7f19df647b82c9"
+    },
+    {
+      "path": "research/experimental_execution/state_budget_selection.py",
+      "bytes": 6496,
+      "sha256": "682b88b9a4c35a6823d35d9170df6d006a6cd63ce37baae28cef8cdc053aaa9f"
+    }
+  ],
+  "comparison_role": "V3 is retained as an exploratory comparison and never silently made the recommended main. Selection source explains the unchanged six-family learner; actual selection/admission still comes from the locked registry and evidence.",
+  "focused_kernel_tests": [
+    {
+      "path": "tests/test_core.py",
+      "bytes": 8359,
+      "sha256": "0ba305211dca45d4b9d50279e5b83020fe5891f71ec2953aa5dfa732379dca53"
+    },
+    {
+      "path": "tests/test_state_budget_execution.py",
+      "bytes": 15266,
+      "sha256": "55af433b318958ce3dbd9021597aeabf316ed88e56726ff293ea6ccb85a32de5"
+    },
+    {
+      "path": "tests/test_state_budget_mitigation.py",
+      "bytes": 11196,
+      "sha256": "e7fbc32431221317f83a7d6c5c878983218621ed065b4c4d2bf45b6899660fc1"
+    },
+    {
+      "path": "tests/test_forecast_ensemble.py",
+      "bytes": 9201,
+      "sha256": "11aa8f0bae094c46dada5344bdee4096a8243d6ac6a46ea69a6c6f1f7fd5dede"
+    },
+    {
+      "path": "tests/test_review_pending.py",
+      "bytes": 15621,
+      "sha256": "5b5bc846992e49ba197ace949bf5e0376da77b4f83fe1ff4e811c80c56b2d54e"
+    },
+    {
+      "path": "tests/test_state_budget_selection.py",
+      "bytes": 3342,
+      "sha256": "f14e403cf2fb6f7b6024b7b66faac3e100be3538bb430e0470159dd4e583cc5a"
+    }
+  ],
+  "scientific_learning_sources": [
+    "research/experimental_execution/joint_liquidity_static.py",
+    "research/experimental_execution/nested_static_adapter.py",
+    "research/safeinvest_research/selection.py",
+    "research/safeinvest_research/static.py",
+    "scripts/run_nested_static_calibration.py",
+    "scripts/run_positive_asset_specification.py",
+    "scripts/run_joint_liquidity_refit.py"
+  ],
+  "learning_dependency_warning": "Q1 learning adapters import historical scripts transitively. Copying only the above learning sources is not claimed sufficient to run them; use a complete local AST import closure or the allPython-source tier below, and validate imports in an empty staging root. Do not rewrite their globals or pretend missing cached historical evidence is present.",
+  "recommended_source_tier": {
+    "rule": "Allowlist every .py file under src/research/scripts/tests at a final committed source snapshot, plus selected final registry/protocol/design/requirements and a new concise README/adapter. This avoids fragile omission of historical local imports while excluding figures, notebooks and large outputs.",
+    "observed_python_files": 315,
+    "observed_python_uncompressed_bytes": 5026464,
+    "observed_all_docs_json_md_files": 199,
+    "observed_all_docs_json_md_uncompressed_bytes": 7982303,
+    "observed_python_plus_all_docs_plus_given_CSV_bytes": 13283681,
+    "observation_scope": "Filesystem byte sizes only at planning time; no numerical output parsed. Counts may increase before final freeze. Even all existing Python and JSON/Markdown docs are presently well below50MB uncompressed; final builder must remeasure."
+  },
+  "required_new_entrypoint": {
+    "status": "Not implemented or authorized to execute by this plan.",
+    "reason": "Existing frozen engineering runners verify very large transitive historical artifact closures. A compact ZIP omitting those NPZ/cache archives cannot honestly claim those exact guarded historical runners run unchanged.",
+    "proposed_adapter": "A separate named submission/reproduction adapter imports the unchanged locked runtime kernels and frozen profile/menu/tuple specification; validates a compact bundle SHAmanifest, supplied input schema and local import origins; writes only a fresh bundle_reproduction directory. Defaults to development1-120 and preserves explicit final-release boundaries.",
+    "validations": [
+      "Run focused synthetic tests in isolated clean staging directory using pinned Python dependencies.",
+      "For any authorized same-fixed-model reproduction compare all full-H financial/fee/action fields to immutable reference outputs, without selecting parameters or a favorable case.",
+      "Document whether Q1/menu is a locked snapshot replay or a complete fixed training recipe rerun. Do not call snapshot replay a new nested calibration.",
+      "Do not monkeypatch/disable original historical freeze gates. Keep original guarded scripts for inspectability and describe their need for full evidence archives."
+    ],
+    "no_automatic_final_access": true
+  },
+  "small_evidence_layer": {
+    "rule": "Optional small passed receipts/design/protocol/registry snapshots with hashes, chosen before archive creation; exclude their referenced heavy NPZ bodies and say so.",
+    "suggested_paths": [
+      "docs/state_budget_mitigation_design.json",
+      "docs/state_budget_mitigation_protocol.json",
+      "docs/state_budget_cushion_design.json",
+      "docs/guard_physical_feasibility_protocol.json",
+      "docs/guard_physical_feasibility_witness_audit_plan.json",
+      "results/state_budget_mitigation_v1/independent_audit.json",
+      "results/state_budget_cushion_v1/independent_audit.json",
+      "results/guard_physical_feasibility_v1/independent_witness_audit.json"
+    ],
+    "limitation": "A receipt alone is not a self-contained verification of omitted binary evidence. Preserve Git commit/artifact SHA references to the full original archive, while distinguishing that archive from the compact algorithm source submission."
+  },
+  "exclusions": [
+    ".git",
+    ".venv",
+    "node_modules",
+    "__pycache__",
+    "*.pyc",
+    "allhistoricaltraces.npz/cacheNPZ",
+    "temporary audit attempts/logs except selected concise receipts",
+    "generatedPNG/SVG/PDF/HTML/videos",
+    "oldnotebookoutputtrees",
+    "environment/secrets/machineconfiguration"
+  ],
+  "packaging_checks": [
+    "Freeze an explicit canonical relative-path allowlist and SHA256/size per file; reject symlinks, absolute/traversal paths and duplicate archive names.",
+    "Stage copies into a new directory without modifying repository files or dereferencing outside allowlist.",
+    "Record exact Python/package versions and separate source snapshot from execution evidence.",
+    "Build deterministic ZIP with fixed member order/timestamps, and verify every member count/hash against the allowlist.",
+    "Hard reject finalZIP>50,000,000bytes; retain failed manifest instead of silently dropping relevant sources. Recheck no input/source changed during staging.",
+    "Extract ZIP to a fresh directory and run only synthetic/source import tests until an explicitly released reproduction is authorized.",
+    "Write a package README identifying one main entrypoint, main locked version, exploratory comparisons, exact fee/data/profile/horizon conventions and limitations; no paper authored by this packaging task."
+  ],
+  "source_history_modified": false,
+  "archives_created": 0,
+  "actual_market_or_final_run": false
+}

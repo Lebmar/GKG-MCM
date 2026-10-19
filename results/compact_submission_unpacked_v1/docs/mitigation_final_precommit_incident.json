@@ -1,0 +1,28 @@
+{
+  "version": "final-precommit-engineering-incident-v1",
+  "recorded_utc": "2026-10-19T07:33:51.656877+00:00",
+  "incident": "The intended pre-run git add referenced tests/test_reproduce_mitigation_locked_final_evaluation.py; actual filename is tests/test_mitigation_locked_final_reproduction.py. Git add and commit failed. The shell sequence did not stop, so the first final producer started after source/protocol/release/activation hash freeze but before the intended Git commit.",
+  "source_release_hash_freeze_preceded_actual_market_parse": true,
+  "git_commit_preceded_actual_market_parse": false,
+  "no_model_or_parameter_change": true,
+  "no_numerical_retry": true,
+  "remedy": "Preserve first attempt and immutable source/release hashes; commit correct paths immediately, record timing limitation, and independently audit actual output. Do not claim pre-run Git commit occurred.",
+  "file_sha256": {
+    "scripts/run_mitigation_locked_final_evaluation.py": "f0f93860d0ecfce3970cd985f79052135cc36570965cbe7e965cca4cc3bbd2b8",
+    "tests/test_mitigation_locked_final_evaluation.py": "0514b71e8ed9e6e85c18ab5f41635e84e4880a30e83bc852c22819874c3194a3",
+    "docs/mitigation_locked_final_evaluation_protocol.json": "f9a5719475ab222e111b8874e3b84f20c89a406254d557f97a33dbf7e5e4b76a",
+    "docs/mitigation_locked_final_evaluation_source_freeze.json": "4fe35e70844a185b415a144e8c5179b5ead1b39e1c6df187b2a1092798b91d38",
+    "docs/mitigation_locked_final_evaluation_release.json": "12d11ae86b48220313e89da593a1588be486865da9489a7253b981ae88a65887",
+    "docs/mitigation_locked_final_evaluation_release_freeze.json": "419318da8c893380bb4379bff386611ec62f86e212a375d8d68f676f0f0a03c3",
+    "docs/mitigation_locked_final_audit_plan.json": "8158112d0c2e6e3ee1e00767379d0cd174c2fea89b996e9dfd71f94cc9301904",
+    "scripts/audit_mitigation_locked_final_evaluation.py": "c0c2461301a122eabae193d6d6b681d92f0a01629adc15ce6bd7f681768ea516",
+    "tests/test_audit_mitigation_locked_final_evaluation.py": "01c9082e3071d9b42426ef15fe779f45724db7001a0bf547feecd22b12321aab",
+    "docs/mitigation_locked_final_audit_source_freeze.json": "df0fdde54df4cfaef695c97f5a3b1a207c97c09c1c2626fedfb5863fdb1abc56",
+    "docs/mitigation_locked_final_reproduction_plan.json": "12152e9276d6c07a3988629ac1b65d903ff61755adff1d43d63afb9bc1e34745",
+    "scripts/reproduce_mitigation_locked_final_evaluation.py": "bcd6e48f6a509dcd45135ca2855fb54d99d00d49fbba15671219970431b9380d",
+    "tests/test_mitigation_locked_final_reproduction.py": "32e377929d0db5045d036f7ba909bbd7d326c6ce84f2618e888259a0fd10626c",
+    "docs/mitigation_customer_explanation_contract.json": "64bd3e148a9f4d7207f6e7aac95c9e2ca23adaef86112f9368b59585d84478a9",
+    "docs/mitigation_locked_final_requirements_review.json": "ede7d30e7bdc624624a2985936412b5dd98f209d018ab02e497e95172a5ed60b",
+    "results/guard_physical_feasibility_v1/independent_witness_audit.json": "e465ef101db5627f2404e1565444cd57708e02c8441b48288aac2bc52970bdff"
+  }
+}

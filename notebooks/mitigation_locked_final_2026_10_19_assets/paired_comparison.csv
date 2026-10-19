@@ -1,0 +1,4 @@
+reference,mean_paired_log_growth,mean_paired_mdd,growth_higher_n,growth_lower_n,mdd_higher_n,mdd_lower_n
+same_target_B,-0.011534002053186523,-0.07317610924180594,4,56,8,52
+same_target_annual,-0.011336415773906958,-0.07433289613696335,3,57,8,52
+exact_thirds_annual,-0.00809321405139844,-0.04526762487486116,9,51,15,45

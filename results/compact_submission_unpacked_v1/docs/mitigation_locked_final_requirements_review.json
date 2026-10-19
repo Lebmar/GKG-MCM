@@ -1,0 +1,63 @@
+{
+  "version": "mitigation-final-preexecution-problem-deliverable-review-v1",
+  "completed_utc": "2026-10-19T07:25:53.657273+00:00",
+  "status": "Definitions cover required numerical objects; actual final evaluation and its independent audit remain pending.",
+  "read_final_values": false,
+  "new_model_or_parameter_decision": false,
+  "source_sha256": {
+    "docs/problem_A.pdf": "2ac9412ed68349d36a3fbd2c6cddc5789a81dab8acbfa08c63a3bdb34d2aa2dd",
+    "docs/mitigation_main_model_registry.json": "49059e6e2ef5138a1d8edd284a3353d5c412d2f54f518010c3ddfdaa561c6603",
+    "scripts/run_mitigation_locked_final_evaluation.py": "f0f93860d0ecfce3970cd985f79052135cc36570965cbe7e965cca4cc3bbd2b8",
+    "tests/test_mitigation_locked_final_evaluation.py": "0514b71e8ed9e6e85c18ab5f41635e84e4880a30e83bc852c22819874c3194a3",
+    "docs/mitigation_customer_explanation_contract.json": "64bd3e148a9f4d7207f6e7aac95c9e2ca23adaef86112f9368b59585d84478a9"
+  },
+  "pre_freeze_protocol_sha256": "3b42106f2eb0761aa14a3bb64d9ebf388ecf6970b1ae9222630bf387c1946130",
+  "requirements": [
+    {
+      "item": "Q1 three portfolios and transparent A-E suitability",
+      "state": "Locked technical registry plus existing ownH/Q1/nearset/liquidity development evidence; no new fitting.",
+      "limits": "A/D remainReviewNULL; near-optimal ranges are coupled, gamma/floors are technical choices, and labels do not rank risk at every horizon."
+    },
+    {
+      "item": "Q1 ordinary fluctuation versus unusually large purchasing-power loss",
+      "state": "OwnH real logG/CAGR, real-return volatility, maximum real drawdown, event/tail statistics and CVaR have explicit definitions."
+    },
+    {
+      "item": "Q2 decision, estimated net benefit and fee",
+      "state": "Frozen V2b primary13 plus optional protective9; growth score after exactfee, protective risk benefit explicit, unchanged originalH pending exposures.",
+      "limits": "No persistent strategic target relearning; temporary cash-tilt proposals are execution decisions. No full-autonomy or future-floor certificate."
+    },
+    {
+      "item": "Q2 mandatory exact-thirds annual baseline and quantiles",
+      "state": "Final source retains all60 IDs for main and three baseline objects, including required thirds. Median growth/MDD, P10growth, P90MDD plus fees/trade/service/tails are fixed before evaluation."
+    },
+    {
+      "item": "Q2 severe-loss scenario and trade frequency",
+      "state": "Predeclare maximum fullH main MDD, exact tied smallest originalID; store complete main and allthree reference trajectories. Trade denominator is originalH including inception and pending; ordinary service and one mitigation reported separately."
+    },
+    {
+      "item": "Q2 customer explanation <=50words",
+      "state": "New technical contract text, mechanically counted <=50words; no paper written."
+    },
+    {
+      "item": "Q2 decide whether automated updates add value",
+      "state": "Required interpretation after frozen final outputs: compare all three benchmarks on net growth, tail loss, costs and ordinary-service coverage; retain unfavorable metrics.",
+      "limits": "Do not decide by trade count alone, substitute one favorable comparator, claim persistent target learning, or alter parameters based on final outcomes."
+    },
+    {
+      "item": "Q3 assumption/cost test, recommendation change, limitation and review/pending behavior",
+      "state": "Existing7 development stresses test knownfee/support/inflation; independent ledger required before release. Registry identifies limitations and fixed trigger/pending rules.",
+      "remaining": "State explicitly how recommendation changes under broader support or stressed inflation: initialReview/suspension as dictated by the same rule. Knownfee is not fee misestimation; fixed-selected stress is not full refit robustness. No new final stress or tuning needed."
+    },
+    {
+      "item": "Final121-180 without further adjustment",
+      "state": "Double release gates, locked source/registry/spec/IDs/evidence and no model selection in final producer. Both old/new archives remain separate.",
+      "limits": "Historical121-180 exposure and adaptive development prevent calling this a fresh blind test. Disclosure cannot recover untouched holdout validity; new evaluation is a transparent fixed-policy descriptive evaluation with no further adjustment."
+    },
+    {
+      "item": "Later contest delivery",
+      "state": "English <=10A4 pages >=11pt, member/team information, brief AI-tools disclosure with checking, attribution/license and sourceZIP<=50MB remain future writing/packaging tasks; not missing model decisions."
+    }
+  ],
+  "readiness": "No additional model or parameter search is necessary for these requirements. Await passed technical closure, freeze corrected source/actual-kernel synthetic validation, create release+releasehash activation, run the fixed final evaluation once, and independently audit before interpreting it. Do not treat source/hash correctness as predictive validity."
+}

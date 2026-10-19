@@ -1,0 +1,15 @@
+version,unit,phase,forecast,metric,value
+V2,资产均值预测,positive_period,uniform,标准化MSE,1.0573282150803784
+V2,资产均值预测,positive_period,shrink_conditional,标准化MSE,1.0535248526528485
+V2,已投入策略一步,growth,uniform,配对收益RMSE,0.017875259127724984
+V2,已投入策略一步,protection,uniform,配对收益RMSE,0.03910272394163456
+V2b,资产均值预测,positive_period,uniform,标准化MSE,1.0573282150803784
+V2b,资产均值预测,positive_period,shrink_conditional,标准化MSE,1.0535248526528485
+V2b,已投入策略一步,growth,uniform,配对收益RMSE,0.021352317393442958
+V2b,已投入策略一步,protection,uniform,配对收益RMSE,0.02439032739771816
+V2b,已投入策略一步,mitigation_trade,uniform,配对收益RMSE,0.04012386068179729
+V3,资产均值预测,positive_period,uniform,标准化MSE,1.0573282150803784
+V3,资产均值预测,positive_period,shrink_conditional,标准化MSE,1.0535248526528485
+V3,已投入策略一步,growth,uniform,配对收益RMSE,0.019903129173961077
+V3,已投入策略一步,protection,uniform,配对收益RMSE,0.0258273652911549
+V3,已投入策略一步,mitigation_trade,uniform,配对收益RMSE,0.037852058833502684

@@ -1,0 +1,21 @@
+{
+  "version": "state-budget-mitigation-analysis-source-freeze-v1",
+  "execution_ready": true,
+  "frozen_utc": "2026-10-19T06:35:40.191198+00:00",
+  "protocol_sha256": "443287b99e947894892ad0a08ffafef1158b472ff1f8c8b4c8dc83539ea37ade",
+  "source_sha256": {
+    "scripts/analyze_state_budget_mitigation.py": "fa8b4f11b32d32877caede4e4b19ba9462984c22adb8298d6f1a3d7a1c486677",
+    "tests/test_state_budget_mitigation_analysis.py": "ac68048da98fee51b6abdf011a728139c04fdef8ef276a31efd77dcd968e5066"
+  },
+  "input_sha256": {
+    "docs/state_budget_mitigation_analysis_protocol.json": "443287b99e947894892ad0a08ffafef1158b472ff1f8c8b4c8dc83539ea37ade",
+    "docs/state_budget_mitigation_protocol.json": "20f0a77765dfa25c2d8f5b0d3a37de9422b7c7137dd991f4f9e5948729151fa1",
+    "docs/state_budget_mitigation_source_freeze.json": "9c0be7f963314ed80de2f8bce7e3e45020c5e5379f77b236a2cacb1767cbef68",
+    "results/state_budget_rebuild_v1/manifest.json": "697010db7b2e8b5c54d96337090e77be5639b9b324b1237890c8c8d0f7b5c68f",
+    "results/state_budget_rebuild_v1/path_metrics.csv.gz": "9a0df7a238d4e508e26759846082d981567786d9bb779b2a720ca34130a9a115",
+    "results/state_budget_rebuild_v1/trace_groups.json": "b425c8bfc9b157c4b7c5e430dcd8348610d5d791a7597f1bf456c2cffa36604b"
+  },
+  "synthetic_tests": 20,
+  "saved_numeric_access_during_freeze": false,
+  "scope": "Saved-only actual-branch prediction and same-fixedcandidate intervention contrasts; no policy tuning or raw/final parser. Descriptive plan follows completed canonical result, not historical prespecification."
+}

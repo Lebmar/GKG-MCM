@@ -1,0 +1,40 @@
+{
+  "version": "technical-completion-checkpoint-source-freeze-v1",
+  "execution_ready": false,
+  "plan_sha256": "f892efa02971350d9e2067b6ab21f0eca48ef1b01be2f930b9acdd2947299fcc",
+  "source_sha256": {
+    "scripts/verify_technical_completion_checkpoint.py": "f650d6c6373ef9798756b0f633ff6a1115cf903f1e40d53298db9bfcc29c56ec",
+    "tests/test_technical_completion_checkpoint.py": "859e04cf6bee801830204be44eb133ee49a453842c9b1fb9d4890edf93892505"
+  },
+  "input_sha256": {
+    "docs/mitigation_final_precommit_incident.json": "09b827d8267a7db44de7ac6b356d2b9e3d412f4e82d0e703d0fe3ed2672c0d57",
+    "docs/mitigation_locked_final_evaluation_protocol.json": "f9a5719475ab222e111b8874e3b84f20c89a406254d557f97a33dbf7e5e4b76a",
+    "docs/mitigation_locked_final_interpretation_timing_addendum.json": "daa6fa86d0d07d5c7d4dab49601ca520c69cbca857df2ddc49df6cf899958361",
+    "docs/mitigation_main_model_registry.json": "49059e6e2ef5138a1d8edd284a3353d5c412d2f54f518010c3ddfdaa561c6603",
+    "notebooks/mitigation_locked_final_2026_10_19_assets/build_manifest.json": "a5e2081773c5acf82bc391704c69e28a3fc13d1622c0e5d29c83689e1bf8e48d",
+    "notebooks/technical_rebuild_2026_10_19_assets/build_manifest.json": "9927d60c42ee50e38851b1f2ec2914a6f23e7f74b290d8b99b23f3194d87443f",
+    "notebooks/technical_rebuild_2026_10_19_assets/source_manifest.json": "937f8e85529278c454ea107526fdd5dd4dbb59ed5975dd2ec4daa8c112b1c6e2",
+    "notebooks/technical_rebuild_2026_10_19_assets/visual_qa.json": "25965c08d0d2d331f59248e68adc81a3f243a2980e83d65f7758a0cc63b05c2a",
+    "results/final_locked_checkpoint_v1/verification.json": "4a51f40d61ab07e20dbf2707f4fc8cb2f4299310c027d501d6316d650102f9fd",
+    "results/mitigation_locked_final_evaluation_v1/independent_audit.json": "7929ea36e23c9b357a568b8d0f06cd7f90024a61aae0222c11c532cc1bcf65c8",
+    "results/mitigation_locked_final_evaluation_v1/manifest.json": "7401ad59279c694fc4077ab42af1af42e707b258156bca5a7ec110467e407f07",
+    "results/mitigation_locked_final_reproduction_v1/manifest.json": "109e4c8e1a18dfebe9e0da282faea15f664f36d577fafdf7371dda288a1ce0a1",
+    "results/technical_rebuild_reproduction_v1/manifest.json": "ead39b294097cadd2f1a1c917f7ee3c55fd4fac863fa4e16ea894dca4a2c51cc",
+    "scripts/build_mitigation_final_companion.py": "dc24f7c12ef115d82cfe7fb9baf4e238d9848a268669e9811b1937c514fe8c71",
+    "scripts/build_technical_rebuild_companion.py": "90d8ee14a8585411bbcde9b0eabf3ba3aca8877c159a964c63072141cef6ced9"
+  },
+  "pending_required_anchor_paths": [
+    "dist/Team87_Lebmar_Technical_Source_v1.zip",
+    "results/compact_submission_build_v1/manifest.json",
+    "results/compact_submission_development_replay_v1/manifest.json",
+    "results/technical_completion_browser_qa_v1/development_html_qa.json",
+    "results/technical_completion_browser_qa_v1/final_html_qa.json",
+    "tmp/technical_completion_tests.log"
+  ],
+  "pending_actions": [
+    "Root selects archived complete unit test log path and exact count in plan.",
+    "Root completes both current-browser QA receipts, compact build and unpacked replay.",
+    "Root refreshes input anchors and plan SHA, freezes source unchanged and explicitly enables both readiness flags before actual metadata checkpoint."
+  ],
+  "actual_checkpoint_executed": false
+}

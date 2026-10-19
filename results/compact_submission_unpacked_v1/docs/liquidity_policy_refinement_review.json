@@ -1,0 +1,451 @@
+{
+  "version": "liquidity-policy-refinement-review-v1",
+  "created_utc": "2026-10-18T02:33:37.865083+00:00",
+  "status": "竞赛规格与规范规则提案；未采纳最终service contract，未运行市场或重拟合，旧设计和冻结产物保持原样。",
+  "requested_decision": "在给定短问卷下形成可执行、有条件的A-E建议；把竞赛规范选择与真实部署的事实核实分层，而不是因题面没有额外金额/日期就把五例一律转Review。",
+  "source_reading": {
+    "statement": {
+      "path": "docs/problem_A.pdf",
+      "pages_read": [
+        1,
+        2,
+        3
+      ],
+      "method": "pypdf.PdfReader逐页只读提取；Q1、客户表及共同条件逐项复核。"
+    },
+    "short_exact_quotes": [
+      {
+        "page": 1,
+        "context": "short questionnaire",
+        "quote": "New customers complete a short digital questionnaire, and an automated system recommends one of three portfolios:"
+      },
+      {
+        "page": 1,
+        "context": "three assets",
+        "quote": "Each portfolio uses equities, government bonds, and a cash-like short-term investment."
+      },
+      {
+        "page": 1,
+        "context": "loss response",
+        "quote": "Loss tolerance is a customer response, not a guaranteed portfolio limit."
+      },
+      {
+        "page": 2,
+        "context": "common evaluation",
+        "quote": "Every market scenario begins with 100 units in bills and has no later deposits or withdrawals."
+      },
+      {
+        "page": 2,
+        "context": "Q1",
+        "quote": "Then design a transparent onboarding rule that uses the questionnaire information to recommend one of the three portfolios or request human review."
+      }
+    ],
+    "source_scope": "全部引文来自本地题目，未浏览外部文献、未引用外部规则作为竞赛额外要求。题目只给序数liquidity need，没有给现金下限、提款计划、可变现时间或风险概率服务标准。",
+    "profiles": [
+      {
+        "id": "A",
+        "H": 5,
+        "L": 0.1,
+        "liquidity": "High"
+      },
+      {
+        "id": "B",
+        "H": 15,
+        "L": 0.25,
+        "liquidity": "Medium"
+      },
+      {
+        "id": "C",
+        "H": 30,
+        "L": 0.4,
+        "liquidity": "Low"
+      },
+      {
+        "id": "D",
+        "H": 25,
+        "L": 0.15,
+        "liquidity": "Medium"
+      },
+      {
+        "id": "E",
+        "H": 6,
+        "L": 0.35,
+        "liquidity": "High"
+      }
+    ]
+  },
+  "correction_of_previous_design": {
+    "retained": "序数标签不能唯一识别金额、日期或现金百分比；Low不等于无需求；无提款是共同实验条件；票据不是无购买力风险的保证。真实部署需要补足相应事实。",
+    "overreach": "旧design把真实部署的金额/日期核实作为给定五例的必要准入项，主路径事实上会令全部A-E因同一种题面未提供信息而Review。这增加了题面没有要求的输入条件，不能当Q1的硬规格。",
+    "replacement_in_this_proposal": "竞赛层把题目给定输入视为完整的toy-input contract，公开说明标签如何操作化，输出三产品之一或有明确模型/风险/相容性理由的Review。没有额外金额/日期本身不构成竞赛层Review。真实部署层另做验证，不把竞赛条件建议写成真实客户已核实的适当性结论。",
+    "old_documents_not_rewritten": [
+      "docs/liquidity_service_design.json",
+      "docs/problem_A_deliverable_crosswalk.json"
+    ],
+    "no_relaxation_of_risk": "纠正全Review不等于强制覆盖五例。A/D仍可因所研究菜单或有限族在各自H/L下不支持而Review；应说模型/证据不支持，不能说世界上不存在适合产品。"
+  },
+  "two_layer_contract": {
+    "contest_layer": {
+      "input_contract": [
+        "H in stated horizon",
+        "L as stated temporary real-loss tolerance",
+        "High/Medium/Low liquidity need"
+      ],
+      "output": "conditional portfolio recommendation or reasoned Review under the disclosed annual, no-flow, synthetic-market model",
+      "not_required_from_fictional_profiles": [
+        "未给的提款金额或日期",
+        "假定的外部应急金余额",
+        "真实客户签署的现金偏好",
+        "逐资产结算时间"
+      ],
+      "what_can_be_normative": "可自主提出一个透明、单调的现金样资产目标储备惯例及有限敏感性范围；这是一项服务设计选择，不是参数识别、客户授权或由收益数据估计的需求。",
+      "label_use": "High必须产生更严格的现金样资产相容性条件；不能只在解释中提及标签，或在共同无提款条件下把标签完全删除。"
+    },
+    "deployment_layer": {
+      "additional_facts": [
+        "资金最早使用日期/时间窗",
+        "所需金额、购买力或占比及其不确定性",
+        "账户外实际可用储备与不能重复计算的义务",
+        "允许的变现损失和等待时间",
+        "产品真实交易/结算/赎回限制及年内可执行渠道"
+      ],
+      "action": "若这些事实对真实服务义务是必要且尚未知，先澄清/人审；若已知义务超出年度无流量模型，使用另外的负债/流动性模型或转人工。不能虚构事实使其通过。",
+      "separation": "真实部署澄清状态不倒填到竞赛五例为一律Review，也不将竞赛的30/10/0标签惯例包装成覆盖真实义务。"
+    }
+  },
+  "recommended_primary_operationalization": {
+    "id": "public_ordinal_target_bill_reserve",
+    "proposal_not_adoption": true,
+    "floors": {
+      "High": 0.3,
+      "Medium": 0.1,
+      "Low": 0.0
+    },
+    "exact_constraint": "For client i and common product j, liquidity_compatible(i,j) := target_bill_weight[j] >= f(liquidity_label[i]) - 1e-12. This is in addition to positivity, full investment and the separately declared H_i/L_i risk/evidence rules.",
+    "what_the_numbers_mean": "High要求至少30%的目标财富配置现金样票据代理；Medium至少10%；Low不加类别储备约束。它们是目标财富的份额，不是原始100单位的固定金额、每年提款额或覆盖若干年支出的保证。Low实际仍须满足三资产正权重规格。",
+    "why_this_candidate": "它让High/Medium/Low可检查地影响相容性，保持三产品共同菜单，不引入提款路径；30/10/0已在旧研究协议中公开列为一种规范敏感性情形。建议沿用这一简单惯例作主提案，避免另造看似精确的新数字。其经济合理性是不同程度的现金样储备优先级，绝不是这三个数值具有唯一经济推导。",
+    "no_identification_claim": "题面只能支持单调排序，不能推出恰好30/10/0。无负债/偏好概率数据时不能拟合f，也不能声称该三元组比20/10/0、40/20/0或其他单调三元组最优。此前开发结果已经被看过；本提案不是未见数据上的预注册。",
+    "no_outcome_based_choice": "不根据旧OOF超限、覆盖率、增长或希望E归入某标签来选择floor。本文不比较旧reserve策略成绩，也不从此次尚未运行的新成绩回调floor。",
+    "scope_of_support": "这是现金样目标组成的流动性代理。它不证明三资产中只有票据可变现、不证明股票/国债结算更慢，也不保证票据本金或购买力不亏损。",
+    "choice_authority": "root/service contract最终可采纳这个规范或给出明确的小集合条件结果；本文件不自动修改现有risk-only/nested动态模型。"
+  },
+  "executable_Q1_rule": {
+    "steps": [
+      "保存H、L、liquidity原始回答；未知/非法标签才是输入Review。按各自H评分，不能用30年路径代替H5/H6。",
+      "用固定版本的共同三产品或产品学习规则；每个产品三资产正权重、long-only、fully invested。不要给每位客户偷偷生成第四种专用产品。",
+      "对每个client-product pair先检查独立风险/证据规则与目标bill floor；risk_pass AND liquidity_compatible才进入该客户可推荐集合。风险alpha、技术gamma、执行beta与f分开记录。",
+      "集合非空时，沿用事先固定的增长目标与全局tie规则选择其中产品；若主模型使用mean annual log growth，就继续使用相同H的该指标，不新加任意lambda来补偿流动性约束。",
+      "集合为空时请求Review，保留risk_failure、ordinal_liquidity_incompatibility、evidence_insufficient等具体原因。不能把较高预期收益作为放宽floor或风险规则的理由。",
+      "若共同菜单也要重学，pair相容性应进入每个训练context的菜单/适配程序，并重新执行原内层校准和有效准入；不是先看全部OOF再过滤。若只过滤固定旧菜单，应标明fixed-catalogue normative screen，不称联合重优化。",
+      "最后另行确定Balanced Q2 case和执行准入：风险/流动性后实际获配Balanced才进入；其他产品不是风险失败，执行Review也不能覆盖原Q1标签。"
+    ],
+    "minimal_fields": [
+      "H",
+      "L",
+      "liquidity_label",
+      "liquidity_policy_id",
+      "target_bill_floor",
+      "risk_status",
+      "liquidity_target_compatible",
+      "candidate_products",
+      "q1_assignment",
+      "q1_reason_codes",
+      "deployment_information_status",
+      "execution_status"
+    ],
+    "output_sentence": "Under the annual, no-withdrawal model and the declared reserve convention, [product] is the conditional recommendation; [specific reason] requires review when no compatible model-supported product is available.",
+    "Review_accounting": "竞赛onboarding Review仍保留原profile/场景身份，未给新投资策略的金融结果NULL；不填0收益或暗配全票据。部署信息未核实作为另一层状态记录，不在竞赛层自动抹去所有候选。"
+  },
+  "what_other_liquidity_models_can_and_cannot_support": [
+    {
+      "model": "ordinal target bill floor",
+      "supported": "可作为公开、可复现的竞赛服务惯例，单调体现标签。",
+      "not_supported": "具体百分比唯一识别、实际现金随时可用或支出覆盖保证。"
+    },
+    {
+      "model": "liquidity horizon",
+      "supported": "可解释High意味着更重视较早可用性；在真实部署中询问最早使用时间。",
+      "not_supported": "没有时间数据就把High硬编码成1年/2年，或用H_eff=min(H,h_liquidity)替代客户给定H；这会增加未给输入且混淆投资期限与现金需求。"
+    },
+    {
+      "model": "money liability / spending reserve",
+      "supported": "已知金额与日期后，可建立明确的现金流/购买力义务约束。",
+      "not_supported": "给A-E虚构q%年支出、默认外部储备、或把High=两年开支；共同主评估仍无提款。"
+    },
+    {
+      "model": "product marketability",
+      "supported": "题面命名cash-like short-term investment支持选票据作现金样代理。",
+      "not_supported": "未给资产特定价差/成交量/赎回/结算数据，不能量化立即变现能力、认定国债/股票无法卖出或引入未经说明的年内应急交易。"
+    },
+    {
+      "model": "hard actual bill balance floor",
+      "supported": "如果另立强服务承诺，可以写成真实决策后持仓约束并重新验证。",
+      "not_supported": "不能把目标floor当作每时点实际余额floor；不能绕开费用、动作集或pending冻结偷偷补足。"
+    }
+  ],
+  "drift_execution_and_pending": {
+    "primary_interpretation": "主提案只约束获配产品目标，不承诺每个观察时点的实际现金样份额。一次恢复到目标后，三资产收益不同会使票据份额漂移；成本门控选择hold时也可能持续低于目标floor。",
+    "monitor_without_new_trade_rule": [
+      "target_bill_weight",
+      "actual_bill_weight_predecision",
+      "actual_bill_weight_postdecision",
+      "observed_bill_floor_gap=max(f-actual_bill_weight,0)",
+      "pending_status"
+    ],
+    "gap_meaning": "在soft target reserve主规则下，gap是解释性诊断，不自动变成新的拒绝/强制交易触发器。不应把未验证的新触发器加进冻结控制器。若认为High必须始终保有floor，就不能再把该soft规则当足够。",
+    "hard_floor_alternative": "若root选择hard actual floor，应在新协议先规定检查时点、可行动作、费用、benefit-cost与硬约束优先级、实际持仓不足时如何恢复/转Review，且完整重做训练与OOF。年度数据无法证明未知年内最低份额。",
+    "pending_conflict": "既有pending-hold是无人工回应至H的可评分代理，不是流动性保障。它可以保留风险资产并让bill份额下降。若另承诺实际floor或已知近期义务，永久hold与义务可能冲突，必须另定授权与人工处置；不能无声改成清仓或把已发生MDD/everbreach重置。",
+    "initial_all_bills": "账户从100 bills开始，不等于已通过所有客户适配，也不产生免费初配。初配和任何后续恢复仍按题面扣同一转移费用。"
+  },
+  "A_to_E_conditional_application": [
+    {
+      "profile": "A",
+      "H": 5,
+      "L": 0.1,
+      "liquidity": "High",
+      "proposed_floor": 0.3,
+      "conditional_contest_suggestion": "Review：在现有有限三产品的H5/L10%风险筛查不支持；High还要求目标bill>=30%。理由不是缺题面以外的提款日期。",
+      "catalogue_example": {
+        "Conservative": {
+          "product": "Conservative",
+          "weights_equity_bond_bill": [
+            0.25,
+            0.3,
+            0.45
+          ],
+          "H": 5,
+          "L": 0.1,
+          "training_breach_count": 34,
+          "training_n": 120,
+          "saved_risk_only_training_screen_feasible": false,
+          "training_mean_annual_log_growth": 0.02773122199384628,
+          "scope": "Only a saved full120 risk-only catalogue illustration, not a new liquidity-policy fit, validation, independent risk certificate or final admission."
+        },
+        "Balanced": {
+          "product": "Balanced",
+          "weights_equity_bond_bill": [
+            0.45,
+            0.05,
+            0.5
+          ],
+          "H": 5,
+          "L": 0.1,
+          "training_breach_count": 49,
+          "training_n": 120,
+          "saved_risk_only_training_screen_feasible": false,
+          "training_mean_annual_log_growth": 0.03721351793094755,
+          "scope": "Only a saved full120 risk-only catalogue illustration, not a new liquidity-policy fit, validation, independent risk certificate or final admission."
+        },
+        "Growth_target_liquidity": "20% bills < 30%, independently incompatible"
+      },
+      "what_would_enable_a_recommendation": "如未来事前规定的共同菜单中出现同时有H5/L10%风险支持和High储备相容性的产品，按同一规则推荐；不自动保证全票据满足购买力损失容忍。"
+    },
+    {
+      "profile": "B",
+      "H": 15,
+      "L": 0.25,
+      "liquidity": "Medium",
+      "proposed_floor": 0.1,
+      "conditional_contest_suggestion": "Conservative为现有目录上的条件建议：目标bill45%满足Medium10%，且原H15/L25%风险only训练筛查支持。无需为了完成竞赛例题追问虚构客户金额。",
+      "catalogue_example": {
+        "product": "Conservative",
+        "weights_equity_bond_bill": [
+          0.25,
+          0.3,
+          0.45
+        ],
+        "H": 15,
+        "L": 0.25,
+        "training_breach_count": 9,
+        "training_n": 120,
+        "saved_risk_only_training_screen_feasible": true,
+        "training_mean_annual_log_growth": 0.028598869192324967,
+        "scope": "Only a saved full120 risk-only catalogue illustration, not a new liquidity-policy fit, validation, independent risk certificate or final admission."
+      },
+      "review_conditions": [
+        "新菜单/风险证据筛查不支持任何Medium相容产品",
+        "真实部署已知义务超出年度no-flow范围；这是部署层原因"
+      ]
+    },
+    {
+      "profile": "C",
+      "H": 30,
+      "L": 0.4,
+      "liquidity": "Low",
+      "proposed_floor": 0.0,
+      "conditional_contest_suggestion": "Balanced为现有目录上的Q1条件建议：Low不加类别floor，Balanced bill50%且原H30/L40%筛查支持。Low没有被解释为永不提款。",
+      "catalogue_example": {
+        "product": "Balanced",
+        "weights_equity_bond_bill": [
+          0.45,
+          0.05,
+          0.5
+        ],
+        "H": 30,
+        "L": 0.4,
+        "training_breach_count": 9,
+        "training_n": 120,
+        "saved_risk_only_training_screen_feasible": true,
+        "training_mean_annual_log_growth": 0.03962368302930973,
+        "scope": "Only a saved full120 risk-only catalogue illustration, not a new liquidity-policy fit, validation, independent risk certificate or final admission."
+      },
+      "review_conditions": [
+        "Q1或Balanced执行完整流程证据不足时按相应原因Review；不能用Q1条件标签强制执行自动服务",
+        "真实部署使用时间/金额与年度模型冲突时另行人审"
+      ],
+      "scope_warning": "新动态OOF的部分execution Review是技术执行准入结果，不能改写成因Low缺金额而liquidity Review，也不能把本提案当已解决覆盖不稳定。"
+    },
+    {
+      "profile": "D",
+      "H": 25,
+      "L": 0.15,
+      "liquidity": "Medium",
+      "proposed_floor": 0.1,
+      "conditional_contest_suggestion": "Review：现有三产品的H25/L15%风险筛查均不支持；Medium10% floor不能替代风险证据，长H也不放宽L。不是对所有长周期客户拒绝服务。",
+      "catalogue_example": {
+        "product": "Conservative",
+        "weights_equity_bond_bill": [
+          0.25,
+          0.3,
+          0.45
+        ],
+        "H": 25,
+        "L": 0.15,
+        "training_breach_count": 67,
+        "training_n": 120,
+        "saved_risk_only_training_screen_feasible": false,
+        "training_mean_annual_log_growth": 0.030581368107539246,
+        "scope": "Only a saved full120 risk-only catalogue illustration, not a new liquidity-policy fit, validation, independent risk certificate or final admission."
+      },
+      "what_would_enable_a_recommendation": "在同一共同菜单规则内存在H25/L15%与Medium储备均可支持的产品；否则保留明确风险/证据Review。"
+    },
+    {
+      "profile": "E",
+      "H": 6,
+      "L": 0.35,
+      "liquidity": "High",
+      "proposed_floor": 0.3,
+      "conditional_contest_suggestion": "现有固定目录的条件候选改为Balanced；Growth目标bill20%不满足High30%，Balanced50%与Conservative45%均满足。Saved H6风险only训练细节中两者都可行，按既定H6增长目标Balanced优先。该示意不能称新流动性流程已验证或已完成有效准入。",
+      "catalogue_examples": {
+        "Conservative": {
+          "product": "Conservative",
+          "weights_equity_bond_bill": [
+            0.25,
+            0.3,
+            0.45
+          ],
+          "H": 6,
+          "L": 0.35,
+          "training_breach_count": 0,
+          "training_n": 120,
+          "saved_risk_only_training_screen_feasible": true,
+          "training_mean_annual_log_growth": 0.02634569646527862,
+          "scope": "Only a saved full120 risk-only catalogue illustration, not a new liquidity-policy fit, validation, independent risk certificate or final admission."
+        },
+        "Balanced": {
+          "product": "Balanced",
+          "weights_equity_bond_bill": [
+            0.45,
+            0.05,
+            0.5
+          ],
+          "H": 6,
+          "L": 0.35,
+          "training_breach_count": 2,
+          "training_n": 120,
+          "saved_risk_only_training_screen_feasible": true,
+          "training_mean_annual_log_growth": 0.03536441527399193,
+          "scope": "Only a saved full120 risk-only catalogue illustration, not a new liquidity-policy fit, validation, independent risk certificate or final admission."
+        },
+        "Growth": {
+          "product": "Growth",
+          "weights_equity_bond_bill": [
+            0.7,
+            0.1,
+            0.2
+          ],
+          "H": 6,
+          "L": 0.35,
+          "training_breach_count": 9,
+          "training_n": 120,
+          "saved_risk_only_training_screen_feasible": true,
+          "training_mean_annual_log_growth": 0.04605520535486929,
+          "scope": "Only a saved full120 risk-only catalogue illustration, not a new liquidity-policy fit, validation, independent risk certificate or final admission."
+        }
+      },
+      "review_conditions": [
+        "新训练/内层证据不支持E获配该相容产品，或所有High相容产品风险筛查失败",
+        "不能沿用旧Growth的inner auto evidence证明E-Balanced准入；须在新完整程序中重新取得证据"
+      ],
+      "not_a_forced_label": "若重学三产品，Growth也可能变为bill>=30%的相容产品；本规则不强迫E永远叫Balanced，也不为了得到这个标签选择30%。若E成为Q2 Balanced客户，必须按H6重新运行其控制器，不借用C的H30策略前缀。"
+    }
+  ],
+  "sensitivity_and_set_valued_reporting": {
+    "primary_proposal": {
+      "High": 0.3,
+      "Medium": 0.1,
+      "Low": 0.0
+    },
+    "already_declared_alternatives": [
+      {
+        "id": "risk_only_ablation",
+        "High": 0.0,
+        "Medium": 0.0,
+        "Low": 0.0,
+        "role": "仅说明删除liquidity信息的影响，不作为完整Q1主规则。"
+      },
+      {
+        "id": "larger_reserve_norm",
+        "High": 0.5,
+        "Medium": 0.2,
+        "Low": 0.0,
+        "role": "更强储备惯例的规范敏感性，不表示真实客户更可能需要该金额。"
+      }
+    ],
+    "when_to_return_a_small_set": "如果root不愿采纳唯一三元组，可对事前固定的reference/larger两惯例分别给条件产品集合与Review原因；跨规范一致者称robust-to-these-conventions，变化者标liquidity-policy-sensitive，不用概率权重混合。",
+    "not_an_identification_interval": "这不是f的置信区间、客户偏好概率或可穷尽的合理值集合。不能依据新OOF覆盖/风险挑主惯例，也不能用较小floor只为增加自动服务。",
+    "no_new_run_here": true
+  },
+  "what_root_should_freeze_before_implementation": [
+    "采用target reserve软惯例还是hard实际floor；本提案建议前者以匹配题面有限数据，明确其较弱承诺。",
+    "主floor三元组或有限规范集合、共同菜单重新学习还是固定目录筛查、兼容条件与tie顺序。",
+    "risk/static/execution证据规则及无合格时的Review，不能让流动性修改把技术alpha/gamma/beta混成客户偏好。",
+    "每个context中先做Q1相容性/有效准入，再判Balanced case，再做执行训练；完整保留原分母和各原因。",
+    "A-E条件表、真实部署范围外说明和pending含义，避免把竞赛no-flow模型宣传为支出履约能力。"
+  ],
+  "provenance": {
+    "sources_sha256_at_start": {
+      "docs/problem_A.pdf": "2ac9412ed68349d36a3fbd2c6cddc5789a81dab8acbfa08c63a3bdb34d2aa2dd",
+      "docs/liquidity_service_design.json": "049938f609d704a1fe5dde682deaf9645101cfb66a7d813e96d31b9c22f0c218",
+      "docs/risk_menu_development_protocol.json": "6a57f3dc3f5a5850af2d8a1b2db597997edbd6054e61443d7ebfeb3fd8e37d51",
+      "docs/positive_asset_specification_protocol.json": "ff23c3fcdad54d83a2896a11459db1cec3e4f48fe6352d994139e4c9ff79475c",
+      "docs/problem_A_deliverable_crosswalk.json": "1c476d8d2117d8dcad2d16d2bd686fe13aab91c2f37069392af7d21a2dc3bf65",
+      "docs/review_pending_design_contract.json": "27516c993a31ea5eec2fa80559f2caddf3a9ce72cb08e7e0bf4d058160109200",
+      "docs/nested_dynamic_calibration_protocol.json": "bdd065bed90856eddd7d18061f3fc1e6cc852e5730fa122be5b1f587391a266c",
+      "results/model_review/positive_asset_specification_v1/nested_context_refits.json": "d13450e05051c02d2bf54a4edfc77ef01d880cee0c78238cc3d7204a6ab27aa1"
+    },
+    "sources_sha256_at_end": {
+      "docs/problem_A.pdf": "2ac9412ed68349d36a3fbd2c6cddc5789a81dab8acbfa08c63a3bdb34d2aa2dd",
+      "docs/liquidity_service_design.json": "049938f609d704a1fe5dde682deaf9645101cfb66a7d813e96d31b9c22f0c218",
+      "docs/risk_menu_development_protocol.json": "6a57f3dc3f5a5850af2d8a1b2db597997edbd6054e61443d7ebfeb3fd8e37d51",
+      "docs/positive_asset_specification_protocol.json": "ff23c3fcdad54d83a2896a11459db1cec3e4f48fe6352d994139e4c9ff79475c",
+      "docs/problem_A_deliverable_crosswalk.json": "1c476d8d2117d8dcad2d16d2bd686fe13aab91c2f37069392af7d21a2dc3bf65",
+      "docs/review_pending_design_contract.json": "27516c993a31ea5eec2fa80559f2caddf3a9ce72cb08e7e0bf4d058160109200",
+      "docs/nested_dynamic_calibration_protocol.json": "bdd065bed90856eddd7d18061f3fc1e6cc852e5730fa122be5b1f587391a266c",
+      "results/model_review/positive_asset_specification_v1/nested_context_refits.json": "d13450e05051c02d2bf54a4edfc77ef01d880cee0c78238cc3d7204a6ab27aa1"
+    },
+    "all_sources_unchanged": true
+  },
+  "checks": {
+    "new_market_data_loaded": false,
+    "final_scenarios_loaded": false,
+    "new_fit_forecast_or_replay": false,
+    "old_files_modified": false,
+    "old_OOF_used_to_select_floor": false,
+    "all_five_profiles_have_concrete_conditional_outputs": true,
+    "all_Review_due_only_to_missing_amount_time": false,
+    "5percent_grid_treated_as_liquidity_preference": false,
+    "fictional_withdrawals_added": false,
+    "final_service_contract_adopted_here": false
+  }
+}

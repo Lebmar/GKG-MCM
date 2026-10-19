@@ -1,0 +1,17 @@
+{
+  "version": "state-budget-mitigation-independent-audit-source-freeze-v1",
+  "execution_ready": true,
+  "frozen_utc": "2026-10-19T06:42:14.896362+00:00",
+  "plan_sha256": "29b9c9425af8e75b85986651952a4f80e25e9c0b40863359989967340a77236d",
+  "source_sha256": {
+    "scripts/audit_state_budget_mitigation.py": "b477c4d0d4ef0be6c690df1da5f9a89ba2715ce2fe16ac5ec72cef6ab7df80f0",
+    "tests/test_audit_state_budget_mitigation.py": "66315ff52dbca29b396c3dea28eb24f96a471a6cc68bfcbb7dbfc33b8132b470",
+    "docs/state_budget_mitigation_audit_plan.json": "29b9c9425af8e75b85986651952a4f80e25e9c0b40863359989967340a77236d",
+    "src/safeinvest/data.py": "70e511fd05c6e23fd6b8a72f1dc165426fc77a5eb4dbd8a3c13b839bb305a75f",
+    "src/safeinvest/__init__.py": "dcef1e2e1f0f7cd5426988f0f27408eebb9ded3fb32c961f8f23e2edfb6e4ad2",
+    "scripts/audit_state_budget_rebuild.py": "8451a30832cf7aae27e008aae13e8107372095fd65e1f29d597fab304cb6167e"
+  },
+  "focused_synthetic_tests": 16,
+  "market_value_access_during_audit_source_preparation": false,
+  "scope": "All physics and every firstmitigation plus fixedprimary witnesses; shares frozen independent V2 oracle, no production helper import."
+}

@@ -1,0 +1,10 @@
+{
+  "version": "compact-submission-build-release-template-v1",
+  "build_ready": false,
+  "protocol_sha256": "8b39e34143de96cbfd46cd0849e0d8406079f30d4bd5572a508b65779ed96d1f",
+  "source_freeze_sha256": null,
+  "preparation_manifest_sha256": null,
+  "allowlist_without_release_sha256": null,
+  "instructions": "After expectations preparation passes and all packaged source/documentation stops editing, root writes separate docs/compact_submission_build_release.json with version compact-submission-build-release-v1 and build_ready=True, exact current SHA bindings, and canonical SHA of full packing_inventory mapping excluding release itself. This template cannot activate build.",
+  "allow_final": false
+}

@@ -1,0 +1,30 @@
+{
+  "version": "global-policy-overlay-independent-source-review-v1",
+  "written_utc": "2026-10-18T08:58:02.179188+00:00",
+  "status": "No source/method block before independent numeric artifact audit",
+  "timing": "Source review began before producer freeze. Receipt completed after parent reported the producer complete; no numeric output file has yet been read by this auditor. Parent-reported outcome numbers are known, so this is not a blind prospective review.",
+  "scope": [
+    "Retain exact old final-selected beta/order/target; no fitting, alternate beta, E reranking or rescue",
+    "Guard only original automated fits on fixed selected-beta own U and exact own-job B; no-U risk NULL",
+    "Preserve Q1/outside priority and old rejection; newly rejected service financial fields NULL",
+    "Finite total-log score uses originalH and already-net Q; risk_first integer lexicographic rule separate",
+    "Every nonpositive optional restore must strictly reduce modeled event count; strict negative growth and numerical ties separated",
+    "Audit all original selected actual accounts even if new guard rejects; these are archived development evidence, not served returns"
+  ],
+  "pure_tests": {
+    "command": ".venv/bin/python -m unittest tests.test_global_policy_retention_audit -q",
+    "passed": 15,
+    "market_or_result_files_read": false
+  },
+  "independence": "No producer or economic simulator import; separate ID joins, count algebra, score logic and output recomputation. Existing independent parent physical/Q audit receipts are reused rather than relabeled as new physical replay.",
+  "source_sha256": {
+    "scripts/finalize_global_policy_admission.py": "8d4b1e2ed8844752aa689637c733e662d54cc6504720dbd2e284fd7b3f3957f0",
+    "tests/test_global_policy_admission.py": "94697283648123024c5171ec7de889f5706aff047a64fff16f6dd87318d04be8",
+    "scripts/audit_global_policy_retention.py": "02df47e54ff98d4ee0142c8cfa33d0465b69fcf7da01f435d154bbb5a1535911",
+    "tests/test_global_policy_retention_audit.py": "d1a96be5386eb221f2776c9589c83a4a7d7d7569736cef294643d9c6b93ad600",
+    "docs/global_policy_retention_and_cost_review.json": "a0763c8a020f655ca5df710f46392b1cbe4fcf05c2e7adbd412a5f539682f295",
+    "docs/global_policy_admission_protocol.json": "5b3c2fa27300774f24d0195e4817ad3fd5e662f30cf3deffbd29cdc3d5cb0bd0"
+  },
+  "new_market_data_loaded": false,
+  "final_scenarios_loaded": false
+}

@@ -1,0 +1,111 @@
+{
+  "version": "mitigation-final-interpretation-timing-addendum-v1",
+  "reviewed_utc": "2026-10-19T07:50:43.642488+00:00",
+  "status": "passed_saved_timing_presentation_addendum",
+  "historical_review": "docs/mitigation_locked_final_interpretation_independent_review.json",
+  "historical_review_sha256": "54aa5396a431380b8264f7ff861afc8238ee397b5129fff1cdeb9d5462122bd3",
+  "historical_review_unchanged": true,
+  "not_retroactive_binding": "The historical review binds its exact earlier builder/HTML/export snapshot. This separate addendum binds the current presentation version only.",
+  "parent_manifest_sha256": "7401ad59279c694fc4077ab42af1af42e707b258156bca5a7ec110467e407f07",
+  "independent_audit_sha256": "7929ea36e23c9b357a568b8d0f06cd7f90024a61aae0222c11c532cc1bcf65c8",
+  "current_builder_sha256": "dc24f7c12ef115d82cfe7fb9baf4e238d9848a268669e9811b1937c514fe8c71",
+  "current_page_sha256": "0faf10734cfe483fe5b6613a2e406874bb7897499639211308cc23fe0b673d79",
+  "timing_csv_sha256": "a0e0ea905ff58915d48333018c422f687f2949e2ea387c2aa2f25483e58441e7",
+  "sources_and_artifacts_at_start": {
+    "docs/mitigation_locked_final_interpretation_independent_review.json": "54aa5396a431380b8264f7ff861afc8238ee397b5129fff1cdeb9d5462122bd3",
+    "results/mitigation_locked_final_evaluation_v1/manifest.json": "7401ad59279c694fc4077ab42af1af42e707b258156bca5a7ec110467e407f07",
+    "results/mitigation_locked_final_evaluation_v1/independent_audit.json": "7929ea36e23c9b357a568b8d0f06cd7f90024a61aae0222c11c532cc1bcf65c8",
+    "results/mitigation_locked_final_evaluation_v1/traces.npz": "4383cb1cdcd812b120a512557c9d0463c58de35ce725a7d668fb378b76be513a",
+    "results/mitigation_locked_final_evaluation_v1/Q2_paths.csv.gz": "d10bd18cd2de024739c82b4ce8d71059ffcf8a0f4cd0e9a8a8731b1f66b5be91",
+    "results/mitigation_locked_final_evaluation_v1/trace_groups.json": "6543fb2e3d64a8c9415822b123588fb6505112810ef304f15b56d06d644fc833",
+    "scripts/build_mitigation_final_companion.py": "dc24f7c12ef115d82cfe7fb9baf4e238d9848a268669e9811b1937c514fe8c71",
+    "notebooks/mitigation_locked_final_2026_10_19.html": "0faf10734cfe483fe5b6613a2e406874bb7897499639211308cc23fe0b673d79",
+    "notebooks/mitigation_locked_final_2026_10_19_assets/build_manifest.json": "a5e2081773c5acf82bc391704c69e28a3fc13d1622c0e5d29c83689e1bf8e48d",
+    "notebooks/mitigation_locked_final_2026_10_19_assets/all60_guard_timing.csv": "a0e0ea905ff58915d48333018c422f687f2949e2ea387c2aa2f25483e58441e7",
+    "notebooks/mitigation_locked_final_2026_10_19_assets/01_final_same_ids_ecdf.png": "32c769408b690793080d0bb7549328b5bea3b821da89b2fcbdf1451ed95802e4",
+    "notebooks/mitigation_locked_final_2026_10_19_assets/02_service_and_fees.png": "cc311ef29ca0c036dcfe429beccb094b3c9066bce57164410068912c8e622408",
+    "notebooks/mitigation_locked_final_2026_10_19_assets/03_severe_synthetic_path.png": "b8e20111dadbe09a37a15d6070323434414a37971510dce9c80f1fe31cb3f3eb"
+  },
+  "all60_original_ids_exact": true,
+  "all60_timing_csv_fields_match_saved_arrays": true,
+  "guard_histogram": {
+    "4": 1,
+    "5": 2,
+    "6": 3,
+    "7": 54
+  },
+  "ordinary_service_periods": 350,
+  "ordinary_denominator": 1800,
+  "ordinary_fraction": 0.19444444444444445,
+  "mean_ordinary_years": 5.833333333333333,
+  "ordinary_matrix_identity": "0-based calendar t < first_guard_decision_year - 1",
+  "original_breach_events": [
+    {
+      "scenario_id": 132,
+      "first_guard_decision_year": 7,
+      "first_breach_endpoint": 23
+    },
+    {
+      "scenario_id": 161,
+      "first_guard_decision_year": 7,
+      "first_breach_endpoint": 14
+    }
+  ],
+  "all_breaches_later_than_first_guard": true,
+  "all_three_PNG_bytes_unchanged_from_historical_review": true,
+  "unchanged_PNG_sha256": {
+    "01_final_same_ids_ecdf.png": "32c769408b690793080d0bb7549328b5bea3b821da89b2fcbdf1451ed95802e4",
+    "02_service_and_fees.png": "cc311ef29ca0c036dcfe429beccb094b3c9066bce57164410068912c8e622408",
+    "03_severe_synthetic_path.png": "b8e20111dadbe09a37a15d6070323434414a37971510dce9c80f1fe31cb3f3eb"
+  },
+  "historical_snapshot_paths_that_have_since_changed": {
+    "notebooks/mitigation_locked_final_2026_10_19.html": {
+      "historical_sha256": "0c7c4b23541590952fa991a978f98aa066e7f61dda70410f0a350bf74d873f73",
+      "current_sha256": "0faf10734cfe483fe5b6613a2e406874bb7897499639211308cc23fe0b673d79"
+    },
+    "notebooks/mitigation_locked_final_2026_10_19_assets/01_final_same_ids_ecdf.svg": {
+      "historical_sha256": "4fb2a9c8a453410603bf161e9a9122b81b2e57c989403475e372713755d809b9",
+      "current_sha256": "2ebc13d274f5e2f6ecb76f7e5b971fcdff3d516a3c69ba30886ad20fcacc047d"
+    },
+    "notebooks/mitigation_locked_final_2026_10_19_assets/02_service_and_fees.svg": {
+      "historical_sha256": "203dbaa25ed616b2602e3d4d55fa2f740cb8481e213dc49eb60b5206b2c8dec8",
+      "current_sha256": "66e7a5b7e87968b4a06d4adcf1cd3b927b2e7f93b762aac9764ae21d934f7468"
+    },
+    "notebooks/mitigation_locked_final_2026_10_19_assets/03_severe_synthetic_path.svg": {
+      "historical_sha256": "71ee1607511eca4f9682d3b7365f66e02f8939b96ef883ca09b5601d60fe6454",
+      "current_sha256": "ec923fdf613c36ec22492381349add5cbc8e23663a677320e3ce4776673a1fbe"
+    },
+    "notebooks/mitigation_locked_final_2026_10_19_assets/build_manifest.json": {
+      "historical_sha256": "e20ba3842883a3a869a58771810c7d527221c06ef6daaab5831df8f0fdfff958",
+      "current_sha256": "a5e2081773c5acf82bc391704c69e28a3fc13d1622c0e5d29c83689e1bf8e48d"
+    },
+    "scripts/build_mitigation_final_companion.py": {
+      "historical_sha256": "28e335fd26f52fe85f3bc0e3b2610b1196667d168f479490dbc8ad658603cc9a",
+      "current_sha256": "dc24f7c12ef115d82cfe7fb9baf4e238d9848a268669e9811b1937c514fe8c71"
+    }
+  },
+  "judgment": "Current builder adds saved-array timing extraction, a complete60-ID CSV and a descriptive timing paragraph. All60 records and both original crossing endpoints agree exactly with the already-audited arrays; the three PNGs are byte-identical to the reviewed images. This is a presentation supplement, not a model/rule change, new selection, post-final refit, causal mechanism identification or renewed blind validation.",
+  "editorial_boundary": "The earlier recommendation to distinguish triggering human referral/pending hold from actual human intervention remains applicable. No simulated human response or execution is inferred.",
+  "raw_market_reads": 0,
+  "new_model_runs": 0,
+  "new_fits": 0,
+  "new_selection": 0,
+  "producer_outputs_changed": false,
+  "frozen_sources_modified": false,
+  "HTML_browser_rendered_by_this_reviewer": false,
+  "sources_and_artifacts_at_end": {
+    "docs/mitigation_locked_final_interpretation_independent_review.json": "54aa5396a431380b8264f7ff861afc8238ee397b5129fff1cdeb9d5462122bd3",
+    "results/mitigation_locked_final_evaluation_v1/manifest.json": "7401ad59279c694fc4077ab42af1af42e707b258156bca5a7ec110467e407f07",
+    "results/mitigation_locked_final_evaluation_v1/independent_audit.json": "7929ea36e23c9b357a568b8d0f06cd7f90024a61aae0222c11c532cc1bcf65c8",
+    "results/mitigation_locked_final_evaluation_v1/traces.npz": "4383cb1cdcd812b120a512557c9d0463c58de35ce725a7d668fb378b76be513a",
+    "results/mitigation_locked_final_evaluation_v1/Q2_paths.csv.gz": "d10bd18cd2de024739c82b4ce8d71059ffcf8a0f4cd0e9a8a8731b1f66b5be91",
+    "results/mitigation_locked_final_evaluation_v1/trace_groups.json": "6543fb2e3d64a8c9415822b123588fb6505112810ef304f15b56d06d644fc833",
+    "scripts/build_mitigation_final_companion.py": "dc24f7c12ef115d82cfe7fb9baf4e238d9848a268669e9811b1937c514fe8c71",
+    "notebooks/mitigation_locked_final_2026_10_19.html": "0faf10734cfe483fe5b6613a2e406874bb7897499639211308cc23fe0b673d79",
+    "notebooks/mitigation_locked_final_2026_10_19_assets/build_manifest.json": "a5e2081773c5acf82bc391704c69e28a3fc13d1622c0e5d29c83689e1bf8e48d",
+    "notebooks/mitigation_locked_final_2026_10_19_assets/all60_guard_timing.csv": "a0e0ea905ff58915d48333018c422f687f2949e2ea387c2aa2f25483e58441e7",
+    "notebooks/mitigation_locked_final_2026_10_19_assets/01_final_same_ids_ecdf.png": "32c769408b690793080d0bb7549328b5bea3b821da89b2fcbdf1451ed95802e4",
+    "notebooks/mitigation_locked_final_2026_10_19_assets/02_service_and_fees.png": "cc311ef29ca0c036dcfe429beccb094b3c9066bce57164410068912c8e622408",
+    "notebooks/mitigation_locked_final_2026_10_19_assets/03_severe_synthetic_path.png": "b8e20111dadbe09a37a15d6070323434414a37971510dce9c80f1fe31cb3f3eb"
+  }
+}

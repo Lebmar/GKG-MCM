@@ -1,0 +1,349 @@
+{
+  "version": "current-model-contract-closure-2026-10-19-v1",
+  "written_utc": "2026-10-19T04:37:00.507433+00:00",
+  "status": "Concrete model/decision specification and remaining limitations. No paper, new policy, parameter fit, heldout-final read or deployment approval.",
+  "authority": "The unchanged main_model_registry.json remains authoritative. This document closes interpretations and requirements using current-version evidence; it does not supersede or rescue a rejected fit.",
+  "mathematical_contract": {
+    "growth": "G_H=[ln(V_H/CPI_H)-ln(100)]/original_H; CAGR=exp(G_H)-1. Arithmetic mean G across scenarios differs from mean CAGR.",
+    "loss": "Maximum real annual-endpoint drawdown from the complete original historical peak, including initial real100. Observations are annual; no claim to intrayear maximum drawdown.",
+    "loss_trigger": "Strict MDD-L>1e-12 sets an absorbing pending flag; L is a profile tolerance/review trigger, never a guaranteed stop-loss.",
+    "preference": "alpha=.10 and liquidity floors are declared service conventions. The candidate menu contains eight finite technical eta prices0/.001/.003/.01/.03/.1/.3/1 and a separate risk_first lexicographic label, never psychological risk preference or a KKT multiplier.",
+    "objective_and_admission": "Within each beta, choose highest complete-training mean G_H among9 fixed control policies satisfying k<=min(k_B,floor(beta*n+1e-12)). Inner beta selection first maximizes admitted coverage, then conditional G; retained top-E/refit feasibility unchanged. This is not a claim of global optimality across all policies.",
+    "additional_guard": "Only old already-selected final beta original inner automatic set U; require U>0, k(U)<=floor(.1*|U|+1e-12) and k(U)<=k_B(U). Same own-inner job/target/originalID. No alternative beta/eta/target or rescue of a previously rejected fit.",
+    "exact_fee": "C=c*sum(max((V-C)*w_i-x_i,0)); c=.0025, actual transfer counted once; deduct before return; initial allocation charged; no terminal liquidation.",
+    "benefit": "Finite score Delta_net_Qg-original_H*eta*(kR-kH)/N. Both Q values include current and all modeled later fees once. Positive score need not mean positive net financial growth; trades with nonpositive Delta_net_Qg must strictly reduce modeled breach count and are labelled risk reduction with growth cost.",
+    "forecast": "Original empirical joint chronological suffix fan: current hold/restore, then branch-specific annual same-target B until that forecast branch breaches, then hold. Actual policy replans each year. This is not Qpi, an estimated conditional law, calibrated tail probability or a global dynamic-programming optimum.",
+    "risk_first": "Restore if kR<kH; if counts are equal restore only if Delta_net_Qg>1e-12; otherwise hold. There is no infinity-times-zero score.",
+    "ordinary_vs_tail_risk": "Ordinary volatility is within-path sample standard deviation of net annual real returns, ddof=1 (H=1 convention0). MDD measures unusual peak-to-trough loss. Across scenarios, empirical CVaR90 MDD averages the worst10% probability mass, including fractional boundary atoms; it is not the average of all observations above an interpolated P90 cutoff.",
+    "information_set": "Heldout/live Q2 actions use only the actual scenario state through the preceding year and a separately frozen trainingfan, with no actual future access. Full120 training resubstitution includes each actualID in that fan; its9/120 is a fitting diagnostic, not an admissible prospective/heldout reliability claim. A later121–180 evaluation must use only the frozen1–120fan for forecasts."
+  },
+  "Q1_product_and_liquidity": {
+    "asset_order": [
+      "equity",
+      "bond",
+      "bills"
+    ],
+    "current_full120": {
+      "portfolios_asset_order": [
+        "equity",
+        "bond",
+        "bills"
+      ],
+      "portfolios": {
+        "Conservative": [
+          0.25,
+          0.3,
+          0.45
+        ],
+        "Balanced": [
+          0.45,
+          0.05,
+          0.5
+        ],
+        "Growth": [
+          0.65,
+          0.05,
+          0.3
+        ]
+      },
+      "profile_Q1_assignments": {
+        "A": "Review",
+        "B": "Conservative",
+        "C": "Balanced",
+        "D": "Review",
+        "E": "Growth"
+      },
+      "gamma": 0.075,
+      "liquidity_floors": {
+        "high": 0.3,
+        "medium": 0.1,
+        "low": 0.0
+      },
+      "liquidity_interpretation": "Normative target-bill floor applied jointly in all static fits; not a drifting live-cash reserve or withdrawal guarantee."
+    },
+    "own_horizon": "A5/B15/C30/D25/E6 years, with each original profile own L and liquidity category; do not use C30 metrics for every customer.",
+    "suitability_vs_execution": "CBalanced is a Q1 suitability assignment. It does not authorize the dynamic Q2 execution program; current full C executionReview remains separate.",
+    "cash_limit": "Bill floors enter every static refit as target conventions. Holdings drift after returns; this is not a persistent live cash minimum or expenditure-funded withdrawal model. New actual cash needs require review. Do not invent missing withdrawal amounts to retroactively reject the supplied contest profiles.",
+    "evaluation_reference": "Q1 own-H metrics evaluate the static product under cached annual target restoration, including after an L crossing. These are suitability/product-reference results, not approval of every product dynamic execution service. Q2 B separately uses annual-then-pending; current C may be executionReview."
+  },
+  "current_C_service": {
+    "H": 30,
+    "L": 0.4,
+    "original_selected_beta": 0.075,
+    "original_selected_eta": 0.03,
+    "original_target": [
+      0.45,
+      0.05,
+      0.5
+    ],
+    "full_training_breaches": 9,
+    "full_training_n": 120,
+    "inner_program_auto_n": 120,
+    "inner_program_breaches": 10,
+    "same_U_B_breaches": 8,
+    "absolute_alpha_cap": 12,
+    "final_status": "execution_review",
+    "reason": "inner_risk_exceeds_same_U_B",
+    "financial_outputs": null,
+    "interpretation": "Inner evidence concerns the selected-beta learning procedure with its own inner targets/prices, not an independent test of one fixed final eta=.03. Difference10vs8 is not asserted statistically significant; rejecting it implements the declared conservative empirical reference rule."
+  },
+  "Q2_evaluation_contract": {
+    "existing_table": "results/model_review/global_policy_admission_v1/summary.csv.gz",
+    "rows": 18,
+    "required_columns": [
+      "median_cagr",
+      "p10_cagr",
+      "median_mdd",
+      "p90_mdd",
+      "mean_trade_fraction"
+    ],
+    "zero_coverage": "Full120 current guarded service has assigned_n=0. Breach, growth, MDD, fees and trading metrics are NULL, not zero or a bill/B investment substituted as the model.",
+    "denominators": "Keep original120, assigned count, review count and conditional financial denominators distinct. Compare model and B on exactly the same admitted original IDs and matching fitted target. Full120 B/equal-thirds versus model24/48 is not a same-population policy effect.",
+    "repeats": "Five repeats reuse original120 markets. Their96 automatic scenario-repeat records involve74 distinct IDs. They are not96 independent deployments or600 independent scenarios; do not pool fold quantiles or declare population risk guarantees.",
+    "observed_limits": {
+      "local_constrained_repair_full_training": {
+        "n": 120,
+        "breaches": 25,
+        "cap": 9
+      },
+      "guarded_outer_auto_per_repeat": [
+        0,
+        24,
+        0,
+        24,
+        48
+      ],
+      "guarded_outer_breaches_per_repeat": [
+        null,
+        5,
+        null,
+        1,
+        3
+      ],
+      "same_outer_A_B_events": [
+        null,
+        4,
+        null,
+        0,
+        2
+      ],
+      "automatic_scenario_repeat_records": 96,
+      "distinct_original_ids_in_these_records": 74,
+      "qualified_record_optional_restores": 678,
+      "predicted_net_growth_restores": 376,
+      "predicted_risk_reduction_with_growth_cost_restores": 302,
+      "critical_limit": "One heldout repeat has5/24=20.83% events on admitted paths. Other common-auto comparisons also show more events/MDD than same-A B, alongside higher growth and lower fees. Guard is not a future safety guarantee. Repeats are dependent and zero-coverage risk isNULL.",
+      "positive_financial_benefit_trial_full_training": {
+        "n": 120,
+        "breaches": 31,
+        "cap": 9
+      },
+      "historical_registry_label_clarification": "The unchanged registry uses the historical key growth_only_full_training for the positive-financial-benefit simplification trial31/120. This is distinct from eta0 in the retained fan learner, whose current full120 training count is37. No frozen registry or past result is edited.",
+      "retained_eta0_full_training": {
+        "n": 120,
+        "breaches": 37,
+        "scope": "Unconstrained finite eta0 candidate in current joint-refit training table; not an admitted policy."
+      }
+    },
+    "comparators": "B is own-fit target annual restore then pending hold; exact-thirds is 1/3 each, restores annually and continues after crossing. Neither is an automatic fallback for rejected model service.",
+    "initial_and_optional": "Admitted policy initial allocation is mandatory and charged. Subsequent optional restores use the net score; there is no terminal liquidation charge.",
+    "automatic_target_updates": {
+      "enabled": false,
+      "basis": "No demonstrated incremental benefit under this present joint-refit/same-U contract. Older18-family comparison used different menu/learner and is historical context only. Off is a conservative design choice, not proof target updates never help."
+    },
+    "trade_fraction": "Count periods with actual destination moved amount>1e-12 divided by original H, including inception and pending periods in the denominator. An action labelled restore with zero physical movement is not an actual trade."
+  },
+  "severe_example": {
+    "identity": "outer_r5_112, c502_refit, original scenario112, repeat5 outer2, original H30/L.40, target45/5/50, eta.03, trainingfan96",
+    "scope": "An existing guard-admitted outer research case, deliberately selected as a known failure. Synthetic illustrative case, not actual customer experience or a representative frequency estimate. Scenario112 also occurs in other dependent fits.",
+    "endpoints": [
+      {
+        "arm": "model",
+        "endpoint": 25,
+        "real_wealth": 159.64144279014718,
+        "real_peak": 235.269306509056,
+        "current_drawdown": 0.321452317096016,
+        "running_mdd": 0.321452317096016,
+        "ever_breached": false
+      },
+      {
+        "arm": "model",
+        "endpoint": 26,
+        "real_wealth": 140.1445255429953,
+        "real_peak": 235.269306509056,
+        "current_drawdown": 0.404322953884336,
+        "running_mdd": 0.404322953884336,
+        "ever_breached": true
+      },
+      {
+        "arm": "model",
+        "endpoint": 27,
+        "real_wealth": 142.22311705949593,
+        "real_peak": 235.269306509056,
+        "current_drawdown": 0.39548800831773,
+        "running_mdd": 0.404322953884336,
+        "ever_breached": true
+      },
+      {
+        "arm": "model",
+        "endpoint": 30,
+        "real_wealth": 172.78753327976085,
+        "real_peak": 235.269306509056,
+        "current_drawdown": 0.265575540457888,
+        "running_mdd": 0.404322953884336,
+        "ever_breached": true
+      },
+      {
+        "arm": "B",
+        "endpoint": 25,
+        "real_wealth": 148.1660629088796,
+        "real_peak": 212.74308587648537,
+        "current_drawdown": 0.303544637897647,
+        "running_mdd": 0.303544637897647,
+        "ever_breached": false
+      },
+      {
+        "arm": "B",
+        "endpoint": 26,
+        "real_wealth": 130.10451232478167,
+        "real_peak": 212.74308587648537,
+        "current_drawdown": 0.388443051915126,
+        "running_mdd": 0.388443051915126,
+        "ever_breached": false
+      },
+      {
+        "arm": "B",
+        "endpoint": 27,
+        "real_wealth": 133.23144841841486,
+        "real_peak": 212.74308587648537,
+        "current_drawdown": 0.373744872273938,
+        "running_mdd": 0.388443051915126,
+        "ever_breached": false
+      },
+      {
+        "arm": "B",
+        "endpoint": 30,
+        "real_wealth": 159.53003458891783,
+        "real_peak": 212.74308587648537,
+        "current_drawdown": 0.250128228930843,
+        "running_mdd": 0.388443051915126,
+        "ever_breached": false
+      }
+    ],
+    "actions": [
+      {
+        "arm": "model",
+        "year": 25,
+        "action": "hold",
+        "nominal_fee": 0.0,
+        "pending_at_decision": false,
+        "q_available": true,
+        "gate_reason": "finite_score_nonpositive"
+      },
+      {
+        "arm": "model",
+        "year": 26,
+        "action": "restore",
+        "nominal_fee": 0.169115211120037,
+        "pending_at_decision": false,
+        "q_available": true,
+        "gate_reason": "finite_score_positive"
+      },
+      {
+        "arm": "model",
+        "year": 27,
+        "action": "hold",
+        "nominal_fee": 0.0,
+        "pending_at_decision": true,
+        "q_available": false,
+        "gate_reason": "already_breached_pending_hold"
+      },
+      {
+        "arm": "model",
+        "year": 30,
+        "action": "hold",
+        "nominal_fee": 0.0,
+        "pending_at_decision": true,
+        "q_available": false,
+        "gate_reason": "already_breached_pending_hold"
+      },
+      {
+        "arm": "B",
+        "year": 25,
+        "action": "restore",
+        "nominal_fee": 0.091843745185469,
+        "pending_at_decision": false,
+        "q_available": false,
+        "gate_reason": null
+      },
+      {
+        "arm": "B",
+        "year": 26,
+        "action": "restore",
+        "nominal_fee": 0.0401722942439,
+        "pending_at_decision": false,
+        "q_available": false,
+        "gate_reason": null
+      },
+      {
+        "arm": "B",
+        "year": 27,
+        "action": "restore",
+        "nominal_fee": 0.041653770681732,
+        "pending_at_decision": false,
+        "q_available": false,
+        "gate_reason": null
+      },
+      {
+        "arm": "B",
+        "year": 30,
+        "action": "restore",
+        "nominal_fee": 0.045293970274473,
+        "pending_at_decision": false,
+        "q_available": false,
+        "gate_reason": null
+      }
+    ],
+    "interpretation": "At year26 both model and B restore to the identical target. The model ends with higher real wealth but a higher historical real peak, so its40.4323% drawdown crosses40%, while B38.8443% does not. Crossing-year target equality does not erase earlier history. From year27 the model holds quantities, keeps original CPI/peak/MDD/H, pays zero new fees and continues market exposure. Improved later wealth/current drawdown does not clear the absorbing flag. No human response or liquidation is invented."
+  },
+  "customer_explanation": {
+    "purpose": "Model-contract UI wording; report prose is deferred. First two sentences concern current preinvestmentReview; the last conditional sentence describes an existing admitted investment crossing L.",
+    "english": "Your portfolio choice is Balanced, but automated investing has not passed our risk checks. A human adviser must review your loss tolerance and liquidity needs before we proceed. If an existing investment breaches your limit, it remains exposed to market movements while awaiting review.",
+    "word_count": 44,
+    "count_method": "Whitespace-separated words; all plain words, no hyphenated count ambiguity.",
+    "maximum_words": 50
+  },
+  "Q3_cost_and_safeguards": {
+    "current_cost_link": "docs/current_candidate_cost_bridge_judgment.json verifies exact base-cost identity before reusing15groups/1800 archived full120 shadow rows; five known rates0,.00125,.0025,.005,.01, actual rate equals modeled rate.",
+    "stress_limits": "Known fees may change actions as well as cash drag, so event counts need not be monotone. This does not test cost misestimation, revised fits, changed menus, reapproval or approval stability. Frozen currentReview is not empirical robustness.",
+    "preinvestment_review": "Rejected/inapplicable model, malformed supplied inputs and material changes to questionnaire/cash needs require human review. Input-integrity checks and uncalibrated applicability judgments are distinct; no numerical drift detector is invented.",
+    "postbreach_pending": "Absorbing pending hold; continue actual returns/CPI and original peak/MDD/H, charge no further trades; no invented human-response time or recovery reset.",
+    "operational_gaps": "No calibrated drift detector, intrayear monitoring/stop-loss guarantee, human response-time model or emergency cash/withdrawal mechanism. These are explicit boundaries, not retrospectively added success criteria."
+  },
+  "freeze_and_delivery_boundary": {
+    "current_model_changed": false,
+    "final121_180_read": false,
+    "paper_written": false,
+    "submission_zip_generated": false,
+    "CMT_uploaded": false,
+    "next_decision": "Conclude these development diagnostics and arithmetic audits, then decide the complete final evaluation protocol. Freeze the complete policy before one transparent121–180 evaluation without later adjustment. Old V1 saw final data, so it cannot be labelled newly blind. Final report and reproducible delivery follow that decision.",
+    "remaining_scientific_gap": "A reliable autonomous recommendation for full-development C has not been established. Source/accounting correctness, same-state fan mechanisms and richer explanations do not solve conditional forecast calibration or service stability."
+  },
+  "evidence_sha256": {
+    "docs/problem_A.pdf": "2ac9412ed68349d36a3fbd2c6cddc5789a81dab8acbfa08c63a3bdb34d2aa2dd",
+    "docs/main_model_registry.json": "2d73f73d47523c922329c59c78548f8bc67a8bb93d4e8d3eef67a5bd1d2e7074",
+    "docs/model_closure_requirements_review_2026_10_19.json": "1de1d4e1b7d2cee346e24bc9e735e3d8cf641ad7c776f097b25905ee899dde44",
+    "docs/current_candidate_cost_bridge_judgment.json": "826c4f2b02939263914ffc10d7a811788b81e1c63609e3a5f15d618e8c5489ff",
+    "docs/failure_path_mechanism_judgment.json": "22134b4b54d1aa122793b88653a02a869f6a34137f55b449b9aa247ca4022f3a",
+    "docs/failure_action_intervention_judgment.json": "e3326e6e853837303364af0c366a3517a1dc9ad9af616da4ebb2285bd2319fb7",
+    "results/model_review/global_policy_admission_v1/summary.csv.gz": "a8108b91378c2db4be72d7e3e2aa5c57c661b4d55af9e675993835e1d4f77684",
+    "results/model_review/global_policy_admission_v1/independent_audit.json": "9f85f41112ac59a42f721c84808704cae980ca9cba61d63458ffe2018c77d8b0",
+    "results/model_review/failure_path_mechanisms_v1/account_endpoints.csv.gz": "a21b31a69a7badf01b6ba0661d4d354dab7033285e562f87d37069670f280a06",
+    "results/model_review/failure_path_mechanisms_v1/annual_states.csv.gz": "fa67b60877279f4cf9bf71823164dd17f898eccd14a3f28b8b871445e10eca58",
+    "results/model_review/failure_path_mechanisms_v1/independent_audit.json": "2c36ce83b833009aa6e90753d68741c293ef5b9c51ac8d58765ec05080f9f345",
+    "research/safeinvest_research/metrics.py": "7ec8e4821ce284351a3d8ed7071c687fdf7d6e4cfd225f72cad1d09d623eb008",
+    "research/experimental_execution/risk_priced_fan_rollout.py": "2a935cfe1d039f6a020e104fe92aa659bb92aac2a0b3bed2ef767437015ba472",
+    "scripts/run_joint_liquidity_refit.py": "d6c6dfa2b18fd4b0fcfc9ec97b6a822c87f50ea1f42b2ee763d06a394e8641fe",
+    "results/model_review/joint_liquidity_refit_v1/training_candidate_summary.csv": "05da8fd64ae5bdcda7ddb224a030afba5649c4b341dbb1850c2549aa1526b046"
+  }
+}

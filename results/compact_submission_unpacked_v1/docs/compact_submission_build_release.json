@@ -1,0 +1,13 @@
+{
+  "version": "compact-submission-build-release-v1",
+  "build_ready": true,
+  "protocol_sha256": "5c5a83c826d100048c09a8d88949bade083440cd110ca6c68397132fa5f79312",
+  "source_freeze_sha256": "de7840d756c9a172c91b4ea313b5e179faacff1cce10958f116bde5722223028",
+  "preparation_manifest_sha256": "c48c19c71cc045e78d77033c152c68a2920d85860dd96535017d60edd8ef5eae",
+  "allowlist_without_release_sha256": "29af3d88f1795169cdb7dbafa05094513d8d3e6158d3a92a9492ac284a6f0cde",
+  "instructions": "Root activation for the exact current allowlist; template itself is separate and cannot activate.",
+  "allow_final": false,
+  "created_utc": "2026-10-19T08:18:35.528841+00:00",
+  "member_count_without_build_release": 544,
+  "scope": "Root verified expectation preparation complete and all1419 repository unit tests passed; fixed-model compact source package, no automatic final access."
+}

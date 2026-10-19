@@ -1,0 +1,82 @@
+{
+  "version": "constrained-fan-execution-independent-preexecution-review-v1",
+  "written_utc": "2026-10-18T08:38:40.049718+00:00",
+  "status": "No method or implementation blocker in final reviewed sources; parent still must fill/freeze protocol source/input closure before execution",
+  "evidence_boundary": "Read-only source/protocol/audit-plan review plus30pure synthetic tests. No new raw market, numerical policy result, saved financial cache content or final121–180 data was read. Previous growth-only failure context is parent-reported and motivates training-feasibility correction, not an outer economic winner choice.",
+  "reviewed_source_sha256": {
+    "docs/constrained_rollout_design_review.json": "a0841a0e0922eabb3cd4a182b4e54097562b87eda49c4a24e5423c440549733f",
+    "docs/constrained_fan_execution_audit_plan.json": "fdc42683cb8f5fb9d25db06bc3ba5ec9a1b6713341c531e374b51a6dd7a4d47d",
+    "research/experimental_execution/constrained_fan_rollout.py": "81a42402915410d4c97b8d0f0f7252855631324f346bcb1b7b91208806b767e0",
+    "scripts/run_constrained_fan_execution.py": "7e597baa745c3cdfebd2fcc72053f398879f44a08d8619600f1bf6090d953838",
+    "tests/test_constrained_fan_rollout.py": "dee5fe018562e01840a61e79653782b72a5c9db2f93688b513e9f8f211312169",
+    "tests/test_constrained_fan_pipeline.py": "2c547088b784417aa744236c4f13b63c64e3fc574e7f75860fceab76b2b2bfb1",
+    "scripts/run_benefit_cost_execution.py": "fffdbb3b197a0291a8803d1ee2b1b37f6e5abbee3f1a8e21cdcc5e7cf6126cbf",
+    "tests/test_benefit_cost_pipeline.py": "a5a47c88c066d2420e9fd9e509c55cc9c509813a74b612ef293375a7a8e893cf",
+    "scripts/run_simple_execution_comparison.py": "b82071d44305d6aceefacce83e49275a0ac4b7ad5cc59cc71d62258a4f99de36",
+    "research/experimental_execution/fan_rollout.py": "d195d721c895700925e9b24c91640c59737fe4eb542272376d2de78ce62fe1ba",
+    "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a"
+  },
+  "pure_controller_review": [
+    "constrained_choices implements exactly one alpha=.10 two-action rule. In a nonempty model-feasible set it chooses largest net total-log Qg with1e-12global tie ending in hold; in an empty set it flags model infeasibility and first minimizes exact integer event count, then netQg/tie-hold. No eta, price, horizon choice or candidate search is present.",
+    "The frozen B evaluator supplies current-action-then-B net full-original-H paired branches with all current/future fees, chronological joint returns/inflation and inherited current state. The new recommendation replaces only the old evaluator diagnostic growth/Pareto recommendation; no extra current-fee subtraction occurs.",
+    "Mechanism gate_reason has hold, growth_improvement, risk_constraint_repair and least_violation_restore for optional decisions. Independent boolean economic_improvement and risk_cost_justification partition optional restores by DeltaQg>1e-12 versus<=1e-12. Cost-justified nonpositive restore necessarily has k_restore<k_hold; strict sacrifice is DeltaQg< -1e-12. repair_meets_cap and local_model_infeasible prevent equating attempted repair with successful feasibility.",
+    "decision_detail distinguishes both-feasible growth/tie hold, only-hold-model-feasible, and least-violation hold. These preserve the intended reason without splitting the economic classification into an invented preference price.",
+    "Inception computes complete same-B Q/count and exact fee diagnostics but always executes Q1 target once. No initial positive-net eligibility or all-bill direction veto remains. estimate_available isTrue, local_constraint_appliedFalse, and all four optional economic/repair/sacrifice flags areFalse. The quote used in the actual trade is the returned exact executor quote.",
+    "Optional active decisions set local_constraint_appliedTrue. Pending decisions hold with absent Q/quote sentinel fields, no new human response or resumed trading, and complete actual wealth/CPI/peak/MDD/recovery continues over originalH. No terminal fee is introduced.",
+    "No actual future return is an input to the evaluator; actual current return is consumed only after quote and action. The chronological training suffix/current history and fixed target are retained."
+  ],
+  "runner_and_admission_review": [
+    "The single-method protocol delegates only existing identity/data/initial-state checks to the frozen earlier runner; local_alpha/method/primary are fixed separately. All25repeat contexts/125jobs and5full-development c0jobs preserve exact original identities.",
+    "Q1 semantic cache restriction verifies target/name/local/global identity, own training IDs, canonical static context and label priority. The full120 static cache correctly keeps outer_test_ids=[] while its distinct dynamic evaluation has120in-sample IDs; neither is mutated.",
+    "Each supported job simulates one complete controller, independent of whether local Q is negative at inception. Complete training count cap is min(newly simulated own-target B k, floor(.10*n+tol)); no discarded economic predicate or alternate family is consulted.",
+    "Inner validation contains all parent training IDs once with own inner target; only automatically eligible U contributes financial evidence. Its positive U, absolute cap and same-U B-relative gate are checked before outer/full120 method evaluation. Q1Review/outside has priority, and final complete-training feasibility is also required.",
+    "All24outer paths or120full-development paths receive one pre-future fit admission. Review rows retainNULL financials; B and equal-thirds are labelled hypothetical references and cannot fill them. One full120 in-sample fit is not an extra outer validation fold.",
+    "Summary economic/repair counts use their independent cost-justification flags, not mechanism names. Optional restore/sacrifice counts exclude inception, and locally_infeasible_decisions masks local_constraint_applied so pure initial diagnostics are not counted as applied optional constraint events.",
+    "Main refuses an unready protocol or existing archive, verifies source/input/protocol at beginning/everyjob/end, explicit1..120 allow_finalFalse and unchanged array digest, requires all130jobs/exact row inventory and exports deterministic gzip plus saved traces. No result-driven threshold, architecture or seed selection is implemented."
+  ],
+  "synthetic_tests": {
+    "command": "PYTHONPATH=src:research .venv/bin/python -m unittest tests.test_constrained_fan_rollout tests.test_constrained_fan_pipeline -q",
+    "tests_passed": 30,
+    "kernel_tests": 20,
+    "independent_pipeline_tests": 10,
+    "elapsed_seconds": 3.743,
+    "kernel_evidence": "Action truth tables, bounded integer counts/tolerance, unsigned subtraction, net-Q no-double-fee witness, negative-growth repair, independent scalar full history/fan/fee replay, mandatory negative-initial-Q configuration, initial risk comparison ignored, actual future perturbation, chronology/pending/readonly metrics.",
+    "pipeline_evidence": "Full130job allauto and risk-failure cases, own-U exclusion, Q1Review/outsideNULL, static0empty-holdout/dynamic120in-sample, single method/localalpha/cache tamper, exactcapwithout economic eligibility field, temporary main export/hash/no-overwrite/no-final, and mechanism-vs-economic summary classification.",
+    "special_initial_counterexample": "Pipeline mock inception Q advantage is -5 and old initial_economic_eligible=False; full-risk qualification still succeeds, detecting any hidden inherited initial gate. Mock local_model_infeasible=True at inception with local_constraint_appliedFalse is excluded from the applied infeasibility summary.",
+    "mock_limit": "Pipeline forecast diagnostics are deliberate mocks; its account shapes use an old pure physical helper. They establish orchestration and counting, not economic calibration. The new kernel is separately checked by synthetic scalar replay.",
+    "pre_freeze_repairs": "During development reviewers found draft lacked initial Q diagnostics and the runner conflated mechanism names with cost justification or counted initial infeasibility. Sources were corrected before any new market execution. One concurrent test invocation used an incomplete stub without local_constraint_applied; final owned fixture and all30tests now pass. These were implementation/schema issues, not result-driven economic tuning."
+  },
+  "audit_plan_review": {
+    "plan": "docs/constrained_fan_execution_audit_plan.json",
+    "judgment": "Bounded scope is appropriate and honestly stated: all saved account accounting/actions/flags and complete summaries/admission reconcile; deterministic preselected initial/year2 plus specified finalyear16/30 Q slots independently replay the fan, skipped pending slots are not adaptively replaced. No universal independently recomputed training-policy-tree or all-Q claim is made.",
+    "important_limit": "All10080training rows can be aggregated and checked for full identities/NULL/eligibility, but unrecorded complete training forecast trees are not all independently regenerated. Save this limitation and exact denominators in final audit and judgment."
+  },
+  "protocol_pending_freeze": {
+    "current_ready": false,
+    "expected_rows": {
+      "training_paths": 10080,
+      "training_summary": 130,
+      "inner_validation_paths": 2520,
+      "inner_reference_paths": 2520,
+      "inner_gate_summaries": 26,
+      "client_paths": 2160,
+      "fit_admission": 26
+    },
+    "next": "Parent binds final reviewed source hashes, immutable development/Q1 inputs, parent protocols/manifests/audits, this review, design review and the predeclared audit plan; then freezes ready=true. A separate receipt can bind the final protocol SHA without making this draft self-referential.",
+    "no_more_family": "The one repair is prospectively designated after training failure. After complete audited results, keep alpha/context/fee/H/L/local action rule/whole-policy gates fixed and do not add more controllers to force acceptance."
+  },
+  "claim_limits": "The source faithfully implements a constrained rollout heuristic with an empirical unconditional calendar law and future B approximation. Local feasibility, least violation, risk repair labels, numerical audits and repeated OOF estimates are not true conditional forecast calibration, global optimality, population risk guarantees or fresh independent data. Adoption still requires the fixed complete-policy evidence and honest result interpretation.",
+  "reviewed_source_sha256_at_end": {
+    "docs/constrained_rollout_design_review.json": "a0841a0e0922eabb3cd4a182b4e54097562b87eda49c4a24e5423c440549733f",
+    "docs/constrained_fan_execution_audit_plan.json": "fdc42683cb8f5fb9d25db06bc3ba5ec9a1b6713341c531e374b51a6dd7a4d47d",
+    "research/experimental_execution/constrained_fan_rollout.py": "81a42402915410d4c97b8d0f0f7252855631324f346bcb1b7b91208806b767e0",
+    "scripts/run_constrained_fan_execution.py": "7e597baa745c3cdfebd2fcc72053f398879f44a08d8619600f1bf6090d953838",
+    "tests/test_constrained_fan_rollout.py": "dee5fe018562e01840a61e79653782b72a5c9db2f93688b513e9f8f211312169",
+    "tests/test_constrained_fan_pipeline.py": "2c547088b784417aa744236c4f13b63c64e3fc574e7f75860fceab76b2b2bfb1",
+    "scripts/run_benefit_cost_execution.py": "fffdbb3b197a0291a8803d1ee2b1b37f6e5abbee3f1a8e21cdcc5e7cf6126cbf",
+    "tests/test_benefit_cost_pipeline.py": "a5a47c88c066d2420e9fd9e509c55cc9c509813a74b612ef293375a7a8e893cf",
+    "scripts/run_simple_execution_comparison.py": "b82071d44305d6aceefacce83e49275a0ac4b7ad5cc59cc71d62258a4f99de36",
+    "research/experimental_execution/fan_rollout.py": "d195d721c895700925e9b24c91640c59737fe4eb542272376d2de78ce62fe1ba",
+    "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "status": "built_pending_visual_QA",
+  "built_utc": "2026-10-19T07:48:28.538679+00:00",
+  "sources_sha256": {
+    "results/mitigation_locked_final_evaluation_v1/manifest.json": "7401ad59279c694fc4077ab42af1af42e707b258156bca5a7ec110467e407f07",
+    "results/mitigation_locked_final_evaluation_v1/independent_audit.json": "7929ea36e23c9b357a568b8d0f06cd7f90024a61aae0222c11c532cc1bcf65c8",
+    "results/mitigation_locked_final_reproduction_v1/manifest.json": "109e4c8e1a18dfebe9e0da282faea15f664f36d577fafdf7371dda288a1ce0a1",
+    "docs/mitigation_final_precommit_incident.json": "09b827d8267a7db44de7ac6b356d2b9e3d412f4e82d0e703d0fe3ed2672c0d57",
+    "results/mitigation_locked_final_evaluation_v1/traces.npz": "4383cb1cdcd812b120a512557c9d0463c58de35ce725a7d668fb378b76be513a",
+    "results/mitigation_locked_final_evaluation_v1/Q2_paths.csv.gz": "d10bd18cd2de024739c82b4ce8d71059ffcf8a0f4cd0e9a8a8731b1f66b5be91",
+    "results/mitigation_locked_final_evaluation_v1/Q1_thirds_references.csv.gz": "77441aa07751feb06f64888619358f1231d73ee34bd1f2595e7cdf16ef79212a",
+    "results/mitigation_locked_final_evaluation_v1/comparisons.json": "5d2c2a89e568ea9cdd5a03f3d8feb89ac74103061f54869166c3074383323793",
+    "results/mitigation_locked_final_evaluation_v1/initial_witness.json": "e7e6f0e28ba67b784ab78f0111734cc1fa7be7f8ed6516edcdec9b6c1a88eb72",
+    "results/mitigation_locked_final_evaluation_v1/trace_groups.json": "6543fb2e3d64a8c9415822b123588fb6505112810ef304f15b56d06d644fc833",
+    "results/mitigation_locked_final_evaluation_v1/severe_example.json": "f7b8ecbbf0ef2880067542dd6ce231d6fb95172a473032426e514b7faf233edf",
+    "results/mitigation_locked_final_evaluation_v1/summary.csv.gz": "c050b0fac11437dfb7c8879f58db7f65de94346521362b5828ac998f6c42d6bc",
+    "results/mitigation_locked_final_evaluation_v1/object_specification.json": "e3d688efed00bccd9483cc4814d88533fa17d6c18d4f7874e79b3e97d15f4efe",
+    "results/mitigation_locked_final_evaluation_v1/paired_paths.csv.gz": "84b2f17708845785592dfc0a61d694255e14c063511fa0de6073aeab7928ea37",
+    "results/mitigation_locked_final_evaluation_v1/Q1_paths.csv.gz": "7c311a2115ba2bf8a56ba5b23e364ddeadca1f9ea221468f14e1f13a253d6828"
+  },
+  "source_sha256": "dc24f7c12ef115d82cfe7fb9baf4e238d9848a268669e9811b1937c514fe8c71",
+  "page": "notebooks/mitigation_locked_final_2026_10_19.html",
+  "page_sha256": "0faf10734cfe483fe5b6613a2e406874bb7897499639211308cc23fe0b673d79",
+  "figures": [
+    "01_final_same_ids_ecdf",
+    "02_service_and_fees",
+    "03_severe_synthetic_path"
+  ],
+  "raw_market_reads": 0,
+  "new_policy_runs": 0,
+  "new_fits": 0,
+  "scope": "previously_exposed_nonblind",
+  "output_sha256": {
+    "01_final_same_ids_ecdf_data.csv": "a8e1fe862b23c0281d78bcb89481a4e039cb46c5a719c36a72ea9cb0dbcc2f0c",
+    "03_severe_synthetic_path.png": "b8e20111dadbe09a37a15d6070323434414a37971510dce9c80f1fe31cb3f3eb",
+    "01_final_same_ids_ecdf.svg": "2ebc13d274f5e2f6ecb76f7e5b971fcdff3d516a3c69ba30886ad20fcacc047d",
+    "03_severe_synthetic_path_data.csv": "3a7388a392af840a7720e04dbb09fa5121406a3cf988ab33cb53797287d74eac",
+    "all14_summary.csv": "95843446221c3cccc902fcc9e3160454f26cfe3f34148fdd3e6d17686c1dbc42",
+    "01_final_same_ids_ecdf.png": "32c769408b690793080d0bb7549328b5bea3b821da89b2fcbdf1451ed95802e4",
+    "03_severe_synthetic_path.svg": "ec923fdf613c36ec22492381349add5cbc8e23663a677320e3ce4776673a1fbe",
+    "02_service_and_fees_data.csv": "55e9b925fa3246bf0cd0940a1484a9111add3c1d86175b1bb6384492d798244e",
+    "02_service_and_fees.png": "cc311ef29ca0c036dcfe429beccb094b3c9066bce57164410068912c8e622408",
+    "paired_comparison.csv": "b3a87434453cb1a7fc2c41e2157433a4ce4754fd87628ee8ccfaa83d8dfcb5ce",
+    "all60_guard_timing.csv": "a0e0ea905ff58915d48333018c422f687f2949e2ea387c2aa2f25483e58441e7",
+    "02_service_and_fees.svg": "66e7a5b7e87968b4a06d4adcf1cd3b927b2e7f93b762aac9764ae21d934f7468"
+  }
+}

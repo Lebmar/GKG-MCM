@@ -1,0 +1,432 @@
+{
+  "version": "problem-A-deliverable-crosswalk-v1",
+  "date_beijing": "2026-10-17",
+  "status": "只读核对题面和已保存研究产物后的交付缺口清单；不采纳最终模型，不是新实验协议。",
+  "source_statement": {
+    "path": "docs/problem_A.pdf",
+    "sha256": "2ac9412ed68349d36a3fbd2c6cddc5789a81dab8acbfa08c63a3bdb34d2aa2dd",
+    "pages": 3,
+    "scope": "逐页读取题面文字；题面要求在各项中为忠实中文转述，不声称逐字引用。"
+  },
+  "new_market_runs": false,
+  "raw_final_loaded": false,
+  "modified_frozen_artifacts": false,
+  "overall_readiness": "数值核与多个开发实验已有独立审计，但三产品/流动性适配/最终Balanced执行器与保护规则尚未统一采纳；新版最终评价、英文报告和提交ZIP均未闭环。",
+  "evidence_scope": "下列相对路径均相对于repo根；存在与审计通过支持其各自预定范围，不自动支持最终采纳、真实风险保证或独立blind成绩。",
+  "balanced_only_next_stage_addendum": {
+    "adopted": false,
+    "execution_run": false,
+    "supersedes_frozen_design": false,
+    "target": "下一阶段尚未执行协议的Q2 case定义补充，不修改docs/dynamic_calibration_next_stage.json或任何冻结实验。",
+    "rule": "Q1完整learner继续输出全部原始分配；仅effective Balanced为Q2 case。Review=risk_review；Conservative/Growth=not_balanced_case，后者不是风险失败且Q2金融NULL，不强配。",
+    "current_fact": "已核现有strict172 full及五外折effective assignments，六上下文C均Balanced，所以当前Q2产物不因该case口径存在缺陷。",
+    "denominators": [
+      "original_N",
+      "balanced_case_N",
+      "case_auto_N",
+      "case_execReview_N",
+      "risk_review_N",
+      "not_balanced_case_N"
+    ],
+    "identities": [
+      "original_N = balanced_case_N + risk_review_N + not_balanced_case_N",
+      "balanced_case_N = case_auto_N + case_execReview_N"
+    ],
+    "validation_boundary": "内层重拟Q1适配后立即做case判断；case或auto为0不作零风险证据；是否另加最小case证据门槛须事前规范，不能事后调。"
+  },
+  "requirements": [
+    {
+      "id": "COMMON_ACCOUNTING",
+      "problem_page": 2,
+      "requirement": "从100 bills开始、无后续存取；三资产long-only fully invested；转移金额只计一次，费率.25%，初配同样收费，在当年收益前扣费；不计税和终端清算。",
+      "status": "implemented_and_independently_audited",
+      "existing_implementation_evidence": [
+        "src/safeinvest/core.py",
+        "research/experimental_execution/review_pending.py",
+        "research/experimental_execution/risk_priced_fan_rollout.py",
+        "research/experimental_execution/bounded_target_update.py",
+        "results/model_review/bounded_target_updates_v1/independent_audit.json",
+        "results/model_review/selected_controller_cost_stress_v1/independent_audit.json"
+      ],
+      "not_adopted_or_open_gaps": [
+        "实现正确不等于最终规则已采纳。holds指不交易，名义资产余额仍随市场增长。"
+      ],
+      "closure_acceptance": [
+        "最终推荐固定后用同一费用方程；重放初配/每年交易/名义与实际财富、持仓守恒和无终端清算；独立审计通过且源/输入/输出hash可追溯。"
+      ]
+    },
+    {
+      "id": "COMMON_CAUSALITY",
+      "problem_page": 2,
+      "requirement": "第t年动作只可使用该实际情景截至t-1的观测。",
+      "status": "implemented_for_current_research",
+      "existing_implementation_evidence": [
+        "docs/risk_priced_fan_execution_protocol.json",
+        "docs/bounded_target_update_protocol.json",
+        "results/model_review/risk_priced_fan_execution_v1/independent_audit.json",
+        "results/model_review/bounded_target_updates_v1/independent_audit.json"
+      ],
+      "not_adopted_or_open_gaps": [
+        "training calendar fan是仅训练路径的无条件后缀经验预测，不是真实条件分布；同一路径的未来实际收益不得进入gate。重复开发数据使用仍存在设计适应性。"
+      ],
+      "closure_acceptance": [
+        "最终训练/评估身份隔离；改变实际未来但固定当前state和training fan不改当前动作；预定独立Q子集核验，不能将局部预测优势说成全策略风险保证。"
+      ]
+    },
+    {
+      "id": "Q1_MEASURES",
+      "problem_page": 2,
+      "requirement": "选择增长与风险度量；大损失值越大代表损失越大；区分一般波动与异常大损失并计购买力。",
+      "status": "implemented_research_definitions_not_final_report",
+      "existing_implementation_evidence": [
+        "research/safeinvest_research/metrics.py",
+        "research/safeinvest_research/static.py",
+        "docs/objective_risk_decision.json",
+        "results/model_review/positive_asset_specification_v1/independent_audit.json",
+        "results/model_review/q2_execution_development_v2/summary.json"
+      ],
+      "not_adopted_or_open_gaps": [
+        "新最终论文尚未统一采用的指标定义和单位；年度端点MDD观测不到未知年内高低点。"
+      ],
+      "closure_acceptance": [
+        "明示CPI累积、净实际财富和起点100；区分年度实际收益波动率与实际MDD/超限概率/CVaR尾部；给G与CAGR、median及经验CDF逆P10/P90；不得把客户L称保证上限。"
+      ]
+    },
+    {
+      "id": "Q1_PRODUCTS",
+      "problem_page": 2,
+      "requirement": "为Conservative、Balanced、Growth给配置或配置规则。",
+      "status": "finite_candidate_products_implemented_final_menu_not_adopted",
+      "existing_implementation_evidence": [
+        "docs/positive_asset_specification_protocol.json",
+        "results/model_review/positive_asset_specification_v1/candidate_mapping.json",
+        "results/model_review/positive_asset_specification_v1/nested_context_refits.json",
+        "results/model_review/positive_asset_specification_v1/independent_audit.json"
+      ],
+      "not_adopted_or_open_gaps": [
+        "strict172只是现有正权重有限族；每资产5%是原网格最小正点，不是流动性或连续最优证明；菜单与静态gamma需最终取舍。"
+      ],
+      "closure_acceptance": [
+        "结论明确最终三产品各自权重或完整学习规则、标签排序依据、费用与再平衡规则；所有产品映射/训练身份可重建；不强造不被客户支持的三种风险级别。"
+      ]
+    },
+    {
+      "id": "Q1_ONBOARDING_AND_HORIZONS",
+      "problem_page": 2,
+      "requirement": "透明使用问卷期限、购买力损失容忍与流动性，向A--E推荐三产品之一或人审并简释；按各自期限评价。",
+      "status": "risk_and_horizon_rules_implemented_liquidity_incomplete",
+      "existing_implementation_evidence": [
+        "results/model_review/positive_asset_specification_v1/nested_context_refits.json",
+        "results/model_review/positive_asset_specification_v1/nested_full_paths.csv",
+        "results/model_review/positive_asset_specification_v1/nested_outer_oof_paths.csv",
+        "docs/review_pending_design_contract.json"
+      ],
+      "not_adopted_or_open_gaps": [
+        "当前risk-only有效分配在full和五外折均A Review/B Conservative/C Balanced/D Review/E Growth，属于冻结研究结果，不是最终结论。",
+        "流动性尚未落实为最终规则；5%正权重、risk-only适配或旧版30/10/0 bills floor均不能替代提款金额/时间、应急储备等依据。"
+      ],
+      "closure_acceptance": [
+        "最终写明期限5/15/30/25/6与L .10/.25/.40/.15/.35及High/Medium/Low流动性如何实际作用；未知必要流动性事实时明确问询/Review，不虚构提款金额或用新阈值强配；raw与effective分配分开；Review金融NULL且保留原分母。"
+      ]
+    },
+    {
+      "id": "Q2_BALANCED_CASE",
+      "problem_page": 2,
+      "requirement": "原题限定for a customer assigned to the Balanced portfolio。",
+      "status": "current_six_contexts_balanced_next_stage_case_amendment",
+      "existing_implementation_evidence": [
+        "results/model_review/positive_asset_specification_v1/nested_context_refits.json",
+        "results/model_review/risk_priced_fan_execution_v1/context_selections.json",
+        "results/model_review/bounded_target_updates_v1/context_selections.json",
+        "docs/dynamic_calibration_next_stage.json"
+      ],
+      "not_adopted_or_open_gaps": [
+        "当前六上下文C均Balanced，当前Q2 case没有因此出错。",
+        "尚未执行的下一阶段若内层重拟Q1菜单，C可能非Balanced；既定设计文件未改，本crosswalk补充Balanced-only口径供下一协议采用。"
+      ],
+      "closure_acceptance": [
+        "下一协议primary仅Q1 effective_label=Balanced进入Q2；Q1 Review保留risk_review；Q1 Conservative/Growth标not_balanced_case，Q2财务NULL，不能混作风险Review或强行改成Balanced。",
+        "完整Q1 learner分配另存；内层每训练fit及最终refit都执行同一case门槛。原始N、入Balanced case_N、case内auto_N、case内execReview_N、risk_review_N、not_balanced_case_N分开；case_N=auto_N+execReview_N，原始N=case_N+risk_review_N+not_balanced_case_N。",
+        "case_N=0或auto_N=0不能当零风险通过；所需最小证据门槛须在下一协议先定，不能按结果设；混合OOF保留全部原120身份；条件指标仅以实际自动服务行作分母。"
+      ]
+    },
+    {
+      "id": "Q2_ACTIONS_AND_BENEFIT_COST",
+      "problem_page": 2,
+      "requirement": "设计keep/rebalance/target change/human review；只有估计收益足以支持交易成本时才交易或改目标。",
+      "status": "several_audited_candidates_main_policy_not_adopted",
+      "existing_implementation_evidence": [
+        "research/experimental_execution/fan_rollout.py",
+        "research/experimental_execution/pathwise_fan_rollout.py",
+        "research/experimental_execution/risk_priced_fan_rollout.py",
+        "research/experimental_execution/bounded_target_update.py",
+        "results/model_review/risk_priced_fan_execution_v1/independent_audit.json",
+        "results/model_review/bounded_target_updates_v1/independent_audit.json",
+        "docs/cost_gate_design_review.json"
+      ],
+      "not_adopted_or_open_gaps": [
+        "风险定价gate可因风险下降而接受负的未加权预期增长；技术eta不是问卷识别偏好/真实KKT。最终须解释为何这种净风险收益算题面benefit。",
+        "初配mandatory与之后可选交易需明确分别说明，不能伪造初配gate预测。",
+        "annual_then_pending每年恢复不含逐笔预期净收益门槛，只是参考，不得默认为Q2自动fallback。"
+      ],
+      "closure_acceptance": [
+        "最终采纳明确benefit单位、完整H/原始H价格、精确一次费用、hold基准及strict tie规则；每次动作有可重建理由；初配约定和pending代理公开；最终仅选一种完整规则且不根据新评估结果调整。"
+      ]
+    },
+    {
+      "id": "Q2_EQUAL_WEIGHT_BASELINE",
+      "problem_page": 2,
+      "requirement": "基准目标始终每资产1/3，每次review恢复并收费；跨所给情景比较。",
+      "status": "implemented_reference_not_replaced_by_pending",
+      "existing_implementation_evidence": [
+        "results/model_review/q2_oof_benchmark_v1/oof_paths.csv",
+        "results/model_review/q2_execution_development_v2/oof_paths.csv",
+        "results/model_review/q2_execution_development_v2/summary.json",
+        "results/model_review/selected_controller_cost_stress_v1/client_paths.csv",
+        "results/model_review/selected_controller_cost_stress_v1/independent_audit.json"
+      ],
+      "not_adopted_or_open_gaps": [
+        "当前是1--120开发/OOF研究，尚无新主模型121--180评价；exactthirds是不同目标参考，不是纯执行方式消融。"
+      ],
+      "closure_acceptance": [
+        "精确1/3，不用.35/.35/.30近似；每年恢复含初配、同费率且不因L crossing停机；相同H/实际情景/初始100；若学习器Review，基准仍标假想研究参考，不能填客户收益。"
+      ]
+    },
+    {
+      "id": "Q2_REQUIRED_SUMMARIES",
+      "problem_page": 2,
+      "requirement": "各策略报告增长和大损失median、增长P10、大损失P90；报告交易review期比例。",
+      "status": "development_tables_implemented",
+      "existing_implementation_evidence": [
+        "results/model_review/q2_execution_development_v2/summary.json",
+        "results/model_review/q2_execution_development_v2/summary.csv",
+        "results/model_review/q2_execution_development_v2/oof_paths.csv",
+        "results/model_review/q2_execution_development_v2/manifest.json"
+      ],
+      "not_adopted_or_open_gaps": [
+        "已有五种审计策略开发汇总不代表最终采用；新Balanced-only case和最终评价仍待固定；不能平均各折分位数来替代路径池化分位数。"
+      ],
+      "closure_acceptance": [
+        "同一口径重算最终策略与exactthird基准的medianCAGR/medianMDD/P10CAGR/P90MDD；明示inverted_cdf与单位；原N/caseN/autoN等分母和NULL完整保留；交易=正转移，初配是否计入明确；目标身份更新与真实交易分别计数。"
+      ]
+    },
+    {
+      "id": "Q2_SEVERE_LOSS_EXAMPLE",
+      "problem_page": 2,
+      "requirement": "简要检查一条严重亏损情景。",
+      "status": "saved_development_episode_available",
+      "existing_implementation_evidence": [
+        "docs/q2_execution_development_protocol.json",
+        "results/model_review/q2_execution_development_v2/episode.json",
+        "results/model_review/q2_execution_development_v2/episode_yearly.csv",
+        "results/model_review/q2_execution_development_v2/episode_arrays.npz"
+      ],
+      "not_adopted_or_open_gaps": [
+        "情景来自预定annual最严重OOF路径，带选择偏向；未必是最终推荐自身最严重或典型情景；最终报告尚未更新。"
+      ],
+      "closure_acceptance": [
+        "以同一情景/外折和原H说明财富峰谷、费用、动作、首次crossing与pending后风险；引用已规定选择规则，不改挑有利例；若最终模型变更，预先规定复用或更新例子规则，说明不能推广单路径结论。"
+      ]
+    },
+    {
+      "id": "Q2_TARGET_UPDATES",
+      "problem_page": 2,
+      "requirement": "决定自动权重更新是否增加价值。",
+      "status": "bounded_family_tested_adoption_not_final",
+      "existing_implementation_evidence": [
+        "docs/bounded_target_update_protocol.json",
+        "results/model_review/bounded_target_updates_v1/context_selections.json",
+        "results/model_review/bounded_target_updates_v1/training_candidate_summary.csv",
+        "results/model_review/bounded_target_updates_v1/paired_summary.csv",
+        "results/model_review/bounded_target_updates_v1/independent_audit.json"
+      ],
+      "not_adopted_or_open_gaps": [
+        "当前六训练上下文18族均选NO-UPDATE，选中外折结果与固定目标learner一致；这不证明更新普遍无效。",
+        "不得把市场漂移、恢复同目标或零转移目标metadata更新混成同一种trade。"
+      ],
+      "closure_acceptance": [
+        "最终结论在给定有限族/重用开发数据范围内说明是否启用更新及为何；报告训练选择与冻结OOF，不在OOF挑未选候选；同时评估完整H风险、增长、费用与覆盖；不可声称全局最优。"
+      ]
+    },
+    {
+      "id": "Q2_CUSTOMER_EXPLANATION",
+      "problem_page": 2,
+      "requirement": "给一段不超过50词的客户解释，用于交易/改目标/人审之一。",
+      "status": "new_development_41_word_candidate_exists_final_alignment_pending",
+      "existing_implementation_evidence": [
+        "results/model_review/q2_execution_development_v2/episode.json",
+        "report/report_evidence.json",
+        "report/latex/main.tex",
+        "docs/review_pending_design_contract.json"
+      ],
+      "not_adopted_or_open_gaps": [
+        "新开发episode已有41词customer_review_explanation_candidate，尚非最终服务文案；其中request your review未清楚指人类adviser，agreed limit也须与客户L非保证上限及最终服务规则核对。",
+        "旧37词解释仅属V1历史成稿，不是唯一现有解释；不得未经核对继承。实际研究并无真实已联系顾问证据，不应把模拟request误述已发生服务。"
+      ],
+      "closure_acceptance": [
+        "以新41词candidate为可审草稿，最终英文段<=50词；明确human adviser review及L的客户回应/治理阈值含义，不把它说成已同意的保证限损；准确对应采用触发/成本/风险，不承诺回本。",
+        "说明pending仍市场暴露；自动词数及人工语义核对，放入新版报告；不修改冻结episode来伪装候选早已定稿。"
+      ]
+    },
+    {
+      "id": "Q3_STRESS_AND_RECOMMENDATION",
+      "problem_page": 2,
+      "requirement": "测试重要假设或成本费率，并说明主推荐是否改变。",
+      "status": "assumption_and_known_cost_diagnostics_implemented_main_adoption_open",
+      "existing_implementation_evidence": [
+        "docs/temporal_order_diagnostic_protocol.json",
+        "results/model_review/temporal_order_v1/manifest.json",
+        "docs/selected_controller_cost_stress_protocol.json",
+        "results/model_review/selected_controller_cost_stress_v1/summary.csv",
+        "results/model_review/selected_controller_cost_stress_v1/decision_changes_summary.csv",
+        "results/model_review/selected_controller_cost_stress_v1/independent_audit.json"
+      ],
+      "not_adopted_or_open_gaps": [
+        "五档cost固定[0,.00125,.0025,.005,.01]，actual和forecast同known rate；固定default选定controller，不重新拟合price/menu/admission，因此不是错估成本鲁棒性或各费率重新校准可行证书。",
+        "main推荐尚未定，当前不能说最终推荐已稳健/不变。参数冻结不等于实际路径动作/风险不变。"
+      ],
+      "closure_acceptance": [
+        "主推荐最终冻结后，将已有压力证据与该同一规则逐项对应；诚实说固定控制器如何变化及是否足以改变推荐；若不是同一规则，应先登记所需新检查，不能套用旧稳定性结论；所有预列费率全报且不选最好费率。"
+      ]
+    },
+    {
+      "id": "Q3_LIMITATION_AND_SAFEGUARDS",
+      "problem_page": 2,
+      "requirement": "指出重要局限、人审/停机触发，说明pending时app做什么。",
+      "status": "financial_crossing_pending_simulated_other_channels_design_only",
+      "existing_implementation_evidence": [
+        "docs/review_pending_design_contract.json",
+        "docs/review_pending_execution_protocol.json",
+        "research/experimental_execution/review_pending.py",
+        "results/model_review/review_pending_execution_v1/independent_audit.json",
+        "docs/dynamic_risk_state_design_review.json"
+      ],
+      "not_adopted_or_open_gaps": [
+        "已计分financial D-L>1e-12后下一decision hold；输入失败/模型失效尚主要是设计分类，真实顾问响应、再入服务和流动性处理未最终落地。",
+        "b首次发生后不可撤销；pending不能减少同口径已经发生的首次事件，保持实际持仓不等于余额或风险冻结；severity/recovery须含右删失。"
+      ],
+      "closure_acceptance": [
+        "最终分别规定input failure、model integrity/validity failure和financial crossing；每类有可观察触发、数据来源和动作，未定义阈值不能伪装已实现。",
+        "pending保留财富/CPI/历史peak/MDD/b/原H，明确无响应hold是模拟代理，未知人工回复时间/收益不编造；触发H时仍记录、无随后动作；不重发alpha或重置风险。"
+      ]
+    },
+    {
+      "id": "CONCLUSION",
+      "problem_page": 2,
+      "requirement": "简洁给三产品、A--E分配、Balanced是否自动权重更新、主safeguard；客户评价用各自H。",
+      "status": "not_finalized_for_revised_research",
+      "existing_implementation_evidence": [
+        "results/model_review/positive_asset_specification_v1/nested_context_refits.json",
+        "results/model_review/q2_execution_development_v2/summary.json",
+        "results/model_review/selected_controller_cost_stress_v1/summary.csv",
+        "docs/dynamic_calibration_next_stage.json"
+      ],
+      "not_adopted_or_open_gaps": [
+        "现有各实验选择不等于一套最终服务采纳；liquidity、Q2 benefit解释和完整H动态风险校准仍有取舍。"
+      ],
+      "closure_acceptance": [
+        "一页内一致说明最终三配置/规则、问卷适配、Balanced-only执行器、更新结论、流动性与主要停机规则；所有数字来自同一最终冻结版本，不能拼接有利实验。"
+      ]
+    },
+    {
+      "id": "FINAL_EVALUATION_121_180",
+      "problem_page": 2,
+      "requirement": "用1--120开发调整；最终policy在121--180评价且不再调整。",
+      "status": "revised_final_evaluation_not_done_old_final_exposed",
+      "existing_implementation_evidence": [
+        "docs/dynamic_calibration_next_stage.json",
+        "results/frozen/manifest.json",
+        "results/final/evaluation_manifest.json",
+        "docs/VERIFICATION.md"
+      ],
+      "not_adopted_or_open_gaps": [
+        "这里的旧final路径只作为历史存在/暴露记录引用，本任务未读取其数值，也未加载原始121--180。",
+        "新版最终policy未定且未完成新121--180评价；旧V1结果已暴露，不能改名/换模型/换split后称恢复blind。"
+      ],
+      "closure_acceptance": [
+        "先冻结最终完整学习/准入/执行/保护规则，再按题意一次评价且不再据结果调整；如进行新版评价，必须披露旧暴露，定位为受限独立性评价，不能宣称fresh blind test。",
+        "若需要确认性风险证据，必须有真正未用于设计的新外部完整情景和事前规则；若无资料，则如实写局限，不以新模拟或bootstrap冒充。"
+      ]
+    },
+    {
+      "id": "SUBMISSION_REPORT",
+      "problem_page": 3,
+      "requirement": "英文短报告不超过10 A4页，字体至少11pt，含重要图表、数学模型、数值及全部成员姓名；doc/docx/pdf之一。",
+      "status": "legacy_report_exists_new_report_not_generated",
+      "existing_implementation_evidence": [
+        "report/latex/main.tex",
+        "output/pdf/SafeInvest_Team87_Report.pdf",
+        "report/report_evidence.json",
+        "output/submission/manifest.json"
+      ],
+      "not_adopted_or_open_gaps": [
+        "旧PDF为9页且TeX为11pt A4，但旧V1模型/旧final图表不能作为本轮新研究最终交付；新版论文未生成，不能只替换摘要数字。"
+      ],
+      "closure_acceptance": [
+        "最终完整报告重写并统一证据版本；英文<=10A4页且>=11pt、作者姓名准确；图表单位/分母/开发与评价边界可读；渲染逐页检视、页数字体和引用核对通过；本人复核论证/代码/数据/引用。"
+      ]
+    },
+    {
+      "id": "SUBMISSION_AI_AND_INTEGRITY",
+      "problem_page": 3,
+      "requirement": "AI可用但须在报告末尾Use of AI Tools说明工具/用途；AI内容计算代码引用须核对、避免抄袭，队伍负全责。",
+      "status": "disclosure_draft_and_audits_exist_author_final_review_pending",
+      "existing_implementation_evidence": [
+        "docs/DATA_NOTICE.md",
+        "docs/references.md",
+        "report/latex/main.tex",
+        "results/model_review/bounded_target_updates_v1/independent_audit.json",
+        "results/model_review/selected_controller_cost_stress_v1/independent_audit.json"
+      ],
+      "not_adopted_or_open_gaps": [
+        "自动单测与独立AI审计不替代参赛者本人责任；旧AI段未自动完成新报告披露。"
+      ],
+      "closure_acceptance": [
+        "新报告末尾列实际工具及用于解释/设计/代码/分析/文字的用途；核对所有引用和公式来源，保留AI辅助/人工检查记录；不得虚称人工已审阅。"
+      ]
+    },
+    {
+      "id": "SUBMISSION_CODE_AND_CMT",
+      "problem_page": 3,
+      "requirement": "队长在2026-10-20 23:59北京时间前CMT提交；源码补充ZIP<=50MB。",
+      "status": "legacy_package_exists_no_revised_package_or_submission",
+      "existing_implementation_evidence": [
+        "scripts/package_submission.py",
+        "output/submission/manifest.json",
+        "output/submission/Team87_Lebmar_Code.zip"
+      ],
+      "not_adopted_or_open_gaps": [
+        "旧ZIP约2.76MB并非本轮新研究打包；新版ZIP尚未生成；manifest记submitted_to_CMT=false。",
+        "用户邮件另说明Edit Submission上传报告并save changes，源码走Upload Supplementary Material，多次提交先删旧文件；这部分来源为用户提供邮件，不冒充题面逐字规则。"
+      ],
+      "closure_acceptance": [
+        "最终ZIP仅包含可复现必要源码/协议/依赖/说明与许可，干净隔离复现主结果和hash，实际字节<=50MB；与新版PDF同版manifest；不泄露不必要本机文件。",
+        "队长提交报告与补充ZIP后保存，并核对CMT实际最新文件及成功状态；当前未执行上传，不声称已提交。"
+      ]
+    },
+    {
+      "id": "SUBMISSION_ATTRIBUTION_AND_LICENSE",
+      "problem_page": 3,
+      "requirement": "合成资料源自JST R6选定美国序列，非历史观测/预测；非商业CC BY-NC-SA4.0，保留署名、标示修改、遵从兼容许可。",
+      "status": "notice_and_references_exist_new_package_check_pending",
+      "existing_implementation_evidence": [
+        "docs/DATA_NOTICE.md",
+        "docs/references.md"
+      ],
+      "not_adopted_or_open_gaps": [
+        "新图表/转换/ZIP需保留相应归属，不能把数据许可盲目称全部独立代码许可。"
+      ],
+      "closure_acceptance": [
+        "确认原CSV是否未改与声明一致；新报告、图注、README/ZIP保留题面及JST来源、许可链接/文本和改动说明；不称合成情景为真实历史事件。"
+      ]
+    }
+  ],
+  "next_closure_order": [
+    "先讨论并冻结Q1流动性与最终三产品/分配、Q2 Balanced-only case/benefit解释及最终执行保护规则。",
+    "若采用动态校准提案，先另行注册其完整内层拟合/选择/准入；本crosswalk不启动它。",
+    "对最终同一版本完成适当验证/独立复现；披露重复开发与旧final暴露，不能以14/120倒推参数。",
+    "固定最终推荐后对应解释Q3压力及是否改变推荐，再完成题意121--180评价的透明受限结论，不据评价调整。",
+    "重写并检查新版<=10页英文报告/AI披露/许可，打包<=50MB代码ZIP，最后队长CMT上传核对。"
+  ],
+  "task_boundary": "本任务仅新建此JSON。未跑市场、模型、缓存、策略或拟合；未改旧设计、协议、算法、数据、结果、论文或ZIP。"
+}

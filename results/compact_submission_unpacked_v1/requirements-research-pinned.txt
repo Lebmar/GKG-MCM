@@ -1,0 +1,11 @@
+# Exact direct dependency versions used by the research checkpoint.
+# Python 3.12; indirect dependencies and cross-platform byte equality are not locked.
+numpy==2.3.5
+pandas==2.2.3
+matplotlib==3.11.2
+scipy==1.18.1
+pypdf==6.10.0
+nbformat==5.11.1
+nbclient==0.11.0
+ipykernel==7.4.0
+nbconvert==7.17.2

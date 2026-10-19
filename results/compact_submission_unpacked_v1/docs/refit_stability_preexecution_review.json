@@ -1,0 +1,47 @@
+{
+  "version": "refit-stability-preexecution-review-v1",
+  "review_completed_utc": "2026-10-18T04:47:44.182718+00:00",
+  "scope": "Read-only method/source inspection before root launched market execution; this receipt records final frozen source identity after launch, without reading new numeric outputs. Not human peer review.",
+  "status": "no_block_to_prespecified_exploratory_stability_run",
+  "market_data_read": false,
+  "new_outputs_read": false,
+  "freeze_protocol_sha256": "8e9ab035073b91e4004c76c41296c56665d2199620e92d8cc0eb4eaca7a4efae",
+  "reviewed_sources_sha256": {
+    "docs/refit_stability_protocol.json": "8e9ab035073b91e4004c76c41296c56665d2199620e92d8cc0eb4eaca7a4efae",
+    "scripts/run_refit_stability.py": "08a7f7e92a2f7272e24b0ed13922f25048f2a4911a351860d4fe39c96334189b",
+    "tests/test_refit_stability.py": "f450ce3c2ab360d4c3b275b0c2d023d90e5fa7a0c61372105cacbc4812c4e142",
+    "tests/test_refit_stability_pipeline.py": "bf00a988d0205c21b6154033917d8cefbe01493f87d919ff8f0d4b475f23390f",
+    "docs/refit_stability_method_review.json": "21b675aa5d5e07ebc7a2c3784b141bde7505c67770cac1c5a388650545d1d390",
+    "research/experimental_execution/joint_liquidity_static.py": "f12fc90a78594f91a11c46a4ca7306237024404098df467e9dc66e110ee78c10",
+    "research/experimental_execution/nested_static_adapter.py": "9401e5b7454b9b0b88b28060baefeb3920dab9fd3e3c31870d00977e5ca84d6f",
+    "research/experimental_execution/refit_aware_selection.py": "12d90c14e1208143014a4d0f9d8eadd69960bd966308f24d5d13f7873866d7c6",
+    "scripts/run_joint_liquidity_refit.py": "d6c6dfa2b18fd4b0fcfc9ec97b6a822c87f50ea1f42b2ee763d06a394e8641fe"
+  },
+  "checks": [
+    "Exactly five prespecified whole-path5fold repeats,25 n96outerfits and125jobs; no new full120fit.",
+    "Everyinner n72 reselects all-profile joint-liquidity gamma/menu/admission before dynamic candidate training and inner24 scoring.",
+    "Finalstatic usescanonical parent6key context including same4folds as dynamic validation; dropped annotations cannot change numerical folds.",
+    "Primary retained-topE/refit-aware and canonical comparator share all inner/training evidence; no outer performance chooses beta/price/method.",
+    "Evaluate only distinct already-selected price orders, preserving NULL for Q1Review/outsideBalanced/executionReview and separate hypothetical references.",
+    "Repeat summaries formed after separating each repeat120originalIDs; fit summaries use own24; no pooled600 IID inference.",
+    "Original accounting, fixed9prices, fixedfloors30/10/0, alpha and cost are unchanged through frozenimports."
+  ],
+  "nonblocking_export_detail": {
+    "finding": "paired_paths does not explicitly store outer_fold; it stores repeat_id/context/scenario_id.",
+    "timing": "Identified after sourcefreeze/executionlaunch.",
+    "resolution": "Do not modify frozen source. Independent audit reconstructs outer_fold from context and verifies identity and original24 IDs; receipt discloses derivation.",
+    "economic_or_selection_change": false
+  },
+  "independent_audit_implementation": {
+    "path": "scripts/audit_refit_stability.py",
+    "test_path": "tests/test_audit_refit_stability.py",
+    "tests_at_review": 10,
+    "status": "source under completion before any audit run; oldaudit unchanged",
+    "will_check": "All repeated seeds/IDs, all172 jointmasks/oracles and savedgamma/beta/E/price arithmetic, physicalstates and predeclared scalarQsubset; fit/repeat/scenario summaries."
+  },
+  "limitations": [
+    "Source review is not executed numerical audit or risk guarantee.",
+    "These are reused development120 paths; no new121–180 parse or fresh blind claim.",
+    "New integercap rounding is fixed within n96refits; identity/target/fan/innerpartition sensitivity may still differ and is not uniquely causal."
+  ]
+}

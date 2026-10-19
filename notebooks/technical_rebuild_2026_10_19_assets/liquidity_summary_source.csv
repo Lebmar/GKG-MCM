@@ -1,0 +1,6 @@
+profile,horizon,liquidity,target_floor,original_n,financial_n,review_n,minimum_target_bill_share,maximum_target_bill_share,mean_end_bill_share,minimum_end_bill_share,mean_fraction_end_below_target_floor,paths_with_any_end_below_target_floor,maximum_hypothetical_liquidation_drag,mean_bill_real_loss_fraction
+A,5,high,0.3,120,0,120,,,,,,,,
+B,15,medium,0.1,120,120,0,0.45,0.5,0.4524550748715709,0.3589671028655711,0.0,0.0,0.0015985857783900968,0.3188888888888889
+C,30,low,0.0,120,120,0,0.35,0.4,0.36117021981312986,0.27360039546532633,0.0,0.0,0.0018114703354979395,0.31916666666666665
+D,25,medium,0.1,120,0,120,,,,,,,,
+E,6,high,0.3,120,120,0,0.3,0.3,0.29210864610122445,0.20739761360662012,0.6861111111111112,120.0,0.001976564554596957,0.3125

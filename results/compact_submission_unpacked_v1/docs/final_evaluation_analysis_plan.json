@@ -1,0 +1,29 @@
+{
+  "version": "locked-final-evaluation-interpretation-plan-v1",
+  "declared_before_current_final_read": true,
+  "scope": "Descriptive interpretation of the already fixed model and evaluation objects; no fitting, selection, reapproval or new economic rule.",
+  "authoritative_outputs": "All four Q2 objects and five Q1 objects, all60 original evaluation IDs121–180, all nine predeclared summary rows and every path record. No exclusions or preferred comparator selection.",
+  "primary_service": "Complete guarded C service remains preinvestment executionReview because selected-beta inner10 exceeds same-U B8. Primary finance is NULL, with originalN60, auto0 and review60; no shadow or benchmark returns are substituted.",
+  "Q2_shadow_comparisons": {
+    "shadow": "Only original rejected fixed45/5/50, eta.03, H30/L.4, unchanged1–120 forecastfan and kernels.",
+    "references": ["same_target_B", "exact_thirds_annual"],
+    "population": "Exact paired original IDs121–180, one observation per original ID in each comparison. Both reference comparisons must be displayed, with all60 pairs retained.",
+    "difference_direction": "Unapproved shadow minus each named reference.",
+    "per_path_differences": ["log_growth", "cagr", "mdd", "nominal_fees", "trade_fraction"],
+    "aggregate_differences": "For each of the five metrics, report arithmetic mean and ordinary median of the60 paired differences, as well as positive/negative/equality counts at the original1e-12 numerical convention. Annual log_growth differences are distinct from CAGR differences and total log wealth.",
+    "events": "Preserve complete original-ID lists for neither breach, shadow-only breach, reference-only breach and both breach. Report event count differences descriptively; no significance or population guarantee is inferred.",
+    "all_results": "Growth, risk, fees and trading changes are presented together, including all adverse results. Shadow finance is always labelled unapproved research."
+  },
+  "Q1": "Use fixed A–E suitability labels and own H/L/liquidity. Available B/C/E product metrics are static annual target-restoration references, including after crossing; A/D finance stays NULL. C Q1 Balanced does not authorize Q2 execution. Do not rank unlike own-H populations as interchangeable service trials.",
+  "metric_conventions": {
+    "growth": "Net real annual log_growth=(ln(real_terminal)-ln100)/originalH; CAGR=exp(log_growth)-1. Mean annualG, mean CAGR and median CAGR are separate.",
+    "risk": "Original-history annual-endpoint real MDD; strict event iff MDD-L>1e-12. Ordinary volatility uses net real annual-return sample sd(ddof1).",
+    "quantiles": "Medians average the two middle observations; P10 CAGR and P90 MDD use empirical generalized inverse/inverted_cdf. CVaR90 uses the worst10percent probability mass, including fractional boundary atoms (six complete observations at n60).",
+    "trades": "Actual moved amount>1e-12 over originalH periods including inception and pending; restore labels alone do not define a physical trade.",
+    "units": "Growth/CAGR/MDD/trade differences displayed as percentage points; fees in initial-100 nominal units. No invented currency units."
+  },
+  "reading_figure_if_created": "Plot all60 paired shadow-minus-same-target-B annualG differences against MDD differences, percentage points on both axes, with zero reference lines and no omitted outliers. Label as unapproved shadow research; the primary service has no financial points. Display all three Q2 research/reference summary rows and the primary NULL row alongside the figure.",
+  "case_and_sensitivity": "Keep the already chosen development severe example outer_r5_112 and the already bridged development five-known-cost study. Do not choose a new flattering final case, add final fee searches or reselect a model.",
+  "inference": "OldV1 already exposed the prescribed final data. This is a locked, restricted-independence evaluation and implementation check, not a freshblind experiment, conditional tail calibration, future10percent certificate or proof of global optimality. Results cannot trigger any economic/model/parameter/admission change.",
+  "delivery": "Produce inspectable analysis artifacts and explain results. Paper, submission ZIP and CMT upload remain outside this final-evaluation task."
+}

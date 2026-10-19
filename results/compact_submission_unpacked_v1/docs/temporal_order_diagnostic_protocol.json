@@ -1,0 +1,54 @@
+{
+  "version": "temporal-order-counterfactual-stress-v1",
+  "date_beijing": "2026-10-17",
+  "status": "Declared before running or inspecting the reordered-path results.",
+  "scope": "Development IDs1..120 only, H30 only. Counterfactual annual-order sensitivity of already frozen targets, assignments and execution rules; not a new solver, selection experiment or IID hypothesis test.",
+  "case": "alpha_10__risk_only",
+  "horizon": 30,
+  "cost_rate": 0.0025,
+  "primary_mesh_step": 0.05,
+  "joint_vector": "Each annual row contains all three asset returns and inflation; move the complete four-vector together.",
+  "orders": {
+    "original": "Indices0..29 in original order for every original path.",
+    "reverse": "Indices29..0 for every original path.",
+    "permuted": "One fixed within-path permutation per original scenario, generated once by rng=np.random.default_rng(87020261019); stack rng.permutation(30) for scenario IDs1..120 in order. Reuse these exact120 permutations across full and OOF contexts."
+  },
+  "permutation_seed": 87020261019,
+  "preservation": "Every path retains its exact30-row joint multiset. No asset marginal is independently shuffled, no row crosses scenarios, and no additional draws or permutation selection occurs.",
+  "frozen_execution": {
+    "targets": "The three targets in the original full-development menu or that original training fold's alpha10/risk_only menu; no target or assignment is refitted.",
+    "policies": ["annual_restore", "initial_then_hold", "finite_horizon_gate"],
+    "equal_reference": "Exact-third target under charged annual_restore only, reported as a target-level reference without any client fallback or reassignment.",
+    "forecast": "Always use the ORIGINAL unpermuted training paths' annual joint opportunity mixture. Rebuild the same step.05 H30 solution only to reconstruct the frozen numerical tables, and check every stored component against the prior solution_tables.npz. Never train on a reordered outcome or change a forecast based on the stress results.",
+    "remaining_horizon": "Start every replay afresh from100 entirely in bills and execute finite_horizon_gate with remaining h=30-t. Initial gate is optional; fixed annual/hold initial allocation is mandatory and charged; no terminal liquidation.",
+    "client": "Report only original client C with its original H30,L=.40 and original assignment in each context. Do not relabel other clients' shorter horizons as30. Generic Review handling retains NULL financial outcomes; C is originally automatic in these contexts.",
+    "no_new_screening": "Do not rescreen or choose a target after observing counterfactual MDD. Risk changes are descriptive outcomes of the original frozen service decision."
+  },
+  "contexts": {
+    "full": "Original full120 calibration and evaluation, explicitly descriptive/in-sample. All three targets plus client C and exact-third reference.",
+    "oof": "Each original96/24 scenario split; fit reconstruction uses only that fold's original96 paths, replay only its24 test paths. Keep fold records and aggregate OOF separately. Different fitted policies and overlapping training sets are not iid fixed-rule test observations."
+  },
+  "path_outputs": ["context", "scope", "fold", "scenario_id", "order", "policy", "portfolio", "candidate_index", "horizon", "log_growth", "cagr", "mdd", "terminal_real", "nominal_fees", "nominal_moved", "trade_fraction", "mean_annual_fee_fraction", "mean_annual_moved_fraction"],
+  "statistics": {
+    "summaries": "For each order/policy/product or frozen C assignment: path count, mean log growth, median/P10 CAGR, mean/median/P90 MDD, fractional-tail CVaR90 MDD, nominal fee/moved and annual fee/trade-fraction summaries. C additionally reports strict MDD>L+1e-12 count/proportion and expected excess.",
+    "paired": "First pair each changed-order path with the same original scenario, context, frozen target and policy, then summarize changed-minus-original G/MDD/fees/trades. Separately report differences of group P90 MDD and CVaR90; these are not the P90/CVaR of individual differences.",
+    "quantiles": "Empirical inverted_cdf P10/P90, ordinary median, CVaR90 with fractional boundary mass.",
+    "denominators": "Full120 and pooled OOF120 remain separate; each fold has24. Review stays in total/coverage counts and has NULL investment metrics."
+  },
+  "required_identities": {
+    "buy_and_hold": "At H30, after the same initial self-financing allocation, nominal terminal=sum_i post_initial_i*product_t gross_asset_ti, real terminal additionally divides by product_t inflation_gross_t. These products commute, so each original path/target terminal wealth, G and CAGR must agree across all three orders within roundoff; MDD may change.",
+    "zero_cost_annual_synthetic": "At c0 annual fixed target real terminal=100*product_t(target dot joint_gross_t)/product_t inflation_gross_t, hence complete-path ordering cannot change terminal wealth. This is a synthetic test, not an extra market cost case.",
+    "charged_annual_caveat": "The main charged annual terminal can change because restoration fees depend on drift and the final year's omitted next rebalance. Under exact proportional fees, internal reordering with the last row fixed leaves its terminal net factor unchanged; nominal accumulated fee amounts and MDD can still vary. No terminal liquidation is added to hide this boundary effect.",
+    "original_reproduction": "Original-order H30 metrics for the three targets and finite_horizon_gate must reproduce the previously saved prototype metrics for mesh.05; annual/hold/equal-third originals must likewise match their previous artifacts.",
+    "forecast_reconstruction": "Original training gross samples, targets, mesh states,V,tradebase,L_grid,L_target must match the prior saved solution for every context."
+  },
+  "expected_outputs": ["permutations.json", "target_path_metrics.csv", "client_C_path_metrics.csv", "target_summary.csv", "client_C_summary.csv", "target_context_summary.csv", "client_C_context_summary.csv", "paired_target_path_differences.csv", "paired_client_C_path_differences.csv", "paired_target_summary.csv", "paired_client_C_summary.csv", "group_tail_differences.csv", "checks.json", "manifest.json"],
+  "output_directory": "results/model_review/temporal_order_v1",
+  "interpretation_limits": [
+    "These are transformations of the same120 original paths, not new independent market scenarios.",
+    "Order sensitivity diagnoses dependence on path ordering and the fixed empirical forecast assumption; it does not prove or disprove annual IID from one prescribed permutation and reversal.",
+    "No p-values, confidence intervals, population breach-probability assertions, winner selection, alpha calibration or better-target selection.",
+    "MDD is measured on the same original100 plus30 annual-endpoint real-wealth grid, not unobserved intrayear prices."
+  ],
+  "provenance": "Use load_paths(...,range(1,121),allow_final=False), verify the existing development-array digest and prior output hashes, and record source/input SHA256 at start/end plus all output hashes. Save the120 explicit permutations. No edits to the existing execution modules/runners or plots."
+}

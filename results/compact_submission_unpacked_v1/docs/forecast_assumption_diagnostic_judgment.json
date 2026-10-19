@@ -1,0 +1,204 @@
+{
+  "version": "forecast-assumption-diagnostic-judgment-v2",
+  "written_utc": "2026-10-18T04:46:36.203203+00:00",
+  "purpose": "Research judgment on fixed-comparator diagnostic; no paper text or policy change",
+  "question_answer": "Training same-calendar means omit a small amount of simple linear previous-year information in these reused development paths. Evidence is strongest for next-year market quantities and weak for remaining-horizon averages. This does not identify a replacement trading forecast law or certify existing Q/tail calibration.",
+  "primary_results": [
+    {
+      "target": "next_year",
+      "primary_metric": "path-averaged three-real-asset standardized MSE; inflation excluded",
+      "original_path_n": 120,
+      "baseline_standardized_vector_mse": 1.0231017969721636,
+      "state_standardized_vector_mse": 1.0134956284667755,
+      "state_to_calendar_mse_ratio": 0.9906107402666897,
+      "paired_mean_loss_difference": -0.009606168505388084,
+      "path_loss_difference_q10_q50_q90": [
+        -0.03463437645886401,
+        -0.008394801516711181,
+        0.014206908220057816
+      ],
+      "path_fraction_state_lower_loss": 0.6583333333333333,
+      "fold_results": [
+        {
+          "fold": 1,
+          "original_path_n": 24,
+          "state_to_calendar_standardized_mse_ratio": 0.9958876399877996
+        },
+        {
+          "fold": 2,
+          "original_path_n": 24,
+          "state_to_calendar_standardized_mse_ratio": 0.9858781612232888
+        },
+        {
+          "fold": 3,
+          "original_path_n": 24,
+          "state_to_calendar_standardized_mse_ratio": 0.9926693088535036
+        },
+        {
+          "fold": 4,
+          "original_path_n": 24,
+          "state_to_calendar_standardized_mse_ratio": 0.9902959578563928
+        },
+        {
+          "fold": 5,
+          "original_path_n": 24,
+          "state_to_calendar_standardized_mse_ratio": 0.9888543839983904
+        }
+      ],
+      "interpretation": "Fixed-comparator descriptive development-path prediction diagnostic. No confidence interval, IID annual-row inference, learned trading-Q claim or future risk guarantee."
+    },
+    {
+      "target": "remaining_to_original30_mean_annual",
+      "primary_metric": "path-averaged three-real-asset standardized MSE; inflation excluded",
+      "original_path_n": 120,
+      "baseline_standardized_vector_mse": 1.030687766207877,
+      "state_standardized_vector_mse": 1.0295631474823053,
+      "state_to_calendar_mse_ratio": 0.9989088657472772,
+      "paired_mean_loss_difference": -0.0011246187255716945,
+      "path_loss_difference_q10_q50_q90": [
+        -0.00921121714976465,
+        -0.0003842972182345472,
+        0.00644751760055964
+      ],
+      "path_fraction_state_lower_loss": 0.5416666666666666,
+      "fold_results": [
+        {
+          "fold": 1,
+          "original_path_n": 24,
+          "state_to_calendar_standardized_mse_ratio": 1.0003421924999327
+        },
+        {
+          "fold": 2,
+          "original_path_n": 24,
+          "state_to_calendar_standardized_mse_ratio": 0.9982849181228959
+        },
+        {
+          "fold": 3,
+          "original_path_n": 24,
+          "state_to_calendar_standardized_mse_ratio": 0.999125611531294
+        },
+        {
+          "fold": 4,
+          "original_path_n": 24,
+          "state_to_calendar_standardized_mse_ratio": 0.9982834206593217
+        },
+        {
+          "fold": 5,
+          "original_path_n": 24,
+          "state_to_calendar_standardized_mse_ratio": 0.9989062537083809
+        }
+      ],
+      "interpretation": "Fixed-comparator descriptive development-path prediction diagnostic. No confidence interval, IID annual-row inference, learned trading-Q claim or future risk guarantee."
+    }
+  ],
+  "channel_results": [
+    {
+      "target": "next_year",
+      "channel": "bill_real_log",
+      "interval_10_90_coverage": 0.7839080459770114,
+      "outside_training_target_range_fraction": 0.020402298850574714,
+      "state_to_calendar_mse_ratio": 0.9948945573036829
+    },
+    {
+      "target": "next_year",
+      "channel": "bond_real_log",
+      "interval_10_90_coverage": 0.7867816091954023,
+      "outside_training_target_range_fraction": 0.021839080459770118,
+      "state_to_calendar_mse_ratio": 0.9908471605499124
+    },
+    {
+      "target": "next_year",
+      "channel": "equity_real_log",
+      "interval_10_90_coverage": 0.7859195402298852,
+      "outside_training_target_range_fraction": 0.0221264367816092,
+      "state_to_calendar_mse_ratio": 0.9860697199112651
+    },
+    {
+      "target": "next_year",
+      "channel": "inflation_log",
+      "interval_10_90_coverage": 0.7827586206896552,
+      "outside_training_target_range_fraction": 0.020689655172413796,
+      "state_to_calendar_mse_ratio": 0.9857036190657222
+    },
+    {
+      "target": "remaining_to_original30_mean_annual",
+      "channel": "bill_real_log",
+      "interval_10_90_coverage": 0.782183908045977,
+      "outside_training_target_range_fraction": 0.017241379310344827,
+      "state_to_calendar_mse_ratio": 0.9999884605712388
+    },
+    {
+      "target": "remaining_to_original30_mean_annual",
+      "channel": "bond_real_log",
+      "interval_10_90_coverage": 0.7876436781609196,
+      "outside_training_target_range_fraction": 0.019827586206896553,
+      "state_to_calendar_mse_ratio": 1.0000447431457287
+    },
+    {
+      "target": "remaining_to_original30_mean_annual",
+      "channel": "equity_real_log",
+      "interval_10_90_coverage": 0.786206896551724,
+      "outside_training_target_range_fraction": 0.01954022988505747,
+      "state_to_calendar_mse_ratio": 0.9966385137163495
+    },
+    {
+      "target": "remaining_to_original30_mean_annual",
+      "channel": "inflation_log",
+      "interval_10_90_coverage": 0.7810344827586206,
+      "outside_training_target_range_fraction": 0.022413793103448276,
+      "state_to_calendar_mse_ratio": 0.997809653119204
+    }
+  ],
+  "judgments": [
+    {
+      "issue": "Unconditioned calendar fan",
+      "judgment": "The next-year three-asset vector loss ratio is0.99061 and below1 in all five overlapping folds. A modest lag association exists for this fixed comparator on these development paths; it is not a test of every state effect or every conditional law."
+    },
+    {
+      "issue": "Remaining-horizon targets",
+      "judgment": "Aggregate ratio0.998909 is nearly1; bond ratio1.000045 is slightly worse and bill0.999988 is essentially unchanged. Do not present the small aggregate change as meaningful improvement of30-year control, Q advantage or breach probability."
+    },
+    {
+      "issue": "Mean bias",
+      "judgment": "The baseline pooled OOF signed mean error is algebraically zero with equal fivefold training complements. For each calendar outcome, the sum of the five training means equals five times the full120 mean. This cancellation is not evidence of calibrated predictions."
+    },
+    {
+      "issue": "Empirical80% interval",
+      "judgment": "Observed marginal10\u201390% training-quantile coverage is approximately78.1\u201378.8%; finite96-path linear empirical quantiles have no exact80% held-out guarantee. Neither this discrepancy nor a two-sided min/max exceedance near2% alone establishes conditional miscalibration or a broken multivariate support model."
+    },
+    {
+      "issue": "Comparison to prior fixed-state branches",
+      "judgment": "The earlier selected six outer fixed-state action comparisons use a single realized joint suffix per state. The current120-path market-quantity scoring answers a different question. Do not combine their denominators or reinterpret either as conditional trading-Q accuracy."
+    },
+    {
+      "issue": "Effect on new admission risk",
+      "judgment": "This diagnostic does not separate forecast error from state/target/policy effects on the newly admitted24 paths. Do not attribute their3/24 breaches to the lag relationship on the basis of these market prediction losses."
+    },
+    {
+      "issue": "Replacement model decision",
+      "judgment": "Do not insert this ridge mean predictor into the controller. It supplies neither a joint suffix distribution nor fee/history-aware action values or path-tail calibration; no new policy was trained or evaluated. Retain explicit experimental status and validate any future conditional joint fan under a separately frozen whole-learner design."
+    }
+  ],
+  "validation": {
+    "synthetic_tests": 13,
+    "original_diagnostic_tests": 10,
+    "independent_algorithm_tests": 3,
+    "numeric_check_count": 423182,
+    "maximum_absolute_difference": 1.3322676295501878e-14,
+    "independence": "Separate numerical least-squares algorithm and corruption checks; not independent human peer review",
+    "fixed_diagnostic_sources_inputs_unchanged": true,
+    "no_final_scenarios_loaded": true,
+    "no_policy_parameter_selected": true
+  },
+  "source_input_artifact_sha256": {
+    "docs/forecast_assumption_diagnostic_protocol.json": "d12e57ed11ff6b1af1a635d8041eb8c27808634a9c6e198a1894dec5bdd0a439",
+    "scripts/diagnose_forecast_assumptions_v2.py": "37a7815d7bb0e8441bba4a7aa65dafb90cef46722b0eb1e140331fe60decf8c8",
+    "research/experimental_execution/calendar_state_diagnostic.py": "d52854705a11e057d798f2fa56604322ae67eb5450f4f7ba0d2cf038096a26b8",
+    "scripts/audit_forecast_assumptions_v2.py": "3ff6d1769792cc156013990b9c85a3b934d109f84dd4c223ab46f3048ee65b04",
+    "tests/test_audit_forecast_assumptions_v2.py": "e22d7e6e27179834c265fea4bd8efbfe49e228436f89159084ff74db78f44703",
+    "results/model_review/forecast_assumptions_v2/manifest.json": "8462b516302142dd644e6e2440d5a15b971fd1226b26d6efdd0ef2df02947001",
+    "results/model_review/forecast_assumptions_v2/independent_audit.json": "b47af35bb59755bc0d4405fd874aec4b490fae64366438d1d4e1a04d80e882c5",
+    "results/model_review/forecast_assumptions_v2/findings.json": "02a66a5c3e12d2011385599c67cad55c2a2eba494a9779e5d34e1467e623999b",
+    "results/model_review/forecast_assumptions_v2/summary.csv": "a29bb8b11a04716328315715d78800437cda4fb4b5040c421bda36b2379b3980"
+  }
+}

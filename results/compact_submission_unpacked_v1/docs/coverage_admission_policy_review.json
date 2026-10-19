@@ -1,0 +1,246 @@
+{
+  "version": "2026-10-18-coverage-admission-policy-independent-review-v1",
+  "created_utc": "2026-10-18T02:33:55.488968+00:00",
+  "status": "新阶段覆盖/准入规则的反方数学与语义审查；只读旧结果，尚未采纳或运行新learner",
+  "new_market_runs": false,
+  "raw_market_data_read": false,
+  "final_scenarios_read": false,
+  "old_frozen_artifacts_modified": false,
+  "paper_written": false,
+  "evidence_sha256": {
+    "docs/nested_dynamic_calibration_protocol.json": "bdd065bed90856eddd7d18061f3fc1e6cc852e5730fa122be5b1f587391a266c",
+    "docs/nested_dynamic_stage_review.json": "e4010e6bb152fba5439dadf04a6874f354161e485d6e6aaee70e0ce8dd54c0b0",
+    "research/experimental_execution/nested_dynamic_selection.py": "a293daf2383477e4b33fffd5dacad04ab8fbc71dc92edab2c9f9ff492a28aa20",
+    "scripts/run_nested_dynamic_calibration.py": "7487f461f65e980304e15524478b599317bab9ee142a2f9b98a9cef054ab24d4",
+    "results/model_review/nested_dynamic_calibration_v1/manifest.json": "ace4e900da9311dc1d8750b21a9ef572a75fc28126cbe90ef0a80106daca8fd9",
+    "results/model_review/nested_dynamic_calibration_v1/context_selections.json": "9b78c88c83ed8c78bf37cdb40bc5851a23c4e9fcdd284d23def29796f630e515",
+    "results/model_review/nested_dynamic_calibration_v1/inner_validation_paths.csv": "b4ec9ff862b4300fe3160d70893ce125018150fcc8110e8383c6bc897b8abe46",
+    "results/model_review/nested_dynamic_calibration_v1/beta_summaries.csv": "76826d3cd7e5b4ad1e374d7451cbe5f0027aba7cfb566d586e966efc89fb76e2",
+    "results/model_review/nested_dynamic_calibration_v1/client_paths.csv": "dd62f2edd9c9f95fb264f5e31e41c531661e75c4c017f3f9f8acb3530acb525e",
+    "results/model_review/nested_dynamic_calibration_v1/independent_audit.json": "831012267f0cec785e07f1e3164ae46b1f0bbaa9dfeacfb276460a0ed77fcf8e",
+    "results/model_review/nested_dynamic_calibration_summary_v1/stability_diagnostics.json": "866fa13728bfa5ea8507c46341c0d185a4a56c0b2a91af39b3df927fe3e0cd92"
+  },
+  "main_correction": "120条市场情景不是120位不同客户。固定画像C在一个训练fit中只有一个初始执行准入结论，该fit对应的24条外层情景全部自动或全部execution_review。48/120是2个准入fit的市场路径加权比例，不能解释为真实客户人口覆盖40%，72条NULL也不是72位真实客户遭拒。",
+  "what_is_observed": {
+    "customer_attributes": "同一原C，H30/L.40、问卷Low liquidity；本轮五个outerfit的Q1有效标签均Balanced。市场情景变化不产生新的客户画像。",
+    "outer_fits": 5,
+    "evaluation_market_paths_per_fit": 24,
+    "admitted_outer_fits": 2,
+    "abstaining_outer_fits": 3,
+    "admitted_path_weight": 0.4,
+    "descriptive_admitted_fit_fraction": 0.4,
+    "same_number_reason": "每折恰好24条，所以路径加权准入比例与fit准入个数比例数值相同；不是两项独立证据。",
+    "not_numerical_solver_failure": "五个outerfit均完成拟合和审计；3个未准入是事先规定的执行拒绝/证据不足，不是优化器未收敛或代码运行失败。",
+    "not_independent_fits": "五个96路径训练集高度重叠，且此120路径已经参与历次设计；2/5不是5次独立部署试验，不能套独立二项区间或称已估得40%的未来fit准入概率。",
+    "full120": "只有一个使用全部120的描述性重拟合。它准入C并对120条同训练情景产生金融成果，不是120次独立准入fit，不能估计部署准入稳定性或客户人口覆盖。",
+    "observed_risk": "新算法在两个准入fit的48条验证市场路径上2次超限；4.17%是混合两个已学政策的条件OOF市场损失频率，不是客户人口拒绝率、安全认证或固定full120政策的真实超限概率。",
+    "within_fit_trading": "0.2513888889为已准入48条路径的逐期实际交易比例均值（含初配，H30分母），是交易频率，既不是客户覆盖，也不是初始fit准入比例。financial pending后账户继续计分，不把已有准入追溯改为无投资NULL。"
+  },
+  "mathematical_units": {
+    "notation": "x为客户属性，S为一个训练市场情景样本，A(S,x)为训练后初始自动执行准入指示，pi(S,x)为被选政策。验证市场路径Y不是新客户x。",
+    "customer_population_coverage": {
+      "definition": "C_customer(S)=P_X{A(S,X)=1}，固定一次已训练S，在客户属性分布P_X上的自动服务比例。",
+      "available_evidence": "没有客户人口样本或P_X；五个代表问卷不是人口频率，不能从市场情景估计此量。"
+    },
+    "fit_admission_probability": {
+      "definition": "q_fit(x;n)=P_{S~P_market^n}{A(S,x)=1}，同一x在重复训练样本下的准入概率。",
+      "available_evidence": "当前只有五个相互重叠的n96训练fit，描述2/5；没有独立重复训练证据来认证q_fit。n120的fullfit是另一个样本量且只有一次。"
+    },
+    "OOF_path_weight": {
+      "definition": "a_hat_C=SUM_f |V_f| A(S_f,x_C) / SUM_f |V_f| =48/120。",
+      "meaning": "对这些外折、这个C、这个完整学习算法的验证路径加权准入摘要；可伴随fit逐项结果呈现，不能迁移解释为人口覆盖。"
+    },
+    "conditional_market_risk": {
+      "definition": "R_hat_C=SUM_f A_f SUM_{i in V_f} b(pi_f,Y_i) / SUM_f A_f |V_f| =2/48。",
+      "zero_denominator": "所有fit拒绝时为NULL，不是0风险；Review后的真实人工选择、费用或收益未建模，不补零。"
+    },
+    "trade_fraction": {
+      "definition": "mean_{admitted f,i} [SUM_{t=1}^H 1{positive moved amount}/H]。",
+      "meaning": "同一fit政策在市场路径中的逐期交易统计。hold不等于现金、余额冻结或退出市场。"
+    },
+    "Q1_representative_coverage": "若说覆盖A--E若干问卷，只是5种代表画像的适配个数/等权规范约定；仍不是实际客户人口份额。"
+  },
+  "terminology_corrections_without_new_numbers": [
+    {
+      "old_or_ambiguous": "自动覆盖率40% / 客户覆盖48/120",
+      "replace_with": "对画像C，五外折中2个训练fit准入；按每折24条市场路径加权的OOF准入比例为48/120。"
+    },
+    {
+      "old_or_ambiguous": "拒绝72位客户 / 审核72位客户",
+      "replace_with": "3个outerfit未准入，对应72条验证市场路径的客户金融成果为NULL；没有72个不同客户。"
+    },
+    {
+      "old_or_ambiguous": "40% fit成功率",
+      "replace_with": "5个已成功计算的outerfit中2个作出自动执行准入；这是描述性fit准入个数，不是数值求解成功率或独立部署成功概率。"
+    },
+    {
+      "old_or_ambiguous": "full120覆盖全部客户 / 部署覆盖率100%",
+      "replace_with": "一个full120描述性训练fit对C给出自动准入；其未来训练稳定性和客户人口覆盖均未估计。"
+    },
+    {
+      "old_or_ambiguous": "内部max coverage意味着最大客户人口覆盖",
+      "replace_with": "当前内部目标最大化自动验证市场路径数；固定C时等价于按验证折大小加权的训练fit准入偏好。人口覆盖需另给客户分布。"
+    },
+    {
+      "old_or_ambiguous": "参数β已被市场唯一识别 / 统计上β不可识别已证明",
+      "replace_with": "有限技术候选在已观测inner流程上存在决策等价/目标并列；不把技术筛选参数冒充已识别客户偏好或生成模型参数。"
+    },
+    {
+      "old_or_ambiguous": "字段case_auto_n、case_execReview_n天然表示客户人数",
+      "replace_with": "旧字段按原定义保留，不改数值；外显标签/数据字典注明单位是客户画像×市场路径身份，并另列fit数、画像数和逐期交易数。"
+    }
+  ],
+  "beta_equivalence_and_refit": {
+    "formal_identification_boundary": "β不参数化市场数据的生成分布；这里没有建立likelihood模型来证明全局/局部统计不可识别。准确现象是inner过程的有限决策等价及预定tie convention。",
+    "outer_fold_2": {
+      "inner_equivalent_betas": [
+        0.05,
+        0.075,
+        0.1
+      ],
+      "original_inner_market_paths_per_beta": 96,
+      "all_saved_columns_except_beta_exactly_equal": true,
+      "automatic_n_each": 96,
+      "breach_count_each": 6,
+      "same_mean_annual_log_growth": 0.04289128168137483,
+      "same_selected_order_and_status_each_path": true,
+      "selected_scalar_beta": 0.05,
+      "why_selected": "预先写定的较小beta并列规则，不是数据唯一偏好.05。",
+      "refit_n": 96,
+      "selected_beta_refit_cap": 4,
+      "min_nine_price_refit_breach_count": 6,
+      "result": "execution_review；不能用当前外层结果事后改选.075/.10补覆盖。"
+    },
+    "finite_feasible_set": "F_beta(S)={j in old9: k_j(S)<=min(k_B(S),floor(beta*|S|+1e-12))}。同一个S内β增大使此经验可行集合弱扩大，但完整政策风险不随eta单调，跨T到S也无可行性保持定理。",
+    "why_equivalence_need_not_transport": "不同训练样本/样本量重拟合改变目标、fan、政策路径及计数；inner等价不能推出refit等价。当前.05在T的验证策略合格、在最终S无可行候选是允许的算法结果。",
+    "other_folds": "outer4的.05为7/72通过而高beta12/96失败，outer3所有beta未经验合格；不能把三折都归为完全并列问题。",
+    "not_evidence_for_rescue": "更大beta属于已有列表也不代表当前外层可以补跑并择优。未来重新定义tie/refit aware规则是新learner，须先冻结完整算法并接受重新验证仍可能拒绝。"
+  },
+  "policy_design_principles": [
+    "先确定原期限MDD事件L及服务alpha的规范性解释，保留原费用、历史峰和b不重置。经验筛选满足alpha并非真实风险保证。",
+    "在硬风险/适配/流动性信息要求通过后，可把“有可接受自动候选则优先准入”设为公开字典序目标；固定一个x和S时A只有0或1，此目标无需拍一个Review罚金。它是规范选择，不是由当前2/5推出。",
+    "同时报告准入/拒绝原因、验证路径风险/严重度、增长、费用和fit不稳定；不能把少服务本身叫金融风险改进，也不能隐含把人工结果当安全。",
+    "不给真实客户覆盖硬下限或Review经济罚金，除非有明确规范承诺与人口/服务成本依据；尤其不能用40%观测值反推80%等目标来救模型。",
+    "若需要多目标选择但没有可辩护的交换权重，先列Pareto/字典序标准及优先级，承认这也是规范设定；没有标量lambda不等于没有额外政策选择。",
+    "参考B年度恢复与等权政策不能悄悄变成自动fallback；候选必须满足已公开Q2净风险收益benefit规则、完整执行风险筛选与服务信息条件。",
+    "流动性/资料完整性、风险菜单适配、模型执行准入、未来financial pending分别记录。不能因流动性未知把统计校准失败掩盖成同一种Review，也不凭空补金额/应急储备。",
+    "竞赛层将题面给定H/L/High-Medium-Low视为短问卷输入合同，可公开选择标签的规范操作化；不能因虚构问卷没有额外金额/日期就让所有画像一律Review。真实部署所需的额外事实核实另层记录，不倒填竞赛结论。"
+  ],
+  "future_options": [
+    {
+      "id": "A_fixed_fit_abstention",
+      "definition": "保留当前流程：单一beta按原inner规则选定，final refit无可行价格则明确执行审核/拒绝自动，金融NULL。",
+      "strengths": [
+        "最小、易复现，不追加适应性选择或虚构人工收益。",
+        "忠实保留完整约束下没有被支持的自动策略。"
+      ],
+      "limits": [
+        "较小beta tie是技术惯例，不是已识别偏好；可以解释但不能声称唯一正确。",
+        "样本/目标改变可能导致准入不稳定，当前只有两个outerfit准入；不能把此解释为真实人口覆盖。"
+      ],
+      "recommendation": "继续作为已冻结基线和对照，不事后更改当前结果。",
+      "validated_status": "仅已有探索性开发证据，无部署稳定性或真实概率认证。"
+    },
+    {
+      "id": "B_validated_tie_set_then_refit_aware",
+      "definition": "先保留内层原风险筛选、最大验证路径准入、最大meanG单一全局数值带下的全部并列候选集合E(S)，不把较小beta惯例当唯一偏好；再按事前规则在E中选择最终训练S可行的控制器。",
+      "concrete_predeclared_rule": [
+        "E仅由当前训练S内的held-inner证据形成；保存eligible全集、目标并列E和逐路径行为等价关系，三者不混称。",
+        "在最终S计算旧9价完整路径，逐beta仍用原min(kB,floor(beta*n))，且beta<=alpha，不提高alpha/L或添加价格。",
+        "若E中存在经验可行控制器，准入优先；一个保守可解释版本取E中最小的refit-feasible beta，再用原meanG与价格顺序选控制器；全部不可行则Review。",
+        "若选择改为E中最大refit meanG再tie小beta，也必须事前另定并承认增加了规范优先级，不能两种规则按结果择优。",
+        "完整E构造、refit映射和拒绝步骤在每个outer训练块内部执行；评估完整新learner，不能把原每beta的inner风险当新集合选择器的证书。"
+      ],
+      "strengths": [
+        "直接针对数据无法区分并列技术规则却被最小标量限制refit的问题。",
+        "不放宽原经验风险上限，不需要任意覆盖下限/Review罚金，仍允许全拒绝。"
+      ],
+      "limits": [
+        "增加了一个公开的训练内选择动作，仍可能乐观/不稳定；内层合格不是统计认证。",
+        "不允许用于改写当前fold2结果；旧OOF已参与设计，未来同数据评价仍为探索。"
+      ],
+      "recommendation": "最小下一候选设计建议；优先讨论此结构而不是追加eta/beta网格。尚未执行或证明优于A。",
+      "validated_status": "设计选项，尚未完整运行/验证。"
+    },
+    {
+      "id": "C_all_validated_candidates_coverage_first",
+      "definition": "不限于原目标并列E，而在全部inner经验合格候选中，按公开硬风险约束后先最大自动准入，再增长/严重度等排序。",
+      "strengths": [
+        "明确把可接受候选存在时提供自动服务作为规范目标，避免偷偷用Review罚金。"
+      ],
+      "limits": [
+        "扩大了B的选择空间，可能牺牲原inner增长目标或改变严重度/准入子群。",
+        "对于固定C的单次fit准入目标只是0/1；多客户人口覆盖另需客户分布。",
+        "这不是旧规则的无害tie修补，必须单独界定候选与完整验证，不能假称无需新规范选择。"
+      ],
+      "recommendation": "只有明确接受这种优先级变化时才考虑；不因当前2/5而自动采纳。",
+      "validated_status": "设计选项，尚未执行。"
+    },
+    {
+      "id": "D_direct_old9_controller_shortlist",
+      "definition": "未来可考虑直接在inner完整路径上比较旧9个技术price控制器并保留风险合格shortlist，再final训练风险screen；不再把beta当需估计的偏好。",
+      "strengths": [
+        "把决策对象直接对准可部署控制器，减少中间技术预算的解释负担。"
+      ],
+      "limits": [
+        "需要此前未保存的候选inner评价，属于新完整learner而非只读修正。",
+        "仍有有限样本选择和refit不稳定，不能保证覆盖；不可添加价格或据旧OOF挑好price。"
+      ],
+      "recommendation": "可作为另一独立预定方法对照，不与B一同无计划铺开后挑赢家。",
+      "validated_status": "仅方法备选，未执行。"
+    },
+    {
+      "id": "E_robust_consensus_or_abstain",
+      "definition": "对保留并列候选要求最终可行/输出一致，冲突则Review。",
+      "strengths": [
+        "明确承认技术候选歧义，可做稳健性参照。"
+      ],
+      "limits": [
+        "可能更频繁拒绝，不一定适合期望更多自动服务的规范目标；仍非金融安全证明。"
+      ],
+      "recommendation": "可作为保守诊断，不宣称天然最佳。",
+      "validated_status": "设计选项，未执行。"
+    }
+  ],
+  "recommendation_to_root": {
+    "now": "不改旧数值和旧结论，只修正单位与措辞；报告5个fit逐项准入、路径加权摘要、风险/增长/费用和条件状态。A保留冻结基线。",
+    "next_contract": "建议B的最小版本：保留原inner目标并列E，取最小refit-feasible beta及原price选择，风险硬筛选不变、全失败Review、无hidden fallback；这是规范性程序建议，不是为了让当前fold2准入而作反推。先定明确流动性/资料/人工服务状态合同，别把单一服务标签揉成金融风险保证。",
+    "do_not_implement_here": "本文件不启动市场重放、不新挑policy、不重新计算旧OOF，也不把B称已验证或最终采用。",
+    "future_reporting_unit": "客户画像数、训练fit数、验证市场路径数、逐期决策数四类单位分列；真实客户人口覆盖保持unknown。"
+  },
+  "primary_literature": [
+    {
+      "title": "On the Foundations of Noise-free Selective Classification",
+      "authors": "Ran El-Yaniv and Yair Wiener",
+      "year": 2010,
+      "url": "https://www.jmlr.org/papers/v11/el-yaniv10a.html",
+      "support": "拒绝选项文献把coverage定义在待预测输入分布上，risk定义在被接受输入上；这是明确分母的概念参照。",
+      "scope_limit": "该文是无噪声分类理论；不能直接把其金融风险界移植来，也不能把本题市场路径误作客户属性X。"
+    },
+    {
+      "title": "No Unbiased Estimator of the Variance of K-Fold Cross-Validation",
+      "authors": "Yoshua Bengio and Yves Grandvalet",
+      "year": 2004,
+      "url": "https://www.jmlr.org/papers/v5/grandvalet04a.html",
+      "support": "训练/测试重叠所致相关会使朴素方差估计低估不确定性；一般情形无通用无偏K折方差估计。",
+      "scope_limit": "不意味着所有不确定性分析不可能；这里只支持不把五个相互重叠fit当独立二项试验。"
+    },
+    {
+      "title": "Identification in Parametric Models",
+      "author": "Thomas J. Rothenberg",
+      "year": 1971,
+      "url": "https://pages.stern.nyu.edu/~dbackus/Identification/id/Rothenberg_id_Econometrica_71.pdf",
+      "support": "参数识别关联不同结构/参数是否给出同一可观测分布。",
+      "scope_limit": "本题beta是技术决策screen，不参数化市场生成分布；用此区别严格识别与有限观察下的算法等价，不借文献假装已证明beta全局不可识别。"
+    }
+  ],
+  "literature_use": "仅统计概念/单位澄清，不引入外部监管义务、客户风险数值或比赛未要求的强制规则。",
+  "ai_human_boundary": "AI辅助反方审阅不是外部人类专家或用户本人已审核；真实顾问服务结果未知。本文件新建，旧stage与审计保持只读。",
+  "git_operations_performed": false,
+  "liquidity_cross_review": {
+    "proposal_path": "docs/liquidity_policy_refinement_review.json",
+    "read_only_review": "无实质阻断：公开ordinal soft target reserve可使标签影响适配；须承认30/10/0为规范而非识别，按各context完整重拟合和准入，E的旧Growth验证证据不能转给新的Balanced。",
+    "soft_vs_hard": "目标bill floor不能保证漂移/hold/pending后的实际bill份额；hard现金保障需不同动作与验证协议。",
+    "adoption_status": "本coverage_review不采纳floor或新分配；root最终service contract另行明确。"
+  }
+}

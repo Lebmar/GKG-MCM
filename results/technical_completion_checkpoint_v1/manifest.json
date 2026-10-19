@@ -1,0 +1,8 @@
+{
+  "status": "failed",
+  "started_utc": "2026-10-19T08:23:47.243929+00:00",
+  "scope": "Metadata and byte hashes only; no market parsing, model, notebook execution, test rerun or package replay",
+  "error_type": "AssertionError",
+  "error": "Bound receipt artifact missing: results/state_budget_mitigation_analysis_v1/manifest.json/path_metrics.csv.gz",
+  "automatic_retry": false
+}

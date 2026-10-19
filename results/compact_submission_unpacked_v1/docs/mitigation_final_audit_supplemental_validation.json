@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "version": "mitigation-final-audit-supplemental-synthetic-validation-v1",
+  "completed_utc": "2026-10-19T07:38:27.927984+00:00",
+  "frozen_audit_source_unchanged": true,
+  "audit_source_sha256": "c0c2461301a122eabae193d6d6b681d92f0a01629adc15ce6bd7f681768ea516",
+  "original_audit_source_freeze_sha256": "df0fdde54df4cfaef695c97f5a3b1a207c97c09c1c2626fedfb5863fdb1abc56",
+  "supplemental_test_sha256": "4a935df391eaa1f0e27513a5af32c734c6d971cff562618b92dede8755f2e74a",
+  "validation": "Complete constructed zero-market11artifact fixture, actual frozen kernels in test generator, patched loader with fake120/60 arrays only; actual audit_values all14objects/840rows/720physical/15120periods/1800active/120ReviewNULL/8comparisons passes.",
+  "supplied_final_values_read": false,
+  "new_policy_or_parameter_change": false,
+  "source_timing": "Original auditor source and15 tests froze before actual producer. This additional test freezes before the first actual audit, after original producer completed; it does not change the frozen auditor."
+}

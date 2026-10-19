@@ -1,0 +1,300 @@
+{
+  "version": "simple-execution-independent-judgment-v1",
+  "written_utc": "2026-10-18T05:43:45.528248+00:00",
+  "scope": {
+    "read_only_postprocessing": true,
+    "read_only_after_numeric_and_independent_audit_passed": true,
+    "upstream_output_and_audit_manifest_hashes_verified": true,
+    "new_fit_or_simulation": false,
+    "raw_market_loaded": false,
+    "final_scenarios_loaded": false,
+    "paper_written": false,
+    "architecture_or_threshold_selected": false
+  },
+  "conclusion": "The diagnostic controls remove the missing-feasible-reference training mechanism by candidate inclusion and show that a separate held-out inner risk gate still rejects fits. More observed admission is not proof that deleting forecasts alone improves safety. Neither annual restoration nor TV threshold alone satisfies the contest per-trade estimated benefit-versus-cost requirement. No architecture is adopted or parameter tuned here.",
+  "repeat_results": [
+    {
+      "repeat_id": 1,
+      "policy": "annual_gated_diagnostic",
+      "original_n": 120,
+      "case_auto_n": 120.0,
+      "case_execReview_n": 0.0,
+      "breach_count": 9,
+      "conditional_breach_probability": 0.075,
+      "mean_log_growth": 0.0385339911489234,
+      "mean_nominal_fees": 1.055960511529509,
+      "mean_trade_fraction": 0.9755555555555556
+    },
+    {
+      "repeat_id": 1,
+      "policy": "drift_band_gated_diagnostic",
+      "original_n": 120,
+      "case_auto_n": 96.0,
+      "case_execReview_n": 24.0,
+      "breach_count": 8,
+      "conditional_breach_probability": 0.0833333333333333,
+      "mean_log_growth": 0.0401830113344489,
+      "mean_nominal_fees": 0.8152549227228176,
+      "mean_trade_fraction": 0.4347222222222222
+    },
+    {
+      "repeat_id": 2,
+      "policy": "annual_gated_diagnostic",
+      "original_n": 120,
+      "case_auto_n": 120.0,
+      "case_execReview_n": 0.0,
+      "breach_count": 8,
+      "conditional_breach_probability": 0.0666666666666666,
+      "mean_log_growth": 0.0384645402299526,
+      "mean_nominal_fees": 1.0401499113250037,
+      "mean_trade_fraction": 0.9777777777777776
+    },
+    {
+      "repeat_id": 2,
+      "policy": "drift_band_gated_diagnostic",
+      "original_n": 120,
+      "case_auto_n": 96.0,
+      "case_execReview_n": 24.0,
+      "breach_count": 7,
+      "conditional_breach_probability": 0.0729166666666666,
+      "mean_log_growth": 0.0409502589003313,
+      "mean_nominal_fees": 0.802279192644777,
+      "mean_trade_fraction": 0.3364583333333333
+    },
+    {
+      "repeat_id": 3,
+      "policy": "annual_gated_diagnostic",
+      "original_n": 120,
+      "case_auto_n": 120.0,
+      "case_execReview_n": 0.0,
+      "breach_count": 7,
+      "conditional_breach_probability": 0.0583333333333333,
+      "mean_log_growth": 0.0392782126640245,
+      "mean_nominal_fees": 1.0473966295340444,
+      "mean_trade_fraction": 0.9736111111111112
+    },
+    {
+      "repeat_id": 3,
+      "policy": "drift_band_gated_diagnostic",
+      "original_n": 120,
+      "case_auto_n": 72.0,
+      "case_execReview_n": 48.0,
+      "breach_count": 6,
+      "conditional_breach_probability": 0.0833333333333333,
+      "mean_log_growth": 0.0407295490081567,
+      "mean_nominal_fees": 0.8281134783697365,
+      "mean_trade_fraction": 0.4513888888888889
+    },
+    {
+      "repeat_id": 4,
+      "policy": "annual_gated_diagnostic",
+      "original_n": 120,
+      "case_auto_n": 96.0,
+      "case_execReview_n": 24.0,
+      "breach_count": 10,
+      "conditional_breach_probability": 0.1041666666666666,
+      "mean_log_growth": 0.040310196458778,
+      "mean_nominal_fees": 1.0955875984204448,
+      "mean_trade_fraction": 0.9642361111111112
+    },
+    {
+      "repeat_id": 4,
+      "policy": "drift_band_gated_diagnostic",
+      "original_n": 120,
+      "case_auto_n": 72.0,
+      "case_execReview_n": 48.0,
+      "breach_count": 5,
+      "conditional_breach_probability": 0.0694444444444444,
+      "mean_log_growth": 0.0375489108034418,
+      "mean_nominal_fees": 0.7901731566922154,
+      "mean_trade_fraction": 0.3180555555555556
+    },
+    {
+      "repeat_id": 5,
+      "policy": "annual_gated_diagnostic",
+      "original_n": 120,
+      "case_auto_n": 120.0,
+      "case_execReview_n": 0.0,
+      "breach_count": 7,
+      "conditional_breach_probability": 0.0583333333333333,
+      "mean_log_growth": 0.0386707687053928,
+      "mean_nominal_fees": 1.0327191076383118,
+      "mean_trade_fraction": 0.9766666666666668
+    },
+    {
+      "repeat_id": 5,
+      "policy": "drift_band_gated_diagnostic",
+      "original_n": 120,
+      "case_auto_n": 72.0,
+      "case_execReview_n": 48.0,
+      "breach_count": 4,
+      "conditional_breach_probability": 0.0555555555555555,
+      "mean_log_growth": 0.0416255967822383,
+      "mean_nominal_fees": 0.8241665953726169,
+      "mean_trade_fraction": 0.4564814814814815
+    }
+  ],
+  "fit_admission": {
+    "annual_auto": 24,
+    "annual_execution_review": 1,
+    "TV_auto": 17,
+    "TV_execution_review": 8,
+    "TV_admitted_threshold_frequencies": {
+      "0": 3,
+      ".05": 6,
+      ".10": 8
+    },
+    "interpretation": "Observed dependent training-fit decisions, not customer coverage or independent deployment success rates."
+  },
+  "mechanical_training_support": {
+    "final_no_admissible_training_candidate_n": 0,
+    "meaning": "The two declared families contain exactB, which is training-cap feasible under supportedBalanced Q1 with gamma<=.1 and matchingaccounting. Nonemptiness is a construction fact. Training G>=B-tol and k<=kB similarly follow from selection; not out-of-sample achievements.",
+    "remaining_transfer_limit": "Inner andfinalQ1targets/selecteddelta can differ; commoninnerU andpassedinnergate do not certify final true risk."
+  },
+  "observed_inner_gate_failures": {
+    "annual": [
+      {
+        "context": "stability_r4_outer5",
+        "auto_inner_n": 96,
+        "selected_k": 10,
+        "same_U_B_k": 10,
+        "absolute_cap": 9,
+        "reason": "inner_absolute_risk_exceeds_reference"
+      }
+    ],
+    "TV": {
+      "n": 8,
+      "reason": "inner_risk_exceeds_same_U_B",
+      "all_failed_by_one_event_above_same_U_B": true,
+      "all_satisfied_absolute_count_cap": true
+    },
+    "common_inner_U": "The twoarchitectures use identicalwithin-context innerautomaticIDsets, with supportedchunks of72or96 paths inthisstudy. This follows thecomponent/candidate-support conditions, notan independentcoverage advantage."
+  },
+  "selection_changes_conditional_risk_example": {
+    "repeat": 4,
+    "annual_automatic_originalIDs": 96,
+    "annual_events": 10,
+    "conditional_fraction": 0.10416666666666667,
+    "hypothetical_B_all_originalIDs": 120,
+    "B_events": 10,
+    "B_fraction": 0.08333333333333333,
+    "rejected_fit": "stability_r4_outer5",
+    "rejected_hypothetical_B_events": 0,
+    "rejected_reference_n": 24,
+    "meaning": "Admitted annualtrajectories equalB exactly. Removing a validationgroup with0 observedhypotheticalB events changes10/120 to10/96 without changingthepolicy oncommonpaths. Theinnergate wasmade beforeouterreturns; do not relaxit afterseeing this result or impute rejectedcustomerreturns."
+  },
+  "matched_financial_comparisons": [
+    {
+      "left": "annual_gated_diagnostic",
+      "right": "annual_then_pending",
+      "common_scenario_repeat_n": 576,
+      "left_breach_count": 41,
+      "right_breach_count": 41,
+      "mean_deltas": {
+        "log_growth": 0.0,
+        "mdd": 0.0,
+        "nominal_fees": 0.0,
+        "trade_fraction": 0.0
+      },
+      "interpretation": "Same repeat/fold/context/originalID common outcomes only; repeated paths and overlapping fits, not IID new evidence."
+    },
+    {
+      "left": "drift_band_gated_diagnostic",
+      "right": "annual_then_pending",
+      "common_scenario_repeat_n": 408,
+      "left_breach_count": 30,
+      "right_breach_count": 26,
+      "mean_deltas": {
+        "log_growth": 0.0007034301412906543,
+        "mdd": 0.002932805047286211,
+        "nominal_fees": -0.24156733043449777,
+        "trade_fraction": -0.5808823529411765
+      },
+      "interpretation": "Same repeat/fold/context/originalID common outcomes only; repeated paths and overlapping fits, not IID new evidence."
+    },
+    {
+      "left": "annual_gated_diagnostic",
+      "right": "joint_tie_set_refit_learner",
+      "common_scenario_repeat_n": 264,
+      "left_breach_count": 18,
+      "right_breach_count": 29,
+      "mean_deltas": {
+        "log_growth": -0.0034455798266822893,
+        "mdd": -0.020583472971988273,
+        "nominal_fees": 0.3330359115455417,
+        "trade_fraction": 0.7020202020202021
+      },
+      "interpretation": "Same repeat/fold/context/originalID common outcomes only; repeated paths and overlapping fits, not IID new evidence."
+    },
+    {
+      "left": "drift_band_gated_diagnostic",
+      "right": "joint_tie_set_refit_learner",
+      "common_scenario_repeat_n": 192,
+      "left_breach_count": 14,
+      "right_breach_count": 20,
+      "mean_deltas": {
+        "log_growth": -0.0027290114475734227,
+        "mdd": -0.016959299141219495,
+        "nominal_fees": 0.11325585680134269,
+        "trade_fraction": 0.1684027777777778
+      },
+      "interpretation": "Same repeat/fold/context/originalID common outcomes only; repeated paths and overlapping fits, not IID new evidence."
+    },
+    {
+      "left": "drift_band_gated_diagnostic",
+      "right": "annual_gated_diagnostic",
+      "common_scenario_repeat_n": 384,
+      "left_breach_count": 30,
+      "right_breach_count": 26,
+      "mean_deltas": {
+        "log_growth": 0.0007198748546328508,
+        "mdd": 0.002871529388056599,
+        "nominal_fees": -0.24529590785188704,
+        "trade_fraction": -0.5782986111111111
+      },
+      "interpretation": "Same repeat/fold/context/originalID common outcomes only; repeated paths and overlapping fits, not IID new evidence."
+    }
+  ],
+  "independent_tradeoff_judgment": [
+    "TV versus same-targetB onits408 available scenario-repeatrecords has30vs26 firstevents, growth+.00070343 annual-log units, meanMDD+.002932805, nominalfees−.241567 perinitial100 andtradefraction−.580882. It savestrades butdoesnot showlowerrisk versusB.",
+    "TV versus oldretained learner on192 commonrecords has14vs20 firstevents andlowermeanMDD, butlowergrowth andhigherfees/moretrades; this is a differenttradeoff, notautomaticdominance.",
+    "Annualcontrol versusB on576 commonrecords hasexactzero financialdeltas; it is a usefulpositivecontrol, notan estimatedbenefit tradingrule.",
+    "Allrepeated comparisons reuse120 originalmarketpaths andoverlappingtrainingfits. Pooled recordcounts arebookkeeping only, no confidencebound, true10%risk law orpopulationcoverage estimate."
+  ],
+  "next_step_boundary": "Use this diagnostic to distinguish arithmetic/component support from predictive and risk-evidence assumptions. Any finalbenefit rule ornewadmission policy mustbeseparatelydefined andfrozen; theseobservations do notchoosearchitecture,threshold,seed,alpha orfinalpolicy.",
+  "provenance": {
+    "sources_and_evidence_at_start": {
+      "docs/simple_execution_comparison_protocol.json": "f4c399807679ef18119b56af28358b7a1b35d2acf0bdaf32c4b0de03d233d9db",
+      "docs/simple_execution_design_review.json": "66d49cfcd69981e8b97f17088f91529a214dd1fd346c0316d36f97da572ccefe",
+      "docs/simple_execution_final_source_review.json": "348f134cdd61148a0c23cf87c2ce5cc952c512f6266f8265ffc55f4a8e418501",
+      "docs/simple_execution_freeze_receipt.json": "ee00d83cd9676f0798e289e34cd7f76ac70c247b1cd8140905d5d5ccc350a380",
+      "results/model_review/simple_execution_comparison_v1/manifest.json": "056a6389cdf13dc0f3e16feac618ab8fa215f4bc228cc6eec18066e53f5dd31b",
+      "results/model_review/simple_execution_comparison_v1/independent_audit.json": "065544294539a333a43535c5e287f92b31ea70a81344d0323ff8a743561ab22d",
+      "results/model_review/simple_execution_comparison_v1/summary.csv.gz": "6d2f9cf38c775373c54c01006d68fd1e6f2d7160df56def493b94785c6c755b7",
+      "results/model_review/simple_execution_comparison_v1/client_paths.csv.gz": "fad707a5199577999ca34a1a59c51d5f83cd14fe98aeaac6932fea9d542764b9",
+      "results/model_review/simple_execution_comparison_v1/inner_gate_summaries.csv.gz": "5b64acb8640f31141e3ebbb66c762307ad47865c5de0baf0a2262efd13785d49",
+      "results/model_review/simple_execution_comparison_v1/fit_admission.csv.gz": "127a04f76b2b2dd6bf4fed5fb06aa6965629bb5e3c39371c60c650259a4004da",
+      "results/model_review/refit_stability_v1/manifest.json": "035bfa20b4e659e88ff48b56ffdc21a6563db32a0490d2ec8a6852154018e5a5",
+      "results/model_review/refit_stability_v1/independent_audit.json": "7725716ddbfb2da1071027936fc90374668f99161e6e15b57fd3f80b90a9e712",
+      "results/model_review/refit_stability_v1/client_paths.csv.gz": "47c487dc12e5969f26450da66a350548dc81464e4562fa655c9f80c08f7481c7",
+      "results/model_review/simple_execution_reproduction_v1/manifest.json": "4a18a4d4018ed8f0def9b607441430404dd3d3e620f19a231a74eef69b05bebf"
+    },
+    "sources_and_evidence_at_end": {
+      "docs/simple_execution_comparison_protocol.json": "f4c399807679ef18119b56af28358b7a1b35d2acf0bdaf32c4b0de03d233d9db",
+      "docs/simple_execution_design_review.json": "66d49cfcd69981e8b97f17088f91529a214dd1fd346c0316d36f97da572ccefe",
+      "docs/simple_execution_final_source_review.json": "348f134cdd61148a0c23cf87c2ce5cc952c512f6266f8265ffc55f4a8e418501",
+      "docs/simple_execution_freeze_receipt.json": "ee00d83cd9676f0798e289e34cd7f76ac70c247b1cd8140905d5d5ccc350a380",
+      "results/model_review/simple_execution_comparison_v1/manifest.json": "056a6389cdf13dc0f3e16feac618ab8fa215f4bc228cc6eec18066e53f5dd31b",
+      "results/model_review/simple_execution_comparison_v1/independent_audit.json": "065544294539a333a43535c5e287f92b31ea70a81344d0323ff8a743561ab22d",
+      "results/model_review/simple_execution_comparison_v1/summary.csv.gz": "6d2f9cf38c775373c54c01006d68fd1e6f2d7160df56def493b94785c6c755b7",
+      "results/model_review/simple_execution_comparison_v1/client_paths.csv.gz": "fad707a5199577999ca34a1a59c51d5f83cd14fe98aeaac6932fea9d542764b9",
+      "results/model_review/simple_execution_comparison_v1/inner_gate_summaries.csv.gz": "5b64acb8640f31141e3ebbb66c762307ad47865c5de0baf0a2262efd13785d49",
+      "results/model_review/simple_execution_comparison_v1/fit_admission.csv.gz": "127a04f76b2b2dd6bf4fed5fb06aa6965629bb5e3c39371c60c650259a4004da",
+      "results/model_review/refit_stability_v1/manifest.json": "035bfa20b4e659e88ff48b56ffdc21a6563db32a0490d2ec8a6852154018e5a5",
+      "results/model_review/refit_stability_v1/independent_audit.json": "7725716ddbfb2da1071027936fc90374668f99161e6e15b57fd3f80b90a9e712",
+      "results/model_review/refit_stability_v1/client_paths.csv.gz": "47c487dc12e5969f26450da66a350548dc81464e4562fa655c9f80c08f7481c7",
+      "results/model_review/simple_execution_reproduction_v1/manifest.json": "4a18a4d4018ed8f0def9b607441430404dd3d3e620f19a231a74eef69b05bebf"
+    },
+    "source_hashes_match": true
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "version": "frozen-strict172-known-cost-pathwise-stress-v1",
+  "date_beijing": "2026-10-17",
+  "status": "Prospective development sensitivity protocol, written before any new cost-stress replay or outputs. No policy, menu or fee-rate winner is selected.",
+  "question": "Q3 known-cost sensitivity of the frozen annual-then-pending comparator and the separately specified pathwise hold shield; distinguish target freezing from recalibration.",
+  "rates": [
+    {
+      "label": "zero",
+      "cost_rate": 0.0,
+      "relative_to_base": 0.0
+    },
+    {
+      "label": "half",
+      "cost_rate": 0.00125,
+      "relative_to_base": 0.5
+    },
+    {
+      "label": "base",
+      "cost_rate": 0.0025,
+      "relative_to_base": 1.0
+    },
+    {
+      "label": "double",
+      "cost_rate": 0.005,
+      "relative_to_base": 2.0
+    },
+    {
+      "label": "quadruple",
+      "cost_rate": 0.01,
+      "relative_to_base": 4.0
+    }
+  ],
+  "data": {
+    "allowed_scenario_ids": [
+      1,
+      120
+    ],
+    "forbidden_scenario_ids": [
+      121,
+      180
+    ],
+    "loader": "safeinvest.data.load_paths(...,range(1,121),allow_final=False)",
+    "scope": "Reused development only. Original combined CSV may be hashed for provenance, but final returns121--180 are never parsed."
+  },
+  "frozen_design": {
+    "policies": [
+      "annual_then_pending",
+      "pathwise_hold_rollout"
+    ],
+    "products": "All strict172 six-context frozen targets, local172/global232 mapping and effective assignments; no optimization/refit/gamma/reassignment/admission update at any cost. Existing A/D Review outcomes remain null.",
+    "contexts": "One full120 descriptive context, five original96-training/24-test outer contexts; retain all120 original client/path rows per policy in each full/OOF view.",
+    "history": "Each client original H begins100/all bills/CPI1/peak100/MDD0. Original H/L and annual observation convention remain fixed; no peak, everbreach or horizon reset.",
+    "accounting": "Exact self-financing fee C=c*actual_moved counted once, including mandatory initial allocation; no terminal fee. Pending holds actual asset quantities after the first annual endpoint MDD-L>1e-12, starting at the following decision, without adviser response/re-entry."
+  },
+  "known_cost_forecast": {
+    "consistency": "At each rate, both actual fee accounting and every current/future forecast baseline fee use that SAME known rate. This does not study cost misestimation.",
+    "fan": "Freeze all full120 or outer96 complete joint training paths and their same calendar t:H suffixes. No held-out current or future return enters the gate.",
+    "pathwise_gate": "Hold iff every forecast path has computed total_log_hold>=total_log_restore AND everbreach_hold<=everbreach_restore. Growth allowance EXACT0; no epsilon debt, eta, probability margin or rate tuning. Initial mandatory restore and actual postbreach pending hold remain unchanged."
+  },
+  "training_support_check": {
+    "per_rate": "For every served client/context/rate replay BOTH policies on every same training fan path, verify terminal total log growth >= comparator up to the separately declared numerical audit guard and absorbing everbreach <= comparator. Record any strict computed negative growth values and all event-order violations. Failure aborts rather than being hidden.",
+    "audit_guard_total_log_units": 1e-10,
+    "interpretation": "Full120 plus5 overlapping96 training contexts give600 context-labeled path identities per client, not600 independent scenarios. The ideal fixed-support induction is not an OOF/population guarantee or an MDD-severity ordering."
+  },
+  "base_reproduction": {
+    "rate": 0.0025,
+    "required": "Reproduce every saved v2 assigned per-path financial metric, actual fees/transfers/trade fraction, breach/first crossing and all available actual/training trace fields. Review null masks/identities/denominators must match. Also recompute base summary/paired and training-support receipts against the frozen v2 artifacts.",
+    "comparison": "Numeric saved CSV/trace checks use atol2e-10,rtol5e-13 for serialization roundoff; bool/integer/action identities exact. This is a verification tolerance, never a gate allowance."
+  },
+  "outputs": {
+    "directory": "results/model_review/pathwise_cost_stress_v1",
+    "client_paths": "All cost/context/client/scenario/policy rows, financial fields null for Review. Same real annualized-log-growth/CAGR/MDD/volatility and nominal fee/transfer/trade conventions as frozen v2.",
+    "summary_and_paired": "At each rate separately, pooled individual full/OOF path summaries and paired rule-minus-comparator deltas; inverted-CDF P10/P90, standard median, fractional-atom CVaR90. Do not average fold quantiles.",
+    "decision_changes": "Pair each rate with base. For every assigned path record the proportion of all original-H decisions with a changed hold/restore action, actual-trade flag or pending flag; additionally describe action changes among decisions active in BOTH rates after inception. These compare whole trajectories with different wealth/state/crossing history, not a controlled marginal cost effect at the same state. Review has no decision outcome.",
+    "training": "Context-labeled per-rate support path checks and summaries, preserving Review null rows and overlap labels.",
+    "traces_and_provenance": "Actual and training core traces in NPZ with cost_label prefix, declared Q/gate records, original source/input start=end hashes, output hashes, development-array digest and scenario list. No final data loaded."
+  },
+  "acceptance": [
+    "Prospective protocol and implementation/test source hashes are frozen before first cost-stress market replay.",
+    "Old source hashes, strict products/assignments/folds and base artifact hashes match before and after.",
+    "Guarded development identities are exactly1..120, no duplicates or final paths.",
+    "Each rate preserves2400 full/OOF client-policy rows and3000 context-labeled training client-path rows; all Review financial/Q outcomes remain null.",
+    "Base rate reproduces v2 saved artifacts; all rates satisfy declared training-support comparisons or abort.",
+    "Independent audit can replay actual fees/state/breach and a fixed declared Q subset without using numerical kernels."
+  ],
+  "independent_audit_subset": "For each cost/served context/client use smallest evaluation scenario ID and returnyears2,floor(H/2)+1,H, deduplicate; audit active Q states only and report pending skips without replacement. Scalar independent bisection should reconstruct both action fan arrays, violations, chosen action, local deletion count and all actual cash flows.",
+  "limits": [
+    "These rates are declared hypothetical sensitivities, not empirical cost estimates.",
+    "Frozen menu stability is imposed by design and is not evidence that recalibrated targets would remain unchanged.",
+    "No fee rate/policy winner is selected, no new risk certification, no true-distribution or OOF guarantee from training-support dominance.",
+    "Changing known costs can change the actual path, crossing time and gates. It does not erase any realized event or simulate human intervention."
+  ],
+  "frozen_input_sha256": {
+    "docs/positive_asset_specification_protocol.json": "ff23c3fcdad54d83a2896a11459db1cec3e4f48fe6352d994139e4c9ff79475c",
+    "results/model_review/positive_asset_specification_v1/manifest.json": "da65841decff7d50ec7baa8fe80c4e6593112ea0c7d083affe2a0dd68f2f306e",
+    "results/model_review/positive_asset_specification_v1/nested_context_refits.json": "d13450e05051c02d2bf54a4edfc77ef01d880cee0c78238cc3d7204a6ab27aa1",
+    "results/model_review/positive_asset_specification_v1/candidate_mapping.json": "c6221636a667536cbf1e4dbaa132c4cca1b00efb692dc180f5fc189655a744d5",
+    "results/model_review/positive_asset_specification_v1/nested_full_paths.csv": "bb72ae6b72ea72da01f800fd0f9ae0139046c8684e67374cc0966fb849d52516",
+    "results/model_review/positive_asset_specification_v1/nested_outer_oof_paths.csv": "4a4a9dba68e824b3dc13161391433be25ec9eb5fc873e4bdc6548eb23ab67c8f",
+    "docs/fan_rollout_mathematical_review.json": "499754a2265573b9753568acbff06618cc969d79e9c0a5dee81d9247d9a3d046",
+    "docs/fan_rollout_execution_protocol.json": "dece4b446f8bd20ee5590ffc1188b13ddd57f19631a21e7b362ad800df030cd3",
+    "docs/review_pending_execution_protocol.json": "8e85cff91a0f0459b0b67d5e76d3f87c3988b89992251fcbf067393f6776a559",
+    "research/experimental_execution/fan_rollout.py": "d195d721c895700925e9b24c91640c59737fe4eb542272376d2de78ce62fe1ba",
+    "research/experimental_execution/review_pending.py": "9038d420c9ea48df068c58a6abee3f993ac414f85dd0290cb56e3d703aae3894",
+    "docs/pathwise_fan_execution_protocol.json": "c2417e0c812fa9fc870eb3915012fc7556cd18f29238941a69bc9a5db617197c",
+    "scripts/run_pathwise_fan_execution.py": "6b55b72fba513092986f07d336c15af2b34670093386f8bc5ccf96e29118a92b",
+    "research/experimental_execution/pathwise_fan_rollout.py": "1970d04e4af3fbf7ab474857e2beb970f7fbb2a0e100bad8bf2c176a45e6ba79",
+    "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a",
+    "src/safeinvest/data.py": "70e511fd05c6e23fd6b8a72f1dc165426fc77a5eb4dbd8a3c13b839bb305a75f",
+    "research/safeinvest_research/metrics.py": "7ec8e4821ce284351a3d8ed7071c687fdf7d6e4cfd225f72cad1d09d623eb008",
+    "scripts/run_fan_rollout_execution.py": "100fe1fd5f9e3718cbf7e804e4dca736c81b407bc3c93a1a0eb24d47a02732e6",
+    "results/model_review/pathwise_fan_execution_v1/manifest.json": "9d95187a921fdc13644c61df1178c39835133d42da925e863a80b091793b3cc7",
+    "results/model_review/pathwise_fan_execution_v1/client_paths.csv": "409d22c235fac614e4ee41a3e554f0901ed89355ce5083c167e3921d1f87a797",
+    "results/model_review/pathwise_fan_execution_v1/summary.csv": "62cdf5296b78d963390a8cbd19f48f879ed414f250198b035653b70bc86c1ec4",
+    "results/model_review/pathwise_fan_execution_v1/paired_summary.csv": "b453a614bcadb40b03ffb19210f6f332761259573c887b1afd403ae0a45ac03e",
+    "results/model_review/pathwise_fan_execution_v1/decision_gates.csv": "9845e7f40ace93050137cb09bd4d5e8d6eb63a41a874abaf2f8f28d7b71955ba",
+    "results/model_review/pathwise_fan_execution_v1/actual_traces.npz": "1a9caf21d6004f9c9d870618b7bbc1c9e2db88d2aefcf4988536c52e2372f8fe",
+    "results/model_review/pathwise_fan_execution_v1/training_support_paths.csv": "924ab01561d717fafb3a60562c4d21575b84dd57f43d8a6e78c388099b727a86",
+    "results/model_review/pathwise_fan_execution_v1/training_support_summary.csv": "e2d20c34444967742b03e2b14abf2d31910aa6bca5a5da5fed6cde345794c1f6",
+    "results/model_review/pathwise_fan_execution_v1/training_traces.npz": "10e6d8f6b2b5f4f18256d6e5404e92840207251fa2dc8ef083b1c58386e8f096",
+    "results/model_review/pathwise_fan_execution_v1/contexts.json": "af80e209bbd673a5c3c125814d6eb5839d2b6377d4fcae7f7fc34863ce4037d8",
+    "results/model_review/pathwise_fan_execution_v1/accounting_checks.json": "6f2c638420ec60dd31cda1bf000590a6004e706ca6a18e32f3d132f683f23b0b"
+  },
+  "execution_ready": true,
+  "execution_source_sha256": {
+    "scripts/run_pathwise_cost_stress.py": "3044511db5d8cf34a7b5a4b231178664086b83ea73ebc7ae7af5341fd03eb746",
+    "tests/test_pathwise_cost_stress.py": "3805180789ce37d3ab8a6b0859a7cbda668ad11a189b57d90a0f1fc696bf5924"
+  },
+  "prospective_draft_sha256": "a363f0fdc6084b333a2d352f4f152d39fd398f441a34f1e1d8574dff6539941d",
+  "implementation_freeze_utc": "2026-10-17T14:28:14.113426+00:00"
+}

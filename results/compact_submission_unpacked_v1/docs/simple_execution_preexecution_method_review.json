@@ -1,0 +1,96 @@
+{
+  "version": "simple-execution-preexecution-method-review-v1",
+  "created_utc": "2026-10-18T05:21:00.720311+00:00",
+  "status": "Draft protocol method/schema review has no blocker; final runner/source and pipeline review still pending",
+  "scope": {
+    "draft_protocol_read": "docs/simple_execution_comparison_protocol.json",
+    "draft_execution_ready": false,
+    "new_market_data_read": false,
+    "new_market_fit_or_run": false,
+    "frozen_sources_or_artifacts_modified": false,
+    "paper_written": false,
+    "draft_protocol_hash_deliberately_not_recorded": "Root may refine this draft before freeze; final frozen protocol/source identity belongs in a separate later receipt."
+  },
+  "accepted_design": [
+    "Same original5repeats25outerfits125matchingstaticcachedcomponents;3unique deltas0/.05/.10,2fixeddiagnosticarchitectures and2hypotheticalreferences.",
+    "Annual B/TV bands labelled diagnostic controls and explicitly lack trade-level estimatedbenefit-versus-cost justification required for finalQ2.",
+    "Exactdelta0 annual-pending B; positivebands strictpre-returnTV; mandatoryfee-consistentinitialallocation; originalCPI/peak/MDD/H andabsorbingpending preserved.",
+    "Training count cap min(kB,floor(.1n+1e−12)); oneglobalannual-logG band then exactmean_excess/mean_nominal_fees/originalorder.",
+    "Eachinner own72target/selecteddelta on24heldout, pooledpositiveU with selectedk<=floor(.1|U|) andselectedk<=B_k(U) onidenticalU.",
+    "Finalcasepriority andfixedarchitectureinnergate before final96selection/outer24evaluation; noarchitecture/seed/thresholdselection fromouter.",
+    "Cached Q1 source/context/train/eval/seed/target identity isrequired, not a newstaticfit or license to useparenttarget ininner.",
+    "Original120 repeatedscenarioidentities andNULL/refavailability partitions retained; no IID600risk or25independentfit inference."
+  ],
+  "expected_row_arithmetic": {
+    "sum_job_training_ids": "100*72+25*96=9600",
+    "training_paths": "9600*3 unique deltas=28800",
+    "training_summary": "125jobs*3deltas=375",
+    "inner_validation_paths": "100innerjobs*24*2architectures=4800",
+    "inner_gate_summaries": "25outerfits*2architectures=50",
+    "client_paths": "25outerfits*24*4policies=2400",
+    "fit_admission": "25*2=50",
+    "fit_summary": "25*4=100",
+    "summary": "5repeats*4=20",
+    "paired_paths": "5repeats*120originalIDs*5pairings=3000",
+    "paired_summary": "5*5=25",
+    "per_scenario_stability": "120originalIDs*2architectures=240"
+  },
+  "requested_clarifications_before_source_freeze": [
+    {
+      "item": "Generalization boundary",
+      "clarification": "StructuralB support removes training-family emptiness but does not transfer inner evidence to the final target/delta or certify true risk."
+    },
+    {
+      "item": "Uniform initial decision",
+      "clarification": "Everyfinalfit initialA(S,C) applies uniformly to all24heldoutoriginalIDs for bothautomated andReview decisions; no future-scenario screening."
+    },
+    {
+      "item": "Common innerU",
+      "clarification": "With supportedBalanced Q1 andgamma<=.1, exactB implies nonemptytraining forbotharchitectures; verifytheirinnerautoU equality as component-integrity, not superiorcoverage evidence."
+    },
+    {
+      "item": "B cache scope",
+      "clarification": "ExactB pending trajectories are physicallysimulated. Staticannualcache only shares firstevent/firstcrossing prefix; notpostbreachG/severity/fees."
+    },
+    {
+      "item": "Oldcontrols comparison",
+      "clarification": "Any later comparison with oldcanonical/refitaware already-selected arms uses purematchedrepeat/fold/originalID postprocessing; it doesnot choosearchitecture or evaluateunselected oldprices."
+    }
+  ],
+  "resolved_definition_detail": {
+    "excess": "Followexistingfinancialrow max(mdd−L,0), without masking eventtol-sized positives. Breachonly usesmdd−L>1e−12.",
+    "fee_tie": "Mean_nominal_fees, not theconstantcost_rate or previously ambiguous fee-burden fraction.",
+    "reason": "These are explicitpreexecution refinements of advisorywording in theearlier designreview; thatoriginalrecord remainsunchanged."
+  },
+  "remaining_final_source_checks": [
+    "Runner reads only guarded1–120 and exactfrozencomponentcache; rejectsreplacement source/IDs/targets.",
+    "No parentstatic target oroldβ/price/admission choice used inside newinner selection.",
+    "All3trainingcandidates evaluated/retained orcorrectNULL placeholders; onlyselected δ plusdeclared B reference inner/outer branches evaluated.",
+    "No futureouterfinancials usedby architectureadmission anduniformA(S,C) asserted.",
+    "Syntheticpipeline coversQ1Review,outsideBalanced,unsupportedgamma,zeroU,absoluteonlyfailure,relativeonlyfailure,trainingempty,finalcasepriority,deduplicatedδ0 andall125jobs.",
+    "Final source/protocol SHAs frozen onlyaftertheabovechecks andindependentread-onlysource review; auditednumerics later separate."
+  ],
+  "provenance": {
+    "sources_and_evidence_at_start": {
+      "docs/simple_execution_design_review.json": "66d49cfcd69981e8b97f17088f91529a214dd1fd346c0316d36f97da572ccefe",
+      "docs/simple_drift_execution_implementation_review.json": "91783c67fbb14043af2cd5e9ef70fd51b5f669067b7badc194a7982eb8eba78a",
+      "research/experimental_execution/simple_drift_execution.py": "60dc564d8cf0abda4f2d7b2a83114c03473f8968d1f6af1ce35dd60fc84097c7",
+      "tests/test_simple_drift_execution.py": "29c31c1355d3ac47ba8320f51dbf20f4847ad2a0b3057e821c5a863ef273272b",
+      "tests/test_simple_drift_independent_replay.py": "2153c51e95f8edc17c0a36e9df84222d2f650ece4ab0b174af4b82c22360c6a7",
+      "docs/refit_stability_protocol.json": "8e9ab035073b91e4004c76c41296c56665d2199620e92d8cc0eb4eaca7a4efae",
+      "results/model_review/refit_stability_v1/manifest.json": "035bfa20b4e659e88ff48b56ffdc21a6563db32a0490d2ec8a6852154018e5a5",
+      "results/model_review/refit_stability_v1/independent_audit.json": "7725716ddbfb2da1071027936fc90374668f99161e6e15b57fd3f80b90a9e712"
+    },
+    "sources_and_evidence_at_end": {
+      "docs/simple_execution_design_review.json": "66d49cfcd69981e8b97f17088f91529a214dd1fd346c0316d36f97da572ccefe",
+      "docs/simple_drift_execution_implementation_review.json": "91783c67fbb14043af2cd5e9ef70fd51b5f669067b7badc194a7982eb8eba78a",
+      "research/experimental_execution/simple_drift_execution.py": "60dc564d8cf0abda4f2d7b2a83114c03473f8968d1f6af1ce35dd60fc84097c7",
+      "tests/test_simple_drift_execution.py": "29c31c1355d3ac47ba8320f51dbf20f4847ad2a0b3057e821c5a863ef273272b",
+      "tests/test_simple_drift_independent_replay.py": "2153c51e95f8edc17c0a36e9df84222d2f650ece4ab0b174af4b82c22360c6a7",
+      "docs/refit_stability_protocol.json": "8e9ab035073b91e4004c76c41296c56665d2199620e92d8cc0eb4eaca7a4efae",
+      "results/model_review/refit_stability_v1/manifest.json": "035bfa20b4e659e88ff48b56ffdc21a6563db32a0490d2ec8a6852154018e5a5",
+      "results/model_review/refit_stability_v1/independent_audit.json": "7725716ddbfb2da1071027936fc90374668f99161e6e15b57fd3f80b90a9e712"
+    },
+    "source_hashes_match": true
+  }
+}

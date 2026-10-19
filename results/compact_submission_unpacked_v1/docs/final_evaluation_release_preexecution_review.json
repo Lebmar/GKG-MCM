@@ -1,0 +1,93 @@
+{
+  "version": "actual-final-release-preexecution-independent-review-v1",
+  "written_utc": "2026-10-19T05:23:06.138474+00:00",
+  "status": "passed_before_current_final_parse",
+  "release_sha256": "a43b82db36906c5fa19ffb43cef0bca69fb908dc52a083179fa290b85c40d6dc",
+  "scope": "Read-only actualrelease/preparation/source/object/plan/development-evidence review; metadata authorization helpers and complete hash closure executed without calling a market parser. No current final results exist at this review.",
+  "verified_bindings": {
+    "preparation_protocol_sha256": "55d8b61ba4844b41b87c68b30b51e73caa3e8e3222a958e465df3d46d65a07c0",
+    "adapter_sha256": "397baf63553e4c0a30276e2c993edeb2a6e693a1ed9fa3c548cb58b4f7f37a00",
+    "object_specification_sha256": "6bfe27e0b626a90b3b6e27ffd2286e2d4885bebb5780e266dd25cc9dbbfc3851",
+    "development_gate_manifest_sha256": "6c3e6e7bfea747ead2c4eded311a4909679663bacfc2ce793c797fe56afb6e36",
+    "development_gate_audit_sha256": "25707be5e7b2fd6938af42bf189594d2b5cadeb6ec028b9cbe838ade7be7bf98",
+    "execution_sources_exact_and_current": 8,
+    "frozen_inputs_exact_and_current": 20,
+    "analysis_sources_exact_and_current": 2,
+    "development_source_input_start_end_and_outputs": "Exactcurrentbytes and complete independentlyaudited map closure verified with frozen verify_development_evidence; passeddev/audit statuses bind exactpreparation/spec/manifest."
+  },
+  "objects_and_identity": {
+    "training_IDs": "Original1–120 only, all chronological jointsuffix observations fixed; no final refit.",
+    "evaluation_IDs": "Exactly original121–180, all60 retained.",
+    "Q2_objects": [
+      "guarded_C_service: preinvestmentReview,auto0/review60,all financeNULL andno physical account",
+      "unapproved_fixed_shadow:45/5/50,technicaleta.03,H30/L.4,financeavailable butservice_admittedFalse",
+      "same_target_B:own45/5/50 annualrestoreuntil ownbreach thenabsorbingpending,referenceonly",
+      "exact_thirds_annual:exact1/3 annualrestoreincludingaftercrossing,referenceonly"
+    ],
+    "Q1_objects": "AllA–E ownH5/15/30/25/6,L.10/.25/.40/.15/.35 andliquidity. B/C/E staticannualproduct references; A/D120total ReviewfinanceNULL. Q1CBalanced doesnot authorizeQ2execution.",
+    "expected_output_rows": {
+      "Q2": 240,
+      "Q1": 300,
+      "summaries": 9,
+      "physical_groups": 6,
+      "financial_NULL_rows": 180
+    }
+  },
+  "information_accounting_and_metrics": "Actualyear t action seesonly actualhistory through t−1 plus frozen1–120fan; currenthold/restoreQg uses originalH and fullpastCPI/peak/MDD. Initial100bills,exact.25% once movedfee beforeannualreturn inclinitial,no terminalfee. Original strict1e-12 breach and absorbingpending preserved. Median/invertedP10P90/fractionalCVaR/annualordinaryvolatility and originalHtrade denominator are fixed.",
+  "three_predeclared_plans": {
+    "audit": {
+      "path": "docs/final_locked_evaluation_audit_plan.json",
+      "sha256": "0dd2da5f569480788004a2e8c1d7c928c4a07183ecac5c3b1caa8f0e90495b7e",
+      "scope": "All360physical accounts/8460annualperiods/8820endpoints,all240Q2/300Q1/9summaries/180NULLrows; independentaccount arithmetic and fixed9Qslots with explicitpending skips, not every adaptiveQ or forecastvalidation."
+    },
+    "reproduction": {
+      "path": "docs/final_evaluation_reproduction_plan.json",
+      "sha256": "b675b450adf5f9acadb22129293bd7e7f44b67754d009f66c7aa68b1ada39598",
+      "scope": "Same-source/input/runtime isolatedreplay after completefinal; nooriginalfinal outputcopied,CSV/JSON bytes andNPZ exactvalues,onlycompleted_utc manifestnormalization. Not anewmarket sample."
+    },
+    "analysis": {
+      "path": "docs/final_evaluation_analysis_plan.json",
+      "sha256": "d8129c47a81ecbaae6ddcd23d0df1f950b528f0b54c8aa77dc26f5578f962c1e",
+      "scope": "Bothsame_target_B andexact_thirds_annual compared againstunapprovedshadow onall60 exactlypaired originalIDs. Preservefive metricdifferences,mean/median/directioncounts,allneither/shadowonly/referenceonly/both eventIDlists andalladverse outcomes. No preferredcomparator or modelselection."
+    }
+  },
+  "limits_and_decisions_fixed": [
+    "MainC remainsReview/NULL evenifshadow orreferences performwell; nofuture reapproval,alpha/beta/eta/menu/fee/forecast/targetupdate ormetricadjustment.",
+    "Selected severeexample staysdevelopmentouter_r5_112; Q3 remainsolddevelopment knowncost evidence,not a newfinalfee search.",
+    "OldV1alreadyread121–180, explicitlydisclosed. This locked evaluation hasrestrictedindependence; neverfreshblind,conditionaltailcalibration,future10%riskcertificate orproof ofglobaloptimality.",
+    "Independent arithmetic audit andsame-source replay test implementation and reproducibility,not prospectivepredictive validity.",
+    "No paper,submissionZIP,CMTupload,newhumanresponse orwithdrawalassumptions included."
+  ],
+  "execution_boundary": {
+    "immutable_preparation_final_execution_ready": false,
+    "separate_actual_release_final_execution_ready": true,
+    "user_instruction_recorded_in_release": "好的，那就按照你的安排进入最终评估吧，保持已经确定的模型和规则不变，认真核验结果。",
+    "new_final_directory_exists_at_review": false,
+    "market_parser_called_by_review": false,
+    "raw_final_rows_read_by_review": false,
+    "old_source_protocol_model_modified": false,
+    "review_does_not_execute_evaluation": true,
+    "attempt_rule": "Allgatechecks before creatinguniquenew attempt; preserveincomplete/failedphases and noautomaticretry oroverwrite."
+  },
+  "preflight_calls": [
+    "preparation/validate_definition",
+    "authorize_final onactualrelease +exactdevmanifest/audit",
+    "freeze_snapshot all8source/20input currenthashes",
+    "verify_development_evidence source/input/output andindependent audit currentclosure",
+    "actualrelease source/input equality and3plans+2analysissources currentSHA"
+  ],
+  "conclusion": "No unresolved object,information-set,NULL,plan orlineageblock in the actual released specification. Rootmaycommitthisreviewand execute exactlythe unchanged adapter once; resultsmustbeindependentlyaudited and keptseparate byobjectrole. Thisjudgmentcontainsnofinalfinancialresult.",
+  "provenance_sha256": {
+    "docs/final_evaluation_release.json": "a43b82db36906c5fa19ffb43cef0bca69fb908dc52a083179fa290b85c40d6dc",
+    "docs/final_evaluation_protocol.json": "55d8b61ba4844b41b87c68b30b51e73caa3e8e3222a958e465df3d46d65a07c0",
+    "scripts/prepare_final_evaluation.py": "397baf63553e4c0a30276e2c993edeb2a6e693a1ed9fa3c548cb58b4f7f37a00",
+    "tests/test_prepare_final_evaluation.py": "0ca5a969b72e4b0e7aab1726ae13b27ea8f2c829705b188a782af53b43b3e16c",
+    "results/model_review/final_evaluation_development_gate_v1/manifest.json": "6c3e6e7bfea747ead2c4eded311a4909679663bacfc2ce793c797fe56afb6e36",
+    "results/model_review/final_evaluation_development_gate_v1/independent_audit.json": "25707be5e7b2fd6938af42bf189594d2b5cadeb6ec028b9cbe838ade7be7bf98",
+    "docs/final_locked_evaluation_audit_plan.json": "0dd2da5f569480788004a2e8c1d7c928c4a07183ecac5c3b1caa8f0e90495b7e",
+    "docs/final_evaluation_reproduction_plan.json": "b675b450adf5f9acadb22129293bd7e7f44b67754d009f66c7aa68b1ada39598",
+    "docs/final_evaluation_analysis_plan.json": "d8129c47a81ecbaae6ddcd23d0df1f950b528f0b54c8aa77dc26f5578f962c1e",
+    "scripts/analyze_locked_final_evaluation.py": "febd6251b98166435d7d254761ac5149c553f89cff4ab1beb55695c0aa2a8a1d",
+    "tests/test_analyze_locked_final_evaluation.py": "377a8768d23f1985bbadc696c22377e379df4101de365b2d5eef777cf2adf33d"
+  }
+}

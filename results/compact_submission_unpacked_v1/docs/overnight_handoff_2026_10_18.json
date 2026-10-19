@@ -1,0 +1,176 @@
+{
+  "version": "overnight-model-research-handoff-2026-10-18",
+  "written_utc": "2026-10-18T14:43:56.006803+00:00",
+  "status": "Complete bounded evening diagnosis and independent arithmetic audit; main model unchanged",
+  "session_intent": "Bounded final work session requested by the user; finish diagnosis and a concrete next-day handoff, without paper writing or further controller search.",
+  "evidence_sha256": {
+    "docs/main_model_registry.json": "2d73f73d47523c922329c59c78548f8bc67a8bb93d4e8d3eef67a5bd1d2e7074",
+    "docs/admission_failure_identity_review.json": "519918076f271c349eed438ed6140a32b2ae215384ee40dcee699e727db6f9c4",
+    "docs/fan_continuation_diagnostic_protocol.json": "622cefcdaeabc7bdbaf0c54e02ce629bebe861448677aaeeec52549a21786066",
+    "results/model_review/admission_failure_identities_v1/manifest.json": "16cf181ed89a68e4b2f8837ce930086d3da2597ab5f93992ede925f879948ec4",
+    "results/model_review/admission_failure_identities_v1/summary.json": "f0bdaaa8ae28cab549172fa28ee0edc43ac816239cf2fc611e20f2ccf8e1e461",
+    "results/model_review/fan_continuation_diagnostic_v1/manifest.json": "812804541aa08425099a526562576791365fef1a7af5092e0ca724de4f568698",
+    "results/model_review/fan_continuation_diagnostic_v1/summary.json": "5d845199d3a1f44977a49e9ee32f1f9f0c04e6cbfde1c26d947f6c1f7d89c6c3",
+    "results/model_review/fan_continuation_diagnostic_v1/independent_audit.json": "4c02a9c787e8048995a4f8b1178b0c2fed28553fec4e0e08d2a0b7a836e013a2",
+    "docs/fan_continuation_diagnostic_judgment.json": "d8116ee9c63c8eaf4c334720561998f866a6863240d5806686f015cf487a6507"
+  },
+  "tonight_findings": {
+    "identity_ledger": {
+      "rows": 720,
+      "full_vs_inner_rows": 120,
+      "outer_original_denominator_rows": 600,
+      "full_training_events": 9,
+      "inner_program_events": 10,
+      "same_inner_B_events": 8,
+      "full_to_inner_common_bad_IDs": [
+        5,
+        19,
+        29,
+        38,
+        63,
+        94,
+        95,
+        110
+      ],
+      "full_only_IDs": [
+        98
+      ],
+      "inner_only_IDs": [
+        35,
+        112
+      ],
+      "outer_model_only_occurrences": [
+        {
+          "repeat": 2,
+          "scenario": 52
+        },
+        {
+          "repeat": 4,
+          "scenario": 112
+        },
+        {
+          "repeat": 5,
+          "scenario": 112
+        }
+      ],
+      "outer_B_only_occurrences": [],
+      "inference": "Same original markets, but learned targets and fans change. An event ledger localizes differences without assigning causation. Repeated ID112 is not independent new risk evidence. No influential path is removed."
+    },
+    "fixed_state_diagnostic": {
+      "slots": 39,
+      "active": 35,
+      "pending_preserved_without_replacement": 4,
+      "original_market_IDs": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        9,
+        13
+      ],
+      "fan_member_and_deletion_records_each": 3432,
+      "OOF_active_states": 32,
+      "OOF_delete_one_records": 3072,
+      "OOF_delete_one_action_flips": 21,
+      "OOF_states_with_any_flip": 3,
+      "full_active_states": 3,
+      "full_self_deletions": 3,
+      "full_self_deletion_action_flips": 0,
+      "terminal_year_zero_controls": 11,
+      "continuation_event_changes_on_35_states": 0,
+      "growth_unit": "Net total remaining log real growth, not annualized growth",
+      "continuation_contrast": "Saved adaptive continuation minus same actual current action followed by B on identical realized suffix. This is not a Q^pi action contrast.",
+      "limits": [
+        "39slots arise from13fits and only8marketIDs, not independent trials.",
+        "Fixed-state deletion does not refit target, price or state and is not learner LOOCV.",
+        "These witnesses exclude35/52/98/112; they cannot explain the ledger failure causes.",
+        "Zero event differences in these witnesses do not exclude tail-risk effects elsewhere."
+      ]
+    }
+  },
+  "main_model_after_tonight": {
+    "changed": false,
+    "full_C": "execution_review",
+    "reason": "The retained same-U inner guard still has model10 vsB8, absolute cap12; model financial outputs remainNULL.",
+    "eta": "technical finite-controller index; not identified preference",
+    "alpha": ".1 normative service reference; not future risk guarantee"
+  },
+  "next_work_in_order": [
+    {
+      "priority": 1,
+      "task": "Locate first model/B divergence on the already identified failing market paths",
+      "identities": [
+        "Inner model-only35 and112 with their own original jobs/targets",
+        "Outer model-only52 and repeated112 with their own original jobs/targets",
+        "98 as full-to-inner disappearance control"
+      ],
+      "required_record": [
+        "Original year, action, inherited CPI/wealth/peak/runningMDD, target and fan identity",
+        "Paid current fee and subsequent pathwise exposure/wealth/drawdown differences",
+        "Difference between a first mechanical divergence and a demonstrated causal explanation"
+      ],
+      "stop_rule": "Do not drop IDs, retune gates or call a post-hoc diagnostic a blind test."
+    },
+    {
+      "priority": 2,
+      "task": "Close the inference table before proposing any further model change",
+      "required_record": [
+        "Training resubstitution vs selected-beta inner learner vs held-out learner performance are distinct estimands",
+        "Unconditional same-calendar fan and B continuation are declared approximations, not conditional forecasts or exact adaptive values",
+        "Fixed-state fragility, realised continuation gaps and complete-policy admission evidence receive separate claims"
+      ],
+      "stop_rule": "No new architecture or price search merely to obtain automatic admission; a new experiment requires a specific, justified question and its own frozen scope."
+    },
+    {
+      "priority": 3,
+      "task": "Reconcile the accepted model contract with the original Problem A deliverables",
+      "required_record": [
+        "Q1 allocations and client-specific H/L/liquidity conventions",
+        "Q2 net trading benefit, exact fee, currentReview, independent equal-thirds reference, target-updates-off decision and required quantiles",
+        "Q3 same-model cost/assumption evidence and safeguards",
+        "Only after model closure: one locked revised final evaluation with prior exposure disclosed; report/package preparation remains deferred now"
+      ],
+      "stop_rule": "Keep development121–180 closed tonight; do not impute human, B or bills outcomes as an automatically served C strategy."
+    }
+  ],
+  "preserved": [
+    "Existing frozen protocols/sources/results",
+    "Legacy src/report/output relative to7bca10b",
+    "No paper regeneration, CMT upload or new submission ZIP"
+  ],
+  "audit_status": "passed",
+  "independent_audit": {
+    "checks_passed": 245925,
+    "maximum_numeric_absolute_error": 4.547473508864641e-13,
+    "active_slots_checked": 35,
+    "pending_slots_checked": 4,
+    "branch_members_checked": 3432,
+    "deletions_checked": 3432,
+    "actual_B_periods_checked": 1106,
+    "adaptive_periods_checked": 553
+  },
+  "test_validation": {
+    "command": "PYTHONPATH=src:research .venv/bin/python -m unittest discover -s tests -v",
+    "passed": 747,
+    "seconds": 152.217,
+    "result": "OK",
+    "log_path": "results/model_review/research_checkpoint_v1/unit_tests.txt",
+    "log_sha256": "c6cff3175e51de8dab264e7ffd747df1037d33c3acd5ca07f947118c9ea7b19c"
+  },
+  "root_table_reconciliation": {
+    "status": "passed",
+    "original_full_inner_rows": 120,
+    "outer_original_rows": 600,
+    "outer_noncommon_model_and_difference_rows_all_NULL": 504,
+    "outer_auto_by_repeat": [
+      0,
+      24,
+      0,
+      24,
+      48
+    ],
+    "scope": "Separate direct source-table set pairing and ledger availability/NULL checks; no new raw-market numerical replay"
+  }
+}

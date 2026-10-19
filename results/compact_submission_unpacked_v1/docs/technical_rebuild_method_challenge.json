@@ -1,0 +1,121 @@
+{
+  "version": "technical-rebuild-independent-method-challenge-v1",
+  "status": "Pre-implementation mathematical challenge; no new market evaluation or recommendation validated",
+  "scope": {
+    "allowed_data_for_new_work": "Development IDs1..120 only; no new reading of121..180 or final arrays in this task.",
+    "files_changed": "Only this additive document; frozen source, protocols, results and prior evidence are not edited.",
+    "new_model_runs": 0,
+    "examples": "Closed-form constructed counterexamples, not observed dataset scenarios and not additional market samples.",
+    "prior_knowledge": "The entire old workflow and previously exposed final outcomes are already known. A new development-only implementation cannot erase that design exposure."
+  },
+  "direct_judgment": "A state-dependent safety filter is a useful engineering hypothesis, but its exact defensible claim is conditional support safety plus explicit feasibility, not a real-world drawdown guarantee. Define a directly executable complete policy first; then evaluate that same policy under costs, replanning and admission. Single-step floor checks, in-sample zero breaches and a cheaper policy do not establish recursive feasibility, forecast validity, growth benefit or useful service coverage.",
+  "notation_and_accounting": {
+    "state": "At the original annual decision clock t: x>=0 is the three nominal holdings, V=sum(x), c>0 the original cumulative CPI, R=V/c real wealth, P>=R the original real historical peak including initial100, M the original running annual MDD, and H the unchanged original horizon. Initial state is x=(0,0,100), c=1, P=100, M=0.",
+    "market": "z=(g_1,g_2,g_3,h), with strictly positive nominal asset gross returns g and inflation gross factor h. All four quantities are a joint annual tuple. Next real wealth is R'=dot(y,g)/(c*h), not a nominal-price proxy or a separately shuffled inflation draw.",
+    "restoration": "For long-only fully-invested target w, sum(w)=1, solve f=kappa*sum_i max((V-f)*w_i-x_i,0) once; y=(V-f)*w. kappa=.0025 is charged once on destination transfer, before that annual return. Initial allocation is charged; hold has y=x and f=0. There is no terminal fee or later external deposit/withdrawal.",
+    "fee_uniqueness": "Let B(f)=sum positive((V-f)w-x) and F(f)=f-kappa*B(f). B is continuous nonincreasing, so F is continuous strictly increasing. F(0)<=0 and F(kappa*V)>=0; hence there is exactly one solution in[0,kappa*V]. At that solution B(f)<=V-f, giving the sharper bound f<=kappa*V/(1+kappa). This supplies a unique physical execution for every fixed target, rather than a free fee parameter.",
+    "direct_holdings_optimization_warning": "The exact physical constraint is sum(y)+kappa*sum positive(y-x)=V. Introducing u>=y-x,u>=0 and sum(y)+kappa*sum(u)=V without forcing minimal u permits fictitious extra fee burning. A linear-program relaxation must be proved exact or projected through the unique physical execution and independently checked afterward. Simultaneous buy/sell variables also require a no-round-trip argument.",
+    "no_fee_double_count": "Q based on net future real wealth already contains every future executed transfer fee. Subtracting the same quoted fees again is accounting double counting unless an additional, explicitly labelled preference for operational burden is intended. The current action fee must not be omitted from Q and then only charged on the actual path.",
+    "clock_and_metrics": "Use original annual endpoints, original peak, original H and original running breach history. An annual-endpoint guarantee says nothing about unobserved intrayear losses. A restore label can have zero physical transfer; execution frequency and actual moved>1e-12 trade frequency are different."
+  },
+  "one_step_floor_lemma": {
+    "preconditions": "L in[0,1), M<=L at the current state, exact self-financing execution y, and all comparisons on the same real annual endpoint definition.",
+    "floor": "F=(1-L)*P.",
+    "condition": "For every declared joint tuple z in S_t, dot(y,g)/(c*h)>=(1-L)*P.",
+    "proof": "If R'<=P, then P'=P and currentDD'=1-R'/P<=L. If R'>P, then P'=R' and currentDD'=0. Therefore M'=max(M,currentDD')<=L. Conversely, any R'<(1-L)P gives currentDD'>L. Thus the condition is exactly the single-step annual drawdown condition for that state and declared support.",
+    "scope": "The lemma is deterministic and support-conditional. It does not prove a probability for missing support, existence of a feasible action, or survival after the next step.",
+    "numerical_boundary": "Mathematical inequalities and the existing numerical event rule M-L>1e-12 must be distinguished. An optimizer's nominal-dollar feasibility tolerance can translate into a larger drawdown error near the floor. Use a declared conservative execution margin and independently recompute the exact physical next states; do not silently relax the breach event or choose a margin after seeing failures.",
+    "already_breached": "Once M>L, no subsequent action can undo the whole-H maximum. A safety filter must enter its separately defined post-breach policy, retain the event and original peak/H, and report subsequent severity/costs. Resetting peak, history, horizon or the breach count would answer a different problem."
+  },
+  "necessary_counterexamples": [
+    {
+      "id": "C1_empirical_support_is_not_future_support",
+      "construction": "Suppose every tuple in the finite training support is benign and permits a restoration. The true next tuple may instead have all three real gross returns g_i/h=epsilon with0<epsilon<1-L. Starting from R=P, any nonnegative fully-invested post-fee holdings gives R'<=epsilon*R<(1-L)*P, regardless of target. All nominal gross factors can remain positive; a large common inflation shock alone can generate this construction.",
+      "implication": "The data domain rates>-1 does not impose a positive lower bound on future purchasing-power gross returns. No nonzero invested account can have an unconditional hard drawdown guarantee against that unrestricted domain. Zero breaches against finite past support do not rule out this event."
+    },
+    {
+      "id": "C2_all_bills_can_fail_without_any_trade",
+      "construction": "Take R=P=100,L=.20 and already hold only bills, so f=0. A next-year bill nominal gross1.01 and inflation gross1.30 give real wealth101/1.30<80. The annual drawdown exceeds20% despite no risky-asset exposure or transaction cost.",
+      "implication": "The bill proxy is not an inflation-linked risk-free real asset. All-bills feasibility requires a stated lower bound on its real gross return and sufficient current buffer."
+    },
+    {
+      "id": "C3_switching_to_bills_can_itself_consume_the_floor_buffer",
+      "construction": "Take current R=(1-L)P exactly, x_bill<V, and assume the next bill real gross is exactly1. A full switch has f=kappa*(V-x_bill)/(1+kappa)>0, so next real wealth R'=R-f/c<(1-L)P even under this otherwise stable bill outcome.",
+      "implication": "A fallback switch is not free insurance. General all-bills one-step feasibility is ((V-f)/c)*min_S(g_bill/h)>=(1-L)P. If that inequality fails, declaring cash safe cannot repair the state."
+    },
+    {
+      "id": "C4_one_step_feasible_does_not_mean_recursively_feasible",
+      "construction": "Two periods, R=P=100,L=.20, zero costs. All assets have identical real gross. Period1 is.90, so every allocation reaches90>=80 and passes the single-step floor. Period2 is.80, so every allocation reaches72<80. No portfolio choice, including bills, can avoid the second-period failure.",
+      "implication": "The first state's one-step feasible set is nonempty, while its two-period robust viability set is empty. Replanning cannot create unavailable real resources."
+    },
+    {
+      "id": "C5_future_actual_or_fan_identity_cannot_choose_the_future_action",
+      "construction": "At a future branch state there are two equally likely next real-return tuples: equity/bond gross(2,.5) or(.5,2), bills gross1, zero costs. A causal policy selecting one risky asset before the tuple has expected log growth(log2+log.5)/2=0. A clairvoyant branch-specific selector chooses the winning risky asset in each tuple and reports log2. That extra value comes entirely from future information.",
+      "implication": "A deterministic rollout must call the same executable policy at each branch state using only that branch's revealed past. The known coherent fan label or suffix is a simulation device, not information available to the controller."
+    },
+    {
+      "id": "C6_feasible_support_safety_can_make_risk_price_unidentifiable",
+      "construction": "If the recursive filter guarantees M_H<=L on every rollout member for every admitted candidate, then every candidate has empirical breach probability0 on those same rollouts. In an objective G-eta*p_bad, the risk term is identically0 for every eta.",
+      "implication": "This eliminates that risk-price comparison instead of estimating a unique risk preference. A continuous drawdown severity term, slack budget or separate coverage constraint would be a new explicit preference; it cannot be described as an identified version of the old binary-risk coefficient."
+    },
+    {
+      "id": "C7_zero_events_can_be_constructed_in_sample",
+      "construction": "Build each annual worst-support filter using all development paths, then evaluate the filtered policy on those same paths. Every evaluated annual tuple is in the set used to constrain its own decision. If recursive feasibility holds, zero observed events follows from the construction.",
+      "implication": "That result validates implementation on its construction set. It is not a forecast calibration result or an independent estimate of population breach probability. A zero-service Review policy creates another trivial zero-event figure if NULL financials are wrongly filled with zero."
+    }
+  ],
+  "recursive_feasibility_and_provable_bounds": {
+    "robust_viability_definition": "For a stated support process, K_H={s:M<=L}. Recursively, K_t={s:M<=L and there exists a physically feasible action a such that T(s,a,z) is in K_(t+1) for every z in S_t(s)}. A hard-support controller requires the initial state in K_0 and each executed action in that recursive feasible set, not only in the single-step floor set.",
+    "conditional_invariance_theorem": "If s_0 in K_0, actual z_t belongs to the same declared S_t(s_t) at every step, execution is exact, and the chosen action maps every supported outcome into K_(t+1), induction yields M_H<=L. The theorem remains conditional on all these premises; an implementation cannot claim it merely by naming the filter robust.",
+    "backup_policy_sufficient_condition": "A directly verified causal backup policy with an invariant feasible set can replace an intractable full viability computation as a sufficient certificate. For example, if bills are already held and every supported future bill real gross is>=1, then holding bills preserves nondecreasing real wealth and cannot create a new drawdown. A switch into that set still requires the current fee-adjusted floor test. The problem does not automatically grant the real-return premise.",
+    "support_monotonicity": "Holding physical actions, state, clock and terminal condition fixed, enlarging support S to S' containing S weakly shrinks both the single-step feasible action set and the full robust viability kernel. This follows directly by backward induction because more outcomes must satisfy the same constraints. It does not imply monotone realized out-of-support MDD, profitable growth, or service coverage after other rules are refitted.",
+    "probability_bound_if_support_is_calibrated": "Let E_t be the event that the actual tuple misses the declared support. Under initial viability and guaranteed recursive execution on support, the breach event is contained in union_t E_t. Consequently P(breach)<=sum_t P(E_t), without an independence assumption. If one can additionally prove history-uniform conditional miss bounds delta_t, then survival is at least product_t(1-delta_t), giving P(breach)<=1-product_t(1-delta_t). No such miss probabilities follow merely from empirical support containing all training observations.",
+    "feasibility_failure_extension": "If recursive feasibility is not certified and F_t denotes no feasible action at time t, the corresponding containment must include union_t F_t, plus any preexisting breach or execution-error event. Review or pending does not make F_t probability vanish. The physical fallback can still lose money and must remain in full-H evaluation.",
+    "annual_vs_intrayear": "All bounds above concern the original annual endpoint MDD. Annual data cannot establish an intrayear drawdown, liquidity-at-any-time or emergency-withdrawal guarantee."
+  },
+  "forecast_support_and_information_contract": {
+    "joint_tuple": "Keep the contemporaneous asset/inflation tuple together. Separate marginal minima create a different, usually more conservative support; shuffled returns/inflation or years create a different joint forecast. Both changes need explicit labels.",
+    "path_vs_rectangular_support": "A coherent120-path suffix distribution and a rectangular product of annual support sets are different uncertainty models. A per-year filter against every annual tuple can provide a rectangular-support condition, stronger than testing only120 coherent full paths. A rollout over only120 coherent paths does not by itself verify every path in the rectangular product.",
+    "conditioning": "If support or fan weights depend on state/history, define the conditioning rule using only actual information available before the decision and training data. Deterministically treating a simulated fan's future identity as known is prohibited. Exact matching to a continuous historical prefix will generally not supply a nonempty conditional fan without an additional model.",
+    "fold_reconstruction": "Every out-of-fold training split must rebuild targets, support bounds, state rules, value approximations, policy parameters and admission thresholds from that split alone. An outer path must not remain in the support/fan used for its own evaluation. Each fit keeps its own original target, H/L and price convention; do not transfer a full-fit target or filter merely to make paired paths look comparable.",
+    "no_claim_of_truth_from_stress": "Predeclared enlarged support and adverse synthetic shocks can reveal fragility and empty feasible regions. They are explicit assumptions or stress tests; they are not evidence that the true unknown future has that bounded support."
+  },
+  "policy_consistent_rollout_contract": {
+    "recommended_order": "First specify a total deterministic executable policy pi_theta: observable state/history and frozen training objects -> proposal -> physical execution/safety filter -> declared tie rule/fallback. Then simulate that identical full policy on each training/validation branch, including all subsequent filters, forced trades, pending/review behavior and costs. A complete policy must return a physical action for every reachable started-account state, including infeasible and already-breached states.",
+    "exact_value_definition": "Q_t^(pi_theta)(s,a) is the mean net terminal real log outcome obtained by executing current a and thereafter calling the same pi_theta on each branch's revealed successive states, with the same frozen training information and original H. Full-path breach includes inherited peak/running MDD. It is not enough to change the name of the old annual-B continuation.",
+    "self_reference_challenge": "If pi_theta itself chooses argmax_a Q_t^(pi_theta)(s,a), each future policy call requires a new fan expansion. The finite horizon makes backward recursion well founded, but with120 branches at each adaptive state and continuous holdings it can grow exponentially and have little exact state reuse. A simple120-path rollout with future actions chosen from the known member suffix is not an equivalent shortcut.",
+    "computable_alternatives": [
+      "Use an explicit state-dependent proposal/filter policy with no recursive Q definition, and select its complete parameter tuple using proper whole-policy evaluations.",
+      "Use a separately fitted/frozen approximate value function or finite-depth planning boundary, then evaluate the actual resulting policy end to end. State exactly which Q/value is approximate and audit its causal inputs.",
+      "Use rollout improvement over an explicit baseline policy, but label the Q as baseline-continuation Q. Repeating the improved action at future actual dates means the deployed policy differs from that Q's continuation; do not claim exact self-consistency or a global optimality proof."
+    ],
+    "objective_units": "For the original full-H objective G=log(R_H/100)/H-eta*p_bad, past log growth cancels between current alternatives. An equivalent current comparison is delta(mean remaining terminal log wealth)-H*eta*delta(p_bad), using original H, not remaining years. Using remaining-horizon annualization creates a different time-dependent preference and must be intentional. All growth must be net of the same exact current/future fees.",
+    "time_consistency": "A static whole-path chance constraint and a new one-step or rolling chance budget are not automatically equivalent. If using a dynamic remaining risk budget, put it in the state, declare its update, and prove how local allocations bound the original whole-H event. Re-solving an unchanged10% remaining-horizon problem each year can spend that allowance repeatedly.",
+    "tie_and_infeasibility": "Freeze ties, numerical tolerances, proposal priority and fallback before evaluation. Specify whether the filter can change the target or trade into a backup asset; those are economic actions and their transfer fees/liquidity effects belong in the policy."
+  },
+  "risk_coverage_cost_selection_challenge": {
+    "complete_object": "A candidate is the entire fitted policy plus support construction, product assignment, original H/L, forecast/value approximation, filter, admission and post-breach/infeasible handling. Evaluate the final refitted candidate's own behavior; a selected parameter evaluated under another continuation is not the deployed policy.",
+    "admission_vs_started_account": "Preinvestment Review creates no account and therefore no financial path; preserve NULL and original cohort counts. Once an account has started, a review trigger is a governance label, not a liquidation or removal from the denominator. Define its physical continuation and keep every subsequent original-H return/fee/risk state.",
+    "denominators": "Report originalN, preinvestment acceptedN, ReviewN, financialN, started-account infeasibility episodes, filter-intervention frequency, actual physical trade fraction and full-H event counts. Conditional risk among admitted clients uses admitted financialN, while coverage uses originalN. Do not report0/originalN events after replacing unserved financials with zero.",
+    "avoid_trivial_winner": "A risk-only selector can choose Review for everyone, or a conservative policy with poor growth. A growth-only selector can choose high risk or low coverage with favorable survivors. Predeclare a defensible constrained/lexicographic/Pareto decision rule covering risk, meaningful service coverage, growth and costs; retain the whole frontier rather than choosing weights after seeing the preferred winner.",
+    "risk_threshold_basis": "The original client L is a loss limit, not a supplied probability tolerance. Any10% breach ceiling or risk price remains an explicit design preference unless additional problem information or client elicitation justifies it. A cleaner algorithm cannot by itself supply that preference.",
+    "evaluate_incremental_value": "Compare the complete filtered policy with its identical proposal policy without the filter, plus simple feasible state-aware alternatives, on the same original market IDs and own H/L. Differences in realized growth, risk, coverage, costs and forced-trade counts describe that full policy change; lower transfer fees alone are not an explanation of all return differences.",
+    "search_and_uncertainty": "Policy/support/admission selection and uncertainty estimation cannot use the same adaptive results as if the policy were fixed in advance. Fixed-policy binomial intervals require independent scenario events under their assumptions; they are not selection-corrected certificates for a policy selected from many reused candidates. The120 annual30-year scenarios are not3600 independent full-horizon outcomes.",
+    "selection_stability": "Check complete-pipeline refit stability and out-of-fold operation, not only which parameter wins one full fit. Distinct parameters with the same action paths or robust-zero-risk Q values are observationally equivalent on those paths; report that equivalence rather than presenting a uniquely identified coefficient."
+  },
+  "minimum_pre_execution_gates": [
+    "Write the executable policy state, allowable information, complete action/fallback map and original-H metric/event conventions before new market evaluation.",
+    "Choose and label finite support/coherent fan/rectangular assumptions; prove the exact single-step condition and either a recursive feasibility certificate or explicitly disclose and count its absence.",
+    "Include the seven constructed counterexamples above in pure synthetic implementation checks, especially inflation-only loss, fee-buffer failure, one-step dead end and forbidden future-label lookahead.",
+    "Freeze the complete candidate inventory, development-only splits, selection rule, all original denominators and expected export NULL semantics before scores are computed.",
+    "For each fold, fit every learned component only on its training IDs; perform final full120 refit and separately verify that its own policy/admission still satisfies the declared development rule.",
+    "Independently replay exact fee/holding/CPI/peak/MDD/actions and predeclared policy-consistent branch witnesses. A safety constraint passing against its own input support is an implementation check, not an independent risk study.",
+    "Do not read121..180 in this rebuild phase. Preserve old final evidence and explicitly label all new development/CV evidence as adaptively reused exploratory engineering evidence. Do not announce a new blind final test on the same old60IDs.",
+    "If the feasible region is empty or service coverage/growth is poor, retain that result. Do not silently widen L, discard expensive cases, relabel Review as cash, reset losses, or change support after failures to obtain an apparent guarantee."
+  ],
+  "limits_of_this_challenge": [
+    "The closed-form arguments identify necessary safeguards and conditional theorems; they do not establish which concrete policy will improve the dataset results.",
+    "No new return values, policy parameters, support bounds, performance estimates or admission decisions are produced here.",
+    "No paper, report layout, submission archive or external message is produced."
+  ]
+}

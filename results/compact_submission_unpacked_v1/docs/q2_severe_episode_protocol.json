@@ -1,0 +1,28 @@
+{
+  "version": "2026-10-17-q2-severe-episode-v1",
+  "status": "Declared before selecting the episode; descriptive Q2 execution example only",
+  "selection": {
+    "source": "results/model_review/risk_menu_v1/validation_oof_paths.csv",
+    "case": "alpha_10__risk_only",
+    "client": "C",
+    "rule": "Among the original assigned OOF client-C annual-policy rows, sort by descending saved annual MDD and then ascending scenario ID. Select the first row, without searching for a favorable alternative-policy example.",
+    "scope": "One complete development scenario in its original 24-path evaluation fold; do not mix in full-development targets or fit any new target."
+  },
+  "comparisons": [
+    "annual_restore with that fold's original assigned target",
+    "initial_then_hold with exactly the same target",
+    "finite_horizon_gate at mesh .05, separately simulated for H=30, with exactly the same target",
+    "Exact-thirds annual reference if its saved complete execution artifact exists; label its different target as a reference, not a pure execution ablation"
+  ],
+  "artifact_scope": "Read only saved original OOF rows, recorded fold menus and completed fixed-execution/finite-horizon artifacts. Do not load market CSV, final paths121–180, refit models or add a nested-target example.",
+  "metrics": "Actual saved net real wealth at years0..30, annual-endpoint drawdown/MDD, annual end weights, TV drift from each policy's own fixed target, actual transferred nominal amount, actual nominal fee, trade flag and labeled return years.",
+  "timing": "Fee/transfer for return year t is paid at that year's start, before its annual return; the initial trade is before return year1. Annual wealth at t is the saved year-end point. No fee checkpoints or unknown intrayear price observations are inserted.",
+  "episode": {
+    "trough": "First annual index attaining the annual policy's maximum drawdown",
+    "peak": "First annual index attaining the highest saved annual wealth through that trough",
+    "recovery": "First year after the trough at which annual real wealth returns to that preceding peak, using only a 1e-10 wealth-unit numerical equality guard; otherwise unrecovered by year30",
+    "other_policies": "Record their full-path MDD and their drawdown/wealth at the same annual peak/trough dates, separately from their own worst episode."
+  },
+  "outputs": ["Selected-source and metrics JSON", "Year-by-year CSV including actual fees, transfers, weights and drawdown", "One readable research PNG/SVG with consistent policy colors and explicit episode-selection bias", "Source/input/output SHA and exact reconciliation checks"],
+  "limitations": "Selection deliberately emphasizes the original annual policy's most severe OOF path. This example cannot rank overall strategy quality, establish causal market drivers, certify risk or represent a typical investor. No model or winner is selected."
+}

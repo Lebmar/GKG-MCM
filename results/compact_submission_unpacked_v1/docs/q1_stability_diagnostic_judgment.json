@@ -1,0 +1,1140 @@
+{
+  "version": "q1-stability-diagnostic-saved-evidence-judgment-v1",
+  "completed_utc": "2026-10-19T06:54:16.123368+00:00",
+  "status": "Postdiagnostic interpretation; no new weights, gamma, menu, admission rule or policy selected.",
+  "evidence_sha256": {
+    "docs/q1_stability_diagnostic_protocol.json": "55daacaf420d8c7cda681e0881e868a80da8f3bb297fedb0db727760f6d5c746",
+    "docs/q1_stability_diagnostic_source_freeze.json": "42243f2cad209833287fd8c4c43aeffd04f81a014c6fac22fc85500909399ffc",
+    "docs/q1_stability_diagnostic_audit_plan.json": "f532cb8fa0883fe3c9eba994d1a6fc55428d6aecaa246f54238b55da3156c47a",
+    "docs/q1_stability_diagnostic_audit_source_freeze.json": "d61846bddf6450df68e269888d14c23affa9f2c30ef3f756045f0b81e4ee1be7",
+    "scripts/diagnose_q1_stability.py": "6336f706d874b02af6bfb64eeb56461c1f022b67345b6cd6af775c16713108c8",
+    "research/diagnostics/q1_stability.py": "69bd3fc094293944b2b4f153ffb910554196d731426a745aab77ddfc0e15df2f",
+    "scripts/audit_q1_stability_diagnostic.py": "fb7a8af9ef328a8f2d9baa424d620e0d0823f3e879332b9ef8c618cee08136a2",
+    "results/q1_stability_diagnostic_v1/manifest.json": "b15c08f03c2dde008bb0d4eb01673b0a6e017fa122873f4b0655fdc7d1b74959",
+    "results/q1_stability_diagnostic_v1/independent_cache_audit.json": "f3cd42571fdf26eec691c5b37460f0b71939bfc84209e490a9b7b563a816e434"
+  },
+  "producer_outputs_sha256": {
+    "fit_profile_metadata.csv.gz": "6b24f809249adac9f69b1eb3f0cac5c328e4f145c4fe5dd3dcbdbec5a77bacc4",
+    "own_horizon_oof_paths.csv.gz": "6c82eb99c289de6215d3294d2ffc3f3909e86a9c77da9fd62b6d8f30814cd6aa",
+    "near_optimal_members.csv.gz": "750b276a245814b76209c5b256d357969c128a6f7e1eca462e84efa5a151e046",
+    "fit_gamma_bands.json": "11d60b02301b1dd21681c7a2f918acaff1b3a76e7be37f44bdda8baa196d7a9d",
+    "exact_thirds_references.csv.gz": "217d1902129cbbd2b1dbd3eef80705aa6e87497873bbc88d096e41c3b078f6cf",
+    "own_horizon_summary.json": "31a2b43a456483d7c3f775693bb9c67a40278cfe998f47e8b7a04ae03fbed5b9",
+    "individual_feasible_sets.json": "35c9b3e1f0e7abf749a72b419761dadcc74918ae814ca262f75291f8d7cba3e7"
+  },
+  "scope": {
+    "cache_only": true,
+    "development_ids": "1-120 only; 30 own-training fits and five outer validation folds",
+    "new_menu_fits": 0,
+    "new_policy_runs": 0,
+    "final_read": false,
+    "old_model_modified": false,
+    "near_optimal_epsilon_annual_log_growth": 0.001,
+    "epsilon_meaning": "An explicitly declared0.1 percentage-point annual log-growth tolerance; not exact CAGR percentage points or inferred preference.",
+    "grid": "The current172-point all-three-positive subset of the saved .05 grid plus exact thirds. The .05 minimum is a search convention, not a requirement in the problem or an identified psychological preference."
+  },
+  "audit": {
+    "status": "passed",
+    "checks": 87744,
+    "maximum_absolute_numeric_error": 1.1102230246251565e-16,
+    "meaning": "Independent scalar postprocessing implementation checked all saved-cache candidate counts, means, CVaR, near sets, OOF rows and summaries.",
+    "limits": "Same upstream static cache; not raw-market resimulation, transaction-kernel audit, proof of joint-menu global optimality, prediction validation or a future-risk guarantee. The audit plan followed visibility of diagnostic outcomes; it is not a blind validation or external human review."
+  },
+  "gamma_conclusion": {
+    "fit_count": 30,
+    "singleton_objective_band_fit_count": 30,
+    "selected_gamma_fit_counts": {
+      "0.1": 2,
+      "0.075": 15,
+      "0.05": 12,
+      "0.025": 1
+    },
+    "full_and_five_outer_refit_gamma": [
+      0.075,
+      0.075,
+      0.075,
+      0.075,
+      0.075,
+      0.075
+    ],
+    "judgment": "All30 recorded objective bands contain one gamma. Therefore current evidence does not support multiple tied gamma optima within any fit. Gamma varies across training fits, while all six refits use .075. This is sensitivity of a finite criterion-selected threshold, not estimation of a client psychological preference. A singleton grid optimum also does not prove continuous or population uniqueness."
+  },
+  "weight_identification": {
+    "full120_individual_sets": [
+      {
+        "profile": "A",
+        "horizon": 5,
+        "screen": "selected_gamma",
+        "gamma": 0.075,
+        "status": "empty_feasible_set",
+        "feasible_n": 0,
+        "near_optimal_n": 0,
+        "near_optimal_indices": [],
+        "best_mean_log_growth": null,
+        "weight_min": null,
+        "weight_max": null,
+        "total_variation_diameter": null,
+        "raw_menu_feasible": null,
+        "raw_menu_regret_if_feasible": null
+      },
+      {
+        "profile": "A",
+        "horizon": 5,
+        "screen": "service_alpha_reference",
+        "gamma": 0.1,
+        "status": "empty_feasible_set",
+        "feasible_n": 0,
+        "near_optimal_n": 0,
+        "near_optimal_indices": [],
+        "best_mean_log_growth": null,
+        "weight_min": null,
+        "weight_max": null,
+        "total_variation_diameter": null,
+        "raw_menu_feasible": null,
+        "raw_menu_regret_if_feasible": null
+      },
+      {
+        "profile": "B",
+        "horizon": 15,
+        "screen": "selected_gamma",
+        "gamma": 0.075,
+        "status": "available",
+        "feasible_n": 52,
+        "near_optimal_n": 5,
+        "near_optimal_indices": [
+          67,
+          68,
+          69,
+          70,
+          71
+        ],
+        "best_mean_log_growth": 0.028598869192324967,
+        "weight_min": [
+          0.25,
+          0.1,
+          0.45
+        ],
+        "weight_max": [
+          0.25,
+          0.3,
+          0.65
+        ],
+        "total_variation_diameter": 0.2,
+        "raw_menu_feasible": true,
+        "raw_menu_regret_if_feasible": 0.0
+      },
+      {
+        "profile": "B",
+        "horizon": 15,
+        "screen": "service_alpha_reference",
+        "gamma": 0.1,
+        "status": "available",
+        "feasible_n": 60,
+        "near_optimal_n": 4,
+        "near_optimal_indices": [
+          80,
+          81,
+          82,
+          83
+        ],
+        "best_mean_log_growth": 0.031145073264587087,
+        "weight_min": [
+          0.3,
+          0.05,
+          0.5
+        ],
+        "weight_max": [
+          0.3,
+          0.2,
+          0.65
+        ],
+        "total_variation_diameter": 0.15000000000000002,
+        "raw_menu_feasible": true,
+        "raw_menu_regret_if_feasible": 0.0025462040722621197
+      },
+      {
+        "profile": "C",
+        "horizon": 30,
+        "screen": "selected_gamma",
+        "gamma": 0.075,
+        "status": "available",
+        "feasible_n": 93,
+        "near_optimal_n": 1,
+        "near_optimal_indices": [
+          117
+        ],
+        "best_mean_log_growth": 0.03962368302930973,
+        "weight_min": [
+          0.45,
+          0.05,
+          0.5
+        ],
+        "weight_max": [
+          0.45,
+          0.05,
+          0.5
+        ],
+        "total_variation_diameter": 0.0,
+        "raw_menu_feasible": true,
+        "raw_menu_regret_if_feasible": 0.0
+      },
+      {
+        "profile": "C",
+        "horizon": 30,
+        "screen": "service_alpha_reference",
+        "gamma": 0.1,
+        "status": "available",
+        "feasible_n": 109,
+        "near_optimal_n": 3,
+        "near_optimal_indices": [
+          117,
+          118,
+          119
+        ],
+        "best_mean_log_growth": 0.040235838121002766,
+        "weight_min": [
+          0.45,
+          0.05,
+          0.4
+        ],
+        "weight_max": [
+          0.45,
+          0.15,
+          0.5
+        ],
+        "total_variation_diameter": 0.09999999999999998,
+        "raw_menu_feasible": true,
+        "raw_menu_regret_if_feasible": 0.0006121550916930382
+      },
+      {
+        "profile": "D",
+        "horizon": 25,
+        "screen": "selected_gamma",
+        "gamma": 0.075,
+        "status": "empty_feasible_set",
+        "feasible_n": 0,
+        "near_optimal_n": 0,
+        "near_optimal_indices": [],
+        "best_mean_log_growth": null,
+        "weight_min": null,
+        "weight_max": null,
+        "total_variation_diameter": null,
+        "raw_menu_feasible": null,
+        "raw_menu_regret_if_feasible": null
+      },
+      {
+        "profile": "D",
+        "horizon": 25,
+        "screen": "service_alpha_reference",
+        "gamma": 0.1,
+        "status": "empty_feasible_set",
+        "feasible_n": 0,
+        "near_optimal_n": 0,
+        "near_optimal_indices": [],
+        "best_mean_log_growth": null,
+        "weight_min": null,
+        "weight_max": null,
+        "total_variation_diameter": null,
+        "raw_menu_feasible": null,
+        "raw_menu_regret_if_feasible": null
+      },
+      {
+        "profile": "E",
+        "horizon": 6,
+        "screen": "selected_gamma",
+        "gamma": 0.075,
+        "status": "available",
+        "feasible_n": 92,
+        "near_optimal_n": 1,
+        "near_optimal_indices": [
+          151
+        ],
+        "best_mean_log_growth": 0.043965423569071495,
+        "weight_min": [
+          0.65,
+          0.05,
+          0.3
+        ],
+        "weight_max": [
+          0.65,
+          0.05,
+          0.3
+        ],
+        "total_variation_diameter": 0.0,
+        "raw_menu_feasible": true,
+        "raw_menu_regret_if_feasible": 0.0
+      },
+      {
+        "profile": "E",
+        "horizon": 6,
+        "screen": "service_alpha_reference",
+        "gamma": 0.1,
+        "status": "available",
+        "feasible_n": 92,
+        "near_optimal_n": 1,
+        "near_optimal_indices": [
+          151
+        ],
+        "best_mean_log_growth": 0.043965423569071495,
+        "weight_min": [
+          0.65,
+          0.05,
+          0.3
+        ],
+        "weight_max": [
+          0.65,
+          0.05,
+          0.3
+        ],
+        "total_variation_diameter": 0.0,
+        "raw_menu_feasible": true,
+        "raw_menu_regret_if_feasible": 0.0
+      }
+    ],
+    "across_fit_profile_stability": [
+      {
+        "profile": "B",
+        "label": "Conservative",
+        "distinct_menu_weight_vectors": 8,
+        "weight_vectors_and_fit_counts": [
+          {
+            "weights": [
+              0.2,
+              0.1,
+              0.7
+            ],
+            "fit_count": 2
+          },
+          {
+            "weights": [
+              0.2,
+              0.3,
+              0.5
+            ],
+            "fit_count": 2
+          },
+          {
+            "weights": [
+              0.25,
+              0.05,
+              0.7
+            ],
+            "fit_count": 1
+          },
+          {
+            "weights": [
+              0.25,
+              0.15,
+              0.6
+            ],
+            "fit_count": 6
+          },
+          {
+            "weights": [
+              0.25,
+              0.25,
+              0.5
+            ],
+            "fit_count": 7
+          },
+          {
+            "weights": [
+              0.25,
+              0.3,
+              0.45
+            ],
+            "fit_count": 10
+          },
+          {
+            "weights": [
+              0.3,
+              0.15,
+              0.55
+            ],
+            "fit_count": 1
+          },
+          {
+            "weights": [
+              0.35,
+              0.15,
+              0.5
+            ],
+            "fit_count": 1
+          }
+        ],
+        "near_optimal_n_min": 1,
+        "near_optimal_n_max": 6,
+        "maximum_near_set_total_variation_diameter": 0.24999999999999997
+      },
+      {
+        "profile": "C",
+        "label": "Balanced",
+        "distinct_menu_weight_vectors": 9,
+        "weight_vectors_and_fit_counts": [
+          {
+            "weights": [
+              0.35,
+              0.2,
+              0.45
+            ],
+            "fit_count": 1
+          },
+          {
+            "weights": [
+              0.35,
+              0.3,
+              0.35
+            ],
+            "fit_count": 1
+          },
+          {
+            "weights": [
+              0.4,
+              0.1,
+              0.5
+            ],
+            "fit_count": 6
+          },
+          {
+            "weights": [
+              0.4,
+              0.2,
+              0.4
+            ],
+            "fit_count": 4
+          },
+          {
+            "weights": [
+              0.4,
+              0.25,
+              0.35
+            ],
+            "fit_count": 6
+          },
+          {
+            "weights": [
+              0.4,
+              0.3,
+              0.3
+            ],
+            "fit_count": 1
+          },
+          {
+            "weights": [
+              0.45,
+              0.05,
+              0.5
+            ],
+            "fit_count": 2
+          },
+          {
+            "weights": [
+              0.45,
+              0.15,
+              0.4
+            ],
+            "fit_count": 8
+          },
+          {
+            "weights": [
+              0.5,
+              0.05,
+              0.45
+            ],
+            "fit_count": 1
+          }
+        ],
+        "near_optimal_n_min": 1,
+        "near_optimal_n_max": 4,
+        "maximum_near_set_total_variation_diameter": 0.4
+      },
+      {
+        "profile": "E",
+        "label": "Growth",
+        "distinct_menu_weight_vectors": 5,
+        "weight_vectors_and_fit_counts": [
+          {
+            "weights": [
+              0.45,
+              0.25,
+              0.3
+            ],
+            "fit_count": 3
+          },
+          {
+            "weights": [
+              0.55,
+              0.15,
+              0.3
+            ],
+            "fit_count": 1
+          },
+          {
+            "weights": [
+              0.6,
+              0.05,
+              0.35
+            ],
+            "fit_count": 1
+          },
+          {
+            "weights": [
+              0.6,
+              0.1,
+              0.3
+            ],
+            "fit_count": 3
+          },
+          {
+            "weights": [
+              0.65,
+              0.05,
+              0.3
+            ],
+            "fit_count": 22
+          }
+        ],
+        "near_optimal_n_min": 1,
+        "near_optimal_n_max": 5,
+        "maximum_near_set_total_variation_diameter": 0.2
+      }
+    ],
+    "judgment": "Some allocations are weakly distinguished at the declared tolerance, especially full Conservative with five near-optimal points. Full Balanced/Growth each have one near point in the selected screen, which establishes only a local finite-grid diagnostic fact, not a globally unique continuous allocation. Componentwise min/max are projections of a coupled set satisfying sum-to-one; their Cartesian box is not a set of interchangeable portfolios."
+  },
+  "menu_cost_conclusion": {
+    "served_selected_screen_profile_fits": 90,
+    "zero_raw_menu_individual_growth_regret_fits": 90,
+    "empty_feasible_fit_counts_out_of30": {
+      "selected_gamma": {
+        "A": 30,
+        "B": 0,
+        "C": 0,
+        "D": 30,
+        "E": 0
+      },
+      "service_alpha_reference": {
+        "A": 29,
+        "B": 0,
+        "C": 0,
+        "D": 30,
+        "E": 0
+      }
+    },
+    "judgment": "For all90 B/C/E selected-gamma cases, the current raw menu includes a feasible individual best and incurs zero measured training growth regret. This diagnostic supplies no evidence that sharing three menu slots caused their individual growth loss. Gaps against the wider alpha=.1 screen change the risk constraint and must not be described as the isolated price of a common menu. A/D emptiness in the current candidate family, not shared menu capacity, drives their Review labels."
+  },
+  "own_horizon_oof": [
+    {
+      "profile": "A",
+      "horizon": 5,
+      "L": 0.1,
+      "model": {
+        "original_n": 120,
+        "financial_n": 0,
+        "review_n": 120,
+        "coverage": 0.0,
+        "breach_count": null,
+        "breach_fraction": null,
+        "mean_log_growth": null,
+        "median_cagr": null,
+        "p10_cagr": null,
+        "median_mdd": null,
+        "p90_mdd": null,
+        "cvar90_mdd": null,
+        "mean_volatility": null,
+        "mean_nominal_fees": null,
+        "mean_trade_fraction": null
+      },
+      "exact_thirds_same_original_ids": {
+        "original_n": 120,
+        "financial_n": 120,
+        "review_n": 0,
+        "coverage": 1.0,
+        "breach_count": 44,
+        "breach_fraction": 0.36666666666666664,
+        "mean_log_growth": 0.03224643532548377,
+        "median_cagr": 0.03683326802833208,
+        "p10_cagr": -0.02055066227794194,
+        "median_mdd": 0.07304943139289684,
+        "p90_mdd": 0.19259774276471142,
+        "cvar90_mdd": 0.2431807807277333,
+        "mean_volatility": 0.07428430282423623,
+        "mean_nominal_fees": 0.20731352778754314,
+        "mean_trade_fraction": 1.0
+      },
+      "paired_mean_annual_log_growth_difference": null,
+      "event_id_partition": {
+        "neither": [],
+        "model_only": [],
+        "reference_only": [],
+        "both": []
+      }
+    },
+    {
+      "profile": "B",
+      "horizon": 15,
+      "L": 0.25,
+      "model": {
+        "original_n": 120,
+        "financial_n": 120,
+        "review_n": 0,
+        "coverage": 1.0,
+        "breach_count": 9,
+        "breach_fraction": 0.075,
+        "mean_log_growth": 0.028567984705394695,
+        "median_cagr": 0.030640962930109282,
+        "p10_cagr": 0.0012365189335786064,
+        "median_mdd": 0.13240729388569097,
+        "p90_mdd": 0.24223826434514883,
+        "cvar90_mdd": 0.28288574275602274,
+        "mean_volatility": 0.06725734265799095,
+        "mean_nominal_fees": 0.3152799720822383,
+        "mean_trade_fraction": 1.0
+      },
+      "exact_thirds_same_original_ids": {
+        "original_n": 120,
+        "financial_n": 120,
+        "review_n": 0,
+        "coverage": 1.0,
+        "breach_count": 20,
+        "breach_fraction": 0.16666666666666666,
+        "mean_log_growth": 0.03363723358992318,
+        "median_cagr": 0.03606213147793497,
+        "p10_cagr": 0.000509421340319986,
+        "median_mdd": 0.1518906401090168,
+        "p90_mdd": 0.27633494798553687,
+        "cvar90_mdd": 0.32820855442053404,
+        "mean_volatility": 0.07945192932167951,
+        "mean_nominal_fees": 0.3814361227162221,
+        "mean_trade_fraction": 1.0
+      },
+      "paired_mean_annual_log_growth_difference": -0.005069248884528478,
+      "event_id_partition": {
+        "neither": [
+          2,
+          3,
+          4,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          21,
+          23,
+          24,
+          25,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          35,
+          37,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          61,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          81,
+          82,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          106,
+          107,
+          108,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120
+        ],
+        "model_only": [],
+        "reference_only": [
+          1,
+          19,
+          20,
+          34,
+          39,
+          53,
+          60,
+          62,
+          80,
+          95,
+          105
+        ],
+        "both": [
+          5,
+          22,
+          26,
+          36,
+          38,
+          71,
+          83,
+          94,
+          109
+        ]
+      }
+    },
+    {
+      "profile": "C",
+      "horizon": 30,
+      "L": 0.4,
+      "model": {
+        "original_n": 120,
+        "financial_n": 120,
+        "review_n": 0,
+        "coverage": 1.0,
+        "breach_count": 9,
+        "breach_fraction": 0.075,
+        "mean_log_growth": 0.03888863840548098,
+        "median_cagr": 0.03996831424099234,
+        "p10_cagr": 0.01389123813589441,
+        "median_mdd": 0.2251792183482505,
+        "p90_mdd": 0.38196625368209913,
+        "cvar90_mdd": 0.4382039218006579,
+        "mean_volatility": 0.08928807072470553,
+        "mean_nominal_fees": 1.0917790292420717,
+        "mean_trade_fraction": 1.0
+      },
+      "exact_thirds_same_original_ids": {
+        "original_n": 120,
+        "financial_n": 120,
+        "review_n": 0,
+        "coverage": 1.0,
+        "breach_count": 6,
+        "breach_fraction": 0.05,
+        "mean_log_growth": 0.03481284798889424,
+        "median_cagr": 0.035763509313868125,
+        "p10_cagr": 0.012579587388437168,
+        "median_mdd": 0.20099973044176792,
+        "p90_mdd": 0.3469841428345941,
+        "cvar90_mdd": 0.40206700705584114,
+        "mean_volatility": 0.0798031278947194,
+        "mean_nominal_fees": 0.9685225088610967,
+        "mean_trade_fraction": 1.0
+      },
+      "paired_mean_annual_log_growth_difference": 0.0040757904165867435,
+      "event_id_partition": {
+        "neither": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          92,
+          93,
+          96,
+          97,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120
+        ],
+        "model_only": [
+          63,
+          94,
+          95,
+          98
+        ],
+        "reference_only": [
+          91
+        ],
+        "both": [
+          5,
+          19,
+          29,
+          38,
+          110
+        ]
+      }
+    },
+    {
+      "profile": "D",
+      "horizon": 25,
+      "L": 0.15,
+      "model": {
+        "original_n": 120,
+        "financial_n": 0,
+        "review_n": 120,
+        "coverage": 0.0,
+        "breach_count": null,
+        "breach_fraction": null,
+        "mean_log_growth": null,
+        "median_cagr": null,
+        "p10_cagr": null,
+        "median_mdd": null,
+        "p90_mdd": null,
+        "cvar90_mdd": null,
+        "mean_volatility": null,
+        "mean_nominal_fees": null,
+        "mean_trade_fraction": null
+      },
+      "exact_thirds_same_original_ids": {
+        "original_n": 120,
+        "financial_n": 120,
+        "review_n": 0,
+        "coverage": 1.0,
+        "breach_count": 85,
+        "breach_fraction": 0.7083333333333334,
+        "mean_log_growth": 0.03582865422171074,
+        "median_cagr": 0.03850674365568761,
+        "p10_cagr": 0.011378845985362327,
+        "median_mdd": 0.1901236438240973,
+        "p90_mdd": 0.3386918652482304,
+        "cvar90_mdd": 0.3893608779807834,
+        "mean_volatility": 0.08019024122151844,
+        "mean_nominal_fees": 0.7044113838623675,
+        "mean_trade_fraction": 1.0
+      },
+      "paired_mean_annual_log_growth_difference": null,
+      "event_id_partition": {
+        "neither": [],
+        "model_only": [],
+        "reference_only": [],
+        "both": []
+      }
+    },
+    {
+      "profile": "E",
+      "horizon": 6,
+      "L": 0.35,
+      "model": {
+        "original_n": 120,
+        "financial_n": 120,
+        "review_n": 0,
+        "coverage": 1.0,
+        "breach_count": 6,
+        "breach_fraction": 0.05,
+        "mean_log_growth": 0.043965423569071516,
+        "median_cagr": 0.04998107656911112,
+        "p10_cagr": -0.0368594452057999,
+        "median_mdd": 0.13892225166420547,
+        "p90_mdd": 0.3117536822150599,
+        "cvar90_mdd": 0.3873561722339038,
+        "mean_volatility": 0.11444425507401444,
+        "mean_nominal_fees": 0.22777972250042733,
+        "mean_trade_fraction": 1.0
+      },
+      "exact_thirds_same_original_ids": {
+        "original_n": 120,
+        "financial_n": 120,
+        "review_n": 0,
+        "coverage": 1.0,
+        "breach_count": 0,
+        "breach_fraction": 0.0,
+        "mean_log_growth": 0.03062302712636334,
+        "median_cagr": 0.03523921439765916,
+        "p10_cagr": -0.023186516966268212,
+        "median_mdd": 0.08899442555912149,
+        "p90_mdd": 0.21925349761768256,
+        "cvar90_mdd": 0.26645330686286267,
+        "mean_volatility": 0.07661332788388032,
+        "mean_nominal_fees": 0.21939620982431376,
+        "mean_trade_fraction": 1.0
+      },
+      "paired_mean_annual_log_growth_difference": 0.013342396442708175,
+      "event_id_partition": {
+        "neither": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120
+        ],
+        "model_only": [
+          5,
+          20,
+          39,
+          60,
+          80,
+          102
+        ],
+        "reference_only": [],
+        "both": []
+      }
+    }
+  ],
+  "main_adverse_findings": [
+    "B at15 years trades growth for lower drawdown risk:9/120 events versus20/120 thirds, but mean annual log growth is lower by0.005069248884528478.",
+    "C at30 years improves mean annual log growth by0.0040757904165867435 over thirds, but has9 versus6 events and higher P90/CVaR drawdown. The comparison does not establish risk dominance.",
+    "E at6 years has higher mean and median growth but P10 real CAGR=-0.0368594452057999, approximately -3.686% per year. It has6/120 events versus0/120 thirds, and materially worse P90/CVaR drawdown. Growth naming must not obscure the unfavorable short-horizon tail.",
+    "A and D remain120/120 preinvestment Review with all model financial metrics NULL; benchmark wealth is a reference, not substitute model performance or automatic admission."
+  ],
+  "interpretation_boundaries": [
+    "Own-H static annual references are not Q2 dynamic execution approval. Static paths may continue after crossing L and do not implement the Q2 guard service.",
+    "The600 profile-scenario rows share underlying markets and have different horizons. They are not600 IID observations. Compare each profile with its own-H reference, not across profiles as an equal-H risk ranking.",
+    "Stable profile names across fits do not imply stable portfolio weights, identified risk preferences, or Conservative/Balanced/Growth ordering at every horizon.",
+    "Observed event fractions and cache arithmetic are descriptive development evidence, not calibrated out-of-sample risk probabilities or future performance guarantees.",
+    "No individual optimum or near-optimal member is adopted as a replacement joint menu. No held-out outcome is used to choose weights. Historical final exposure remains disclosed for the wider project."
+  ],
+  "actionable_judgment": "Retain current Q1 menu as the explicitly defined finite learner while reporting its real growth-risk tradeoffs, A/D coverage limitations and own-horizon adverse tails. Treat cross-fit weights and near sets as uncertainty evidence rather than selecting a single supposedly identified preference. New model research requires a new declared evaluation; this diagnostic alone does not justify menu replacement or weaker risk gates."
+}

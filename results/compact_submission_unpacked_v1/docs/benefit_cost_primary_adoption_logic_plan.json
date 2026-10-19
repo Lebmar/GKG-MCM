@@ -1,0 +1,114 @@
+{
+  "version": "benefit-cost-primary-adoption-logic-plan-v1",
+  "written_utc": "2026-10-18T08:27:03.931503+00:00",
+  "status": "Prospective interpretation plan during frozen numerical execution; no outcomes read and no source/protocol changes",
+  "boundary": {
+    "new_partial_or_complete_results_read": false,
+    "new_market_data_read": false,
+    "scenarios_121_180_read": false,
+    "purpose": "Define what would justify adopting or rejecting the frozen primary after the complete archive, independent audit and summary are ready. This is a logical plan, not a prefilled outcome judgment."
+  },
+  "fixed_primary_contract": {
+    "primary": "benefit_cost_one_year",
+    "sensitivity": "benefit_cost_remaining_H, separately reported and never a replacement/fallback chosen from these outcomes",
+    "objective": "Expected original-H annualized real log growth is a declared normative criterion, not an elicited utility or an implication forced by the contest.",
+    "optional_action": "Current paid restoration is optional only if its empirical mean one-year paired NET log-growth advantage exceeds1e-12 and its original-H buy-and-hold empirical breach count does not exceed hold. Otherwise hold. These are declared predicates, not a theorem of optimal rebalancing.",
+    "inception": "Own-training common-state positive initial economic estimate is a deployment condition. Once admitted, execute the approved initial target and charge the fee mandatorily. Do not apply the optional all-bill risk-direction veto at inception; Q1 and complete-policy admission assess the approved initial risk allocation.",
+    "service_risk": "The fixed10% absolute benchmark and same-target B-relative caps are extra declared service rules. They are not questionnaire estimates, statistical confidence levels or contest-mandated exact numbers."
+  },
+  "what_benefit_exceeds_cost_means": {
+    "formula": "At the same causal state x,V,u and approved target w, execute_target supplies exact current C and z=(V-C)w. For joint next-year gross g_j, Bhat=mean_j log((w dot g_j)/(u dot g_j)), chat=-log1p(-C/V), Deltahat=Bhat-chat=mean_j log((z dot g_j)/(x dot g_j)). The current fee enters once.",
+    "sufficient_for": "Deltahat>1e-12 is sufficient to satisfy this explicitly adopted local estimated economic predicate, under the specified equal-weight same-calendar training law and log-wealth measure. It explains in common units why the model expects the optional trade to cover its current fee over its stated benefit horizon.",
+    "not_sufficient_for": [
+      "A calibrated positive true conditional expected gain at this observed state",
+      "A positive realized gain on the next actual return",
+      "Larger complete original-H realized or expected growth than B or every feasible policy",
+      "Full-H MDD chance feasibility or lower MDD severity",
+      "Statistical proof that the economic advantage is positive",
+      "An optimal adaptive policy or an independent validation certificate"
+    ],
+    "necessary_for_our_optional_rule": "Every optional restore in this frozen controller must satisfy it by definition. If a trace shows a negative-net optional restore, that is an implementation/audit issue, not a permitted risk exception.",
+    "not_necessary_from_the_problem": "The phrase estimated benefit justifies cost does not uniquely mandate one-year expected log gain. Benefit could instead be defined in arithmetic wealth, a longer holding interval, reduction of tail risk, preservation of a preauthorized risk profile, or an explicitly elicited multiattribute objective. A justified risk hedge may have negative short-run expected growth. Our rule intentionally excludes such trades rather than claiming the contest prohibits them.",
+    "not_unique": "Log utility gives a principled common measure and diminishing marginal value; it is a modeling choice. Expected log improvement is different from log expected wealth and from expected currency profit. One-year versus remaining-H benefit and the extra direction veto are also substantive design choices.",
+    "why_one_year_main": "It matches the interval between annual reviews and avoids inventing future adaptive trades for the economic contrast. Complete-H evaluation remains essential because one action changes subsequent holdings/costs. This is a transparent local approximation, not a derivation of global optimality.",
+    "why_remaining_H_is_only_sensitivity": "Trade-once-then-hold through original H can amortize the current cost, but actual annual replanning need not honor that holding promise. Its result diagnoses continuation assumptions without selecting the main model after outcomes.",
+    "not_statistical_independence": "Separate risk gate means an additional logical constraint. It does not mean its estimates are statistically independent of the growth estimate, Q1 target, training data, inner fit or other repeats."
+  },
+  "role_of_the_risk_layers": {
+    "local_direction": "The two full-H buy-and-hold branches retain actual past CPI/peak/MDD, original horizon and current exact paid restoration. k_restore<=k_hold is a model-relative direction veto. It is not an absolute10% bound or a comparison to the future adaptive execution of B.",
+    "whole_policy_training": "The executed complete controller must satisfy k<=min(kB,floor(.1n+tol)) on its own training paths; every actual fee, hold, future decision and pending period matters.",
+    "inner": "Positive automatic evidence U and the two same-U held-out count conditions check the learned procedure, not just a target or individual action. The B-relative condition can reject even when the absolute10% condition passes; this is our declared conservatism, not a law of suitability.",
+    "final_refit": "Passing inner evidence is not automatically inherited by a new full-data target/forecast state. The final controller must still pass its own initial economic and complete training rules; unsupported Q1 retains priority.",
+    "no_theorem": "Calendar fan forecasts are not proved conditional on observed state. Empirical action screens, nested reused paths and source audits do not guarantee population10% risk. Equal breach counts can hide different severity and recovery outcomes."
+  },
+  "prospective_outcome_interpretation_matrix": [
+    {
+      "observed_stage": "Q1Review or outsideBalanced",
+      "permitted_interpretation": "The current client/product contract is unsupported or outside this execution study. Economics/risk execution may be unassessed; do not label uncomputed gains zero or negative.",
+      "forbidden_inference": "The benefit-cost controller failed economically, or a safer portfolio does not exist."
+    },
+    {
+      "observed_stage": "Nonpositive initial economic estimate",
+      "permitted_interpretation": "The approved initial target does not have a positive estimated net advantage over keeping the initial bills under this architecture horizon and own empirical training law; this controller is undeployable.",
+      "forbidden_inference": "The target can never be worthwhile over longer horizons or under another defensible benefit definition."
+    },
+    {
+      "observed_stage": "Positive initial economics but complete training cap fails",
+      "permitted_interpretation": "The economic rationale and this complete controller risk-service feasibility do not jointly meet the declared training requirements. Identify whether absolute alpha, B-relative cap or both bind.",
+      "forbidden_inference": "Positive optional action estimates prove a whole-H gain, or all feasible causal controllers are impossible."
+    },
+    {
+      "observed_stage": "No inner auto U",
+      "permitted_interpretation": "The architecture has no automatic inner evidence under the stated Q1/economic/training procedure. Financial risk on this absent service population isNULL.",
+      "forbidden_inference": "Risk is0 or an annual reference return may stand in for refused service."
+    },
+    {
+      "observed_stage": "Inner absolute count gate fails",
+      "permitted_interpretation": "The held-out automatic subpopulation does not meet our fixed absolute empirical risk evidence rule. Preserve k,n and threshold; this is inadequate approval support.",
+      "forbidden_inference": "An exact probability theorem proves true risk exceeds10%."
+    },
+    {
+      "observed_stage": "Inner same-U B-relative gate fails only",
+      "permitted_interpretation": "The method meets the absolute empirical cap but has more events than its appropriate reference on exactly the same inner automatic IDs; it fails our added relative nonworsening evidence requirement.",
+      "forbidden_inference": "It necessarily violates the contest or every reasonable client preference."
+    },
+    {
+      "observed_stage": "Inner passes but final own target/refit training fails",
+      "permitted_interpretation": "The evidence did not transfer to the final learned component under the preserved contract. Report the changed target/initial estimate/risk cap without relaxing them.",
+      "forbidden_inference": "Use the former inner target, a favorable old seed or a sensitivity controller as an unannounced deployment substitute."
+    },
+    {
+      "observed_stage": "Training/inner pass but outer realized risk is worse",
+      "permitted_interpretation": "Prespecified empirical approval was not a future safety guarantee. Show same-population financial comparisons, severity, denominator changes and repeat-level variability.",
+      "forbidden_inference": "Retune gates using those outer outcomes, drop an unfavorable repeat, or call passing source audit market calibration."
+    },
+    {
+      "observed_stage": "Primary qualifies in final full120 fit",
+      "permitted_interpretation": "The primary is the chosen executable model for this client under its declared empirical approval rules, with limitations. Full120 financial simulation is in-sample; recurring OOF summaries describe development stability.",
+      "forbidden_inference": "The final target has independent validation, a known10% true-risk ceiling or universally superior growth."
+    }
+  ],
+  "if_some_or_all_C_are_rejected": {
+    "main_model_identity": "Keep the frozen primary identity and the full algorithm that maps training evidence to Automated/Review. A reject option is part of this service model, not a reason to silently replace its execution controller.",
+    "no_global_infeasibility_claim": "Say no automatically deployable version of this fixed controller was supported by this fit and its declared evidence rules. Do not say no safe/profitable portfolio, no feasible causal policy or no mathematical solution exists.",
+    "conflict_precision": "Positive initial or local trade estimates can coexist with failure of original-H risk conditions. This is an economic-opportunity versus risk-service conflict within the chosen candidate/controller class, conditional on the forecast and evidence rules. Initial economic failure is a different conflict and must be reported separately.",
+    "coverage": "Preserve all original IDs and fit statuses. Review financial outcomes stayNULL; neither B, sensitivity, equal weights, bills nor a hypothetical perfect adviser supplies customer service returns. Hypothetical reference outcomes may be shown only in labelled separate comparisons.",
+    "risk_of_hold": "Holding current assets after an optional veto is an actual controller action and can itself create risk. The complete-policy risk check, not the local veto, decides if the service can be offered.",
+    "pending_distinction": "For an already deployed customer whose actual breach later occurs, pending hold remains a fully simulated realized path under the original contract. Do not confuse it with predeployment Review and delete its adverse returns.",
+    "honest_next_action": "Explain which explicit rule bound and why. Any genuinely different risk hedge, conservative initial allocation, customer clarification, conditional law or elicited preference would be a separately specified future model or human decision. This run does not add it after seeing rejection.",
+    "success_definition": "A coherent formula, faithful implementation, explicit uncertainty and principled rejection can be a defensible model result. Broad automatic coverage is not evidence of quality if achieved by changing the task or hidden fallback."
+  },
+  "complete_only_final_review_checklist": [
+    "Wait for complete130-task manifest and passed independent audit bound to that exact manifest; verify frozen source/input hashes before reading outcomes.",
+    "Keep125 repeated-development tasks separate from the5full-development tasks; c0refit120financial outcomes are in_sample_full120 and never added to outer OOF.",
+    "Count failure reasons at their actual fit/job levels. When reason precedence hides coexisting failures, inspect saved initial eligibility, training eligibility and inner gate predicates/reasons rather than force one causal explanation.",
+    "Check optional restore count equals positive-net-and-direction-compliant optional count; check exact quote/charged cost and inception exception separately.",
+    "Report each repeat original120 denominator and fit24 denominator; auto-only risk/returns are conditional, no-auto isNULL; no600-IID pooling or confidence claims.",
+    "Compare primary, sensitivity and old controllers only on identical repeat/fold/context/original-ID common-auto sets. A changed automatic population can change a risk fraction without any same-path economic change.",
+    "Give the final adoption decision using fixed method identity and predeclared gates, then separately describe descriptive evidence and assumptions; never choose the sensitivity because its outer result is nicer."
+  ],
+  "preceding_design_review_sha256": {
+    "docs/benefit_cost_final_design_review.json": "a5c8b7db38ddd46c3ec67b49063e60820ff6ad58d6cc9c7051031e1c34c6fc85",
+    "docs/benefit_cost_preexecution_review.json": "99d69566713c53f3ed538aa9cfc4fb8f477462908366ba49857eb9345bfff8ca"
+  }
+}

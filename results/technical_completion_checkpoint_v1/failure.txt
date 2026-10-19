@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/lebmar/Documents/ChatGPT/GKG数模/scripts/verify_technical_completion_checkpoint.py", line 246, in run
+    for name,digest in receipts.items():ledger.touch(name,digest);verify_receipt(root,ledger,name)
+                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/lebmar/Documents/ChatGPT/GKG数模/scripts/verify_technical_completion_checkpoint.py", line 91, in verify_receipt
+    if found is None:raise AssertionError('Bound receipt artifact missing: '+str(name)+'/'+file)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Bound receipt artifact missing: results/state_budget_mitigation_analysis_v1/manifest.json/path_metrics.csv.gz

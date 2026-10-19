@@ -1,0 +1,102 @@
+{
+  "version": "benefit-cost-execution-preexecution-independent-source-review-v1",
+  "written_utc": "2026-10-18T08:23:49.038898+00:00",
+  "status": "No implementation or method blocker found in reviewed sources; protocol still requires parent freeze and independent audit plan before market execution",
+  "evidence_scope": "Read-only source/design review and29pure synthetic tests. No raw market CSV, original static cache financial values, new policy fits, numerical research outputs or scenarios121–180 were read for this review.",
+  "prospective_primary": "benefit_cost_one_year; benefit_cost_remaining_H remains a separately reported sensitivity, never a fallback or outer-selected replacement",
+  "source_sha256": {
+    "research/experimental_execution/benefit_cost_execution.py": "a048b37588bb19b33950ee8144858cc42bec3c55d8a3df0640e6b959eb4ba13b",
+    "scripts/run_benefit_cost_execution.py": "fffdbb3b197a0291a8803d1ee2b1b37f6e5abbee3f1a8e21cdcc5e7cf6126cbf",
+    "tests/test_benefit_cost_execution.py": "84f13605eb1c3e62192a8ba6a81065ff0e166ec7acf1e30fdbf1a430497f4731",
+    "tests/test_benefit_cost_pipeline.py": "a5a47c88c066d2420e9fd9e509c55cc9c509813a74b612ef293375a7a8e893cf",
+    "docs/benefit_cost_final_design_review.json": "a5c8b7db38ddd46c3ec67b49063e60820ff6ad58d6cc9c7051031e1c34c6fc85",
+    "scripts/run_simple_execution_comparison.py": "b82071d44305d6aceefacce83e49275a0ac4b7ad5cc59cc71d62258a4f99de36",
+    "scripts/run_joint_liquidity_refit.py": "d6c6dfa2b18fd4b0fcfc9ec97b6a822c87f50ea1f42b2ee763d06a394e8641fe",
+    "research/experimental_execution/fan_rollout.py": "d195d721c895700925e9b24c91640c59737fe4eb542272376d2de78ce62fe1ba",
+    "docs/refit_stability_protocol.json": "8e9ab035073b91e4004c76c41296c56665d2199620e92d8cc0eb4eaca7a4efae",
+    "docs/joint_liquidity_refit_protocol.json": "1e92a4f7b374bd7437315c89e513a830f12211b54cb08d3c4341dffdc9f1e3f6"
+  },
+  "pure_kernel_review": [
+    "estimate_trade has no actual-future-return argument; it takes the actual causal holdings/CPI/peak/past-MDD active state and own training same-calendar suffix. Actual returns are consumed only after the action in simulate_benefit_cost.",
+    "The current executor quote is reused for forecasting and actual restoration. Gross log benefit is computed independently by stable weighted cumulative asset gross sums, then exact -log1p(-C/V) is subtracted once. Paid branch log contrasts provide the separate direct identity check in synthetic tests.",
+    "One-year and remaining-original-H economic endpoints are the only two supported estimands. Both risk branches restore at most once now and thereafter hold through the original H, keeping the current real peak/CPI/past MDD. Branch risk is not current-action-then-B and is not the adaptive policy continuation.",
+    "All optional restores satisfy positive mean net log benefit and integer full-H buyhold k_restore<=k_hold. Failed economic or direction predicates lead to hold. There is no risk-only override, annual fallback, eta/beta parameter or target update.",
+    "InitialEconomicRejection occurs before advancing any actual return. Eligible inception records economic evidence and mandatorily restores even when the all-bills risk-direction comparison fails; the complete-policy admission gates still apply.",
+    "Actual breach is absorbing pending hold; forecast fields are absent after breach, actual returns/CPI/MDD continue, original100/peak/H remain and no terminal liquidation is added. Physical extra metrics preserve annual endpoint risk convention and unmasked excess=max(MDD-L,0)."
+  ],
+  "pipeline_method_review": [
+    "The first25contexts/125jobs are exactly the frozen refit-stability split identities. The additional full-development context and5jobs match old joint c0 design/cache identities, including own90/30inner jobs and120refit. No outer target is substituted for an inner job own target.",
+    "The130cached bundles are restricted to context/refit/Q1 case only. Old dynamic price choices and old reference counts are not reused; semantic product/name/weights/local/global identity is checked by the frozen helper.",
+    "The full120 static c0_refit cache correctly has refit.outer_test_ids=[] while the separate dynamic job evaluation_ids is120in-sample. The new restricted-validation wrapper checks the static cache against an empty validation ID copy, leaves the immutable bundle unchanged, then keeps the actual dynamic evaluation120. A dedicated independent test rejects a forged static120holdout and verifies no mutation of either original cache or job identities.",
+    "Each method is a fixed complete controller. Its own initial economic eligibility precedes complete training support; training feasibility uses k<=min(kB,floor(.1n+tol)) on the complete original-H simulated paths, with same-job own-target B only as a hypothetical reference.",
+    "Each architecture inner gate pools only its own automatically eligible held-out U, requires positive nU, absolute count cap and k<=same-U B. Every expected parent training ID remains represented once, including Review NULL rows. A synthetic blocked-inner witness verifies B events outside the primary own U are excluded.",
+    "At parent refit, the inner gate is computed before any outer/in-sample evaluation of the method. Own final training feasibility is also necessary. Q1Review/outside-Balanced statuses take priority. Rejected primary financials remainNULL even when sensitivity or B has available hypothetical returns.",
+    "Each final fit gives one method admission decision to all24held-out paths, or all120in-sample paths, without using their future outcomes. Initial rejection and all other failures preserve full evaluation row inventories and no-auto event probabilities areNULL.",
+    "The c0refit actual evaluation scope is in_sample_full120; its120paths equal its training IDs. Repeated outer results are scope outer_oof and their training/evaluation IDs are disjoint. They must remain separate in all later summaries; no720-IID/600-IID inference follows.",
+    "Main refuses unready protocol or existing archive, verifies frozen source/input/protocol at start, each job and end, checks expected130tasks/table rows, restricts load_paths to explicit1..120 allow_finalFalse and verifies development-array digest. CSV/JSON gzip is deterministic; NPZ contains physical and economic trace fields."
+  ],
+  "synthetic_verification": {
+    "command": "PYTHONPATH=src:research .venv/bin/python -m unittest tests.test_benefit_cost_execution tests.test_benefit_cost_pipeline -q",
+    "tests_passed": 30,
+    "kernel_tests": 20,
+    "independent_pipeline_tests": 10,
+    "elapsed_seconds": 4.621,
+    "pipeline_boundaries": [
+      "all130jobs automatic",
+      "initial primary rejection without sensitivity/B fallback",
+      "complete training risk rejection",
+      "inner gate prevents outer24/full120 method simulation",
+      "own-U reference excludes refused24block",
+      "Q1Review and outside priority",
+      "integer absolute/relative training boundaries",
+      "Q1product and split tampering",
+      "temporary synthetic main export/no-final/no-overwrite/gzip",
+      "static full120 empty-holdout cache distinct from120dynamic in-sample evaluation; immutability and forged120cache refusal"
+    ],
+    "mock_limit": "Pipeline controller economic evidence is deliberately fabricated and account-shaped physical outputs come from a separate pure drift helper. These tests validate orchestration/admission/export, not economic calibration or new kernel correctness. Kernel source and its20synthetic tests are reviewed separately.",
+    "development_fixture_repair": "Before any market run, the initial new fixture was missing service_alpha and then represented c0_refit static outer_test_ids as dynamic evaluation120. The fixture was corrected to the immutable old static empty-holdout semantics, alongside the new root wrapper that distinguishes static validation from dynamic in-sample evaluation. All final30tests pass; no numeric experiment was run or concealed."
+  },
+  "protocol_pending_freeze": {
+    "current_ready": false,
+    "current_expected_rows": {
+      "training_paths": 20160,
+      "training_summary": 260,
+      "inner_validation_paths": 5040,
+      "inner_reference_paths": 2520,
+      "inner_gate_summaries": 52,
+      "client_paths": 2880,
+      "fit_admission": 52
+    },
+    "required_next": "Parent fills execution_sources_sha256 and frozen_input_sha256, binds this review and the design review, checks exact cache/source/protocol closure and sets execution_ready true. Because the protocol is still mutable, this review does not record a self-referential protocol SHA; a separate freeze receipt should bind its final SHA.",
+    "input_inventory_must_include": [
+      "raw development CSV",
+      "both frozen parent protocols",
+      "both static bundle archives",
+      "both parent main manifests and independent audit receipts",
+      "new design/preexecution reviews and any later independent audit plan"
+    ],
+    "reporting_requirements": [
+      "primary fixed before results",
+      "26fit admissions distinct from25outer validation fits",
+      "full120in-sample separate",
+      "initial eligibility separate from optional predicates",
+      "U and same-U B denominators explicit",
+      "no-autoNULL",
+      "riskdirection/unconditionalforecast limitations",
+      "previously reused development and exposed-old-final history disclosed"
+    ]
+  },
+  "interpretation_limits": "Passing tests and source review supports faithful implementation only. Neither local mean gain nor empirical risk-direction screen gives a state-conditional forecast, whole-policy10% guarantee, calibrated customer preference, rollout improvement theorem, future coverage guarantee or fresh independent validation. The constrained complete procedure may honestly yield Review.",
+  "source_sha256_at_end": {
+    "research/experimental_execution/benefit_cost_execution.py": "a048b37588bb19b33950ee8144858cc42bec3c55d8a3df0640e6b959eb4ba13b",
+    "scripts/run_benefit_cost_execution.py": "fffdbb3b197a0291a8803d1ee2b1b37f6e5abbee3f1a8e21cdcc5e7cf6126cbf",
+    "tests/test_benefit_cost_execution.py": "84f13605eb1c3e62192a8ba6a81065ff0e166ec7acf1e30fdbf1a430497f4731",
+    "tests/test_benefit_cost_pipeline.py": "a5a47c88c066d2420e9fd9e509c55cc9c509813a74b612ef293375a7a8e893cf",
+    "docs/benefit_cost_final_design_review.json": "a5c8b7db38ddd46c3ec67b49063e60820ff6ad58d6cc9c7051031e1c34c6fc85",
+    "scripts/run_simple_execution_comparison.py": "b82071d44305d6aceefacce83e49275a0ac4b7ad5cc59cc71d62258a4f99de36",
+    "scripts/run_joint_liquidity_refit.py": "d6c6dfa2b18fd4b0fcfc9ec97b6a822c87f50ea1f42b2ee763d06a394e8641fe",
+    "research/experimental_execution/fan_rollout.py": "d195d721c895700925e9b24c91640c59737fe4eb542272376d2de78ce62fe1ba",
+    "docs/refit_stability_protocol.json": "8e9ab035073b91e4004c76c41296c56665d2199620e92d8cc0eb4eaca7a4efae",
+    "docs/joint_liquidity_refit_protocol.json": "1e92a4f7b374bd7437315c89e513a830f12211b54cb08d3c4341dffdc9f1e3f6"
+  }
+}

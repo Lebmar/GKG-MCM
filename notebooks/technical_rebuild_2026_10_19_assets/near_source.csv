@@ -1,0 +1,6 @@
+job_id,profile,horizon,screen,candidate_local_index,candidate_original232_index,weights,training_event_count,mean_training_log_growth,gap_to_individual_best,equity,bond,bill
+c0_refit,B,15,selected_gamma,67,97,"[0.25, 0.1, 0.65]",5,0.027670087293412905,0.0009287818989120629,0.25,0.1,0.65
+c0_refit,B,15,selected_gamma,68,98,"[0.25, 0.15, 0.6]",6,0.027923816487027582,0.0006750527052973854,0.25,0.15,0.6
+c0_refit,B,15,selected_gamma,69,99,"[0.25, 0.2, 0.55]",7,0.028163178148955623,0.0004356910433693448,0.25,0.2,0.55
+c0_refit,B,15,selected_gamma,70,100,"[0.25, 0.25, 0.5]",7,0.028388184619865062,0.00021068457245990505,0.25,0.25,0.5
+c0_refit,B,15,selected_gamma,71,101,"[0.25, 0.3, 0.45]",9,0.028598869192324967,0.0,0.25,0.3,0.45

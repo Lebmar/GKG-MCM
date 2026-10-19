@@ -1,0 +1,434 @@
+{
+  "version": "benefit-cost-estimand-mathematical-review-v1",
+  "completed_utc": "2026-10-18T08:13:52.335097+00:00",
+  "scope": "Pure algebra, unchanged fee-code inspection and explicit synthetic counterexamples; no market runner, scenario loading, fitting or main-policy adoption.",
+  "contest_requirement": {
+    "source": "docs/problem_A.pdf",
+    "page": 2,
+    "quote": "Trade or change the target only when the estimated benefit justifies the transaction cost.",
+    "accounting": "Every path starts with100 in bills; fees .25% of money moved between assets counted once, initial allocation also charged, fees before period return, no later external cashflows or terminal liquidation.",
+    "information": "Decision for original year t uses current actual path observations through t-1 only; predicted branch futures come only from that fit training information.",
+    "no_unspecified_benefit_exemption": "The task does not expressly exempt the initial purchase from the benefit condition. If initial restore is mandatory, disclose this separately and do not claim that every trade passed the same economic gate."
+  },
+  "same_starting_state": {
+    "state": "S_t=(nominal holdings x, W=sum x, u=x/W, current CPI b, inherited real peak P, historical MDD D, absorbing ever-breach flag, original H, current original year t)",
+    "comparison": "hold and restore start from exactly this same S_t, original time t and H. Do not independently normalize branch starting wealth, reset P/D/CPI/H, replace x by old training-path holdings, or use actual unobserved future returns to decide.",
+    "synthetic_embedding": "All two-period witnesses can be embedded at original years29 and30 of H=30 after28 identical flat years with100 in bills. Synthetic remaining length2 is not a new customer H=2; any original-H annualization divides total log differences by30."
+  },
+  "current_fee": {
+    "rate": 0.0025,
+    "self_financing_equation": "C=kappa*sum_j max((W-C)*w_j-x_j,0); x_plus=(W-C)w; moved=sum positive purchases.",
+    "uniqueness": "f(C)=C-kappa*sum positive purchases is continuous strictly increasing; f(0)<=0 and f(kappa W)>=0. Its root is unique for positive wealth and the stated rate.",
+    "units": {
+      "C": "Nominal currency paid now",
+      "rho=C/W": "Current wealth fraction paid now",
+      "log_cost=-log(1-rho)": "Positive exact current cost in total log-growth units"
+    },
+    "not_half_L1": "Because sum(x_plus)=W-C, dollar half-L1 between pre/post holdings equals moved+C/2. Multiplying the half-L1 of pre/post dollar positions by kappa charges a different amount; use the self-financing destination purchases.",
+    "zero_fee": "Current hold incurs no transfer fee. A restore already at exact target may involve no actual money moved."
+  },
+  "one_period_exact_identity": {
+    "gross": "G_j=1+r_j>0; common inflation gross I>0; proposed w fixed before forecast integration.",
+    "hold": "R_hold=(W/b)*(u dot G)/I",
+    "restore": "R_restore=(W/b)*(1-rho)*(w dot G)/I",
+    "gross_log_benefit": "B(G)=log((w dot G)/(u dot G))",
+    "positive_current_log_cost": "K=-log(1-rho)",
+    "net_log_advantage": "Delta(G)=B(G)-K=log((x_plus dot G)/(x dot G)).",
+    "expectation": "For a declared training-only forecast distribution F_T: estimated_Delta=E_hat_T[B(G)]-K. Current rho is fixed by current x,w and cost, so K is added once outside the forecast sum.",
+    "inflation": "Common next-period inflation cancels only in the paired terminal log ratio. It remains indispensable to each branch real wealth, peak/MDD and risk.",
+    "double_count": "If action values were computed using x_plus and all actual fees already, their difference is net. Do not subtract C/W or K again.",
+    "annualization": "If expressing the local increment contribution to original G_H, divide B, K and Delta all by the same original H; their sign is unchanged. Do not compare annualized benefit with an unannualized cost.",
+    "expected_log": "E log(R_restore/R_hold) differs from log(E R_restore/E R_hold); the declared growth objective determines the first estimand."
+  },
+  "longer_horizon_conditions": {
+    "no_further_trades": "If both branches retain asset quantities after the current action through remaining horizon, let Q_j=product of future joint asset gross factors. Exact Delta=log((w dot Q)/(u dot Q))-K; common cumulative inflation cancels. Weights generally drift; this is not constant-weight annual rebalancing.",
+    "common_annual_sufficient_condition": "For the restore branch, compare paid-current-fee and no-current-fee clones. If later transition/target/decision maps are positively homogeneous and these clones follow the same subsequent causal actions/targets, paid terminal wealth=(1-rho)*free-current-fee terminal wealth. A fixed annual schedule with future proportional fees and no differential state-trigger response satisfies this condition.",
+    "history_warning": "Scaling current post-trade holdings does not scale their inherited historical real peak. Risk- or pending-based decisions may therefore differ even under the same named continuation rule. A shared annual-until-own-breach function alone is not a sufficient condition.",
+    "future_fee_warning": "The fee-free clone waives only the current trade fee; all future fees remain at the declared rate. A comparison waiving every future fee answers a different question.",
+    "pathwise_sufficient_not_necessary": "No differential pending response is a sufficient check for the simple synthetic schedule, not a general theorem for arbitrary adaptive rules. A benefit gate, target change, wealth floor, or forecast-risk guard can also break scale-equivariant continuation.",
+    "counterfactual_state": "Do not enforce artificial equality by scaling/resetting old P/D/history in the fee-free clone; that would compare different starting states."
+  },
+  "general_continuation_identity": {
+    "hold": "R_H^hold=hold-now followed by the explicitly declared causal continuation with actual future fees.",
+    "paid": "R_H^paid=restore-now with current fee and the same continuation function applied to its own subsequent state.",
+    "free": "R_H^free=restore-now with only current fee waived, same inherited state/history, same continuation function and future fee rate.",
+    "identity": "log(R_H^paid/R_H^hold)=log(R_H^free/R_H^hold)-K+Epsilon; Epsilon=log(R_H^paid/[(1-rho)R_H^free]).",
+    "expectation": "The same identity holds after taking the declared training forecast expectation. Epsilon generally depends on each forecast suffix and cannot be set to zero without a justified continuation condition.",
+    "interpretation": "The no-current-fee action comparison already includes future trading fees; call it current-fee-free action benefit rather than all-cost-free gross return. Epsilon describes the induced continuation response, not a separately identified causal risk benefit."
+  },
+  "synthetic_counterexamples": {
+    "common_annual_homogeneous_case": {
+      "joint_gross_path": [
+        [
+          0.8,
+          1.1,
+          1.0
+        ],
+        [
+          1.2,
+          1.03,
+          1.01
+        ]
+      ],
+      "hold": {
+        "terminal_real": 110.79226450405488,
+        "real_wealth": [
+          100.0,
+          100.0,
+          110.79226450405488
+        ],
+        "real_peak": [
+          100.0,
+          100.0,
+          110.79226450405488
+        ],
+        "actions": [
+          "hold",
+          "restore"
+        ],
+        "fees": [
+          0.0,
+          0.18714909544603867
+        ],
+        "breach": false,
+        "ever_breached": [
+          false,
+          false,
+          false
+        ],
+        "mdd": 0.0,
+        "pretrade_tv_drift": [
+          0.75,
+          0.75
+        ],
+        "terminal_holdings": [
+          59.88771054273237,
+          25.701809107922642,
+          25.202744853399874
+        ]
+      },
+      "restore_paid": {
+        "terminal_real": 102.46555498702105,
+        "real_wealth": [
+          100.0,
+          92.3268870867124,
+          102.46555498702105
+        ],
+        "real_peak": [
+          100.0,
+          100.0,
+          102.46555498702105
+        ],
+        "actions": [
+          "restore",
+          "restore"
+        ],
+        "fees": [
+          0.18714909544603867,
+          0.015576287594343617
+        ],
+        "breach": false,
+        "ever_breached": [
+          false,
+          false,
+          false
+        ],
+        "mdd": 0.07673112913287594,
+        "pretrade_tv_drift": [
+          0.75,
+          0.06756756756756757
+        ],
+        "terminal_holdings": [
+          55.386786479470835,
+          23.7701625307729,
+          23.30860597677731
+        ]
+      },
+      "restore_no_current_fee": {
+        "terminal_real": 102.65767790262173,
+        "real_wealth": [
+          100.0,
+          92.5,
+          102.65767790262173
+        ],
+        "real_peak": [
+          100.0,
+          100.0,
+          102.65767790262173
+        ],
+        "actions": [
+          "restore",
+          "restore"
+        ],
+        "fees": [
+          0.0,
+          0.015605493133583021
+        ],
+        "breach": false,
+        "ever_breached": [
+          false,
+          false,
+          false
+        ],
+        "mdd": 0.07499999999999996,
+        "pretrade_tv_drift": [
+          0.75,
+          0.06756756756756757
+        ],
+        "terminal_holdings": [
+          55.49063670411985,
+          23.814731585518103,
+          23.35230961298377
+        ]
+      },
+      "decomposition": {
+        "current_fee_free_action_benefit": -0.07625701935470906,
+        "current_log_cost": 0.0018732443816803475,
+        "continuation_response_residual": -1.1102230246251565e-16,
+        "direct_net_log_advantage": -0.07813026373638958,
+        "decomposed_net_log_advantage": -0.07813026373638952
+      }
+    },
+    "pending_breaks_naive_current_fee_subtraction": {
+      "joint_gross_path": [
+        [
+          0.2,
+          1.0,
+          1.0
+        ],
+        [
+          2.0,
+          1.0,
+          1.0
+        ]
+      ],
+      "hold": {
+        "terminal_real": 149.71927635683093,
+        "real_wealth": [
+          100.0,
+          100.0,
+          149.71927635683093
+        ],
+        "real_peak": [
+          100.0,
+          100.0,
+          149.71927635683093
+        ],
+        "actions": [
+          "hold",
+          "restore"
+        ],
+        "fees": [
+          0.0,
+          0.18714909544603867
+        ],
+        "breach": false,
+        "ever_breached": [
+          false,
+          false,
+          false
+        ],
+        "mdd": 0.0,
+        "pretrade_tv_drift": [
+          0.75,
+          0.75
+        ],
+        "terminal_holdings": [
+          99.81285090455395,
+          24.95321272613849,
+          24.95321272613849
+        ]
+      },
+      "restore_paid": {
+        "terminal_real": 69.86899563318777,
+        "real_wealth": [
+          100.0,
+          59.88771054273237,
+          69.86899563318777
+        ],
+        "real_peak": [
+          100.0,
+          100.0,
+          100.0
+        ],
+        "actions": [
+          "restore",
+          "hold"
+        ],
+        "fees": [
+          0.18714909544603867,
+          0.0
+        ],
+        "breach": true,
+        "ever_breached": [
+          false,
+          true,
+          true
+        ],
+        "mdd": 0.40112289457267625,
+        "pretrade_tv_drift": [
+          0.75,
+          0.33333333333333337
+        ],
+        "terminal_holdings": [
+          19.96257018091079,
+          24.95321272613849,
+          24.95321272613849
+        ]
+      },
+      "restore_no_current_fee": {
+        "terminal_real": 89.92509363295879,
+        "real_wealth": [
+          100.0,
+          60.0,
+          89.92509363295879
+        ],
+        "real_peak": [
+          100.0,
+          100.0,
+          100.0
+        ],
+        "actions": [
+          "restore",
+          "restore"
+        ],
+        "fees": [
+          0.0,
+          0.04993757802746567
+        ],
+        "breach": false,
+        "ever_breached": [
+          false,
+          false,
+          false
+        ],
+        "mdd": 0.4,
+        "pretrade_tv_drift": [
+          0.75,
+          0.33333333333333337
+        ],
+        "terminal_holdings": [
+          59.95006242197253,
+          14.987515605493133,
+          14.987515605493133
+        ]
+      },
+      "decomposition": {
+        "current_fee_free_action_benefit": -0.509785018899526,
+        "current_log_cost": 0.0018732443816803475,
+        "continuation_response_residual": -0.25048178876569044,
+        "direct_net_log_advantage": -0.7621400520468967,
+        "decomposed_net_log_advantage": -0.7621400520468968
+      }
+    },
+    "growth_gate_does_not_certify_risk": {
+      "positive_gross_outcome": [
+        1.5,
+        1.0,
+        1.0
+      ],
+      "positive_probability": 0.85,
+      "adverse_gross_outcome": [
+        0.1,
+        1.0,
+        1.0
+      ],
+      "adverse_probability": 0.15,
+      "expected_net_log_advantage": 0.09812322412205489,
+      "adverse_restore_real": 54.89706799750468,
+      "restore_event_probability": 0.15,
+      "hold_event_probability": 0.0,
+      "loss_tolerance": 0.4,
+      "service_reference": 0.1,
+      "meaning": "Explicit hypothetical probabilities, not a sample-risk estimate."
+    },
+    "one_step_myopia": {
+      "same_gross_every_year": [
+        1.003,
+        1.0,
+        1.0
+      ],
+      "one_step_gate": {
+        "estimated_gross_log_benefit": 0.0014988761237359487,
+        "exact_current_log_cost": 0.0018732443816803475,
+        "estimated_net_log_advantage": -0.00037436825794439884,
+        "action": "hold",
+        "forecast_support_rows": 1,
+        "risk_preference_parameter": null,
+        "interpretation": "One-step point-estimate break-even only; full-H risk admission and forecast adequacy remain separate"
+      },
+      "two_period_buy_then_hold": {
+        "wealth": 100.0,
+        "fee": 0.18714909544603867,
+        "moved": 74.85963817841547,
+        "fee_fraction": 0.0018714909544603866,
+        "gross_log_benefit": 0.0029999955101127048,
+        "current_log_cost": 0.0018732443816803475,
+        "net_log_advantage": 0.0011267511284323573,
+        "direct_net_log_advantage": 0.0011267511284322016,
+        "hold_real": 100.0,
+        "restore_real": 100.11273861509667
+      },
+      "meaning": "Bills stayflat under hold, so this local gate repeatedly sees the same negative one-step net gain even while one purchase amortized over two periods has positive total log gain. This does not validate a two-period forecast or select its policy."
+    },
+    "jensen_estimand_difference": {
+      "joint_gross_support": [
+        [
+          3.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.2,
+          0.2,
+          1.0
+        ]
+      ],
+      "probabilities": [
+        0.5,
+        0.5
+      ],
+      "mean_restore_real": 119.77542108546474,
+      "mean_hold_real": 100.0,
+      "expected_net_log_advantage": -0.1134450200387852,
+      "meaning": "Higher expected terminal wealth can coexist with negative expected log action advantage."
+    }
+  },
+  "recommended_minimal_gate_for_next_validation": {
+    "estimand": "One-original-period expected paired net real-log advantage at the actual state, using a fixed training-only same-calendar joint forecast support. This choice is explicit and myopic; it is not full adaptive-policy optimization.",
+    "condition": "For an active unbreached account, restore/change target only if estimated gross log benefit > exact current log cost+1e-12; ties hold. Every executed economic trade must have reconstructible benefit/cost/net values, including inception if advertised as a universal gate.",
+    "risk_preference_parameter": null,
+    "margin": "Only numerical tolerance1e-12; no fitted lambda/eta, pointwise confidence threshold or invented customer preference.",
+    "separate_risk_admission": "An economic sign check is necessary under this estimand, not sufficient for suitability. Whole-H risk/admission, original H/L, inherited history, unsupported-model Review and pending behavior must be defined and revalidated for the complete learner. No annual alpha regrant.",
+    "alternative_full_horizon_estimand": "If root instead freezes a remaining-H causal-continuation comparison, compute both fee-aware actions directly and retain the response residual when displaying decomposition. Do not assert the simple one-step fee split for an annual-pending continuation without checking its conditions.",
+    "not_annual_fallback": "Annual B remains a hypothetical reference. It cannot replace an unsupported benefit-cost learner and be labelled successful economic gating.",
+    "adoption_status": "Pure mathematical recommendation for a prospective finite validation. No market controller, threshold/model selection, final model admission or paper is supplied by this review."
+  },
+  "forecast_and_validation_limits": [
+    "A finite empirical expectation can be integrated exactly under its declared training law; this is not the unknown true conditional expectation.",
+    "Paired realized future differences are scoring diagnostics only and must not enter the action choice.",
+    "Within-path years, adaptive states, learned targets and repeated comparisons invalidate naive independent-row/per-action confidence claims.",
+    "The earlier0.939%/0.109% market-quantity MSE changes do not calibrate these action values or full-H breach probabilities.",
+    "A fixed one-step forecast law is a model assumption even without a predictor search; its economic myopia and distribution mismatch require explicit validation.",
+    "Any new gate must use whole-original-path inner/outer evaluation with its own target fitting and training-only nuisance quantities; reuse of development paths is not new blind evidence."
+  ],
+  "validation": {
+    "synthetic_unit_tests": 9,
+    "command": "PYTHONPATH=src:research .venv/bin/python -m unittest discover -s tests -p test_benefit_cost_estimands.py -q",
+    "status": "passed",
+    "market_data_loaded": false,
+    "new_market_runner_written": false,
+    "fitted_parameters": 0,
+    "source_or_existing_results_modified": false
+  },
+  "source_input_artifact_sha256": {
+    "docs/problem_A.pdf": "2ac9412ed68349d36a3fbd2c6cddc5789a81dab8acbfa08c63a3bdb34d2aa2dd",
+    "src/safeinvest/core.py": "43370a82dd729886f51da365ed59f5672b3d0828705d273b53306405dde57c8a",
+    "docs/cost_gate_design_review.json": "30c8ad2d1f06645b44fc31de47dc79cd3c6ee2a47c2e5fe529b35a7f086c54be",
+    "research/experimental_execution/fan_rollout.py": "d195d721c895700925e9b24c91640c59737fe4eb542272376d2de78ce62fe1ba",
+    "research/experimental_execution/risk_priced_fan_rollout.py": "2a935cfe1d039f6a020e104fe92aa659bb92aac2a0b3bed2ef767437015ba472",
+    "research/diagnostics/benefit_cost_estimands.py": "dee21291840c1f56cd5f5e5a1d83f18b8b2c8909512ccf6210130782c1720224",
+    "tests/test_benefit_cost_estimands.py": "09a6a26784947726f07eabe2a187f452aa4d5d67f56ab841af5e7464e6df2e4a"
+  },
+  "final_scenarios_loaded": false
+}

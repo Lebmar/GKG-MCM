@@ -1,0 +1,21 @@
+{
+  "version": "state-budget-cushion-analysis-source-freeze-v1",
+  "execution_ready": true,
+  "frozen_utc": "2026-10-19T07:03:32.395449+00:00",
+  "protocol_sha256": "5a29a71c1c8a1a273bbdbcef0b7a6529b15a8a8dccf9b31677602d2b935d17d5",
+  "source_sha256": {
+    "scripts/analyze_state_budget_cushion.py": "6ce6598627e6a181c2fcbf6cf7a5c8ab5f119a1974282cc68eb3bf45d424ac95",
+    "tests/test_state_budget_cushion_analysis.py": "b2d101a61594f45bfcadf769c44baaaee55697d5bccf74ff9b883b5666ab4a86"
+  },
+  "input_sha256": {
+    "docs/state_budget_cushion_analysis_protocol.json": "5a29a71c1c8a1a273bbdbcef0b7a6529b15a8a8dccf9b31677602d2b935d17d5",
+    "docs/state_budget_cushion_protocol.json": "b22fef3cb335b5d16bfa1b820521720feb3c9bad00f56a71ce6e8c00ab4ff4ec",
+    "docs/state_budget_cushion_source_freeze.json": "027400b9f345c03934c400a559a9c3196de036e5572de10eb7b444b4a03c2f53",
+    "results/state_budget_cushion_v1/manifest.json": "3c6e1d99c12b34fda0e12641417cbf4b82c5d62a6743dd98967ef13032feff48",
+    "results/state_budget_mitigation_v1/manifest.json": "e97ef1326ffe1cb1e48f660ff1fd1e71cee2a0f1a26931ce84ac98ec03431f7d",
+    "results/state_budget_mitigation_v1/path_metrics.csv.gz": "9da6396dd3f256da1aa4d6de8a318e6f0dfabc037e64c6b5786fbb28ee88b168",
+    "results/state_budget_mitigation_v1/trace_groups.json": "3cf4f14f1b860a7e32ee132472427774077fe2e29ea1e2b8e82b3ec5a63d3315"
+  },
+  "synthetic_tests": 23,
+  "saved_numeric_values_read_during_preparation": false
+}

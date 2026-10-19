@@ -1,0 +1,5 @@
+version,scope,original_n,group_count,physical_path_n,first_guard_n,LP_count,all_eight_resolved_n,numerical_physical_feasible_witness_above_budget,all_eight_numerical_optima_below_budget,numerical_boundary_unresolved,incomplete_solver_or_certificate_evidence,solver_or_certificate_unresolved
+V2b,outer_selected,120,5,120,109,872,109,20,89,0,0,0
+V2b,full_selected,120,1,120,120,960,120,64,56,0,0,0
+V3,outer_selected,120,5,120,108,864,108,13,95,0,0,0
+V3,full_selected,120,1,120,120,960,120,62,58,0,0,0

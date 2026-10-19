@@ -1,0 +1,49 @@
+{
+  "version": "independent-locked-final-evaluation-audit-plan-v1",
+  "declared_before_final_values_read_by_auditor": true,
+  "execution_requires_separately_frozen_auditor_source": true,
+  "preparation_protocol": "docs/final_evaluation_protocol.json",
+  "separate_final_release": "docs/final_evaluation_release.json",
+  "producer_directory": "results/final_locked_evaluation_v1",
+  "receipt": "results/final_locked_evaluation_v1/independent_audit.json",
+  "attempt_directory": "results/final_locked_audit_attempt_v1",
+  "source_freeze": "docs/final_locked_evaluation_audit_source_freeze.json",
+  "training_ids": [1, 120],
+  "evaluation_ids": [121, 180],
+  "authorization_gate": "Before parsing any final arrays or CSV values require separate root final release ready=true, exact preparation/source/object/development manifest and independent development audit hashes, current complete development evidence closure, complete final producer manifest, exact final output hashes and separately frozen independent audit source/tests/plan. Audit must not create or change the release.",
+  "attempt_preservation": "Create non-overwrite independent attempt directory and durable value-access phase before final parser/NPZ/CSV reads. Preserve failure traceback and receipt; no automatic retry or data/model/producer repair.",
+  "expected": {
+    "physical_groups": 6,
+    "physical_accounts": 360,
+    "annual_periods": 8460,
+    "endpoints": 8820,
+    "Q2_rows": 240,
+    "Q1_rows": 300,
+    "summary_rows": 9,
+    "financial_NULL_rows": 180,
+    "shadow_fields": 48,
+    "reference_fields_per_group": 36
+  },
+  "independent_reconstruction": "Use only earlier independently implemented 100-step self-finance fee bisection, physical reference_actual/annual/pending replay and scalar_fan. Do not import preparation producer, production simulator, policy/selector or metrics. Independently replay every original-H account using each actual joint annual return/inflation, initial 100 bills, original CPI/peak/MDD, no horizon reset, initial fee and no terminal fee. Shadow actions are replayed from saved decisions with all active finite eta=.03 gate algebra checked; B uses absorbing pending, thirds and Q1 product references restore annually including after breach.",
+  "complete_field_validation": "Require all six field sets/shapes/dtypes to match independently audited development template with only scenario dimension120->60. Check each of35physical fields against independent replay, targets for all6, loss_tolerances/annual_prices for shadow, all10shadow decision fields including NULL/sentinel masks; metadata arrays are never indexed by scenario ID.",
+  "table_validation": "Independently reconstruct every 240Q2/300Q1 row, all own-H/L targets/object/status/assignment/case/liquidity/service identities, strict breach threshold MDD-L>1e-12 with zero excess otherwise, ordinary real-return sample volatility ddof1, physical moved trade fraction, exact9summaries with standard median/inverse empirical quantiles/fractional worst10% CVaR. Guarded currentC and Q1A/D remain180financial NULL rows and have no physical trees; Q1C reference is not Q2 execution admission.",
+  "Q_witnesses": {
+    "object_id": "unapproved_fixed_shadow",
+    "scenario_ids": [121, 150, 180],
+    "original_years": [2, 16, 30],
+    "nominal_slots": 9,
+    "actions": ["hold", "restore"],
+    "fan_ids": [1, 120],
+    "method": "All actually active slots use independent scalar 120-member joint suffix with inherited original state, peak, runningMDD and originalH30; initial current action then each branch own annual/pending B. Compare both mean remaining log growth and exact bad counts to saved Q, all member outcomes finite. Pending slots remain explicit skipped records, no replacement; actual future is not passed to Q.",
+    "boundary": "All other shadow active states receive saved-Q finite/count/gate algebra and physical causality checks only. This is not independent recomputation of every adaptive Q or validation of the conditional forecast law."
+  },
+  "numeric_tolerances": {
+    "physical_atol": 3e-11,
+    "physical_rtol": 3e-13,
+    "CSV_atol": 2e-10,
+    "CSV_rtol": 5e-13,
+    "strict_breach_and_gate_threshold": 1e-12,
+    "discrete_ID_action_flag_count_NULL_mask": "exact"
+  },
+  "interpretation": "One unchanged locked final evaluation, previously exposed oldV1 final IDs and therefore not newly blind. Audit does not fit, tune, reapprove, select severe examples, generate paper or authorize submission. Finite fixed-market path accounting and fixed-slot empirical-Q checks do not establish prospective risk guarantees."
+}

@@ -1,0 +1,50 @@
+{
+  "version": "compact-submission-independent-source-review-v1",
+  "reviewed_utc": "2026-10-19T08:04:59.876792+00:00",
+  "status": "no_substantive_source_blocker_one_low_impact_path_edge",
+  "scope": "Source and pure-test-source inspection only; not actual preparation, packaging, unpacking or market replay",
+  "sources_sha256": {
+    "scripts/submission_adapter.py": "8b03c3f97191bd1d0fc7d02d075d654658a6ed558600f8c9bb6df4bdeeb1a080",
+    "scripts/prepare_compact_submission.py": "0bc79cae3d6b47ef31a15c9d1caf3b56f3eb0e6dfe6846663309409caa58f4d0",
+    "tests/test_submission_adapter.py": "806a1303fa5f8252ac37f268ba94f3a9d1d815a3dc48e70ba697b5b5aabb9fbe",
+    "tests/test_compact_submission.py": "1b93d856c2659b505fee85db6e093f6116adc0c95711ea8cce39de858ed53dbf",
+    "docs/compact_submission_protocol.json": "8b39e34143de96cbfd46cd0849e0d8406079f30d4bd5572a508b65779ed96d1f",
+    "docs/compact_submission_source_freeze_template.json": "c00e1811ea4f47f453cc9a4f47ee440e579721627fd03de0b5f5e1284b6e6dac",
+    "docs/compact_submission_build_release_template.json": "8a32c9f814bc1cdb3fb15c97562e3d9d7d906c3d04edbe6903be79bfcb865691",
+    "SUBMISSION_README.md": "6a11099f8ed4cf33cea18be2c108960141a44280771980875b50325f624c3b25",
+    "submission/AI_USE.md": "3cdb80086332e9187e7b501af7c1b825113c71270a871c2fb8a6d4d695c7e655",
+    "research/experimental_execution/state_budget_selection.py": "682b88b9a4c35a6823d35d9170df6d006a6cd63ce37baae28cef8cdc053aaa9f",
+    "research/experimental_execution/review_pending.py": "9038d420c9ea48df068c58a6abee3f993ac414f85dd0290cb56e3d703aae3894",
+    "scripts/run_state_budget_mitigation.py": "75860c42b6efcccfdab94e68b973dbc1c2ca6904143acbda3c8116d63264b99d",
+    "src/safeinvest/data.py": "70e511fd05c6e23fd6b8a72f1dc165426fc77a5eb4dbd8a3c13b839bb305a75f"
+  },
+  "reviewed_contract": {
+    "default": "Generated synthetic arrays only; supplied CSV loader not called",
+    "explicit_mode": "Fixed full120 V2b and three references, guarded IDs1–120 allow_finalFalse; nofit/noselection/finalCLI",
+    "expectation_gate": "Ready protocol/source freeze verifies full canonical source/input and independent-audit source/output/parent closure before NPZ or financialCSV parsing",
+    "comparison": "All canonical array_names members for four fixed groups, nonobject dtype/shape/canonicalNaN/signedzero value digest; four complete summaries with numerical tolerance and exactNULL/field inventory",
+    "reproduction_gate": "Complete compact bundle exact file SHA map, fixed registry/spec, expectedproof and imported domain module origins checked before development loader; hashes repeated afterwards",
+    "build_gate": "Preparationcomplete, independent build release, exact sorted allowlist digest, strictly45MB source/50MB ZIP limits, nonoverwrite failedattempt/ZIP retention",
+    "zip": "Canonical paths, no input symlinks/parentlinks, fixed timestamps/regular0644, exact reopened payloads, manifest member/digest validation before fresh extraction",
+    "claim": "Compact fixed-object reproduction does not replace omitted large historical nested/OOF/stability/audit archives or establish independent market validation"
+  },
+  "minor_findings": [
+    {
+      "location": "scripts/submission_adapter.py:58-63",
+      "finding": "safe_name('.') is accepted because Path('.').parts is empty; the current real filesystem/virtual-member packing inventory does not generate this name, so this is not a blocker to its fixed four-object reproduction.",
+      "recommendation": "Before freeze, optionally reject not p.parts or name=='.' and add a pure test. No need to change any model or numerical evidence."
+    }
+  ],
+  "pure_test_sources_reviewed": 14,
+  "pure_tests_executed_by_this_reviewer": 0,
+  "protocol_ready_at_review": false,
+  "actual_preparation_freeze_exists": false,
+  "actual_build_release_exists": false,
+  "canonical_NPZ_or_summary_parsed": false,
+  "raw_market_values_parsed": false,
+  "final_values_parsed": false,
+  "actual_prepare_executed": false,
+  "actual_package_created": false,
+  "new_model_runs": 0,
+  "old_sources_modified": false
+}

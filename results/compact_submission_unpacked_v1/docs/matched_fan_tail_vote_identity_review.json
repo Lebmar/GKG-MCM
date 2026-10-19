@@ -1,0 +1,318 @@
+{
+  "version": "posthoc-audited-fan-tail-vote-identity-review-v1",
+  "status": "passed",
+  "completed_utc": "2026-10-19T04:46:57.861988+00:00",
+  "prior_exposure": "All three fan scores/actions and full member outcomes were already known. This is an explicitly post-hoc identity regrouping, not a new forecast or independently chosen experiment.",
+  "contrast": "Only original full112/outer_r5_112 common predecision year5 state; fixed45/5/50, eta.03, H30/L.4.",
+  "sources_and_artifacts_at_start": {
+    "scripts/review_matched_fan_tail_vote_identity.py": "b2a6a9c3434750f37ae4d40a8e462ff53644d8975d63992ab58460aaf65f52d0",
+    "results/model_review/matched_parameter_fan_contrast_v1/manifest.json": "9192a844920c896e13964ef6abf611e4060be6758eef7618b69c926ac0f8c63c",
+    "results/model_review/matched_parameter_fan_contrast_v1/independent_audit.json": "754c8845a314625d90d3eb3ae09956f674ee753e92bccf6b668cd10bf5145132",
+    "results/model_review/matched_parameter_fan_contrast_v1/fan_members.csv": "25eea323536b5610a1ed2e5e133dcf55b659b412964e150ee10ea23fdfc437d8",
+    "results/model_review/matched_parameter_fan_contrast_v1/same_state_Q.csv": "118bf15873225f21c42dc376a4b6f2ef5c7d5e7a68880bbe4b1fe3d45d0d3244"
+  },
+  "sources_and_artifacts_at_end": {
+    "scripts/review_matched_fan_tail_vote_identity.py": "b2a6a9c3434750f37ae4d40a8e462ff53644d8975d63992ab58460aaf65f52d0",
+    "results/model_review/matched_parameter_fan_contrast_v1/manifest.json": "9192a844920c896e13964ef6abf611e4060be6758eef7618b69c926ac0f8c63c",
+    "results/model_review/matched_parameter_fan_contrast_v1/independent_audit.json": "754c8845a314625d90d3eb3ae09956f674ee753e92bccf6b668cd10bf5145132",
+    "results/model_review/matched_parameter_fan_contrast_v1/fan_members.csv": "25eea323536b5610a1ed2e5e133dcf55b659b412964e150ee10ea23fdfc437d8",
+    "results/model_review/matched_parameter_fan_contrast_v1/same_state_Q.csv": "118bf15873225f21c42dc376a4b6f2ef5c7d5e7a68880bbe4b1fe3d45d0d3244"
+  },
+  "group_counts_and_growth": [
+    {
+      "label": "full120",
+      "n": 120,
+      "bad_hold": 9,
+      "bad_restore": 8,
+      "mean_paired_total_log_advantage": -0.004993902049896175
+    },
+    {
+      "label": "full_without_actual119",
+      "n": 119,
+      "bad_hold": 9,
+      "bad_restore": 8,
+      "mean_paired_total_log_advantage": -0.004914912944842108
+    },
+    {
+      "label": "outer96",
+      "n": 96,
+      "bad_hold": 7,
+      "bad_restore": 7,
+      "mean_paired_total_log_advantage": -0.0067726614856909355
+    },
+    {
+      "label": "removed24",
+      "n": 24,
+      "bad_hold": 2,
+      "bad_restore": 1,
+      "mean_paired_total_log_advantage": 0.0021211356932828718
+    }
+  ],
+  "all_full120_nonzero_paired_event_votes": [
+    {
+      "fan_scenario_id": 95,
+      "contrast_id": "full_112__vs__outer_r5_112",
+      "fan_label": "full120",
+      "year": 5,
+      "hold_total_log_growth": -0.308373642411912,
+      "restore_total_log_growth": -0.28190469469027,
+      "hold_ever_breached": true,
+      "restore_ever_breached": false
+    }
+  ],
+  "all24_members_excluded_by_original_outer_fan": [
+    {
+      "fan_scenario_id": 7,
+      "contrast_id": "full_112__vs__outer_r5_112",
+      "fan_label": "full120",
+      "year": 5,
+      "hold_total_log_growth": 1.277664641562557,
+      "restore_total_log_growth": 1.263568487775786,
+      "hold_ever_breached": false,
+      "restore_ever_breached": false
+    },
+    {
+      "fan_scenario_id": 12,
+      "contrast_id": "full_112__vs__outer_r5_112",
+      "fan_label": "full120",
+      "year": 5,
+      "hold_total_log_growth": 2.059444049069559,
+      "restore_total_log_growth": 2.047273002824847,
+      "hold_ever_breached": false,
+      "restore_ever_breached": false
+    },
+    {
+      "fan_scenario_id": 14,
+      "contrast_id": "full_112__vs__outer_r5_112",
+      "fan_label": "full120",
+      "year": 5,
+      "hold_total_log_growth": 1.184871657946048,
+      "restore_total_log_growth": 1.195079468343558,
+      "hold_ever_breached": false,
+      "restore_ever_breached": false
+    },
+    {
+      "fan_scenario_id": 20,
+      "contrast_id": "full_112__vs__outer_r5_112",
+      "fan_label": "full120",
+      "year": 5,
+      "hold_total_log_growth": 0.873115013269374,
+      "restore_total_log_growth": 0.913908830137608,
+      "hold_ever_breached": false,
+      "restore_ever_breached": false
+    },
+    {
+      "fan_scenario_id": 35,
+      "contrast_id": "full_112__vs__outer_r5_112",
+      "fan_label": "full120",
+      "year": 5,
+      "hold_total_log_growth": 0.879680207425691,
+      "restore_total_log_growth": 0.876260489488548,
+      "hold_ever_breached": false,
+      "restore_ever_breached": false
+    },
+    {
+      "fan_scenario_id": 54,
+      "contrast_id": "full_112__vs__outer_r5_112",
+      "fan_label": "full120",
+      "year": 5,
+      "hold_total_log_growth": 1.808647589124536,
+      "restore_total_log_growth": 1.811536160770946,
+      "hold_ever_breached": false,
+      "restore_ever_breached": false
+    },
+    {
+      "fan_scenario_id": 63,
+      "contrast_id": "full_112__vs__outer_r5_112",
+      "fan_label": "full120",
+      "year": 5,
+      "hold_total_log_growth": 0.134442682979656,
+      "restore_total_log_growth": 0.124116469734322,
+      "hold_ever_breached": true,
+      "restore_ever_breached": true
+    },
+    {
+      "fan_scenario_id": 64,
+      "contrast_id": "full_112__vs__outer_r5_112",
+      "fan_label": "full120",
+      "year": 5,
+      "hold_total_log_growth": 0.944883149424541,
+      "restore_total_log_growth": 0.933671300734181,
+      "hold_ever_breached": false,
+      "restore_ever_breached": false
+    },
+    {
+      "fan_scenario_id": 67,
+      "contrast_id": "full_112__vs__outer_r5_112",
+      "fan_label": "full120",
+      "year": 5,
+      "hold_total_log_growth": 1.616042098899043,
+      "restore_total_log_growth": 1.600445582256265,
+      "hold_ever_breached": false,
+      "restore_ever_breached": false
+    },
+    {
+      "fan_scenario_id": 68,
+      "contrast_id": "full_112__vs__outer_r5_112",
+      "fan_label": "full120",
+      "year": 5,
+      "hold_total_log_growth": 1.833711019773349,
+      "restore_total_log_growth": 1.829458748978815,
+      "hold_ever_breached": false,
+      "restore_ever_breached": false
+    },
+    {
+      "fan_scenario_id": 70,
+      "contrast_id": "full_112__vs__outer_r5_112",
+      "fan_label": "full120",
+      "year": 5,
+      "hold_total_log_growth": 1.448170975917771,
+      "restore_total_log_growth": 1.460804121406108,
+      "hold_ever_breached": false,
+      "restore_ever_breached": false
+    },
+    {
+      "fan_scenario_id": 76,
+      "contrast_id": "full_112__vs__outer_r5_112",
+      "fan_label": "full120",
+      "year": 5,
+      "hold_total_log_growth": 1.002275760082258,
+      "restore_total_log_growth": 0.990782146469086,
+      "hold_ever_breached": false,
+      "restore_ever_breached": false
+    },
+    {
+      "fan_scenario_id": 81,
+      "contrast_id": "full_112__vs__outer_r5_112",
+      "fan_label": "full120",
+      "year": 5,
+      "hold_total_log_growth": 1.345467925314957,
+      "restore_total_log_growth": 1.410594340175432,
+      "hold_ever_breached": false,
+      "restore_ever_breached": false
+    },
+    {
+      "fan_scenario_id": 83,
+      "contrast_id": "full_112__vs__outer_r5_112",
+      "fan_label": "full120",
+      "year": 5,
+      "hold_total_log_growth": 0.96999111227918,
+      "restore_total_log_growth": 0.971470583341676,
+      "hold_ever_breached": false,
+      "restore_ever_breached": false
+    },
+    {
+      "fan_scenario_id": 91,
+      "contrast_id": "full_112__vs__outer_r5_112",
+      "fan_label": "full120",
+      "year": 5,
+      "hold_total_log_growth": 0.265397032910265,
+      "restore_total_log_growth": 0.275748326260104,
+      "hold_ever_breached": false,
+      "restore_ever_breached": false
+    },
+    {
+      "fan_scenario_id": 95,
+      "contrast_id": "full_112__vs__outer_r5_112",
+      "fan_label": "full120",
+      "year": 5,
+      "hold_total_log_growth": -0.308373642411912,
+      "restore_total_log_growth": -0.28190469469027,
+      "hold_ever_breached": true,
+      "restore_ever_breached": false
+    },
+    {
+      "fan_scenario_id": 100,
+      "contrast_id": "full_112__vs__outer_r5_112",
+      "fan_label": "full120",
+      "year": 5,
+      "hold_total_log_growth": 0.086657119691947,
+      "restore_total_log_growth": 0.083666591813772,
+      "hold_ever_breached": false,
+      "restore_ever_breached": false
+    },
+    {
+      "fan_scenario_id": 101,
+      "contrast_id": "full_112__vs__outer_r5_112",
+      "fan_label": "full120",
+      "year": 5,
+      "hold_total_log_growth": 0.549154347036882,
+      "restore_total_log_growth": 0.545167039744993,
+      "hold_ever_breached": false,
+      "restore_ever_breached": false
+    },
+    {
+      "fan_scenario_id": 105,
+      "contrast_id": "full_112__vs__outer_r5_112",
+      "fan_label": "full120",
+      "year": 5,
+      "hold_total_log_growth": 1.363165157369574,
+      "restore_total_log_growth": 1.378445831773575,
+      "hold_ever_breached": false,
+      "restore_ever_breached": false
+    },
+    {
+      "fan_scenario_id": 107,
+      "contrast_id": "full_112__vs__outer_r5_112",
+      "fan_label": "full120",
+      "year": 5,
+      "hold_total_log_growth": 0.244277107591467,
+      "restore_total_log_growth": 0.216703859526334,
+      "hold_ever_breached": false,
+      "restore_ever_breached": false
+    },
+    {
+      "fan_scenario_id": 108,
+      "contrast_id": "full_112__vs__outer_r5_112",
+      "fan_label": "full120",
+      "year": 5,
+      "hold_total_log_growth": 1.545988322667934,
+      "restore_total_log_growth": 1.538501699822522,
+      "hold_ever_breached": false,
+      "restore_ever_breached": false
+    },
+    {
+      "fan_scenario_id": 111,
+      "contrast_id": "full_112__vs__outer_r5_112",
+      "fan_label": "full120",
+      "year": 5,
+      "hold_total_log_growth": 1.847657457640088,
+      "restore_total_log_growth": 1.865863163696833,
+      "hold_ever_breached": false,
+      "restore_ever_breached": false
+    },
+    {
+      "fan_scenario_id": 112,
+      "contrast_id": "full_112__vs__outer_r5_112",
+      "fan_label": "full120",
+      "year": 5,
+      "hold_total_log_growth": 0.115801180696584,
+      "restore_total_log_growth": 0.101407575145254,
+      "hold_ever_breached": false,
+      "restore_ever_breached": false
+    },
+    {
+      "fan_scenario_id": 119,
+      "contrast_id": "full_112__vs__outer_r5_112",
+      "fan_label": "full120",
+      "year": 5,
+      "hold_total_log_growth": 1.16179954240921,
+      "restore_total_log_growth": 1.148269639779052,
+      "hold_ever_breached": false,
+      "restore_ever_breached": false
+    }
+  ],
+  "maximum_aggregate_Q_roundoff": 3.677613769070831e-16,
+  "interpretation": "The only full120 member whose hold/restore event labels differ is original95: hold breaches, restore does not. The original outer96 omits95, as well as23 other members including actual112. Common96 member branch outcomes are exactly identical. The full-to-outer change therefore loses that one modeled tail-reduction vote while also changing the paired growth mean and denominator.",
+  "limits": [
+    "This identifies the member supporting one local model-internal discrete event difference; it is not a unique causal attribution of the score or eventual risk.",
+    "No95-only deletion is simulated, no alternative fan is selected, and no suggestion to drop95 or choose a preferred subset follows.",
+    "The other23 removed members and all120 votes remain visible, including actual112 whose removal alone does not flip the original action.",
+    "Derivative exact regrouping of independently audited member arrays is not an additional independent market replay, calibrated tail law, full learner LOOCV or population claim.",
+    "The existing currentC executionReview, financialNULL and all risk/admission rules are unchanged."
+  ],
+  "new_market_loads": 0,
+  "new_simulations": 0,
+  "new_fits": 0,
+  "final_scenarios_read": false
+}

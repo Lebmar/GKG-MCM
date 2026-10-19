@@ -1,0 +1,36 @@
+{
+  "version": "guard-physical-feasibility-source-only-review-v1",
+  "completed_utc": "2026-10-19T07:25:53.657273+00:00",
+  "status": "No material mathematical or scope blocker; numerical outcomes not inspected.",
+  "reviewed_source_and_protocol_sha256": {
+    "docs/problem_A.pdf": "2ac9412ed68349d36a3fbd2c6cddc5789a81dab8acbfa08c63a3bdb34d2aa2dd",
+    "research/diagnostics/guard_physical_feasibility.py": "f86d41f71bed6e3bcb4db59f5df83c072889e08cfa2e2e66707eac04ede2e94a",
+    "scripts/diagnose_guard_physical_feasibility.py": "2fc2754255c18f247e736fa9d66903a4fea39e6788e3fc338328f4914835c5a0",
+    "docs/guard_physical_feasibility_protocol.json": "0a73f72684cd483e4ad242140a47ce28ee2f799432fb1899d4af5ac3650feb90",
+    "tests/test_guard_physical_feasibility.py": "04d6f886d665a10327d78c5455eaf58c473e487554c66ff21b36f564800286e4",
+    "tests/test_guard_physical_feasibility_runner.py": "783a63a49eea1a87726d9344467a1a69c239e20300ebde71dbcc7d53a6bbdd61"
+  },
+  "actual_lp_numeric_results_read": false,
+  "new_solves": false,
+  "model_or_parameter_changed": false,
+  "algebra": [
+    "For each closed buy mask B, exact destination-buy fee self-finance is sum(1+c*I_B)y=V+c*sum_Bx, with buy y>=x and sell0<=y<=x. All8 masks cover every long-only fully invested after-fee physical allocation, including equal-holding boundaries.",
+    "u=y/V and v=z/(V/CPI) preserve the objective and joint real-gross constraints. Every region contains hold and has bounded y; the global maximum worst next wealth is the maximum of the8 regional optima.",
+    "SciPy RHS marginal sign convention and c-Aub.T*mi-Aeq.T*me-ml-mu stationarity are consistent. Lower marginals>=0; upper/inequality marginals<=0. Negating a dual minimization value gives a regional maxmin upper-bound value under exact dual feasibility."
+  ],
+  "numerical_scope": [
+    "Returned variables, support/equality/bounds, actual positive-part fee, self-finance, marginal signs, stationarity, complementary slackness and primal-dual gaps are all checked and saved.",
+    "Floating residual thresholds1e-8 differ from policy support/event conventions1e-12. Approximate duals do not establish rigorous exact upper bounds; all-eight below-budget remains explicitly numerical evidence, not an impossibility theorem.",
+    "Any unresolved mask blocks a complete below-budget claim; boundaries remain unresolved. A numerically feasible witness above the saved budget diagnoses a finite-family gap but is not executed or adopted."
+  ],
+  "information_and_cohort": [
+    "Only original firstguard predecision state and own-calendar training joint support enter coefficients; no actual next market return is an LP input. Whole saved state members contain unused future columns for indexing, so a claim that no future account bytes were parsed would be false.",
+    "All selected full/outer groups, NULL slots and all firstguards retained. Full120 resubstitution and outer own96 disjoint heldout scopes remain separate; versions/scopes reuse markets.",
+    "Zero-asset physical benchmark deliberately relaxes product-grid and static target-floor restrictions, while retaining long-only/full-investment/exact-fee physics. It is neither a fourth product nor a new live action."
+  ],
+  "interpretation": [
+    "Below-budget numerical evidence concerns the current normative one-year budget and the declared finite joint training support. It does not establish genuine future or intrayear safety, recursive feasibility, or inability of a human to change objectives or assumptions.",
+    "A passed future independent saved-witness audit will check arithmetic/identity of these witnesses, not restore predictive validity or create additional independent scenarios."
+  ],
+  "decision": "Accept the diagnostic as an explanatory benchmark only. Preserve its unknown/boundary classifications and original policy choices; do not use these outputs to select new actions/parameters after the locked model."
+}

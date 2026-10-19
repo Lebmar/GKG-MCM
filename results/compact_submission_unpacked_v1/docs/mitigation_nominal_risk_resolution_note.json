@@ -1,0 +1,79 @@
+{
+  "status": "complete",
+  "version": "posthoc-nominal-binomial-resolution-illustration-v1",
+  "created_utc": "2026-10-19T07:51:07.285742+00:00",
+  "actual_inference": false,
+  "model_or_admission_changed": false,
+  "new_scenarios": 0,
+  "definition": "For a truly fixed rule on untouched IID complete paths, the nominal one-sided95% exact upper solves P_p[X<=k]=.05, equivalently Beta(.95;k+1,n-k), with k=n boundary1. Here it is only a posthoc arithmetic illustration.",
+  "actual_limitations": [
+    "Final121-180 was historically exposed before adaptive development; no fresh blind or confirmatory coverage is claimed.",
+    "Mixed-policy OOF outcomes and five dependent repeated partitions do not justify a naive fixed-policy IID binomial certificate.",
+    "Synthetic scenario laws are not verified real-market laws.",
+    "The95% level here is illustrative, not a newly registered acceptance criterion. No model adjustment or stopping rule is selected from these values."
+  ],
+  "distinction": "L is customer peak real loss tolerance; alpha=.10 is a technical frequency convention. Neither alpha nor gamma nor reserve floors have been uniquely elicited as customer preference. Empiricalk/n<=alpha does not alone certify population p<=alpha.",
+  "results": [
+    {
+      "object_id": "mitigation_main",
+      "k": 2,
+      "n": 60,
+      "descriptive_fraction": 0.03333333333333333,
+      "nominal_one_sided_95_upper": 0.10123589492416163,
+      "independent_CDF_inversion": 0.10123589492416836,
+      "scipy_exact_api": 0.10123589492416163,
+      "binomial_CDF_at_upper": 0.05000000000000003,
+      "valid_actual_population_coverage_claim": false
+    },
+    {
+      "object_id": "same_target_B",
+      "k": 8,
+      "n": 60,
+      "descriptive_fraction": 0.13333333333333333,
+      "nominal_one_sided_95_upper": 0.22773994566432493,
+      "independent_CDF_inversion": 0.2277399456643266,
+      "scipy_exact_api": 0.227739945664325,
+      "binomial_CDF_at_upper": 0.04999999999999988,
+      "valid_actual_population_coverage_claim": false
+    },
+    {
+      "object_id": "same_target_annual",
+      "k": 8,
+      "n": 60,
+      "descriptive_fraction": 0.13333333333333333,
+      "nominal_one_sided_95_upper": 0.22773994566432493,
+      "independent_CDF_inversion": 0.2277399456643266,
+      "scipy_exact_api": 0.227739945664325,
+      "binomial_CDF_at_upper": 0.04999999999999988,
+      "valid_actual_population_coverage_claim": false
+    },
+    {
+      "object_id": "exact_thirds_annual",
+      "k": 6,
+      "n": 60,
+      "descriptive_fraction": 0.1,
+      "nominal_one_sided_95_upper": 0.18785738198898227,
+      "independent_CDF_inversion": 0.18785738198898227,
+      "scipy_exact_api": 0.18785738198898236,
+      "binomial_CDF_at_upper": 0.05000000000000006,
+      "valid_actual_population_coverage_claim": false
+    }
+  ],
+  "judgment": "Even the counterfactual untouched fixed-rule calculation for2/60 has upper.1012358949>.10. The actual nonblind evaluation provides descriptive tradeoffs only.",
+  "primary_sources": [
+    {
+      "title": "NIST exact one-sided binomial confidence limits",
+      "url": "https://itl.nist.gov/div898/software/dataplot/refman2/auxillar/exacbino.htm"
+    },
+    {
+      "title": "SciPy binomtest exact proportion_ci documentation",
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.binomtest.html"
+    }
+  ],
+  "source_sha256": {
+    "scripts/audit_objective_risk.py": "5f75324f2496db907b31cfadc41a4d463d0e01151db4f41536de7e2d6405523d",
+    "results/mitigation_locked_final_evaluation_v1/summary.csv.gz": "c050b0fac11437dfb7c8879f58db7f65de94346521362b5828ac998f6c42d6bc",
+    "results/mitigation_locked_final_evaluation_v1/independent_audit.json": "7929ea36e23c9b357a568b8d0f06cd7f90024a61aae0222c11c532cc1bcf65c8",
+    "results/mitigation_locked_final_evaluation_v1/manifest.json": "7401ad59279c694fc4077ab42af1af42e707b258156bca5a7ec110467e407f07"
+  }
+}
