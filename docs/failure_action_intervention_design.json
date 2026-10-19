@@ -1,0 +1,35 @@
+{
+  "version": "first-action-disagreement-single-intervention-design-v1",
+  "declared_utc": "2026-10-19T04:09:50.950043+00:00",
+  "status": "Question and intervention fixed before first new path-mechanism numerical execution; implementation protocol/sources will be bound separately",
+  "parent_inventory_canonical_sha256": "55c58cf33da4c26e4f1b00bc65054d4280fb393e5c95a8c4a6068e39ebb11878",
+  "pair_ids": [
+    "full_35",
+    "inner_35",
+    "full_112",
+    "inner_112",
+    "full_52",
+    "inner_52",
+    "full_98",
+    "inner_98",
+    "outer_r2_52",
+    "outer_r4_112",
+    "outer_r5_112"
+  ],
+  "parent_protocol_path": "docs/failure_path_mechanism_protocol.json",
+  "definition": {
+    "tau": "Use first original saved M/B action disagreement once, without searching for a year that improves outcomes. Keep no-disagreement pair withNULL intervention, no replacement.",
+    "preconditions": "Same own target and all physical states beforetau, originaltau>=2 and both active. Zero-transfer action disagreements remain zero interventions, not dropped.",
+    "control": "From saved state beforetau, execute originalM action at tau then recalculate original frozen policy from subsequent actual states; must match savedM physical accounts/actions/Q and terminal results.",
+    "treatment": "Replace only tau action with originalB action; pay its own exact fee and apply actual common return. Fromtau+1 recalculate originalpi using its fixed original trainingfan/target/eta/H and own branch state. Absorbing pending overrides all future automation once own breach occurs.",
+    "estimand": "Difference in terminal wealth, net total log growth, original whole-history MDD and breach/first-crossing between the two branches on this fixed original market path. Includes downstream policy feedback.",
+    "no_policy_selection": "Force chosen B action regardless of whether original score gate would allow it. It is a controlled intervention diagnostic, not a recommended transaction or a newly approved strategy."
+  },
+  "limitations": [
+    "Post-hoc failure/contrast cases selected using known previous events; not unbiased population treatment effects.",
+    "Not Qpi optimal-action comparison, conditional calibration, a global risk certificate, or proof of an implementable improvement.",
+    "Target/fan/eta held fixed within each intervention; no causal separation of their cross-fit changes.",
+    "No search over interventionyears, actions, targets, alpha or prices. All original11pairs retained."
+  ],
+  "method_review": "Separate method and audit agents found no block with identity-control replay and absorbing pending requirements; AI computational review, not external human peer review."
+}
