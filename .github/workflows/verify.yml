@@ -8,7 +8,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python -m pip install -r requirements.txt
+      # nbformat is used by the notebook-building script and its test, but it
+      # is not a runtime dependency of the audited pipeline, so it is pulled
+      # in for CI only.
+      - run: python -m pip install -r requirements.txt nbformat
       # Several replay tests exercise the project-venv interpreter path.
       # Provide one so isolation tests run in CI as they do locally.
       - run: python -m venv --system-site-packages .venv
