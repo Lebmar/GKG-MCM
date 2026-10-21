@@ -3,6 +3,10 @@
 2026 HKUST(GZ) MCM Senior Group Problem A. Team **Lebmar**, number **87**.
 Author: **Chengxuan YUAN**.
 
+> **Submitted 20 Oct 2026.** The two files uploaded to CMT — the report PDF and the
+> v6 technical source ZIP, with its SHA-256 — are archived as a
+> [release](https://github.com/Lebmar/GKG-MCM/releases/tag/submission-2026).
+
 ## Overview
 
 A transparent, cost-aware robo-advisory pipeline built on the SafeInvest synthetic
